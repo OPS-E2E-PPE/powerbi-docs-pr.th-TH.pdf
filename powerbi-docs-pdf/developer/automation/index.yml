@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: เอกสารประกอบการใช้งาน Power BI automation ที่ใช้งานข้อมูลเชิงลึก BI แบบฝังที่ดีขึ้นในการวิเคราะห์แบบฝังของ Power BI
+summary: ด้วย Power BI automation คุณสามารถดำเนินการจัดการกับออบเจ็กต์ Power BI เช่น รายงาน ชุดข้อมูล และพื้นที่ทำงาน
+metadata:
+  title: เอกสารประกอบการใช้งาน Power BI automation
+  description: ด้วย Power BI automation คุณสามารถดำเนินการจัดการกับออบเจ็กต์ Power BI เช่น รายงาน ชุดข้อมูล และพื้นที่ทำงาน
+  services: powerbi
+  ms.service: powerbi
+  ms.subservice: powerbi-developer
+  ms.topic: landing-page
+  ms.collection: collection
+  author: KesemSharabi
+  ms.author: kesharab
+  ms.date: 31/03/2020
+  ms.openlocfilehash: def78e481474b7186457d019404f4604406ce967
+  ms.sourcegitcommit: eeaf607e7c1d89ef7312421731e1729ddce5a5cc
+  ms.translationtype: HT
+  ms.contentlocale: th-TH
+  ms.lasthandoff: 01/05/2021
+  ms.locfileid: "97887603"
+landingContent:
+- title: เริ่มใช้งาน
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: เรียนรู้สิ่งที่คุณสามารถทำได้ด้วย API ของ Power BI
+      url: overview-of-power-bi-rest-api.md
+  - linkListType: tutorial
+    links:
+    - text: 'บทช่วยสอน: ส่งข้อมูลลงในชุดข้อมูล'
+      url: walkthrough-push-data.md
+    - text: 'บทช่วยสอน: รับโทเค็นการเข้าใช้การรับรองความถูกต้อง'
+      url: walkthrough-push-data-get-token.md
+    - text: 'บทช่วยสอน: สร้างชุดข้อมูล'
+      url: walkthrough-push-data-create-dataset.md
+    - text: รับชุดข้อมูลเพื่อเพิ่มแถว
+      url: walkthrough-push-data-get-datasets.md
+    - text: เพิ่มแถวในตาราง Power BI
+      url: walkthrough-push-data-add-rows.md
+    - text: 'บทช่วยสอน: กำหนดค่าแอปเทมเพลตโดยอัตโนมัติ'
+      url: ../template-apps/template-apps-auto-install-tutorial.md
+- title: ทำงานกับข้อมูล
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: นโยบายการเก็บข้อมูลโดยอัตโนมัติสำหรับข้อมูลแบบเรียลไทม์
+      url: api-automatic-retention-policy-for-real-time-data.md
+    - text: ข้อจำกัดของ Power BI REST API
+      url: api-rest-api-limitations.md
+    - text: คุณสมบัติของชุดข้อมูล
+      url: api-dataset-properties.md
+    - text: การกำหนดค่าแอปเทมเพลตอัตโนมัติ
+      url: ../template-apps/template-apps-auto-install.md
+  - linkListType: how-to-guide
+    links:
+    - text: กำหนดค่าข้อมูลประจำตัว
+      url: configure-credentials.md
+- title: เอกสารอ้างอิงและทรัพยากร
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Power BI REST APIs
+      url: /rest/api/power-bi/
+    - text: ข้อมูลอ้างอิง Power BI REST API
+      url: ./rest-api-reference.md
+    - text: ศูนย์นักพัฒนา
+      url: https://powerbi.microsoft.com/developers/
+    - text: ไลบรารี Power BI
+      url: https://www.nuget.org/profiles/powerbi

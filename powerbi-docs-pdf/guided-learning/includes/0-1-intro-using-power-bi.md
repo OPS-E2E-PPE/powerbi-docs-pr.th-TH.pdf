@@ -1,0 +1,23 @@
+---
+ms.openlocfilehash: 1c000b2bfce4b6eeaa40b1a641321a20cea49d13
+ms.sourcegitcommit: 60dad5aa0d85db790553e537bf8ac34ee3289ba3
+ms.translationtype: HT
+ms.contentlocale: th-TH
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66051085"
+---
+<span data-ttu-id="3a42c-101">ในตอนนี้ คุณทราบพื้นฐานของ Power BI แล้ว เราจะข้ามไปยังประสบการณ์ที่มีประโยชน์และการแนะนำ</span><span class="sxs-lookup"><span data-stu-id="3a42c-101">Now that you know the basics of Power BI, let’s jump into some hands-on experiences and a guided tour.</span></span> <span data-ttu-id="3a42c-102">ผู้แนะนำในวิดีโอแนะนำของคุณคือ **Will Thompson** ผู้จัดการด้านโปรแกรมในทีม Power BI ที่ Microsoft</span><span class="sxs-lookup"><span data-stu-id="3a42c-102">Your video tour guide is **Will Thompson**, a Program Manager on the Power BI team at Microsoft.</span></span> <span data-ttu-id="3a42c-103">มีผู้แนะนำรับเชิญในภายหลังในหลักสูตรเช่นกัน</span><span class="sxs-lookup"><span data-stu-id="3a42c-103">There are a few guest guides too, a little later on in the course.</span></span>
+
+<span data-ttu-id="3a42c-104">เมื่อ Will อธิบายสิ่งต่างๆ ที่คุณสามารถทำได้ด้วย Power BI ให้จำไว้เสมอว่ากิจกรรมทั้งหมดเหล่านี้ และการวิเคราะห์ทั้งหมดที่คุณสามารถทำได้ด้วย Power BI มักจะต่อจากลำดับการทำงานปกติ</span><span class="sxs-lookup"><span data-stu-id="3a42c-104">As Will explains the many things you can do with Power BI, keep in mind that all of these activities, and all the analysis you can do with Power BI, generally follow a common flow.</span></span> <span data-ttu-id="3a42c-105">**ลำดับการทำงานปกติ**ของกิจกรรมใน Power BI มีดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="3a42c-105">The **common flow** of activity in Power BI is the following:</span></span>
+
+* <span data-ttu-id="3a42c-106">นำข้อมูลเข้าสู่ Power BI Desktop แล้วสร้างรายงาน</span><span class="sxs-lookup"><span data-stu-id="3a42c-106">Bring data into Power BI Desktop, and create a report.</span></span>
+* <span data-ttu-id="3a42c-107">เผยแพร่ไปยังบริการ Power BI ที่คุณสามารถสร้างการจัดรูปแบบการแสดงข้อมูลใหม่หรือสร้างแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="3a42c-107">Publish to the Power BI service, where you create new visualizations or build dashboards</span></span>
+* <span data-ttu-id="3a42c-108">แชร์แดชบอร์ดของคุณกับผู้อื่น โดยเฉพาะผู้ที่กำลังเดินทาง</span><span class="sxs-lookup"><span data-stu-id="3a42c-108">Share your dashboards with others, especially people who are on the go</span></span>
+* <span data-ttu-id="3a42c-109">ดูและโต้ตอบกับแดชบอร์ดและรายงานที่แชร์ในแอป Power BI บนมือถือ</span><span class="sxs-lookup"><span data-stu-id="3a42c-109">View and interact with shared dashboards and reports in Power BI Mobile apps</span></span>
+
+![](media/0-1-intro-using-power-bi/c0a1_1.png)
+
+<span data-ttu-id="3a42c-110">ตามที่ได้กล่าวไปก่อนหน้านี้ คุณอาจใช้เวลาทั้งหมดของคุณใน**บริการ Power BI** รวบรวมข้อมูลและสร้างแดชบอร์ด ซึ่งสามารถทำได้</span><span class="sxs-lookup"><span data-stu-id="3a42c-110">As mentioned earlier, you might spend all your time in the **Power BI service**, getting data and creating dashboards – that’s just fine.</span></span> <span data-ttu-id="3a42c-111">ใครบางคนในทีมของคุณอาจใช้เวลาทั้งหมดใน **Power BI Desktop** ซึ่งสามารถทำได้เช่นกัน</span><span class="sxs-lookup"><span data-stu-id="3a42c-111">Someone else on your team might spend all of their time in **Power BI Desktop**, which is fine too.</span></span> <span data-ttu-id="3a42c-112">เพื่อช่วยให้คุณสามารถทำความเข้าใจภาวะต่อเนื่องทั้งหมดของ Power BI และสิ่งที่สามารถทำได้ เราจะแสดงข้อมูลทั้งหมดให้คุณทราบ...</span><span class="sxs-lookup"><span data-stu-id="3a42c-112">In order to help you understand the full continuum of Power BI and what it can do, we’ll show you all of it…</span></span> <span data-ttu-id="3a42c-113">จากนั้น คุณสามารถตัดสินใจเลือกวิธีการใช้ได้ตามผลประโยชน์ที่ดีที่สุดของคุณ</span><span class="sxs-lookup"><span data-stu-id="3a42c-113">then you can decide how to use it to your best advantage.</span></span>
+
+<span data-ttu-id="3a42c-114">ดังนั้น ลองใช้เลย และให้ Will แนะนำเราผ่านประสบการณ์การใช้งาน</span><span class="sxs-lookup"><span data-stu-id="3a42c-114">So let’s jump in, and let Will guide us through the experience.</span></span> <span data-ttu-id="3a42c-115">ขั้นตอนแรกของธุรกิจคือทำความเข้าใจโครงสร้างพื้นฐานของ Power BI ซึ่งจะแสดงหลักพื้นฐานสำหรับการเรียนรู้ว่า Power BI เปลี่ยนข้อมูลให้เป็นรายงานและการแสดงผลด้วยภาพที่ดีเยี่ยมได้อย่างไร</span><span class="sxs-lookup"><span data-stu-id="3a42c-115">The first order of business is to understand the basic building blocks of Power BI, which will provide a solid basis for learning how Power BI turns data into cool reports and visuals.</span></span>
+

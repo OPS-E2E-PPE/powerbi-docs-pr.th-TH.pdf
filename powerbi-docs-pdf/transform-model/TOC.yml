@@ -1,0 +1,103 @@
+- name: แปลง จัดรูปแบบ และสร้างแบบจำลองข้อมูลใน Power BI
+  href: index.yml
+  expanded: true
+  items:
+    - name: ภาพรวม
+      expanded: true
+      items:
+        - name: ภาพรวมตัวแก้ไขคิวรี
+          href: desktop-query-overview.md
+    - name: บทช่วยสอน
+      expanded: true
+      items:
+        - name: สร้างหน่วยวัดของคุณเอง
+          href: desktop-tutorial-create-measures.md
+        - name: สร้างคอลัมน์จากการคำนวณ
+          href: desktop-tutorial-create-calculated-columns.md
+    - name: แนวคิด
+      expanded: true
+      items:
+        - name: ทำความเข้าใจกับความสัมพันธ์ของแบบจำลอง
+          href: desktop-relationships-understand.md
+        - name: ทำงานกับมุมมองการสร้างแบบจำลอง
+          href: desktop-modeling-view.md
+        - name: จัดการการรวม
+          href: desktop-aggregations.md
+        - name: ใช้โมเดลแบบรวม
+          href: desktop-composite-models.md
+        - name: ปรับใช้ความสัมพันธ์แบบกลุ่มต่อกลุ่ม
+          href: desktop-many-to-many-relationships.md
+        - name: จัดการโหมดพื้นที่เก็บข้อมูล
+          href: desktop-storage-mode.md
+        - name: เปิดใช้การกรองแบบข้ามสองทิศทาง
+          href: desktop-bidirectional-filtering.md
+        - name: ทำงานกับแบบจำลองหลายมิติใน Power BI
+          href: ../connect-data/desktop-default-member-multidimensional-models.md
+    - name: กระแสข้อมูล
+      items:
+        - name: บทนำสู่กระแสข้อมูล
+          href: dataflows/dataflows-introduction-self-service.md
+        - name: สร้างกระแสข้อมูล
+          href: dataflows/dataflows-create.md
+        - name: กำหนดค่าและใช้กระแสข้อมูล
+          href: dataflows/dataflows-configure-consume.md
+        - name: กำหนดค่าปริมาณงานกระแสข้อมูลของ Power BI Premium
+          href: dataflows/dataflows-premium-workload-configuration.md
+        - name: กระแสข้อมูลและ Azure Data Lake Gen2
+          href: dataflows/dataflows-azure-data-lake-storage-integration.md
+        - name: ฟีเจอร์พรีเมียมของกระแสข้อมูล
+          href: dataflows/dataflows-premium-features.md
+        - name: ใช้บริการการเรียนรู้ของเครื่องและการรับรู้ด้วยกระแสข้อมูล
+          href: dataflows/dataflows-machine-learning-integration.md
+        - name: แนวทางปฏิบัติที่ดีที่สุดสำหรับกระแสข้อมูล
+          href: ./dataflows/dataflows-best-practices.md
+        - name: ข้อจำกัดและข้อควรพิจารณาของกระแสข้อมูล
+          href: dataflows/dataflows-features-limitations.md
+    - name: คำแนะนำวิธีการ
+      items:
+        - name: ดำเนินงานคิวรีแบบทั่วไป
+          href: desktop-common-query-tasks.md
+        - name: สร้างและจัดการความสัมพันธ์
+          href: desktop-create-and-manage-relationships.md
+        - name: การใช้บานหน้าต่างการวิเคราะห์
+          href: desktop-analytics-pane.md
+        - name: ทำงานกับมุมมองข้อมูล
+          href: ../connect-data/desktop-data-view.md
+        - name: ใช้พื้นฐานของ DAX
+          href: desktop-quickstart-learn-dax-basics.md
+        - name: ทำงานกับมุมมองความสัมพันธ์
+          href: desktop-relationship-view.md
+        - name: แปลงและทำข้อมูลให้เป็นรูปร่าง
+          items:
+            - name: รวมไฟล์ (ไบนารี)
+              href: desktop-combine-binaries.md
+            - name: ใช้ข้อมูลเชิงลึกของ AI (ตัวอย่าง)
+              href: desktop-ai-insights.md
+        - name: จำลองแบบข้อมูลของคุณ
+          items:
+            - name: สร้างหน่วยวัดด่วนสำหรับการคำนวณทั่วไป
+              href: desktop-quick-measures.md
+            - name: สร้างและใช้พารามิเตอร์ What if (เกิดอะไรขึ้นถ้า) เพื่อแสดงภาพตัวแปร
+              href: desktop-what-if.md
+            - name: ระบุหมวดหมู่ข้อมูลใน Power BI Desktop
+              href: desktop-data-categorization.md
+            - name: แท็กเขตข้อมูลบาร์โค้ดใน Power BI สำหรับแอปสำหรับอุปกรณ์เคลื่อนที่
+              href: desktop-mobile-barcodes.md
+            - name: ตั้งค่าตัวกรองทางภูมิศาสตร์ใน Power BI สำหรับแอปบนอุปกรณ์เคลื่อนที่
+              href: desktop-mobile-geofiltering.md
+            - name: สร้างคอลัมน์จากการคำนวณ
+              href: desktop-calculated-columns.md
+            - name: สร้างตารางจากการคำนวณ
+              href: desktop-calculated-tables.md
+            - name: สร้างหน่วยวัดสำหรับการวิเคราะห์ข้อมูล
+              href: desktop-measures.md
+            - name: นำเข้า และแสดง KPI
+              href: desktop-import-and-display-kpis.md
+            - name: ปรับใช้วันที่/เวลาอัตโนมัติ
+              href: desktop-auto-date-time.md
+    - name: การอ้างอิง
+      items:
+        - name: ใช้รายการเขตข้อมูลใน Power BI Desktop (ตัวอย่าง)
+          href: desktop-field-list.md
+        - name: ทางลัดตัวแก้ไขสูตร
+          href: desktop-formula-editor.md

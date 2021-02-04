@@ -1,0 +1,82 @@
+---
+title: รีเฟรชชุดข้อมูลที่สร้างขึ้นจากสมุดงาน Excel - ภายในเครื่อง
+description: รีเฟรชชุดข้อมูลที่สร้างขึ้นจากสมุดงาน Excel บนไดรฟ์ภายในเครื่อง
+author: davidiseminger
+ms.author: davidi
+ms.reviewer: kayu
+ms.service: powerbi
+ms.subservice: pbi-data-sources
+ms.topic: how-to
+ms.date: 11/28/2018
+LocalizationGroup: Data refresh
+ms.openlocfilehash: d2dd08d087b8c4f878d9f74946c77e84dd8ba9e0
+ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
+ms.translationtype: HT
+ms.contentlocale: th-TH
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96403961"
+---
+# <a name="refresh-a-dataset-created-from-an-excel-workbook-on-a-local-drive"></a><span data-ttu-id="22aac-103">รีเฟรชชุดข้อมูลที่สร้างขึ้นจากสมุดงาน Excel บนไดรฟ์ภายในเครื่อง</span><span class="sxs-lookup"><span data-stu-id="22aac-103">Refresh a dataset created from an Excel workbook on a local drive</span></span>
+## <a name="whats-supported"></a><span data-ttu-id="22aac-104">อะไรบ้างที่ได้รับการสนับสนุน?</span><span class="sxs-lookup"><span data-stu-id="22aac-104">What’s supported?</span></span>
+<span data-ttu-id="22aac-105">ใน Power BI “รีเฟรชตอนนี้” และ “กำหนดเวลารีเฟรช” ได้รับการสนับสนุนสำหรับชุดข้อมูลที่สร้างจากสมุดงาน Excel ที่นำเข้าจากไดรฟ์ภายในเครื่องที่มีการใช้ Power Query (รับและแปลงข้อมูลใน Excel 2016) หรือ Power Pivot เพื่อเชื่อมต่อกับแหล่งข้อมูลใด ๆ ต่อไปนี้และโหลดข้อมูลลงในแบบจำลองข้อมูล Excel:</span><span class="sxs-lookup"><span data-stu-id="22aac-105">In Power BI, Refresh Now and Schedule Refresh is supported for datasets created from Excel workbooks imported from a local drive where Power Query (Get & Transform data in Excel 2016) or Power Pivot is used to connect to any of the following data sources and load data into the Excel data model:</span></span>  
+
+### <a name="power-bi-gateway---personal"></a><span data-ttu-id="22aac-106">Power BI Gateway - ส่วนบุคคล</span><span class="sxs-lookup"><span data-stu-id="22aac-106">Power BI Gateway - Personal</span></span>
+* <span data-ttu-id="22aac-107">แหล่งข้อมูลออนไลน์ทั้งหมดที่แสดงใน Power Query</span><span class="sxs-lookup"><span data-stu-id="22aac-107">All online data sources shown in Power Query.</span></span>
+* <span data-ttu-id="22aac-108">แหล่งข้อมูลภายในองค์กรทั้งหมดที่แสดงอยู่ใน Power Query ยกเว้นไฟล์ Hadoop (HDFS) และ Microsoft Exchange</span><span class="sxs-lookup"><span data-stu-id="22aac-108">All on-premises data sources shown in Power Query except for Hadoop file (HDFS) and Microsoft Exchange.</span></span>
+* <span data-ttu-id="22aac-109">แหล่งข้อมูลออนไลน์ทั้งหมดที่แสดงใน Power Pivot\*</span><span class="sxs-lookup"><span data-stu-id="22aac-109">All online data sources shown in Power Pivot.\*</span></span>
+* <span data-ttu-id="22aac-110">แหล่งข้อมูลภายในองค์กรทั้งหมดที่แสดงอยู่ใน Power Pivot ยกเว้นไฟล์ Hadoop (HDFS) และ Microsoft Exchange</span><span class="sxs-lookup"><span data-stu-id="22aac-110">All on-premises data sources shown in Power Pivot except for Hadoop file (HDFS) and Microsoft Exchange.</span></span>
+
+<!-- Refresh Data sources-->
+[!INCLUDE [refresh-datasources](../includes/refresh-datasources.md)]
+
+> <span data-ttu-id="22aac-111">**หมายเหตุ:**</span><span class="sxs-lookup"><span data-stu-id="22aac-111">**Notes:**</span></span>  
+> 
+> * <span data-ttu-id="22aac-112">เกตเวย์ต้องได้รับการติดตั้ง และเรียกใช้เพื่อให้ Power BI เชื่อมต่อกับแหล่งข้อมูลภายในองค์กร และรีเฟรชชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="22aac-112">A gateway must be installed and running in order for Power BI to connect to on-premises data sources and refresh the dataset.</span></span>
+> * <span data-ttu-id="22aac-113">เมื่อใช้ Excel 2013 ตรวจสอบให้แน่ใจว่า คุณได้ทำการอัปเดต Power Query ให้เป็นรุ่นล่าสุด</span><span class="sxs-lookup"><span data-stu-id="22aac-113">When using Excel 2013, make sure you’ve updated Power Query to the latest version.</span></span>
+> * <span data-ttu-id="22aac-114">การรีเฟรชไม่ได้รับการสนับสนุนสำหรับสมุดงาน Excel ที่นำเข้าจากไดรฟ์ภายในเครื่องที่มีข้อมูลอยู่ในแผ่นงานหรือตารางที่เชื่อมโยงเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="22aac-114">Refresh is not supported for Excel workbooks imported from a local drive where data exists only in  worksheets or linked tables.</span></span> <span data-ttu-id="22aac-115">การรีเฟรชจะได้รับการสนับสนุนสำหรับข้อมูลในแผ่นงานหากมีการจัดเก็บและนำเข้าจาก OneDrive</span><span class="sxs-lookup"><span data-stu-id="22aac-115">Refresh is supported for worksheet data if it is stored and imported from OneDrive.</span></span> <span data-ttu-id="22aac-116">เมื่อต้องการเรียนรู้เพิ่มเติม ดูที่[รีเฟรชชุดข้อมูลที่สร้างขึ้นจากสมุดงาน Excel บน OneDrive หรือ SharePoint Online](refresh-excel-file-onedrive.md)</span><span class="sxs-lookup"><span data-stu-id="22aac-116">To learn more, see [Refresh a dataset created from an Excel workbook on OneDrive, or SharePoint Online](refresh-excel-file-onedrive.md).</span></span>
+> * <span data-ttu-id="22aac-117">เมื่อคุณรีเฟรชชุดข้อมูลที่สร้างขึ้นจากสมุดงาน Excel ที่นำเข้าจากในไดรฟ์ภายในเครื่อง จะมีการรีเฟรชเฉพาะข้อมูลที่คิวรีจากแหล่งข้อมูล</span><span class="sxs-lookup"><span data-stu-id="22aac-117">When you refresh a dataset created from an Excel workbook imported from a local drive, only the data queried from data sources is refreshed.</span></span> <span data-ttu-id="22aac-118">ถ้าคุณเปลี่ยนโครงสร้างของแบบจำลองข้อมูลใน Excel หรือ Power Pivot ตัวอย่างเช่น สร้างหน่วยวัดใหม่ หรือเปลี่ยนชื่อของคอลัมน์ การเปลี่ยนแปลงเหล่านั้นจะไม่ได้รับการคัดลอกไปยังชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="22aac-118">If you change the structure of the data model in Excel or Power Pivot; for example, create a new measure or change the name of a column, those changes will not be copied to the dataset.</span></span> <span data-ttu-id="22aac-119">ถ้าคุณทำการเปลี่ยนแปลงดังกล่าว คุณจะต้องอัปโหลดใหม่ หรือเผยแพร่สมุดงานอีกครั้ง</span><span class="sxs-lookup"><span data-stu-id="22aac-119">If you make such changes, you’ll need to re-upload or re-publish the workbook.</span></span> <span data-ttu-id="22aac-120">ถ้าคุณคาดว่าจะทำการเปลี่ยนแปลงทั่วไปกับโครงสร้างสมุดงานของคุณ และคุณต้องการให้สิ่งเหล่านั้นมีผลในชุดข้อมูลใน Power BI โดยไม่ต้องอัปโหลดใหม่ โปรดพิจารณาการย้ายสมุดงานของคุณไปยัง OneDrive</span><span class="sxs-lookup"><span data-stu-id="22aac-120">If you expect to make regular changes to the structure of your workbook and you want those to be reflected in the dataset in Power BI without having to re-upload, consider putting your workbook on OneDrive.</span></span> <span data-ttu-id="22aac-121">Power BI จะรีเฟรชทั้งข้อมูลโครงสร้างและแผ่นงานจากสมุดงานที่เก็บไว้ และนำเข้าจาก OneDrive โดยอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="22aac-121">Power BI automatically refreshes both the structure and worksheet data from workbooks stored and imported from OneDrive.</span></span>
+> 
+> 
+
+## <a name="how-do-i-make-sure-data-is-loaded-to-the-excel-data-model"></a><span data-ttu-id="22aac-122">ฉันจะแน่ใจได้อย่างไรว่าข้อมูลได้รับการโหลดไปยังแบบจำลองข้อมูล Excel</span><span class="sxs-lookup"><span data-stu-id="22aac-122">How do I make sure data is loaded to the Excel data model?</span></span>
+<span data-ttu-id="22aac-123">เมื่อคุณใช้ Power Query (รับและแปลงข้อมูลใน Excel 2016) เพื่อเชื่อมต่อกับแหล่งข้อมูล คุณจะมีหลายตัวเลือกสำหรับตำแหน่งที่จะโหลดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="22aac-123">When you use Power Query (Get & Transform data in Excel 2016) to connect to a data source, you have several options where to load the data.</span></span> <span data-ttu-id="22aac-124">เมื่อต้องการตรวจสอบให้แน่ใจว่า คุณโหลดข้อมูลลงในแบบจำลองข้อมูล คุณต้องเลือก **เพิ่มข้อมูลนี้ลงในตัวเลือกแบบจำลองข้อมูล** ใน **โหลดไปยัง** กล่องโต้ตอบ</span><span class="sxs-lookup"><span data-stu-id="22aac-124">To make sure you load data into the data model, you must select the **Add this data to the Data Model** option in the **Load To** dialog box.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="22aac-125">รูปภาพนี้แสดง Excel 2016</span><span class="sxs-lookup"><span data-stu-id="22aac-125">The images here show Excel 2016.</span></span>
+> 
+> 
+
+<span data-ttu-id="22aac-126">ใน **ตัวนำทาง** คลิก **โหลดไปยัง...**</span><span class="sxs-lookup"><span data-stu-id="22aac-126">In **Navigator**, click **Load To…**</span></span>  
+    <span data-ttu-id="22aac-127">![ภาพหน้าจอของโหลดไปยังในตัวนำทาง ที่แสดงการเลือก โหลดไปยัง](media/refresh-excel-file-local-drive/refresh_loadtodm_1.png)</span><span class="sxs-lookup"><span data-stu-id="22aac-127">![Screenshot of the Load To in Navigator, showing the Load To selection.](media/refresh-excel-file-local-drive/refresh_loadtodm_1.png)</span></span>
+
+<span data-ttu-id="22aac-128">หรือ ถ้าคุณคลิก **แก้ไข** ในตัวนำทาง ตัวแก้ไขคิวรีจะเปิดขึ้น</span><span class="sxs-lookup"><span data-stu-id="22aac-128">Or, If you click **Edit** in Navigator, you’ll open the Query Editor.</span></span> <span data-ttu-id="22aac-129">ซึ่งคุณสามารถคลิก **ปิด & โหลดไปยัง...**</span><span class="sxs-lookup"><span data-stu-id="22aac-129">There you can click **Close & Load To….**</span></span>  
+    <span data-ttu-id="22aac-130">![ภาพหน้าจอของแถบหน้าแรกในตัวนำทาง ที่แสดงการเลือก ปิดและโหลดไปยัง](media/refresh-excel-file-local-drive/refresh_loadtodm_2.png)</span><span class="sxs-lookup"><span data-stu-id="22aac-130">![Screenshot of the Home tab in Navigator, showing the Close and Load To selection.](media/refresh-excel-file-local-drive/refresh_loadtodm_2.png)</span></span>
+
+<span data-ttu-id="22aac-131">จากนั้นใน **โหลดไปยัง** ตรวจสอบให้แน่ใจว่าคุณเลือก **เพิ่มข้อมูลนี้ลงในแบบจำลองข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="22aac-131">Then in **Load To**, make sure you select **Add this data to the Data Model**.</span></span>  
+    <span data-ttu-id="22aac-132">![ภาพหน้าจอของกล่องโต้ตอบโหลดไปยัง ที่แสดงมีการเลือกกล่องเพิ่มข้อมูลนี้ลงในแบบจำลองข้อมูล](media/refresh-excel-file-local-drive/refresh_loadtodm_3.png)</span><span class="sxs-lookup"><span data-stu-id="22aac-132">![Screenshot of the Load To dialog, showing the Add this data to the Data Model box is checked.](media/refresh-excel-file-local-drive/refresh_loadtodm_3.png)</span></span>
+
+### <a name="what-if-i-use-get-external-data-in-power-pivot"></a><span data-ttu-id="22aac-133">เกิดอะไรขึ้นถ้าฉันใช้ “รับข้อมูลภายนอกใน Power Pivot”</span><span class="sxs-lookup"><span data-stu-id="22aac-133">What if I use Get External Data in Power Pivot?</span></span>
+<span data-ttu-id="22aac-134">ไม่มีปัญหา</span><span class="sxs-lookup"><span data-stu-id="22aac-134">No problem.</span></span> <span data-ttu-id="22aac-135">เมื่อใดก็ตามที่คุณใช้ Power Pivot เพื่อเชื่อมต่อ และคิวรีข้อมูลจากแหล่งข้อมูลภายในองค์กร หรือแหล่งข้อมูลออนไลน์ ข้อมูลจะได้รับการโหลดลงในแบบจำลองข้อมูลโดยอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="22aac-135">Whenever you use Power Pivot to connect to and query data from an on-premises or online data source, the data is automatically loaded to the data model.</span></span>
+
+## <a name="how-do-i-schedule-refresh"></a><span data-ttu-id="22aac-136">ฉันจะกำหนดเวลารีเฟรชได้อย่างไร</span><span class="sxs-lookup"><span data-stu-id="22aac-136">How do I schedule refresh?</span></span>
+<span data-ttu-id="22aac-137">เมื่อคุณตั้งค่ากำหนดการรีเฟรช Power BI จะเชื่อมต่อโดยตรงไปยังแหล่งข้อมูลโดยใช้ข้อมูลการเชื่อมต่อและข้อมูลประจำตัวในชุดข้อมูล เพื่อคิวรีข้อมูลที่อัปเดตแล้ว จากนั้นโหลดข้อมูลที่อัปเดตแล้วลงในชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="22aac-137">When you setup a refresh schedule, Power BI will connect directly to the data sources using connection information and credentials in the dataset to query for updated data, then load the updated data into the dataset.</span></span> <span data-ttu-id="22aac-138">การแสดงภาพด้วยข้อมูลในรายงานและแดชบอร์ดที่อิงชุดข้อมูลนั้นในบริการของ Power BI จะได้รับการอัปเดตตามไปด้วย</span><span class="sxs-lookup"><span data-stu-id="22aac-138">Any visualizations in reports and dashboards based on that dataset in the Power BI service are also updated.</span></span>
+
+<span data-ttu-id="22aac-139">สำหรับรายละเอียดเกี่ยวกับวิธีการตั้งค่าการรีเฟรชตามกำหนดการ ดูที่[กำหนดค่าเวลาการรีเฟรช](refresh-scheduled-refresh.md)</span><span class="sxs-lookup"><span data-stu-id="22aac-139">For details on how to setup schedule refresh, see [Configure Schedule Refresh](refresh-scheduled-refresh.md).</span></span>
+
+## <a name="when-things-go-wrong"></a><span data-ttu-id="22aac-140">เมื่อเกิดสิ่งผิดปกติขึ้น</span><span class="sxs-lookup"><span data-stu-id="22aac-140">When things go wrong</span></span>
+<span data-ttu-id="22aac-141">เมื่อเกิดสิ่งผิดปกติขึ้น ซึ่งโดยปกติจะเกิดเนื่องจาก Power BI ไม่สามารถลงชื่อเข้าใช้แหล่งข้อมูล หรือถ้าชุดข้อมูลเชื่อมต่อกับแหล่งข้อมูลภายในองค์กร เกตเวย์จะออฟไลน์</span><span class="sxs-lookup"><span data-stu-id="22aac-141">When things go wrong, it’s usually because Power BI can’t sign into data sources, or if the dataset connects to an on-premises data source, the gateway is offline.</span></span> <span data-ttu-id="22aac-142">ตรวจสอบให้แน่ใจว่า Power BI สามารถลงชื่อเข้าใช้แหล่งข้อมูล</span><span class="sxs-lookup"><span data-stu-id="22aac-142">Make sure Power BI can sign into data sources.</span></span> <span data-ttu-id="22aac-143">ถ้ามีการเปลี่ยนแปลงรหัสผ่านที่คุณใช้เพื่อลงชื่อเข้าใช้แหล่งข้อมูล หรือ Power BI ออกจากแหล่งข้อมูล กรุณาลองลงชื่อเข้าใช้แหล่งข้อมูลของคุณอีกครั้งใน “ข้อมูลประจำตัวของแหล่งข้อมูล”</span><span class="sxs-lookup"><span data-stu-id="22aac-143">If a password you use to sign into a data source changes, or Power BI gets signed out from a data source, be sure to try signing into your data sources again in Data Source Credentials.</span></span>
+
+<span data-ttu-id="22aac-144">โปรดแน่ใจว่าคุณออกจาก **ส่งอีเมล์แจ้งเตือนเมื่อการรีเฟรชล้มเหลวให้ฉันตรวจสอบ**</span><span class="sxs-lookup"><span data-stu-id="22aac-144">Be sure to leave the **Send refresh failure notification email to me checked**.</span></span> <span data-ttu-id="22aac-145">คุณต้องการทราบทันทีถ้าการรีเฟรชตามกำหนดการล้มเหลว</span><span class="sxs-lookup"><span data-stu-id="22aac-145">You’ll want to know right away if a scheduled refresh fails.</span></span>
+
+>[!IMPORTANT]
+><span data-ttu-id="22aac-146">การรีเฟรชไม่ได้รับการสนับสนุนสำหรับฟีด OData ที่เชื่อมต่อ และคิวรีจาก Power Pivot</span><span class="sxs-lookup"><span data-stu-id="22aac-146">Refresh is not supported for OData feeds connected to and queried from Power Pivot.</span></span> <span data-ttu-id="22aac-147">เมื่อใช้ฟีด OData เป็นแหล่งข้อมูล ให้ใช้ Power Query</span><span class="sxs-lookup"><span data-stu-id="22aac-147">When using an OData feed as a data source, use Power Query.</span></span>
+
+## <a name="troubleshooting"></a><span data-ttu-id="22aac-148">การแก้ไขปัญหา</span><span class="sxs-lookup"><span data-stu-id="22aac-148">Troubleshooting</span></span>
+<span data-ttu-id="22aac-149">การรีเฟรชข้อมูลอาจไม่เป็นไปตามที่คาดไว้ในบางครั้ง</span><span class="sxs-lookup"><span data-stu-id="22aac-149">Sometimes refreshing data may not go as expected.</span></span> <span data-ttu-id="22aac-150">โดยทั่วไปแล้วจะเป็นปัญหาที่เกี่ยวข้องกับเกตเวย์</span><span class="sxs-lookup"><span data-stu-id="22aac-150">Typically this will be an issue connected with a gateway.</span></span> <span data-ttu-id="22aac-151">โปรดดูที่บทความแก้ไขปัญหาเกตเวย์สำหรับเครื่องมือและปัญหาที่ทราบแล้ว</span><span class="sxs-lookup"><span data-stu-id="22aac-151">Take a look at the gateway troubleshooting articles for tools and known issues.</span></span>
+
+[<span data-ttu-id="22aac-152">การแก้ไขปัญหาเกตเวย์ข้อมูลในองค์กร</span><span class="sxs-lookup"><span data-stu-id="22aac-152">Troubleshooting the On-premises data gateway</span></span>](service-gateway-onprem-tshoot.md)
+
+[<span data-ttu-id="22aac-153">การแก้ไขปัญหา Power BI Gateway - ส่วนบุคคล</span><span class="sxs-lookup"><span data-stu-id="22aac-153">Troubleshooting the Power BI Gateway - Personal</span></span>](service-admin-troubleshooting-power-bi-personal-gateway.md)
+
+## <a name="next-steps"></a><span data-ttu-id="22aac-154">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="22aac-154">Next steps</span></span>
+<span data-ttu-id="22aac-155">มีคำถามเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="22aac-155">More questions?</span></span> [<span data-ttu-id="22aac-156">ลองไปที่ชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="22aac-156">Try the Power BI Community</span></span>](https://community.powerbi.com/)

@@ -1,0 +1,83 @@
+### YamlMime:Landing
+title: การทำงานร่วม แชร์ และรวมผลิตภัณฑ์เข้ากันด้วย Power BI - เอกสารประกอบ
+summary: เอกสารประกอบ Power BI แสดงข้อมูลระดับผู้เชี่ยวชาญและคำตอบเพื่อจัดการกับความต้องการของคุณ ไม่ว่าคุณจะใช้ Power BI อย่างไรก็ตาม
+metadata:
+  title: การทำงานร่วม แชร์ และรวมผลิตภัณฑ์เข้ากันด้วย Power BI - เอกสารประกอบ
+  description: เอกสารประกอบ Power BI แสดงข้อมูลระดับผู้เชี่ยวชาญและคำตอบเพื่อจัดการกับความต้องการของคุณ ไม่ว่าคุณจะใช้ Power BI อย่างไรก็ตาม
+  services: powerbi
+  ms.service: powerbi
+  ms.subservice: pbi-collaborate-share
+  ms.topic: landing-page
+  ms.collection: collection
+  author: maggiesMSFT
+  ms.author: maggies
+  ms.date: 12/15/2020
+  ms.openlocfilehash: 641912026673d45c494d9350bdcc7d47e306138c
+  ms.sourcegitcommit: 7bf09116163afaae312eb2b232eb7967baee2c92
+  ms.translationtype: HT
+  ms.contentlocale: th-TH
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "97621751"
+landingContent:
+- title: เริ่มต้นทำงานร่วมกันและแชร์
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: วิธีการแชร์งานของคุณ
+      url: service-how-to-collaborate-distribute-dashboards-reports.md
+  - linkListType: how-to-guide
+    links:
+    - text: จัดการงานในพื้นที่ทำงานใหม่
+      url: service-new-workspaces.md
+- title: ทำงานร่วมกันใน  Microsoft Teams
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ทำงานร่วมกันใน  Microsoft Teams
+      url: service-collaborate-microsoft-teams.md
+  - linkListType: how-to-guide
+    links:
+    - text: เพิ่มแอป Power BI ไปยัง Microsoft Teams
+      url: service-microsoft-teams-app.md
+    - text: สนทนาใน Microsoft Teams โดยตรง
+      url: service-share-report-teams.md
+- title: แชร์งานของคุณ
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: เผยแพร่แอป
+      url: service-create-distribute-apps.md
+    - text: เฝ้าติดตามเมตริกการใช้งาน
+      url: service-modern-usage-metrics.md
+  - linkListType: how-to-guide
+    links:
+    - text: แชร์รายงานและแดชบอร์ด
+      url: service-share-dashboards.md
+    - text: กรองข้อมูลและแชร์รายงาน
+      url: service-share-reports.md
+    - text: แชร์ชุดข้อมูล
+      url: ../connect-data/service-datasets-share.md
+- title: รวมกับบริการอื่น ๆ
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure และ Power BI
+      url: ../connect-data/service-azure-and-power-bi.md
+    - text: วิเคราะห์ใน Excel
+      url: service-analyze-in-excel.md
+  - linkListType: how-to-guide
+    links:
+    - text: ฝังใน SharePoint Online
+      url: service-embed-report-spo.md
+- title: ผสานรวมกับ Power Automate
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ส่งออกรายงานจนด้วย Power อัตโนมัติ
+      url: service-automate-paginated-integration.md
+  - linkListType: how-to-guide
+    links:
+    - text: รวมการแจ้งเตือนข้อมูลด้วย Power Automate
+      url: service-flow-integration.md
+    - text: ส่งอีเมลรายงาน Power BI ด้วย Power Automate
+      url: service-automate-power-bi-report-export.md

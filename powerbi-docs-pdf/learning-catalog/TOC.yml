@@ -1,0 +1,27 @@
+- name: แค็ตตาล็อกการเรียนรู้
+  href: index.yml
+  items:
+    - name: ผู้สร้างการตัดสินใจทางธุรกิจ
+      href: learning-catalog-bdm.md
+    - name: ผู้บริโภค
+      href: learning-catalog-consumer.md
+    - name: ผู้สร้างรายงาน
+      href: learning-catalog-report-creator.md
+    - name: 'หลักสูตรออนไลน์: รายงานที่มีการแบ่งหน้า'
+      href: paginated-reports-online-course.md
+    - name: นักวิเคราะห์ข้อมูล
+      href: learning-catalog-data-analyst.md
+    - name: ผู้ดูแลระบบ
+      href: learning-catalog-administrator.md
+    - name: นักพัฒนา
+      href: learning-catalog-developer.md
+    - name: 'หลักสูตรออนไลน์: Power BI แบบฝังตัว'
+      href: developer-online-course.md
+    - name: บทบาทการขายล่วงหน้าของคู่ค้า
+      href: learning-catalog-presales.md
+    - name: ที่ปรึกษาด้านการใช้งาน
+      href: learning-catalog-functional-consultant.md
+    - name: สถาปนิกด้านการหาทางออกของปัญหา
+      href: learning-catalog-solution-architect.md
+    - name: แนะนำ DAX
+      href: /learn/paths/dax-power-bi/

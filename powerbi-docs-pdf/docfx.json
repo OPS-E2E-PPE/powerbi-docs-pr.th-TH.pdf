@@ -1,5 +1,5 @@
 {
-  "build": {
+    "build": {    
     "content": [
       {
         "files": [
@@ -9,14 +9,10 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices.md"
+          "ThirdPartyNotices"
         ]
       }
     ],
@@ -24,28 +20,55 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg",
+          "**/includes/media/**"
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
+          "**/includes/*.md"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/powerbi-docs-pdf/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "bilingual_type": "hover over",
+      "breadcrumb_path": "/power-bi/breadcrumb/toc.json",
+      "uhfHeaderId": "MSDocsHeader-MSPowerBI",
+      "contributors_to_exclude": [
+        "openpublishingbuild",
+        "sudeepku",
+        "v-thepet"
+      ],
+      "searchScope": [
+        "Power BI"
+      ],
+      "titleSuffix": "Power BI",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/powerbi-docs.th-th",
+      "feedback_product_url": "https://ideas.powerbi.com/forums/265200-power-bi",
+      "disable_contribution_on_translation_quality": [
+        "MT",
+        "MTE75",
+        "MTE95",
+        "Blank"
+      ],
+      "search.appverid": "met150",
+      "search.app": [
+        "Capaedac-PowerBI"
+      ]
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+          "featureFlags": {
+              "**/*.md": [
+                 "show_binary_rating"
+              ]
+          }
+    },
     "template": [],
-    "dest": "powerbi-docs-pdf",
+    "dest": "powerbi-docs",
     "markdownEngineName": "markdig"
   }
 }

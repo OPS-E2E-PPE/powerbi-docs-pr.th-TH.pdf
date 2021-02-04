@@ -1,0 +1,67 @@
+### YamlMime:Landing
+title: เอกสารประกอบผู้ดูแลระบบ Power BI และองค์กร
+summary: เอกสารประกอบ Power BI แสดงข้อมูลระดับผู้เชี่ยวชาญและคำตอบเพื่อจัดการกับความต้องการของคุณ ไม่ว่าคุณจะใช้ Power BI อย่างไรก็ตาม
+metadata:
+  title: เอกสารประกอบผู้ดูแลระบบ Power BI และองค์กร
+  description: เอกสารประกอบ Power BI แสดงข้อมูลระดับผู้เชี่ยวชาญและคำตอบเพื่อจัดการกับความต้องการของคุณ ไม่ว่าคุณจะใช้ Power BI อย่างไรก็ตาม
+  services: powerbi
+  ms.service: powerbi
+  ms.subservice: powerbi-admin
+  ms.topic: landing-page
+  ms.collection: collection
+  author: maggiesMSFT
+  ms.author: maggies
+  ms.date: 03/17/2020
+  ms.openlocfilehash: 9a8a47df351d3990763b8e44da2aee6271e4e94f
+  ms.sourcegitcommit: 7bf09116163afaae312eb2b232eb7967baee2c92
+  ms.translationtype: HT
+  ms.contentlocale: th-TH
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "97621061"
+landingContent:
+- title: Power BI สำหรับผู้ดูแลระบบและองค์กร
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: การดูแล Power BI คืออะไร?
+      url: service-admin-administering-power-bi-in-your-organization.md
+    - text: Power BI Premium คืออะไร?
+      url: service-premium-what-is.md
+  - linkListType: concept
+    links:
+    - text: บทบาทการบริหารจัดการ
+      url: service-admin-role.md
+- title: เริ่มใช้งาน
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: การให้สิทธิ์สำหรับองค์กรของคุณ
+      url: service-admin-licensing-organization.md
+    - text: การใช้พอร์ทัลผู้ดูแลระบบ
+      url: service-admin-portal.md
+  - linkListType: how-to-guide
+    links:
+    - text: ซื้อ Power BI Pro
+      url: service-admin-purchasing-power-bi-pro.md
+    - text: ลงทะเบียนกับ Microsoft 365 Trial
+      url: service-admin-signing-up-for-power-bi-with-a-new-office-365-trial.md
+    - text: เพิ่ม Power BI ผ่านพันธมิตรของ Microsoft 365
+      url: service-admin-syndication-partner.md
+- title: จัดการองค์กรของคุณ
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: สถานการณ์ความจุแบบพรีเมียม
+      url: service-premium-capacity-scenarios.md
+  - linkListType: how-to-guide
+    links:
+    - text: ผู้เช่าของฉันอยู่ที่ไหน
+      url: service-admin-where-is-my-tenant-located.md
+    - text: ค้นหาผู้ใช้ที่มีการลงชื่อเข้าใช้
+      url: service-admin-access-usage.md
+    - text: กำลังตรวจสอบ Power BI
+      url: service-admin-auditing.md
+    - text: ติดตามสถานภาพบริการ
+      url: service-admin-health.md
+    - text: ปิดบัญชี Power BI ของคุณ
+      url: service-admin-closing-your-account.md

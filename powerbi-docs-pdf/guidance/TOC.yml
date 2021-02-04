@@ -1,0 +1,160 @@
+- name: เอกสารคำแนะนำของ Power BI
+  href: index.yml
+  expanded: true
+  items:
+    - name: ภาพรวม
+      expanded: true
+      items:
+        - name: ภาพรวม
+          href: overview.md
+        - name: คำแนะนำการปรับให้เหมาะสมสำหรับ Power BI
+          href: power-bi-optimization.md
+    - name: แนวคิด
+      expanded: true
+      items:
+        - name: แปลงและทำข้อมูลให้เป็นรูปร่าง
+          items:
+            - name: ความสำคัญของการพับคิวรี
+              href: power-query-folding.md
+            - name: การอ้างอิงคิวรี Power Query
+              href: power-query-referenced-queries.md
+            - name: ปิดใช้งานการรีเฟรชพื้นหลังของ Power Query
+              href: power-query-background-refresh.md
+            - name: แนวทางปฏิบัติที่ดีที่สุดสำหรับกระแสข้อมูล
+              href: ../transform-model/dataflows/dataflows-introduction-self-service.md
+        - name: การสร้างแบบจำลองข้อมูล
+          items:
+            - name: Schema ติดดาวคืออะไร
+              href: star-schema.md
+            - name: ลดขนาดแบบจำลองข้อมูล
+              href: import-modeling-data-reduction.md
+            - name: สร้างตารางวัน
+              href: model-date-tables.md
+            - name: คำแนะนำวันที่/เวลาอัตโนมัติ
+              href: auto-date-time.md
+            - name: ความสัมพันธ์หนึ่งต่อหนึ่ง
+              href: relationships-one-to-one.md
+            - name: ความสัมพันธ์แบบกลุ่มต่อกลุ่ม
+              href: relationships-many-to-many.md
+            - name: ความสัมพันธ์ระหว่างที่ใช้ได้และใช้ไม่ได้
+              href: relationships-active-inactive.md
+            - name: ความสัมพันธ์แบบสองทิศทาง
+              href: relationships-bidirectional-filtering.md
+            - name: การแก้ปัญหาความสัมพันธ์
+              href: relationships-troubleshoot.md
+            - name: คำแนะนำแบบจำลอง DirectQuery
+              href: directquery-model-guidance.md
+            - name: คำแนะนำโมเดลแบบรวม
+              href: composite-model-guidance.md
+            - name: คำแนะนำการรักษาความปลอดภัยระดับแถว (RLS)
+              href: rls-guidance.md
+        - name: DAX
+          items:
+            - name: ฟังก์ชันการแบ่งเทียบกับตัวดำเนินการหาร (/)
+              href: dax-divide-function-operator.md
+            - name: การใช้ฟังก์ชันข้อผิดพลาดที่เหมาะสม
+              href: dax-error-functions.md
+            - name: ใช้ SELECTEDVALUE แทน VALUES
+              href: dax-selectedvalue.md
+            - name: COUNTROWS แทน COUNT
+              href: dax-countrows.md
+            - name: ใช้ตัวแปรเพื่อปรับปรุงสูตร
+              href: dax-variables.md
+            - name: หลีกเลี่ยงการแปลง BLANK ไปเป็นค่า
+              href: dax-avoid-converting-blank.md
+            - name: การอ้างอิงคอลัมน์และหน่วยวัด
+              href: dax-column-measure-references.md
+            - name: หลีกเลี่ยงการใช้ตัวกรองเป็นอาร์กิวเมนต์ตัวกรอง
+              href: dax-avoid-avoid-filter-as-filter-argument.md
+            - name: ตัวอย่างแบบจำลอง
+              href: dax-sample-model.md
+        - name: รายงาน Power BI
+          items:
+            - name: แยกรายงานจากแบบจำลอง
+              href: report-separate-from-model.md
+            - name: ขยายภาพด้วยคำแนะนำเครื่องมือของหน้ารายงาน
+              href: report-page-tooltips.md
+            - name: ใช้การดูหน้ารายงานแบบเจาะลึก
+              href: report-drillthrough.md
+            - name: เคล็ดลับในการจัดการแกน
+              href: report-design-tips-axes.md
+            - name: เคล็ดลับในการควบคุมเส้นตารางแผนภูมิ
+              href: report-tips-chart-gridlines.md
+            - name: เคล็ดลับในการปรับใช้ป้ายชื่อให้เหมาะสม
+              href: report-tips-labels.md
+            - name: เคล็ดลับในการจัดรูปแบบและใช้คำอธิบายแผนภูมิ
+              href: report-tips-legends.md
+            - name: เคล็ดลับเพื่อปรับสีของภาพให้เหมาะสม
+              href: report-tips-visual-colors.md
+            - name: เคล็ดลับเพื่อปรับสีของภาพให้เหมาะสม
+              href: report-tips-visual-colors.md
+            - name: เคล็ดลับในการเรียงลำดับและเผยแพร่พลอตข้อมูล
+              href: report-tips-sort-distribute-data-plots.md
+            - name: เคล็ดลับในการทำงานกับรูปร่าง รูปภาพ และไอคอน
+              href: report-tips-shapes-images-icons.md
+        - name: Power BI รายงานเลขหน้า
+          items:
+            - name: ควรใช้รายงานหน้าเมื่อใด
+              href: report-paginated-or-power-bi.md
+            - name: คำแนะนำเกี่ยวกับการเรียกข้อมูล
+              href: report-paginated-data-retrieval.md
+            - name: แนะนำเกี่ยวกับการใช้รูปภาพ
+              href: report-paginated-image.md
+            - name: ใช้พารามิเตอร์แบบเรียงซ้อน
+              href: paginated-report-cascading-parameter.md
+            - name: หลีกเลี่ยงหน้าเปล่าเมื่อพิมพ์
+              href: report-paginated-blank-page.md
+            - name: ย้ายรายงาน SSRS ไปยัง Power BI
+              href: migrate-ssrs-reports-to-power-bi.md
+        - name: ผู้ดูแลระบบและการปรับใช้
+          items:
+            - name: การตั้งค่าผู้เช่า
+              href: admin-tenant-settings.md
+            - name: ขนาดเกตเวย์ข้อมูลภายในองค์กร
+              href: gateway-onprem-sizing.md
+            - name: ตรวจดูประสิทธิภาพของรายงาน
+              href: monitor-report-performance.md
+            - name: แก้ไขปัญหาประสิทธิภาพรายงาน
+              href: report-performance-troubleshoot.md
+            - name: แนวปฏิบัติที่ดีที่สุดสำหรับไปป์ไลน์การปรับใช้งาน
+              href: ../create-reports/deployment-pipelines-best-practices.md
+            - name: เข้าถึงบันทึกกิจกรรม Power BI
+              href: admin-activity-log.md
+    - name: ย้ายข้อมูลไปยัง Power BI
+      items:
+        - name: ภาพรวมการย้ายข้อมูล
+          href: powerbi-migration-overview.md
+        - name: เตรียมพร้อมเพื่อย้ายข้อมูล
+          href: powerbi-migration-pre-migration-steps.md
+        - name: รวบรวมข้อกำหนด
+          href: powerbi-migration-requirements.md
+        - name: การปรับใช้แผน
+          href: powerbi-migration-planning.md
+        - name: ดำเนินการพิสูจน์แนวคิด
+          href: powerbi-migration-proof-of-concept.md
+        - name: สร้างเนื้อหา
+          href: powerbi-migration-create-validate-content.md
+        - name: ปรับใช้ไปยัง Power BI
+          href: powerbi-migration-deploy-support-monitor.md
+        - name: เรียนรู้จากการย้ายข้อมูล Power BI ของลูกค้า
+          href: powerbi-migration-learn-from-customers.md
+    - name: ศูนย์แห่งความเป็นเลิศ (COE)
+      items:
+        - name: การแปลง BI ของ Microsoft
+          href: center-of-excellence-microsoft-business-intelligence-transformation.md
+        - name: สร้าง COE
+          href: center-of-excellence-establish.md
+        - name: สถาปัตยกรรมโซลูชัน BI ใน COE
+          href: center-of-excellence-business-intelligence-solution-architecture.md
+    - name: เอกสารทางเทคนิค
+      items:
+        - name: ภาพรวมเอกสารทางเทคนิค
+          href: whitepapers.md
+        - name: เอกสารทางเทคนิคเรื่องความปลอดภัยของPower BI
+          href: whitepaper-powerbi-security.md
+        - name: เอกสารการปรับใช้ Power BI enterprise
+          href: whitepaper-powerbi-enterprise-deployment.md
+        - name: การปรับใช้ Power BI premium
+          href: whitepaper-powerbi-premium-deployment.md
+        - name: กระจาย Power BI ภายนอกโดยใช้ Azure Active Directory B2B
+          href: whitepaper-azure-b2b-power-bi.md

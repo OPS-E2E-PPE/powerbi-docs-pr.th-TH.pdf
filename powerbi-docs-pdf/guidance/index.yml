@@ -1,0 +1,173 @@
+### YamlMime:Landing
+title: เอกสารคำแนะนำของ Power BI
+summary: เอกสารคำแนะนำของ Power BI ให้ข้อมูลแนวทางปฏิบัติที่ดีที่สุดจากทีมที่สร้าง Power BI และผู้ใช้ที่ทำงานกับลูกค้าองค์กรของเรา ที่นี่คุณจะพบการเรียนรู้เพื่อปรับปรุงประสิทธิภาพการทำงานและประสบความสำเร็จกับ Power BI เราจะอัปเดตและข้อมูลใหม่ที่พร้อมใช้งานเข้าไปในเอกสารคำแนะนำนี้
+metadata:
+  title: เอกสารคำแนะนำของ Power BI
+  description: เอกสารคำแนะนำของ Power BI ให้ข้อมูลแนวทางปฏิบัติที่ดีที่สุดจากทีมที่สร้าง Power BI และผู้ใช้ที่ทำงานกับลูกค้าองค์กรของเรา ที่นี่คุณจะพบการเรียนรู้เพื่อปรับปรุงประสิทธิภาพการทำงานและประสบความสำเร็จกับ Power BI เราจะอัปเดตและข้อมูลใหม่ที่พร้อมใช้งานเข้าไปในเอกสารคำแนะนำนี้
+  services: powerbi
+  ms.service: powerbi
+  ms.subservice: powerbi
+  ms.topic: landing-page
+  ms.collection: collection
+  author: maggiesMSFT
+  ms.author: maggies
+  ms.date: 01/14/2020
+  ms.openlocfilehash: f457d7c30daab584cbac324aa161b1e9a9f35b58
+  ms.sourcegitcommit: 37bd34053557089c4fbf0e05f78e959609966561
+  ms.translationtype: HT
+  ms.contentlocale: th-TH
+  ms.lasthandoff: 11/10/2020
+  ms.locfileid: "94397334"
+landingContent:
+- title: คำแนะนำ Power BI
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: คำแนะนำสำหรับ Power BI
+      url: overview.md
+    - text: คำแนะนำการปรับให้เหมาะสมสำหรับ Power BI
+      url: power-bi-optimization.md
+    - text: ภาพรวมเอกสารทางเทคนิค
+      url: whitepapers.md
+- title: แปลงและทำข้อมูลให้เป็นรูปร่าง
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ความสำคัญของการพับคิวรี
+      url: power-query-folding.md
+    - text: ปิดใช้งานการรีเฟรชพื้นหลังของ Power Query
+      url: power-query-background-refresh.md
+    - text: การอ้างอิงคิวรี Power Query
+      url: power-query-referenced-queries.md
+    - text: แนวทางปฏิบัติที่ดีที่สุดสำหรับกระแสข้อมูล
+      url: ../transform-model/dataflows/dataflows-introduction-self-service.md
+- title: การสร้างแบบจำลองข้อมูล
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Schema ติดดาวคืออะไร
+      url: star-schema.md
+    - text: เทคนิคการลดข้อมูล
+      url: import-modeling-data-reduction.md
+    - text: ความสัมพันธ์หนึ่งต่อหนึ่ง
+      url: relationships-one-to-one.md
+    - text: ความสัมพันธ์แบบกลุ่มต่อกลุ่ม
+      url: relationships-many-to-many.md
+    - text: ความสัมพันธ์ระหว่างที่ใช้ได้และใช้ไม่ได้
+      url: relationships-active-inactive.md
+    - text: ความสัมพันธ์แบบสองทิศทาง
+      url: relationships-bidirectional-filtering.md
+    - text: การแก้ปัญหาความสัมพันธ์
+      url: relationships-troubleshoot.md
+    - text: คำแนะนำแบบจำลอง DirectQuery
+      url: directquery-model-guidance.md
+    - text: คำแนะนำโมเดลแบบรวม
+      url: composite-model-guidance.md
+    - text: คำแนะนำการรักษาความปลอดภัยระดับแถว (RLS)
+      url: rls-guidance.md
+- title: DAX
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ฟังก์ชันการแบ่งเทียบกับตัวดำเนินการหาร
+      url: dax-divide-function-operator.md
+    - text: การใช้ฟังก์ชันข้อผิดพลาดที่เหมาะสม
+      url: dax-error-functions.md
+    - text: ใช้ SELECTEDVALUE แทน VALUES
+      url: dax-selectedvalue.md
+    - text: ใช้ COUNTROWS แทน COUNT
+      url: dax-countrows.md
+    - text: ใช้ตัวแปรเพื่อปรับปรุงสูตร
+      url: dax-variables.md
+    - text: หลีกเลี่ยงการแปลง BLANK ไปเป็นค่า
+      url: dax-avoid-converting-blank.md
+    - text: การอ้างอิงคอลัมน์และหน่วยวัด
+      url: dax-column-measure-references.md
+    - text: หลีกเลี่ยงการใช้ตัวกรองเป็นอาร์กิวเมนต์ตัวกรอง
+      url: dax-avoid-avoid-filter-as-filter-argument.md
+- title: รายงาน Power BI
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: แยกรายงานจากแบบจำลอง
+      url: report-separate-from-model.md
+    - text: ใช้คำแนะนำเครื่องมือของหน้ารายงาน
+      url: report-page-tooltips.md
+    - text: ใช้การดูหน้ารายงานแบบเจาะลึก
+      url: report-drillthrough.md
+    - text: เคล็ดลับในการจัดการแกน
+      url: report-design-tips-axes.md
+    - text: เคล็ดลับในการควบคุมเส้นตารางแผนภูมิ
+      url: report-tips-chart-gridlines.md
+    - text: เคล็ดลับในการปรับใช้ป้ายชื่อให้เหมาะสม
+      url: report-tips-labels.md
+    - text: เคล็ดลับในการจัดรูปแบบและใช้คำอธิบายแผนภูมิ
+      url: report-tips-legends.md
+    - text: เคล็ดลับเพื่อปรับสีของภาพให้เหมาะสม
+      url: report-tips-visual-colors.md
+    - text: เคล็ดลับในการเรียงลำดับและเผยแพร่พลอตข้อมูล
+      url: report-tips-sort-distribute-data-plots.md
+    - text: เคล็ดลับในการทำงานกับรูปร่าง รูปภาพ และไอคอน
+      url: report-tips-shapes-images-icons.md
+- title: Power BI รายงานเลขหน้า
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ควรใช้รายงานหน้าเมื่อใด
+      url: report-paginated-or-power-bi.md
+    - text: คำแนะนำเกี่ยวกับการเรียกข้อมูล
+      url: report-paginated-data-retrieval.md
+    - text: แนะนำเกี่ยวกับการใช้รูปภาพ
+      url: report-paginated-image.md
+    - text: ใช้พารามิเตอร์แบบเรียงซ้อน
+      url: paginated-report-cascading-parameter.md
+    - text: หลีกเลี่ยงหน้าเปล่าเมื่อพิมพ์
+      url: report-paginated-blank-page.md
+    - text: ย้ายรายงาน SSRS ไปยัง Power BI
+      url: migrate-ssrs-reports-to-power-bi.md
+- title: ผู้ดูแลระบบและการปรับใช้
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: การตั้งค่าผู้เช่า
+      url: admin-tenant-settings.md
+    - text: ขนาดเกตเวย์ข้อมูลภายในองค์กร
+      url: gateway-onprem-sizing.md
+    - text: ตรวจดูประสิทธิภาพของรายงาน
+      url: monitor-report-performance.md
+    - text: แก้ไขปัญหาประสิทธิภาพรายงาน
+      url: report-performance-troubleshoot.md
+    - text: แนวปฏิบัติที่ดีที่สุดสำหรับไปป์ไลน์การปรับใช้งาน
+      url: ../create-reports/deployment-pipelines-best-practices.md
+    - text: เข้าถึงบันทึกกิจกรรม Power BI
+      url: admin-activity-log.md
+- title: ย้ายข้อมูลไปยัง Power BI
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ภาพรวมการย้ายข้อมูล
+      url: powerbi-migration-overview.md
+    - text: เตรียมพร้อมเพื่อย้ายข้อมูล
+      url: powerbi-migration-pre-migration-steps.md
+    - text: รวบรวมข้อกำหนด
+      url: powerbi-migration-requirements.md
+    - text: การปรับใช้แผน
+      url: powerbi-migration-planning.md
+    - text: ดำเนินการพิสูจน์แนวคิด
+      url: powerbi-migration-proof-of-concept.md
+    - text: สร้างเนื้อหา
+      url: powerbi-migration-create-validate-content.md
+    - text: ปรับใช้ไปยัง Power BI
+      url: powerbi-migration-deploy-support-monitor.md
+    - text: เรียนรู้จากการย้ายข้อมูล Power BI ของลูกค้า
+      url: powerbi-migration-learn-from-customers.md
+- title: ศูนย์แห่งความเป็นเลิศ (COE)
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: การแปลง BI ของ Microsoft
+      url: center-of-excellence-microsoft-business-intelligence-transformation.md
+    - text: สร้าง COE
+      url: center-of-excellence-establish.md
+    - text: สถาปัตยกรรมโซลูชัน BI ใน COE
+      url: center-of-excellence-business-intelligence-solution-architecture.md

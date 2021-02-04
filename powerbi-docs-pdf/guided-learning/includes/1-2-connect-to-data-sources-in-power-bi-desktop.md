@@ -1,0 +1,30 @@
+---
+ms.openlocfilehash: f66cc9f911c63703accb348e49133dbf3587d58a
+ms.sourcegitcommit: 60dad5aa0d85db790553e537bf8ac34ee3289ba3
+ms.translationtype: HT
+ms.contentlocale: th-TH
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "61265203"
+---
+<span data-ttu-id="dac3c-101">**Power BI Desktop** สามารถเชื่อมต่อกับแหล่งข้อมูลได้อย่างกว้างขวาง รวมถึง ฐานข้อมูลภายในองค์กร เวิร์กบุ๊ก Excel และบริการบนระบบคลาวด์</span><span class="sxs-lookup"><span data-stu-id="dac3c-101">**Power BI Desktop** can connect to a whole range of data sources, including on-premises databases, Excel workbooks, and cloud services.</span></span> <span data-ttu-id="dac3c-102">ขณะนี้ บริการบนระบบคลาวด์มากกว่า 59 บริการ เช่น GitHub และ Marketo มีตัวเชื่อมต่อเฉพาะแล้ว และคุณสามารถเชื่อมต่อกับแหล่งข้อมูลทั่วไปผ่านทาง XML, CSV, ข้อความ และ ODBC ได้</span><span class="sxs-lookup"><span data-stu-id="dac3c-102">Currently, over 59 different cloud services such as GitHub and Marketo have specific connectors, and you can connect to generic sources through XML, CSV, text, and ODBC.</span></span> <span data-ttu-id="dac3c-103">Power BI ยังสามารถดึงข้อมูลตารางจาก URL ของเว็บไซต์ได้โดยตรงอีกด้วย!</span><span class="sxs-lookup"><span data-stu-id="dac3c-103">Power BI will even scrape tabular data directly from a website URL!</span></span> <span data-ttu-id="dac3c-104">แต่เราจะเริ่มจากจุดเริ่มต้น ด้วยการเปิด Power BI Desktop และเชื่อมต่อกับข้อมูล</span><span class="sxs-lookup"><span data-stu-id="dac3c-104">But let's start from the beginning, with opening Power BI Desktop and connecting to data.</span></span>
+
+<span data-ttu-id="dac3c-105">เมื่อคุณเริ่มต้น **Power BI Desktop** และเลื่อนผ่าน หน้าจอเริ่มต้น คุณสามารถเลือก รับข้อมูล จาก Ribbon บนแท็บ **หน้าแรก**</span><span class="sxs-lookup"><span data-stu-id="dac3c-105">When you start **Power BI Desktop** and move past the Start Screen, you can choose Get Data from the ribbon on the **Home** tab.</span></span>
+
+![](media/1-2-connect-to-data-sources-in-power-bi-desktop/1-2_1.png)
+
+<span data-ttu-id="dac3c-106">ยังมีการอัปเดตรายเดือนของ Power BI Desktop และในการอัปเดตแต่ละครั้ง หน้า**มีอะไรใหม่ใน Power BI Desktop** จะมีข้อมูลใหม่ๆ เกี่ยวกับการอัปเดต ลิงก์ไปยังบล็อก และลิงก์ดาวน์โหลด</span><span class="sxs-lookup"><span data-stu-id="dac3c-106">There are monthly updates to Power BI Desktop, and with each update, the **Power BI Desktop What's New** page gets updated with information about the updates, links to the blog, and a download link.</span></span>
+
+<span data-ttu-id="dac3c-107">ใน Power BI Desktop จะมีแหล่งข้อมูลต่างๆ ทุกประเภทที่พร้อมใช้งาน</span><span class="sxs-lookup"><span data-stu-id="dac3c-107">In Power BI Desktop, there are all sorts of different data sources available.</span></span> <span data-ttu-id="dac3c-108">เลือกแหล่งข้อมูลเพื่อสร้างการเชื่อมต่อ</span><span class="sxs-lookup"><span data-stu-id="dac3c-108">Select a source to establish a connection.</span></span> <span data-ttu-id="dac3c-109">ระบบจะขอให้คุณค้นหาแหล่งข้อมูลบนคอมพิวเตอร์หรือเครือข่ายของคุณ หรือได้รับพร้อมท์ให้เข้าใช้บริการเพื่อรับรองความถูกต้องของคำขอของคุณ โดยขึ้นอยู่กับการเลือกของคุณ</span><span class="sxs-lookup"><span data-stu-id="dac3c-109">Depending on your selection, you will be asked to find the source on your computer or network, or be prompted to sign in to a service to authenticate your request.</span></span>
+
+![](media/1-2-connect-to-data-sources-in-power-bi-desktop/1-2_2.gif)
+
+<span data-ttu-id="dac3c-110">หลังจากการเชื่อมต่อ หน้าต่างแรกที่คุณจะเห็นคือ **ตัวนำทาง**</span><span class="sxs-lookup"><span data-stu-id="dac3c-110">After connecting, the first window you'll see is the **Navigator**.</span></span> <span data-ttu-id="dac3c-111">ตัวนำทางจะแสดงตารางหรือรายการของแหล่งข้อมูล และการคลิกรายการจะแสดงตัวอย่างของเนื้อหา</span><span class="sxs-lookup"><span data-stu-id="dac3c-111">The Navigator displays the tables or entities of your data source, and clicking on one gives you a preview of its contents.</span></span> <span data-ttu-id="dac3c-112">จากนั้น คุณจะสามารถนำเข้าตารางหรือรายการที่เลือกได้ทันที หรือเลือก **แก้ไข** เพื่อแปลงและล้างข้อมูลของคุณก่อนที่จะนำเข้า</span><span class="sxs-lookup"><span data-stu-id="dac3c-112">You can then import your selected tables or entities immediately, or select **Edit** to transform and clean your data before importing.</span></span>
+
+![](media/1-2-connect-to-data-sources-in-power-bi-desktop/1-2_3.png)
+
+<span data-ttu-id="dac3c-113">เมื่อคุณเลือกตารางที่คุณต้องการนำเข้าสู่ Power BI Desktop แล้ว คุณสามารถเลือกโหลดลงใน Power BI Desktop ได้โดยการเลือกปุ่ม **โหลด** ที่มุมขวาล่างของ **ตัวนำทาง**</span><span class="sxs-lookup"><span data-stu-id="dac3c-113">Once you've selected the tables you'd like to bring into Power BI Desktop, you can choose to load them into Power BI Desktop by selecting the **Load** button in the bottom right corner of **Navigator**.</span></span> <span data-ttu-id="dac3c-114">อย่างไรก็ตาม มีหลายครั้งที่คุณอาจต้องการเปลี่ยนแปลงตารางเหล่านั้นก่อนที่จะโหลดลงใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="dac3c-114">There are times, however, where you might want to make changes to those tables before you load them into Power BI Desktop.</span></span> <span data-ttu-id="dac3c-115">คุณอาจต้องการเพียงชุดย่อยของลูกค้า หรือกรองข้อมูลนั้นให้มีเฉพาะยอดขายที่เกิดขึ้นในประเทศที่ระบุ</span><span class="sxs-lookup"><span data-stu-id="dac3c-115">You might want only a subset of customers, or filter that data for sales that occurred only in a specific country.</span></span> <span data-ttu-id="dac3c-116">ในกรณีเหล่านั้น คุณสามารถเลือกปุ่ม แก้ไข และกรองหรือแปลงข้อมูลนั้นก่อนที่จะนำเข้าสู่ Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="dac3c-116">In those cases, you can select the Edit button and filter or transform that data before bringing it all into Power BI Desktop.</span></span>
+
+![](media/1-2-connect-to-data-sources-in-power-bi-desktop/1-2_4.png)
+
+<span data-ttu-id="dac3c-117">เราจะทำงานต่อและแก้ไขข้อมูลของเราในส่วนถัดไป</span><span class="sxs-lookup"><span data-stu-id="dac3c-117">We'll pick up there, and edit our data, in the next section.</span></span>
+

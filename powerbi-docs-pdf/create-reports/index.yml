@@ -1,0 +1,131 @@
+### YamlMime:Landing
+title: สร้างรายงานและแดชบอร์ด Power BI - เอกสารประกอบ
+summary: เอกสารประกอบ Power BI แสดงข้อมูลระดับผู้เชี่ยวชาญและคำตอบเพื่อจัดการกับความต้องการของคุณ ไม่ว่าคุณจะใช้ Power BI อย่างไรก็ตาม
+metadata:
+  title: สร้างรายงานและแดชบอร์ด Power BI - เอกสารประกอบ
+  description: เอกสารประกอบ Power BI แสดงข้อมูลระดับผู้เชี่ยวชาญและคำตอบเพื่อจัดการกับความต้องการของคุณ ไม่ว่าคุณจะใช้ Power BI อย่างไรก็ตาม
+  services: powerbi
+  ms.service: powerbi
+  ms.subservice: powerbi
+  ms.topic: landing-page
+  ms.collection: collection
+  author: maggiesMSFT
+  ms.author: maggies
+  ms.date: 12/16/2020
+  ms.openlocfilehash: 2bc4ade5dc563445c945f0a5b14f28272938c0d5
+  ms.sourcegitcommit: 7bf09116163afaae312eb2b232eb7967baee2c92
+  ms.translationtype: HT
+  ms.contentlocale: th-TH
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "97622027"
+landingContent:
+- title: เริ่มใช้งาน
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: ใช้งานริบบอนที่ปรับปรุงแล้ว
+      url: desktop-ribbon.md
+    - text: ภาพรวมการช่วยสำหรับการเข้าถึง
+      url: desktop-accessibility-overview.md
+    - text: รับข้อมูลตัวอย่าง
+      url: sample-datasets.md
+  - linkListType: tutorial
+    links:
+    - text: จาก Excel ไปยังรายงานใน Power BI Desktop
+      url: desktop-excel-stunning-report.md
+    - text: นำเข้า & เปิดชุดตัวอย่าง
+      url: sample-tutorial-connect-to-the-samples.md
+  - linkListType: sample
+    links:
+    - text: 'ตัวอย่าง COVID-19: ข้อมูลของสหรัฐอเมริกา'
+      url: sample-covid-19-us.md
+- title: การแสดงผลข้อมูลด้วยภาพ
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ภาพรวมการแสดงผลด้วยภาพ
+      url: ../visuals/power-bi-report-visualizations.md
+    - text: ชนิดการแสดงผลด้วยภาพ
+      url: ../visuals/power-bi-visualization-types-for-reports-and-q-and-a.md
+  - linkListType: how-to-guide
+    links:
+    - text: เคล็ดลับ & เทคนิคสำหรับแผนที่
+      url: ../visuals/power-bi-map-tips-and-tricks.md
+    - text: ส่งออกข้อมูลจากการแสดงผลด้วยภาพ
+      url: ../visuals/power-bi-visualization-export-data.md
+    - text: วิชวลสำหรับโครงข่ายของข้อมูล
+      url: ../visuals/power-bi-visualization-decomposition-tree.md
+    - text: คำบรรยายอัจฉริยะ
+      url: ../visuals/power-bi-visualization-smart-narrative.md
+    - text: ตัวแบ่งส่วนข้อมูล
+      url: ../visuals/power-bi-visualization-slicers.md
+- title: รายงานการออกแบบ
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: ธีมรายงาน
+      url: desktop-report-themes.md
+    - text: กล่องข้อความและรูปร่าง
+      url: power-bi-reports-add-text-and-shapes.md
+  - linkListType: how-to-guide
+    links:
+    - text: การจัดรูปแบบตารางตามเงื่อนไข
+      url: desktop-conditional-table-formatting.md
+    - text: ใช้การจัดกลุ่ม & การแบ่งช่วงข้อมูล
+      url: desktop-grouping-and-binning.md
+    - text: เพิ่มบุ๊กมาร์กลงในรายงาน
+      url: desktop-bookmarks.md
+- title: การโต้ตอบรายงานการออกแบบ
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: มุมมองรายงานใน Power BI Desktop
+      url: desktop-report-view.md
+  - linkListType: how-to-guide
+    links:
+    - text: สำรวจข้อมูลด้วยถามตอบ
+      url: power-bi-tutorial-q-and-a.md
+    - text: ใช้การดูรายละเอียดเจาะลึกในรายงาน
+      url: desktop-drillthrough.md
+    - text: เพิ่มบุ๊กมาร์กลงในรายงาน
+      url: desktop-bookmarks.md
+    - text: เพิ่มตัวกรองลงในรายงาน
+      url: power-bi-report-filter.md
+- title: Power BI รายงานเลขหน้า
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: รายงานที่มีการแบ่งหน้าของ Power BI คืออะไร
+      url: ../paginated-reports/paginated-reports-report-builder-power-bi.md
+    - text: ตัวสร้างรายงานใน Power BI
+      url: ../paginated-reports/report-builder-power-bi.md
+  - linkListType: learn
+    links:
+    - text: 'หลักสูตรออนไลน์: รายงานที่มีการแบ่งหน้าในหนึ่งวัน'
+      url: ../learning-catalog/paginated-reports-online-course.md
+  - linkListType: concept
+    links:
+    - text: ตัวอย่างนิพจน์
+      url: ../paginated-reports/report-builder-expression-examples.md
+    - text: ตาราง เมทริกซ์ และรายการ
+      url: ../paginated-reports/report-builder-tables-matrices-lists.md
+  - linkListType: how-to-guide
+    links:
+    - text: สร้างรายงานบนชุดข้อมูล SharePoint
+      url: ../paginated-reports/report-builder-shared-datasets.md
+    - text: สร้างพารามิเตอร์
+      url: ../paginated-reports/paginated-reports-parameters.md
+- title: แดชบอร์ด
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: แนะนำแดชบอร์ด
+      url: service-dashboards.md
+  - linkListType: how-to-guide
+    links:
+    - text: สร้างแดชบอร์ด
+      url: service-dashboard-create.md
+    - text: ปักหมุดไทล์ที่แดชบอร์ด
+      url: service-dashboard-pin-tile-from-report.md
+    - text: เพิ่มรูปภาพหรือวิดีโอไปยังแดชบอร์ด
+      url: service-dashboard-add-widget.md

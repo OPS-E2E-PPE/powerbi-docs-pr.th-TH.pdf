@@ -1,0 +1,169 @@
+- name: ผู้ดูแลระบบ Power BI และองค์กร
+  href: index.yml
+  expanded: true
+  items:
+    - name: ภาพรวม
+      expanded: true
+      items:
+        - name: การดูแล Power BI คืออะไร?
+          href: service-admin-administering-power-bi-in-your-organization.md
+        - name: ผู้เช่าของฉันอยู่ที่ไหน
+          href: service-admin-where-is-my-tenant-located.md
+        - name: Power BI Premium คืออะไร?
+          href: service-premium-what-is.md
+    - name: แนวคิด
+      expanded: true
+      items:
+        - name: บทบาทการจัดการใน Microsoft 365
+          href: service-admin-role.md
+        - name: การให้สิทธิ์สำหรับองค์กรของคุณ
+          href: service-admin-licensing-organization.md
+        - name: Power BI สำหรับภาครัฐของประเทศสหรัฐอเมริกา
+          items:
+            - name: Power BI สำหรับภาครัฐของประเทศสหรัฐอเมริกา
+              href: service-govus-overview.md
+            - name: ลงทะเบียนองค์กรภาครัฐของประเทศสหรัฐอเมริกา
+              href: service-govus-signup.md
+        - name: Power BI ในบริการคลาวด์แห่งชาติ
+          items:
+            - name: โยกย้ายเพื่อไปยังภูมิภาคเยอรมนีในท้องถิ่น
+              href: service-admin-migrate-data-germany.md
+            - name: ถามที่ถามบ่อยสำหรับลูกค้า Germany Cloud
+              href: service-govde-faq.md
+        - name: คำถามที่พบบ่อย (FAQ)
+          href: service-admin-faq.md
+        - name: FAQ เกี่ยวกับความพร้อมใช้งานสูงและการย้ายโหนดเมื่อเกิดข้อผิดพลาด
+          href: service-admin-failover.md
+        - name: Power BI Premium
+          items:
+            - name: การจัดการความจุแบบพรีเมียม
+              href: service-premium-capacity-manage.md
+            - name: การปรับความจุแบบพรีเมียมให้เหมาะสม
+              href: service-premium-capacity-optimize.md
+            - name: สถานการณ์ความจุแบบพรีเมียม
+              href: service-premium-capacity-scenarios.md
+            - name: คำถามที่ถามบ่อยสำหรับ Power BI Premium
+              href: service-premium-faq.md
+            - name: คำถามที่พบบ่อยเกี่ยวกับ Power BI Premium ต่อผู้ใช้
+              href: service-premium-per-user-faq.md
+    - name: วิธีการ
+      items:
+        - name: การใช้สิทธิ์และลงทะเบียน
+          items:
+            - name: รับ Power BI สำหรับองค์กรของคุณ
+              href: service-admin-org-subscription.md
+            - name: ซื้อ Power BI Pro
+              href: service-admin-purchasing-power-bi-pro.md
+            - name: ปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเอง
+              href: service-admin-disable-self-service.md
+            - name: ดูและจัดการใบอนุญาตของผู้ใช้
+              href: service-admin-manage-licenses.md
+            - name: ลงทะเบียนกับ Microsoft 365 Trial
+              href: service-admin-signing-up-for-power-bi-with-a-new-office-365-trial.md
+            - name: เพิ่ม Power BI ผ่านพันธมิตรของ Microsoft 365
+              href: service-admin-syndication-partner.md
+        - name: การใช้พอร์ทัลผู้ดูแลระบบ
+          href: service-admin-portal.md
+        - name: ใช้ลิงก์ส่วนตัวสำหรับ Power BI
+          href: service-security-private-links.md
+        - name: จัดการการตั้งค่าผู้ดูแลระบบวิชวล Power BI
+          href: organizational-visuals.md
+        - name: ค้นหาผู้ใช้ที่มีการลงชื่อเข้าใช้
+          href: service-admin-access-usage.md
+        - name: ติดตามกิจกรรมของผู้ใช้
+          href: service-admin-auditing.md
+        - name: ติดตามสถานภาพบริการ
+          href: service-admin-health.md
+        - name: เปิดใช้งานการพิสูจน์ตัวตนหลักของบริการสำหรับ API ของผู้ดูแลระบบแบบอ่านอย่างเดียว
+          href: read-only-apis-service-principal-authentication.md
+        - name: กำลังปิดบัญชีของคุณ
+          href: service-admin-closing-your-account.md
+        - name: ใช้ Azure AD B2B
+          href: service-admin-azure-ad-b2b.md
+        - name: จัดการแบบฟอร์มลงชื่อเข้าใช้ Power BI Desktop
+          href: desktop-admin-sign-in-form.md
+        - name: การป้องกันข้อมูล
+          items:
+            - name: การป้องกันข้อมูลใน Power BI
+              href: service-security-data-protection-overview.md
+            - name: ภาพรวมของป้ายชื่อระดับความลับ
+              href: service-security-sensitivity-label-overview.md
+            - name: เปิดใช้งานการติดป้ายชื่อระดับความลับ
+              href: service-security-enable-data-sensitivity-labels.md
+            - name: วิธีการใช้ป้ายชื่อระดับความลับของข้อมูล
+              href: service-security-apply-data-sensitivity-labels.md
+            - name: ใช้ Microsoft Cloud App Security กับ Power BI
+              href: service-security-using-microsoft-cloud-app-security-controls.md
+            - name: รายงานเมตริกการป้องกัน
+              href: service-security-data-protection-metrics-report.md
+        - name: รักษาความปลอดภัยระดับแถว
+          href: service-admin-rls.md
+        - name: เปิดใช้งานใบรับรองเนื้อหา
+          href: service-admin-setup-certification.md
+        - name: กำหนดค่าแอปสำหรับอุปกรณ์เคลื่อนที่ด้วย Intune
+          href: service-admin-mobile-intune.md
+        - name: Power BI Premium
+          items:
+            - name: ซื้อ Power BI Premium
+              href: service-admin-premium-purchase.md
+            - name: กำหนดค่าและจัดการความจุ
+              href: service-admin-premium-manage.md
+            - name: กำหนดค่าปริมาณงาน
+              href: service-admin-premium-workloads.md
+            - name: Purchase Power BI Premium สำหรับการทดสอบ
+              href: service-admin-premium-testing.md
+            - name: ตรวจสอบความจุด้วยแอป
+              href: service-admin-premium-monitor-capacity.md
+            - name: ตรวจสอบเมตริกปริมาณงานแบบพรีเมียม
+              href: service-premium-metrics-app.md
+            - name: ตรวจสอบความจุในพอร์ทัลผู้ดูแลระบบ
+              href: service-admin-premium-monitor-portal.md
+            - name: กําหนดค่าชุดข้อมูลขนาดใหญ่
+              href: service-premium-large-models.md
+            - name: กำหนดค่าภูมิศาสตร์หลายแห่ง
+              href: service-admin-premium-multi-geo.md
+            - name: นำคีย์การเข้ารหัสลับของคุณมาเอง
+              href: service-encryption-byok.md
+            - name: ใช้คีย์ที่ลูกค้าจัดการ
+              href: service-encryption-customer-managed-keys.md
+            - name: รีสตาร์ตความจุแบบพรีเมียม
+              href: service-admin-premium-restart.md
+            - name: การเชื่อมต่อชุดข้อมูลด้วยปลายทาง XMLA
+              href: service-premium-connect-tools.md
+            - name: หลักการระบบอัตโนมัติพร้อมบริการ
+              href: service-premium-service-principal.md
+            - name: แก้ไขปัญหาการเชื่อมต่อจุดปลายทาง XMLA
+              href: troubleshoot-xmla-endpoint.md
+    - name: การอ้างอิง
+      items:
+        - name: 'PowerShell, REST Api และ .NET SDK'
+          href: service-admin-reference.md
+        - name: cmdlet Power BI สำหรับ PowerShell
+          href: /powershell/power-bi/
+          maintainContext: true
+        - name: การอ้างอิง URL บริการ
+          href: power-bi-whitelist-urls.md
+    - name: ทรัพยากร
+      items:
+        - name: แนวทางการกำกับดูแลและการปรับใช้ Power BI
+          href: service-admin-governance.md
+        - name: ความปลอดภัยของ Power BI
+          href: service-admin-power-bi-security.md
+        - name: ระดับความเป็นส่วนตัว
+          href: desktop-privacy-levels.md
+    - name: การแก้ไขปัญหา
+      items:
+        - name: ลงชื่อเข้าใช้ไม่ได้ใช่ไหม?
+          href: power-bi-cannot-sign-in.md
+        - name: ตัวเลือกการสนับสนุนสำหรับ Power BI
+          href: service-support-options.md
+        - name: การแจ้งเตือนการหยุดชะงักของบริการ
+          href: service-interruption-notifications.md
+        - name: ลืมรหัสผ่านของคุณสำหรับ Power BI ใช่หรือไม่
+          href: service-admin-forgot-your-password.md
+        - name: กำลังจับข้อมูลการวินิจฉัยเพิ่มเติมสำหรับ Power BI
+          href: service-admin-capturing-additional-diagnostic-information-for-power-bi.md
+        - name: ที่อยู่อีเมลสำรองสำหรับ Power BI
+          href: service-admin-alternate-email-address-for-power-bi.md
+        - name: วิธีใช้บัญชีผู้ใช้เดียวกันเข้าสู่ระบบสำหรับ Power BI และ Azure
+          href: service-admin-how-to-use-the-same-account-as-azure.md

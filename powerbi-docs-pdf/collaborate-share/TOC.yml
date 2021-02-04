@@ -1,0 +1,129 @@
+- name: การทำงานร่วม แชร์ และรวมผลิตภัณฑ์เข้ากันด้วย Power BI
+  href: index.yml
+  expanded: true
+  items:
+    - name: ภาพรวม
+      expanded: true
+      items:
+        - name: วิธีการแชร์งานของคุณ
+          href: service-how-to-collaborate-distribute-dashboards-reports.md
+    - name: แนวคิด
+      expanded: true
+      items:
+        - name: จัดการงานในพื้นที่ปฏิบัติงาน
+          href: service-new-workspaces.md
+        - name: ตรวจสอบการใช้ในพื้นที่ทำงานแบบคลาสสิก
+          href: service-usage-metrics.md
+        - name: ตรวจสอบการใช้ในพื้นที่ทำงานใหม่
+          href: service-modern-usage-metrics.md
+        - name: การรับรองเนื้อหา
+          href: service-endorsement-overview.md
+    - name: คำแนะนำวิธีการ
+      expanded: true
+      items:
+        - name: ทำงานร่วมกันใน Power BI
+          items:
+            - name: สร้างพื้นที่ทำงานใหม่
+              href: service-create-the-new-workspaces.md
+            - name: เลือกใช้รูปลักษณ์ใหม่สำหรับพื้นที่ทำงาน
+              href: service-workspaces-new-look.md
+            - name: อัปเกรดพื้นที่ทำงานแบบคลาสสิก
+              href: service-upgrade-workspaces.md
+            - name: สร้างพื้นที่ทำงานแบบดั้งเดิม
+              href: service-create-workspaces.md
+            - name: เผยแพร่แอปจากพื้นที่ทำงาน
+              href: service-create-distribute-apps.md
+            - name: จัดเก็บไฟล์ใน OneDrive สำหรับพื้นที่ทำงาน
+              href: service-connect-to-files-in-app-workspace-onedrive-for-business.md
+            - name: จัดการที่เก็บข้อมูลในพื้นที่ทำงาน
+              href: ../admin/service-admin-manage-your-data-storage-in-power-bi.md
+            - name: การติดตามการใช้งานข้อมูล
+              href: service-data-lineage.md
+            - name: การวิเคราะห์ผลกระทบของชุดข้อมูล
+              href: service-dataset-impact-analysis.md
+            - name: การวิเคราะห์ผลกระทบของแหล่งข้อมูล
+              href: service-data-source-impact-analysis.md
+            - name: กำหนดค่าป้ายชื่อระดับความลับของข้อมูล
+              href: ../admin/service-security-apply-data-sensitivity-labels.md
+            - name: ร่วมมือทำงานในพื้นที่ทำงานดั้งเดิม
+              href: service-collaborate-power-bi-workspace.md
+            - name: จัดการกลุ่มของคุณใน Power BI และ Microsoft 365
+              href: service-manage-app-workspace-in-power-bi-and-office-365.md
+        - name: Power BI ใน Teams
+          items:
+            - name: ทำงานร่วมกันใน Teams
+              href: service-collaborate-microsoft-teams.md
+            - name: เพิ่มแอป Power BI ไปยัง Teams
+              href: service-microsoft-teams-app.md
+            - name: รายงานที่ฝังในแท็บ Teams
+              href: service-embed-report-microsoft-teams.md
+            - name: สนทนาใน Teams โดยตรง
+              href: service-share-report-teams.md
+            - name: รับตัวอย่างลิงก์ใน Teams
+              href: service-teams-link-preview.md
+        - name: เผยแพร่และแชร์งานของคุณ
+          items:
+            - name: แชร์แดชบอร์ดและรายงาน
+              href: service-share-dashboards.md
+            - name: ขอการเข้าถึงรายงานหรือแดชบอร์ด
+              href: service-request-access.md
+            - name: กรองข้อมูลและแชร์รายงาน
+              href: service-share-reports.md
+            - name: แก้ไขปัญหาการแชร์รายงานหรือแดชบอร์ด
+              href: service-troubleshoot-sharing.md
+            - name: กรองรายงานโดยใช้พารามิเตอร์ใน URL
+              href: service-url-filters.md
+            - name: สมัครใช้งานตัวคุณเองและผู้อื่น
+              href: service-report-subscribe.md
+            - name: รับรองเนื้อหาของคุณ
+              href: service-endorse-content.md
+            - name: เนื้อหาคุณลักษณะในหน้าหลัก
+              href: service-featured-content.md
+            - name: รายงานที่ฝังใน SharePoint Online
+              href: service-embed-report-spo.md
+            - name: รายงานที่ฝังในพอร์ทัลหรือเว็บไซต์ที่ปลอดภัย
+              href: service-embed-secure.md
+            - name: เผยแพร่จาก Power BI ไปยังเว็บ
+              href: service-publish-to-web.md
+            - name: แชร์แดชบอร์ดที่เชื่อมโยงไปยังเวิร์กบุ๊ก Excel บน OneDrive
+              href: service-share-dashboard-that-links-to-excel-onedrive.md
+        - name: Power BI ใน Excel
+          items:
+            - name: วิเคราะห์ใน Excel
+              href: service-analyze-in-excel.md
+            - name: ใช้ตารางที่แนะนำของ Power BI ใน Excel
+              href: service-excel-featured-tables.md
+            - name: ตั้งค่าตารางที่แนะนำ
+              href: service-create-excel-featured-tables.md
+            - name: แก้ไขปัญหาการวิเคราะห์ใน Excel
+              href: desktop-troubleshooting-analyze-in-excel.md
+            - name: 'ข้อผิดพลาด: เราไม่พบข้อมูลในสมุดงาน Excel ของคุณ'
+              href: ../connect-data/service-admin-troubleshoot-excel-workbook-data.md
+        - name: Power BI และ Power อัตโนมัติ
+          items:
+            - name: รวมการแจ้งเตือนข้อมูลด้วย Power Automate
+              href: service-flow-integration.md
+            - name: ส่งออกและรายงานอีเมลด้วย Power Automate
+              href: service-automate-power-bi-report-export.md
+            - name: ส่งออกรายงานจนด้วย Power อัตโนมัติ
+              href: service-automate-paginated-integration.md
+            - name: บันทึกรายงานจนไปยัง OneDrive หรือ SharePoint Online
+              href: service-automate-paginated-onedrive-sharepoint.md
+            - name: ส่งออกรายงานจนจาก Excel Online หรือรายการ SharePoint
+              href: service-automate-paginated-excel-sharepoint-list.md
+            - name: บันทึกรายงานที่มีการแบ่งหน้าไปยังโฟลเดอร์ภายในเครื่อง
+              href: service-automate-paginated-local-file.md
+        - name: ใช้แอปของบุคคลที่สาม
+          href: service-power-bi-get-started-third-party-apps.md
+        - name: ชุดเนื้อหาระดับองค์กร
+          items:
+            - name: บทนำชุดเนื้อหาองค์กร
+              href: service-organizational-content-pack-introduction.md
+            - name: สร้างและเผยแพร่ชุดเนื้อหา
+              href: service-organizational-content-pack-create-and-publish.md
+            - name: คัดลอก รีเฟรช เข้าถึงชุดเนื้อหา
+              href: service-organizational-content-pack-copy-refresh-access.md
+            - name: จัดการ ปรับปรุง ลบชุดเนื้อหา
+              href: service-organizational-content-pack-manage-update-delete.md
+            - name: ยุติการเชื่อมต่อกับชุดเนื้อหา
+              href: service-organizational-content-pack-disconnect.md

@@ -1,0 +1,16 @@
+- name: สำรวจ Power BI (../consumer)
+  href: /learn/modules/explore-power-bi-service
+- name: วิเคราะห์ข้อมูลใน Power BI (../consumer)
+  href: /learn/modules/analyze-data-power-bi
+- name: เริ่มสร้างด้วย Power BI
+  href: /learn/modules/get-started-with-power-bi
+- name: รับข้อมูล
+  href: /learn/modules/get-data-power-bi
+- name: ข้อมูลแบบจำลอง
+  href: /learn/modules/model-data-power-bi
+- name: ใช้การแสดงผลด้วยภาพ
+  href: /learn/modules/visuals-in-power-bi
+- name: สำรวจข้อมูล
+  href: /learn/modules/explore-data-power-bi
+- name: เผยแพร่และแชร์
+  href: 'https://docs.microsoft.com/learn/modules/publish-share-power-bi'
