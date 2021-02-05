@@ -16,124 +16,124 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 12/01/2020
 ms.locfileid: "96395819"
 ---
-# <a name="opportunity-analysis-sample-for-power-bi-take-a-tour"></a><span data-ttu-id="e56a8-103">ตัวอย่างการวิเคราะห์โอกาสทางการขายสำหรับ Power BI: ชมการแนะนำ</span><span class="sxs-lookup"><span data-stu-id="e56a8-103">Opportunity Analysis sample for Power BI: Take a tour</span></span>
+# <a name="opportunity-analysis-sample-for-power-bi-take-a-tour"></a>ตัวอย่างการวิเคราะห์โอกาสทางการขายสำหรับ Power BI: ชมการแนะนำ
 
-<span data-ttu-id="e56a8-104">ชุดเนื้อหาตัวอย่างการวิเคราะห์โอกาสทางการขายประกอบไปด้วยแดชบอร์ด รายงาน และชุดข้อมูลสำหรับบริษัทซอฟต์แวร์ที่มีช่องทางขาย 2 ช่องทาง: *โดยตรง* และ *ผ่านคู่ค้า*</span><span class="sxs-lookup"><span data-stu-id="e56a8-104">The Opportunity Analysis sample content pack contains a dashboard, report, and dataset for a software company that has two sales channels: *direct* and *partner*.</span></span> <span data-ttu-id="e56a8-105">ผู้จัดการฝ่ายขายสร้างแดชบอร์ดนี้เพื่อติดตามโอกาสและรายได้ตามภูมิภาค ขนาดโอกาส และช่องทาง</span><span class="sxs-lookup"><span data-stu-id="e56a8-105">The sales manager created this dashboard to track opportunities and revenue by region, deal size, and channel.</span></span>
+ชุดเนื้อหาตัวอย่างการวิเคราะห์โอกาสทางการขายประกอบไปด้วยแดชบอร์ด รายงาน และชุดข้อมูลสำหรับบริษัทซอฟต์แวร์ที่มีช่องทางขาย 2 ช่องทาง: *โดยตรง* และ *ผ่านคู่ค้า* ผู้จัดการฝ่ายขายสร้างแดชบอร์ดนี้เพื่อติดตามโอกาสและรายได้ตามภูมิภาค ขนาดโอกาส และช่องทาง
 
-<span data-ttu-id="e56a8-106">ตัวอย่างนี้อาศัยตัววัดรายได้สองตัว:</span><span class="sxs-lookup"><span data-stu-id="e56a8-106">This sample relies on two measures of revenue:</span></span>
+ตัวอย่างนี้อาศัยตัววัดรายได้สองตัว:
 
-* <span data-ttu-id="e56a8-107">รายได้: ยอดประเมินของเจ้าหน้าที่ฝ่ายขายเกี่ยวกับรายได้ที่จะได้รับ</span><span class="sxs-lookup"><span data-stu-id="e56a8-107">Revenue: A salesperson's estimate of what the revenue will be.</span></span>
-* <span data-ttu-id="e56a8-108">รายได้ตามปัจจัย: คำนวณจากรายได้ X % ความน่าจะเป็น และเป็นที่ยอมรับว่าค่านี้เป็นค่าที่ใช้คาดการณ์ยอดขายจริงได้แม่นยำกว่า</span><span class="sxs-lookup"><span data-stu-id="e56a8-108">Factored revenue: Calculated as revenue X probability% and is accepted as being a more-accurate predictor of actual sales revenue.</span></span> <span data-ttu-id="e56a8-109">ความน่าเป็นกำหนดจาก *ขั้นตอนการขาย* ปัจจุบันของข้อตกลง:</span><span class="sxs-lookup"><span data-stu-id="e56a8-109">Probability is determined by the deal's current *sales stage*:</span></span>
-  * <span data-ttu-id="e56a8-110">ลูกค้าเป้าหมาย: 10%</span><span class="sxs-lookup"><span data-stu-id="e56a8-110">Lead: 10%</span></span>  
-  * <span data-ttu-id="e56a8-111">คุณสมบัติ: 20%</span><span class="sxs-lookup"><span data-stu-id="e56a8-111">Qualify: 20%</span></span>  
-  * <span data-ttu-id="e56a8-112">วิธีการแก้ไข: 40%</span><span class="sxs-lookup"><span data-stu-id="e56a8-112">Solution: 40%</span></span>  
-  * <span data-ttu-id="e56a8-113">ข้อเสนอ: 60%</span><span class="sxs-lookup"><span data-stu-id="e56a8-113">Proposal: 60%</span></span>  
-  * <span data-ttu-id="e56a8-114">เสร็จสิ้น: 80%</span><span class="sxs-lookup"><span data-stu-id="e56a8-114">Finalize: 80%</span></span>
+* รายได้: ยอดประเมินของเจ้าหน้าที่ฝ่ายขายเกี่ยวกับรายได้ที่จะได้รับ
+* รายได้ตามปัจจัย: คำนวณจากรายได้ X % ความน่าจะเป็น และเป็นที่ยอมรับว่าค่านี้เป็นค่าที่ใช้คาดการณ์ยอดขายจริงได้แม่นยำกว่า ความน่าเป็นกำหนดจาก *ขั้นตอนการขาย* ปัจจุบันของข้อตกลง:
+  * ลูกค้าเป้าหมาย: 10%  
+  * คุณสมบัติ: 20%  
+  * วิธีการแก้ไข: 40%  
+  * ข้อเสนอ: 60%  
+  * เสร็จสิ้น: 80%
 
 ![แดชบอร์ดสำหรับตัวอย่างการวิเคราะห์โอกาสทางการขาย](media/sample-opportunity-analysis/opportunity1.png)
 
-<span data-ttu-id="e56a8-116">ตัวอย่างนี้เป็นส่วนหนึ่งของชุดตัวอย่าง ที่แสดงให้เห็นวิธีการที่คุณสามารถใช้ Power BI กับข้อมูล รายงาน และแดชบอร์ดที่เกี่ยวข้องกับธุรกิจ</span><span class="sxs-lookup"><span data-stu-id="e56a8-116">This sample is part of a series that shows how you can use Power BI with business-oriented data, reports, and dashboards.</span></span> <span data-ttu-id="e56a8-117">ซึ่งสร้างขึ้นโดย [obviEnce](http://www.obvience.com/) ด้วยข้อมูลจริงที่ไม่มีการระบุชื่อ</span><span class="sxs-lookup"><span data-stu-id="e56a8-117">It was created by [obviEnce](http://www.obvience.com/) with real data, which has been anonymized.</span></span> <span data-ttu-id="e56a8-118">ข้อมูลมีให้ใช้งานหลายรูปแบบ: ชุดเนื้อหา ไฟล์ Power BI Desktop .pbix หรือเวิร์กบุ๊ก Excel</span><span class="sxs-lookup"><span data-stu-id="e56a8-118">The data is available in several formats: content pack, .pbix Power BI Desktop file, or Excel workbook.</span></span> <span data-ttu-id="e56a8-119">ดู [ตัวอย่างสำหรับ Power BI](sample-datasets.md)</span><span class="sxs-lookup"><span data-stu-id="e56a8-119">See [Samples for Power BI](sample-datasets.md).</span></span> 
+ตัวอย่างนี้เป็นส่วนหนึ่งของชุดตัวอย่าง ที่แสดงให้เห็นวิธีการที่คุณสามารถใช้ Power BI กับข้อมูล รายงาน และแดชบอร์ดที่เกี่ยวข้องกับธุรกิจ ซึ่งสร้างขึ้นโดย [obviEnce](http://www.obvience.com/) ด้วยข้อมูลจริงที่ไม่มีการระบุชื่อ ข้อมูลมีให้ใช้งานหลายรูปแบบ: ชุดเนื้อหา ไฟล์ Power BI Desktop .pbix หรือเวิร์กบุ๊ก Excel ดู [ตัวอย่างสำหรับ Power BI](sample-datasets.md) 
 
-<span data-ttu-id="e56a8-120">บทช่วยสอนนี้จะสำรวจชุดเนื้อหาของตัวอย่างการวิเคราะห์โอกาสทางการขายในบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="e56a8-120">This tutorial explores the Opportunity Analysis sample content pack in the Power BI service.</span></span> <span data-ttu-id="e56a8-121">เนื่องจากประสบการณ์การใช้รายงานจะคล้ายคลึงกันใน Power BI Desktop ดังนั้นคุณสามารถใช้ Power BI Desktop กับไฟล์ .pbix ตัวอย่างใน Power BI Desktop ได้</span><span class="sxs-lookup"><span data-stu-id="e56a8-121">Because the report experience is similar in Power BI Desktop and in the service, you can also follow along by using the sample .pbix file in Power BI Desktop.</span></span> 
+บทช่วยสอนนี้จะสำรวจชุดเนื้อหาของตัวอย่างการวิเคราะห์โอกาสทางการขายในบริการของ Power BI เนื่องจากประสบการณ์การใช้รายงานจะคล้ายคลึงกันใน Power BI Desktop ดังนั้นคุณสามารถใช้ Power BI Desktop กับไฟล์ .pbix ตัวอย่างใน Power BI Desktop ได้ 
 
-<span data-ttu-id="e56a8-122">คุณไม่จำเป็นต้องมีสิทธิการใช้งาน Power BI ในการสำรวจตัวอย่างใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="e56a8-122">You don't need a Power BI license to explore the samples in Power BI Desktop.</span></span> <span data-ttu-id="e56a8-123">ถ้าคุณไม่มีสิทธิการใช้งาน Power BI Pro คุณสามารถบันทึกตัวอย่างไปยังพื้นที่ทำงานของฉันในบริการของ Power BI ได้</span><span class="sxs-lookup"><span data-stu-id="e56a8-123">If you don't have a Power BI Pro license, you can save the sample to your My Workspace in the Power BI service.</span></span> 
+คุณไม่จำเป็นต้องมีสิทธิการใช้งาน Power BI ในการสำรวจตัวอย่างใน Power BI Desktop ถ้าคุณไม่มีสิทธิการใช้งาน Power BI Pro คุณสามารถบันทึกตัวอย่างไปยังพื้นที่ทำงานของฉันในบริการของ Power BI ได้ 
 
-## <a name="get-the-sample"></a><span data-ttu-id="e56a8-124">รับตัวอย่าง</span><span class="sxs-lookup"><span data-stu-id="e56a8-124">Get the sample</span></span>
+## <a name="get-the-sample"></a>รับตัวอย่าง
 
-<span data-ttu-id="e56a8-125">ก่อนที่คุณสามารถใช้ตัวอย่าง คุณต้องดาวน์โหลดในรูปแบบ[ชุดเนื้อหา](#get-the-content-pack-for-this-sample)[ไฟล์ .pbix](#get-the-pbix-file-for-this-sample) หรือ[เวิร์กบุ๊ก Excel](#get-the-excel-workbook-for-this-sample)</span><span class="sxs-lookup"><span data-stu-id="e56a8-125">Before you can use the sample, you must first download it as a [content pack](#get-the-content-pack-for-this-sample), [.pbix file](#get-the-pbix-file-for-this-sample), or [Excel workbook](#get-the-excel-workbook-for-this-sample).</span></span>
+ก่อนที่คุณสามารถใช้ตัวอย่าง คุณต้องดาวน์โหลดในรูปแบบ[ชุดเนื้อหา](#get-the-content-pack-for-this-sample)[ไฟล์ .pbix](#get-the-pbix-file-for-this-sample) หรือ[เวิร์กบุ๊ก Excel](#get-the-excel-workbook-for-this-sample)
 
-### <a name="get-the-content-pack-for-this-sample"></a><span data-ttu-id="e56a8-126">รับชุดเนื้อหาสำหรับตัวอย่างนี้</span><span class="sxs-lookup"><span data-stu-id="e56a8-126">Get the content pack for this sample</span></span>
+### <a name="get-the-content-pack-for-this-sample"></a>รับชุดเนื้อหาสำหรับตัวอย่างนี้
 
-1. <span data-ttu-id="e56a8-127">เปิดบริการ Power BI (app.powerbi.com) ลงชื่อเข้าใช้ และเปิดพื้นที่ทำงานที่คุณต้องการบันทึกตัวอย่าง</span><span class="sxs-lookup"><span data-stu-id="e56a8-127">Open the Power BI service (app.powerbi.com), sign in, and open the workspace where you want to save the sample.</span></span> 
+1. เปิดบริการ Power BI (app.powerbi.com) ลงชื่อเข้าใช้ และเปิดพื้นที่ทำงานที่คุณต้องการบันทึกตัวอย่าง 
 
-    <span data-ttu-id="e56a8-128">ถ้าคุณไม่มีสิทธิการใช้งาน Power BI Pro คุณสามารถบันทึกตัวอย่างไปยังพื้นที่ทำงานของฉัน</span><span class="sxs-lookup"><span data-stu-id="e56a8-128">If you don't have a Power BI Pro license, you can save the sample to your My Workspace.</span></span>
+    ถ้าคุณไม่มีสิทธิการใช้งาน Power BI Pro คุณสามารถบันทึกตัวอย่างไปยังพื้นที่ทำงานของฉัน
 
-2. <span data-ttu-id="e56a8-129">ที่มุมด้านล่างซ้าย เลือก **รับข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="e56a8-129">In the bottom-left corner, select **Get Data**.</span></span>
+2. ที่มุมด้านล่างซ้าย เลือก **รับข้อมูล**
 
     ![เลือกรับข้อมูล](media/sample-datasets/power-bi-get-data.png)
-3. <span data-ttu-id="e56a8-131">บนหน้า **รับข้อมูล** ที่ปรากฏขึ้น เลือก **ตัวอย่าง**</span><span class="sxs-lookup"><span data-stu-id="e56a8-131">On the **Get Data** page that appears, select **Samples**.</span></span>
+3. บนหน้า **รับข้อมูล** ที่ปรากฏขึ้น เลือก **ตัวอย่าง**
 
-4. <span data-ttu-id="e56a8-132">เลือก **ตัวอย่างการวิเคราะห์โอกาสทางการขาย** แล้วเลือก **เชื่อมต่อ**</span><span class="sxs-lookup"><span data-stu-id="e56a8-132">Select **Opportunity Analysis Sample**, and then choose **Connect**.</span></span>  
+4. เลือก **ตัวอย่างการวิเคราะห์โอกาสทางการขาย** แล้วเลือก **เชื่อมต่อ**  
 
    ![เชื่อมต่อกับตัวอย่าง](media/sample-opportunity-analysis/opportunity-connect.png)
-5. <span data-ttu-id="e56a8-134">Power BI นำเข้าชุดเนื้อหา จากนั้นเพิ่มแดชบอร์ด รายงาน และชุดข้อมูลใหม่ไปยังพื้นที่ทำงานปัจจุบันของคุณ</span><span class="sxs-lookup"><span data-stu-id="e56a8-134">Power BI imports the content pack, and then adds a new dashboard, report, and dataset to your current workspace.</span></span>
+5. Power BI นำเข้าชุดเนื้อหา จากนั้นเพิ่มแดชบอร์ด รายงาน และชุดข้อมูลใหม่ไปยังพื้นที่ทำงานปัจจุบันของคุณ
 
    ![รายการตัวอย่างการวิเคราะห์โอกาสทางการขาย](media/sample-opportunity-analysis/opportunity-entry.png)
 
-### <a name="get-the-pbix-file-for-this-sample"></a><span data-ttu-id="e56a8-136">รับไฟล์ .pbix สำหรับตัวอย่างนี้</span><span class="sxs-lookup"><span data-stu-id="e56a8-136">Get the .pbix file for this sample</span></span>
+### <a name="get-the-pbix-file-for-this-sample"></a>รับไฟล์ .pbix สำหรับตัวอย่างนี้
 
-<span data-ttu-id="e56a8-137">อีกทางเลือกหนึ่งคือ คุณสามารถดาวน์โหลดตัวอย่างการวิเคราะห์โอกาสทางการขายเป็น[ไฟล์ .pbix](https://download.microsoft.com/download/9/1/5/915ABCFA-7125-4D85-A7BD-05645BD95BD8/Opportunity%20Analysis%20Sample%20PBIX.pbix) ซึ่งถูกออกแบบมาสำหรับใช้กับ Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="e56a8-137">Alternatively, you can download the Opportunity Analysis sample as a [.pbix file](https://download.microsoft.com/download/9/1/5/915ABCFA-7125-4D85-A7BD-05645BD95BD8/Opportunity%20Analysis%20Sample%20PBIX.pbix), which is designed for use with Power BI Desktop.</span></span>
+อีกทางเลือกหนึ่งคือ คุณสามารถดาวน์โหลดตัวอย่างการวิเคราะห์โอกาสทางการขายเป็น[ไฟล์ .pbix](https://download.microsoft.com/download/9/1/5/915ABCFA-7125-4D85-A7BD-05645BD95BD8/Opportunity%20Analysis%20Sample%20PBIX.pbix) ซึ่งถูกออกแบบมาสำหรับใช้กับ Power BI Desktop
 
-### <a name="get-the-excel-workbook-for-this-sample"></a><span data-ttu-id="e56a8-138">รับเวิร์กบุ๊ก Excel สำหรับตัวอย่างนี้</span><span class="sxs-lookup"><span data-stu-id="e56a8-138">Get the Excel workbook for this sample</span></span>
+### <a name="get-the-excel-workbook-for-this-sample"></a>รับเวิร์กบุ๊ก Excel สำหรับตัวอย่างนี้
 
-<span data-ttu-id="e56a8-139">ถ้าคุณต้องการดูแหล่งข้อมูลสำหรับตัวอย่างนี้ ตัวอย่างนี้ยังมีให้ในรูปแบบ[เวิร์กบุ๊ก Excel](https://go.microsoft.com/fwlink/?LinkId=529782)</span><span class="sxs-lookup"><span data-stu-id="e56a8-139">If you want to view the data source for this sample, it's also available as an [Excel workbook](https://go.microsoft.com/fwlink/?LinkId=529782).</span></span> <span data-ttu-id="e56a8-140">เวิร์กบุ๊กประกอบด้วยแผ่นงาน Power View ที่คุณสามารถดู และปรับเปลี่ยน</span><span class="sxs-lookup"><span data-stu-id="e56a8-140">The workbook contains Power View sheets that you can view and modify.</span></span> <span data-ttu-id="e56a8-141">หากต้องการดูข้อมูลดิบ ให้เปิดใช้งาน add-in การวิเคราะห์ข้อมูล แล้วจากนั้นเลือก **Power Pivot > จัดการ**</span><span class="sxs-lookup"><span data-stu-id="e56a8-141">To see the raw data, enable the Data Analysis add-ins, and then select **Power Pivot > Manage**.</span></span> <span data-ttu-id="e56a8-142">หากต้องการเปิดใช้งาน Power View และ Power Pivot add-in โปรดดู [สำรวจตัวอย่าง Excel ใน Excel ](sample-datasets.md#explore-excel-samples-inside-excel)สำหรับรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="e56a8-142">To enable the Power View and Power Pivot add-ins, see [Explore the Excel samples in Excel](sample-datasets.md#explore-excel-samples-inside-excel) for details.</span></span>
+ถ้าคุณต้องการดูแหล่งข้อมูลสำหรับตัวอย่างนี้ ตัวอย่างนี้ยังมีให้ในรูปแบบ[เวิร์กบุ๊ก Excel](https://go.microsoft.com/fwlink/?LinkId=529782) เวิร์กบุ๊กประกอบด้วยแผ่นงาน Power View ที่คุณสามารถดู และปรับเปลี่ยน หากต้องการดูข้อมูลดิบ ให้เปิดใช้งาน add-in การวิเคราะห์ข้อมูล แล้วจากนั้นเลือก **Power Pivot > จัดการ** หากต้องการเปิดใช้งาน Power View และ Power Pivot add-in โปรดดู [สำรวจตัวอย่าง Excel ใน Excel ](sample-datasets.md#explore-excel-samples-inside-excel)สำหรับรายละเอียด
 
-## <a name="what-is-our-dashboard-telling-us"></a><span data-ttu-id="e56a8-143">แดชบอร์ดกำลังบอกอะไรแก่เรา</span><span class="sxs-lookup"><span data-stu-id="e56a8-143">What is our dashboard telling us?</span></span>
-<span data-ttu-id="e56a8-144">ผู้จัดการฝ่ายขายของเราได้สร้างแดชบอร์ดเพื่อติดตามเมตริกที่สำคัญที่สุดสำหรับพวกเขา</span><span class="sxs-lookup"><span data-stu-id="e56a8-144">Our sales manager has created a dashboard to track those metrics most important to them.</span></span> <span data-ttu-id="e56a8-145">เมื่อพวกเขาเห็นสิ่งใดที่น่าสนใจ พวกเขาสามารถเลือกไทล์เพื่อค้นหาข้อมูลนั้นได้:</span><span class="sxs-lookup"><span data-stu-id="e56a8-145">When they see something interesting, they can select a tile to look into the data:</span></span>
+## <a name="what-is-our-dashboard-telling-us"></a>แดชบอร์ดกำลังบอกอะไรแก่เรา
+ผู้จัดการฝ่ายขายของเราได้สร้างแดชบอร์ดเพื่อติดตามเมตริกที่สำคัญที่สุดสำหรับพวกเขา เมื่อพวกเขาเห็นสิ่งใดที่น่าสนใจ พวกเขาสามารถเลือกไทล์เพื่อค้นหาข้อมูลนั้นได้:
 
-- <span data-ttu-id="e56a8-146">รายได้ของบริษัทคือ 2 พันล้านเหรียญ และรายได้ที่แยกแยะแล้ว คือ 461 ล้านเหรียญ</span><span class="sxs-lookup"><span data-stu-id="e56a8-146">Company revenue is $2 billion and factored revenue is $461 million.</span></span>
-- <span data-ttu-id="e56a8-147">จำนวนโอกาสทางการขายและรายได้ เป็นไปตามรูปแบบกรวยที่คุ้นเคย โดยค่าผลรวมมีค่าที่ทยอยลดลงเมื่อผ่านไปยังขั้นตอนถัด ๆ ไป</span><span class="sxs-lookup"><span data-stu-id="e56a8-147">Opportunity count and revenue follow a familiar funnel pattern, with totals decreasing with each subsequent stage.</span></span>
-- <span data-ttu-id="e56a8-148">โอกาสทางการขายของเรา ส่วนใหญ่อยู่ในภูมิภาคตะวันออก</span><span class="sxs-lookup"><span data-stu-id="e56a8-148">Most of our opportunities are in the East region.</span></span>
-- <span data-ttu-id="e56a8-149">โอกาสที่มีขนาดใหญ่กว่าจะสร้างรายได้ให้มากกว่าโอกาสขนาดกลางหรือโอกาสขนาดเล็ก</span><span class="sxs-lookup"><span data-stu-id="e56a8-149">Large opportunities generate more revenue than medium or small opportunities.</span></span>
-- <span data-ttu-id="e56a8-150">ข้อเสนอของพันธมิตรรายใหญ่สร้างรายได้เพิ่มขึ้น: $ 8 ล้านโดยเฉลี่ยเมื่อเทียบกับ $ 6 ล้านสำหรับการขายตรง</span><span class="sxs-lookup"><span data-stu-id="e56a8-150">Large partner deals generate more revenue: $8 million on average versus $6 million for direct sales.</span></span>
+- รายได้ของบริษัทคือ 2 พันล้านเหรียญ และรายได้ที่แยกแยะแล้ว คือ 461 ล้านเหรียญ
+- จำนวนโอกาสทางการขายและรายได้ เป็นไปตามรูปแบบกรวยที่คุ้นเคย โดยค่าผลรวมมีค่าที่ทยอยลดลงเมื่อผ่านไปยังขั้นตอนถัด ๆ ไป
+- โอกาสทางการขายของเรา ส่วนใหญ่อยู่ในภูมิภาคตะวันออก
+- โอกาสที่มีขนาดใหญ่กว่าจะสร้างรายได้ให้มากกว่าโอกาสขนาดกลางหรือโอกาสขนาดเล็ก
+- ข้อเสนอของพันธมิตรรายใหญ่สร้างรายได้เพิ่มขึ้น: $ 8 ล้านโดยเฉลี่ยเมื่อเทียบกับ $ 6 ล้านสำหรับการขายตรง
 
-<span data-ttu-id="e56a8-151">เนื่องจากความพยายามเพื่อให้ได้ข้อตกลงมีเท่ากัน ไม่ว่าข้อตกลงนั้นจะจัดเป็นขนาดใหญ่ กลาง หรือเล็ก บริษัทของเราควรวิเคราะห์ข้อมูลเพื่อศึกษาเพิ่มเติมเกี่ยวกับโอกาสขนาดใหญ่</span><span class="sxs-lookup"><span data-stu-id="e56a8-151">Because the effort to land a deal is the same whether the deal is classified as large, medium, or small, our company should analyze the data to learn more about large opportunities.</span></span>
+เนื่องจากความพยายามเพื่อให้ได้ข้อตกลงมีเท่ากัน ไม่ว่าข้อตกลงนั้นจะจัดเป็นขนาดใหญ่ กลาง หรือเล็ก บริษัทของเราควรวิเคราะห์ข้อมูลเพื่อศึกษาเพิ่มเติมเกี่ยวกับโอกาสขนาดใหญ่
 
-1. <span data-ttu-id="e56a8-152">ในพื้นที่ทำงานที่คุณบันทึกตัวอย่าง เปิดแท็บ **แดชบอร์ด** จาก นั้นค้นหาแดชบอร์ด **ตัวอย่างการวิเคราะห์โอกาสทางการขาย** และเลือก</span><span class="sxs-lookup"><span data-stu-id="e56a8-152">In the workspace where you saved the sample, open the **Dashboards** tab, then find the **Opportunity Analysis Sample** dashboard and select it.</span></span>
+1. ในพื้นที่ทำงานที่คุณบันทึกตัวอย่าง เปิดแท็บ **แดชบอร์ด** จาก นั้นค้นหาแดชบอร์ด **ตัวอย่างการวิเคราะห์โอกาสทางการขาย** และเลือก
 
-2. <span data-ttu-id="e56a8-153">เลือกไทล์ **จำนวนโอกาสทางการขายตามการขับเคลื่อนของคู่ค้า ขั้นตอนการขาย** เพื่อเปิดหน้าแรกของรายงานตัวอย่างการวิเคราะห์โอกาสทางการขาย</span><span class="sxs-lookup"><span data-stu-id="e56a8-153">Select the **Opportunity Count by Partner Driven, Sales Stage** tile to open the first page of the Opportunity Analysis Sample report.</span></span> 
+2. เลือกไทล์ **จำนวนโอกาสทางการขายตามการขับเคลื่อนของคู่ค้า ขั้นตอนการขาย** เพื่อเปิดหน้าแรกของรายงานตัวอย่างการวิเคราะห์โอกาสทางการขาย 
 
     ![ไทล์จำนวนโอกาสทางการขายตามการขับเคลื่อนของคู่ค้า ขั้นตอนการขาย](media/sample-opportunity-analysis/opportunity2.png)
 
-## <a name="explore-the-pages-in-the-report"></a><span data-ttu-id="e56a8-155">สำรวจหน้าต่าง ๆ ในรายงาน</span><span class="sxs-lookup"><span data-stu-id="e56a8-155">Explore the pages in the report</span></span>
+## <a name="explore-the-pages-in-the-report"></a>สำรวจหน้าต่าง ๆ ในรายงาน
 
-<span data-ttu-id="e56a8-156">ดูแต่ละหน้าในรายงานโดยการเลือกแท็บหน้าที่ด้านล่าง</span><span class="sxs-lookup"><span data-stu-id="e56a8-156">View each page in the report by selecting the page tabs at the bottom.</span></span>
+ดูแต่ละหน้าในรายงานโดยการเลือกแท็บหน้าที่ด้านล่าง
 
-### <a name="opportunity-count-overview-page"></a><span data-ttu-id="e56a8-157">หน้าภาพรวมจำนวนโอกาสทางการขาย</span><span class="sxs-lookup"><span data-stu-id="e56a8-157">Opportunity Count Overview page</span></span>
+### <a name="opportunity-count-overview-page"></a>หน้าภาพรวมจำนวนโอกาสทางการขาย
 ![หน้าจำนวนโอกาส](media/sample-opportunity-analysis/opportunity3.png)
 
-<span data-ttu-id="e56a8-159">บันทึกรายละเอียดดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="e56a8-159">Note the following details:</span></span>
-* <span data-ttu-id="e56a8-160">ตะวันออก คือภูมิภาคที่ใหญ่ที่สุดของเราในแง่จำนวนโอกาสทางการขาย</span><span class="sxs-lookup"><span data-stu-id="e56a8-160">East is our biggest region in terms of opportunity counts.</span></span>  
-* <span data-ttu-id="e56a8-161">บนแผนภูมิวงกลม **จำนวนโอกาสทางการขายตามภูมิภาค** เลือกแต่ละภูมิภาคเพื่อกรองหน้าตามภูมิภาคตามลำดับ</span><span class="sxs-lookup"><span data-stu-id="e56a8-161">On the **Opportunity Count by Region** pie chart, select each region in turn to filter the page by region.</span></span> <span data-ttu-id="e56a8-162">สำหรับแต่ละภูมิภาค โปรดสังเกตว่าคู่ค้าจะพยายามคว้าหาโอกาสขนาดใหญ่มากกว่า</span><span class="sxs-lookup"><span data-stu-id="e56a8-162">For each region, notice that partners are pursuing significantly more large opportunities.</span></span>   
-* <span data-ttu-id="e56a8-163">แผนภูมิคอลัมน์ **จำนวนโอกาสตามการขับเคลื่อนของคู่ค้าและขนาดของโอกาส** แสดงให้เห็นว่าโอกาสขนาดใหญ่ส่วนใหญ่ถูกขับเคลื่อนโดยคู่ค้า ขณะที่โอกาสขนาดเล็กและขนาดกลางอีกมากมายไม่ได้ถูกขับเคลื่อนโดยคู่ค้า</span><span class="sxs-lookup"><span data-stu-id="e56a8-163">The **Opportunity Count by Partner Driven and Opportunity Size** column chart shows that most of the large opportunities are partner driven, while most of the small and medium opportunities are not.</span></span>
-* <span data-ttu-id="e56a8-164">ในแผนภูมิแท่ง **จำนวนโอกาสทางการขายตามขั้นตอนการขาย** เลือกแต่ละ **ขั้นตอนการขาย** ตามลำดับเพื่อดูความแตกต่างของจำนวนภูมิภาค</span><span class="sxs-lookup"><span data-stu-id="e56a8-164">In the **Opportunity Count by Sales Stage** bar chart, select each **Sales Stage** in turn to see the difference in regional count.</span></span> <span data-ttu-id="e56a8-165">โปรดสังเกตว่าแม้ว่าภูมิภาคตะวันออกจะมีโอกาสทางการขายครั้งใหญ่ที่สุด แต่ภูมิภาคทั้งสามในโซลูชัน ข้อเสนอ และขั้นตอนการขายสุดท้ายนั้นมีจำนวนใกล้เคียงกัน</span><span class="sxs-lookup"><span data-stu-id="e56a8-165">Notice that although the East region has the largest opportunity count, all three regions in the Solution, Proposal, and Finalize sales stages have comparable counts.</span></span> <span data-ttu-id="e56a8-166">ผลลัพธ์นี้หมายความว่าเราสามารถปิดการขายในภูมิภาคกลางและตะวันตกด้วยเปอร์เซ็นต์ที่สูงกว่า</span><span class="sxs-lookup"><span data-stu-id="e56a8-166">This result means we close a higher percent of deals in the Central and West regions.</span></span>
+บันทึกรายละเอียดดังต่อไปนี้:
+* ตะวันออก คือภูมิภาคที่ใหญ่ที่สุดของเราในแง่จำนวนโอกาสทางการขาย  
+* บนแผนภูมิวงกลม **จำนวนโอกาสทางการขายตามภูมิภาค** เลือกแต่ละภูมิภาคเพื่อกรองหน้าตามภูมิภาคตามลำดับ สำหรับแต่ละภูมิภาค โปรดสังเกตว่าคู่ค้าจะพยายามคว้าหาโอกาสขนาดใหญ่มากกว่า   
+* แผนภูมิคอลัมน์ **จำนวนโอกาสตามการขับเคลื่อนของคู่ค้าและขนาดของโอกาส** แสดงให้เห็นว่าโอกาสขนาดใหญ่ส่วนใหญ่ถูกขับเคลื่อนโดยคู่ค้า ขณะที่โอกาสขนาดเล็กและขนาดกลางอีกมากมายไม่ได้ถูกขับเคลื่อนโดยคู่ค้า
+* ในแผนภูมิแท่ง **จำนวนโอกาสทางการขายตามขั้นตอนการขาย** เลือกแต่ละ **ขั้นตอนการขาย** ตามลำดับเพื่อดูความแตกต่างของจำนวนภูมิภาค โปรดสังเกตว่าแม้ว่าภูมิภาคตะวันออกจะมีโอกาสทางการขายครั้งใหญ่ที่สุด แต่ภูมิภาคทั้งสามในโซลูชัน ข้อเสนอ และขั้นตอนการขายสุดท้ายนั้นมีจำนวนใกล้เคียงกัน ผลลัพธ์นี้หมายความว่าเราสามารถปิดการขายในภูมิภาคกลางและตะวันตกด้วยเปอร์เซ็นต์ที่สูงกว่า
 
-### <a name="revenue-analysis-page"></a><span data-ttu-id="e56a8-167">หน้าการวิเคราะห์รายได้</span><span class="sxs-lookup"><span data-stu-id="e56a8-167">Revenue Analysis page</span></span>
-<span data-ttu-id="e56a8-168">หน้านี้จะดูที่ข้อมูลคล้ายกัน แต่ใช้มุมมองของรายได้แทนที่จะเป็นการนับจำนวน</span><span class="sxs-lookup"><span data-stu-id="e56a8-168">This page takes a similar look at the data, but uses a revenue perspective instead of count.</span></span>  
+### <a name="revenue-analysis-page"></a>หน้าการวิเคราะห์รายได้
+หน้านี้จะดูที่ข้อมูลคล้ายกัน แต่ใช้มุมมองของรายได้แทนที่จะเป็นการนับจำนวน  
 
 ![หน้าภาพรวมรายได้](media/sample-opportunity-analysis/opportunity4.png)
 
-<span data-ttu-id="e56a8-170">บันทึกรายละเอียดดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="e56a8-170">Note the following details:</span></span>
-* <span data-ttu-id="e56a8-171">ภูมิภาคตะวันออกเป็นภูมิภาคที่ใหญ่ที่สุดของเรา ไม่เพียงแค่จำนวนโอกาสแต่ยังรวมถึงรายได้ด้วย</span><span class="sxs-lookup"><span data-stu-id="e56a8-171">East is our biggest region, not only in opportunity count but also in revenue.</span></span>  
-* <span data-ttu-id="e56a8-172">ถ้าคุณกรองแผนภูมิ **รายได้ตามขั้นตอนการขายและการขับเคลื่อนโดยคู่ค้า** โดยการเลือก **ใช่** สำหรับ **การขับเคลื่อนโดยคู่ค้า** คุณจะเห็นรายได้ $1.5 พันล้านเหรียญและรายได้ตามปัจจัย $294 ล้านเหรียญ</span><span class="sxs-lookup"><span data-stu-id="e56a8-172">If you filter the **Revenue by Sales Stage and Partner Driven** chart by selecting **Yes** for **Partner Driven**, you see a revenue of $1.5 billion and a factored revenue of $294 million.</span></span> <span data-ttu-id="e56a8-173">เปรียบเทียบจำนวนเหล่านี้กับ $644 ล้านเหรียญ และ $166 ล้านเหรียญสำหรับรายได้ที่ไม่ได้มาจากการขับเคลื่อนโดยคู่ค้า</span><span class="sxs-lookup"><span data-stu-id="e56a8-173">Compare these amounts to $644 million and $166 million for non-partner driven revenue.</span></span> 
-* <span data-ttu-id="e56a8-174">รายได้เฉลี่ยสำหรับบัญชีขนาดใหญ่มีขนาดมากกว่า 8 ล้านถ้าโอกาสทางการขายมาจากการขับเคลื่อนของคู่ค้า เทียบกับตัวเลข 6 ล้าน สำหรับธุรกิจที่ไม่ได้มาจากการขับเคลื่อนของคู่ค้า</span><span class="sxs-lookup"><span data-stu-id="e56a8-174">Average revenue for large accounts is larger at 8 million if the opportunity is partner driven, compared to 6 million for non-partner driven business.</span></span>  
-* <span data-ttu-id="e56a8-175">สำหรับธุรกิจที่ขับเคลื่อนโดยคู่ค้า รายได้เฉลี่ยต่อโอกาสทางการขายขนาดใหญ่ เกือบจะเป็นสองเท่าของโอกาสทางการขายขนาดกลาง</span><span class="sxs-lookup"><span data-stu-id="e56a8-175">For partner driven businesses, average revenue for large-sized opportunities is almost double that of medium-sized opportunities.</span></span>  
-* <span data-ttu-id="e56a8-176">รายได้เฉลี่ยสำหรับธุรกิจขนาดเล็กและขนาดกลาง มีค่าใกล้เคียงกันทั้งที่ขับเคลื่อนโดยคู่ค้า และไม่ได้ขับเคลื่อนโดยคู่ค้า</span><span class="sxs-lookup"><span data-stu-id="e56a8-176">Average revenue for small and medium businesses is comparable for both partner driven and non-partner driven business.</span></span>   
+บันทึกรายละเอียดดังต่อไปนี้:
+* ภูมิภาคตะวันออกเป็นภูมิภาคที่ใหญ่ที่สุดของเรา ไม่เพียงแค่จำนวนโอกาสแต่ยังรวมถึงรายได้ด้วย  
+* ถ้าคุณกรองแผนภูมิ **รายได้ตามขั้นตอนการขายและการขับเคลื่อนโดยคู่ค้า** โดยการเลือก **ใช่** สำหรับ **การขับเคลื่อนโดยคู่ค้า** คุณจะเห็นรายได้ $1.5 พันล้านเหรียญและรายได้ตามปัจจัย $294 ล้านเหรียญ เปรียบเทียบจำนวนเหล่านี้กับ $644 ล้านเหรียญ และ $166 ล้านเหรียญสำหรับรายได้ที่ไม่ได้มาจากการขับเคลื่อนโดยคู่ค้า 
+* รายได้เฉลี่ยสำหรับบัญชีขนาดใหญ่มีขนาดมากกว่า 8 ล้านถ้าโอกาสทางการขายมาจากการขับเคลื่อนของคู่ค้า เทียบกับตัวเลข 6 ล้าน สำหรับธุรกิจที่ไม่ได้มาจากการขับเคลื่อนของคู่ค้า  
+* สำหรับธุรกิจที่ขับเคลื่อนโดยคู่ค้า รายได้เฉลี่ยต่อโอกาสทางการขายขนาดใหญ่ เกือบจะเป็นสองเท่าของโอกาสทางการขายขนาดกลาง  
+* รายได้เฉลี่ยสำหรับธุรกิจขนาดเล็กและขนาดกลาง มีค่าใกล้เคียงกันทั้งที่ขับเคลื่อนโดยคู่ค้า และไม่ได้ขับเคลื่อนโดยคู่ค้า   
 
-<span data-ttu-id="e56a8-177">ชัดเจนแล้วว่าคู่ค้าของเราขายให้กับลูกค้าได้ดีกว่าบริษัทที่ไม่ใช่คู่ค้า</span><span class="sxs-lookup"><span data-stu-id="e56a8-177">Clearly our partners are doing a better job than non-partners selling to customers.</span></span> <span data-ttu-id="e56a8-178">จึงสมเหตุสมผลที่จะส่งต่อข้อเสนอไปทางคู่ค้าให้มากขึ้น</span><span class="sxs-lookup"><span data-stu-id="e56a8-178">It might make sense to funnel more deals through our partners.</span></span>
+ชัดเจนแล้วว่าคู่ค้าของเราขายให้กับลูกค้าได้ดีกว่าบริษัทที่ไม่ใช่คู่ค้า จึงสมเหตุสมผลที่จะส่งต่อข้อเสนอไปทางคู่ค้าให้มากขึ้น
 
-### <a name="opportunity-count-by-region-and-stage"></a><span data-ttu-id="e56a8-179">จำนวนโอกาสทางการขายตามภูมิภาคและขั้นตอน</span><span class="sxs-lookup"><span data-stu-id="e56a8-179">Opportunity Count by Region and Stage</span></span>
-<span data-ttu-id="e56a8-180">หน้านี้ของรายงานดูที่ข้อมูลคล้ายกับข้อมูลในหน้าก่อนหน้า แต่แยกตามภูมิภาคและขั้นตอน</span><span class="sxs-lookup"><span data-stu-id="e56a8-180">This page of the report looks at data similar to the data on the previous page but breaks it down by region and stage.</span></span> 
+### <a name="opportunity-count-by-region-and-stage"></a>จำนวนโอกาสทางการขายตามภูมิภาคและขั้นตอน
+หน้านี้ของรายงานดูที่ข้อมูลคล้ายกับข้อมูลในหน้าก่อนหน้า แต่แยกตามภูมิภาคและขั้นตอน 
 
 ![หน้าจำนวนขั้นตอนตามภูมิภาค](media/sample-opportunity-analysis/opportunity5.png)
 
-<span data-ttu-id="e56a8-182">บันทึกรายละเอียดดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="e56a8-182">Note the following details:</span></span>
-* <span data-ttu-id="e56a8-183">ถ้าคุณเลือก **ตะวันออก** ในแผนภูมิวงกลม **จำนวนโอกาสทางการขายตามภูมิภาค** เพื่อกรองตามภูมิภาคตะวันออก คุณเห็นว่าโอกาสทางการขายในขอบเขตนี้จะถูกแบ่งออกระหว่างโอกาสจากการขับเคลื่อนของคู่ค้าและโอกาสที่ไม่ได้มาจากการชับเคลื่อนของคู่ค้าเกือบเท่ากัน</span><span class="sxs-lookup"><span data-stu-id="e56a8-183">If you select **East** in the **Opportunity Count by Region** pie chart to filter by the East region, you see that the opportunities in this region are split almost equally between partner driven and non-partner driven.</span></span>
-* <span data-ttu-id="e56a8-184">โอกาสขนาดใหญ่พบได้มากสุดในภูมิภาคส่วนกลาง โอกาสขนาดเล็กพบมากในภูมิภาคตะวันออก และโอกาสขนาดกลางพบมากสุดในภูมิภาคตะวันตก</span><span class="sxs-lookup"><span data-stu-id="e56a8-184">Large opportunities are most common in the Central region, small opportunities are most common in the East region, and medium opportunities are most common in the West region.</span></span>
+บันทึกรายละเอียดดังต่อไปนี้:
+* ถ้าคุณเลือก **ตะวันออก** ในแผนภูมิวงกลม **จำนวนโอกาสทางการขายตามภูมิภาค** เพื่อกรองตามภูมิภาคตะวันออก คุณเห็นว่าโอกาสทางการขายในขอบเขตนี้จะถูกแบ่งออกระหว่างโอกาสจากการขับเคลื่อนของคู่ค้าและโอกาสที่ไม่ได้มาจากการชับเคลื่อนของคู่ค้าเกือบเท่ากัน
+* โอกาสขนาดใหญ่พบได้มากสุดในภูมิภาคส่วนกลาง โอกาสขนาดเล็กพบมากในภูมิภาคตะวันออก และโอกาสขนาดกลางพบมากสุดในภูมิภาคตะวันตก
 
-### <a name="upcoming-opportunities-by-month-page"></a><span data-ttu-id="e56a8-185">หน้าโอกาสทางการขายที่จะเกิดขึ้นตามเดือน</span><span class="sxs-lookup"><span data-stu-id="e56a8-185">Upcoming Opportunities by Month page</span></span>
-<span data-ttu-id="e56a8-186">สำหรับหน้านี้ เรากำลังดูปัจจัยที่คล้ายกัน แต่จากมุมมองของวันที่และเวลา</span><span class="sxs-lookup"><span data-stu-id="e56a8-186">For this page we're looking at similar factors, but from a date and time perspective.</span></span> 
+### <a name="upcoming-opportunities-by-month-page"></a>หน้าโอกาสทางการขายที่จะเกิดขึ้นตามเดือน
+สำหรับหน้านี้ เรากำลังดูปัจจัยที่คล้ายกัน แต่จากมุมมองของวันที่และเวลา 
  
 ![หน้าโอกาสทางการขายที่จะเกิดขึ้น](media/sample-opportunity-analysis/opportunity6.png)
 
-<span data-ttu-id="e56a8-188">CFO ของเราใช้หน้านี้เพื่อจัดสรรปริมาณงาน</span><span class="sxs-lookup"><span data-stu-id="e56a8-188">Our CFO uses this page to manage workload.</span></span> <span data-ttu-id="e56a8-189">พวกเขาสามารถวางแผนตามนั้นโดยดูที่โอกาสในการสร้างรายได้ ตามขั้นตอนการขายและเดือน</span><span class="sxs-lookup"><span data-stu-id="e56a8-189">By looking at the revenue opportunities by sales stage and month, they can plan accordingly.</span></span>
+CFO ของเราใช้หน้านี้เพื่อจัดสรรปริมาณงาน พวกเขาสามารถวางแผนตามนั้นโดยดูที่โอกาสในการสร้างรายได้ ตามขั้นตอนการขายและเดือน
 
-<span data-ttu-id="e56a8-190">บันทึกรายละเอียดดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="e56a8-190">Note the following details:</span></span>
-* <span data-ttu-id="e56a8-191">รายได้เฉลี่ยสำหรับขั้นตอนการขายสุดท้ายมีค่าสูงสุด</span><span class="sxs-lookup"><span data-stu-id="e56a8-191">Average revenue for the Finalize sales stage is the highest.</span></span> <span data-ttu-id="e56a8-192">การปิดข้อเสนอเหล่านี้ คือสิ่งสำคัญที่สุด</span><span class="sxs-lookup"><span data-stu-id="e56a8-192">Closing these deals is a top priority.</span></span>
-* <span data-ttu-id="e56a8-193">หากคุณกรองตามเดือน (โดยการเลือกเดือนในตัวแบ่งส่วนข้อมูล **เดือน**) คุณจะเห็นว่าเดือนมกราคมมีข้อเสนอขนาดใหญ่ในขั้นตอนการสุดท้ายเป็นสัดส่วนที่สูงด้วยรายได้ตามปัจจัยที่ $75 ล้านเหรียญ</span><span class="sxs-lookup"><span data-stu-id="e56a8-193">If you filter by month (by selecting a month in the **Month** slicer), you see that January has a high proportion of large deals in the Finalize sales stage with a factored revenue of $75 million.</span></span> <span data-ttu-id="e56a8-194">ในทางกลับกัน เดือนกุมภาพันธ์มีข้อเสนอปานกลางในขั้นตอนการขายของโซลูชันและข้อเสนอเป็นส่วนใหญ่</span><span class="sxs-lookup"><span data-stu-id="e56a8-194">February, on the other hand, has mostly medium deals in the Solution and Proposal sales stages.</span></span>
-* <span data-ttu-id="e56a8-195">โดยทั่วไป ตัวเลขรายได้ที่แยกแยะแล้ว ผันผวนตาม ขั้นตอนการขาย จำนวนโอกาส และขนาดของข้อเสนอ</span><span class="sxs-lookup"><span data-stu-id="e56a8-195">In general, the factored revenue numbers fluctuate based on sales stage, number of opportunities, and deal size.</span></span> <span data-ttu-id="e56a8-196">เพิ่มตัวกรองสำหรับปัจจัยเหล่านี้โดยใช้บานหน้าต่าง **ตัวกรอง** เพื่อค้นหาข้อมูลเชิงลึกเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="e56a8-196">Add filters for these factors by using the **Filter** pane on the right to discover further insights.</span></span>
+บันทึกรายละเอียดดังต่อไปนี้:
+* รายได้เฉลี่ยสำหรับขั้นตอนการขายสุดท้ายมีค่าสูงสุด การปิดข้อเสนอเหล่านี้ คือสิ่งสำคัญที่สุด
+* หากคุณกรองตามเดือน (โดยการเลือกเดือนในตัวแบ่งส่วนข้อมูล **เดือน**) คุณจะเห็นว่าเดือนมกราคมมีข้อเสนอขนาดใหญ่ในขั้นตอนการสุดท้ายเป็นสัดส่วนที่สูงด้วยรายได้ตามปัจจัยที่ $75 ล้านเหรียญ ในทางกลับกัน เดือนกุมภาพันธ์มีข้อเสนอปานกลางในขั้นตอนการขายของโซลูชันและข้อเสนอเป็นส่วนใหญ่
+* โดยทั่วไป ตัวเลขรายได้ที่แยกแยะแล้ว ผันผวนตาม ขั้นตอนการขาย จำนวนโอกาส และขนาดของข้อเสนอ เพิ่มตัวกรองสำหรับปัจจัยเหล่านี้โดยใช้บานหน้าต่าง **ตัวกรอง** เพื่อค้นหาข้อมูลเชิงลึกเพิ่มเติม
 
-## <a name="next-steps-connect-to-your-data"></a><span data-ttu-id="e56a8-197">ขั้นตอนถัดไป: เชื่อมต่อไปยังข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="e56a8-197">Next steps: Connect to your data</span></span>
-<span data-ttu-id="e56a8-198">สภาพแวดล้อมนี้มีความปลอดภัยให้ดำเนินการต่าง ๆ ได้ เนื่องจากคุณสามารถเลือกที่จะไม่บันทึกการเปลี่ยนแปลงของคุณ</span><span class="sxs-lookup"><span data-stu-id="e56a8-198">This environment is a safe one to play in, because you can choose not to save your changes.</span></span> <span data-ttu-id="e56a8-199">ถ้าคุณบันทึก คุณสามารถเลือก **รับข้อมูล** สำหรับสำเนาชุดใหม่ของตัวอย่างนี้ได้เสมอ</span><span class="sxs-lookup"><span data-stu-id="e56a8-199">But if you do save them, you can always select **Get Data** for a new copy of this sample.</span></span>
+## <a name="next-steps-connect-to-your-data"></a>ขั้นตอนถัดไป: เชื่อมต่อไปยังข้อมูลของคุณ
+สภาพแวดล้อมนี้มีความปลอดภัยให้ดำเนินการต่าง ๆ ได้ เนื่องจากคุณสามารถเลือกที่จะไม่บันทึกการเปลี่ยนแปลงของคุณ ถ้าคุณบันทึก คุณสามารถเลือก **รับข้อมูล** สำหรับสำเนาชุดใหม่ของตัวอย่างนี้ได้เสมอ
 
-<span data-ttu-id="e56a8-200">เราหวังว่าการแนะนำนี้ได้แสดงให้เห็นว่าแดชบอร์ด Q&A และรายงาน Power BI สามารถให้ข้อมูลเชิงลึกในข้อมูลตัวอย่าง</span><span class="sxs-lookup"><span data-stu-id="e56a8-200">We hope this tour has shown how Power BI dashboards, Q&A, and reports can provide insights into sample data.</span></span> <span data-ttu-id="e56a8-201">ตอนนี้ถึงตาคุณแล้ว ลองเชื่อมต่อกับข้อมูลของคุณเอง</span><span class="sxs-lookup"><span data-stu-id="e56a8-201">Now it's your turn; connect to your own data.</span></span> <span data-ttu-id="e56a8-202">ด้วย Power BI คุณสามารถเชื่อมต่อกับแหล่งข้อมูลที่หลากหลาย</span><span class="sxs-lookup"><span data-stu-id="e56a8-202">With Power BI, you can connect to a wide variety of data sources.</span></span> <span data-ttu-id="e56a8-203">เมื่อต้องการเรียนรู้เพิ่มเติม ดู[เริ่มต้นใช้งานบริการ Power BI](../fundamentals/service-get-started.md)</span><span class="sxs-lookup"><span data-stu-id="e56a8-203">To learn more, see [Get started with the Power BI service](../fundamentals/service-get-started.md).</span></span>
+เราหวังว่าการแนะนำนี้ได้แสดงให้เห็นว่าแดชบอร์ด Q&A และรายงาน Power BI สามารถให้ข้อมูลเชิงลึกในข้อมูลตัวอย่าง ตอนนี้ถึงตาคุณแล้ว ลองเชื่อมต่อกับข้อมูลของคุณเอง ด้วย Power BI คุณสามารถเชื่อมต่อกับแหล่งข้อมูลที่หลากหลาย เมื่อต้องการเรียนรู้เพิ่มเติม ดู[เริ่มต้นใช้งานบริการ Power BI](../fundamentals/service-get-started.md)

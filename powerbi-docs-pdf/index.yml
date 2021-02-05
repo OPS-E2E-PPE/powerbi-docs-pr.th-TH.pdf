@@ -12,24 +12,24 @@ metadata:
   ms.collection: collection
   author: maggiesMSFT
   ms.author: maggies
-  ms.date: 12/16/2020
-  ms.openlocfilehash: be6ec499d78d3ba5f3899fcb8556296568a40319
-  ms.sourcegitcommit: 7bf09116163afaae312eb2b232eb7967baee2c92
-  ms.translationtype: HT
+  ms.date: 02/03/2021
+  ms.openlocfilehash: 8f8956075030eee75077b9da9b6fccca94b73546
+  ms.sourcegitcommit: c33e53e1fab1f29872297524a7b4f5af6c806798
+  ms.translationtype: MT
   ms.contentlocale: th-TH
-  ms.lasthandoff: 12/17/2020
-  ms.locfileid: "97621866"
+  ms.lasthandoff: 02/04/2021
+  ms.locfileid: "99533061"
 highlightedContent:
   items:
   - title: เริ่มต้นใช้งาน Power BI Desktop
     itemType: get-started
     url: fundamentals/desktop-getting-started.md
-  - title: DirectQuery สำหรับชุดข้อมูล Power BI และ Azure Analysis
+  - title: Power BI แบบฝังตัววิเคราะห์ไคลเอ็นต์ Api
+    itemType: overview
+    url: /javascript/api/overview/powerbi/
+  - title: การค้นพบชุดข้อมูลโดยใช้ฮับชุดข้อมูล (ตัวอย่าง)
     itemType: concept
-    url: connect-data/desktop-directquery-datasets-azure-analysis-services.md
-  - title: ใช้แบบจำลอง Azure Machine Learning ใน Power BI
-    itemType: tutorial
-    url: connect-data/service-aml-integrate.md
+    url: connect-data/service-datasets-hub.md
   - title: Power BI บน Microsoft Learn
     itemType: learn
     url: /learn/powerplatform/power-bi?WT.mc_id=powerbi_landingpage-docs-link
@@ -234,13 +234,24 @@ conceptualContent:
 additionalContent:
   sections:
   - title: เครื่องมือที่เกี่ยวข้อง
-  - items:
+    items:
     - title: เซิร์ฟเวอร์รายงาน Power BI
       summary: สำรวจเซิร์ฟเวอร์รายงาน Power BI เซิร์ฟเวอร์รายงานในองค์กรที่มีพอร์ทัลเว็บที่คุณแสดงและจัดการรายงาน Power BI รายงานที่มีการแบ่งหน้า และ KPI
       url: report-server/index.yml
     - title: Power BI REST APIs
       summary: Power BI REST APIs จัดเตรียมจุดสิ้นสุดการบริการสำหรับการฝัง การจัดการ และทรัพยากรผู้ใช้
       url: /rest/api/power-bi/
-    - title: เอกสารประกอบ Power Platform
-      summary: เรียนรู้ว่า Power BI, Power Apps, Power Automate และ Power Virtual Agent ทำงานร่วมกันเพื่อส่งเสริมประสิทธิภาพซึ่งกันและกันอย่างไร
-      url: /power-platform/
+    - title: Power BI แบบฝังตัววิเคราะห์ไคลเอ็นต์ Api
+      summary: ไลบรารีฝั่งไคลเอ็นต์สำหรับการฝัง Power BI โดยใช้ JavaScript หรือ TypeScript
+      url: /javascript/api/overview/powerbi/
+  - title: ผลิตภัณฑ์ Microsoft Power Platform อื่นๆ
+    items:
+    - title: Power Apps
+      summary: สร้างแอปแบบต่ำได้อย่างรวดเร็วที่ทันสมัย precesses และแก้ปัญหาทางธุรกิจที่ยากลำบากในองค์กรของคุณ
+      url: /powerapps/
+    - title: Power  Automate
+      summary: สร้างเวิร์กโฟลว์อัตโนมัติระหว่างแอปและบริการโปรดของคุณเพื่อทำข้อมูลไฟล์ให้ตรงกันรับการแจ้งเตือนและอื่นๆอีกมากมาย
+      url: /power-automate/
+    - title: Power Virtual Agents
+      summary: สร้าง bots อันทรงพลังโดยใช้ส่วนติดต่อแบบกราฟิกที่แนะนำและไม่จำเป็นต้องมีนักวิทยาศาสตร์หรือนักพัฒนาข้อมูล
+      url: /power-virtual-agents/

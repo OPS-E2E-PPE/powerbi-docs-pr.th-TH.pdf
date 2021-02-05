@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: อกสารประกอบการใช้งานการวิเคราะห์ใน Power BI embedded สำหรับข้อมูลเชิงลึก BI แบบฝังที่ดีขึ้น
+title: เอกสารประกอบการใช้งานการวิเคราะห์ใน Power BI embedded
 summary: เรียนรู้วิธีการใช้โซลูชันการวิเคราะห์แบบฝังของ Power BI สองตัว ได้แก่ Power BI Embedded และการฝังโดยใช้ Power BI Premium
 metadata:
   title: เอกสารประกอบการใช้งานการวิเคราะห์ใน Power BI embedded
@@ -12,12 +12,12 @@ metadata:
   author: KesemSharabi
   ms.author: kesharab
   ms.date: 31/03/2020
-  ms.openlocfilehash: 0f5afe65128f8e9b79522380b2271895f2afacaf
-  ms.sourcegitcommit: eeaf607e7c1d89ef7312421731e1729ddce5a5cc
-  ms.translationtype: HT
+  ms.openlocfilehash: b889e6947362de81098709d6c2ad2c819195113b
+  ms.sourcegitcommit: 7ed995eed0fd6e718748accf87bae384211cd95d
+  ms.translationtype: MT
   ms.contentlocale: th-TH
-  ms.lasthandoff: 01/05/2021
-  ms.locfileid: "97888684"
+  ms.lasthandoff: 01/29/2021
+  ms.locfileid: "99043217"
 landingContent:
 - title: เริ่มใช้งาน
   linkLists:
@@ -29,6 +29,16 @@ landingContent:
       url: azure-pbie-what-is-power-bi-embedded.md
     - text: คำถามที่ถามบ่อย
       url: embedded-faq.md
+  - linkListType: reference
+    links:
+    - text: นักพัฒนา Power BI ในหลักสูตรหนึ่งวัน
+      url: /power-bi/learning-catalog/developer-online-course
+- title: ไคลเอ็นต์ Api
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Power BI แบบฝังตัววิเคราะห์ไคลเอ็นต์ Api
+      url: /javascript/api/overview/powerbi/
 - title: ฝังรายงานหรือแดชบอร์ด
   linkLists:
   - linkListType: tutorial
@@ -79,5 +89,5 @@ landingContent:
       url: https://www.nuget.org/profiles/powerbi
     - text: เครื่องมือ Playground
       url: https://microsoft.github.io/PowerBI-JavaScript/demo/v2-demo/index.html
-    - text: JavaScript wiki
-      url: https://github.com/Microsoft/powerbi-javascript/wiki
+    - text: Power BI แบบฝังตัววิเคราะห์ไคลเอ็นต์ Api
+      url: /javascript/api/overview/powerbi/

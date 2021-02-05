@@ -9,313 +9,315 @@ ms.subservice: powerbi-premium
 ms.topic: how-to
 ms.date: 11/11/2020
 LocalizationGroup: Premium
-ms.openlocfilehash: 46e2684b468e480da5db5287ffc40466d71c8f22
-ms.sourcegitcommit: cc20b476a45bccb870c9de1d0b384e2c39e25d24
-ms.translationtype: HT
+ms.openlocfilehash: f99f40fd04154f2a934fb812dfc1a4683e64ceb9
+ms.sourcegitcommit: c33e53e1fab1f29872297524a7b4f5af6c806798
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94512228"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99532992"
 ---
-# <a name="monitor-premium-capacities-with-the-app"></a><span data-ttu-id="a3109-103">ตรวจสอบความจุ Premium ด้วยแอป</span><span class="sxs-lookup"><span data-stu-id="a3109-103">Monitor Premium capacities with the app</span></span>
+# <a name="monitor-premium-capacities-with-the-app"></a>ตรวจสอบความจุ Premium ด้วยแอป
 
-<span data-ttu-id="a3109-104">การตรวจสอบความจุของคุณเป็นสิ่งสำคัญในการตัดสินใจอย่างชาญฉลาดว่าจะใช้ทรัพยากรความจุ Premium ของคุณให้ดีที่สุดได้อย่างไร</span><span class="sxs-lookup"><span data-stu-id="a3109-104">Monitoring your capacities is essential to making informed decisions on how best to utilize your Premium capacity resources.</span></span> <span data-ttu-id="a3109-105">คุณสามารถตรวจสอบความจุในพอร์ทัลผู้ดูแลระบบหรือด้วยแอป **การวัดความจ ุPower BI Premium**</span><span class="sxs-lookup"><span data-stu-id="a3109-105">You can monitor capacities in the Admin portal or with the **Power BI Premium Capacity Metrics** app.</span></span> <span data-ttu-id="a3109-106">บทความนี้อธิบายโดยใช้แอปการวัดความจุ Premium</span><span class="sxs-lookup"><span data-stu-id="a3109-106">This article describes using the Premium Capacity Metrics app.</span></span> <span data-ttu-id="a3109-107">แอปมีข้อมูลเชิงลึกมากที่สุดเป็นวิธีการใช้งานความจุของคุณ</span><span class="sxs-lookup"><span data-stu-id="a3109-107">The app provides the most in-depth information into how your capacities are performing.</span></span> <span data-ttu-id="a3109-108">สำหรับภาพรวมระดับสูงขึ้นของการวัดการใช้งานเฉลี่ยช่วงเจ็ดวันที่ผ่านมา คุณสามารถใช้พอร์ทัลผู้ดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="a3109-108">For a higher level overview of average use metrics over the last seven days, you can use the Admin portal.</span></span> <span data-ttu-id="a3109-109">หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับการตรวจสอบในพอร์ทัล ดู[ตรวจสอบความจุ Premium ในพอร์ทัลผู้ดูแลระบบ](service-admin-premium-monitor-portal.md)</span><span class="sxs-lookup"><span data-stu-id="a3109-109">To learn more about monitoring in the portal, see [Monitor Premium capacities in the Admin portal](service-admin-premium-monitor-portal.md).</span></span>
+การตรวจสอบความจุของคุณเป็นสิ่งสำคัญในการตัดสินใจอย่างชาญฉลาดว่าจะใช้ทรัพยากรความจุ Premium ของคุณให้ดีที่สุดได้อย่างไร คุณสามารถตรวจสอบความจุในพอร์ทัลผู้ดูแลระบบหรือด้วยแอป **การวัดความจ ุPower BI Premium** บทความนี้อธิบายโดยใช้แอปการวัดความจุ Premium แอปมีข้อมูลเชิงลึกมากที่สุดเป็นวิธีการใช้งานความจุของคุณ สำหรับภาพรวมระดับสูงขึ้นของการวัดการใช้งานเฉลี่ยช่วงเจ็ดวันที่ผ่านมา คุณสามารถใช้พอร์ทัลผู้ดูแลระบบ หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับการตรวจสอบในพอร์ทัล ดู[ตรวจสอบความจุ Premium ในพอร์ทัลผู้ดูแลระบบ](service-admin-premium-monitor-portal.md)
 
-<span data-ttu-id="a3109-110">แอปถูกอัปเดตตามปกติด้วยคุณสมบัติและฟังก์ชันการทำงานใหม่ ๆ</span><span class="sxs-lookup"><span data-stu-id="a3109-110">The app is updated regularly with new features and functionality.</span></span> <span data-ttu-id="a3109-111">ตรวจสอบให้แน่ใจว่าคุณกำลังใช้เวอร์ชันล่าสุด</span><span class="sxs-lookup"><span data-stu-id="a3109-111">Make sure you're running the latest version.</span></span> <span data-ttu-id="a3109-112">เมื่อเวอร์ชันใหม่จะพร้อมใช้งาน คุณจะได้รับ[การแจ้งเตือน](../connect-data/service-template-apps-install-distribute.md#update-a-template-app)</span><span class="sxs-lookup"><span data-stu-id="a3109-112">When a new version becomes available, you will receive [notification](../connect-data/service-template-apps-install-distribute.md#update-a-template-app).</span></span>
+แอปถูกอัปเดตตามปกติด้วยคุณสมบัติและฟังก์ชันการทำงานใหม่ ๆ ตรวจสอบให้แน่ใจว่าคุณกำลังใช้เวอร์ชันล่าสุด เมื่อเวอร์ชันใหม่จะพร้อมใช้งาน คุณจะได้รับ[การแจ้งเตือน](../connect-data/service-template-apps-install-distribute.md#update-a-template-app)
 
 > [!IMPORTANT]
-> <span data-ttu-id="a3109-113">ถ้าความจุ Power BI Premium ของคุณกำลังประสบปัญหาการใช้ทรัพยากรสูงจนส่งผลให้เกิดปัญหาด้านประสิทธิภาพการทำงานหรือความมั่นคง คุณสามารถรับอีเมลแจ้งเตือนเพื่อทราบปัญหาและแก้ไขปัญหาได้</span><span class="sxs-lookup"><span data-stu-id="a3109-113">If your Power BI Premium capacity is experiencing high resource usage, resulting in performance or reliability issues, you can receive notification emails to identify and resolve the issue.</span></span> <span data-ttu-id="a3109-114">ซึ่งอาจเป็นวิธีที่มีประสิทธิภาพในการแก้ไขปัญหาความจุโอเวอร์โหลด</span><span class="sxs-lookup"><span data-stu-id="a3109-114">This can be a streamlined way to troubleshoot overloaded capacities.</span></span> <span data-ttu-id="a3109-115">คุณสามารถศึกษาข้อมูลเพิ่มเติมได้ที่[ความจุและการแจ้งเตือนความมั่นคง](service-interruption-notifications.md#capacity-and-reliability-notifications)</span><span class="sxs-lookup"><span data-stu-id="a3109-115">See [capacity and reliability notifications](service-interruption-notifications.md#capacity-and-reliability-notifications) for more information.</span></span>
+> ถ้าความจุ Power BI Premium ของคุณกำลังประสบปัญหาการใช้ทรัพยากรสูงจนส่งผลให้เกิดปัญหาด้านประสิทธิภาพการทำงานหรือความมั่นคง คุณสามารถรับอีเมลแจ้งเตือนเพื่อทราบปัญหาและแก้ไขปัญหาได้ ซึ่งอาจเป็นวิธีที่มีประสิทธิภาพในการแก้ไขปัญหาความจุโอเวอร์โหลด คุณสามารถศึกษาข้อมูลเพิ่มเติมได้ที่[ความจุและการแจ้งเตือนความมั่นคง](service-interruption-notifications.md#capacity-and-reliability-notifications)
 
 > [!NOTE]
-> <span data-ttu-id="a3109-116">Power BI Premium เพิ่งเปิดตัว Premium เวอร์ชันใหม่ชื่อ **Premium Gen2** ซึ่งกำลังอยู่ในช่วงการแสดงตัวอย่าง</span><span class="sxs-lookup"><span data-stu-id="a3109-116">Power BI Premium recently released a new version of Premium, called **Premium Gen2**, which is currently in preview.</span></span> <span data-ttu-id="a3109-117">Premium Gen2 จะทำให้การจัดการความจุระดับพรีเมียมง่ายขึ้นและลดค่าใช้จ่ายในการจัดการ</span><span class="sxs-lookup"><span data-stu-id="a3109-117">Premium Gen2 will simplify the management of Premium capacities, and reduce management overhead.</span></span> <span data-ttu-id="a3109-118">สำหรับข้อมูลเพิ่มเติม โปรดดูที่ [Power BI Premium Generation 2 (ตัวอย่าง)](service-premium-what-is.md#power-bi-premium-generation-2-preview)</span><span class="sxs-lookup"><span data-stu-id="a3109-118">For more information, see [Power BI Premium Generation 2 (preview)](service-premium-what-is.md#power-bi-premium-generation-2-preview).</span></span>
+> Power BI Premium เพิ่งเปิดตัว Premium เวอร์ชันใหม่ชื่อ **Premium Gen2** ซึ่งกำลังอยู่ในช่วงการแสดงตัวอย่าง Premium Gen2 จะทำให้การจัดการความจุระดับพรีเมียมง่ายขึ้นและลดค่าใช้จ่ายในการจัดการ สำหรับข้อมูลเพิ่มเติม โปรดดูที่ [Power BI Premium Generation 2 (ตัวอย่าง)](service-premium-what-is.md#power-bi-premium-generation-2-preview)
+>
+>หากต้องการตรวจสอบการปรับปรุง Power BI Embedded Gen2 ให้อ้างอิงถึง[Power BI Embedded รุ่นที่ 2](../developer/embedded/power-bi-embedded-generation-2.md)
 
-## <a name="install-the-app"></a><span data-ttu-id="a3109-119">ติดตั้งแอป</span><span class="sxs-lookup"><span data-stu-id="a3109-119">Install the app</span></span>
+## <a name="install-the-app"></a>ติดตั้งแอป
 
-<span data-ttu-id="a3109-120">ไปที่ [เชื่อมต่อกับเมตริกความจุ Power BI Premium](../connect-data/service-connect-to-pbi-premium-capacity-metrics.md) เพื่อดูวิธีการติดตั้งแอปและเชื่อมต่อกับข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-120">Go to [Connect to Power BI Premium Capacity Metrics](../connect-data/service-connect-to-pbi-premium-capacity-metrics.md) to see how to install the app and connect to data.</span></span> <span data-ttu-id="a3109-121">อีกวิธีหนึ่งคือคุณสามารถ [ตรงไปยังแอป](https://go.microsoft.com/fwlink/?linkid=2114036)</span><span class="sxs-lookup"><span data-stu-id="a3109-121">Alternatively, you can [go straight to the app](https://go.microsoft.com/fwlink/?linkid=2114036).</span></span>
+ไปที่ [เชื่อมต่อกับเมตริกความจุ Power BI Premium](../connect-data/service-connect-to-pbi-premium-capacity-metrics.md) เพื่อดูวิธีการติดตั้งแอปและเชื่อมต่อกับข้อมูล อีกวิธีหนึ่งคือคุณสามารถ [ตรงไปยังแอป](https://go.microsoft.com/fwlink/?linkid=2114036)
 
-## <a name="get-app-refresh-history"></a><span data-ttu-id="a3109-122">รับข้อมูลประวัติการรีเฟรชแอป</span><span class="sxs-lookup"><span data-stu-id="a3109-122">Get app refresh history</span></span>
+## <a name="get-app-refresh-history"></a>รับข้อมูลประวัติการรีเฟรชแอป
 
-<span data-ttu-id="a3109-123">เมื่อต้องการตรวจสอบครั้งล่าสุดที่แอปเมตริกความจุ Power BI Premium ของคุณรีเฟรช:</span><span class="sxs-lookup"><span data-stu-id="a3109-123">To check the last time your Premium Capacity Metrics app refreshed:</span></span>
+เมื่อต้องการตรวจสอบครั้งล่าสุดที่แอปเมตริกความจุ Power BI Premium ของคุณรีเฟรช:
 
-1. <span data-ttu-id="a3109-124">ไปที่พื้นที่ทำงานที่มีการติดตั้งแอป</span><span class="sxs-lookup"><span data-stu-id="a3109-124">Go to the workspace that was installed with the app.</span></span>
+1. ไปที่พื้นที่ทำงานที่มีการติดตั้งแอป
 
    ![ไปที่พื้นที่ทำงานของแอป](media/service-admin-premium-monitor-capacity/settings-refresh-history.png)
 
-1. <span data-ttu-id="a3109-126">คลิกปุ่ม **กำหนดตารางเวลาการรีเฟรช** บนบรรทัดชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-126">Click the **Schedule refresh** button on the dataset line.</span></span>
+1. คลิกปุ่ม **กำหนดตารางเวลาการรีเฟรช** บนบรรทัดชุดข้อมูล
 
    ![ปุ่มกำหนดตารางเวลาการรีเฟรช](media/service-admin-premium-monitor-capacity/schedule-refresh.png)
 
-   <span data-ttu-id="a3109-128">การรีเฟรชครั้งล่าสุดจะแสดงขึ้น</span><span class="sxs-lookup"><span data-stu-id="a3109-128">The last refresh is shown.</span></span> <span data-ttu-id="a3109-129">คลิก **ประวัติการรีเฟรช** เพื่อดูการรีเฟรชที่กำหนดไว้ และการรีเฟรชตามความต้องการ</span><span class="sxs-lookup"><span data-stu-id="a3109-129">Click **Refresh history** to see scheduled and on demand refreshes.</span></span>
+   การรีเฟรชครั้งล่าสุดจะแสดงขึ้น คลิก **ประวัติการรีเฟรช** เพื่อดูการรีเฟรชที่กำหนดไว้ และการรีเฟรชตามความต้องการ
 
    ![รีเฟรชล่าสุด](media/service-admin-premium-monitor-capacity/settings-last-refresh.png)
 
-## <a name="monitor-capacities-with-the-app"></a><span data-ttu-id="a3109-131">ตรวจสอบความจุด้วยแอป</span><span class="sxs-lookup"><span data-stu-id="a3109-131">Monitor capacities with the app</span></span>
+## <a name="monitor-capacities-with-the-app"></a>ตรวจสอบความจุด้วยแอป
 
-<span data-ttu-id="a3109-132">หลังจากที่คุณติดตั้งแอป คุณสามารถดูการวัดความจุในองค์กรของคุณ</span><span class="sxs-lookup"><span data-stu-id="a3109-132">Now that you've installed the app, you can see metrics for the capacities in your organization.</span></span> <span data-ttu-id="a3109-133">แอปมีแดชบอร์ดพร้อมข้อมูลสรุปเมตริก และรายงานเมตริกโดยละเอียด</span><span class="sxs-lookup"><span data-stu-id="a3109-133">The app provides a Dashboard with metrics summaries, and detailed metrics Reports.</span></span>
+หลังจากที่คุณติดตั้งแอป คุณสามารถดูการวัดความจุในองค์กรของคุณ แอปมีแดชบอร์ดพร้อมข้อมูลสรุปเมตริก และรายงานเมตริกโดยละเอียด
 
-### <a name="dashboard"></a><span data-ttu-id="a3109-134">แดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="a3109-134">Dashboard</span></span>
+### <a name="dashboard"></a>แดชบอร์ด
 
-<span data-ttu-id="a3109-135">เมื่อต้องดูแดชบอร์ดที่สรุปเป็นหลักเมตริกสำหรับความจุที่คุณเป็นผู้ดูแล ระบบ ใน **แดชบอร์ด** คลิก **Power BI Premium ความจุเมตริก**</span><span class="sxs-lookup"><span data-stu-id="a3109-135">To see a dashboard that summarizes key metrics for capacities for which you are an admin, in **Dashboards**, click **Power BI Premium Capacity Metrics**.</span></span> <span data-ttu-id="a3109-136">แดชบอร์ดปรากฏขึ้น</span><span class="sxs-lookup"><span data-stu-id="a3109-136">A dashboard appears.</span></span>
+เมื่อต้องดูแดชบอร์ดที่สรุปเป็นหลักเมตริกสำหรับความจุที่คุณเป็นผู้ดูแล ระบบ ใน **แดชบอร์ด** คลิก **Power BI Premium ความจุเมตริก** แดชบอร์ดปรากฏขึ้น
 
 ![แดชบอร์ดแอปวัด](media/service-admin-premium-monitor-capacity/app-dashboard.png)
 
-<span data-ttu-id="a3109-138">แดชบอร์ดประกอบรวมด้วยการวัดดังต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="a3109-138">The dashboard includes the following metrics:</span></span>
+แดชบอร์ดประกอบรวมด้วยการวัดดังต่อไปนี้
 
-#### <a name="top"></a><span data-ttu-id="a3109-139">ด้านบน</span><span class="sxs-lookup"><span data-stu-id="a3109-139">Top</span></span>
+#### <a name="top"></a>ด้านบน
 
-| <span data-ttu-id="a3109-140">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-140">Metric</span></span> | <span data-ttu-id="a3109-141">คำอธิบาย</span><span class="sxs-lookup"><span data-stu-id="a3109-141">Description</span></span> |
+| เมตริก | คำอธิบาย |
 | --- | --- |
-| <span data-ttu-id="a3109-142">เวอร์ชัน</span><span class="sxs-lookup"><span data-stu-id="a3109-142">Version</span></span> | <span data-ttu-id="a3109-143">แอปเวอร์ชัน</span><span class="sxs-lookup"><span data-stu-id="a3109-143">App version.</span></span> | 
-| <span data-ttu-id="a3109-144">ความจุ</span><span class="sxs-lookup"><span data-stu-id="a3109-144">Capacities</span></span> | <span data-ttu-id="a3109-145">จำนวนของความจุที่คุณเป็นผู้ดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="a3109-145">Number of capacities for which you are admin.</span></span> | 
-| <span data-ttu-id="a3109-146">พื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-146">Workspaces</span></span> | <span data-ttu-id="a3109-147">จำนวนของพื้นที่ทำงานในความจุของคุณที่เป็นรายงานการวัด</span><span class="sxs-lookup"><span data-stu-id="a3109-147">Number of workspaces in your capacities that are reporting metrics.</span></span>|
+| เวอร์ชัน | แอปเวอร์ชัน | 
+| ความจุ | จำนวนของความจุที่คุณเป็นผู้ดูแลระบบ | 
+| พื้นที่ทำงาน | จำนวนของพื้นที่ทำงานในความจุของคุณที่เป็นรายงานการวัด|
 |||
 
-#### <a name="system-summary"></a><span data-ttu-id="a3109-148">ข้อมูลสรุปของระบบ</span><span class="sxs-lookup"><span data-stu-id="a3109-148">System Summary</span></span>
+#### <a name="system-summary"></a>ข้อมูลสรุปของระบบ
 
-| <span data-ttu-id="a3109-149">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-149">Metric</span></span> | <span data-ttu-id="a3109-150">คำอธิบาย</span><span class="sxs-lookup"><span data-stu-id="a3109-150">Description</span></span> |
+| เมตริก | คำอธิบาย |
 | --- | --- |
-| <span data-ttu-id="a3109-151">CPU ที่มีความจุเพื่อใช้ให้เกิดประโยชน์สูงสุด</span><span class="sxs-lookup"><span data-stu-id="a3109-151">CPU Highest Utilization Capacity</span></span> | <span data-ttu-id="a3109-152">ความจุของจำนวนครั้งที่ CPU กำหนดสูงสุดเกิน 80% ของค่าเกณฑ์ใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-152">Capacity with the maximum number of times CPU exceeded 80% of the thresholds in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-153">จำนวนครั้งของความจุใน CPU ที่สามารถใช้ให้เกิดประโยชน์สูงสุด</span><span class="sxs-lookup"><span data-stu-id="a3109-153">CPU Highest Utilization Count</span></span> | <span data-ttu-id="a3109-154">จำนวนครั้งที่ CPU ถูกตั้งชื่อความจุเกิน 80% ของค่าเกณฑ์ใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-154">Number of times CPU the named capacity exceeded 80% of the thresholds in the past seven days.</span></span> | 
-| <span data-ttu-id="a3109-155">ความจุของหน่วยความจำมากสุดที่สามารถใช้งานได้สูงสุด</span><span class="sxs-lookup"><span data-stu-id="a3109-155">Memory Max Utilization Capacity</span></span> | <span data-ttu-id="a3109-156">ถึงขีดจำกัดของจำนวนครั้งความจุในหน่วยความจำสูงสุดในช่วง 7 วันที่ผ่านมา แบ่งออกเป็นกลุ่มสามนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-156">Capacity with the maximum number of times max memory limit was hit in the past seven days, split into three-minute buckets.</span></span>  |
-| <span data-ttu-id="a3109-157">จำนวนครั้งของหน่วยความจำสูงสุดที่สามารถใช้งานได้</span><span class="sxs-lookup"><span data-stu-id="a3109-157">Memory Max Utilization Count</span></span>| <span data-ttu-id="a3109-158">จำนวนครั้งของความจุที่ถูกตั้งชื่อในหน่วยความจำสูงสุดถึงขีดจำกัดในช่วง7 วันที่ผ่านมา แบ่งออกเป็นกลุ่มสามนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-158">Number of times the named capacity reached the max memory limit in the past seven days, split into three-minute buckets.</span></span> |
+| CPU ที่มีความจุเพื่อใช้ให้เกิดประโยชน์สูงสุด | ความจุของจำนวนครั้งที่ CPU กำหนดสูงสุดเกิน 80% ของค่าเกณฑ์ใน 7 วันที่ผ่านมา |
+| จำนวนครั้งของความจุใน CPU ที่สามารถใช้ให้เกิดประโยชน์สูงสุด | จำนวนครั้งที่ CPU ถูกตั้งชื่อความจุเกิน 80% ของค่าเกณฑ์ใน 7 วันที่ผ่านมา | 
+| ความจุของหน่วยความจำมากสุดที่สามารถใช้งานได้สูงสุด | ถึงขีดจำกัดของจำนวนครั้งความจุในหน่วยความจำสูงสุดในช่วง 7 วันที่ผ่านมา แบ่งออกเป็นกลุ่มสามนาที  |
+| จำนวนครั้งของหน่วยความจำสูงสุดที่สามารถใช้งานได้| จำนวนครั้งของความจุที่ถูกตั้งชื่อในหน่วยความจำสูงสุดถึงขีดจำกัดในช่วง7 วันที่ผ่านมา แบ่งออกเป็นกลุ่มสามนาที |
 |||
 
-#### <a name="dataset-summary"></a><span data-ttu-id="a3109-159">ข้อมูลสรุปของชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-159">Dataset Summary</span></span>
+#### <a name="dataset-summary"></a>ข้อมูลสรุปของชุดข้อมูล
 
-| <span data-ttu-id="a3109-160">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-160">Metric</span></span> | <span data-ttu-id="a3109-161">คำอธิบาย</span><span class="sxs-lookup"><span data-stu-id="a3109-161">Description</span></span> |
+| เมตริก | คำอธิบาย |
 | --- | --- |
-| <span data-ttu-id="a3109-162">ชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-162">Datasets</span></span> | <span data-ttu-id="a3109-163">จำนวนรวมของชุดข้อมูลในพื้นที่ทำงานทั้งหมดในความจุของคุณ</span><span class="sxs-lookup"><span data-stu-id="a3109-163">Total number of datasets across all workspaces in your capacities.</span></span>|
-| <span data-ttu-id="a3109-164">ขนาดเฉลี่ยของชุดข้อมูล (MB)</span><span class="sxs-lookup"><span data-stu-id="a3109-164">Datasets Average Size (MB)</span></span> | <span data-ttu-id="a3109-165">ขนาดเฉลี่ยของชุดข้อมูลของพื้นที่ทำงานทั้งหมดในความจุของคุณ</span><span class="sxs-lookup"><span data-stu-id="a3109-165">Average size of datasets across all workspaces in your capacities.</span></span>|  
-| <span data-ttu-id="a3109-166">จำนวนครั้งของชุดข้อมูลเฉลี่ยที่ถูกโหลด</span><span class="sxs-lookup"><span data-stu-id="a3109-166">Datasets Average Loaded Count</span></span> | <span data-ttu-id="a3109-167">จำนวนเฉลี่ยของชุดข้อมูลที่โหลดลงในหน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="a3109-167">Average count of datasets loaded into memory.</span></span> |  
-| <span data-ttu-id="a3109-168">ชุดข้อมูล - ชุดข้อมูลที่ใช้งานโดยเฉลี่ย (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-168">Datasets - Average Active Dataset (%)</span></span>| <span data-ttu-id="a3109-169">ชุดข้อมูลที่ใช้งานโดยเฉลี่ยใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-169">Average active datasets in the past seven days.</span></span> <span data-ttu-id="a3109-170">ชุดข้อมูลถูกกำหนดเป็นใช้งานอยู่ถ้าผู้ใช้มีการโต้ตอบบนวิชวลภายในสามนาทีที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-170">A dataset is defined as active if the user has interacted on the visuals with the past three minutes.</span></span> |
-| <span data-ttu-id="a3109-171">CPU - ชุดข้อมูลสูงสุด (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-171">CPU - Datasets Max (%)</span></span>| <span data-ttu-id="a3109-172">ปริมาณการใช้ CPU สูงสุดตามปริมาณงานชุดข้อมูลใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-172">Max CPU consumption by dataset workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-173">CPU - ชุดข้อมูลโดยเฉลี่ย (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-173">CPU - Datasets Average (%)</span></span>| <span data-ttu-id="a3109-174">ปริมาณการใช้ CPU โดยเฉลี่ยตามปริมาณงานชุดข้อมูลใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-174">Average CPU consumption by dataset workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-175">หน่วยความจำ - ชุดข้อมูลโดยเฉลี่ย (GB)</span><span class="sxs-lookup"><span data-stu-id="a3109-175">Memory - Datasets Average (GB)</span></span> | <span data-ttu-id="a3109-176">ปริมาณการใช้หน่วยความจำโดยเฉลี่ยตามปริมาณงานชุดข้อมูลใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-176">Average memory consumption by dataset workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-177">หน่วยความจำ - ชุดข้อมูลสูงสุด (GB)</span><span class="sxs-lookup"><span data-stu-id="a3109-177">Memory - Datasets Max (GB)</span></span> | <span data-ttu-id="a3109-178">ปริมาณการใช้หน่วยความจำสูงสุดตามปริมาณงานชุดข้อมูลใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-178">Max memory consumption by dataset workload in the past seven days.</span></span>|
-| <span data-ttu-id="a3109-179">การจัดชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-179">Datasets Evictions</span></span> | <span data-ttu-id="a3109-180">จำนวนรวมของชุดข้อมูลที่มีการจัดเรียงเนื่องจากหน่วยความจำไม่เพียงพอ</span><span class="sxs-lookup"><span data-stu-id="a3109-180">Total number of datasets evicted due to memory pressure.</span></span> |
-| <span data-ttu-id="a3109-181">คิวรีโดยตรง/จำนวนครั้งที่ใช้งานได้สูงสุดแบบไลฟ์สด</span><span class="sxs-lookup"><span data-stu-id="a3109-181">DirectQuery/Live High Utilization Count</span></span>| <span data-ttu-id="a3109-182">จำนวนครั้งที่มีคิวรีโดยตรง/การเชื่อมต่อแบบไลฟ์สดเกิน 80% ของค่าเกณฑ์ใน 7 วันที่ผ่านมา แยกเป็นกลุ่มสามนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-182">Number of times DirectQuery/Live connections exceeded 80% of the thresholds in the past seven days, split into three-minute buckets.</span></span> |
-| <span data-ttu-id="a3109-183">คิวรีโดยตรง/จำนวนครั้งที่ใช้งานได้มากที่สุดแบบไลฟ์สด</span><span class="sxs-lookup"><span data-stu-id="a3109-183">DirectQuery/Live Max Utilization Count</span></span>| <span data-ttu-id="a3109-184">เวลาส่วนใหญ่ที่มีคิวรีโดยตรง/การเชื่อมต่อแบบไลฟ์สดเกิน 80% ในช่วง 7 วันที่ผ่านมา แยกเป็นกลุ่มหนึ่งชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-184">Most times the DirectQuery/Live connections exceeded 80% in the past seven days, split into one-hour buckets.</span></span> |
-| <span data-ttu-id="a3109-185">คิวรีโดยตรง/การใช้งานได้สูงสุดและมากสุดแบบสด</span><span class="sxs-lookup"><span data-stu-id="a3109-185">DirectQuery/Live Max High Utilization</span></span> | <span data-ttu-id="a3109-186">จำนวนครั้งสูงสุดที่มีคิวรีโดยตรง/การเชื่อมต่อแบบไลฟ์สดเกิน 80% ของค่าเกณฑ์ใน 7 วันที่ผ่านมา แยกเป็นกลุ่มสามนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-186">Maximum number of times DirectQuery/Live connections exceeded 80% of the thresholds in the past seven days, split into three-minute buckets.</span></span>|
-| <span data-ttu-id="a3109-187">คิวรีโดยตรง/เวลาที่เกิดขึ้นสูงสุดแบบไลฟ์สด</span><span class="sxs-lookup"><span data-stu-id="a3109-187">DirectQuery/Live Max Occurred Time</span></span> | <span data-ttu-id="a3109-188">เวลา UTC ที่มีการเชื่อมต่อ DirectQuery/แบบสดเกิน 80% มากที่สุดในหนึ่งชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-188">Time in UTC that DirectQuery/Live connections exceeded 80% the most times in an hour.</span></span> |
-| <span data-ttu-id="a3109-189">การรีเฟรชทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-189">Refreshes Total</span></span> | <span data-ttu-id="a3109-190">จำนวนทั้งหมดของการรีเฟรชในช่วง 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-190">Total number of refreshes in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-191">ความน่าเชื่อถือของการรีเฟรช (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-191">Refresh Reliability (%)</span></span> | <span data-ttu-id="a3109-192">จำนวนครั้งที่รีเฟรชสำเร็จหารด้วยจำนวนทั้งหมดของการรีเฟรชใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-192">Number of successful refreshes divided by the total number of refreshes in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-193">รีเฟรชระยะเวลาเฉลี่ย (นาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-193">Refreshes Average Duration (Minutes)</span></span> | <span data-ttu-id="a3109-194">ระยะเวลาการรีเฟรชเสร็จสมบูรณ์โดยเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-194">Average amount of time to complete refresh.</span></span> |
-| <span data-ttu-id="a3109-195">รีเฟรชเวลารอเฉลี่ย (นาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-195">Refreshes Average Wait Time (Minutes)</span></span>| <span data-ttu-id="a3109-196">ระยะเวลาก่อนที่เริ่มการรีเฟรชโดยเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-196">Average amount of time before starting refresh.</span></span> |
-| <span data-ttu-id="a3109-197">ผลรวมคิวรี</span><span class="sxs-lookup"><span data-stu-id="a3109-197">Queries Total</span></span> |  <span data-ttu-id="a3109-198">จำนวนรวมของคิวรีทั้งหมดที่เรียกใช้ในช่วง 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-198">Total number of queries run in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-199">จำนวนรวมรอคิวรี</span><span class="sxs-lookup"><span data-stu-id="a3109-199">Queries Total Wait Count</span></span> | <span data-ttu-id="a3109-200">จำนวนคิวรีที่มีการรอก่อนที่เริ่มดำเนินการทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-200">Total number of queries that had to wait before being executed.</span></span> |
-| <span data-ttu-id="a3109-201">ระยะเวลาคิวรีเฉลี่ย (มิลลิวินาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-201">Queries Average Duration (MS)</span></span> | <span data-ttu-id="a3109-202">เวลาในการทำคิวรีให้สมบูรณ์โดยเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-202">Average time taken to complete queries.</span></span> |
-| <span data-ttu-id="a3109-203">เวลารอคิวรีเฉลี่ย (มิลลิวินาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-203">Queries Average Wait Time (MS)</span></span> | <span data-ttu-id="a3109-204">ระยะเวลารอคิวรีในระบบแหล่งข้อมูลเฉลี่ยก่อนที่เริ่มดำเนินการ</span><span class="sxs-lookup"><span data-stu-id="a3109-204">Average time queries waited on system resources before being executed.</span></span> |
+| ชุดข้อมูล | จำนวนรวมของชุดข้อมูลในพื้นที่ทำงานทั้งหมดในความจุของคุณ|
+| ขนาดเฉลี่ยของชุดข้อมูล (MB) | ขนาดเฉลี่ยของชุดข้อมูลของพื้นที่ทำงานทั้งหมดในความจุของคุณ|  
+| จำนวนครั้งของชุดข้อมูลเฉลี่ยที่ถูกโหลด | จำนวนเฉลี่ยของชุดข้อมูลที่โหลดลงในหน่วยความจำ |  
+| ชุดข้อมูล - ชุดข้อมูลที่ใช้งานโดยเฉลี่ย (%)| ชุดข้อมูลที่ใช้งานโดยเฉลี่ยใน 7 วันที่ผ่านมา ชุดข้อมูลถูกกำหนดเป็นใช้งานอยู่ถ้าผู้ใช้มีการโต้ตอบบนวิชวลภายในสามนาทีที่ผ่านมา |
+| CPU - ชุดข้อมูลสูงสุด (%)| ปริมาณการใช้ CPU สูงสุดตามปริมาณงานชุดข้อมูลใน 7 วันที่ผ่านมา |
+| CPU - ชุดข้อมูลโดยเฉลี่ย (%)| ปริมาณการใช้ CPU โดยเฉลี่ยตามปริมาณงานชุดข้อมูลใน 7 วันที่ผ่านมา |
+| หน่วยความจำ - ชุดข้อมูลโดยเฉลี่ย (GB) | ปริมาณการใช้หน่วยความจำโดยเฉลี่ยตามปริมาณงานชุดข้อมูลใน 7 วันที่ผ่านมา |
+| หน่วยความจำ - ชุดข้อมูลสูงสุด (GB) | ปริมาณการใช้หน่วยความจำสูงสุดตามปริมาณงานชุดข้อมูลใน 7 วันที่ผ่านมา|
+| การจัดชุดข้อมูล | จำนวนรวมของชุดข้อมูลที่มีการจัดเรียงเนื่องจากหน่วยความจำไม่เพียงพอ |
+| คิวรีโดยตรง/จำนวนครั้งที่ใช้งานได้สูงสุดแบบไลฟ์สด| จำนวนครั้งที่มีคิวรีโดยตรง/การเชื่อมต่อแบบไลฟ์สดเกิน 80% ของค่าเกณฑ์ใน 7 วันที่ผ่านมา แยกเป็นกลุ่มสามนาที |
+| คิวรีโดยตรง/จำนวนครั้งที่ใช้งานได้มากที่สุดแบบไลฟ์สด| เวลาส่วนใหญ่ที่มีคิวรีโดยตรง/การเชื่อมต่อแบบไลฟ์สดเกิน 80% ในช่วง 7 วันที่ผ่านมา แยกเป็นกลุ่มหนึ่งชั่วโมง |
+| คิวรีโดยตรง/การใช้งานได้สูงสุดและมากสุดแบบสด | จำนวนครั้งสูงสุดที่มีคิวรีโดยตรง/การเชื่อมต่อแบบไลฟ์สดเกิน 80% ของค่าเกณฑ์ใน 7 วันที่ผ่านมา แยกเป็นกลุ่มสามนาที|
+| คิวรีโดยตรง/เวลาที่เกิดขึ้นสูงสุดแบบไลฟ์สด | เวลา UTC ที่มีการเชื่อมต่อ DirectQuery/แบบสดเกิน 80% มากที่สุดในหนึ่งชั่วโมง |
+| การรีเฟรชทั้งหมด | จำนวนทั้งหมดของการรีเฟรชในช่วง 7 วันที่ผ่านมา |
+| ความน่าเชื่อถือของการรีเฟรช (%) | จำนวนครั้งที่รีเฟรชสำเร็จหารด้วยจำนวนทั้งหมดของการรีเฟรชใน 7 วันที่ผ่านมา |
+| รีเฟรชระยะเวลาเฉลี่ย (นาที) | ระยะเวลาการรีเฟรชเสร็จสมบูรณ์โดยเฉลี่ย |
+| รีเฟรชเวลารอเฉลี่ย (นาที)| ระยะเวลาก่อนที่เริ่มการรีเฟรชโดยเฉลี่ย |
+| ผลรวมคิวรี |  จำนวนรวมของคิวรีทั้งหมดที่เรียกใช้ในช่วง 7 วันที่ผ่านมา |
+| จำนวนรวมรอคิวรี | จำนวนคิวรีที่มีการรอก่อนที่เริ่มดำเนินการทั้งหมด |
+| ระยะเวลาคิวรีเฉลี่ย (มิลลิวินาที) | เวลาในการทำคิวรีให้สมบูรณ์โดยเฉลี่ย |
+| เวลารอคิวรีเฉลี่ย (มิลลิวินาที) | ระยะเวลารอคิวรีในระบบแหล่งข้อมูลเฉลี่ยก่อนที่เริ่มดำเนินการ |
 |||
 
-#### <a name="dataflow-summary"></a><span data-ttu-id="a3109-205">ข้อมูลสรุปของกระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-205">Dataflow Summary</span></span>
+#### <a name="dataflow-summary"></a>ข้อมูลสรุปของกระแสข้อมูล
 
-| <span data-ttu-id="a3109-206">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-206">Metric</span></span> | <span data-ttu-id="a3109-207">คำอธิบาย</span><span class="sxs-lookup"><span data-stu-id="a3109-207">Description</span></span> |
+| เมตริก | คำอธิบาย |
 | --- | --- |
-| <span data-ttu-id="a3109-208">กระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-208">Dataflows</span></span> |  <span data-ttu-id="a3109-209">จำนวนรวมของกระแสข้อมูลในพื้นที่ทำงานทั้งหมดในความจุของคุณ</span><span class="sxs-lookup"><span data-stu-id="a3109-209">Total number of dataflows across all workspaces in your capacities.</span></span>|
-| <span data-ttu-id="a3109-210">การรีเฟรชทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-210">Refreshes Total</span></span> | <span data-ttu-id="a3109-211">จำนวนทั้งหมดของการรีเฟรชในช่วง 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-211">Total number of refreshes in the past seven days.</span></span>|  
-| <span data-ttu-id="a3109-212">รีเฟรชระยะเวลาเฉลี่ย (นาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-212">Refreshes Average Duration (Minutes)</span></span> | <span data-ttu-id="a3109-213">ระยะเวลาเฉลี่ยที่ใช้ในการรีเฟรชให้สมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="a3109-213">The time taken to complete the refresh.</span></span> |
-| <span data-ttu-id="a3109-214">รีเฟรชเวลารอเฉลี่ย (นาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-214">Refreshes Average Wait Times (Minutes)</span></span> | <span data-ttu-id="a3109-215">ช่วงห่างระหว่างเวลาที่กำหนดไว้และเริ่มต้นจริงของการรีเฟรช</span><span class="sxs-lookup"><span data-stu-id="a3109-215">The lag between the scheduled time and actual start of the refresh.</span></span>|
-| <span data-ttu-id="a3109-216">CPU - กระแสข้อมูลสูงสุด (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-216">CPU - Dataflows Max (%)</span></span> | <span data-ttu-id="a3109-217">ปริมาณการใช้ CPU สูงสุดตามกระแสข้อมูลของปริมาณงานในชุดข้อมูลใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-217">Max CPU consumption by dataflows workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-218">CPU - กระแสข้อมูลโดยเฉลี่ย (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-218">CPU - Dataflows Average (%)</span></span> | <span data-ttu-id="a3109-219">ปริมาณการใช้ CPU โดยตามกระแสข้อมูลของปริมาณงานในชุดข้อมูลใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-219">Average CPU consumption by dataflows workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-220">หน่วยความจำ - กระแสข้อมูลสูงสุด (GB)</span><span class="sxs-lookup"><span data-stu-id="a3109-220">Memory - Dataflows Max (GB)</span></span> | <span data-ttu-id="a3109-221">ปริมาณหน่วยความจำสูงสุดตามกระแสข้อมูลของปริมาณงานในชุดข้อมูลใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-221">Max memory consumption by dataflows workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-222">หน่วยความจำ - กระแสข้อมูลโดยเฉลี่ย (GB)</span><span class="sxs-lookup"><span data-stu-id="a3109-222">Memory - Dataflows Average (GB)</span></span> | <span data-ttu-id="a3109-223">ปริมาณหน่วยความจำโดยเฉลี่ยตามกระแสข้อมูลของปริมาณงานในชุดข้อมูลใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-223">Average memory consumption by dataflows workload in the past seven days.</span></span> |
+| กระแสข้อมูล |  จำนวนรวมของกระแสข้อมูลในพื้นที่ทำงานทั้งหมดในความจุของคุณ|
+| การรีเฟรชทั้งหมด | จำนวนทั้งหมดของการรีเฟรชในช่วง 7 วันที่ผ่านมา|  
+| รีเฟรชระยะเวลาเฉลี่ย (นาที) | ระยะเวลาเฉลี่ยที่ใช้ในการรีเฟรชให้สมบูรณ์ |
+| รีเฟรชเวลารอเฉลี่ย (นาที) | ช่วงห่างระหว่างเวลาที่กำหนดไว้และเริ่มต้นจริงของการรีเฟรช|
+| CPU - กระแสข้อมูลสูงสุด (%) | ปริมาณการใช้ CPU สูงสุดตามกระแสข้อมูลของปริมาณงานในชุดข้อมูลใน 7 วันที่ผ่านมา |
+| CPU - กระแสข้อมูลโดยเฉลี่ย (%) | ปริมาณการใช้ CPU โดยตามกระแสข้อมูลของปริมาณงานในชุดข้อมูลใน 7 วันที่ผ่านมา |
+| หน่วยความจำ - กระแสข้อมูลสูงสุด (GB) | ปริมาณหน่วยความจำสูงสุดตามกระแสข้อมูลของปริมาณงานในชุดข้อมูลใน 7 วันที่ผ่านมา |
+| หน่วยความจำ - กระแสข้อมูลโดยเฉลี่ย (GB) | ปริมาณหน่วยความจำโดยเฉลี่ยตามกระแสข้อมูลของปริมาณงานในชุดข้อมูลใน 7 วันที่ผ่านมา |
 |||
 
-#### <a name="paginated-report-summary"></a><span data-ttu-id="a3109-224">สรุปรายงานแบบแบ่งหน้า</span><span class="sxs-lookup"><span data-stu-id="a3109-224">Paginated Report Summary</span></span>
+#### <a name="paginated-report-summary"></a>สรุปรายงานแบบแบ่งหน้า
 
-| <span data-ttu-id="a3109-225">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-225">Metric</span></span> | <span data-ttu-id="a3109-226">คำอธิบาย</span><span class="sxs-lookup"><span data-stu-id="a3109-226">Description</span></span> |
+| เมตริก | คำอธิบาย |
 | --- | --- |
-| <span data-ttu-id="a3109-227">รายงานที่มีการแบ่งหน้า</span><span class="sxs-lookup"><span data-stu-id="a3109-227">Paginated Reports</span></span> |  <span data-ttu-id="a3109-228">จำนวนรวมของรายงานแบบแบ่งหน้าในพื้นที่ทำงานทั้งหมดในความจุของคุณ</span><span class="sxs-lookup"><span data-stu-id="a3109-228">Total number of paginated reports across all workspaces in your capacities.</span></span> |
-| <span data-ttu-id="a3109-229">มุมมองทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-229">Views Total</span></span> | <span data-ttu-id="a3109-230">จำนวนครั้งที่มีผู้ใช้ดูรายงานทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-230">Total number of times that all reports have been viewed by users.</span></span> | 
-| <span data-ttu-id="a3109-231">แถวทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-231">Rows Total</span></span> | <span data-ttu-id="a3109-232">จำนวนแถวทั้งหมดของข้อมูลในรายงานทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-232">Total number of rows of data in all reports.</span></span>|
-| <span data-ttu-id="a3109-233">เวลารวม</span><span class="sxs-lookup"><span data-stu-id="a3109-233">Total Time</span></span> | <span data-ttu-id="a3109-234">เวลาทั้งหมดที่ใช้สำหรับทุกขั้นตอน (เรียกข้อมูล ประมวลผล และแสดงผล) ของรายงานทั้งหมด หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-234">Total time it takes for all phases (data retrieval, processing, and rendering) of all reports, in milliseconds.</span></span> |
-| <span data-ttu-id="a3109-235">CPU - รายงานที่มีการแบ่งหน้าสูงสุด (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-235">CPU - Paginated Reports Max (%)</span></span> | <span data-ttu-id="a3109-236">ปริมาณการใช้ CPU สูงสุดตามชุดข้อมูลรายงานการแบ่งหน้าใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-236">Maximum CPU consumption by paginated report workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-237">CPU - รายงานที่มีการแบ่งหน้าโดยเฉลี่ย (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-237">CPU - Paginated Reports Average (%)</span></span> | <span data-ttu-id="a3109-238">ปริมาณการใช้ CPU โดยเฉลี่ยตามชุดข้อมูลรายงานการแบ่งหน้าใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-238">Average CPU consumption by paginated report workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-239">หน่วยความจำ - รายงานที่มีการแบ่งหน้าสูงสุด (GB)</span><span class="sxs-lookup"><span data-stu-id="a3109-239">Memory - Paginated Reports Max (GB)</span></span> | <span data-ttu-id="a3109-240">ปริมาณการใช้หน่วยความจำสูงสุดตามชุดข้อมูลรายงานการแบ่งหน้าใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-240">Maximum memory consumption by paginated report workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-241">หน่วยความจำ - รายงานที่มีการแบ่งหน้าโดยเฉลี่ย (GB)</span><span class="sxs-lookup"><span data-stu-id="a3109-241">Memory - Paginated Reports Average (GB)</span></span> | <span data-ttu-id="a3109-242">ปริมาณการใช้หน่วยความจำโดยเฉลี่ยตามชุดข้อมูลรายงานการแบ่งหน้าใน 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-242">Average memory consumption by paginated report workload in the past seven days.</span></span> |
+| รายงานที่มีการแบ่งหน้า |  จำนวนรวมของรายงานแบบแบ่งหน้าในพื้นที่ทำงานทั้งหมดในความจุของคุณ |
+| มุมมองทั้งหมด | จำนวนครั้งที่มีผู้ใช้ดูรายงานทั้งหมด | 
+| แถวทั้งหมด | จำนวนแถวทั้งหมดของข้อมูลในรายงานทั้งหมด|
+| เวลารวม | เวลาทั้งหมดที่ใช้สำหรับทุกขั้นตอน (เรียกข้อมูล ประมวลผล และแสดงผล) ของรายงานทั้งหมด หน่วยเป็นมิลลิวินาที |
+| CPU - รายงานที่มีการแบ่งหน้าสูงสุด (%) | ปริมาณการใช้ CPU สูงสุดตามชุดข้อมูลรายงานการแบ่งหน้าใน 7 วันที่ผ่านมา |
+| CPU - รายงานที่มีการแบ่งหน้าโดยเฉลี่ย (%) | ปริมาณการใช้ CPU โดยเฉลี่ยตามชุดข้อมูลรายงานการแบ่งหน้าใน 7 วันที่ผ่านมา |
+| หน่วยความจำ - รายงานที่มีการแบ่งหน้าสูงสุด (GB) | ปริมาณการใช้หน่วยความจำสูงสุดตามชุดข้อมูลรายงานการแบ่งหน้าใน 7 วันที่ผ่านมา |
+| หน่วยความจำ - รายงานที่มีการแบ่งหน้าโดยเฉลี่ย (GB) | ปริมาณการใช้หน่วยความจำโดยเฉลี่ยตามชุดข้อมูลรายงานการแบ่งหน้าใน 7 วันที่ผ่านมา |
 |||
 
-#### <a name="ai-summary"></a><span data-ttu-id="a3109-243">ข้อมูลสรุป AI</span><span class="sxs-lookup"><span data-stu-id="a3109-243">AI Summary</span></span>
+#### <a name="ai-summary"></a>ข้อมูลสรุป AI
 
-| <span data-ttu-id="a3109-244">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-244">Metric</span></span> | <span data-ttu-id="a3109-245">คำอธิบาย</span><span class="sxs-lookup"><span data-stu-id="a3109-245">Description</span></span> |
+| เมตริก | คำอธิบาย |
 | --- | --- |
-| <span data-ttu-id="a3109-246">การดำเนินการของฟังก์ชัน AI</span><span class="sxs-lookup"><span data-stu-id="a3109-246">AI Function Execution</span></span> | <span data-ttu-id="a3109-247">จำนวนทั้งหมดที่มีการดำเนินการในเจ็ดวันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-247">Total number of executions in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-248">ความน่าเชื่อถือของการดำเนินการของฟังก์ชัน AI (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-248">AI Function Execution Reliability (%)</span></span> | <span data-ttu-id="a3109-249">จำนวนครั้งที่ดำเนินการรีเฟรชสำเร็จหารด้วยจำนวนทั้งหมดของการรีเฟรชในเจ็ดวันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-249">Number of successful executions divided by the total number of executions in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-250">CPU สูงสุด (%)</span><span class="sxs-lookup"><span data-stu-id="a3109-250">CPU Max (%)</span></span>| <span data-ttu-id="a3109-251">ปริมาณการใช้ CPU สูงสุดตามปริมาณงานของ AI ในเจ็ดวันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-251">Max CPU consumption by the AI workload in the past seven days.</span></span> |
-| <span data-ttu-id="a3109-252">หน่วยความจำสูงสุด (GB)</span><span class="sxs-lookup"><span data-stu-id="a3109-252">Memory Max (GB)</span></span> | <span data-ttu-id="a3109-253">ปริมาณการใช้หน่วยความจำสูงสุดตามปริมาณงานของ AI ในเจ็ดวันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-253">Max memory consumption by the AI workload in the past seven days.</span></span>|
-| <span data-ttu-id="a3109-254">เวลารอสูงสุดสำหรับการดำเนินการของฟังก์ชัน AI (MS)</span><span class="sxs-lookup"><span data-stu-id="a3109-254">AI Function Execution Max Wait Time (MS)</span></span> | <span data-ttu-id="a3109-255">รระยะเวลาสูงสุดก่อนที่เริ่มการดำเนินการ</span><span class="sxs-lookup"><span data-stu-id="a3109-255">Maximum amount of time before starting execution.</span></span> |
-| <span data-ttu-id="a3109-256">เวลารอเฉลี่ยสำหรับการดำเนินการของฟังก์ชัน AI (MS)</span><span class="sxs-lookup"><span data-stu-id="a3109-256">AI Function Execution Average Wait Time (MS)</span></span>| <span data-ttu-id="a3109-257">รระยะเวลาเฉลี่ยก่อนที่เริ่มการดำเนินการ</span><span class="sxs-lookup"><span data-stu-id="a3109-257">Average amount of time before starting execution.</span></span> |
-| <span data-ttu-id="a3109-258">ระยะเวลาสูงสุดสำหรับการดำเนินการของฟังก์ชัน AI (MS)</span><span class="sxs-lookup"><span data-stu-id="a3109-258">AI Function Execution Max Duration (MS)</span></span> | <span data-ttu-id="a3109-259">ระยะเวลาสูงสุดในการดำเนินการให้แล้วเสร็จ</span><span class="sxs-lookup"><span data-stu-id="a3109-259">Maximum amount of time to complete execution.</span></span> |
-| <span data-ttu-id="a3109-260">ระยะเวลาเฉลี่ยสำหรับการดำเนินการของฟังก์ชัน AI (MS)</span><span class="sxs-lookup"><span data-stu-id="a3109-260">AI Function Execution Average Duration (MS)</span></span>| <span data-ttu-id="a3109-261">ระยะเวลาเฉลี่ยในการดำเนินการให้แล้วเสร็จ</span><span class="sxs-lookup"><span data-stu-id="a3109-261">Average amount of time to complete execution.</span></span> |
+| การดำเนินการของฟังก์ชัน AI | จำนวนทั้งหมดที่มีการดำเนินการในเจ็ดวันที่ผ่านมา |
+| ความน่าเชื่อถือของการดำเนินการของฟังก์ชัน AI (%) | จำนวนครั้งที่ดำเนินการรีเฟรชสำเร็จหารด้วยจำนวนทั้งหมดของการรีเฟรชในเจ็ดวันที่ผ่านมา |
+| CPU สูงสุด (%)| ปริมาณการใช้ CPU สูงสุดตามปริมาณงานของ AI ในเจ็ดวันที่ผ่านมา |
+| หน่วยความจำสูงสุด (GB) | ปริมาณการใช้หน่วยความจำสูงสุดตามปริมาณงานของ AI ในเจ็ดวันที่ผ่านมา|
+| เวลารอสูงสุดสำหรับการดำเนินการของฟังก์ชัน AI (MS) | รระยะเวลาสูงสุดก่อนที่เริ่มการดำเนินการ |
+| เวลารอเฉลี่ยสำหรับการดำเนินการของฟังก์ชัน AI (MS)| รระยะเวลาเฉลี่ยก่อนที่เริ่มการดำเนินการ |
+| ระยะเวลาสูงสุดสำหรับการดำเนินการของฟังก์ชัน AI (MS) | ระยะเวลาสูงสุดในการดำเนินการให้แล้วเสร็จ |
+| ระยะเวลาเฉลี่ยสำหรับการดำเนินการของฟังก์ชัน AI (MS)| ระยะเวลาเฉลี่ยในการดำเนินการให้แล้วเสร็จ |
 | | |
 
-### <a name="reports"></a><span data-ttu-id="a3109-262">รายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-262">Reports</span></span>
+### <a name="reports"></a>รายงาน
 
-<span data-ttu-id="a3109-263">รายงานเพิ่มเติมเกี่ยวกับรายละเอียดเมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-263">Reports provide more detailed metrics.</span></span> <span data-ttu-id="a3109-264">เมื่อต้องดูรายงานสำหรับความจุที่คุณเป็นผู้ดูแลระบบ ใน **รายงาน** คลิก **Power BI Premium ความจุเมตริก**</span><span class="sxs-lookup"><span data-stu-id="a3109-264">To see reports for capacities for which you are an admin, in **Reports**, click **Power BI Premium Capacity Metrics**.</span></span> <span data-ttu-id="a3109-265">หรือจากแดชบอร์ดให้คลิกเซลล์เมตริกไปรายงานพื้นฐาน</span><span class="sxs-lookup"><span data-stu-id="a3109-265">Or, from the dashboard, click a metric cell to go to the underlying report.</span></span> 
+รายงานเพิ่มเติมเกี่ยวกับรายละเอียดเมตริก เมื่อต้องดูรายงานสำหรับความจุที่คุณเป็นผู้ดูแลระบบ ใน **รายงาน** คลิก **Power BI Premium ความจุเมตริก** หรือจากแดชบอร์ดให้คลิกเซลล์เมตริกไปรายงานพื้นฐาน 
 
-<span data-ttu-id="a3109-266">ที่ด้านล่างของรายงาน มีห้า *แท็บ* ได้แก่:</span><span class="sxs-lookup"><span data-stu-id="a3109-266">At the bottom of the report, there are five *tabs*:</span></span>
+ที่ด้านล่างของรายงาน มีห้า *แท็บ* ได้แก่:
 
-<span data-ttu-id="a3109-267">[**ชุดข้อมูล**](#datasets)- ให้การวัดสถานภาพของชุดข้อมูล Power BI ภายในความจุของคุณโดยละเอียด</span><span class="sxs-lookup"><span data-stu-id="a3109-267">[**Datasets**](#datasets) - Provides detailed metrics on the health of the Power BI datasets in your capacities.</span></span>
-<span data-ttu-id="a3109-268">[**รายงานแบบแบ่งหน้า**](#paginated-reports) - ให้การวัดสถานภาพของรายงานแบบแบ่งหน้าภายในความจุของคุณโดยละเอียด</span><span class="sxs-lookup"><span data-stu-id="a3109-268">[**Paginated Reports**](#paginated-reports) - Provides detailed metrics on the health of the paginated reports in your capacities.</span></span>
-<span data-ttu-id="a3109-269">[**กระแสข้อมูล**](#dataflows): ให้่การวัดการรีเฟรชสำหรับกระแสข้อมูลในความจุของคุณโดยละเอียด</span><span class="sxs-lookup"><span data-stu-id="a3109-269">[**Dataflows**](#dataflows) - Provides detailed refresh metrics for dataflows in your capacities.</span></span>
-<span data-ttu-id="a3109-270">[**AI**](#ai) - แสดงเมตริกโดยละเอียดเกี่ยวกับสถานภาพของฟังก์ชัน AI ที่ใช้ในความจุของคุณ</span><span class="sxs-lookup"><span data-stu-id="a3109-270">[**AI**](#ai) - Provides detailed metrics on the health of the AI functions used in your capacities.</span></span>
-<span data-ttu-id="a3109-271">[**การใช้ทรัพยากร**](#resource-consumption)- ให้การวัดความจุโดยรวม รวมทั้งหน่วยความจำและการใช้งาน CPU แบบสูงโดยละเอียด</span><span class="sxs-lookup"><span data-stu-id="a3109-271">[**Resource Consumption**](#resource-consumption) - Provides detailed resource metrics including memory and CPU high utilization.</span></span>
-<span data-ttu-id="a3109-272">[**รหัสและข้อมูล**](#ids-and-info): ชื่อ รหัส และเจ้าของของความจุ พื้นที่ทำงาน และปริมาณงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-272">[**IDs and Info**](#ids-and-info) - Names, IDs, and owners for capacities, workspaces, and workloads.</span></span>
+[**ชุดข้อมูล**](#datasets)- ให้การวัดสถานภาพของชุดข้อมูล Power BI ภายในความจุของคุณโดยละเอียด
+[**รายงานแบบแบ่งหน้า**](#paginated-reports) - ให้การวัดสถานภาพของรายงานแบบแบ่งหน้าภายในความจุของคุณโดยละเอียด
+[**กระแสข้อมูล**](#dataflows): ให้่การวัดการรีเฟรชสำหรับกระแสข้อมูลในความจุของคุณโดยละเอียด
+[**AI**](#ai) - แสดงเมตริกโดยละเอียดเกี่ยวกับสถานภาพของฟังก์ชัน AI ที่ใช้ในความจุของคุณ
+[**การใช้ทรัพยากร**](#resource-consumption)- ให้การวัดความจุโดยรวม รวมทั้งหน่วยความจำและการใช้งาน CPU แบบสูงโดยละเอียด
+[**รหัสและข้อมูล**](#ids-and-info): ชื่อ รหัส และเจ้าของของความจุ พื้นที่ทำงาน และปริมาณงาน
 
-<span data-ttu-id="a3109-273">แต่ละแท็บสามารถเปิดหน้ากรองเมทริกซ์ตามความจุและช่วงวันได้</span><span class="sxs-lookup"><span data-stu-id="a3109-273">Each tab opens a page where you can filter metrics by capacity and date range.</span></span> <span data-ttu-id="a3109-274">หากไม่ได้เลือกตัวกรอง รายงานตามค่าเริ่มต้นจะแสดงผลเมทริกซ์ของสัปดาห์ที่ผ่านมาสำหรับความจุทั้งหมดที่เป็นเมทริกซ์การรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-274">If no filters are selected, the report defaults to show the past week’s metrics for all capacities that are reporting metrics.</span></span> 
+แต่ละแท็บสามารถเปิดหน้ากรองเมทริกซ์ตามความจุและช่วงวันได้ หากไม่ได้เลือกตัวกรอง รายงานตามค่าเริ่มต้นจะแสดงผลเมทริกซ์ของสัปดาห์ที่ผ่านมาสำหรับความจุทั้งหมดที่เป็นเมทริกซ์การรายงาน 
 
-### <a name="datasets"></a><span data-ttu-id="a3109-275">ชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-275">Datasets</span></span>
+### <a name="datasets"></a>ชุดข้อมูล
 
-<span data-ttu-id="a3109-276">หน้าชุดข้อมูลมี *พื้นที่* อื่นซึ่งรวมถึง **รีเฟรช**, **ระยะเวลาคิวรี**, **รอคิวรี** และ **ชุดข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="a3109-276">The Datasets page has different *areas*, which include  **Refreshes**, **Query Durations**, **Query Waits**, and **Datasets**.</span></span> <span data-ttu-id="a3109-277">ใช้ปุ่มที่ด้านบนของแท็บหน้าเพื่อนำทางไปยังพื้นที่ต่าง ๆ</span><span class="sxs-lookup"><span data-stu-id="a3109-277">Use the buttons at the top of the page to navigate to different areas.</span></span>
+หน้าชุดข้อมูลมี *พื้นที่* อื่นซึ่งรวมถึง **รีเฟรช**, **ระยะเวลาคิวรี**, **รอคิวรี** และ **ชุดข้อมูล** ใช้ปุ่มที่ด้านบนของแท็บหน้าเพื่อนำทางไปยังพื้นที่ต่าง ๆ
 
-#### <a name="refreshes-area"></a><span data-ttu-id="a3109-278">ส่วนรีเฟรช</span><span class="sxs-lookup"><span data-stu-id="a3109-278">Refreshes area</span></span>
+#### <a name="refreshes-area"></a>ส่วนรีเฟรช
 
-| <span data-ttu-id="a3109-279">ส่วนรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-279">Report section</span></span> | <span data-ttu-id="a3109-280">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-280">Metrics</span></span> |
+| ส่วนรายงาน | เมตริก |
 | --- | --- |
-| <span data-ttu-id="a3109-281">รีเฟรช</span><span class="sxs-lookup"><span data-stu-id="a3109-281">Refreshes</span></span> |  <span data-ttu-id="a3109-282">จำนวนทั้งหมด: การรีเฟรชทั้งหมดสำหรับแต่ละชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-282">Total Count: Total refreshes for each dataset.</span></span><br>  <span data-ttu-id="a3109-283">ความน่าเชื่อถือ: เปอร์เซ็นต์ของการรีเฟรชที่เสร็จสมบูรณ์สำหรับแต่ละชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-283">Reliability: The percentage of refreshes that completed for each dataset.</span></span><br>  <span data-ttu-id="a3109-284">เวลารอเฉลี่ย: การหน่วงเวลาเฉลี่ยระหว่างเวลาที่กำหนดไว้และเวลาเริ่มต้นของการดำเนินการ หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-284">Avg Wait Time: The average lag between the scheduled time and start of a refresh for the dataset, in minutes.</span></span><br>  <span data-ttu-id="a3109-285">เวลารอสูงสุด: เวลารอสูงสุดสำหรับชุดข้อมูล หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-285">Max Wait Time: The maximum wait time for the dataset, in minutes.</span></span><br>  <span data-ttu-id="a3109-286">ระยะเวลาเฉลี่ย: ระยะเวลาเฉลี่ยของการรีเฟรชสำหรับชุดข้อมูล เป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-286">Avg Duration: The average duration of refresh for the dataset, in minutes.</span></span><br>  <span data-ttu-id="a3109-287">ระยะเวลาสูงสุด: ระยะเวลาของการรีเฟรชที่ทำงานนานที่สุดสำหรับชุดข้อมูล หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-287">Max Duration: The duration of the longest-running refresh for the dataset, in minutes.</span></span> |
-| <span data-ttu-id="a3109-288">ชุดข้อมูล 5 ชุดแรกเรียงตามระยะเวลาโดยเฉลี่ย (นาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-288">Top 5 Datasets by Average Duration (minutes)</span></span> |  <span data-ttu-id="a3109-289">ชุดข้อมูลห้าชุดที่มีระยะเวลารีเฟรชเฉลี่ยนานที่สุด หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-289">The five datasets with the longest average refresh duration, in minutes.</span></span> |
-| <span data-ttu-id="a3109-290">ชุดข้อมูล 5 ชุดแรกเรียงตามระยะการรอโดยเฉลี่ย (นาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-290">Top 5 Datasets by Average Wait Time (minutes)</span></span> |  <span data-ttu-id="a3109-291">ชุดข้อมูลห้าชุดที่มีเวลารอเฉลี่ยนานที่สุด หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-291">The five datasets with the longest average refresh wait time,  in minutes.</span></span> |
-| <span data-ttu-id="a3109-292">จำนวนการรีเฟรชรายชั่วโมงและปริมาณการใช้หน่วยความจำ (GB)</span><span class="sxs-lookup"><span data-stu-id="a3109-292">Hourly Refresh Count and Memory Consumption (GB)</span></span> |  <span data-ttu-id="a3109-293">ความสำเร็จ ความล้มเหลว และปริมาณการใช้หน่วยความจำ ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-293">Successes, failures, and memory consumption, split into one-hour buckets, reported in UTC time.</span></span> |
-| <span data-ttu-id="a3109-294">เวลารอการรีเฟรชเฉลี่ยรายชั่วโมง (นาที)</span><span class="sxs-lookup"><span data-stu-id="a3109-294">Hourly Average Refresh Wait Times (minutes)</span></span> |  <span data-ttu-id="a3109-295">เวลารอการรีเฟรชเฉลี่ยซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-295">The average refresh wait time, split into one-hour buckets, reported in UTC time.</span></span> <span data-ttu-id="a3109-296">เวลารอการรีเฟรชสูงหลายๆ ครั้งแสดงว่าความจุกำลังทำงานอย่างหนัก</span><span class="sxs-lookup"><span data-stu-id="a3109-296">Multiple spikes with high refresh wait times are indicative of the capacity running hot.</span></span> |
+| รีเฟรช |  จำนวนทั้งหมด: การรีเฟรชทั้งหมดสำหรับแต่ละชุดข้อมูล<br>  ความน่าเชื่อถือ: เปอร์เซ็นต์ของการรีเฟรชที่เสร็จสมบูรณ์สำหรับแต่ละชุดข้อมูล<br>  เวลารอเฉลี่ย: การหน่วงเวลาเฉลี่ยระหว่างเวลาที่กำหนดไว้และเวลาเริ่มต้นของการดำเนินการ หน่วยเป็นนาที<br>  เวลารอสูงสุด: เวลารอสูงสุดสำหรับชุดข้อมูล หน่วยเป็นนาที<br>  ระยะเวลาเฉลี่ย: ระยะเวลาเฉลี่ยของการรีเฟรชสำหรับชุดข้อมูล เป็นนาที<br>  ระยะเวลาสูงสุด: ระยะเวลาของการรีเฟรชที่ทำงานนานที่สุดสำหรับชุดข้อมูล หน่วยเป็นนาที |
+| ชุดข้อมูล 5 ชุดแรกเรียงตามระยะเวลาโดยเฉลี่ย (นาที) |  ชุดข้อมูลห้าชุดที่มีระยะเวลารีเฟรชเฉลี่ยนานที่สุด หน่วยเป็นนาที |
+| ชุดข้อมูล 5 ชุดแรกเรียงตามระยะการรอโดยเฉลี่ย (นาที) |  ชุดข้อมูลห้าชุดที่มีเวลารอเฉลี่ยนานที่สุด หน่วยเป็นนาที |
+| จำนวนการรีเฟรชรายชั่วโมงและปริมาณการใช้หน่วยความจำ (GB) |  ความสำเร็จ ความล้มเหลว และปริมาณการใช้หน่วยความจำ ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
+| เวลารอการรีเฟรชเฉลี่ยรายชั่วโมง (นาที) |  เวลารอการรีเฟรชเฉลี่ยซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC เวลารอการรีเฟรชสูงหลายๆ ครั้งแสดงว่าความจุกำลังทำงานอย่างหนัก |
 |  |  |
 
-#### <a name="query-durations-area"></a><span data-ttu-id="a3109-297">ส่วนระยะเวลาคิวรี่</span><span class="sxs-lookup"><span data-stu-id="a3109-297">Query Durations area</span></span>
+#### <a name="query-durations-area"></a>ส่วนระยะเวลาคิวรี่
 
-| <span data-ttu-id="a3109-298">ส่วนรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-298">Report section</span></span> | <span data-ttu-id="a3109-299">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-299">Metrics</span></span> |
+| ส่วนรายงาน | เมตริก |
 | --- | --- |
-| <span data-ttu-id="a3109-300">ระยะเวลาคิวรี</span><span class="sxs-lookup"><span data-stu-id="a3109-300">Query Durations</span></span> |  <span data-ttu-id="a3109-301">ข้อมูลในส่วนนี้ถูกแบ่งออกตามชุดข้อมูล พื้นที่ทำงาน และกลุ่มรายชั่วโมงในช่วง 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-301">Data in this section is sliced by datasets, workspace, and hourly buckets in the past seven days.</span></span><br>  <span data-ttu-id="a3109-302">ผลรวม: จำนวนรวมของคิวรีที่เรียกใช้สำหรับชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-302">Total: The total number of queries run for the dataset.</span></span><br>  <span data-ttu-id="a3109-303">เฉลี่ย: ระยะเวลาคิวรีเฉลี่ยสำหรับชุดข้อมูล หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-303">Average: The average query duration for the dataset, in milliseconds</span></span><br>  <span data-ttu-id="a3109-304">สูงสุด: ระยะเวลาคิวรีที่ทำงานนานที่สุดในชุดข้อมูล หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-304">Max: The duration of the longest-running query in the dataset, in milliseconds.</span></span>|
-| <span data-ttu-id="a3109-305">การกระจายระยะเวลาคิวรี</span><span class="sxs-lookup"><span data-stu-id="a3109-305">Query Duration Distribution</span></span> |  <span data-ttu-id="a3109-306">ฮิสโตแกรมระยะเวลาคิวรีได้รับการจัดกลุ่มด้วยระยะเวลาคิวรี (เป็นมิลลิวินาที) ออกเป็นประเภทต่อไปนี้: <= ช่วง 30ms, 30-100ms, 100-300ms, 300ms-1sec, 1sec-3sec, 3sec-10sec, 10sec-30sec, และ > 30 วินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-306">The query duration histogram is bucketed by query durations (in milliseconds) into the following categories: <= 30ms, 30-100ms, 100-300ms, 300ms-1sec, 1sec-3sec, 3sec-10sec, 10sec-30sec, and > 30 seconds intervals.</span></span> <span data-ttu-id="a3109-307">ระยะเวลาคิวรีและเวลารอที่ยาวนานบ่งชี้ความจุที่ถูกเรียกใช้อย่างมาก</span><span class="sxs-lookup"><span data-stu-id="a3109-307">Long query durations and long wait times are indicative of the capacity running hot.</span></span> <span data-ttu-id="a3109-308">ซึ่งอาจหมายความถึงชุดข้อมูลเดียว กำลังก่อปัญหาและต้องได้รับการตรวจสอบ</span><span class="sxs-lookup"><span data-stu-id="a3109-308">It may also mean that a single dataset is causing problems and further investigation is needed.</span></span> |
-| <span data-ttu-id="a3109-309">ชุดข้อมูล 5 ชุดแรกเรียงตามระยะเวลาโดยเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-309">Top 5 Datasets by Average Duration</span></span> |  <span data-ttu-id="a3109-310">ชุดข้อมูลห้าชุดที่มีระยะเวลาคิวรีเฉลี่ยนานที่สุด หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-310">The five datasets with the longest average query duration, in milliseconds.</span></span> |
-| <span data-ttu-id="a3109-311">การกระจายระยะเวลาคิวรีต่อชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-311">Hourly Query Duration Distributions</span></span> |  <span data-ttu-id="a3109-312">จำนวนคิวรีและระยะเวลาเฉลี่ย (หน่วยเป็นมิลลิวินาที) เทียบกับปริมาณการใช้หน่วยความจำในหน่วย GB ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-312">Query counts and average duration (in milliseconds) vs. memory consumption in GB, split into one-hour buckets, reported in UTC time.</span></span> |
-| <span data-ttu-id="a3109-313">คิวรีตรง / การเชื่อมต่อแบบไลฟ์สด (การใช้งาน > 80%)</span><span class="sxs-lookup"><span data-stu-id="a3109-313">DirectQuery / Live Connections (> 80% Utilization)</span></span> |  <span data-ttu-id="a3109-314">เวลาที่การเชื่อมต่อ DirectQuery หรือแบบสดใช้เกิน 80% ของการใช้งาน CPU ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-314">The times that a DirectQuery or live connection exceeded 80% CPU utilization, split into one-hour buckets, reported in UTC time.</span></span> |
+| ระยะเวลาคิวรี |  ข้อมูลในส่วนนี้ถูกแบ่งออกตามชุดข้อมูล พื้นที่ทำงาน และกลุ่มรายชั่วโมงในช่วง 7 วันที่ผ่านมา<br>  ผลรวม: จำนวนรวมของคิวรีที่เรียกใช้สำหรับชุดข้อมูล<br>  เฉลี่ย: ระยะเวลาคิวรีเฉลี่ยสำหรับชุดข้อมูล หน่วยเป็นมิลลิวินาที<br>  สูงสุด: ระยะเวลาคิวรีที่ทำงานนานที่สุดในชุดข้อมูล หน่วยเป็นมิลลิวินาที|
+| การกระจายระยะเวลาคิวรี |  ฮิสโตแกรมระยะเวลาคิวรีได้รับการจัดกลุ่มด้วยระยะเวลาคิวรี (เป็นมิลลิวินาที) ออกเป็นประเภทต่อไปนี้: <= ช่วง 30ms, 30-100ms, 100-300ms, 300ms-1sec, 1sec-3sec, 3sec-10sec, 10sec-30sec, และ > 30 วินาที ระยะเวลาคิวรีและเวลารอที่ยาวนานบ่งชี้ความจุที่ถูกเรียกใช้อย่างมาก ซึ่งอาจหมายความถึงชุดข้อมูลเดียว กำลังก่อปัญหาและต้องได้รับการตรวจสอบ |
+| ชุดข้อมูล 5 ชุดแรกเรียงตามระยะเวลาโดยเฉลี่ย |  ชุดข้อมูลห้าชุดที่มีระยะเวลาคิวรีเฉลี่ยนานที่สุด หน่วยเป็นมิลลิวินาที |
+| การกระจายระยะเวลาคิวรีต่อชั่วโมง |  จำนวนคิวรีและระยะเวลาเฉลี่ย (หน่วยเป็นมิลลิวินาที) เทียบกับปริมาณการใช้หน่วยความจำในหน่วย GB ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
+| คิวรีตรง / การเชื่อมต่อแบบไลฟ์สด (การใช้งาน > 80%) |  เวลาที่การเชื่อมต่อ DirectQuery หรือแบบสดใช้เกิน 80% ของการใช้งาน CPU ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
 |  |  |
 
-#### <a name="query-waits-area"></a><span data-ttu-id="a3109-315">ส่วนการรอคิวรี่</span><span class="sxs-lookup"><span data-stu-id="a3109-315">Query Waits area</span></span>
+#### <a name="query-waits-area"></a>ส่วนการรอคิวรี่
 
-| <span data-ttu-id="a3109-316">ส่วนรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-316">Report section</span></span> | <span data-ttu-id="a3109-317">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-317">Metrics</span></span> |
+| ส่วนรายงาน | เมตริก |
 | --- | --- |
-| <span data-ttu-id="a3109-318">เวลารอคิวรี</span><span class="sxs-lookup"><span data-stu-id="a3109-318">Query Wait Times</span></span> |  <span data-ttu-id="a3109-319">ข้อมูลในส่วนนี้ถูกแบ่งออกตามชุดข้อมูล พื้นที่ทำงาน และกลุ่มรายชั่วโมงในช่วง 7 วันที่ผ่านมา</span><span class="sxs-lookup"><span data-stu-id="a3109-319">Data in this section is sliced by datasets, workspace, and hourly buckets in the past seven days.</span></span><br>  <span data-ttu-id="a3109-320">ผลรวม: จำนวนรวมของคิวรีที่เรียกใช้สำหรับชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-320">Total: The total number of queries run for the dataset.</span></span><br>  <span data-ttu-id="a3109-321">จำนวนการรอ: จำนวนของคิวรีในชุดข้อมูลที่รออยู่บนทรัพยากรของระบบก่อนการเริ่มดำเนินการ</span><span class="sxs-lookup"><span data-stu-id="a3109-321">Wait count: The number of queries in the dataset that waited on system resources before starting execution.</span></span><br>  <span data-ttu-id="a3109-322">เฉลี่ย: ระยะเวลารอคิวรีเฉลี่ยสำหรับชุดข้อมูล หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-322">Average: The average query wait time for the dataset, in milliseconds.</span></span><br>  <span data-ttu-id="a3109-323">สูงสุด: ระยะเวลาคิวรีที่รอนานที่สุดในชุดข้อมูล หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-323">Max: The duration of the longest-waiting query in the dataset, in milliseconds.</span></span>|
-| <span data-ttu-id="a3109-324">ชุดข้อมูล 5 ชุดแรกเรียงตามเวลารอโดยเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-324">Top 5 Datasets by Average Wait Time</span></span> |  <span data-ttu-id="a3109-325">ชุดข้อมูลห้าชุดที่มีเวลารอเฉลี่ยนานที่สุดในการเริ่มดำเนินการคิวรี หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-325">The five datasets with the longest average wait time to start executing a query,  in milliseconds.</span></span> |
-| <span data-ttu-id="a3109-326">การกระจายเวลารอ</span><span class="sxs-lookup"><span data-stu-id="a3109-326">Wait Time Distributions</span></span> |  <span data-ttu-id="a3109-327">ฮิสโตแกรมของระยะเวลาคิวรีได้รับการจัดกลุ่มโดยระยะเวลาคิวรี (หน่วยเป็นมิลลิวินาที) ออกเป็นประเภทต่อไปนี้: ช่วง<= 50ms , 50-100ms , 100-200ms , 200-400ms, 400ms-1sec , 1 sec-5 sec และ > 5 วินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-327">The query duration histogram is bucketed by query durations (in milliseconds) into the following categories: <= 50ms , 50-100ms , 100-200ms , 200-400ms 400ms-1sec , 1 sec-5 sec and > 5 seconds intervals.</span></span> |
-| <span data-ttu-id="a3109-328">การกระจายเวลารอคิวรีรายชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-328">Hourly Query Wait Time Distributions</span></span> |  <span data-ttu-id="a3109-329">จำนวนการรอคิวรีและเวลารอเฉลี่ย (หน่วยเป็นมิลลิวินาที) เทียบกับปริมาณการใช้หน่วยความจำในหน่วย GB แยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-329">Query wait counts and average wait time (in milliseconds) vs. memory consumption in GB, split into one-hour buckets reported in UTC time.</span></span> |
+| เวลารอคิวรี |  ข้อมูลในส่วนนี้ถูกแบ่งออกตามชุดข้อมูล พื้นที่ทำงาน และกลุ่มรายชั่วโมงในช่วง 7 วันที่ผ่านมา<br>  ผลรวม: จำนวนรวมของคิวรีที่เรียกใช้สำหรับชุดข้อมูล<br>  จำนวนการรอ: จำนวนของคิวรีในชุดข้อมูลที่รออยู่บนทรัพยากรของระบบก่อนการเริ่มดำเนินการ<br>  เฉลี่ย: ระยะเวลารอคิวรีเฉลี่ยสำหรับชุดข้อมูล หน่วยเป็นมิลลิวินาที<br>  สูงสุด: ระยะเวลาคิวรีที่รอนานที่สุดในชุดข้อมูล หน่วยเป็นมิลลิวินาที|
+| ชุดข้อมูล 5 ชุดแรกเรียงตามเวลารอโดยเฉลี่ย |  ชุดข้อมูลห้าชุดที่มีเวลารอเฉลี่ยนานที่สุดในการเริ่มดำเนินการคิวรี หน่วยเป็นมิลลิวินาที |
+| การกระจายเวลารอ |  ฮิสโตแกรมของระยะเวลาคิวรีได้รับการจัดกลุ่มโดยระยะเวลาคิวรี (หน่วยเป็นมิลลิวินาที) ออกเป็นประเภทต่อไปนี้: ช่วง<= 50ms , 50-100ms , 100-200ms , 200-400ms, 400ms-1sec , 1 sec-5 sec และ > 5 วินาที |
+| การกระจายเวลารอคิวรีรายชั่วโมง |  จำนวนการรอคิวรีและเวลารอเฉลี่ย (หน่วยเป็นมิลลิวินาที) เทียบกับปริมาณการใช้หน่วยความจำในหน่วย GB แยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
 |  |  |
 
-#### <a name="datasets-area"></a><span data-ttu-id="a3109-330">ส่วนชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-330">Datasets area</span></span>
+#### <a name="datasets-area"></a>ส่วนชุดข้อมูล
 
-| <span data-ttu-id="a3109-331">**ส่วนรายงาน**</span><span class="sxs-lookup"><span data-stu-id="a3109-331">**Report section**</span></span> | <span data-ttu-id="a3109-332">**การวัด**</span><span class="sxs-lookup"><span data-stu-id="a3109-332">**Metrics**</span></span> |
+| **ส่วนรายงาน** | **การวัด** |
 | --- | --- |
-| <span data-ttu-id="a3109-333">ขนาดชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-333">Dataset Sizes</span></span>  |  <span data-ttu-id="a3109-334">ขนาดสูงสุด: ขนาดสูงสุดของชุดข้อมูลในหน่วย MB สำหรับช่วงเวลาที่แสดง</span><span class="sxs-lookup"><span data-stu-id="a3109-334">Max size: The maximum size of the dataset in MB for the period shown.</span></span> |
-| <span data-ttu-id="a3109-335">จำนวนการลดชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-335">Dataset Eviction Counts</span></span> |  <span data-ttu-id="a3109-336">ผลรวม: จำนวนรวมของ *การลด* ชุดข้อมูลสำหรับแต่ละความจุ</span><span class="sxs-lookup"><span data-stu-id="a3109-336">Total: The total number of dataset *evictions* for each capacity.</span></span> <span data-ttu-id="a3109-337">เมื่อความจุเผชิญกับความกดดันที่มีต่อหน่วยความจำ โหนดจะลดชุดข้อมูลอย่างน้อยหนึ่งชุดออกจากหน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="a3109-337">When a capacity faces memory pressure, the node evicts one or more datasets from memory.</span></span> <span data-ttu-id="a3109-338">ชุดข้อมูลที่ไม่ได้ใช้งาน (ที่ไม่มีการสคิวรี่/ รีเฟรชกำลังดำเนินการอยู่) จะถูกขับออกก่อน</span><span class="sxs-lookup"><span data-stu-id="a3109-338">Datasets that are inactive (with no query/refresh operation currently executing) are evicted first.</span></span> <span data-ttu-id="a3109-339">จากนั้นคำสั่งการขับไล่จะขึ้นอยู่กับการวัด 'การใช้น้อยที่สุด' (LRU)</span><span class="sxs-lookup"><span data-stu-id="a3109-339">Then the eviction order is based on a measure of 'least recently used' (LRU).</span></span>|
-| <span data-ttu-id="a3109-340">จำนวนชุดข้อมูลที่โหลดรายชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-340">Hourly Loaded Dataset Counts</span></span> |  <span data-ttu-id="a3109-341">จำนวนของชุดข้อมูลที่โหลดลงในหน่วยความจำเทียบกับปริมาณการใช้หน่วยความจำในหน่วย GB ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-341">Number of datasets loaded into memory vs. memory consumption in GB, split into one-hour buckets, reported in UTC time.</span></span> |
-| <span data-ttu-id="a3109-342">การลดชุดข้อมูลต่อชั่วโมงและปริมาณการใช้หน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="a3109-342">Hourly Dataset Evictions and Memory Consumption</span></span> |  <span data-ttu-id="a3109-343">การจำกัดชุดข้อมูลเทียบกับปริมาณการใช้หน่วยความจำในหน่วย GB ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-343">Dataset evictions vs. memory consumption in GB, split into one-hour buckets, reported in UTC time.</span></span> |
-| <span data-ttu-id="a3109-344">เปอร์เซ็นต์การใช้หน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="a3109-344">Consumed Memory Percentages</span></span> |  <span data-ttu-id="a3109-345">ชุดข้อมูลที่ใช้งานอยู่ทั้งหมดในหน่วยความจำเป็นเปอร์เซ็นต์ของผลรวมหน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="a3109-345">Total active datasets in memory as a percentage of total memory.</span></span> <span data-ttu-id="a3109-346">ผลต่างระหว่างชุดข้อมูลที่ใช้งานอยู่และชุดข้อมูลที่กำหนดทั้งหมดที่สามารถลดลงได้</span><span class="sxs-lookup"><span data-stu-id="a3109-346">The delta between Active and All define datasets that can be evicted.</span></span> <span data-ttu-id="a3109-347">แสดงเป็นรายชั่วโมงสำหรับช่วงเจ็ดวันก่อนหน้า</span><span class="sxs-lookup"><span data-stu-id="a3109-347">Shown hourly, for the previous seven days.</span></span> |
+| ขนาดชุดข้อมูล  |  ขนาดสูงสุด: ขนาดสูงสุดของชุดข้อมูลในหน่วย MB สำหรับช่วงเวลาที่แสดง |
+| จำนวนการลดชุดข้อมูล |  ผลรวม: จำนวนรวมของ *การลด* ชุดข้อมูลสำหรับแต่ละความจุ เมื่อความจุเผชิญกับความกดดันที่มีต่อหน่วยความจำ โหนดจะลดชุดข้อมูลอย่างน้อยหนึ่งชุดออกจากหน่วยความจำ ชุดข้อมูลที่ไม่ได้ใช้งาน (ที่ไม่มีการสคิวรี่/ รีเฟรชกำลังดำเนินการอยู่) จะถูกขับออกก่อน จากนั้นคำสั่งการขับไล่จะขึ้นอยู่กับการวัด 'การใช้น้อยที่สุด' (LRU)|
+| จำนวนชุดข้อมูลที่โหลดรายชั่วโมง |  จำนวนของชุดข้อมูลที่โหลดลงในหน่วยความจำเทียบกับปริมาณการใช้หน่วยความจำในหน่วย GB ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
+| การลดชุดข้อมูลต่อชั่วโมงและปริมาณการใช้หน่วยความจำ |  การจำกัดชุดข้อมูลเทียบกับปริมาณการใช้หน่วยความจำในหน่วย GB ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
+| เปอร์เซ็นต์การใช้หน่วยความจำ |  ชุดข้อมูลที่ใช้งานอยู่ทั้งหมดในหน่วยความจำเป็นเปอร์เซ็นต์ของผลรวมหน่วยความจำ ผลต่างระหว่างชุดข้อมูลที่ใช้งานอยู่และชุดข้อมูลที่กำหนดทั้งหมดที่สามารถลดลงได้ แสดงเป็นรายชั่วโมงสำหรับช่วงเจ็ดวันก่อนหน้า |
 |  |  |
 
-### <a name="paginated-reports"></a><span data-ttu-id="a3109-348">รายงานที่มีการแบ่งหน้า</span><span class="sxs-lookup"><span data-stu-id="a3109-348">Paginated Reports</span></span>
+### <a name="paginated-reports"></a>รายงานที่มีการแบ่งหน้า
 
-| <span data-ttu-id="a3109-349">**ส่วนรายงาน**</span><span class="sxs-lookup"><span data-stu-id="a3109-349">**Report section**</span></span> | <span data-ttu-id="a3109-350">**การวัด**</span><span class="sxs-lookup"><span data-stu-id="a3109-350">**Metrics**</span></span> |
+| **ส่วนรายงาน** | **การวัด** |
 | --- | --- |
-| <span data-ttu-id="a3109-351">การใช้งานโดยรวม</span><span class="sxs-lookup"><span data-stu-id="a3109-351">Overall usage</span></span> |  <span data-ttu-id="a3109-352">ผลรวมยอดดู: จำนวนครั้งที่มีผู้ใช้ดูรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-352">Total Views: The number of times that the report has been viewed by users.</span></span><br>  <span data-ttu-id="a3109-353">จำนวนแถว: จำนวนแถวของข้อมูลในรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-353">Row Count: The number of rows of data in the report.</span></span><br>  <span data-ttu-id="a3109-354">การค้นคืน (เฉลี่ย): ปริมาณเวลาเฉลี่ยที่ใช้ในการดึงข้อมูลสำหรับรายงาน หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-354">Retrieval (avg): The average amount of time it takes to retrieve data for the report, in milliseconds.</span></span> <span data-ttu-id="a3109-355">ระยะเวลาที่ยาวนานอาจเป็นการบ่งชี้ถึงคิวรีที่ช้าหรือปัญหาแหล่งข้อมูลอื่นๆ</span><span class="sxs-lookup"><span data-stu-id="a3109-355">Long durations can indicate slow queries or other data source issues.</span></span> <br>  <span data-ttu-id="a3109-356">การประมวลผล (เฉลี่ย): ปริมาณเวลาเฉลี่ยที่ใช้ในการประมวลผลข้อมูลสำหรับรายงาน หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-356">Processing (avg): The average amount of time it takes to process the data for a report, in milliseconds.</span></span><br> <span data-ttu-id="a3109-357">การแสดง (เฉลี่ย): ปริมาณเวลาเฉลี่ยที่ใช้ในการแสดงรายงานในเบราเซอร์ หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-357">Rendering (avg): The average amount of time it takes to render a report in the browser, in milliseconds.</span></span><br>  <span data-ttu-id="a3109-358">เวลารวม: เวลาที่ใช้สำหรับขั้นตอนทั้งหมดของรายงาน หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-358">Total time: The time it takes for all phases of the report, in milliseconds.</span></span> |
-| <span data-ttu-id="a3109-359">รายงาน 5 ฉบับแรกเรียงตามเวลาการเรียกข้อมูลโดยเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-359">Top 5 Reports by Average Data Retrieval Time</span></span> |  <span data-ttu-id="a3109-360">รายงานห้าฉบับที่ใช้เวลาค้นคืนข้อมูลเฉลี่ยนานที่สุด หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-360">The five reports with the longest average data retrieval time, in milliseconds.</span></span> |
-| <span data-ttu-id="a3109-361">รายงาน 5 ฉบับแรกเรียงตามเวลาการประมวลผลรายงานโดยเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-361">Top 5 Reports by Average Report Processing Time</span></span> |  <span data-ttu-id="a3109-362">รายงานห้าฉบับที่ใช้เวลาประมวลผลรายงานเฉลี่ยนานที่สุด หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-362">The five reports with the longest average report processing time, in milliseconds.</span></span> |
-| <span data-ttu-id="a3109-363">ผลลัพธ์รายชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-363">Hourly Results</span></span> |  <span data-ttu-id="a3109-364">ความสำเร็จ ความล้มเหลว และปริมาณการใช้หน่วยความจำ ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-364">Successes, failures, and memory consumption, split into one-hour buckets, reported in UTC time.</span></span> |
-| <span data-ttu-id="a3109-365">ระยะเวลารายชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-365">Hourly Durations</span></span> |  <span data-ttu-id="a3109-366">การค้นคืนข้อมูลเทียบกับเวลาการประมวลผลและการแสดงภาพ ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-366">Data retrieval vs. processing and rendering time, split into one-hour buckets, reported in UTC time.</span></span> |
+| การใช้งานโดยรวม |  ผลรวมยอดดู: จำนวนครั้งที่มีผู้ใช้ดูรายงาน<br>  จำนวนแถว: จำนวนแถวของข้อมูลในรายงาน<br>  การค้นคืน (เฉลี่ย): ปริมาณเวลาเฉลี่ยที่ใช้ในการดึงข้อมูลสำหรับรายงาน หน่วยเป็นมิลลิวินาที ระยะเวลาที่ยาวนานอาจเป็นการบ่งชี้ถึงคิวรีที่ช้าหรือปัญหาแหล่งข้อมูลอื่นๆ <br>  การประมวลผล (เฉลี่ย): ปริมาณเวลาเฉลี่ยที่ใช้ในการประมวลผลข้อมูลสำหรับรายงาน หน่วยเป็นมิลลิวินาที<br> การแสดง (เฉลี่ย): ปริมาณเวลาเฉลี่ยที่ใช้ในการแสดงรายงานในเบราเซอร์ หน่วยเป็นมิลลิวินาที<br>  เวลารวม: เวลาที่ใช้สำหรับขั้นตอนทั้งหมดของรายงาน หน่วยเป็นมิลลิวินาที |
+| รายงาน 5 ฉบับแรกเรียงตามเวลาการเรียกข้อมูลโดยเฉลี่ย |  รายงานห้าฉบับที่ใช้เวลาค้นคืนข้อมูลเฉลี่ยนานที่สุด หน่วยเป็นมิลลิวินาที |
+| รายงาน 5 ฉบับแรกเรียงตามเวลาการประมวลผลรายงานโดยเฉลี่ย |  รายงานห้าฉบับที่ใช้เวลาประมวลผลรายงานเฉลี่ยนานที่สุด หน่วยเป็นมิลลิวินาที |
+| ผลลัพธ์รายชั่วโมง |  ความสำเร็จ ความล้มเหลว และปริมาณการใช้หน่วยความจำ ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
+| ระยะเวลารายชั่วโมง |  การค้นคืนข้อมูลเทียบกับเวลาการประมวลผลและการแสดงภาพ ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
 |  |  |
 
-### <a name="dataflows"></a><span data-ttu-id="a3109-367">กระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-367">Dataflows</span></span>
+### <a name="dataflows"></a>กระแสข้อมูล
 
-| <span data-ttu-id="a3109-368">**ส่วนรายงาน**</span><span class="sxs-lookup"><span data-stu-id="a3109-368">**Report section**</span></span> | <span data-ttu-id="a3109-369">**การวัด**</span><span class="sxs-lookup"><span data-stu-id="a3109-369">**Metrics**</span></span> |
+| **ส่วนรายงาน** | **การวัด** |
 | --- | --- |
-| <span data-ttu-id="a3109-370">รีเฟรช</span><span class="sxs-lookup"><span data-stu-id="a3109-370">Refreshes</span></span> |  <span data-ttu-id="a3109-371">ผลรวม: การรีเฟรชทั้งหมดสำหรับแต่ละกระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-371">Total: Total refreshes for each dataflow.</span></span><br>  <span data-ttu-id="a3109-372">ความน่าเชื่อถือ: เปอร์เซ็นต์ของการรีเฟรชที่เสร็จสมบูรณ์สำหรับแต่ละกระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-372">Reliability: The percentage of refreshes that completed for each dataflow.</span></span><br>  <span data-ttu-id="a3109-373">เวลารอเฉลี่ย: การหน่วงเวลาเฉลี่ยระหว่างเวลาที่กำหนดไว้และเวลาเริ่มต้นของการรีเฟรชกระแสข้อมูล หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-373">Avg Wait Time: The average lag between the scheduled time and start of a refresh for the dataflow, in minutes.</span></span><br>  <span data-ttu-id="a3109-374">เวลารอสูงสุด: เวลารอสูงสุดสำหรับกระแสข้อมูล หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-374">Max Wait Time: The maximum wait time for the dataflow, in minutes.</span></span><br>  <span data-ttu-id="a3109-375">ระยะเวลาเฉลี่ย: ระยะเวลาเฉลี่ยของการรีเฟรชสำหรับกระแสข้อมูล หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-375">Avg Duration: The average duration of refresh for the dataflow, in minutes.</span></span><br>  <span data-ttu-id="a3109-376">ระยะเวลาสูงสุด: ระยะเวลาของการรีเฟรชที่ทำงานนานที่สุดสำหรับกระแสข้อมูล เป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-376">Max Duration: The duration of the longest-running refresh for the dataflow, in minutes.</span></span> |
-| <span data-ttu-id="a3109-377">กระแสข้อมูล 5 ตัวแรกเรียงตามระยะเวลาการรีเฟรชเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-377">Top 5 dataflows by Average Refresh Duration</span></span> |  <span data-ttu-id="a3109-378">ชุดข้อมูลห้าชุดที่มีระยะเวลารีเฟรชเฉลี่ยนานที่สุด หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-378">The five dataflows with the longest average refresh duration, in minutes.</span></span> |
-| <span data-ttu-id="a3109-379">กระแสข้อมูล 5 ตัวแรกเรียงตามเวลารอโดยเฉลี่ย</span><span class="sxs-lookup"><span data-stu-id="a3109-379">Top 5 dataflows by Average Wait Time</span></span> |  <span data-ttu-id="a3109-380">กระแสข้อมูลห้าตัวที่มีเวลารอการรีเฟรชเฉลี่ยนานที่สุด หน่วยเป็นนาที</span><span class="sxs-lookup"><span data-stu-id="a3109-380">The five dataflows with the longest average refresh wait time,  in minutes.</span></span> |
-| <span data-ttu-id="a3109-381">เวลารอการรีเฟรชโดยเฉลี่ยรายชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-381">Hourly Average Refresh Wait Times</span></span> |  <span data-ttu-id="a3109-382">เวลารอการรีเฟรชเฉลี่ยซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-382">The average refresh wait time, split into one-hour buckets, reported in UTC time.</span></span> <span data-ttu-id="a3109-383">เวลารอการรีเฟรชสูงหลายๆ ครั้งแสดงว่าความจุกำลังทำงานอย่างหนัก</span><span class="sxs-lookup"><span data-stu-id="a3109-383">Multiple spikes with high refresh wait times are indicative of the capacity running hot.</span></span> |
-| <span data-ttu-id="a3109-384">จำนวนการรีเฟรชรายชั่วโมงและการใช้หน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="a3109-384">Hourly Refresh Count and Memory Consumption</span></span> |  <span data-ttu-id="a3109-385">ความสำเร็จ ความล้มเหลว และปริมาณการใช้หน่วยความจำ ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-385">Successes, failures, and memory consumption, split into one-hour buckets, reported in UTC time.</span></span> |
+| รีเฟรช |  ผลรวม: การรีเฟรชทั้งหมดสำหรับแต่ละกระแสข้อมูล<br>  ความน่าเชื่อถือ: เปอร์เซ็นต์ของการรีเฟรชที่เสร็จสมบูรณ์สำหรับแต่ละกระแสข้อมูล<br>  เวลารอเฉลี่ย: การหน่วงเวลาเฉลี่ยระหว่างเวลาที่กำหนดไว้และเวลาเริ่มต้นของการรีเฟรชกระแสข้อมูล หน่วยเป็นนาที<br>  เวลารอสูงสุด: เวลารอสูงสุดสำหรับกระแสข้อมูล หน่วยเป็นนาที<br>  ระยะเวลาเฉลี่ย: ระยะเวลาเฉลี่ยของการรีเฟรชสำหรับกระแสข้อมูล หน่วยเป็นนาที<br>  ระยะเวลาสูงสุด: ระยะเวลาของการรีเฟรชที่ทำงานนานที่สุดสำหรับกระแสข้อมูล เป็นนาที |
+| กระแสข้อมูล 5 ตัวแรกเรียงตามระยะเวลาการรีเฟรชเฉลี่ย |  ชุดข้อมูลห้าชุดที่มีระยะเวลารีเฟรชเฉลี่ยนานที่สุด หน่วยเป็นนาที |
+| กระแสข้อมูล 5 ตัวแรกเรียงตามเวลารอโดยเฉลี่ย |  กระแสข้อมูลห้าตัวที่มีเวลารอการรีเฟรชเฉลี่ยนานที่สุด หน่วยเป็นนาที |
+| เวลารอการรีเฟรชโดยเฉลี่ยรายชั่วโมง |  เวลารอการรีเฟรชเฉลี่ยซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC เวลารอการรีเฟรชสูงหลายๆ ครั้งแสดงว่าความจุกำลังทำงานอย่างหนัก |
+| จำนวนการรีเฟรชรายชั่วโมงและการใช้หน่วยความจำ |  ความสำเร็จ ความล้มเหลว และปริมาณการใช้หน่วยความจำ ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
 |  |  |
 
-### <a name="ai"></a><span data-ttu-id="a3109-386">AI</span><span class="sxs-lookup"><span data-stu-id="a3109-386">AI</span></span>
+### <a name="ai"></a>AI
 
-| <span data-ttu-id="a3109-387">**ส่วนรายงาน**</span><span class="sxs-lookup"><span data-stu-id="a3109-387">**Report section**</span></span> | <span data-ttu-id="a3109-388">**การวัด**</span><span class="sxs-lookup"><span data-stu-id="a3109-388">**Metrics**</span></span> |
+| **ส่วนรายงาน** | **การวัด** |
 | --- | --- |
-| <span data-ttu-id="a3109-389">การใช้หน่วยความจำของ AI</span><span class="sxs-lookup"><span data-stu-id="a3109-389">AI Memory Consumption</span></span> | <span data-ttu-id="a3109-390">การใช้หน่วยความจำในหน่วย GB ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-390">Memory consumption in GB, split into one-hour buckets, reported in UTC time.</span></span> |
-| <span data-ttu-id="a3109-391">เวลารอเฉลี่ยและการดำเนินการของฟังก์ชัน AI เป็นรายชั่วโมง</span><span class="sxs-lookup"><span data-stu-id="a3109-391">Hourly AI Function Execution and Average Wait Time</span></span> | <span data-ttu-id="a3109-392">การดำเนินการของ AI และเวลารอเฉลี่ย (หน่วยเป็นมิลลิวินาที) แยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC</span><span class="sxs-lookup"><span data-stu-id="a3109-392">AI executions and average wait time, in milliseconds, split into one-hour buckets, reported in UTC time.</span></span> |
-| <span data-ttu-id="a3109-393">การใช้งานโดยรวม</span><span class="sxs-lookup"><span data-stu-id="a3109-393">Overall Usage</span></span> | <span data-ttu-id="a3109-394">จำนวนทั้งหมด: จำนวนของฟังก์ชัน AI ในพื้นที่ทำงานหรือกระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-394">Total count: Number of AI functions in a workspace or dataflow.</span></span> <br> <span data-ttu-id="a3109-395">ความน่าเชื่อถือของระบบ: เปอร์เซ็นต์ของการดำเนินการที่เสร็จสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="a3109-395">System Reliability: The percentage of executions that completed.</span></span><br> <span data-ttu-id="a3109-396">ค่าเฉลี่ย เวลารอ: การหน่วงเวลาเฉลี่ยระหว่างเวลาที่กำหนดไว้และการเริ่มต้นของการดำเนินการ หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-396">Avg. Wait Time: The average lag between the scheduled time and start of an execution, in milliseconds.</span></span><br> <span data-ttu-id="a3109-397">เวลารอสูงสุด: เวลารอสูงสุด หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-397">Max Wait Time: The maximum wait time, in milliseconds.</span></span><br> <span data-ttu-id="a3109-398">ค่าเฉลี่ย ระยะเวลา: ระยะเวลาเฉลี่ยของการดำเนินการ หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-398">Avg. Duration: The average duration of an execution, in milliseconds.</span></span><br> <span data-ttu-id="a3109-399">ระยะเวลาสูงสุด: ระยะเวลาการดำเนินการที่ใช้เวลานานที่สุด หน่วยเป็นมิลลิวินาที</span><span class="sxs-lookup"><span data-stu-id="a3109-399">Max Duration: The duration of the longest-running execution, in milliseconds.</span></span><br> <span data-ttu-id="a3109-400">ขนาดทั้งหมดโดยเฉลี่ย: ขนาดโดยเฉลี่ย หน่วยเป็นไบต์ ของข้อมูลอินพุตและเอาท์พุตสำหรับฟังก์ชัน AI</span><span class="sxs-lookup"><span data-stu-id="a3109-400">Avg Total Size: The average size, in bytes, of the input and output data for the AI function.</span></span> |
+| การใช้หน่วยความจำของ AI | การใช้หน่วยความจำในหน่วย GB ซึ่งแยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
+| เวลารอเฉลี่ยและการดำเนินการของฟังก์ชัน AI เป็นรายชั่วโมง | การดำเนินการของ AI และเวลารอเฉลี่ย (หน่วยเป็นมิลลิวินาที) แยกเป็นบักเก็ตหนึ่งชั่วโมงรายงานตามเวลา UTC |
+| การใช้งานโดยรวม | จำนวนทั้งหมด: จำนวนของฟังก์ชัน AI ในพื้นที่ทำงานหรือกระแสข้อมูล <br> ความน่าเชื่อถือของระบบ: เปอร์เซ็นต์ของการดำเนินการที่เสร็จสมบูรณ์<br> ค่าเฉลี่ย เวลารอ: การหน่วงเวลาเฉลี่ยระหว่างเวลาที่กำหนดไว้และการเริ่มต้นของการดำเนินการ หน่วยเป็นมิลลิวินาที<br> เวลารอสูงสุด: เวลารอสูงสุด หน่วยเป็นมิลลิวินาที<br> ค่าเฉลี่ย ระยะเวลา: ระยะเวลาเฉลี่ยของการดำเนินการ หน่วยเป็นมิลลิวินาที<br> ระยะเวลาสูงสุด: ระยะเวลาการดำเนินการที่ใช้เวลานานที่สุด หน่วยเป็นมิลลิวินาที<br> ขนาดทั้งหมดโดยเฉลี่ย: ขนาดโดยเฉลี่ย หน่วยเป็นไบต์ ของข้อมูลอินพุตและเอาท์พุตสำหรับฟังก์ชัน AI |
 | | |
 
-### <a name="resource-consumption"></a><span data-ttu-id="a3109-401">การใช้ทรัพยากร</span><span class="sxs-lookup"><span data-stu-id="a3109-401">Resource Consumption</span></span>
+### <a name="resource-consumption"></a>การใช้ทรัพยากร
 
-| <span data-ttu-id="a3109-402">**ส่วนรายงาน**</span><span class="sxs-lookup"><span data-stu-id="a3109-402">**Report section**</span></span> | <span data-ttu-id="a3109-403">**การวัด**</span><span class="sxs-lookup"><span data-stu-id="a3109-403">**Metrics**</span></span> |
+| **ส่วนรายงาน** | **การวัด** |
 | --- | --- |
-| <span data-ttu-id="a3109-404">การใช้ CPU</span><span class="sxs-lookup"><span data-stu-id="a3109-404">CPU consumption</span></span> |  <span data-ttu-id="a3109-405">ปริมาณการใช้ CPU สูงสุดในระหว่างชั่วโมงโดยปริมาณงานเป็นเปอร์เซ็นต์ของความจุ CPU ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-405">Maximum CPU consumption during the hour, by workload as a percentage of total CPU capacity.</span></span> <span data-ttu-id="a3109-406">แสดงเป็นรายชั่วโมงสำหรับช่วงเจ็ดวันก่อนหน้า</span><span class="sxs-lookup"><span data-stu-id="a3109-406">Shown hourly, for the previous seven days.</span></span> |
-| <span data-ttu-id="a3109-407">การใช้หน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="a3109-407">Memory consumption</span></span> |  <span data-ttu-id="a3109-408">ปริมาณการใช้หน่วยความจำสูงสุดระหว่างเวลาทำงานในหน่วย GB ตามปริมาณงาน (เส้นทึบ) ซ้อนทับกับขีดจำกัดปริมาณงาน (เส้นประ)</span><span class="sxs-lookup"><span data-stu-id="a3109-408">Maximum memory consumption during the hour, in GB by workload (solid lines), overlaid with workload limits (dotted line).</span></span> <span data-ttu-id="a3109-409">แสดงเป็นรายชั่วโมงสำหรับช่วงเจ็ดวันก่อนหน้า</span><span class="sxs-lookup"><span data-stu-id="a3109-409">Shown hourly, for the previous seven days.</span></span> |
+| การใช้ CPU |  ปริมาณการใช้ CPU สูงสุดในระหว่างชั่วโมงโดยปริมาณงานเป็นเปอร์เซ็นต์ของความจุ CPU ทั้งหมด แสดงเป็นรายชั่วโมงสำหรับช่วงเจ็ดวันก่อนหน้า |
+| การใช้หน่วยความจำ |  ปริมาณการใช้หน่วยความจำสูงสุดระหว่างเวลาทำงานในหน่วย GB ตามปริมาณงาน (เส้นทึบ) ซ้อนทับกับขีดจำกัดปริมาณงาน (เส้นประ) แสดงเป็นรายชั่วโมงสำหรับช่วงเจ็ดวันก่อนหน้า |
 |  |  |
 
-### <a name="ids-and-info"></a><span data-ttu-id="a3109-410">ID และข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-410">IDs and Info</span></span>
+### <a name="ids-and-info"></a>ID และข้อมูล
 
-<span data-ttu-id="a3109-411">แท็บ **ID และข้อมูล** ประกอบด้วยพื้นที่สำหรับ **ความจุ**, **พื้นที่ทำงาน**, **ชุดข้อมูล**,**รายงานมีการแบ่งหน้า** และ **กระแสข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="a3109-411">The **IDs and Info** tab contains areas for **Capacities**, **Workspaces**, **Datasets**, **Paginated Reports**, and **Dataflows**.</span></span>
+แท็บ **ID และข้อมูล** ประกอบด้วยพื้นที่สำหรับ **ความจุ**, **พื้นที่ทำงาน**, **ชุดข้อมูล**,**รายงานมีการแบ่งหน้า** และ **กระแสข้อมูล**
 
-#### <a name="capacities-area"></a><span data-ttu-id="a3109-412">พื้นที่ความจุ</span><span class="sxs-lookup"><span data-stu-id="a3109-412">Capacities area</span></span>
+#### <a name="capacities-area"></a>พื้นที่ความจุ
 
-| <span data-ttu-id="a3109-413">ส่วนรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-413">Report section</span></span> | <span data-ttu-id="a3109-414">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-414">Metrics</span></span> |
+| ส่วนรายงาน | เมตริก |
 | --- | --- |
-| <span data-ttu-id="a3109-415">SKU และข้อมูลปริมาณงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-415">SKU and Workload Information</span></span> | <span data-ttu-id="a3109-416">SKU และการตั้งค่าปริมาณงานสำหรับความจุ</span><span class="sxs-lookup"><span data-stu-id="a3109-416">SKU and workload settings for the capacity.</span></span> |
-| <span data-ttu-id="a3109-417">ผู้ดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="a3109-417">Administrators</span></span> | <span data-ttu-id="a3109-418">ชื่อของผู้ดูแลระบบสำหรับความจุ</span><span class="sxs-lookup"><span data-stu-id="a3109-418">Names of administrators for the capacity.</span></span> |
+| SKU และข้อมูลปริมาณงาน | SKU และการตั้งค่าปริมาณงานสำหรับความจุ |
+| ผู้ดูแลระบบ | ชื่อของผู้ดูแลระบบสำหรับความจุ |
 |||
 
-#### <a name="workspaces-area"></a><span data-ttu-id="a3109-419">พื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-419">Workspaces area</span></span>
+#### <a name="workspaces-area"></a>พื้นที่ทำงาน
 
-| <span data-ttu-id="a3109-420">ส่วนรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-420">Report section</span></span> | <span data-ttu-id="a3109-421">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-421">Metrics</span></span> |
+| ส่วนรายงาน | เมตริก |
 | --- | --- |
-| <span data-ttu-id="a3109-422">พื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-422">Workspaces</span></span> | <span data-ttu-id="a3109-423">ชื่อและ ID สำหรับพื้นที่ทำงานทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-423">Names and IDs for all workspaces.</span></span> |
+| พื้นที่ทำงาน | ชื่อและ ID สำหรับพื้นที่ทำงานทั้งหมด |
 |||
 
-#### <a name="datasets-area"></a><span data-ttu-id="a3109-424">ส่วนชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-424">Datasets area</span></span>
+#### <a name="datasets-area"></a>ส่วนชุดข้อมูล
 
-| <span data-ttu-id="a3109-425">ส่วนรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-425">Report section</span></span> | <span data-ttu-id="a3109-426">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-426">Metrics</span></span> |
+| ส่วนรายงาน | เมตริก |
 | --- | --- |
-| <span data-ttu-id="a3109-427">ชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-427">Datasets</span></span> | <span data-ttu-id="a3109-428">ชื่อพื้นที่ทำงานและ ID สำหรับชุดข้อมูลทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-428">Workspace names and IDs for all datasets.</span></span> |
+| ชุดข้อมูล | ชื่อพื้นที่ทำงานและ ID สำหรับชุดข้อมูลทั้งหมด |
 |||
 
-#### <a name="paginated-reports-area"></a><span data-ttu-id="a3109-429">พื้นที่รายงานการแบ่งหน้า</span><span class="sxs-lookup"><span data-stu-id="a3109-429">Paginated Reports area</span></span>
+#### <a name="paginated-reports-area"></a>พื้นที่รายงานการแบ่งหน้า
 
-| <span data-ttu-id="a3109-430">ส่วนรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-430">Report section</span></span> | <span data-ttu-id="a3109-431">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-431">Metrics</span></span> |
+| ส่วนรายงาน | เมตริก |
 | --- | --- |
-| <span data-ttu-id="a3109-432">รายงานที่มีการแบ่งหน้า</span><span class="sxs-lookup"><span data-stu-id="a3109-432">Paginated Reports</span></span> | <span data-ttu-id="a3109-433">ชื่อ ชื่อพื้นที่ทำงาน และ ID สำหรับรายงานแบบแบ่งหน้าทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-433">Names, workspace names, and IDs for all paginated reports.</span></span> |
+| รายงานที่มีการแบ่งหน้า | ชื่อ ชื่อพื้นที่ทำงาน และ ID สำหรับรายงานแบบแบ่งหน้าทั้งหมด |
 |||
 
-#### <a name="dataflows-area"></a><span data-ttu-id="a3109-434">พื้นที่กระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-434">Dataflows area</span></span>
+#### <a name="dataflows-area"></a>พื้นที่กระแสข้อมูล
 
-| <span data-ttu-id="a3109-435">ส่วนรายงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-435">Report section</span></span> | <span data-ttu-id="a3109-436">เมตริก</span><span class="sxs-lookup"><span data-stu-id="a3109-436">Metrics</span></span> |
+| ส่วนรายงาน | เมตริก |
 | --- | --- |
-| <span data-ttu-id="a3109-437">กระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a3109-437">Dataflows</span></span> | <span data-ttu-id="a3109-438">กระแสข้อมูล ชื่อ ชื่อพื้นที่ทำงาน และ ID สำหรับกระแสข้อมูลทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="a3109-438">Dataflow names, workspace names, and IDs for all dataflows.</span></span> |
+| กระแสข้อมูล | กระแสข้อมูล ชื่อ ชื่อพื้นที่ทำงาน และ ID สำหรับกระแสข้อมูลทั้งหมด |
 |||
 
-## <a name="monitor-power-bi-embedded-capacity"></a><span data-ttu-id="a3109-439">ตรวจสอบความจุ Power BI Embedded</span><span class="sxs-lookup"><span data-stu-id="a3109-439">Monitor Power BI Embedded capacity</span></span>
+## <a name="monitor-power-bi-embedded-capacity"></a>ตรวจสอบความจุ Power BI Embedded
 
-<span data-ttu-id="a3109-440">คุณสามารถใช้แอปวัดความจุ Power BI Premium เพื่อตรวจสอบความจุ *A SKU* ใน Power BI Embedded ได้</span><span class="sxs-lookup"><span data-stu-id="a3109-440">You can use the Power BI Premium Capacity Metrics app to monitor *A SKU* capacities in Power BI Embedded.</span></span> <span data-ttu-id="a3109-441">ความจุเหล่านั้นจะแสดงในรายงานตราบใดที่คุณเป็นผู้ดูแลระบบของความจุ</span><span class="sxs-lookup"><span data-stu-id="a3109-441">Those capacities will show up in the report as long as you are an admin of the capacity.</span></span> <span data-ttu-id="a3109-442">อย่างไรก็ตาม การรีเฟรชรายงานล้มเหลวเว้นแต่ว่าคุณให้สิทธิ์บางอย่างไปยัง Power BI ในเรื่อง A SKU ของคุณ:</span><span class="sxs-lookup"><span data-stu-id="a3109-442">However, refresh of the report fails unless you grant certain permissions to Power BI on your A SKUs:</span></span>
+คุณสามารถใช้แอปวัดความจุ Power BI Premium เพื่อตรวจสอบความจุ *A SKU* ใน Power BI Embedded ได้ ความจุเหล่านั้นจะแสดงในรายงานตราบใดที่คุณเป็นผู้ดูแลระบบของความจุ อย่างไรก็ตาม การรีเฟรชรายงานล้มเหลวเว้นแต่ว่าคุณให้สิทธิ์บางอย่างไปยัง Power BI ในเรื่อง A SKU ของคุณ:
 
-1. <span data-ttu-id="a3109-443">เปิดความจุของคุณในพอร์ทัล Azure</span><span class="sxs-lookup"><span data-stu-id="a3109-443">Open your capacity in the Azure portal.</span></span>
+1. เปิดความจุของคุณในพอร์ทัล Azure
 
-1. <span data-ttu-id="a3109-444">คลิก **ควบคุมการเข้าถึง (IAM)** และจากนั้นเพิ่มแอป **"Power BI Premium"** ให้กับบทบาทผู้อ่าน</span><span class="sxs-lookup"><span data-stu-id="a3109-444">Click **Access control (IAM)**, and then add the **Power BI Premium** app to the reader role.</span></span> <span data-ttu-id="a3109-445">ถ้าคุณไม่สามารถค้นพบแอปด้วยชื่อ คุณยังสามารถเพิ่มแอปได้ด้วยตัวระบุของไคลเอ็นต์:`cb4dc29f-0bf4-402a-8b30-7511498ed654`</span><span class="sxs-lookup"><span data-stu-id="a3109-445">If you are unable to find the app by name, you can also add it by client identifier: `cb4dc29f-0bf4-402a-8b30-7511498ed654`.</span></span>
+1. คลิก **ควบคุมการเข้าถึง (IAM)** และจากนั้นเพิ่มแอป **"Power BI Premium"** ให้กับบทบาทผู้อ่าน ถ้าคุณไม่สามารถค้นพบแอปด้วยชื่อ คุณยังสามารถเพิ่มแอปได้ด้วยตัวระบุของไคลเอ็นต์:`cb4dc29f-0bf4-402a-8b30-7511498ed654`
 
     ![สิทธิ์สำหรับ Power BI Embedded](media/service-admin-premium-monitor-capacity/embedded-permissions.png)
 
 > [!NOTE]
-> <span data-ttu-id="a3109-447">คุณสามารถตรวจสอบการใช้ความจุ Power BI Embedded ในแอปหรือพอร์ทัล Azure แต่ไม่ใช่ใน ในพอร์ทัลผู้ดูแลระบบ Power BI</span><span class="sxs-lookup"><span data-stu-id="a3109-447">You can monitor Power BI Embedded capacity usage in the app or the Azure portal, but not in the Power BI admin portal.</span></span>
+> คุณสามารถตรวจสอบการใช้ความจุ Power BI Embedded ในแอปหรือพอร์ทัล Azure แต่ไม่ใช่ใน ในพอร์ทัลผู้ดูแลระบบ Power BI
 
 
-## <a name="next-steps"></a><span data-ttu-id="a3109-448">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="a3109-448">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="a3109-449">การปรับ Power BI Premium ให้เหมาะสม</span><span class="sxs-lookup"><span data-stu-id="a3109-449">Optimizing Power BI Premium capacities</span></span>](service-premium-capacity-optimize.md)
+> [การปรับ Power BI Premium ให้เหมาะสม](service-premium-capacity-optimize.md)
 
-<span data-ttu-id="a3109-450">มีคำถามเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="a3109-450">More questions?</span></span> [<span data-ttu-id="a3109-451">ถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="a3109-451">Ask the Power BI Community</span></span>](https://community.powerbi.com/)
+มีคำถามเพิ่มเติมหรือไม่ [ถามชุมชน Power BI](https://community.powerbi.com/)
 
-<span data-ttu-id="a3109-452">Power BI ได้แนะนำ Power BI Premium Gen2 เข้ามาใช้งานเป็นข้อเสนอการแสดงตัวอย่าง ซึ่งปรับปรุงประสบการณ์การใช้งาน Power BI Premium ด้วยการปรับปรุงในสิ่งต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="a3109-452">Power BI has introduced Power BI Premium Gen2 as a preview offering, which improves the Power BI Premium experience with improvements in the following:</span></span>
-* <span data-ttu-id="a3109-453">ประสิทธิภาพการทำงาน</span><span class="sxs-lookup"><span data-stu-id="a3109-453">Performance</span></span>
-* <span data-ttu-id="a3109-454">สิทธิการใช้งานต่อผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="a3109-454">Per-user licensing</span></span>
-* <span data-ttu-id="a3109-455">ขนาดใหญ่ขึ้น</span><span class="sxs-lookup"><span data-stu-id="a3109-455">Greater scale</span></span>
-* <span data-ttu-id="a3109-456">เมตริกที่ดีขึ้น</span><span class="sxs-lookup"><span data-stu-id="a3109-456">Improved metrics</span></span>
-* <span data-ttu-id="a3109-457">การปรับขนาดอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="a3109-457">Autoscaling</span></span>
-* <span data-ttu-id="a3109-458">ลดค่าใช้จ่ายในการจัดการ</span><span class="sxs-lookup"><span data-stu-id="a3109-458">Reduced management overhead</span></span>
+Power BI ได้แนะนำ Power BI Premium Gen2 เข้ามาใช้งานเป็นข้อเสนอการแสดงตัวอย่าง ซึ่งปรับปรุงประสบการณ์การใช้งาน Power BI Premium ด้วยการปรับปรุงในสิ่งต่อไปนี้:
+* ประสิทธิภาพการทำงาน
+* สิทธิการใช้งานต่อผู้ใช้
+* ขนาดใหญ่ขึ้น
+* เมตริกที่ดีขึ้น
+* การปรับขนาดอัตโนมัติ
+* ลดค่าใช้จ่ายในการจัดการ
 
-<span data-ttu-id="a3109-459">สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Power BI Premium Gen2 โปรดดูที่ [Power BI Premium Generation 2 (ตัวอย่าง)](service-premium-what-is.md#power-bi-premium-generation-2-preview)</span><span class="sxs-lookup"><span data-stu-id="a3109-459">For more information about Power BI Premium Gen2, see [Power BI Premium Generation 2 (preview)](service-premium-what-is.md#power-bi-premium-generation-2-preview).</span></span>
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Power BI Premium Gen2 โปรดดูที่ [Power BI Premium Generation 2 (ตัวอย่าง)](service-premium-what-is.md#power-bi-premium-generation-2-preview)

@@ -8,952 +8,955 @@ ms.service: powerbi
 ms.subservice: powerbi-mobile
 ms.topic: conceptual
 ms.date: 12/17/2020
-ms.openlocfilehash: 8301b51ccbb2ac344e24a297f9a309fc3601b3e1
-ms.sourcegitcommit: 1cad78595cca1175b82c04458803764ac36e5e37
-ms.translationtype: HT
+ms.openlocfilehash: 4a50d35ee3aa25932537846a13fc2d75c6fa38df
+ms.sourcegitcommit: 1872a167d1e4d731ad00cf8a6d951c31aa54bcce
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98565587"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98925800"
 ---
-# <a name="whats-new-in-the-mobile-apps-for-power-bi"></a><span data-ttu-id="ca76f-103">มีอะไรใหม่ในแอปมือถือสำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-103">What's new in the mobile apps for Power BI</span></span>
-<span data-ttu-id="ca76f-104">สำหรับ "ข้อมูลอะไรใหม่" ที่เกี่ยวข้อง ให้ดู</span><span class="sxs-lookup"><span data-stu-id="ca76f-104">For related "What's New" information, see:</span></span>
+# <a name="whats-new-in-the-mobile-apps-for-power-bi"></a>มีอะไรใหม่ในแอปมือถือสำหรับ Power BI
+สำหรับ "ข้อมูลอะไรใหม่" ที่เกี่ยวข้อง ให้ดู
 
-* [<span data-ttu-id="ca76f-105">บล็อกทีมของ power BI สำหรับแอป mobile</span><span class="sxs-lookup"><span data-stu-id="ca76f-105">Power BI team blog for the mobile apps</span></span>](https://powerbi.microsoft.com/blog/tag/mobile/)
-* [<span data-ttu-id="ca76f-106">มีอะไรใหม่ใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="ca76f-106">What's new in Power BI Desktop</span></span>](../../fundamentals/desktop-latest-update.md)  
-* [<span data-ttu-id="ca76f-107">มีอะไรใหม่ในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-107">What's new in the Power BI service</span></span>](../../fundamentals/service-whats-new.md)
+* [บล็อกทีมของ power BI สำหรับแอป mobile](https://powerbi.microsoft.com/blog/tag/mobile/)
+* [มีอะไรใหม่ใน Power BI Desktop](../../fundamentals/desktop-latest-update.md)  
+* [มีอะไรใหม่ในบริการ Power BI](../../fundamentals/service-whats-new.md)
 
 >[!NOTE]
-><span data-ttu-id="ca76f-108">การสนับสนุนแอปอุปกรณ์เคลื่อนที่ Power BI สำหรับ **โทรศัพท์ที่ใช้ Windows 10 Mobile** จะถูกยกเลิกในวันที่ 16 มีนาคม 2021</span><span class="sxs-lookup"><span data-stu-id="ca76f-108">The Power BI mobile app support for **phones using Windows 10 Mobile** will be discontinued on March 16, 2021.</span></span> [<span data-ttu-id="ca76f-109">ศึกษาเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ca76f-109">Learn more</span></span>](/legal/powerbi/powerbi-mobile/power-bi-mobile-app-end-of-support-for-windows-phones)
+>การสนับสนุนแอปอุปกรณ์เคลื่อนที่ Power BI สำหรับ **โทรศัพท์ที่ใช้ Windows 10 Mobile** จะถูกยกเลิกในวันที่ 16 มีนาคม 2021 [ศึกษาเพิ่มเติม](/legal/powerbi/powerbi-mobile/power-bi-mobile-app-end-of-support-for-windows-phones)
 
-## <a name="december-2020"></a><span data-ttu-id="ca76f-110">ธันวาคม 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-110">December 2020</span></span>
-### <a name="weve-added-anomaly-detection-to-the-mobile-apps"></a><span data-ttu-id="ca76f-111">เราได้เพิ่มการตรวจหาสิ่งผิดปกติให้กับแอปสำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-111">We've added anomaly detection to the mobile apps</span></span>
-<span data-ttu-id="ca76f-112">หากผู้สร้างรายงานได้ตั้งค่าการตรวจหาสิ่งผิดปกติสำหรับการแสดงผลด้วยภาพของรายงาน คุณสามารถดูได้ว่าข้อมูลของคุณมีจุดสูงสุดสูงหรือต่ำอย่างไม่คาดคิดซึ่งเกิดจากค่าผิดปกติของข้อมูล (เช่น ความผิดปกติ)</span><span class="sxs-lookup"><span data-stu-id="ca76f-112">If the report creator has set up anomaly detection for a report visual, you can see if there are unexpectedly high peaks or low dips in your data caused by data outliers (i.e., anomalies).</span></span> [<span data-ttu-id="ca76f-113">เรียนรู้เพิ่มเติม!</span><span class="sxs-lookup"><span data-stu-id="ca76f-113">Learn more!</span></span>](mobile-reports-in-the-mobile-apps.md#investigate-anomalies-in-time-series-data)
+## <a name="january-2021"></a>มกราคม 2021
+### <a name="workspace-support-with-a-power-bi-free-license"></a>การสนับสนุนพื้นที่ทำงานด้วยสิทธิ์การใช้บริการ Power BI ฟรี
+ผู้ใช้ที่มีสิทธิ์การใช้งาน Power BI ฟรีสามารถดูและเข้าถึงพื้นที่ดำเนินการที่พวกเขาได้รับการเพิ่มเป็นผู้ชมโดยตรงจากรายการพื้นที่ทำงาน การเปลี่ยนแปลงนี้จะสามารถใช้ได้กับเนื้อหาที่โฮสต์บนความจุ Power BI Premium
+
+## <a name="december-2020"></a>ธันวาคม 2020
+### <a name="weve-added-anomaly-detection-to-the-mobile-apps"></a>เราได้เพิ่มการตรวจหาสิ่งผิดปกติให้กับแอปสำหรับอุปกรณ์เคลื่อนที่
+หากผู้สร้างรายงานได้ตั้งค่าการตรวจหาสิ่งผิดปกติสำหรับการแสดงผลด้วยภาพของรายงาน คุณสามารถดูได้ว่าข้อมูลของคุณมีจุดสูงสุดสูงหรือต่ำอย่างไม่คาดคิดซึ่งเกิดจากค่าผิดปกติของข้อมูล (เช่น ความผิดปกติ) [เรียนรู้เพิ่มเติม!](mobile-reports-in-the-mobile-apps.md#investigate-anomalies-in-time-series-data)
 
 ![สกรีนช็อตของการตรวจหาสิ่งผิดปกติ](media/mobile-whats-new-in-the-mobile-apps/mobile-anomaly-detection.png)
 
-### <a name="easily-find-your-orgs-endorsed-content"></a><span data-ttu-id="ca76f-115">ค้นหาเนื้อหาที่รับรองโดยองค์กรของคุณได้อย่างง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="ca76f-115">Easily find your org's endorsed content</span></span>
-<span data-ttu-id="ca76f-116">เนื้อหาที่ได้รับการ [เลื่อนระดับหรือได้รับการรับรอง](../../collaborate-share/service-endorsement-overview.md) ในบริการ Power BI ได้รับการติดแท็กในแอปด้วยป้ายแล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-116">Content that's been [promoted or certified](../../collaborate-share/service-endorsement-overview.md) in the Power BI service is now tagged in the app with a badge.</span></span> <span data-ttu-id="ca76f-117">ผู้สร้างรายงานโปรโมตเนื้อหาของตนเพื่อแสดงว่าพร้อมให้คุณใช้ (โปรโมต) หรือรับรองเนื้อหาของพวกเขาเพื่อแสดงว่าได้รับการอนุมัติจากองค์กรของคุณ (รับการรับรองแล้ว)</span><span class="sxs-lookup"><span data-stu-id="ca76f-117">Report creators promote their content to show that it's ready for you to use (promoted) or certify their content to show that it's been approved by your org (certified).</span></span>
+### <a name="easily-find-your-orgs-endorsed-content"></a>ค้นหาเนื้อหาที่รับรองโดยองค์กรของคุณได้อย่างง่ายดาย
+เนื้อหาที่ได้รับการ [เลื่อนระดับหรือได้รับการรับรอง](../../collaborate-share/service-endorsement-overview.md) ในบริการ Power BI ได้รับการติดแท็กในแอปด้วยป้ายแล้ว ผู้สร้างรายงานโปรโมตเนื้อหาของตนเพื่อแสดงว่าพร้อมให้คุณใช้ (โปรโมต) หรือรับรองเนื้อหาของพวกเขาเพื่อแสดงว่าได้รับการอนุมัติจากองค์กรของคุณ (รับการรับรองแล้ว)
 
 ![สกรีนช็อตของรายงานที่ได้รับการรับรองในข้อมูลรายงานบนอุปกรณ์เคลื่อนที่](media/mobile-whats-new-in-the-mobile-apps/mobile-apps-certified-badge.png)
 
-### <a name="weve-added-dark-mode-to-power-bi-mobile-android"></a><span data-ttu-id="ca76f-119">เราได้เพิ่มโหมดสีเข้มลงใน Power BI บนมือถือ (Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-119">We've added dark mode to Power BI mobile (Android)</span></span>
-<span data-ttu-id="ca76f-120">ลองใช้โหมดสีเข้มใหม่ในแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI สำหรับอุปกรณ์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-120">Try out the new dark mode in the Power BI mobile app for Android devices.</span></span> <span data-ttu-id="ca76f-121">ในโหมดมืดคุณจะเห็นข้อความสีบนพื้นหลังสีเข้มลดความสว่างของหน้าจอและทำให้ง่ายต่อการดูเนื้อหาของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-121">In dark mode, you'll see light text on a dark background, reducing the brightness of the screen and making it easier to see your content.</span></span> <span data-ttu-id="ca76f-122">คุณสามารถสลับระหว่างธีมในการตั้งค่าลักษณะที่ปรากฏของแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-122">You can switch between themes in the app appearance settings.</span></span> [<span data-ttu-id="ca76f-123">ศึกษาเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ca76f-123">Learn more</span></span>](mobile-apps-dark-mode.md)
+### <a name="weve-added-dark-mode-to-power-bi-mobile-android"></a>เราได้เพิ่มโหมดสีเข้มลงใน Power BI บนมือถือ (Android)
+ลองใช้โหมดสีเข้มใหม่ในแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI สำหรับอุปกรณ์ Android ในโหมดมืดคุณจะเห็นข้อความสีบนพื้นหลังสีเข้มลดความสว่างของหน้าจอและทำให้ง่ายต่อการดูเนื้อหาของคุณ คุณสามารถสลับระหว่างธีมในการตั้งค่าลักษณะที่ปรากฏของแอป [ศึกษาเพิ่มเติม](mobile-apps-dark-mode.md)
 
 ![สกรีนช็อตของโหมดสีเข้มในแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI สำหรับ Android](media/mobile-whats-new-in-the-mobile-apps/mobile-apps-dark-mode-android.png)
 
-### <a name="maximize-the-view-with-full-screen-mode-ipads"></a><span data-ttu-id="ca76f-125">ขยายมุมมองด้วยโหมดเต็มหน้าจอ (iPad)</span><span class="sxs-lookup"><span data-stu-id="ca76f-125">Maximize the view with full-screen mode (iPads)</span></span>
-<span data-ttu-id="ca76f-126">เราได้เพิ่มปุ่มใหม่ไปยังแอปบนอุปกรณ์เคลื่อนที่สำหรับ iPad ที่ช่วยให้คุณสามารถลบส่วนหัวและท้ายกระดาษของแอป ทำให้คุณมีพื้นที่สูงสุดในการดูเนื้อหาของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-126">We've now added a new button to the mobile app for iPads that lets you remove app headers and footers, giving you the maximum space for viewing your content.</span></span> <span data-ttu-id="ca76f-127">เพียงแตะปุ่มสลับเป็นแบบเต็มหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="ca76f-127">Simply tap the full-screen toggle button</span></span> ![สกรีนช็อตของไอคอนโหมดเต็มหน้าจอ](media/mobile-whats-new-in-the-mobile-apps/power-bi-full-screen-icon.png) <span data-ttu-id="ca76f-129">ที่มุมบนขวาของหน้าจอเพื่อสลับโหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-129">in the top right corner of the screen to switch between modes.</span></span>
+### <a name="maximize-the-view-with-full-screen-mode-ipads"></a>ขยายมุมมองด้วยโหมดเต็มหน้าจอ (iPad)
+เราได้เพิ่มปุ่มใหม่ไปยังแอปบนอุปกรณ์เคลื่อนที่สำหรับ iPad ที่ช่วยให้คุณสามารถลบส่วนหัวและท้ายกระดาษของแอป ทำให้คุณมีพื้นที่สูงสุดในการดูเนื้อหาของคุณ เพียงแตะปุ่มสลับเป็นแบบเต็มหน้าจอ ![สกรีนช็อตของไอคอนโหมดเต็มหน้าจอ](media/mobile-whats-new-in-the-mobile-apps/power-bi-full-screen-icon.png) ที่มุมบนขวาของหน้าจอเพื่อสลับโหมด
 
-## <a name="november-2020"></a><span data-ttu-id="ca76f-130">พฤศจิกายน 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-130">November 2020</span></span>
-### <a name="maximize-the-view-with-full-screen-mode-android-tablets"></a><span data-ttu-id="ca76f-131">ขยายมุมมองด้วยโหมดเต็มหน้าจอ (แท็บเล็ต Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-131">Maximize the view with full-screen mode (Android tablets)</span></span>
-<span data-ttu-id="ca76f-132">เราได้เพิ่มปุ่มใหม่ไปยังแอปบนอุปกรณ์เคลื่อนที่สำหรับแท็บเล็ต Android ที่ช่วยให้คุณสามารถลบส่วนหัวและท้ายกระดาษของแอป ทำให้คุณมีพื้นที่สูงสุดในการดูเนื้อหาของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-132">We've added a new button to the mobile app for Android tablets that lets you remove app headers and footers, giving you the maximum space for viewing your content.</span></span> <span data-ttu-id="ca76f-133">เพียงแตะปุ่มสลับเป็นแบบเต็มหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="ca76f-133">Simply tap the full-screen toggle button</span></span> ![สกรีนช็อตของไอคอนโหมดเต็มหน้าจอ](media/mobile-whats-new-in-the-mobile-apps/power-bi-full-screen-icon.png) <span data-ttu-id="ca76f-135">ที่มุมบนขวาของหน้าจอเพื่อสลับโหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-135">in the top right corner of the screen to switch between modes.</span></span>
+## <a name="november-2020"></a>พฤศจิกายน 2020
+### <a name="maximize-the-view-with-full-screen-mode-android-tablets"></a>ขยายมุมมองด้วยโหมดเต็มหน้าจอ (แท็บเล็ต Android)
+เราได้เพิ่มปุ่มใหม่ไปยังแอปบนอุปกรณ์เคลื่อนที่สำหรับแท็บเล็ต Android ที่ช่วยให้คุณสามารถลบส่วนหัวและท้ายกระดาษของแอป ทำให้คุณมีพื้นที่สูงสุดในการดูเนื้อหาของคุณ เพียงแตะปุ่มสลับเป็นแบบเต็มหน้าจอ ![สกรีนช็อตของไอคอนโหมดเต็มหน้าจอ](media/mobile-whats-new-in-the-mobile-apps/power-bi-full-screen-icon.png) ที่มุมบนขวาของหน้าจอเพื่อสลับโหมด
 
-## <a name="october-2020"></a><span data-ttu-id="ca76f-136">ตุลาคม 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-136">October 2020</span></span>
-### <a name="automatic-page-refresh-is-now-supported-windows"></a><span data-ttu-id="ca76f-137">การรีเฟรชหน้าอัตโนมัติตอนนี้ได้รับการรองรับ (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-137">Automatic page refresh is now supported (Windows)</span></span>
+## <a name="october-2020"></a>ตุลาคม 2020
+### <a name="automatic-page-refresh-is-now-supported-windows"></a>การรีเฟรชหน้าอัตโนมัติตอนนี้ได้รับการรองรับ (Windows)
 
-<span data-ttu-id="ca76f-138">ตอนนี้หน้ารายงานที่กำหนดค่าด้วย [การรีเฟรชหน้าอัตโนมัติ](../../create-reports/desktop-automatic-page-refresh.md) จะรีเฟรชโดยอัตโนมัติในแอป Power BI สำหรับอุปกรณ์ Windows</span><span class="sxs-lookup"><span data-stu-id="ca76f-138">Now, report pages configured with [auto page refresh](../../create-reports/desktop-automatic-page-refresh.md) will also automatically refresh in the Power BI app for Windows devices.</span></span> <span data-ttu-id="ca76f-139">และนี่ไม่ได้หมายความว่าเพียงแค่มุมมองรายงานปกติ</span><span class="sxs-lookup"><span data-stu-id="ca76f-139">And this doesn't mean just in regular report view.</span></span> <span data-ttu-id="ca76f-140">ด้วยการรีเฟรชหน้าอัตโนมัติ [การนำเสนอและสไลด์โชว์ของคุณ](mobile-windows-10-app-presentation-mode.md#slideshows) จะอัปเดตในแบบเรียลไทม์เพื่อให้แน่ใจว่าคุณจะแสดงข้อมูลทางธุรกิจล่าสุดและข้อมูลเชิงลึกอย่างต่อเนื่อง</span><span class="sxs-lookup"><span data-stu-id="ca76f-140">With auto page refresh, your [presentations and slideshows](mobile-windows-10-app-presentation-mode.md#slideshows) will also update in real-time, ensuring that you're always displaying the latest business data and insights.</span></span>
+ตอนนี้หน้ารายงานที่กำหนดค่าด้วย [การรีเฟรชหน้าอัตโนมัติ](../../create-reports/desktop-automatic-page-refresh.md) จะรีเฟรชโดยอัตโนมัติในแอป Power BI สำหรับอุปกรณ์ Windows และนี่ไม่ได้หมายความว่าเพียงแค่มุมมองรายงานปกติ ด้วยการรีเฟรชหน้าอัตโนมัติ [การนำเสนอและสไลด์โชว์ของคุณ](mobile-windows-10-app-presentation-mode.md#slideshows) จะอัปเดตในแบบเรียลไทม์เพื่อให้แน่ใจว่าคุณจะแสดงข้อมูลทางธุรกิจล่าสุดและข้อมูลเชิงลึกอย่างต่อเนื่อง
 
-### <a name="support-for-notch-displays-ios"></a><span data-ttu-id="ca76f-141">การรองรับสำหรับจอแสดงผลรอยบาก (iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-141">Support for notch displays (iOS)</span></span>
-<span data-ttu-id="ca76f-142">เราได้เพิ่มการรองรับสำหรับการแสดงผลบน iPhone และ Ipad ให้คุณเพิ่มพื้นที่หน้าจอสำหรับรายงานและแดชบอร์ดของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-142">We've added support for notch displays on iPhone and iPads, giving you more screen space for your reports and dashboards.</span></span> 
+### <a name="support-for-notch-displays-ios"></a>การรองรับสำหรับจอแสดงผลรอยบาก (iOS)
+เราได้เพิ่มการรองรับสำหรับการแสดงผลบน iPhone และ Ipad ให้คุณเพิ่มพื้นที่หน้าจอสำหรับรายงานและแดชบอร์ดของคุณ 
 
-## <a name="september-2020"></a><span data-ttu-id="ca76f-143">กันยายน 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-143">September 2020</span></span>
-### <a name="power-bi-app-preview-for-hololens-2-is-out-in-the-stores"></a><span data-ttu-id="ca76f-144">แอป Power BI (ตัวอย่าง) สำหรับ HoloLens 2 อยู่ในร้านค้า!</span><span class="sxs-lookup"><span data-stu-id="ca76f-144">Power BI app (preview) for HoloLens 2 is out in the stores!</span></span>
+## <a name="september-2020"></a>กันยายน 2020
+### <a name="power-bi-app-preview-for-hololens-2-is-out-in-the-stores"></a>แอป Power BI (ตัวอย่าง) สำหรับ HoloLens 2 อยู่ในร้านค้า!
 
-<span data-ttu-id="ca76f-145">แอป Power BI สำหรับ HoloLens 2 มอบประสบการณ์การใช้งานอย่างเต็มที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-145">The Power BI app for HoloLens 2 brings you an entirely immersive experience.</span></span> <span data-ttu-id="ca76f-146">ด้วยการใช้ระบบท่าทางมือของ HoloLens 2 คุณสามารถรับรายงานและแดชบอร์ดที่คุณชื่นชอบออกจากสายพานเครื่องมือ ปรับขนาดและวางไว้รอบตัวคุณในพื้นที่ที่คุณต้องการและแม้แต่เรียกดูหน้ารายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-146">Using HoloLens 2’s hand gesture system, you can get your favorite reports and dashboards out of the tool belt, resize and place them around you in space where you need them, and even browse through the pages of the report.</span></span> <span data-ttu-id="ca76f-147">การอัปเดตรายงานและแดชบอร์ดในขณะที่คุณกำลังใช้แอป ดังนั้นถ้ามีการเปลี่ยนแปลงข้อมูลคุณจะเห็นการเปลี่ยนแปลงเหล่านั้นทันที</span><span class="sxs-lookup"><span data-stu-id="ca76f-147">Reports and dashboards update while you’re using the app, so if data changes you’ll see those changes right away.</span></span> <span data-ttu-id="ca76f-148">เรียนรู้เพิ่มเติมใน [เอกสาร](mobile-hololens2-app.md) ของเราและ [บล็อก](https://powerbi.microsoft.com/blog/power-bi-app-for-mixed-reality-now-available-for-hololens-2/)!</span><span class="sxs-lookup"><span data-stu-id="ca76f-148">Learn more in our [documentation](mobile-hololens2-app.md) and [blog](https://powerbi.microsoft.com/blog/power-bi-app-for-mixed-reality-now-available-for-hololens-2/)!</span></span>
+แอป Power BI สำหรับ HoloLens 2 มอบประสบการณ์การใช้งานอย่างเต็มที่ ด้วยการใช้ระบบท่าทางมือของ HoloLens 2 คุณสามารถรับรายงานและแดชบอร์ดที่คุณชื่นชอบออกจากสายพานเครื่องมือ ปรับขนาดและวางไว้รอบตัวคุณในพื้นที่ที่คุณต้องการและแม้แต่เรียกดูหน้ารายงาน การอัปเดตรายงานและแดชบอร์ดในขณะที่คุณกำลังใช้แอป ดังนั้นถ้ามีการเปลี่ยนแปลงข้อมูลคุณจะเห็นการเปลี่ยนแปลงเหล่านั้นทันที เรียนรู้เพิ่มเติมใน [เอกสาร](mobile-hololens2-app.md) ของเราและ [บล็อก](https://powerbi.microsoft.com/blog/power-bi-app-for-mixed-reality-now-available-for-hololens-2/)!
 
 
-## <a name="august-2020"></a><span data-ttu-id="ca76f-149">สิงหาคม 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-149">August 2020</span></span>
-### <a name="weve-improved-how-you-navigate-to-your-content-ios-and-android"></a><span data-ttu-id="ca76f-150">เราได้ปรับปรุงวิธีการนำทางไปยังเนื้อหาของคุณ (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-150">We've improved how you navigate to your content (iOS and Android)</span></span>
-<span data-ttu-id="ca76f-151">ในตอนนี้ คุณสามารถไปยังเนื้อหาส่วนต่าง ๆ ของคุณได้อย่างรวดเร็วและง่ายดายด้วย **ทรีการนำทางใหม่** ซึ่งสามารถใช้งานได้จากหัวข้อแบบเลื่อนลงในรายงาน แผงหน้าปัด และแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-151">Now you can get around your content quickly and easily with a **new navigation tree**, available from the header drop down in reports, dashboards, and apps.</span></span> <span data-ttu-id="ca76f-152">คุณจะเห็นลำดับชั้นของตำแหน่งของเนื้อหาของคุณได้อย่างรวดเร็ว และคุณสามารถนำทางตามลำดับชั้นเนื้อหาไปยังเนื้อหาข้างเคียง หรือแม้กระทั่งกลับไปยังหน้าหลักของคุณได้อย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-152">You see the location hierarchy of your content at a glance, and you can easily navigate up the content hierarchy, go to sibling content, or even get quickly back to your home page.</span></span> <span data-ttu-id="ca76f-153">หากรายการที่คุณดูเป็นส่วนหนึ่งของแอป ทรีจะแสดงเนื้อหาทั้งหมดของแอป -- ส่วน ลิงค์ และรายงานต่าง ๆ รวมถึงแผงหน้าปัดทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-153">If the item you’re viewing is part of an app, the tree displays the entire contents of the app--sections, links, and all reports and dashboards.</span></span> <span data-ttu-id="ca76f-154">ถ้ารายการที่คุณกำลังดูเป็นรายงาน ระบบจะแสดงรายการหน้ารายงานที่มองเห็นได้ทั้งหมดด้วย</span><span class="sxs-lookup"><span data-stu-id="ca76f-154">If the item you’re viewing is a report, you’ll also find a list of all visible report pages.</span></span> <span data-ttu-id="ca76f-155">คุณจะสามารถย้ายจากหน้าหนึ่งไปยังหน้าอื่น ๆ ได้อย่างง่ายดายกว่าที่เคย</span><span class="sxs-lookup"><span data-stu-id="ca76f-155">It's never been so easy to get from one page to another!</span></span> <span data-ttu-id="ca76f-156">ลองตรวจสอบดู</span><span class="sxs-lookup"><span data-stu-id="ca76f-156">Check it out!</span></span> 
+## <a name="august-2020"></a>สิงหาคม 2020
+### <a name="weve-improved-how-you-navigate-to-your-content-ios-and-android"></a>เราได้ปรับปรุงวิธีการนำทางไปยังเนื้อหาของคุณ (iOS และ Android)
+ในตอนนี้ คุณสามารถไปยังเนื้อหาส่วนต่าง ๆ ของคุณได้อย่างรวดเร็วและง่ายดายด้วย **ทรีการนำทางใหม่** ซึ่งสามารถใช้งานได้จากหัวข้อแบบเลื่อนลงในรายงาน แผงหน้าปัด และแอป คุณจะเห็นลำดับชั้นของตำแหน่งของเนื้อหาของคุณได้อย่างรวดเร็ว และคุณสามารถนำทางตามลำดับชั้นเนื้อหาไปยังเนื้อหาข้างเคียง หรือแม้กระทั่งกลับไปยังหน้าหลักของคุณได้อย่างรวดเร็ว หากรายการที่คุณดูเป็นส่วนหนึ่งของแอป ทรีจะแสดงเนื้อหาทั้งหมดของแอป -- ส่วน ลิงค์ และรายงานต่าง ๆ รวมถึงแผงหน้าปัดทั้งหมด ถ้ารายการที่คุณกำลังดูเป็นรายงาน ระบบจะแสดงรายการหน้ารายงานที่มองเห็นได้ทั้งหมดด้วย คุณจะสามารถย้ายจากหน้าหนึ่งไปยังหน้าอื่น ๆ ได้อย่างง่ายดายกว่าที่เคย ลองตรวจสอบดู 
 
 ![ภาพหน้าจอแสดงทรีของแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI](media/mobile-whats-new-in-the-mobile-apps/power-bi-mobile-nav-tree1.png)
 
-### <a name="share-from-power-bi-using-your-favorite-apps-ios-and-android"></a><span data-ttu-id="ca76f-158">แบ่งปันข้อมูลจาก Power BI โดยใช้แอปสำหรับอุปกรณ์เคลื่อนที่ที่คุณชื่นชอบ (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-158">Share from Power BI using your favorite apps (iOS and Android)</span></span>
-<span data-ttu-id="ca76f-159">ในตอนน ี้คุณสามารถแบ่งปันลิงก์ไปยังเนื้อหา Power BI ให้แก่ผู้ที่อยู่ในรายชื่อผู้ติดต่อของคุณได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-159">Now you can share links to Power BI content with your contacts.</span></span> <span data-ttu-id="ca76f-160">ใช้การแชร์แบบใหม่ที่หัวข้อเพื่อส่งลิงค์โดยใช้แอปการทำงานร่วมกันที่คุณมีในอุปกรณ์ของคุณ เช่น Microsoft Teams แอปเมล ฯลฯ ลิงค์จะจับภาพมุมมองปัจจุบัน ดังนั้นคุณจีึงสามารถแบ่งปันมุมมองรายงานที่กรองแล้วได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-160">Use the new share action in the header to send the link, using any collaboration app you have on your device, such as Microsoft Teams, a mail app, etc. The link captures the current view, so you can even share filtered report views.</span></span>
+### <a name="share-from-power-bi-using-your-favorite-apps-ios-and-android"></a>แบ่งปันข้อมูลจาก Power BI โดยใช้แอปสำหรับอุปกรณ์เคลื่อนที่ที่คุณชื่นชอบ (iOS และ Android)
+ในตอนน ี้คุณสามารถแบ่งปันลิงก์ไปยังเนื้อหา Power BI ให้แก่ผู้ที่อยู่ในรายชื่อผู้ติดต่อของคุณได้ ใช้การแชร์แบบใหม่ที่หัวข้อเพื่อส่งลิงค์โดยใช้แอปการทำงานร่วมกันที่คุณมีในอุปกรณ์ของคุณ เช่น Microsoft Teams แอปเมล ฯลฯ ลิงค์จะจับภาพมุมมองปัจจุบัน ดังนั้นคุณจีึงสามารถแบ่งปันมุมมองรายงานที่กรองแล้วได้
 
 ![ภาพหน้าจอแสดงไอคอนแอป Share อุปกรณ์เคลื่อนที่ Power BI](media/mobile-whats-new-in-the-mobile-apps/power-bi-mobile-share.png)
 
-### <a name="pinch-and-zoom-is-now-available-in-all-report-views---on-both-phones-and-tablets-ios-and-android"></a><span data-ttu-id="ca76f-162">สามารถย่อและขยายมุมมองรายงานได้จากทั้งโทรศัพท์และแท็บเล็ต (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-162">Pinch and zoom is now available in all report views - on both phones and tablets (iOS and Android)</span></span>   
-<span data-ttu-id="ca76f-163">เราได้เปิดใช้งานการย่อและซูมในมุมมองรายงานทั้งหมด ซึ่งช่วยให้คุณสามารถซูมและย่อเนื้อหารายงานบนโทรศัพท์หรือแท็บเล็ตของคุณได้ง่ายยิ่งขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-163">We've enabled pinch and zoom in all report views, making it easier for you to zoom in and out of your report content, whether you're on your phone or on your tablet.</span></span>
+### <a name="pinch-and-zoom-is-now-available-in-all-report-views---on-both-phones-and-tablets-ios-and-android"></a>สามารถย่อและขยายมุมมองรายงานได้จากทั้งโทรศัพท์และแท็บเล็ต (iOS และ Android)   
+เราได้เปิดใช้งานการย่อและซูมในมุมมองรายงานทั้งหมด ซึ่งช่วยให้คุณสามารถซูมและย่อเนื้อหารายงานบนโทรศัพท์หรือแท็บเล็ตของคุณได้ง่ายยิ่งขึ้น
 
-### <a name="auto-play-a-slideshow-on-startup-windows"></a><span data-ttu-id="ca76f-164">เล่นสไลด์โชว์อัตโนมัติเมื่อเริ่มต้น (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-164">Auto play a slideshow on startup (Windows)</span></span>
-<span data-ttu-id="ca76f-165">คุณสามารถเลือกให้เล่นรายงานโดยอัตโนมัติในสไลด์โชว์เมื่อแอป Power BI Windows เริ่มทำงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-165">You can choose a report to automatically play in a slideshow when the Power BI Windows app is launched.</span></span> <span data-ttu-id="ca76f-166">ซึ่งจะมีประโยชน์ในการสร้างประสบการณ์เหมือนกับการใช้คีออสที่มีการแสดงรายงานต่อสาธารณะโดยไม่ต้องมีการดำเนินการเอง</span><span class="sxs-lookup"><span data-stu-id="ca76f-166">This is useful for creating a kiosk-like experience that runs a report in public displays without any manual intervention.</span></span> [<span data-ttu-id="ca76f-167">เรียนรู้เพิ่มเติม!</span><span class="sxs-lookup"><span data-stu-id="ca76f-167">Learn more!</span></span>](mobile-windows-10-app-presentation-mode.md#auto-play-a-slideshow-on-startup)
+### <a name="auto-play-a-slideshow-on-startup-windows"></a>เล่นสไลด์โชว์อัตโนมัติเมื่อเริ่มต้น (Windows)
+คุณสามารถเลือกให้เล่นรายงานโดยอัตโนมัติในสไลด์โชว์เมื่อแอป Power BI Windows เริ่มทำงาน ซึ่งจะมีประโยชน์ในการสร้างประสบการณ์เหมือนกับการใช้คีออสที่มีการแสดงรายงานต่อสาธารณะโดยไม่ต้องมีการดำเนินการเอง [เรียนรู้เพิ่มเติม!](mobile-windows-10-app-presentation-mode.md#auto-play-a-slideshow-on-startup)
 
-## <a name="july-2020"></a><span data-ttu-id="ca76f-168">กรกฎาคม 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-168">July 2020</span></span>
-### <a name="the-power-bi-mobile-app-for-windows-now-supports-organizational-branding"></a><span data-ttu-id="ca76f-169">ตอนนี้แอป Power BI สำหรับอุปกรณ์เคลื่อนที่สำหรับ Windows รองรับการสร้างแบรนด์ขององค์กรแล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-169">The Power BI mobile app for Windows now supports organizational branding</span></span>
-<span data-ttu-id="ca76f-170">ในขณะนี้การเปลี่ยนแปลงใดก็ตามที่ผู้ดูแลทำกับรูปลักษณ์และความรู้สึกของ Power BI เพื่อให้ตรงกับธีมการสร้างแบรนด์ขององค์กรคุณจะปรากฏในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-170">Now, any changes the administrator makes to the look and feel of Power BI in order to match your organization's branding theme will also appear in the Power BI mobile app.</span></span> <span data-ttu-id="ca76f-171">การเปลี่ยนแปลงดังกล่าวอาจมีชุดรูปแบบสีใหม่สำหรับแถบนำทางด้านบน โลโก้ขององค์กรของคุณ และรูปแบนเนอร์</span><span class="sxs-lookup"><span data-stu-id="ca76f-171">Such changes might include a new color scheme for the top navigation bar, your organization's logo, and a banner image.</span></span>  
+## <a name="july-2020"></a>กรกฎาคม 2020
+### <a name="the-power-bi-mobile-app-for-windows-now-supports-organizational-branding"></a>ตอนนี้แอป Power BI สำหรับอุปกรณ์เคลื่อนที่สำหรับ Windows รองรับการสร้างแบรนด์ขององค์กรแล้ว
+ในขณะนี้การเปลี่ยนแปลงใดก็ตามที่ผู้ดูแลทำกับรูปลักษณ์และความรู้สึกของ Power BI เพื่อให้ตรงกับธีมการสร้างแบรนด์ขององค์กรคุณจะปรากฏในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ การเปลี่ยนแปลงดังกล่าวอาจมีชุดรูปแบบสีใหม่สำหรับแถบนำทางด้านบน โลโก้ขององค์กรของคุณ และรูปแบนเนอร์  
 
-### <a name="disable-single-sign-on-via-remote-configuration-ios-and-android"></a><span data-ttu-id="ca76f-172">ปิดใช้งานการลงชื่อเข้าระบบครั้งเดียวผ่านการกำหนดค่าระยะไกล (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-172">Disable single sign-on via remote configuration (iOS and Android)</span></span>
-<span data-ttu-id="ca76f-173">ขณะนี้ผู้ดูแลระบบ IT สามารถปิดใช้งานการลงชื่อเข้าใช้แบบครั้งเดียวไปยังแอป Power BI สำหรับอุปกรณ์เคลื่อน เพิ่มความปลอดภัยและการปฏิบัติตามการอนุญาตบนอุปกรณ์ที่มีผู้ใช้หลายคน</span><span class="sxs-lookup"><span data-stu-id="ca76f-173">IT administrators can now remotely disable single sign-on to the Power BI mobile app, enhancing security and permissions compliance on multi-user devices.</span></span> [<span data-ttu-id="ca76f-174">เรียนรู้เพิ่มเติม!</span><span class="sxs-lookup"><span data-stu-id="ca76f-174">Learn more!</span></span>](mobile-app-configuration.md#disable-single-sign-on-ios-and-android)
+### <a name="disable-single-sign-on-via-remote-configuration-ios-and-android"></a>ปิดใช้งานการลงชื่อเข้าระบบครั้งเดียวผ่านการกำหนดค่าระยะไกล (iOS และ Android)
+ขณะนี้ผู้ดูแลระบบ IT สามารถปิดใช้งานการลงชื่อเข้าใช้แบบครั้งเดียวไปยังแอป Power BI สำหรับอุปกรณ์เคลื่อน เพิ่มความปลอดภัยและการปฏิบัติตามการอนุญาตบนอุปกรณ์ที่มีผู้ใช้หลายคน [เรียนรู้เพิ่มเติม!](mobile-app-configuration.md#disable-single-sign-on-ios-and-android)
 
-## <a name="june-2020"></a><span data-ttu-id="ca76f-175">มิถุนายน 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-175">June 2020</span></span>
-### <a name="show-your-bookmarks-in-slideshows-windows"></a><span data-ttu-id="ca76f-176">แสดงบุ๊กมาร์กของคุณในการนำเสนอสไลด์ (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-176">Show your bookmarks in slideshows (Windows)</span></span>
-<span data-ttu-id="ca76f-177">ขณะนี้คุณสามารถใส่บุ๊กมาร์กรายงานและบุ๊กมาร์กส่วนบุคคลในการนำเสนอสไลด์ของคุณได้โดยอัตโนมัติในฐานะส่วนหนึ่งของงานนำเสนอเพื่อเน้นข้อมูลเชิงลึกที่เฉพาะเจาะจงในข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-177">Now you can include report and personal bookmarks in your slideshows, automatically as part of the presentation, to highlight specific insights in your data.</span></span>
-[<span data-ttu-id="ca76f-178">ลองใช้ดูได้!</span><span class="sxs-lookup"><span data-stu-id="ca76f-178">Check it out!</span></span>](mobile-windows-10-app-presentation-mode.md#use-presentation-mode)
+## <a name="june-2020"></a>มิถุนายน 2020
+### <a name="show-your-bookmarks-in-slideshows-windows"></a>แสดงบุ๊กมาร์กของคุณในการนำเสนอสไลด์ (Windows)
+ขณะนี้คุณสามารถใส่บุ๊กมาร์กรายงานและบุ๊กมาร์กส่วนบุคคลในการนำเสนอสไลด์ของคุณได้โดยอัตโนมัติในฐานะส่วนหนึ่งของงานนำเสนอเพื่อเน้นข้อมูลเชิงลึกที่เฉพาะเจาะจงในข้อมูลของคุณ
+[ลองใช้ดูได้!](mobile-windows-10-app-presentation-mode.md#use-presentation-mode)
 
-## <a name="may-2020"></a><span data-ttu-id="ca76f-179">พฤษภาคม 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-179">May 2020</span></span>
-### <a name="weve-added-dark-mode-to-power-bi-mobile-ios"></a><span data-ttu-id="ca76f-180">เราได้เพิ่มโหมดมืดลงใน Power BI บนมือถือ (iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-180">We've added dark mode to Power BI mobile (iOS)</span></span>
-<span data-ttu-id="ca76f-181">ลองใช้โหมดมืดใหม่ในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่สำหรับ iOS13</span><span class="sxs-lookup"><span data-stu-id="ca76f-181">Try out the new dark mode in the Power BI mobile app for iOS13.</span></span> <span data-ttu-id="ca76f-182">ในโหมดมืดคุณจะเห็นข้อความสีบนพื้นหลังสีเข้มลดความสว่างของหน้าจอและทำให้ง่ายต่อการดูเนื้อหาของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-182">In dark mode, you'll see light text on a dark background, reducing the brightness of the screen and making it easier to see your content.</span></span> <span data-ttu-id="ca76f-183">คุณสามารถสลับระหว่างธีมในการตั้งค่าลักษณะที่ปรากฏของแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-183">You can switch between themes in the app appearance settings.</span></span> [<span data-ttu-id="ca76f-184">ศึกษาเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ca76f-184">Learn more</span></span>](mobile-apps-dark-mode.md)
+## <a name="may-2020"></a>พฤษภาคม 2020
+### <a name="weve-added-dark-mode-to-power-bi-mobile-ios"></a>เราได้เพิ่มโหมดมืดลงใน Power BI บนมือถือ (iOS)
+ลองใช้โหมดมืดใหม่ในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่สำหรับ iOS13 ในโหมดมืดคุณจะเห็นข้อความสีบนพื้นหลังสีเข้มลดความสว่างของหน้าจอและทำให้ง่ายต่อการดูเนื้อหาของคุณ คุณสามารถสลับระหว่างธีมในการตั้งค่าลักษณะที่ปรากฏของแอป [ศึกษาเพิ่มเติม](mobile-apps-dark-mode.md)
 
 ![โหมดมืดในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่](media/mobile-whats-new-in-the-mobile-apps/mobile-apps-dark-mode.png)
 
-### <a name="apply-bookmarks-in-presentation-mode-windows"></a><span data-ttu-id="ca76f-186">ใช้บุ๊กมาร์กในโหมดการนำเสนอ (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-186">Apply bookmarks in presentation mode (Windows)</span></span>
-<span data-ttu-id="ca76f-187">ขณะนี้เมื่อนำเสนอรายงานในโหมดการนำเสนอ คุณสามารถใช้ทั้งบุ๊กมาร์กส่วนบุคคลและบุ๊กมาร์กรายงานกับหน้ารายงานได้เพื่อบอกเล่าเรื่องราวเกี่ยวกับข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-187">Now, when presenting a report in presentation mode, you can apply both personal and report bookmarks to report pages, telling the story about your data.</span></span> [<span data-ttu-id="ca76f-188">ลองใช้ดูได้!</span><span class="sxs-lookup"><span data-stu-id="ca76f-188">Check it out!</span></span>](mobile-windows-10-app-presentation-mode.md#use-presentation-mode)
+### <a name="apply-bookmarks-in-presentation-mode-windows"></a>ใช้บุ๊กมาร์กในโหมดการนำเสนอ (Windows)
+ขณะนี้เมื่อนำเสนอรายงานในโหมดการนำเสนอ คุณสามารถใช้ทั้งบุ๊กมาร์กส่วนบุคคลและบุ๊กมาร์กรายงานกับหน้ารายงานได้เพื่อบอกเล่าเรื่องราวเกี่ยวกับข้อมูลของคุณ [ลองใช้ดูได้!](mobile-windows-10-app-presentation-mode.md#use-presentation-mode)
 
-## <a name="april-2020"></a><span data-ttu-id="ca76f-189">เมษายน 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-189">April 2020</span></span>
+## <a name="april-2020"></a>เมษายน 2020
 
-### <a name="sharing-from-workspaces-is-now-available"></a><span data-ttu-id="ca76f-190">การแชร์จากพื้นที่ทำงานพร้อมใช้งานแล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-190">Sharing from workspaces is now available</span></span>
-<span data-ttu-id="ca76f-191">เราได้เพิ่มความสามารถในการแชร์รายงานและแดชบอร์ดจากพื้นที่ทำงานแล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-191">We've added the capability to share reports and dashboards from workspaces.</span></span> <span data-ttu-id="ca76f-192">ในขณะนี้คุณสามารถแชร์เนื้อหาของคุณได้จาก "พื้นที่ทำงานของฉัน" และจากพื้นที่ทำงานอื่นๆ หากเจ้าของพื้นที่ทำงานอนุญาต เช่นเดียวกับในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-192">You can now share your content from "My workspace" and from other workspaces if the workspace owner allows it, just like in the Power BI service.</span></span> 
+### <a name="sharing-from-workspaces-is-now-available"></a>การแชร์จากพื้นที่ทำงานพร้อมใช้งานแล้ว
+เราได้เพิ่มความสามารถในการแชร์รายงานและแดชบอร์ดจากพื้นที่ทำงานแล้ว ในขณะนี้คุณสามารถแชร์เนื้อหาของคุณได้จาก "พื้นที่ทำงานของฉัน" และจากพื้นที่ทำงานอื่นๆ หากเจ้าของพื้นที่ทำงานอนุญาต เช่นเดียวกับในบริการ Power BI 
 
-### <a name="dashboards-now-support-full-screen-mode-ios-and-android"></a><span data-ttu-id="ca76f-193">แดชบอร์ดสนับสนุนโหมดเต็มหน้าจอ (iOS และ Android) แล้วในขณะนี้</span><span class="sxs-lookup"><span data-stu-id="ca76f-193">Dashboards now support full-screen mode (iOS and Android)</span></span>
-<span data-ttu-id="ca76f-194">ในขณะนี้คุณสามารถดูแดชบอร์ดของคุณได้ในโหมดเต็มหน้าจอ ซึ่งช่วยให้คุณมีพื้นที่ในการดูเนื้อหาแดชบอร์ดมากขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-194">Now you can view your dashboards in full-screen mode, giving you more space to view your dashboard content.</span></span> 
+### <a name="dashboards-now-support-full-screen-mode-ios-and-android"></a>แดชบอร์ดสนับสนุนโหมดเต็มหน้าจอ (iOS และ Android) แล้วในขณะนี้
+ในขณะนี้คุณสามารถดูแดชบอร์ดของคุณได้ในโหมดเต็มหน้าจอ ซึ่งช่วยให้คุณมีพื้นที่ในการดูเนื้อหาแดชบอร์ดมากขึ้น 
 
-## <a name="march-2020"></a><span data-ttu-id="ca76f-195">มีนาคม 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-195">March 2020</span></span>
+## <a name="march-2020"></a>มีนาคม 2020
 
-### <a name="use-shortcuts-and-google-search-to-launch-your-content-android"></a><span data-ttu-id="ca76f-196">ใช้ทางลัดและ Google Search เพื่อเปิดใช้เนื้อหาของคุณ (แอนดรอยด์)</span><span class="sxs-lookup"><span data-stu-id="ca76f-196">Use shortcuts and Google Search to launch your content (Android)</span></span>
-<span data-ttu-id="ca76f-197">เราได้ผสานทั้ง้ทางลัดและ Google Search เข้าไว้ในแอป Power BI เพื่อให้คุณสามารถค้นหาและเปิดใช้ข้อมูลของคุณได้อย่างง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="ca76f-197">We've made it easier to find and launch your data by integrating both shortcuts and Google Search with the Power BI app.</span></span> <span data-ttu-id="ca76f-198">สร้างทางลัดเพื่อเข้าถึงรายงานและแดชบอร์ดที่คุณชื่นชอบได้โดยตรงจากหน้าจอหลักของอุปกรณ์ของคุณได้อย่างง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="ca76f-198">Create shortcuts for easy access to your favorite reports and dashboards directly from your device's home screen.</span></span> <span data-ttu-id="ca76f-199">แล้วใช้ Google Search เพื่อค้นหาและเปิดเนื้อหา Power BI ของคุณได้อย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-199">And use Google Search to quickly search for and open your Power BI content.</span></span> <span data-ttu-id="ca76f-200">เรียนรู้เพิ่มเติมเกี่ยวกับ [ทางลัดของแอปแอนดรอยด์](mobile-app-quick-access-shortcuts.md)และ [Google Search](mobile-app-find-access-google-search.md)!</span><span class="sxs-lookup"><span data-stu-id="ca76f-200">Learn more about [Android app shortcuts](mobile-app-quick-access-shortcuts.md) and [Google Search](mobile-app-find-access-google-search.md)!</span></span>
+### <a name="use-shortcuts-and-google-search-to-launch-your-content-android"></a>ใช้ทางลัดและ Google Search เพื่อเปิดใช้เนื้อหาของคุณ (แอนดรอยด์)
+เราได้ผสานทั้ง้ทางลัดและ Google Search เข้าไว้ในแอป Power BI เพื่อให้คุณสามารถค้นหาและเปิดใช้ข้อมูลของคุณได้อย่างง่ายดาย สร้างทางลัดเพื่อเข้าถึงรายงานและแดชบอร์ดที่คุณชื่นชอบได้โดยตรงจากหน้าจอหลักของอุปกรณ์ของคุณได้อย่างง่ายดาย แล้วใช้ Google Search เพื่อค้นหาและเปิดเนื้อหา Power BI ของคุณได้อย่างรวดเร็ว เรียนรู้เพิ่มเติมเกี่ยวกับ [ทางลัดของแอปแอนดรอยด์](mobile-app-quick-access-shortcuts.md)และ [Google Search](mobile-app-find-access-google-search.md)!
 
-### <a name="enhanced-security-using-device-protection-preview-android"></a><span data-ttu-id="ca76f-201">ความปลอดภัยขั้นสูงที่ใช้การป้องกันอุปกรณ์ (ตัวอย่าง) (แอนดรอยด์)</span><span class="sxs-lookup"><span data-stu-id="ca76f-201">Enhanced security using device protection (preview) (Android)</span></span>
-<span data-ttu-id="ca76f-202">ใช้ความสามารถในการป้องกันที่อุปกรณ์ของคุณมีอยู่แล้วเพื่อปกป้องแอป Power BI ของคุณและรับสิทธิส่วนบุคคลที่คุณต้องการ</span><span class="sxs-lookup"><span data-stu-id="ca76f-202">Use your device's built-in protection capabilities to secure your Power BI app and get the privacy you need.</span></span> <span data-ttu-id="ca76f-203">การใช้การรับรองความถูกต้องทางชีวมิติ (รหัสลายนิ้วมือ) เพื่อเข้าถึงแอป Power BI ที่ช่วยให้คุณมั่นใจว่าระบบจะเก็บข้อมูลของคุณไว้เป็นส่วนตัวเฉพาะคุณและคุณจะสามารถมองเห็นได้แต่เพียงผู้เดียวเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-203">Requiring biometric authentication (Fingerprint ID) for accessing the Power BI app ensures your data is kept private and seen by your eyes only.</span></span> [<span data-ttu-id="ca76f-204">เรียนรู้เกี่ยวกับการเข้าถึงที่ปลอดภัยอย่างง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="ca76f-204">Learn about native secure access</span></span>](mobile-native-secure-access.md)
+### <a name="enhanced-security-using-device-protection-preview-android"></a>ความปลอดภัยขั้นสูงที่ใช้การป้องกันอุปกรณ์ (ตัวอย่าง) (แอนดรอยด์)
+ใช้ความสามารถในการป้องกันที่อุปกรณ์ของคุณมีอยู่แล้วเพื่อปกป้องแอป Power BI ของคุณและรับสิทธิส่วนบุคคลที่คุณต้องการ การใช้การรับรองความถูกต้องทางชีวมิติ (รหัสลายนิ้วมือ) เพื่อเข้าถึงแอป Power BI ที่ช่วยให้คุณมั่นใจว่าระบบจะเก็บข้อมูลของคุณไว้เป็นส่วนตัวเฉพาะคุณและคุณจะสามารถมองเห็นได้แต่เพียงผู้เดียวเท่านั้น [เรียนรู้เกี่ยวกับการเข้าถึงที่ปลอดภัยอย่างง่ายดาย](mobile-native-secure-access.md)
 
-### <a name="scanning-is-now-available-on-ipad"></a><span data-ttu-id="ca76f-205">การสแกนพร้อมใช้งานบน iPad แล้วในขณะนี้</span><span class="sxs-lookup"><span data-stu-id="ca76f-205">Scanning is now available on iPad</span></span>
-<span data-ttu-id="ca76f-206">ในขณะนี้ คุณสามารถสแกนบาร์โค้ดจาก iPad ของคุณเพื่อกรองรายงานของคุณและใช้คิวอาร์โค้ดเพื่อเปิดรายงานอย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-206">Now, right from your iPad, you can scan barcodes to filter your reports, and use QR codes to open reports quickly.</span></span>  
+### <a name="scanning-is-now-available-on-ipad"></a>การสแกนพร้อมใช้งานบน iPad แล้วในขณะนี้
+ในขณะนี้ คุณสามารถสแกนบาร์โค้ดจาก iPad ของคุณเพื่อกรองรายงานของคุณและใช้คิวอาร์โค้ดเพื่อเปิดรายงานอย่างรวดเร็ว  
 
-### <a name="updated-filtering-experience"></a><span data-ttu-id="ca76f-207">ประสบการณ์การกรองที่อัปเดตใหม่</span><span class="sxs-lookup"><span data-stu-id="ca76f-207">Updated filtering experience</span></span>
-<span data-ttu-id="ca76f-208">ตัวกรองในแอป Power BI มีฟังก์ชันทำงานใหม่และการออกแบบใหม่</span><span class="sxs-lookup"><span data-stu-id="ca76f-208">Filters in the Power BI app have new functionality and a new design.</span></span> <span data-ttu-id="ca76f-209">ซึ่งรวมถึงการมองเห็นตัวกรองที่นำไปใช้กับการแสดงรายงานได้ดียิ่งขึ้นและความสามารถในการล็อกและซ่อนตัวกรอง</span><span class="sxs-lookup"><span data-stu-id="ca76f-209">This includes improved visibility of applied filters affecting report visuals, and the ability to lock and even hide filters.</span></span> <span data-ttu-id="ca76f-210">การเปลี่ยนแปลงเหล่านี้ยังให้ความเข้ากันได้ที่ดียิ่งขึ้นด้วยการกรองในบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-210">These changes also provide better compatibility with filtering in the Power BI service.</span></span>
+### <a name="updated-filtering-experience"></a>ประสบการณ์การกรองที่อัปเดตใหม่
+ตัวกรองในแอป Power BI มีฟังก์ชันทำงานใหม่และการออกแบบใหม่ ซึ่งรวมถึงการมองเห็นตัวกรองที่นำไปใช้กับการแสดงรายงานได้ดียิ่งขึ้นและความสามารถในการล็อกและซ่อนตัวกรอง การเปลี่ยนแปลงเหล่านี้ยังให้ความเข้ากันได้ที่ดียิ่งขึ้นด้วยการกรองในบริการของ Power BI
 
-## <a name="february-2020"></a><span data-ttu-id="ca76f-211">กุมภาพันธ์ 2562</span><span class="sxs-lookup"><span data-stu-id="ca76f-211">February 2020</span></span>
+## <a name="february-2020"></a>กุมภาพันธ์ 2562
 
-### <a name="multi-select-mode-android-and-ios"></a><span data-ttu-id="ca76f-212">โหมดการเลือกหลายรายการ (Android และ iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-212">Multi-select mode (Android and iOS)</span></span>
+### <a name="multi-select-mode-android-and-ios"></a>โหมดการเลือกหลายรายการ (Android และ iOS)
 
-<span data-ttu-id="ca76f-213">เราได้เพิ่มความสามารถในการเลือกหลายจุดข้อมูลในหน้ารายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-213">We've added the capability to select multiple data points on a report page.</span></span> <span data-ttu-id="ca76f-214">เมื่อเปิดใช้งานการเลือกได้หลายจุดข้อมูล แต่ละจุดที่คุณแตะจะถูกเพิ่มไปยังจุดข้อมูลอื่นที่เลือกพร้อมกับผลลัพธ์ที่รวมกันจะถูกไฮไลท์โดยอัตโนมัติในทุกๆ ภาพของหน้า</span><span class="sxs-lookup"><span data-stu-id="ca76f-214">When multi-select is turned on, each data point you tap gets added to the other selected data points, with the combined results automatically highlighted in all the visuals on the page.</span></span> <span data-ttu-id="ca76f-215">เมื่อต้องการเปิดใช้งานโหมดการเลือกหลายหน้า ให้ไปที่หน้า[การตั้งค่าแอปสำหรับอุปกรณ์เคลื่อนที่](./mobile-app-interaction-settings.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-215">To turn on multi-select mode, go to the [mobile app settings](./mobile-app-interaction-settings.md) page.</span></span>
+เราได้เพิ่มความสามารถในการเลือกหลายจุดข้อมูลในหน้ารายงาน เมื่อเปิดใช้งานการเลือกได้หลายจุดข้อมูล แต่ละจุดที่คุณแตะจะถูกเพิ่มไปยังจุดข้อมูลอื่นที่เลือกพร้อมกับผลลัพธ์ที่รวมกันจะถูกไฮไลท์โดยอัตโนมัติในทุกๆ ภาพของหน้า เมื่อต้องการเปิดใช้งานโหมดการเลือกหลายหน้า ให้ไปที่หน้า[การตั้งค่าแอปสำหรับอุปกรณ์เคลื่อนที่](./mobile-app-interaction-settings.md)
 
 >[!NOTE]
-><span data-ttu-id="ca76f-216">โหมดการเลือกได้หลายจุดข้อมูลจะได้รับการรองรับบนเซิร์ฟเวอร์รายงาน Power BI ในรุ่นเซิร์ฟเวอร์รายงานถัดไป</span><span class="sxs-lookup"><span data-stu-id="ca76f-216">Multi-select mode will be supported on Power BI Report Server in the next Report Server release.</span></span>
+>โหมดการเลือกได้หลายจุดข้อมูลจะได้รับการรองรับบนเซิร์ฟเวอร์รายงาน Power BI ในรุ่นเซิร์ฟเวอร์รายงานถัดไป
 
-### <a name="report-footer-can-now-always-be-visible-in-the-mobile-app-for-iphones"></a><span data-ttu-id="ca76f-217">ส่วนท้ายของรายงานสามารถมองเห็นได้ในแอปอุปกรณ์เคลื่อนที่สำหรับ iPhone แล้วตอนนี้</span><span class="sxs-lookup"><span data-stu-id="ca76f-217">Report footer can now always be visible in the mobile app for iPhones</span></span>
+### <a name="report-footer-can-now-always-be-visible-in-the-mobile-app-for-iphones"></a>ส่วนท้ายของรายงานสามารถมองเห็นได้ในแอปอุปกรณ์เคลื่อนที่สำหรับ iPhone แล้วตอนนี้
 
-<span data-ttu-id="ca76f-218">ส่วนท้ายของรายงานที่เทียบชิดขอบ ตอนนี้เมื่อคุณเปิดรายงานบนโทรศัพท์ของคุณ คุณจะพบส่วนท้ายรายงานที่เทียบชิดด้านล่างของหน้ารายงานซึ่งสามารถมองเห็นได้และพร้อมใช้งานเสมอโดยไม่คำนึงถึงการดำเนินการของคุณในหน้า</span><span class="sxs-lookup"><span data-stu-id="ca76f-218">On your iPhone, like on your Android phone, you can now decide to dock the report footer at the bottom of the report page, where it is always visible and available, regardless of your actions on the page.</span></span> <span data-ttu-id="ca76f-219">ซึ่งจะทำให้ง่ายต่อการใช้ตัวเลือกทั้งหมดที่มีให้</span><span class="sxs-lookup"><span data-stu-id="ca76f-219">This makes it easy to use all the options it provides.</span></span> <span data-ttu-id="ca76f-220">หากวางส่วนท้ายของรายงานแบบเทียบชิด ให้สลับ **ส่วนท้ายของรายงานแบบเทียบชิด** ที่หน้า [การตั้งค่าแอปอุปกรณ์เคลื่อนที่](./mobile-app-interaction-settings.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-220">To dock the footer, toggle the **Docked report footer** switch on the [mobile app settings](./mobile-app-interaction-settings.md) page.</span></span>
+ส่วนท้ายของรายงานที่เทียบชิดขอบ ตอนนี้เมื่อคุณเปิดรายงานบนโทรศัพท์ของคุณ คุณจะพบส่วนท้ายรายงานที่เทียบชิดด้านล่างของหน้ารายงานซึ่งสามารถมองเห็นได้และพร้อมใช้งานเสมอโดยไม่คำนึงถึงการดำเนินการของคุณในหน้า ซึ่งจะทำให้ง่ายต่อการใช้ตัวเลือกทั้งหมดที่มีให้ หากวางส่วนท้ายของรายงานแบบเทียบชิด ให้สลับ **ส่วนท้ายของรายงานแบบเทียบชิด** ที่หน้า [การตั้งค่าแอปอุปกรณ์เคลื่อนที่](./mobile-app-interaction-settings.md)
 
-### <a name="support-for-pbirs-reports-preview-windows"></a><span data-ttu-id="ca76f-221">การสนับสนุนสำหรับรายงาน PBIRS (ตัวอย่าง)</span><span class="sxs-lookup"><span data-stu-id="ca76f-221">Support for PBIRS reports (preview) (Windows)</span></span>
+### <a name="support-for-pbirs-reports-preview-windows"></a>การสนับสนุนสำหรับรายงาน PBIRS (ตัวอย่าง)
 
-<span data-ttu-id="ca76f-222">ขณะนี้คุณสามารถเปิดรายงานของเซิร์ฟเวอร์รายงาน Power BI (PBIRS) ของคุณในแอป Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-222">You can now open your Power BI Report Server (PBIRS) reports in the Power BI app.</span></span>
+ขณะนี้คุณสามารถเปิดรายงานของเซิร์ฟเวอร์รายงาน Power BI (PBIRS) ของคุณในแอป Power BI
 
-### <a name="quickly-access-your-recent-items-windows"></a><span data-ttu-id="ca76f-223">เข้าถึงรายการล่าสุดของคุณอย่างรวดเร็ว (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-223">Quickly access your recent items (Windows)</span></span>
+### <a name="quickly-access-your-recent-items-windows"></a>เข้าถึงรายการล่าสุดของคุณอย่างรวดเร็ว (Windows)
 
-<span data-ttu-id="ca76f-224">คลิกขวาที่ไอคอนของแอป Power BI ในแถบงานของ Windows เพื่อรับรายการข้อมูลทั้งหมดที่คุณเพิ่งดู คลิกที่ข้อมูลในรายการเพื่อกลับไปเยี่ยมชมอย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-224">Right click on Power BI app's icon in Windows taskbar to get a list of all your recently viewed items.</span></span> <span data-ttu-id="ca76f-225">คลิกที่รายการใดรายการหนึ่งในรายการเพื่อกลับไปเยี่ยมชมอย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-225">Click any item on the list to make a quick return visit.</span></span>
+คลิกขวาที่ไอคอนของแอป Power BI ในแถบงานของ Windows เพื่อรับรายการข้อมูลทั้งหมดที่คุณเพิ่งดู คลิกที่ข้อมูลในรายการเพื่อกลับไปเยี่ยมชมอย่างรวดเร็ว คลิกที่รายการใดรายการหนึ่งในรายการเพื่อกลับไปเยี่ยมชมอย่างรวดเร็ว
 
 ![เมนูด่วนบนแถบงาน](media/mobile-whats-new-in-the-mobile-apps/mobile-apps-windows-taskbar-quick-access.png)
 
-## <a name="january-2020"></a><span data-ttu-id="ca76f-227">มกราคม 2020</span><span class="sxs-lookup"><span data-stu-id="ca76f-227">January 2020</span></span>
+## <a name="january-2020"></a>มกราคม 2020
 
-### <a name="share-annotations-created-in-presentation-mode-windows"></a><span data-ttu-id="ca76f-228">แชร์คำอธิบายประกอบที่สร้างในโหมดการนำเสนอผลงาน (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-228">Share annotations created in presentation mode (Windows)</span></span>
+### <a name="share-annotations-created-in-presentation-mode-windows"></a>แชร์คำอธิบายประกอบที่สร้างในโหมดการนำเสนอผลงาน (Windows)
 
-<span data-ttu-id="ca76f-229">คำอธิบายประกอบที่คุณสร้างในงานนำเสนอ จะกลายเป็นส่วนหนึ่งของงานนำเสนอ และเป็นส่วนประกอบสำคัญของการอภิปราย</span><span class="sxs-lookup"><span data-stu-id="ca76f-229">Annotations you create during presentations become an integral part of the presentation and a key component of the discussion.</span></span> <span data-ttu-id="ca76f-230">ในตอนนี้ เมื่อคุณใส่คำอธิบายประกอบรายงานในโหมดการนำเสนอคุณสามารถแชร์สแนปช็อตของหน้ารายงานกับเพื่อนร่วมงานของคุณได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-230">Now, when you annotate reports in presentation mode, you can share a snapshot of the report page with your colleagues.</span></span> [<span data-ttu-id="ca76f-231">ศึกษาเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ca76f-231">Learn more</span></span>](./mobile-windows-10-app-presentation-mode.md#use-presentation-mode)
+คำอธิบายประกอบที่คุณสร้างในงานนำเสนอ จะกลายเป็นส่วนหนึ่งของงานนำเสนอ และเป็นส่วนประกอบสำคัญของการอภิปราย ในตอนนี้ เมื่อคุณใส่คำอธิบายประกอบรายงานในโหมดการนำเสนอคุณสามารถแชร์สแนปช็อตของหน้ารายงานกับเพื่อนร่วมงานของคุณได้ [ศึกษาเพิ่มเติม](./mobile-windows-10-app-presentation-mode.md#use-presentation-mode)
 
-## <a name="december-2019"></a><span data-ttu-id="ca76f-232">ธันวาคม 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-232">December 2019</span></span>
+## <a name="december-2019"></a>ธันวาคม 2019
 
-### <a name="docked-report-footer-and-a-refresh-button---new-experiences-for-interacting-with-reports-android"></a><span data-ttu-id="ca76f-233">ส่วนท้ายของรายงานที่เทียบชิดขอบและปุ่มรีเฟรช - ประสบการณ์ใหม่สำหรับการโต้ตอบกับรายงาน (Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-233">Docked report footer and a refresh button - new experiences for interacting with reports (Android)</span></span>
+### <a name="docked-report-footer-and-a-refresh-button---new-experiences-for-interacting-with-reports-android"></a>ส่วนท้ายของรายงานที่เทียบชิดขอบและปุ่มรีเฟรช - ประสบการณ์ใหม่สำหรับการโต้ตอบกับรายงาน (Android)
 
-<span data-ttu-id="ca76f-234">เราได้ยินจากผู้ใช้ Android ว่าประสบการณ์ในการใช้รายงานไม่เหมาะสม - เป็นการยากที่จะใช้ส่วนท้ายของรายงานและการดึงเพื่อรีเฟรชนั้นมีความอ่อนไหวเกินไปในบางอุปกรณ์</span><span class="sxs-lookup"><span data-stu-id="ca76f-234">We've heard from our Android users that their experience using reports is not optimal - that it is hard to use the report footer and that pull-to-refresh is too sensitive in some devices.</span></span> <span data-ttu-id="ca76f-235">ดังนั้นในรุ่นนี้ เราได้เปลี่ยนลักษณะการทำงานเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="ca76f-235">Therefore, in this release, we've changed these behaviors:</span></span>
-* <span data-ttu-id="ca76f-236">**ส่วนท้ายของรายงานที่เทียบชิดขอบ** - ตอนนี้เมื่อคุณเปิดรายงานบนโทรศัพท์ของคุณ คุณจะพบส่วนท้ายรายงานที่เทียบชิดด้านล่างของหน้ารายงานซึ่งสามารถมองเห็นได้และพร้อมใช้งานเสมอโดยไม่คำนึงถึงการดำเนินการของคุณในหน้า</span><span class="sxs-lookup"><span data-stu-id="ca76f-236">**Docked report footer** - now, when you open a report on your phone, you'll find the report footer docked at the bottom of the report page, where it's always visible and available, regardless of your actions on the page.</span></span> <span data-ttu-id="ca76f-237">ซึ่งจะทำให้ง่ายต่อการใช้ตัวเลือกทั้งหมดที่มีให้</span><span class="sxs-lookup"><span data-stu-id="ca76f-237">This makes it easy to use all the options it provides.</span></span>
-* <span data-ttu-id="ca76f-238">**ปุ่มรีเฟรชบนส่วนหัวของรายงาน** - คุณยังจะพบปุ่มรีเฟรชในส่วนหัวของรายงาน ทำให้ง่ายต่อการรีเฟรชรายงานตรงตามที่คุณต้องการ</span><span class="sxs-lookup"><span data-stu-id="ca76f-238">**Refresh button on report header** - you'll also find a refresh button in the report header, making it easy to refresh the report exactly when you intend to.</span></span>
+เราได้ยินจากผู้ใช้ Android ว่าประสบการณ์ในการใช้รายงานไม่เหมาะสม - เป็นการยากที่จะใช้ส่วนท้ายของรายงานและการดึงเพื่อรีเฟรชนั้นมีความอ่อนไหวเกินไปในบางอุปกรณ์ ดังนั้นในรุ่นนี้ เราได้เปลี่ยนลักษณะการทำงานเหล่านี้:
+* **ส่วนท้ายของรายงานที่เทียบชิดขอบ** - ตอนนี้เมื่อคุณเปิดรายงานบนโทรศัพท์ของคุณ คุณจะพบส่วนท้ายรายงานที่เทียบชิดด้านล่างของหน้ารายงานซึ่งสามารถมองเห็นได้และพร้อมใช้งานเสมอโดยไม่คำนึงถึงการดำเนินการของคุณในหน้า ซึ่งจะทำให้ง่ายต่อการใช้ตัวเลือกทั้งหมดที่มีให้
+* **ปุ่มรีเฟรชบนส่วนหัวของรายงาน** - คุณยังจะพบปุ่มรีเฟรชในส่วนหัวของรายงาน ทำให้ง่ายต่อการรีเฟรชรายงานตรงตามที่คุณต้องการ
 
-<span data-ttu-id="ca76f-239">ผู้ใช้ที่ชอบลักษณะการทำงานก่อนหน้านี้มากกว่าสามารถเรียกคืนลักษณะการทำงานเหล่านี้ได้ด้วย[การตั้งค่าการโต้ตอบ](./mobile-app-interaction-settings.md)แบบใหม่ที่ขยายของแอปสำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-239">Those users who prefer the previous behavior can restore these behaviors with the mobile app's new, expanded [interaction settings](./mobile-app-interaction-settings.md).</span></span>
+ผู้ใช้ที่ชอบลักษณะการทำงานก่อนหน้านี้มากกว่าสามารถเรียกคืนลักษณะการทำงานเหล่านี้ได้ด้วย[การตั้งค่าการโต้ตอบ](./mobile-app-interaction-settings.md)แบบใหม่ที่ขยายของแอปสำหรับอุปกรณ์เคลื่อนที่
 
-<span data-ttu-id="ca76f-240">นอกจากนี้ ผู้ดูแลระบบไอทีสามารถ[แทนที่การตั้งค่าเริ่มต้นใหม่ได้จากระยะไกล](./mobile-app-configuration.md#interaction-settings-ios-and-android) ในนามของผู้ใช้ โดยใช้เครื่องมือ MDM ของตัวเลือกที่มีไฟล์กำหนดค่าแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-240">In addition, IT admins can [remotely override the new default settings](./mobile-app-configuration.md#interaction-settings-ios-and-android) on behalf of their users, using their MDM tool of choice with an app configuration file.</span></span> <span data-ttu-id="ca76f-241">ด้วยวิธีนี้ ผู้ใช้ทุกคนในองค์กรสามารถมีลักษณะการทำงานที่กำหนดค่าไว้สำหรับพวกเขาเหมือนกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-241">In this way all users in an organization can have the same behavior configured for them.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="ca76f-242">การตั้งค่าการโต้ตอบสำหรับปุ่มรีเฟรชและสำหรับการเทียบชิดขอบส่วนท้ายของรายงานจะยังไม่มีผลกับรายงานของเซิร์ฟเวอร์รายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-242">Interaction settings for the refresh button and for docking the report footer do not currently have an effect on Report Server reports.</span></span> <span data-ttu-id="ca76f-243">สิ่งนี้จะเปลี่ยนไปเมื่อมีการเปิดตัวเซิร์ฟเวอร์รายงานในเดือนมกราคม!</span><span class="sxs-lookup"><span data-stu-id="ca76f-243">This will change with the January Report Server release!</span></span>
-
-### <a name="set-default-bookmarks-from-your-mobile-app"></a><span data-ttu-id="ca76f-244">ตั้งค่าบุ๊กมาร์กเริ่มต้นจากแอปสำหรับอุปกรณ์เคลื่อนที่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-244">Set default bookmarks from your mobile app</span></span>
-<span data-ttu-id="ca76f-245">ตอนนี้ คุณสามารถตั้งค่าบุ๊กมาร์กเริ่มต้นสำหรับรายงานของคุณได้โดยตรงจากแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-245">Now you can set default bookmarks for your reports directly from your Power BI mobile app.</span></span> <span data-ttu-id="ca76f-246">จากนั้น ทุกครั้งที่คุณเปิดรายงานจะมีการใช้บุ๊กมาร์กเริ่มต้นโดยอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="ca76f-246">Then, every time you open a report, its default bookmark will be applied automatically.</span></span> [<span data-ttu-id="ca76f-247">เรียนรู้เพิ่มเติม!</span><span class="sxs-lookup"><span data-stu-id="ca76f-247">Learn more!</span></span>](./mobile-reports-in-the-mobile-apps.md#bookmarks)
-
-### <a name="filtering-by-location-on-android-tablets"></a><span data-ttu-id="ca76f-248">การกรองตามตำแหน่งที่ตั้งบนแท็บเล็ต Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-248">Filtering by location on Android tablets</span></span>
-<span data-ttu-id="ca76f-249">การกรองทางภูมิศาสตร์ช่วยให้คุณสามารถกรองรายงานของคุณโดยยึดตามตำแหน่งที่ตั้งปัจจุบันของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-249">Geo-filtering lets you filter your reports based on your current location.</span></span> <span data-ttu-id="ca76f-250">ตอนนี้คุณลักษณะนี้ยังมีอยู่ในแอป Power BI สำหรับแท็บเล็ต Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-250">This feature is now also available in the Power BI app for Android tablets.</span></span> [<span data-ttu-id="ca76f-251">เรียนรู้เพิ่มเติม!</span><span class="sxs-lookup"><span data-stu-id="ca76f-251">Learn more!</span></span>](./mobile-apps-geographic-filtering.md)
-
-## <a name="november-2019"></a><span data-ttu-id="ca76f-252">พฤศจิกายน 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-252">November 2019</span></span>
-
-### <a name="power-bi-apps-new-look-is-now-on-by-default"></a><span data-ttu-id="ca76f-253">ขณะนี้รูปลักษณ์ใหม่ของแอป Power BI เปิดอยู่ตามค่าเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-253">Power BI app's new look is now on by default</span></span>
- 
-<span data-ttu-id="ca76f-254">ในตอนนี้เมื่อคุณเปิดแอป แถบรูปลักษณ์ใหม่และการนำทางจะเปิดใช้งานโดยอัตโนมัติ ช่วยลดความซับซ้อนของวิธีการค้นหาและเปิดเนื้อหาของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-254">Now when you open the app, the new look and navigation bars are automatically turned on, simplifying the way you find and open content.</span></span> <span data-ttu-id="ca76f-255">ใช้ [โฮมเพจ](mobile-apps-home-page.md) ของแอปเป็นจุดเริ่มต้นของคุณ โดยคุณจะสามารถเข้าถึงเนื้อหาที่สำคัญที่สุดของคุณได้อย่างรวดเร็วเช่นเดียวกับ [ฟีดกิจกรรม](mobile-apps-home-page.md#activity-feed) ที่ช่วยให้คุณอัปเดตการแจ้งและการเตือนล่าสุดทั้งหมดของคุณและอื่นๆ อีกมากมายให้เป็นปัจจุบัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-255">Use the app's [home page](mobile-apps-home-page.md) as your starting point - you'll get quick access to your most important content, as well as an [activity feed](mobile-apps-home-page.md#activity-feed) that keeps you up-to-date with all your latest alerts, notifications, and more.</span></span>
-
-### <a name="see-all-your-latest-power-bi-activity"></a><span data-ttu-id="ca76f-256">ดูกิจกรรม Power BI ล่าสุดทั้งหมดของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-256">See all your latest Power BI activity</span></span>
- 
-<span data-ttu-id="ca76f-257">ฟีดกิจกรรมช่วยให้คุณติดตามสิ่งที่เกิดขึ้นกับเนื้อหา Power BI ของคุณในเวลาจริง</span><span class="sxs-lookup"><span data-stu-id="ca76f-257">The activity feed helps you keep track of what's happening with your Power BI content, in real-time.</span></span> <span data-ttu-id="ca76f-258">เพียงไปที่โฮมเพจของแอปและเปิดแท็บกิจกรรมเพื่อดูการแจ้ง การเตือน และข้อคิดเห็นล่าสุดทั้งหมดของคุณ @mentionsและอื่นๆ อีกมากมาย</span><span class="sxs-lookup"><span data-stu-id="ca76f-258">Simply go to the app's home page and open the Activity tab to view all your latest notifications, alerts, comments, @mentions, and more.</span></span> <span data-ttu-id="ca76f-259">[เรียนรู้เพิ่มเติม](mobile-apps-home-page.md#activity-feed)</span><span class="sxs-lookup"><span data-stu-id="ca76f-259">[Learn more](mobile-apps-home-page.md#activity-feed).</span></span>
-
-### <a name="use-bookmarks-in-your-reports"></a><span data-ttu-id="ca76f-260">ใช้บุ๊กมาร์กในรายงานของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-260">Use bookmarks in your reports</span></span>
-
-<span data-ttu-id="ca76f-261">แอปสำหรับอุปกรณ์เคลื่อนที่ Power BI ปัจจุบันรองรับบุ๊กมาร์กที่สร้างขึ้นใน Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-261">The Power BI mobile app now supports bookmarks created in Power BI.</span></span> <span data-ttu-id="ca76f-262">เมื่อคุณเปิดแอป คุณสามารถใช้ประโยชน์จากบุ๊กมาร์กที่สร้างขึ้นโดยผู้สร้างรายงานและบุ๊กมาร์กส่วนบุคคลใดๆ ที่คุณสร้างขึ้นด้วยตัวคุณเอง</span><span class="sxs-lookup"><span data-stu-id="ca76f-262">When you open the app, you can take advantage of bookmarks created by the report author and any personal bookmarks that you yourself have created.</span></span> <span data-ttu-id="ca76f-263">[เรียนรู้เพิ่มเติม](mobile-reports-in-the-mobile-apps.md#bookmarks)</span><span class="sxs-lookup"><span data-stu-id="ca76f-263">[Learn more](mobile-reports-in-the-mobile-apps.md#bookmarks).</span></span>
-
-## <a name="october-2019"></a><span data-ttu-id="ca76f-264">ตุลาคม 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-264">October 2019</span></span>
-
-### <a name="android-support-for-remote-configuration-of-report-server-access-settings"></a><span data-ttu-id="ca76f-265">การสนับสนุน Android สำหรับการกำหนดค่าระยะไกลของการตั้งค่าการเข้าถึงเซิร์ฟเวอร์รายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-265">Android support for remote configuration of Report Server access settings</span></span>
-
-<span data-ttu-id="ca76f-266">เราได้เพิ่มการสนับสนุน Android สำหรับการกำหนดค่าระยะไกลของการตั้งค่าการเข้าถึงเซิร์ฟเวอร์รายงานของแอป Power BI สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-266">We added Android support for remote configuration of the Power BI mobile app's Report Server access settings.</span></span> <span data-ttu-id="ca76f-267">ขณะนี้ผู้ดูแลระบบไอทีสามารถใช้เครื่องมือ MDM ขององค์กรของพวกเขาเพื่อกำหนดค่าการตั้งค่าเหล่านั้นได้ทั้งบนอุปกรณ์ iOS และ Android จากระยะไกล</span><span class="sxs-lookup"><span data-stu-id="ca76f-267">IT admins can now use their organization's MDM tool to remotely configure those settings on both iOS and Android devices.</span></span> <span data-ttu-id="ca76f-268">ดูรายละเอียดเพิ่มเติมใน [กำหนดค่าการเข้าถึงแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ไปยังเซิร์ฟเวอร์รายงานจากระยะไกล](../../report-server/configure-powerbi-mobile-apps-remote.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-268">See [Configure Power BI mobile app access to Report Server remotely](../../report-server/configure-powerbi-mobile-apps-remote.md) for details.</span></span>
-
-### <a name="cross-report-drillthrough"></a><span data-ttu-id="ca76f-269">การเข้าถึงรายละเอียดข้อมูลแบบข้ามรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-269">Cross-report drillthrough</span></span>
-
-<span data-ttu-id="ca76f-270">เดือนนี้เราได้เพิ่มการสนับสนุนสำหรับการเจาะลึกรายละเอียดข้อมูลแบบข้ามรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-270">This month we've added support for cross-report drillthrough.</span></span> <span data-ttu-id="ca76f-271">ขณะนี้คุณสามารถแตะที่จุดข้อมูลเพื่อเจาะลึกเพื่อเข้าถึงรายละเอียดรายงานและหน้ารายงานอื่นได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-271">You can now tap on a data point to drill through to access other reports and report pages.</span></span> <span data-ttu-id="ca76f-272">เมื่อคุณเจาะลึกไปจนถึงหน้าเป้าหมายแล้ว เนื้อหาในหน้านั้นจะถูกกรองตามการตั้งค่าการเจาะลึกรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="ca76f-272">When you drill through to a target page, the content in that page is filtered based on the drillthrough settings.</span></span>
+นอกจากนี้ ผู้ดูแลระบบไอทีสามารถ[แทนที่การตั้งค่าเริ่มต้นใหม่ได้จากระยะไกล](./mobile-app-configuration.md#interaction-settings-ios-and-android) ในนามของผู้ใช้ โดยใช้เครื่องมือ MDM ของตัวเลือกที่มีไฟล์กำหนดค่าแอป ด้วยวิธีนี้ ผู้ใช้ทุกคนในองค์กรสามารถมีลักษณะการทำงานที่กำหนดค่าไว้สำหรับพวกเขาเหมือนกัน
 
 > [!NOTE]
-> <span data-ttu-id="ca76f-273">การเจาะลึกรายละเอียดแบบข้ามรายงานจะพร้อมใช้งานเฉพาะเมื่อมีการเปิดใช้งานในระหว่างการสร้างรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-273">Cross-report drillthrough is only available if it was enabled during report creation.</span></span> <span data-ttu-id="ca76f-274">[เรียนรู้เพิ่มเติมเกี่ยวกับการเจาะลึกรายละเอียดแบบข้ามรายงาน](../../create-reports/desktop-cross-report-drill-through.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-274">[Learn more about cross-report drillthrough](../../create-reports/desktop-cross-report-drill-through.md).</span></span>
+> การตั้งค่าการโต้ตอบสำหรับปุ่มรีเฟรชและสำหรับการเทียบชิดขอบส่วนท้ายของรายงานจะยังไม่มีผลกับรายงานของเซิร์ฟเวอร์รายงาน สิ่งนี้จะเปลี่ยนไปเมื่อมีการเปิดตัวเซิร์ฟเวอร์รายงานในเดือนมกราคม!
+
+### <a name="set-default-bookmarks-from-your-mobile-app"></a>ตั้งค่าบุ๊กมาร์กเริ่มต้นจากแอปสำหรับอุปกรณ์เคลื่อนที่ของคุณ
+ตอนนี้ คุณสามารถตั้งค่าบุ๊กมาร์กเริ่มต้นสำหรับรายงานของคุณได้โดยตรงจากแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ของคุณ จากนั้น ทุกครั้งที่คุณเปิดรายงานจะมีการใช้บุ๊กมาร์กเริ่มต้นโดยอัตโนมัติ [เรียนรู้เพิ่มเติม!](./mobile-reports-in-the-mobile-apps.md#bookmarks)
+
+### <a name="filtering-by-location-on-android-tablets"></a>การกรองตามตำแหน่งที่ตั้งบนแท็บเล็ต Android
+การกรองทางภูมิศาสตร์ช่วยให้คุณสามารถกรองรายงานของคุณโดยยึดตามตำแหน่งที่ตั้งปัจจุบันของคุณ ตอนนี้คุณลักษณะนี้ยังมีอยู่ในแอป Power BI สำหรับแท็บเล็ต Android [เรียนรู้เพิ่มเติม!](./mobile-apps-geographic-filtering.md)
+
+## <a name="november-2019"></a>พฤศจิกายน 2019
+
+### <a name="power-bi-apps-new-look-is-now-on-by-default"></a>ขณะนี้รูปลักษณ์ใหม่ของแอป Power BI เปิดอยู่ตามค่าเริ่มต้น
+ 
+ในตอนนี้เมื่อคุณเปิดแอป แถบรูปลักษณ์ใหม่และการนำทางจะเปิดใช้งานโดยอัตโนมัติ ช่วยลดความซับซ้อนของวิธีการค้นหาและเปิดเนื้อหาของคุณ ใช้ [โฮมเพจ](mobile-apps-home-page.md) ของแอปเป็นจุดเริ่มต้นของคุณ โดยคุณจะสามารถเข้าถึงเนื้อหาที่สำคัญที่สุดของคุณได้อย่างรวดเร็วเช่นเดียวกับ [ฟีดกิจกรรม](mobile-apps-home-page.md#activity-feed) ที่ช่วยให้คุณอัปเดตการแจ้งและการเตือนล่าสุดทั้งหมดของคุณและอื่นๆ อีกมากมายให้เป็นปัจจุบัน
+
+### <a name="see-all-your-latest-power-bi-activity"></a>ดูกิจกรรม Power BI ล่าสุดทั้งหมดของคุณ
+ 
+ฟีดกิจกรรมช่วยให้คุณติดตามสิ่งที่เกิดขึ้นกับเนื้อหา Power BI ของคุณในเวลาจริง เพียงไปที่โฮมเพจของแอปและเปิดแท็บกิจกรรมเพื่อดูการแจ้ง การเตือน และข้อคิดเห็นล่าสุดทั้งหมดของคุณ @mentionsและอื่นๆ อีกมากมาย [เรียนรู้เพิ่มเติม](mobile-apps-home-page.md#activity-feed)
+
+### <a name="use-bookmarks-in-your-reports"></a>ใช้บุ๊กมาร์กในรายงานของคุณ
+
+แอปสำหรับอุปกรณ์เคลื่อนที่ Power BI ปัจจุบันรองรับบุ๊กมาร์กที่สร้างขึ้นใน Power BI เมื่อคุณเปิดแอป คุณสามารถใช้ประโยชน์จากบุ๊กมาร์กที่สร้างขึ้นโดยผู้สร้างรายงานและบุ๊กมาร์กส่วนบุคคลใดๆ ที่คุณสร้างขึ้นด้วยตัวคุณเอง [เรียนรู้เพิ่มเติม](mobile-reports-in-the-mobile-apps.md#bookmarks)
+
+## <a name="october-2019"></a>ตุลาคม 2019
+
+### <a name="android-support-for-remote-configuration-of-report-server-access-settings"></a>การสนับสนุน Android สำหรับการกำหนดค่าระยะไกลของการตั้งค่าการเข้าถึงเซิร์ฟเวอร์รายงาน
+
+เราได้เพิ่มการสนับสนุน Android สำหรับการกำหนดค่าระยะไกลของการตั้งค่าการเข้าถึงเซิร์ฟเวอร์รายงานของแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ ขณะนี้ผู้ดูแลระบบไอทีสามารถใช้เครื่องมือ MDM ขององค์กรของพวกเขาเพื่อกำหนดค่าการตั้งค่าเหล่านั้นได้ทั้งบนอุปกรณ์ iOS และ Android จากระยะไกล ดูรายละเอียดเพิ่มเติมใน [กำหนดค่าการเข้าถึงแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ไปยังเซิร์ฟเวอร์รายงานจากระยะไกล](../../report-server/configure-powerbi-mobile-apps-remote.md)
+
+### <a name="cross-report-drillthrough"></a>การเข้าถึงรายละเอียดข้อมูลแบบข้ามรายงาน
+
+เดือนนี้เราได้เพิ่มการสนับสนุนสำหรับการเจาะลึกรายละเอียดข้อมูลแบบข้ามรายงาน ขณะนี้คุณสามารถแตะที่จุดข้อมูลเพื่อเจาะลึกเพื่อเข้าถึงรายละเอียดรายงานและหน้ารายงานอื่นได้ เมื่อคุณเจาะลึกไปจนถึงหน้าเป้าหมายแล้ว เนื้อหาในหน้านั้นจะถูกกรองตามการตั้งค่าการเจาะลึกรายละเอียด
+
+> [!NOTE]
+> การเจาะลึกรายละเอียดแบบข้ามรายงานจะพร้อมใช้งานเฉพาะเมื่อมีการเปิดใช้งานในระหว่างการสร้างรายงาน [เรียนรู้เพิ่มเติมเกี่ยวกับการเจาะลึกรายละเอียดแบบข้ามรายงาน](../../create-reports/desktop-cross-report-drill-through.md)
 
 
-### <a name="data-sensitivity-labels"></a><span data-ttu-id="ca76f-275">ป้ายกำกับระดับความอ่อนไหวของข้อมูล</span><span class="sxs-lookup"><span data-stu-id="ca76f-275">Data sensitivity labels</span></span>
+### <a name="data-sensitivity-labels"></a>ป้ายกำกับระดับความอ่อนไหวของข้อมูล
 
-<span data-ttu-id="ca76f-276">ขณะนี้คุณสามารถดูป้ายกำกับระดับความอ่อนไหวที่เจ้าของเนื้อหากำหนดไว้ในรายงาน แดชบอร์ด ชุดข้อมูล และกระแสข้อมูฃเพื่อจำแนกความอ่อนไหวของข้อมูลได้แล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-276">You can now see sensitivity labels that content owners have set on reports, dashboards, datasets, and dataflows to classify the sensitivity of their data.</span></span> <span data-ttu-id="ca76f-277">ป้ายกำกับระดับความอ่อนไหวกำหนดว่าจะแบ่งปันเนื้อหากับผู้ใช้รายอื่นอย่างไร</span><span class="sxs-lookup"><span data-stu-id="ca76f-277">Sensitivity labels determine how content can be shared with other users.</span></span> <span data-ttu-id="ca76f-278">[เรียนรู้เพิ่มเติมเกี่ยวกับการใช้ป้ายกำกับระดับความอ่อนไหวของข้อมูลใน Power BI](../../admin/service-security-data-protection-overview.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-278">[Learn more about data sensitivity labels in Power BI](../../admin/service-security-data-protection-overview.md).</span></span>
+ขณะนี้คุณสามารถดูป้ายกำกับระดับความอ่อนไหวที่เจ้าของเนื้อหากำหนดไว้ในรายงาน แดชบอร์ด ชุดข้อมูล และกระแสข้อมูฃเพื่อจำแนกความอ่อนไหวของข้อมูลได้แล้ว ป้ายกำกับระดับความอ่อนไหวกำหนดว่าจะแบ่งปันเนื้อหากับผู้ใช้รายอื่นอย่างไร [เรียนรู้เพิ่มเติมเกี่ยวกับการใช้ป้ายกำกับระดับความอ่อนไหวของข้อมูลใน Power BI](../../admin/service-security-data-protection-overview.md)
 
-### <a name="support-for-custom-app-navigation-windows"></a><span data-ttu-id="ca76f-279">สนับสนุนการนำทางบนแอปแบบกำหนดเอง (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-279">Support for custom app navigation (Windows)</span></span>
+### <a name="support-for-custom-app-navigation-windows"></a>สนับสนุนการนำทางบนแอปแบบกำหนดเอง (Windows)
 
-<span data-ttu-id="ca76f-280">ขณะนี้ ได้เพิ่มการสนับสนุนการนำทางบนแอปแบบกำหนดเองสำหรับอุปกรณ์ Windows นอกเหนือจาก iOS และ Android (โปรดดู [มีอะไรใหม่บ้างในเดือนกันยายน](#september-2019))</span><span class="sxs-lookup"><span data-stu-id="ca76f-280">Support for custom app navigation has now been added for Windows devices in addition to iOS and Android (see [September's What's new entry](#september-2019)).</span></span>
+ขณะนี้ ได้เพิ่มการสนับสนุนการนำทางบนแอปแบบกำหนดเองสำหรับอุปกรณ์ Windows นอกเหนือจาก iOS และ Android (โปรดดู [มีอะไรใหม่บ้างในเดือนกันยายน](#september-2019))
 
-## <a name="september-2019"></a><span data-ttu-id="ca76f-281">กันยายน 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-281">September 2019</span></span>
+## <a name="september-2019"></a>กันยายน 2019
 
-### <a name="support-for-custom-app-navigation-ios-and-android"></a><span data-ttu-id="ca76f-282">การสนับสนุนสำหรับการนำทางแอปแบบกำหนดเอง (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-282">Support for custom app navigation (iOS and Android)</span></span>
+### <a name="support-for-custom-app-navigation-ios-and-android"></a>การสนับสนุนสำหรับการนำทางแอปแบบกำหนดเอง (iOS และ Android)
 
-<span data-ttu-id="ca76f-283">เราได้เพิ่มการรองรับสำหรับส่วนการสืบค้นแอปแบบกำหนดเอง</span><span class="sxs-lookup"><span data-stu-id="ca76f-283">We've added support for custom app navigation.</span></span> <span data-ttu-id="ca76f-284">ตอนนี้ หากคุณเปิดแอปใน Power BI Mobile ส่วนการสืบค้นเนื้อหากำหนดเองที่จัดทำผ่านระบบจัดทำแอปจะพร้อมใช้งาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-284">Now, when you open an app in Power BI Mobile, the custom navigation experience built by the app creator will be available.</span></span> <span data-ttu-id="ca76f-285">ส่วนการสืบค้นแอปสามารถจัดเรียงได้จากเนื้อหา และสามารถรวมรายการใหม่ เช่น ลิงค์และหัวข้อแบบยุบได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-285">App navigation can be organized by content, and can include new items such as links and collapsible sections.</span></span>
-<span data-ttu-id="ca76f-286">อ่านรายละเอียดเพิ่มเติมเกี่ยวกับ[ส่วนการสืบค้นกำหนดเอง](https://powerbi.microsoft.com/blog/designing-custom-navigation-for-power-bi-apps-is-now-available/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-286">Read more about [custom navigation](https://powerbi.microsoft.com/blog/designing-custom-navigation-for-power-bi-apps-is-now-available/).</span></span>
+เราได้เพิ่มการรองรับสำหรับส่วนการสืบค้นแอปแบบกำหนดเอง ตอนนี้ หากคุณเปิดแอปใน Power BI Mobile ส่วนการสืบค้นเนื้อหากำหนดเองที่จัดทำผ่านระบบจัดทำแอปจะพร้อมใช้งาน ส่วนการสืบค้นแอปสามารถจัดเรียงได้จากเนื้อหา และสามารถรวมรายการใหม่ เช่น ลิงค์และหัวข้อแบบยุบได้
+อ่านรายละเอียดเพิ่มเติมเกี่ยวกับ[ส่วนการสืบค้นกำหนดเอง](https://powerbi.microsoft.com/blog/designing-custom-navigation-for-power-bi-apps-is-now-available/)
 
-## <a name="august-2019"></a><span data-ttu-id="ca76f-287">สิงหาคม 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-287">August 2019</span></span>
+## <a name="august-2019"></a>สิงหาคม 2019
 
-### <a name="introducting-power-bi-mobile-new-look-preview-ios-and-android"></a><span data-ttu-id="ca76f-288">การแนะนำ Power BI บนมือถือรูปลักษณ์ใหม่ (ตัวอย่าง) (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-288">Introducting Power BI Mobile new look (preview) (iOS and Android)</span></span>
+### <a name="introducting-power-bi-mobile-new-look-preview-ios-and-android"></a>การแนะนำ Power BI บนมือถือรูปลักษณ์ใหม่ (ตัวอย่าง) (iOS และ Android)
 
-<span data-ttu-id="ca76f-289">เราได้รีเฟรชแอปของเราและแนะนำประสบการณ์การใช้งานใหม่ การเพิ่มโฮมเพจที่ช่วยให้สามารถเข้าถึงเนื้อหาที่ใช้บ่อยๆ ของคุณได้อย่างรวดเร็ว และบานหน้าต่างนำทางใหม่ที่เสนอวิธีการนำทางผ่านแอปได้อย่างง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="ca76f-289">We've refreshed our app and introduced new experiences, adding a home page that provides quick access to your commonly used content, and new nav panes that give you an easy way of navigating through the app.</span></span> <span data-ttu-id="ca76f-290">ด้วยประสบการณ์ใหม่ที่สดใส จะช่วยให้คุณค้นหาสิ่งที่คุณต้องการได้รวดเร็วและง่ายดายยิ่งขึ้นเมื่อคุณต้องการ</span><span class="sxs-lookup"><span data-stu-id="ca76f-290">With the new and refreshed experiences, it's now quicker and easier to find what you need, when you need it.</span></span>
-<span data-ttu-id="ca76f-291">เนื่องจากรูปลักษณ์ใหม่อยู่ในการแสดงตัวอย่าง คุณจะต้องเปิดเพื่อใช้งานอย่างเพลิดเพลิน</span><span class="sxs-lookup"><span data-stu-id="ca76f-291">Since the new look is in preview, you will need to turn it on to enjoy it.</span></span>
-<span data-ttu-id="ca76f-292">เรียนรู้เพิ่มเติมเกี่ยวกับ [Power BI บนมือถือในรูปลักษณ์ใหม่](https://powerbi.microsoft.com/blog/introducing-power-bi-mobile-apps-new-look-preview/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-292">Read more about [Power BI Mobile new look](https://powerbi.microsoft.com/blog/introducing-power-bi-mobile-apps-new-look-preview/).</span></span>
+เราได้รีเฟรชแอปของเราและแนะนำประสบการณ์การใช้งานใหม่ การเพิ่มโฮมเพจที่ช่วยให้สามารถเข้าถึงเนื้อหาที่ใช้บ่อยๆ ของคุณได้อย่างรวดเร็ว และบานหน้าต่างนำทางใหม่ที่เสนอวิธีการนำทางผ่านแอปได้อย่างง่ายดาย ด้วยประสบการณ์ใหม่ที่สดใส จะช่วยให้คุณค้นหาสิ่งที่คุณต้องการได้รวดเร็วและง่ายดายยิ่งขึ้นเมื่อคุณต้องการ
+เนื่องจากรูปลักษณ์ใหม่อยู่ในการแสดงตัวอย่าง คุณจะต้องเปิดเพื่อใช้งานอย่างเพลิดเพลิน
+เรียนรู้เพิ่มเติมเกี่ยวกับ [Power BI บนมือถือในรูปลักษณ์ใหม่](https://powerbi.microsoft.com/blog/introducing-power-bi-mobile-apps-new-look-preview/)
 
 ![Power BI บนมือถือในรูปลักษณ์ใหม่](./media/mobile-whats-new-in-the-mobile-apps/power-bi-mobile-new-look2.gif)
 
-### <a name="secured-access-with-azure-active-directory-ad-application-proxy-ios-and-android"></a><span data-ttu-id="ca76f-294">การเข้าถึงที่ปลอดภัยด้วยพร็อกซีแอปพลิเคชัน Azure Active Directory (AD) (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-294">Secured access with Azure Active Directory (AD) Application Proxy (iOS and Android)</span></span>
+### <a name="secured-access-with-azure-active-directory-ad-application-proxy-ios-and-android"></a>การเข้าถึงที่ปลอดภัยด้วยพร็อกซีแอปพลิเคชัน Azure Active Directory (AD) (iOS และ Android)
 
-<span data-ttu-id="ca76f-295">เราเป็นพันธมิตรกับทีม Azure Active Directory เพื่อรวมแอปพลิเคชัน Power BI สำหรับอุปกรณ์เคลื่อนที่กับพร็อกซีแอปพลิเคชัน Azure Active Directory (Azure AD)</span><span class="sxs-lookup"><span data-stu-id="ca76f-295">We partnered with Azure Active Directory team to integrate Power BI mobile applications with Azure Active Directory (Azure AD) Application Proxy.</span></span> <span data-ttu-id="ca76f-296">ด้วยการกำหนดค่านี้ คุณสามารถเชื่อมต่อกับเซิร์ฟเวอร์รายงานที่โฮสต์ภายในขอบเขตองค์กรจากแอป Power BI สำหรับอุปกรณ์เคลื่อนที่โดยไม่จำเป็นต้องตั้งค่าการกำหนดค่าภายในองค์กรที่ซับซ้อน</span><span class="sxs-lookup"><span data-stu-id="ca76f-296">With this configuration you can connect to Report Server hosted inside the enterprise boundaries from Power BI Mobile app, without the need to set up complex on-premises configuration.</span></span> <span data-ttu-id="ca76f-297">อ่านเพิ่มเติมเกี่ยวกับ[การรวมพร็อกซีแอปพลิเคชัน Power BI สำหรับอุปกรณ์เคลื่อนที่และ Azure AD](https://powerbi.microsoft.com/blog/access-on-prem-report-server-from-your-power-bi-mobile-app-with-azure-active-directory-application-proxy/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-297">Read more on [Power BI mobile and Azure AD Application Proxy integration](https://powerbi.microsoft.com/blog/access-on-prem-report-server-from-your-power-bi-mobile-app-with-azure-active-directory-application-proxy/).</span></span> <span data-ttu-id="ca76f-298">เรียนรู้[วิธีการกำหนดค่าพร็อกซีแอปพลิเคชัน Azure AD และ Power BI](/azure/active-directory/manage-apps/application-proxy-integrate-with-power-bi)</span><span class="sxs-lookup"><span data-stu-id="ca76f-298">Learn [how to configure Azure AD Application Proxy and Power BI](/azure/active-directory/manage-apps/application-proxy-integrate-with-power-bi).</span></span>
+เราเป็นพันธมิตรกับทีม Azure Active Directory เพื่อรวมแอปพลิเคชัน Power BI สำหรับอุปกรณ์เคลื่อนที่กับพร็อกซีแอปพลิเคชัน Azure Active Directory (Azure AD) ด้วยการกำหนดค่านี้ คุณสามารถเชื่อมต่อกับเซิร์ฟเวอร์รายงานที่โฮสต์ภายในขอบเขตองค์กรจากแอป Power BI สำหรับอุปกรณ์เคลื่อนที่โดยไม่จำเป็นต้องตั้งค่าการกำหนดค่าภายในองค์กรที่ซับซ้อน อ่านเพิ่มเติมเกี่ยวกับ[การรวมพร็อกซีแอปพลิเคชัน Power BI สำหรับอุปกรณ์เคลื่อนที่และ Azure AD](https://powerbi.microsoft.com/blog/access-on-prem-report-server-from-your-power-bi-mobile-app-with-azure-active-directory-application-proxy/) เรียนรู้[วิธีการกำหนดค่าพร็อกซีแอปพลิเคชัน Azure AD และ Power BI](/azure/active-directory/manage-apps/application-proxy-integrate-with-power-bi)
 
-## <a name="july-2019"></a><span data-ttu-id="ca76f-299">กรกฎาคม 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-299">July 2019</span></span>
+## <a name="july-2019"></a>กรกฎาคม 2019
 
-### <a name="report-page-tooltips"></a><span data-ttu-id="ca76f-300">เคล็ดลับเครื่องมือหน้ารายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-300">Report page tooltips</span></span>
+### <a name="report-page-tooltips"></a>เคล็ดลับเครื่องมือหน้ารายงาน
 
-<span data-ttu-id="ca76f-301">ตอนนี้เคล็ดลับเครื่องมือหน้ารายงานไม่ได้รับการสนับสนุนเมื่อดูรายงานในแอปมือถือ</span><span class="sxs-lookup"><span data-stu-id="ca76f-301">Report page tooltips are now supported when viewing reports in your mobile app.</span></span> <span data-ttu-id="ca76f-302">เพียงแค่กดค้างบนวิชวลที่มีเคล็ดลับเครื่องมือรายงานและเคล็ดลับนั้นจะแสดงขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-302">Simply press and hold on a visual that has a report tooltip tied to it and it will be shown.</span></span>  
+ตอนนี้เคล็ดลับเครื่องมือหน้ารายงานไม่ได้รับการสนับสนุนเมื่อดูรายงานในแอปมือถือ เพียงแค่กดค้างบนวิชวลที่มีเคล็ดลับเครื่องมือรายงานและเคล็ดลับนั้นจะแสดงขึ้น  
 
 ![เคล็ดลับเครื่องมือของพื้นที่รายงาน](./media/mobile-whats-new-in-the-mobile-apps/report-canvas-tooltip.png)
  
 > [!NOTE]
-> <span data-ttu-id="ca76f-304">เคล็ดลับเครื่องมือรายงานได้รับการสนับสนุนสำหรับอุปกรณ์ที่มีขนาดใหญ่กว่า 640 พิกเซลและ 320 มุมมองพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-304">Report tooltips are supported for devices greater than 640 pixel size and 320 viewport.</span></span> <span data-ttu-id="ca76f-305">อุปกรณ์ขนาดเล็กกว่าจะเคล็ดลับเครื่องมือค่าเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-305">Smaller devices use default tooltips.</span></span>
+> เคล็ดลับเครื่องมือรายงานได้รับการสนับสนุนสำหรับอุปกรณ์ที่มีขนาดใหญ่กว่า 640 พิกเซลและ 320 มุมมองพื้นที่ทำงาน อุปกรณ์ขนาดเล็กกว่าจะเคล็ดลับเครื่องมือค่าเริ่มต้น
 
 
-## <a name="june-2019"></a><span data-ttu-id="ca76f-306">มิถุนายน 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-306">June 2019</span></span>
+## <a name="june-2019"></a>มิถุนายน 2019
 
-### <a name="barcode-scanning-is-now-available-in-android"></a><span data-ttu-id="ca76f-307">การสแกนบาร์โค้ดพร้อมใช้งานแล้วตอนนี้ใน Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-307">Barcode scanning is now available in Android</span></span>
-<span data-ttu-id="ca76f-308">ตอนนี้คุณสามารถใช้แอป Power BI บน Android (โทรศัพท์และแท็บเล็ต) เพื่อสแกนบาร์โค้ดที่พิมพ์บนผลิตภัณฑ์หรือชั้นวางที่ร้านค้าของคุณเพื่อแสดงรายงาน Power BI ที่เกี่ยวข้อง ซึ่งกรองโดยค่าที่สแกน</span><span class="sxs-lookup"><span data-stu-id="ca76f-308">Now you can use your Power BI app on Android (phone and tablet) to scan barcodes printed on products or shelves at your store to display related Power BI reports filtered by the scanned value.</span></span> <span data-ttu-id="ca76f-309">อ่านเพิ่มเติมเกี่ยวกับ[กรองข้อมูลของคุณด้วยบาร์โค้ด](mobile-apps-scan-barcode-iphone.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-309">More about [filtering your data with barcodes](mobile-apps-scan-barcode-iphone.md).</span></span>
+### <a name="barcode-scanning-is-now-available-in-android"></a>การสแกนบาร์โค้ดพร้อมใช้งานแล้วตอนนี้ใน Android
+ตอนนี้คุณสามารถใช้แอป Power BI บน Android (โทรศัพท์และแท็บเล็ต) เพื่อสแกนบาร์โค้ดที่พิมพ์บนผลิตภัณฑ์หรือชั้นวางที่ร้านค้าของคุณเพื่อแสดงรายงาน Power BI ที่เกี่ยวข้อง ซึ่งกรองโดยค่าที่สแกน อ่านเพิ่มเติมเกี่ยวกับ[กรองข้อมูลของคุณด้วยบาร์โค้ด](mobile-apps-scan-barcode-iphone.md)
 
-### <a name="supporting-pbix-reports-hosted-in-pbi-rs-over-adfs-configuration-ios-android"></a><span data-ttu-id="ca76f-310">การสนับสนุนรายงาน PBIX ที่โฮสต์ใน PBI-RS ผ่านการกำหนดค่า ADFS (iOS, Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-310">Supporting PBIX reports hosted in PBI-RS over ADFS configuration (iOS, Android)</span></span>
+### <a name="supporting-pbix-reports-hosted-in-pbi-rs-over-adfs-configuration-ios-android"></a>การสนับสนุนรายงาน PBIX ที่โฮสต์ใน PBI-RS ผ่านการกำหนดค่า ADFS (iOS, Android)
 
-<span data-ttu-id="ca76f-311">ขณะนี้ รายงาน Power BI (PBIX) ที่โฮสต์ใน PBI RS ผ่านการกำหนดค่า ADFS สามารถเข้าถึงได้จากแอป Power BI สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-311">Power BI Reports (PBIX) hosted in PBI-RS over ADFS configuration can now be accessed also from Power BI mobile apps.</span></span>
+ขณะนี้ รายงาน Power BI (PBIX) ที่โฮสต์ใน PBI RS ผ่านการกำหนดค่า ADFS สามารถเข้าถึงได้จากแอป Power BI สำหรับอุปกรณ์เคลื่อนที่
 
-## <a name="may-2019"></a><span data-ttu-id="ca76f-312">พฤษภาคม 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-312">May 2019</span></span>
+## <a name="may-2019"></a>พฤษภาคม 2019
 
-### <a name="siri-shortcuts-support-ios"></a><span data-ttu-id="ca76f-313">ฝ่ายสนับสนุนทางลัดของ Siri (iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-313">Siri Shortcuts support (iOS)</span></span>
-<span data-ttu-id="ca76f-314">ผู้ใช้สามารถสร้างทางลัดของ Siri ในรายงาน Power BI และแดชบอร์ด และเปิดโดยตรงจากอินเทอร์เฟซเสียงของ Siri ได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-314">Users can create Siri Shortcuts to their Power BI reports and dashboards, and then open them directly from Siri voice interface.</span></span> <span data-ttu-id="ca76f-315">[อ่านวิธีการใช้ทางลัดของ Siri ในแอป Power BI ของระบบ iOS](https://powerbi.microsoft.com/blog/introducing-siri-integration-with-power-bi-mobile-ios-app-preview/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-315">[Read how to use Siri Shortcuts in Power BI iOS app](https://powerbi.microsoft.com/blog/introducing-siri-integration-with-power-bi-mobile-ios-app-preview/).</span></span>
+### <a name="siri-shortcuts-support-ios"></a>ฝ่ายสนับสนุนทางลัดของ Siri (iOS)
+ผู้ใช้สามารถสร้างทางลัดของ Siri ในรายงาน Power BI และแดชบอร์ด และเปิดโดยตรงจากอินเทอร์เฟซเสียงของ Siri ได้ [อ่านวิธีการใช้ทางลัดของ Siri ในแอป Power BI ของระบบ iOS](https://powerbi.microsoft.com/blog/introducing-siri-integration-with-power-bi-mobile-ios-app-preview/)
 
-### <a name="device-search-ios"></a><span data-ttu-id="ca76f-316">การค้นหาอุปกรณ์ (iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-316">Device search (iOS)</span></span>
-<span data-ttu-id="ca76f-317">การรวม Power BI กับการค้นหาอุปกรณ์ iOS (สปอตไลต์)</span><span class="sxs-lookup"><span data-stu-id="ca76f-317">Integrating Power BI with iOS device search (Spotlight).</span></span> <span data-ttu-id="ca76f-318">ขณะนี้ การค้นหาเนื้อหาใน iPhone หรือ iPad จะมีรายการ Power BI ด้วยเช่นกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-318">Searching for content in iPhone or iPad will now include Power BI items as well.</span></span> <span data-ttu-id="ca76f-319">เมื่อผู้ใช้ใช้การค้นหาอุปกรณ์แบบเดิม รายงาน Power BI, แดชบอร์ด, แอป, พื้นที่ทำงาน และบุคคลที่ตรงกับเกณฑ์การค้นหา จะแสดงอยู่ในผลลัพธ์ด้วยเช่นกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-319">When users use device native search, Power BI reports, dashboards, apps, workspaces and people matching the search criteria, will be listed in the results as well.</span></span> <span data-ttu-id="ca76f-320">[ไปบล็อกโพสต์เพื่อเรียนรู้เพิ่มเติม](https://powerbi.microsoft.com/blog/introducing-siri-integration-with-power-bi-mobile-ios-app-preview/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-320">[Visit the blog post to learn more](https://powerbi.microsoft.com/blog/introducing-siri-integration-with-power-bi-mobile-ios-app-preview/).</span></span>
-
-
-### <a name="single-tap-report-interaction---ga"></a><span data-ttu-id="ca76f-321">การโต้ตอบรายงานแบบแตะครั้งเดียว - GA</span><span class="sxs-lookup"><span data-stu-id="ca76f-321">Single tap report interaction - GA</span></span>
-
-<span data-ttu-id="ca76f-322">ขณะนี้ การแตะครั้งเดียวคือ GA และจะเป็นการโต้ตอบเริ่มต้นด้วยการแตะสำหรับผู้ใช้รายใหม่</span><span class="sxs-lookup"><span data-stu-id="ca76f-322">Single tap is now GA, and will become the default touch interaction for new users.</span></span> <span data-ttu-id="ca76f-323">ผู้ใช้จะยังคงไม่สามารถปิดใช้งาน และมีแตะสองครั้งในการตั้งค่าแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-323">Users will still be able to turn it off and have double tap in the app settings.</span></span>
-
-### <a name="enhanced-conditional-access-protection-ios-android"></a><span data-ttu-id="ca76f-324">การป้องกันการเข้าถึงตามเงื่อนไขที่ปรับปรุง (iOS, Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-324">Enhanced conditional access protection (iOS, Android)</span></span>
-
-<span data-ttu-id="ca76f-325">เราได้รวมเข้ากับ[ความสามารถในการเข้าถึงตามเงื่อนไขที่มีการป้องกันแอปใหม่](/azure/active-directory/conditional-access/app-protection-based-conditional-access) ของ Azure AD เพื่อเพิ่มความปลอดภัย โดยการจำกัดการเข้าถึง Power BI ก่อนที่จะใช้นโยบายเกี่ยวกับแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-325">We integrated with Azure AD [new app protection-based conditional access capability](/azure/active-directory/conditional-access/app-protection-based-conditional-access) to increase security by limiting access to Power BI before app policy is applied.</span></span>
-
-### <a name="device-protection-ios"></a><span data-ttu-id="ca76f-326">การป้องกันอุปกรณ์ (iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-326">Device protection (iOS)</span></span>
-
-<span data-ttu-id="ca76f-327">ผู้ใช้สามารถใช้การป้องกันที่มีอยู่ในอุปกรณ์เพื่อรักษาความปลอดภัยของ Power BI ด้วยการขอ Face ID, Touch ID หรือรหัสผ่านเพื่อการเข้าถึง Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-327">Users can use device built-in protection to secure Power BI, by asking for Face ID, Touch ID or passcode for accessing Power BI.</span></span> <span data-ttu-id="ca76f-328">ผู้ใช้ที่ใช้การตั้งค่าแอปสามารถควบคุมการดำเนินการนี้ได้ และรวมถึงผู้ดูแลระบบที่ใช้ Intune และเครื่องมือ MDM อื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="ca76f-328">This can be control by the user using the app settings, but also by admins using Intune and any other MDM tool.</span></span> <span data-ttu-id="ca76f-329">[เรียนรู้เพิ่มเติม](./mobile-native-secure-access.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-329">[Learn more](./mobile-native-secure-access.md).</span></span>
-
-### <a name="one-page-report-slideshow-windows"></a><span data-ttu-id="ca76f-330">การนำเสนอภาพนิ่งรายงานแบบหนึ่งหน้า (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-330">One page report Slideshow (Windows)</span></span>
-
-<span data-ttu-id="ca76f-331">การสนับสนุนการรีเฟรชโดยอัตโนมัติยังมีไว้สำหรับรายงานแบบหนึ่งหน้าในการนำเสนอภาพนิ่ง</span><span class="sxs-lookup"><span data-stu-id="ca76f-331">Supporting auto refresh also for one-page reports in slideshow.</span></span> <span data-ttu-id="ca76f-332">ดังนั้น ถ้ามีการอัปเดตแหล่งข้อมูลเบื้องต้น้ของรายงาน เราจะเลือกและอัปเดตข้อมูลในหน้า</span><span class="sxs-lookup"><span data-stu-id="ca76f-332">So, if the report's underlying data source is updated, we will pick it up and update the data in the page.</span></span>
+### <a name="device-search-ios"></a>การค้นหาอุปกรณ์ (iOS)
+การรวม Power BI กับการค้นหาอุปกรณ์ iOS (สปอตไลต์) ขณะนี้ การค้นหาเนื้อหาใน iPhone หรือ iPad จะมีรายการ Power BI ด้วยเช่นกัน เมื่อผู้ใช้ใช้การค้นหาอุปกรณ์แบบเดิม รายงาน Power BI, แดชบอร์ด, แอป, พื้นที่ทำงาน และบุคคลที่ตรงกับเกณฑ์การค้นหา จะแสดงอยู่ในผลลัพธ์ด้วยเช่นกัน [ไปบล็อกโพสต์เพื่อเรียนรู้เพิ่มเติม](https://powerbi.microsoft.com/blog/introducing-siri-integration-with-power-bi-mobile-ios-app-preview/)
 
 
-## <a name="april-2019"></a><span data-ttu-id="ca76f-333">เมษายน 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-333">April 2019</span></span>
+### <a name="single-tap-report-interaction---ga"></a>การโต้ตอบรายงานแบบแตะครั้งเดียว - GA
 
-### <a name="key-influencers-visual"></a><span data-ttu-id="ca76f-334">ภาพผู้ทรงอิทธิพลหลัก</span><span class="sxs-lookup"><span data-stu-id="ca76f-334">Key Influencers visual</span></span> 
+ขณะนี้ การแตะครั้งเดียวคือ GA และจะเป็นการโต้ตอบเริ่มต้นด้วยการแตะสำหรับผู้ใช้รายใหม่ ผู้ใช้จะยังคงไม่สามารถปิดใช้งาน และมีแตะสองครั้งในการตั้งค่าแอป
 
-<span data-ttu-id="ca76f-335">ขณะนี้ ภาพผู้ทรงอิทธิพลหลักพร้อมใช้งานแล้วบนแอปสำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-335">Key Influencers visual is now available on your mobile app.</span></span> <span data-ttu-id="ca76f-336">ภาพนี้จะช่วยให้คุณทำการวิเคราะห์ตัวควบคุมหลักกับข้อมูลของคุณด้วยการแตะเพียงไม่กี่ครั้ง</span><span class="sxs-lookup"><span data-stu-id="ca76f-336">This visual lets you perform analysis of key drivers over your data with just a few taps.</span></span>
+### <a name="enhanced-conditional-access-protection-ios-android"></a>การป้องกันการเข้าถึงตามเงื่อนไขที่ปรับปรุง (iOS, Android)
 
-### <a name="add-comments-to-report-content-android-and-ios"></a><span data-ttu-id="ca76f-337">เพิ่มข้อคิดเห็นลงในเนื้อหารายงาน (Android และ iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-337">Add comments to report content (Android and iOS)</span></span>
+เราได้รวมเข้ากับ[ความสามารถในการเข้าถึงตามเงื่อนไขที่มีการป้องกันแอปใหม่](/azure/active-directory/conditional-access/app-protection-based-conditional-access) ของ Azure AD เพื่อเพิ่มความปลอดภัย โดยการจำกัดการเข้าถึง Power BI ก่อนที่จะใช้นโยบายเกี่ยวกับแอป
 
-<span data-ttu-id="ca76f-338">ตอนนี้ คุณสามารถใช้ข้อคิดเห็นเพื่อทำงานร่วมกันและแชร์คำติชมของคุณบนหน้ารายงานและการแสดงผลด้วยภาพ</span><span class="sxs-lookup"><span data-stu-id="ca76f-338">Now you can use comments to collaborate and share your feedback on report pages and visuals.</span></span> <span data-ttu-id="ca76f-339">อ่านเพิ่มเติมเกี่ยวกับการแสดงข้อคิดเห็นของรายงานในบริการ Power BI และอุปกรณ์เคลื่อนที่ [ในบล็อกนี้](https://powerbi.microsoft.com/blog/announcing-report-commenting-for-power-bi-service-and-mobile/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-339">Read more about report commenting in Power BI Service and Mobile [in this blog](https://powerbi.microsoft.com/blog/announcing-report-commenting-for-power-bi-service-and-mobile/).</span></span> 
+### <a name="device-protection-ios"></a>การป้องกันอุปกรณ์ (iOS)
 
-### <a name="maximize-the-view-with-full-screen-mode-android-and-ios"></a><span data-ttu-id="ca76f-340">ขยายมุมมองด้วยโหมดเต็มหน้าจอ (Android และ iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-340">Maximize the view with full screen mode (Android and iOS)</span></span>
+ผู้ใช้สามารถใช้การป้องกันที่มีอยู่ในอุปกรณ์เพื่อรักษาความปลอดภัยของ Power BI ด้วยการขอ Face ID, Touch ID หรือรหัสผ่านเพื่อการเข้าถึง Power BI ผู้ใช้ที่ใช้การตั้งค่าแอปสามารถควบคุมการดำเนินการนี้ได้ และรวมถึงผู้ดูแลระบบที่ใช้ Intune และเครื่องมือ MDM อื่น ๆ [เรียนรู้เพิ่มเติม](./mobile-native-secure-access.md)
 
-<span data-ttu-id="ca76f-341">เราได้เพิ่มปุ่มใหม่ที่ช่วยให้คุณสามารถควบคุมเมื่อต้องการเน้นข้อมูลของคุณ โดยการลบส่วนหัวและส่วนท้ายของรายงาน และขยายพื้นที่การดูรายงานของคุณสูงสุด</span><span class="sxs-lookup"><span data-stu-id="ca76f-341">We added new button that let you control when to focus on your data by removing report headers and footers and giving you maximum space for viewing your reports.</span></span>
+### <a name="one-page-report-slideshow-windows"></a>การนำเสนอภาพนิ่งรายงานแบบหนึ่งหน้า (Windows)
 
-## <a name="march-2019"></a><span data-ttu-id="ca76f-342">มีนาคม 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-342">March 2019</span></span>
+การสนับสนุนการรีเฟรชโดยอัตโนมัติยังมีไว้สำหรับรายงานแบบหนึ่งหน้าในการนำเสนอภาพนิ่ง ดังนั้น ถ้ามีการอัปเดตแหล่งข้อมูลเบื้องต้น้ของรายงาน เราจะเลือกและอัปเดตข้อมูลในหน้า
 
-### <a name="supporting-external-guest-users-in-power-bi-apps-ios-android"></a><span data-ttu-id="ca76f-343">การสนับสนุนผู้เยี่ยมชมภายนอกในแอป Power BI (iOS, Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-343">Supporting external guest users in Power BI apps (iOS, Android)</span></span>
 
-<span data-ttu-id="ca76f-344">คุณสามารถเข้าถึงเนื้อหา Power BI ที่แชร์กับคุณจากองค์กรอื่น ๆ โดยตรงจากแอป (หรือที่เรียกว่า B2B)</span><span class="sxs-lookup"><span data-stu-id="ca76f-344">You can access Power BI content shared with you from other organization directly from the app (also known as B2B).</span></span> <span data-ttu-id="ca76f-345">อ่านเพิ่มเติมเกี่ยวกับ Power BI แอปสำหรับอุปกรณ์เคลื่อน B2B [ที่นี่](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-now-support-azure-ad-b2b-guest-users/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-345">Read more on Power BI mobile apps B2B [here](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-now-support-azure-ad-b2b-guest-users/).</span></span>
+## <a name="april-2019"></a>เมษายน 2019
 
-### <a name="enhancing-windows-presentation-mode-with-slideshow-windows"></a><span data-ttu-id="ca76f-346">การเพิ่มประสิทธิภาพโหมดการนำเสนองาน Windows พร้อมการนำเสนอภาพนิ่ง (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-346">Enhancing Windows presentation mode with slideshow (Windows)</span></span>
+### <a name="key-influencers-visual"></a>ภาพผู้ทรงอิทธิพลหลัก 
 
-<span data-ttu-id="ca76f-347">ด้วย[การนำเสนอภาพนิ่ง](https://powerbi.microsoft.com/blog/enhancing-presentation-mode-with-slideshow-in-windows-power-bi-app/)คุณสามารถใช้การแสดงผลแบบสาธารณะในสำนักงานของคุณเพื่อเรียกใช้รายงาน Power BI แบบเต็มหน้าจอซึ่งจะหมุนเองโดยอัตโนมัติระหว่างหน้ารายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-347">With [slideshow](https://powerbi.microsoft.com/blog/enhancing-presentation-mode-with-slideshow-in-windows-power-bi-app/) you can use public displays located in your office to run Power BI reports in full screen that will auto rotate between report pages.</span></span>  
+ขณะนี้ ภาพผู้ทรงอิทธิพลหลักพร้อมใช้งานแล้วบนแอปสำหรับอุปกรณ์เคลื่อนที่ ภาพนี้จะช่วยให้คุณทำการวิเคราะห์ตัวควบคุมหลักกับข้อมูลของคุณด้วยการแตะเพียงไม่กี่ครั้ง
 
-### <a name="supporting-pbi-rs-reports-over-adfs-and-wap-configuration-ios-only"></a><span data-ttu-id="ca76f-348">การสนับสนุนรายงาน PBI-RS ในการกำหนดค่า ADFS และ WAP (iOS เท่านั้น)</span><span class="sxs-lookup"><span data-stu-id="ca76f-348">Supporting PBI-RS reports over ADFS and WAP configuration (iOS only)</span></span>
+### <a name="add-comments-to-report-content-android-and-ios"></a>เพิ่มข้อคิดเห็นลงในเนื้อหารายงาน (Android และ iOS)
 
-<span data-ttu-id="ca76f-349">ขณะนี้ รายงาน Power BI (PBIX) ที่โฮสต์ใน PBI RS ในการกำหนดค่า ADFS สามารถเข้าถึงได้จากแอป Power BI ระบบ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-349">Power BI Reports (PBIX) hosted in PBI-RS over ADFS configuration can now be accessed from Power BI iOS app.</span></span>
+ตอนนี้ คุณสามารถใช้ข้อคิดเห็นเพื่อทำงานร่วมกันและแชร์คำติชมของคุณบนหน้ารายงานและการแสดงผลด้วยภาพ อ่านเพิ่มเติมเกี่ยวกับการแสดงข้อคิดเห็นของรายงานในบริการ Power BI และอุปกรณ์เคลื่อนที่ [ในบล็อกนี้](https://powerbi.microsoft.com/blog/announcing-report-commenting-for-power-bi-service-and-mobile/) 
 
-### <a name="enabling-single-tap-interaction-with-report-visuals"></a><span data-ttu-id="ca76f-350">การเปิดใช้งานการโต้ตอบแบบแตะครั้งเดียวกับภาพในรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-350">Enabling single tap interaction with report visuals</span></span>
+### <a name="maximize-the-view-with-full-screen-mode-android-and-ios"></a>ขยายมุมมองด้วยโหมดเต็มหน้าจอ (Android และ iOS)
 
-<span data-ttu-id="ca76f-351">เราได้เปลี่ยนการโต้ตอบรายงาน ดังนั้นคุณจะต้องแตะบนภาพ ปุ่ม หรือตัวแบ่งส่วนข้อมูลเพียงครั้งเดียวเท่านั้นเพื่อโต้ตอบกับข้อมูลทันที</span><span class="sxs-lookup"><span data-stu-id="ca76f-351">We changed report interaction so it will require only one tap on a visual, button, or slicer to interact with its data right away.</span></span> <span data-ttu-id="ca76f-352">ผู้ใช้จะไม่จำเป็นต้องแตะบนภาพเพื่อเลือก และแตะอีกครั้งเพื่อโต้ตอบ การแตะครั้งเดียวจะดำเนินการทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-352">Users will no longer need to tap on a visual to select it and to tap again to interact with it,  a single tap will do them both.</span></span>
+เราได้เพิ่มปุ่มใหม่ที่ช่วยให้คุณสามารถควบคุมเมื่อต้องการเน้นข้อมูลของคุณ โดยการลบส่วนหัวและส่วนท้ายของรายงาน และขยายพื้นที่การดูรายงานของคุณสูงสุด
+
+## <a name="march-2019"></a>มีนาคม 2019
+
+### <a name="supporting-external-guest-users-in-power-bi-apps-ios-android"></a>การสนับสนุนผู้เยี่ยมชมภายนอกในแอป Power BI (iOS, Android)
+
+คุณสามารถเข้าถึงเนื้อหา Power BI ที่แชร์กับคุณจากองค์กรอื่น ๆ โดยตรงจากแอป (หรือที่เรียกว่า B2B) อ่านเพิ่มเติมเกี่ยวกับ Power BI แอปสำหรับอุปกรณ์เคลื่อน B2B [ที่นี่](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-now-support-azure-ad-b2b-guest-users/)
+
+### <a name="enhancing-windows-presentation-mode-with-slideshow-windows"></a>การเพิ่มประสิทธิภาพโหมดการนำเสนองาน Windows พร้อมการนำเสนอภาพนิ่ง (Windows)
+
+ด้วย[การนำเสนอภาพนิ่ง](https://powerbi.microsoft.com/blog/enhancing-presentation-mode-with-slideshow-in-windows-power-bi-app/)คุณสามารถใช้การแสดงผลแบบสาธารณะในสำนักงานของคุณเพื่อเรียกใช้รายงาน Power BI แบบเต็มหน้าจอซึ่งจะหมุนเองโดยอัตโนมัติระหว่างหน้ารายงาน  
+
+### <a name="supporting-pbi-rs-reports-over-adfs-and-wap-configuration-ios-only"></a>การสนับสนุนรายงาน PBI-RS ในการกำหนดค่า ADFS และ WAP (iOS เท่านั้น)
+
+ขณะนี้ รายงาน Power BI (PBIX) ที่โฮสต์ใน PBI RS ในการกำหนดค่า ADFS สามารถเข้าถึงได้จากแอป Power BI ระบบ iOS
+
+### <a name="enabling-single-tap-interaction-with-report-visuals"></a>การเปิดใช้งานการโต้ตอบแบบแตะครั้งเดียวกับภาพในรายงาน
+
+เราได้เปลี่ยนการโต้ตอบรายงาน ดังนั้นคุณจะต้องแตะบนภาพ ปุ่ม หรือตัวแบ่งส่วนข้อมูลเพียงครั้งเดียวเท่านั้นเพื่อโต้ตอบกับข้อมูลทันที ผู้ใช้จะไม่จำเป็นต้องแตะบนภาพเพื่อเลือก และแตะอีกครั้งเพื่อโต้ตอบ การแตะครั้งเดียวจะดำเนินการทั้งหมด
 
 ![การโต้ตอบแบบแตะครั้งเดียว](./media/mobile-whats-new-in-the-mobile-apps/single-tap-2.gif)
 
 > [!NOTE]
-> <span data-ttu-id="ca76f-354">ผู้ใช้เดิมจะต้องเปิดใช้งานลักษณะการทำงานนี้ในการตั้งค่าแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-354">Existing users will need to turn on this behavior in the app setting.</span></span> <span data-ttu-id="ca76f-355">สำหรับข้อมูลเพิ่มเติม ให้ดูที่บทความ[วิธีการกำหนดค่าการโต้ตอบรายงานแบบแตะครั้งเดียว](./mobile-app-interaction-settings.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-355">For more information, see the [How to configure single tap report interaction](./mobile-app-interaction-settings.md) article.</span></span>
+> ผู้ใช้เดิมจะต้องเปิดใช้งานลักษณะการทำงานนี้ในการตั้งค่าแอป สำหรับข้อมูลเพิ่มเติม ให้ดูที่บทความ[วิธีการกำหนดค่าการโต้ตอบรายงานแบบแตะครั้งเดียว](./mobile-app-interaction-settings.md)
 
-## <a name="january---february-2019"></a><span data-ttu-id="ca76f-356">มกราคม - กุมภาพันธ์ 2019</span><span class="sxs-lookup"><span data-stu-id="ca76f-356">January - February 2019</span></span>
+## <a name="january---february-2019"></a>มกราคม - กุมภาพันธ์ 2019
  
-### <a name="visio-visuals"></a><span data-ttu-id="ca76f-357">ภาพ Visio</span><span class="sxs-lookup"><span data-stu-id="ca76f-357">Visio visuals</span></span>
+### <a name="visio-visuals"></a>ภาพ Visio
 
-<span data-ttu-id="ca76f-358">เปิดใช้งานการลงชื่อเข้าใช้ครั้งเดียว (sso) ในภาพ Visio ดังนั้นไม่จำเป็นต้องมีขั้นตอนการลงชื่อเข้าใช้ครั้งเดียวใดๆ เพิ่มเติมเมื่อดูรายงาน ด้วยภาพ Visio ในแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-358">Enabling Single sign on (SSO) in Visio visuals, so no additional sign-in steps are required when viewing report with Visio visual in the app.</span></span> 
+เปิดใช้งานการลงชื่อเข้าใช้ครั้งเดียว (sso) ในภาพ Visio ดังนั้นไม่จำเป็นต้องมีขั้นตอนการลงชื่อเข้าใช้ครั้งเดียวใดๆ เพิ่มเติมเมื่อดูรายงาน ด้วยภาพ Visio ในแอป 
 
-### <a name="dashboard-commenting-is-coming-to-power-bi-mobile-windows-app"></a><span data-ttu-id="ca76f-359">การแสดงความคิดเห็นในแดชบอร์ดกำลังจะมีให้ใช้ในแอป Power BI Mobile Windows</span><span class="sxs-lookup"><span data-stu-id="ca76f-359">Dashboard commenting is coming to Power BI Mobile Windows app</span></span>
+### <a name="dashboard-commenting-is-coming-to-power-bi-mobile-windows-app"></a>การแสดงความคิดเห็นในแดชบอร์ดกำลังจะมีให้ใช้ในแอป Power BI Mobile Windows
 
-<span data-ttu-id="ca76f-360">คุณสามารถเพิ่มข้อคิดเห็นที่แดชบอร์ดและไทล์บางตัวได้โดยตรงเพื่อพูดคุยเกี่ยวกับข้อมูลของคุณ และทุกคนที่ดูแดชบอร์ดจะเห็นข้อคิดเห็นของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-360">You can add comments directly to dashboards and specific tiles to discuss your data, and anyone viewing the dashboard will see your comments.</span></span> 
+คุณสามารถเพิ่มข้อคิดเห็นที่แดชบอร์ดและไทล์บางตัวได้โดยตรงเพื่อพูดคุยเกี่ยวกับข้อมูลของคุณ และทุกคนที่ดูแดชบอร์ดจะเห็นข้อคิดเห็นของคุณ 
 
-## <a name="december-2018"></a><span data-ttu-id="ca76f-361">ธันวาคม 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-361">December 2018</span></span>
+## <a name="december-2018"></a>ธันวาคม 2018
 
-### <a name="filter-is-now-available-for-landscape-reports"></a><span data-ttu-id="ca76f-362">ตัวกรองตอนนี้พร้อมใช้งานสำหรับรายงานแนวนอน</span><span class="sxs-lookup"><span data-stu-id="ca76f-362">Filter is now available for landscape reports</span></span> 
+### <a name="filter-is-now-available-for-landscape-reports"></a>ตัวกรองตอนนี้พร้อมใช้งานสำหรับรายงานแนวนอน 
 
-<span data-ttu-id="ca76f-363">บานหน้าต่างตัวกรองของรายงานตอนนี้พร้อมใช้งานสำหรับรายงานแนวนอน (นอกเหนือจากรายงานโทรศัพท์)</span><span class="sxs-lookup"><span data-stu-id="ca76f-363">Report's filter pane is now available for landscape reports (in addition to phone report).</span></span>
+บานหน้าต่างตัวกรองของรายงานตอนนี้พร้อมใช้งานสำหรับรายงานแนวนอน (นอกเหนือจากรายงานโทรศัพท์)
 
-## <a name="november-2018"></a><span data-ttu-id="ca76f-364">พฤศจิกายน 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-364">November 2018</span></span>
+## <a name="november-2018"></a>พฤศจิกายน 2018
 
-### <a name="modern-visual-header"></a><span data-ttu-id="ca76f-365">ส่วนหัวแบบเป็นภาพที่ทันสมัย</span><span class="sxs-lookup"><span data-stu-id="ca76f-365">Modern visual header</span></span> 
+### <a name="modern-visual-header"></a>ส่วนหัวแบบเป็นภาพที่ทันสมัย 
 
-<span data-ttu-id="ca76f-366">รายงานที่ใช้ 'ส่วนหัวแบบเป็นภาพที่ทันสมัย' ใหม่จะไม่จัดสรรพื้นที่สำหรับส่วนหัวอีกต่อไป ซึ่งทำให้มีที่ว่างน้อยลงและมีพื้นที่สำหรับการจัดรูปแบบการแสดงข้อมูลของคุณมากขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-366">Reports using the new 'modern visual header' will no longer allocate space for headers, resulting in less empty space and more room for your visualizations.</span></span>
+รายงานที่ใช้ 'ส่วนหัวแบบเป็นภาพที่ทันสมัย' ใหม่จะไม่จัดสรรพื้นที่สำหรับส่วนหัวอีกต่อไป ซึ่งทำให้มีที่ว่างน้อยลงและมีพื้นที่สำหรับการจัดรูปแบบการแสดงข้อมูลของคุณมากขึ้น
 
-### <a name="enhance-presentation-mode-windows"></a><span data-ttu-id="ca76f-367">ปรับปรุงโหมดการนำเสนอ (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-367">Enhance presentation mode (Windows)</span></span>
+### <a name="enhance-presentation-mode-windows"></a>ปรับปรุงโหมดการนำเสนอ (Windows)
 
-<span data-ttu-id="ca76f-368">ปรับปรุงโหมดการนำเสนอสำหรับอุปกรณ์ Surface Hub และ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-368">Enhanced presentation mode for Surface Hub and Windows 10 devices.</span></span>  <span data-ttu-id="ca76f-369">เพลิดเพลินไปกับประสบการณ์ใหม่ที่ปรับปรุงขึ้นมาให้กับห้องประชุม Surface Hub ด้วยการปรับปรุงเครื่องมืองานนำเสนอ เครื่องมือสำหรับการทำงานร่วมกัน ไร้กรอบและมุมมองหน้าจอขนาดใหญ่ให้เหมาะสม เพื่อให้คุณสามารถโฟกัสกับข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-369">Enjoy an enhanced Surface Hub meeting room experience, with improved presentation and collaboration tools, and a chromeless, large-screen optimized view, so you can focus on your data.</span></span> <span data-ttu-id="ca76f-370">โหมดการนำเสนอยังมีเครื่องมือเช่นการใช้หมึกเพื่อช่วยให้คุณนำเสนอได้อย่างมีประสิทธิภาพและมีการอภิปรายเกี่ยวกับข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-370">Presentation mode also provides tools such inking to help you effectively present and have discussions about your data.</span></span> <span data-ttu-id="ca76f-371">อ่านเพิ่มเติมเกี่ยวกับโหมดการนำเสนอ[ที่นี่](https://powerbi.microsoft.com/blog/presentation-mode-in-power-bi-windows-app/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-371">Read more about presentation mode [here](https://powerbi.microsoft.com/blog/presentation-mode-in-power-bi-windows-app/).</span></span>
+ปรับปรุงโหมดการนำเสนอสำหรับอุปกรณ์ Surface Hub และ Windows 10  เพลิดเพลินไปกับประสบการณ์ใหม่ที่ปรับปรุงขึ้นมาให้กับห้องประชุม Surface Hub ด้วยการปรับปรุงเครื่องมืองานนำเสนอ เครื่องมือสำหรับการทำงานร่วมกัน ไร้กรอบและมุมมองหน้าจอขนาดใหญ่ให้เหมาะสม เพื่อให้คุณสามารถโฟกัสกับข้อมูลของคุณ โหมดการนำเสนอยังมีเครื่องมือเช่นการใช้หมึกเพื่อช่วยให้คุณนำเสนอได้อย่างมีประสิทธิภาพและมีการอภิปรายเกี่ยวกับข้อมูลของคุณ อ่านเพิ่มเติมเกี่ยวกับโหมดการนำเสนอ[ที่นี่](https://powerbi.microsoft.com/blog/presentation-mode-in-power-bi-windows-app/)
 
-### <a name="portrait-report-layout-in-tablets-ios-and-android"></a><span data-ttu-id="ca76f-372">เค้าโครงรายงานแนวตั้งในแท็บเล็ต (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-372">Portrait report layout in tablets (iOS and Android)</span></span>
+### <a name="portrait-report-layout-in-tablets-ios-and-android"></a>เค้าโครงรายงานแนวตั้งในแท็บเล็ต (iOS และ Android)
 
-<span data-ttu-id="ca76f-373">ขณะนี้เราใช้เค้าโครงรายงานสำหรับโทรศัพท์เมื่อมีเค้าโครงดังกล่าว เพื่อแสดงรายงานบนแท็บเล็ตในโหมดการวางแนวตั้ง</span><span class="sxs-lookup"><span data-stu-id="ca76f-373">We now use phone report layout, when it exists, for displaying reports on tablet in portrait mode orientation.</span></span> <span data-ttu-id="ca76f-374">อ่านเพิ่มเติมเกี่ยวกับ[วิธีการสร้างเค้าโครงโทรศัพท์ในบริการ Power BI หรือ Desktop](/power-bi/desktop-create-phone-report/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-374">Read more on [how to create phone layout in Power BI Service or Desktop](/power-bi/desktop-create-phone-report/).</span></span>
+ขณะนี้เราใช้เค้าโครงรายงานสำหรับโทรศัพท์เมื่อมีเค้าโครงดังกล่าว เพื่อแสดงรายงานบนแท็บเล็ตในโหมดการวางแนวตั้ง อ่านเพิ่มเติมเกี่ยวกับ[วิธีการสร้างเค้าโครงโทรศัพท์ในบริการ Power BI หรือ Desktop](/power-bi/desktop-create-phone-report/)
 
-### <a name="supporting-report-query-string"></a><span data-ttu-id="ca76f-375">สนับสนุนรายงานสตริงแบบสอบถาม</span><span class="sxs-lookup"><span data-stu-id="ca76f-375">Supporting report query string</span></span> 
+### <a name="supporting-report-query-string"></a>สนับสนุนรายงานสตริงแบบสอบถาม 
 
-<span data-ttu-id="ca76f-376">ตอนนี้การเปิดลิงก์รายงานที่รวมเอาสตริงแบบสอบถามสามารถเปิดในแอปบนอุปกรณ์เคลื่อน และสามารถกรองไว้ล่วงหน้าตามเงื่อนไขกำหนดไว้ในสตริงแบบสอบถามได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-376">Opening report link that includes query string will now be opened in the mobile app and be pre-filtered based on the conditions defined in the query string.</span></span> <span data-ttu-id="ca76f-377">เรียนรู้เพิ่มเติมเกี่ยวกับ[วิธีการสร้าง url ของรายงาน ด้วยสตริงแบบสอบถาม](/power-bi/service-url-filters/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-377">Learn more on [how to create report url with query string](/power-bi/service-url-filters/).</span></span>  
+ตอนนี้การเปิดลิงก์รายงานที่รวมเอาสตริงแบบสอบถามสามารถเปิดในแอปบนอุปกรณ์เคลื่อน และสามารถกรองไว้ล่วงหน้าตามเงื่อนไขกำหนดไว้ในสตริงแบบสอบถามได้ เรียนรู้เพิ่มเติมเกี่ยวกับ[วิธีการสร้าง url ของรายงาน ด้วยสตริงแบบสอบถาม](/power-bi/service-url-filters/)  
 
-### <a name="shared-credentials-now-in-android"></a><span data-ttu-id="ca76f-378">ข้อมูลประจำตัวที่ใช้ร่วมกัน (ตอนนี้ใน Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-378">Shared credentials (now in Android)</span></span>
+### <a name="shared-credentials-now-in-android"></a>ข้อมูลประจำตัวที่ใช้ร่วมกัน (ตอนนี้ใน Android)
 
-<span data-ttu-id="ca76f-379">การลงชื่อเข้าใช้ใน Power BI จากแอปมือถือจะง่ายกว่าที่เคย</span><span class="sxs-lookup"><span data-stu-id="ca76f-379">Signing in to Power BI from your mobile app has never been easier.</span></span> <span data-ttu-id="ca76f-380">ด้วยข้อมูลประจำตัวที่แชร์ เราได้ทำให้ขั้นตอนการลงชื่อเข้าใช้ง่ายขึ้น ด้วยการใช้ข้อมูลประจำตัวของแอป Microsoft 365 อื่นๆ เพื่อยืนยันตัวตนของคุณในบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-380">With shared credentials, we simplified the sign-in process by using other Microsoft 365 app credentials on the device to authenticate you in the Power BI service.</span></span>
+การลงชื่อเข้าใช้ใน Power BI จากแอปมือถือจะง่ายกว่าที่เคย ด้วยข้อมูลประจำตัวที่แชร์ เราได้ทำให้ขั้นตอนการลงชื่อเข้าใช้ง่ายขึ้น ด้วยการใช้ข้อมูลประจำตัวของแอป Microsoft 365 อื่นๆ เพื่อยืนยันตัวตนของคุณในบริการของ Power BI
 
-### <a name="in-app-urls-now-in-android"></a><span data-ttu-id="ca76f-381">URL ในแอป (ตอนนี้ใน Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-381">In-app URLs (now in Android)</span></span> 
+### <a name="in-app-urls-now-in-android"></a>URL ในแอป (ตอนนี้ใน Android) 
 
-<span data-ttu-id="ca76f-382">ลิงก์ในรายงานที่จะชี้ไปยังวัตถุอื่นของ Power BI จะเปิดขึ้นในแอปโดยตรง</span><span class="sxs-lookup"><span data-stu-id="ca76f-382">Links in reports that point to other Power BI artifacts now open directly inside the app.</span></span> <span data-ttu-id="ca76f-383">ซึ่งจะช่วยให้คุณสร้างโฟล์วการนำทางแบบกำหนดเองได้ ยกตัวอย่างเช่น การเชื่อมโยงจากรายงานไปยังแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="ca76f-383">This enables you to build custom navigation flows, for example, linking from a report into a dashboard.</span></span>
+ลิงก์ในรายงานที่จะชี้ไปยังวัตถุอื่นของ Power BI จะเปิดขึ้นในแอปโดยตรง ซึ่งจะช่วยให้คุณสร้างโฟล์วการนำทางแบบกำหนดเองได้ ยกตัวอย่างเช่น การเชื่อมโยงจากรายงานไปยังแดชบอร์ด
 
-### <a name="show-data-and-copy-values"></a><span data-ttu-id="ca76f-384">แสดงข้อมูลและคัดลอกค่า</span><span class="sxs-lookup"><span data-stu-id="ca76f-384">Show data and copy values</span></span>
+### <a name="show-data-and-copy-values"></a>แสดงข้อมูลและคัดลอกค่า
 
-<span data-ttu-id="ca76f-385">เมนูการดำเนินการแสดงผลรายงาน (...) ในขณะนี้มีตัวเลือกให้การแสดงข้อมูลเบื้องต้นในรูปแบบตาราง</span><span class="sxs-lookup"><span data-stu-id="ca76f-385">Report visual action menu (...) now has the option to show the underlying data in table format.</span></span> <span data-ttu-id="ca76f-386">ในตาราง คุณสามารถแตะยาวเพื่อเลือก และคัดลอกค่าจากตารางนั้น (สมมติว่าไม่มีนโยบายมีมาจำกัดการคัดลอก Intune)</span><span class="sxs-lookup"><span data-stu-id="ca76f-386">Once in the table, you can long-tap to select and copy values from that table (assuming that there is no Intune policy restricting copying).</span></span>
+เมนูการดำเนินการแสดงผลรายงาน (...) ในขณะนี้มีตัวเลือกให้การแสดงข้อมูลเบื้องต้นในรูปแบบตาราง ในตาราง คุณสามารถแตะยาวเพื่อเลือก และคัดลอกค่าจากตารางนั้น (สมมติว่าไม่มีนโยบายมีมาจำกัดการคัดลอก Intune)
 
-## <a name="october-2018"></a><span data-ttu-id="ca76f-387">ตุลาคม 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-387">October 2018</span></span>
+## <a name="october-2018"></a>ตุลาคม 2018
 
-### <a name="paginated-report-preview-all-devices"></a><span data-ttu-id="ca76f-388">ตัวอย่างรายงานแบบแบ่งหน้า (ทุกอุปกรณ์)</span><span class="sxs-lookup"><span data-stu-id="ca76f-388">Paginated report preview (all devices)</span></span>
+### <a name="paginated-report-preview-all-devices"></a>ตัวอย่างรายงานแบบแบ่งหน้า (ทุกอุปกรณ์)
 
-<span data-ttu-id="ca76f-389">ตอนนี้มีรายงานแบบแบ่งหน้าพร้อมใช้ในบริการของ Power BI แล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-389">Paginated reports are now available on Power BI service.</span></span> <span data-ttu-id="ca76f-390">ผู้ใช้ที่เข้าถึงรายงานแบบแบ่งหน้าในบริการของ Power BI ได้จะสามารถเข้าถึงรายงานเหล่านี้ได้จากแอปอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-390">Users with access to paginated reports in Power BI Service can also access these reports from their mobile app.</span></span> 
+ตอนนี้มีรายงานแบบแบ่งหน้าพร้อมใช้ในบริการของ Power BI แล้ว ผู้ใช้ที่เข้าถึงรายงานแบบแบ่งหน้าในบริการของ Power BI ได้จะสามารถเข้าถึงรายงานเหล่านี้ได้จากแอปอุปกรณ์เคลื่อนที่ 
 
-<span data-ttu-id="ca76f-391">โปรดอ่าน[บล็อกโพสต์เกี่ยวกับรายงานแบบแบ่งหน้าในมือถือ](https://powerbi.microsoft.com/blog/power-bi-paginated-reports-also-available-in-power-bi-mobile-apps-preview/)ของ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-391">Read the Power BI [blog post about paginated reports in mobile](https://powerbi.microsoft.com/blog/power-bi-paginated-reports-also-available-in-power-bi-mobile-apps-preview/).</span></span>
+โปรดอ่าน[บล็อกโพสต์เกี่ยวกับรายงานแบบแบ่งหน้าในมือถือ](https://powerbi.microsoft.com/blog/power-bi-paginated-reports-also-available-in-power-bi-mobile-apps-preview/)ของ Power BI
 
-### <a name="shared-credentials-ios"></a><span data-ttu-id="ca76f-392">ข้อมูลประจำตัวที่แชร์ (iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-392">Shared credentials (iOS)</span></span>
+### <a name="shared-credentials-ios"></a>ข้อมูลประจำตัวที่แชร์ (iOS)
 
-<span data-ttu-id="ca76f-393">การลงชื่อเข้าใช้ใน Power BI จากแอปมือถือจะง่ายกว่าที่เคย</span><span class="sxs-lookup"><span data-stu-id="ca76f-393">Signing in to Power BI from your mobile app has never been easier.</span></span> <span data-ttu-id="ca76f-394">ด้วยข้อมูลประจำตัวที่แชร์ เราได้ทำให้ขั้นตอนการลงชื่อเข้าใช้ง่ายขึ้น ด้วยการใช้ข้อมูลประจำตัวของแอป Microsoft 365 อื่นๆ เพื่อยืนยันตัวตนของคุณในบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-394">With shared credentials, we simplified the sign-in process by using other Microsoft 365 app credentials on the device to authenticate you in the Power BI service.</span></span>
+การลงชื่อเข้าใช้ใน Power BI จากแอปมือถือจะง่ายกว่าที่เคย ด้วยข้อมูลประจำตัวที่แชร์ เราได้ทำให้ขั้นตอนการลงชื่อเข้าใช้ง่ายขึ้น ด้วยการใช้ข้อมูลประจำตัวของแอป Microsoft 365 อื่นๆ เพื่อยืนยันตัวตนของคุณในบริการของ Power BI
 
-### <a name="in-app-urls-ios"></a><span data-ttu-id="ca76f-395">URL ในแอป (iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-395">In-app URLs (iOS)</span></span> 
+### <a name="in-app-urls-ios"></a>URL ในแอป (iOS) 
 
-<span data-ttu-id="ca76f-396">ลิงก์ในรายงานที่จะชี้ไปยังวัตถุอื่นของ Power BI จะเปิดขึ้นในแอปโดยตรง</span><span class="sxs-lookup"><span data-stu-id="ca76f-396">Links in reports that point to other Power BI artifacts now open directly inside the app.</span></span> <span data-ttu-id="ca76f-397">ซึ่งจะช่วยให้คุณสร้างโฟล์วการนำทางแบบกำหนดเองได้ ยกตัวอย่างเช่น การเชื่อมโยงจากรายงานไปยังแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="ca76f-397">This enables you to build custom navigation flows, for example, linking from a report into a dashboard.</span></span>
+ลิงก์ในรายงานที่จะชี้ไปยังวัตถุอื่นของ Power BI จะเปิดขึ้นในแอปโดยตรง ซึ่งจะช่วยให้คุณสร้างโฟล์วการนำทางแบบกำหนดเองได้ ยกตัวอย่างเช่น การเชื่อมโยงจากรายงานไปยังแดชบอร์ด
 
-### <a name="ios12-and-watchos-5-support"></a><span data-ttu-id="ca76f-398">ส่วนรองรับ iOS12 และ watchOS 5</span><span class="sxs-lookup"><span data-stu-id="ca76f-398">iOS12 and watchOS 5 support</span></span> 
+### <a name="ios12-and-watchos-5-support"></a>ส่วนรองรับ iOS12 และ watchOS 5 
 
-<span data-ttu-id="ca76f-399">เราได้อัปเดตแอป Power BI สำหรับ iOS เพื่อให้ทำงานได้อย่างราบรื่นกับระบบ OS ใหม่บนอุปกรณ์มือถือและนาฬิกา</span><span class="sxs-lookup"><span data-stu-id="ca76f-399">We have updated Power BI app for iOS to work seamlessly with the new OS on mobile devices and watch.</span></span>
+เราได้อัปเดตแอป Power BI สำหรับ iOS เพื่อให้ทำงานได้อย่างราบรื่นกับระบบ OS ใหม่บนอุปกรณ์มือถือและนาฬิกา
 
-## <a name="september-2018"></a><span data-ttu-id="ca76f-400">กันยายน 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-400">September 2018</span></span>
+## <a name="september-2018"></a>กันยายน 2018
 
-### <a name="phone-report-editing-in-the-browser-all-devices"></a><span data-ttu-id="ca76f-401">การแก้ไขรายงานบนโทรศัพท์ในเบราว์เซอร์ (อุปกรณ์ทั้งหมด)</span><span class="sxs-lookup"><span data-stu-id="ca76f-401">Phone report editing in the browser (all devices)</span></span>
+### <a name="phone-report-editing-in-the-browser-all-devices"></a>การแก้ไขรายงานบนโทรศัพท์ในเบราว์เซอร์ (อุปกรณ์ทั้งหมด)
 
-<span data-ttu-id="ca76f-402">ตอนนี้ คุณสามารถสร้างเค้าโครงรายงานบนโทรศัพท์สำหรับรายงานที่เผยแพร่แล้วในบริการของ Power BI และไม่ใช่เฉพาะใน Power BI Desktop เท่านั้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-402">Now you can create a phone report layout for a report that is already published in the Power BI service, and not just in Power BI Desktop.</span></span> <span data-ttu-id="ca76f-403">คุณสามารถสร้างเค้าโครงรายงานบนโทรศัพท์ได้ในโหมดแก้ไขในเบราว์เซอร์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-403">You create it in Edit mode in your browser.</span></span>
+ตอนนี้ คุณสามารถสร้างเค้าโครงรายงานบนโทรศัพท์สำหรับรายงานที่เผยแพร่แล้วในบริการของ Power BI และไม่ใช่เฉพาะใน Power BI Desktop เท่านั้น คุณสามารถสร้างเค้าโครงรายงานบนโทรศัพท์ได้ในโหมดแก้ไขในเบราว์เซอร์ของคุณ
 
-### <a name="dashboard-commenting-ios-and-android"></a><span data-ttu-id="ca76f-404">แดชบอร์ดการแสดงข้อคิดเห็น (iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-404">Dashboard commenting (iOS and Android)</span></span> 
+### <a name="dashboard-commenting-ios-and-android"></a>แดชบอร์ดการแสดงข้อคิดเห็น (iOS และ Android) 
 
-<span data-ttu-id="ca76f-405">คุณสามารถเพิ่มข้อคิดเห็นที่แดชบอร์ดและไทล์บางตัวได้โดยตรงเพื่อพูดคุยเกี่ยวกับข้อมูลของคุณ และทุกคนที่ดูแดชบอร์ดจะเห็นข้อคิดเห็นของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-405">You can add comments directly to dashboards and specific tiles to discuss your data, and anyone viewing the dashboard will see your comments.</span></span> <span data-ttu-id="ca76f-406">คุณสามารถดึงบุคคลอื่น ๆ ในองค์กรของคุณให้ร่วมออกความเห็นโดยอ้างถึง@mentioningพวกเขา</span><span class="sxs-lookup"><span data-stu-id="ca76f-406">You can also pull others in your organization into the conversation by @mentioning them.</span></span> <span data-ttu-id="ca76f-407">บุคคลเหล่านั้นที่คุณอ้างถึง @mentionedจะได้รับจากการแจ้งเตือนพุชพร้อมด้วยข้อความของคุณไปยังโทรศัพท์มือถือของพวกเขา</span><span class="sxs-lookup"><span data-stu-id="ca76f-407">Those you've @mentioned receive a push notification with your message to their mobile phone.</span></span>
+คุณสามารถเพิ่มข้อคิดเห็นที่แดชบอร์ดและไทล์บางตัวได้โดยตรงเพื่อพูดคุยเกี่ยวกับข้อมูลของคุณ และทุกคนที่ดูแดชบอร์ดจะเห็นข้อคิดเห็นของคุณ คุณสามารถดึงบุคคลอื่น ๆ ในองค์กรของคุณให้ร่วมออกความเห็นโดยอ้างถึง@mentioningพวกเขา บุคคลเหล่านั้นที่คุณอ้างถึง @mentionedจะได้รับจากการแจ้งเตือนพุชพร้อมด้วยข้อความของคุณไปยังโทรศัพท์มือถือของพวกเขา
 
-<span data-ttu-id="ca76f-408">ในขณะนี้พร้อมใช้งานในอุปกรณ์ iOS และ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-408">Currently available for iOS and Android devices.</span></span> <span data-ttu-id="ca76f-409">การสนับสนุนของ Windows ในเร็ว ๆ นี้</span><span class="sxs-lookup"><span data-stu-id="ca76f-409">Windows support coming soon.</span></span>
+ในขณะนี้พร้อมใช้งานในอุปกรณ์ iOS และ Android การสนับสนุนของ Windows ในเร็ว ๆ นี้
 
-<span data-ttu-id="ca76f-410">อ่านโพสต์ในบล็อก Power BI [เกี่ยวกับข้อคิดเห็นในแดชบอร์ด](https://powerbi.microsoft.com/blog/announcing-dashboard-comments-in-power-bi/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-410">Read the Power BI [blog post about dashboard comments](https://powerbi.microsoft.com/blog/announcing-dashboard-comments-in-power-bi/).</span></span>
+อ่านโพสต์ในบล็อก Power BI [เกี่ยวกับข้อคิดเห็นในแดชบอร์ด](https://powerbi.microsoft.com/blog/announcing-dashboard-comments-in-power-bi/)
 
-### <a name="single-sign-on-windows"></a><span data-ttu-id="ca76f-411">ลงชื่อเข้าระบบครั้งเดียว (Windows)</span><span class="sxs-lookup"><span data-stu-id="ca76f-411">Single Sign-On (Windows)</span></span>
+### <a name="single-sign-on-windows"></a>ลงชื่อเข้าระบบครั้งเดียว (Windows)
 
-<span data-ttu-id="ca76f-412">การลงชื่อเข้าระบบครั้งเดียว (SSO) เป็นหนึ่งในความสามารถที่ต้องการมากที่สุดสำหรับ Power BI บนมือถือสำหรับ Windows</span><span class="sxs-lookup"><span data-stu-id="ca76f-412">Single Sign-On (SSO) is one of the most requested capabilities for Power BI mobile for Windows.</span></span> <span data-ttu-id="ca76f-413">ตอนนี้ คุณสามารถใช้บัญชีองค์กรหลักของคุณด้วยการลงชื่อเข้าใช้ในอุปกรณ์เคลื่อนที่ Windows ที่ใช้โดเมนร่วมกัน และยังสามารถยังลงชื่อเข้าใช้บริการของ Power BI ได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-413">Now you can use your primary organizational account not only to sign in to your domain-joined Windows mobile devices, but also to sign in seamlessly to the Power BI service.</span></span> <span data-ttu-id="ca76f-414">อ่านเพิ่มเติมเกี่ยวกับ [SSO และแอปสำหรับอุปกรณ์เคลื่อนที่ Windows ](mobile-windows-10-app-single-sign-on-sso.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-414">Read more about [SSO and the Windows mobile apps](mobile-windows-10-app-single-sign-on-sso.md).</span></span>
+การลงชื่อเข้าระบบครั้งเดียว (SSO) เป็นหนึ่งในความสามารถที่ต้องการมากที่สุดสำหรับ Power BI บนมือถือสำหรับ Windows ตอนนี้ คุณสามารถใช้บัญชีองค์กรหลักของคุณด้วยการลงชื่อเข้าใช้ในอุปกรณ์เคลื่อนที่ Windows ที่ใช้โดเมนร่วมกัน และยังสามารถยังลงชื่อเข้าใช้บริการของ Power BI ได้ อ่านเพิ่มเติมเกี่ยวกับ [SSO และแอปสำหรับอุปกรณ์เคลื่อนที่ Windows ](mobile-windows-10-app-single-sign-on-sso.md)
 
-## <a name="previous-months"></a><span data-ttu-id="ca76f-415">เดือนก่อน</span><span class="sxs-lookup"><span data-stu-id="ca76f-415">Previous months</span></span>
+## <a name="previous-months"></a>เดือนก่อน
 
-### <a name="july-2018"></a><span data-ttu-id="ca76f-416">กรกฎาคม 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-416">July 2018</span></span>
+### <a name="july-2018"></a>กรกฎาคม 2018
 
-#### <a name="ios-and-android-only"></a><span data-ttu-id="ca76f-417">เฉพาะ iOS และ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-417">iOS and Android only</span></span>
+#### <a name="ios-and-android-only"></a>เฉพาะ iOS และ Android
 
-<span data-ttu-id="ca76f-418">**ตัวกรองที่แชร์**</span><span class="sxs-lookup"><span data-stu-id="ca76f-418">**Shared filters**</span></span>
+**ตัวกรองที่แชร์**
 
-<span data-ttu-id="ca76f-419">ตอนนี้คุณสามารถรับรายงานที่แชร์ตัวกรองและตัวแบ่งส่วนข้อมูล</span><span class="sxs-lookup"><span data-stu-id="ca76f-419">You can now receive reports with shared filters and slicers.</span></span>
+ตอนนี้คุณสามารถรับรายงานที่แชร์ตัวกรองและตัวแบ่งส่วนข้อมูล
 
-<span data-ttu-id="ca76f-420">**รองรับภาพพื้นหลัง**</span><span class="sxs-lookup"><span data-stu-id="ca76f-420">**Background image support**</span></span>
+**รองรับภาพพื้นหลัง**
 
-<span data-ttu-id="ca76f-421">เมื่อคุณดูรายงานในโหมดแนวนอนบนอุปกรณ์มือถือ คุณจะเห็นภาพพื้นหลังแบบเดียวกับที่เห็นใน Power BI บนเว็บ</span><span class="sxs-lookup"><span data-stu-id="ca76f-421">When you view a report in landscape mode on your mobile device, you see the same background images that you see in Power BI on the web.</span></span>
+เมื่อคุณดูรายงานในโหมดแนวนอนบนอุปกรณ์มือถือ คุณจะเห็นภาพพื้นหลังแบบเดียวกับที่เห็นใน Power BI บนเว็บ
 
 
-### <a name="june-2018"></a><span data-ttu-id="ca76f-422">มิถุนายน 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-422">June 2018</span></span>
+### <a name="june-2018"></a>มิถุนายน 2018
 
-#### <a name="full-canvas-reports"></a><span data-ttu-id="ca76f-423">รายงานพื้นที่ทำงานแบบสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="ca76f-423">Full-canvas reports</span></span>
+#### <a name="full-canvas-reports"></a>รายงานพื้นที่ทำงานแบบสมบูรณ์
 
-<span data-ttu-id="ca76f-424">แถบการดำเนินการด้านบนและด้านล่างจะหายไปไม่นานหลังจากการโหลดรายงาน ดังนั้น คุณจะสามารถดูรายงานได้มากขึ้นในทันที</span><span class="sxs-lookup"><span data-stu-id="ca76f-424">Top and bottom action bars now disappear shortly after your report loads, so you can see more of your report at once.</span></span>
+แถบการดำเนินการด้านบนและด้านล่างจะหายไปไม่นานหลังจากการโหลดรายงาน ดังนั้น คุณจะสามารถดูรายงานได้มากขึ้นในทันที
 
-#### <a name="increased-phone-report-canvas-size"></a><span data-ttu-id="ca76f-425">ขนาดพื้นที่รายงานแบบโทรศัพท์ที่เพิ่มขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-425">Increased phone report canvas size</span></span>
+#### <a name="increased-phone-report-canvas-size"></a>ขนาดพื้นที่รายงานแบบโทรศัพท์ที่เพิ่มขึ้น
 
-<span data-ttu-id="ca76f-426">เราได้เพิ่มขนาดพื้นที่รายงานแบบโทรศัพท์ให้มีพื้นที่ว่างสำหรับการแสดงภาพมากขึ้นกว่าแต่ก่อน</span><span class="sxs-lookup"><span data-stu-id="ca76f-426">We increased phone report canvas size to have room for more visuals than before.</span></span>
+เราได้เพิ่มขนาดพื้นที่รายงานแบบโทรศัพท์ให้มีพื้นที่ว่างสำหรับการแสดงภาพมากขึ้นกว่าแต่ก่อน
 
-### <a name="may-2018"></a><span data-ttu-id="ca76f-427">พฤษภาคม 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-427">May 2018</span></span>
+### <a name="may-2018"></a>พฤษภาคม 2018
 
-#### <a name="mobile-drill-through-all-mobile-apps"></a><span data-ttu-id="ca76f-428">เข้าถึงรายละเอียดในมือถือ: แอปสำหรับอุปกรณ์เคลื่อนที่ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-428">Mobile drill-through: all mobile apps</span></span>
+#### <a name="mobile-drill-through-all-mobile-apps"></a>เข้าถึงรายละเอียดในมือถือ: แอปสำหรับอุปกรณ์เคลื่อนที่ทั้งหมด
 
-<span data-ttu-id="ca76f-429">คุณสามารถเข้าถึงรายละเอียดจากจุดข้อมูลที่เลือก ไปยังอีกหน้ารายงานในแอปสำหรับอุปกรณ์เคลื่อนที่ ถ้าได้กำหนดการกระทำนั้นโดยผู้สร้างรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-429">You can drill through from a selected data point to another report page in the mobile apps, if the report author has defined that action.</span></span> 
+คุณสามารถเข้าถึงรายละเอียดจากจุดข้อมูลที่เลือก ไปยังอีกหน้ารายงานในแอปสำหรับอุปกรณ์เคลื่อนที่ ถ้าได้กำหนดการกระทำนั้นโดยผู้สร้างรายงาน 
 
-#### <a name="back-button-all-mobile-apps"></a><span data-ttu-id="ca76f-430">ปุ่มย้อนกลับ: แอปสำหรับอุปกรณ์เคลื่อนที่ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-430">Back button: all mobile apps</span></span>
+#### <a name="back-button-all-mobile-apps"></a>ปุ่มย้อนกลับ: แอปสำหรับอุปกรณ์เคลื่อนที่ทั้งหมด
 
-<span data-ttu-id="ca76f-431">ตอนนี้ เมื่อคุณนำทางในรายงานโดยปัดนิ้ว, เลือกหน้ารายงานบนแถบการดำเนินการ หรือใช้การเข้าถึงรายละเอียด ปุ่มย้อนกลับจะนำคุณกลับไปยังหน้าก่อนหน้าที่คุณกำลังดูอยู่</span><span class="sxs-lookup"><span data-stu-id="ca76f-431">Now when you navigate through a report by swiping, choosing a report page on the action bar, or using drill-through, the back button takes you back to the previous page you were looking at.</span></span> 
+ตอนนี้ เมื่อคุณนำทางในรายงานโดยปัดนิ้ว, เลือกหน้ารายงานบนแถบการดำเนินการ หรือใช้การเข้าถึงรายละเอียด ปุ่มย้อนกลับจะนำคุณกลับไปยังหน้าก่อนหน้าที่คุณกำลังดูอยู่ 
 
-#### <a name="dashboard-themes-all-mobile-apps"></a><span data-ttu-id="ca76f-432">ธีมแดชบอร์ด: แอปสำหรับอุปกรณ์เคลื่อนที่ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-432">Dashboard themes: all mobile apps</span></span>
+#### <a name="dashboard-themes-all-mobile-apps"></a>ธีมแดชบอร์ด: แอปสำหรับอุปกรณ์เคลื่อนที่ทั้งหมด
 
-<span data-ttu-id="ca76f-433">เมื่อผู้เขียนรายงานกำหนดธีมแดชบอร์ดในบริการของ Power BI หน้าตาของแดชบอร์ดจะเปลี่ยนในแอปมือถือด้วย</span><span class="sxs-lookup"><span data-stu-id="ca76f-433">When report authors customize dashboard themes in the Power BI service, the look and feel of the dashboard will change in the mobile app, too.</span></span> <span data-ttu-id="ca76f-434">แต่คุณจะไม่เห็นรูปภาพพื้นหลัง</span><span class="sxs-lookup"><span data-stu-id="ca76f-434">However, you won't see background images.</span></span>
+เมื่อผู้เขียนรายงานกำหนดธีมแดชบอร์ดในบริการของ Power BI หน้าตาของแดชบอร์ดจะเปลี่ยนในแอปมือถือด้วย แต่คุณจะไม่เห็นรูปภาพพื้นหลัง
 
-#### <a name="ios-configure-power-bi-ios-mobile-app-access-to-a-report-server-remotely"></a><span data-ttu-id="ca76f-435">iOS: กำหนดค่าการเข้าถึงเซิร์ฟเวอร์รายงานจากระยะไกล สำหรับแอปอุปกรณ์เคลื่อนที่ iOS ของ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-435">iOS: Configure Power BI iOS mobile app access to a report server remotely</span></span>
+#### <a name="ios-configure-power-bi-ios-mobile-app-access-to-a-report-server-remotely"></a>iOS: กำหนดค่าการเข้าถึงเซิร์ฟเวอร์รายงานจากระยะไกล สำหรับแอปอุปกรณ์เคลื่อนที่ iOS ของ Power BI
 
-<span data-ttu-id="ca76f-436">ผู้ดูแลระบบ IT ของคุณสามารถใช้เครื่องมือ MDM เพื่อกำหนดค่าการเข้าถึงเซิร์ฟเวอร์รายงานของแอปสำหรับอุปกรณ์เคลื่อนที่ iOS ของ Power BI ได้แล้วตอนนี้</span><span class="sxs-lookup"><span data-stu-id="ca76f-436">Your IT admin can now use an MDM tool to configure Power BI iOS mobile app access to a report server.</span></span> <span data-ttu-id="ca76f-437">ดู [กำหนดค่าแอปสำหรับอุปกรณ์เคลื่อนที่ iOS ของ Power BI สำหรับการเข้าถึงไปยังเซิร์ฟเวอร์รายงานจากระยะไกล](../../report-server/configure-powerbi-mobile-apps-remote.md) สำหรับรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="ca76f-437">See [Configure Power BI iOS mobile app access to a report server remotely](../../report-server/configure-powerbi-mobile-apps-remote.md) for details.</span></span>
+ผู้ดูแลระบบ IT ของคุณสามารถใช้เครื่องมือ MDM เพื่อกำหนดค่าการเข้าถึงเซิร์ฟเวอร์รายงานของแอปสำหรับอุปกรณ์เคลื่อนที่ iOS ของ Power BI ได้แล้วตอนนี้ ดู [กำหนดค่าแอปสำหรับอุปกรณ์เคลื่อนที่ iOS ของ Power BI สำหรับการเข้าถึงไปยังเซิร์ฟเวอร์รายงานจากระยะไกล](../../report-server/configure-powerbi-mobile-apps-remote.md) สำหรับรายละเอียด
 
-#### <a name="power-bi-for-mixed-reality-app-preview"></a><span data-ttu-id="ca76f-438">Power BI สำหรับแอปความเป็นจริงผสม (ตัวอย่าง)</span><span class="sxs-lookup"><span data-stu-id="ca76f-438">Power BI for Mixed Reality app (Preview)</span></span>
+#### <a name="power-bi-for-mixed-reality-app-preview"></a>Power BI สำหรับแอปความเป็นจริงผสม (ตัวอย่าง)
 
-<span data-ttu-id="ca76f-439">Power BI สำหรับแอปความเป็นจริงผสม ตอนนี้อยู่ใน Microsoft Store แล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-439">The Power BI for Mixed Reality app is now in the Microsoft Store.</span></span> <span data-ttu-id="ca76f-440">ดูแดชบอร์ดและรายงานของคุณ ขณะรวมอยู่ในโลกเสมือน หรือวางอยู่ในตำแหน่งเฉพาะในบริบทของสภาพแวดล้อมของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-440">View your dashboards and reports while immersed in the virtual world, or place them and view them in specific locations in the context of your environment.</span></span> <span data-ttu-id="ca76f-441">ดูวิดีโอ [แนะนำ Power BI บน HoloLens](https://www.youtube.com/watch?v=J_X_nOFUBss) ใหม่สำหรับบริบทหรืออ่านบทความเกี่ยวกับ [Power BI สำหรับแอปความเป็นจริงผสม](./mobile-hololens2-app.md) ใหม่</span><span class="sxs-lookup"><span data-stu-id="ca76f-441">See the new [Introducing Power BI on HoloLens](https://www.youtube.com/watch?v=J_X_nOFUBss) video for context, or read the article about the new [Power BI for Mixed Reality app](./mobile-hololens2-app.md).</span></span>
+Power BI สำหรับแอปความเป็นจริงผสม ตอนนี้อยู่ใน Microsoft Store แล้ว ดูแดชบอร์ดและรายงานของคุณ ขณะรวมอยู่ในโลกเสมือน หรือวางอยู่ในตำแหน่งเฉพาะในบริบทของสภาพแวดล้อมของคุณ ดูวิดีโอ [แนะนำ Power BI บน HoloLens](https://www.youtube.com/watch?v=J_X_nOFUBss) ใหม่สำหรับบริบทหรืออ่านบทความเกี่ยวกับ [Power BI สำหรับแอปความเป็นจริงผสม](./mobile-hololens2-app.md) ใหม่
 
 
-### <a name="april-2018"></a><span data-ttu-id="ca76f-442">เมษายน 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-442">April 2018</span></span>
+### <a name="april-2018"></a>เมษายน 2018
 
-#### <a name="mobile-drill-down-and-drill-up"></a><span data-ttu-id="ca76f-443">ดูข้อมูลโดยละเอียดและดูข้อมูลสรุปบนมือถือ</span><span class="sxs-lookup"><span data-stu-id="ca76f-443">Mobile drill-down and drill-up</span></span>
+#### <a name="mobile-drill-down-and-drill-up"></a>ดูข้อมูลโดยละเอียดและดูข้อมูลสรุปบนมือถือ
 
-<span data-ttu-id="ca76f-444">ตอนนี้คุณสามารถดูรายละเอียดแนวลึก และดูข้อมูลสรุปในวิชวลรายงานบนอุปกรณ์เคลื่อนที่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-444">You can now drill down and drill up to dive into report visuals on your mobile device.</span></span> <span data-ttu-id="ca76f-445">เพื่อเข้าถึงคุณลักษณะใหม่นี้ แตะค้างที่วิชวลรายงานเพื่อเปิดเมนูแนะนำเครื่องมือ จากนั้นแตะปุ่มดูรายละเอียดเพื่อสำรวจข้อมูลของคุณที่ลึกซึ้งขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-445">To access this new feature, tap and hold to open the tooltip menu on a report visual, and then tap the drill buttons to explore your data in depth.</span></span> <span data-ttu-id="ca76f-446">อ่านเพิ่มเติมเกี่ยวกับ[ดูข้อมูลโดยละเอียดและดูข้อมูลสรุป ในแอปสำหรับอุปกรณ์เคลื่อนที่](https://powerbi.microsoft.com/blog/drill-down-up-in-power-bi-mobile-apps/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-446">More about [drilling up and down in the mobile apps](https://powerbi.microsoft.com/blog/drill-down-up-in-power-bi-mobile-apps/).</span></span>
+ตอนนี้คุณสามารถดูรายละเอียดแนวลึก และดูข้อมูลสรุปในวิชวลรายงานบนอุปกรณ์เคลื่อนที่ของคุณ เพื่อเข้าถึงคุณลักษณะใหม่นี้ แตะค้างที่วิชวลรายงานเพื่อเปิดเมนูแนะนำเครื่องมือ จากนั้นแตะปุ่มดูรายละเอียดเพื่อสำรวจข้อมูลของคุณที่ลึกซึ้งขึ้น อ่านเพิ่มเติมเกี่ยวกับ[ดูข้อมูลโดยละเอียดและดูข้อมูลสรุป ในแอปสำหรับอุปกรณ์เคลื่อนที่](https://powerbi.microsoft.com/blog/drill-down-up-in-power-bi-mobile-apps/)
 
-#### <a name="persistent-filters"></a><span data-ttu-id="ca76f-447">ตัวกรองแบบถาวร</span><span class="sxs-lookup"><span data-stu-id="ca76f-447">Persistent filters</span></span>
+#### <a name="persistent-filters"></a>ตัวกรองแบบถาวร
 
-<span data-ttu-id="ca76f-448">เราเพิ่งอัปเดตตัวกรองและตัวแบ่งส่วนข้อมูลรายงาน เพื่อให้บันทึกโดยอัตโนมัติจาก Power BI บนเว็บไปยังแอป Power BI สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-448">We recently updated report filters and slicers, so they are automatically saved from Power BI on the web to the Power BI mobile app.</span></span> <span data-ttu-id="ca76f-449">ตอนนี้ ตัวกรองและตัวแบ่งส่วนข้อมูลที่คุณตั้งค่าในแอปสำหรับอุปกรณ์เคลื่อนที่ จะถูกบันทึกไปยัง Power BI บนเว็บโดยอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="ca76f-449">Now, filters and slicers you set in the mobile app are automatically saved to Power BI on the web.</span></span>
+เราเพิ่งอัปเดตตัวกรองและตัวแบ่งส่วนข้อมูลรายงาน เพื่อให้บันทึกโดยอัตโนมัติจาก Power BI บนเว็บไปยังแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ ตอนนี้ ตัวกรองและตัวแบ่งส่วนข้อมูลที่คุณตั้งค่าในแอปสำหรับอุปกรณ์เคลื่อนที่ จะถูกบันทึกไปยัง Power BI บนเว็บโดยอัตโนมัติ
 
 
-### <a name="march-2018"></a><span data-ttu-id="ca76f-450">มีนาคม 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-450">March 2018</span></span>
+### <a name="march-2018"></a>มีนาคม 2018
 
-#### <a name="power-bi-for-mixed-reality-app-preview"></a><span data-ttu-id="ca76f-451">Power BI สำหรับแอปความเป็นจริงผสม (ตัวอย่าง)</span><span class="sxs-lookup"><span data-stu-id="ca76f-451">Power BI for Mixed Reality app (Preview)</span></span>
+#### <a name="power-bi-for-mixed-reality-app-preview"></a>Power BI สำหรับแอปความเป็นจริงผสม (ตัวอย่าง)
 
-<span data-ttu-id="ca76f-452">ในการย้ายล่าสุดเมื่อต้องการนำข้อมูลที่ที่คุณอยู่ เราได้สร้าง Power BI สำหรับแอปความเป็นจริงผสม</span><span class="sxs-lookup"><span data-stu-id="ca76f-452">In the latest move to bring data where you are, we've created the Power BI for Mixed Reality app.</span></span> <span data-ttu-id="ca76f-453">ดูแดชบอร์ดและรายงานของคุณ ขณะรวมอยู่ในโลกเสมือน หรือวางอยู่ในตำแหน่งเฉพาะในบริบทของสภาพแวดล้อมของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-453">View your dashboards and reports while immersed in the virtual world, or place them and view them in specific locations in the context of your environment.</span></span> <span data-ttu-id="ca76f-454">อ่านเพิ่มเติมเกี่ยวกับ[Power BI สำหรับแอปความเป็นจริงผสม](./mobile-hololens2-app.md)ใหม่</span><span class="sxs-lookup"><span data-stu-id="ca76f-454">Read more about the new [Power BI for Mixed Reality app](./mobile-hololens2-app.md).</span></span>
+ในการย้ายล่าสุดเมื่อต้องการนำข้อมูลที่ที่คุณอยู่ เราได้สร้าง Power BI สำหรับแอปความเป็นจริงผสม ดูแดชบอร์ดและรายงานของคุณ ขณะรวมอยู่ในโลกเสมือน หรือวางอยู่ในตำแหน่งเฉพาะในบริบทของสภาพแวดล้อมของคุณ อ่านเพิ่มเติมเกี่ยวกับ[Power BI สำหรับแอปความเป็นจริงผสม](./mobile-hololens2-app.md)ใหม่
 
-#### <a name="share-reports-and-dashboards-externally"></a><span data-ttu-id="ca76f-455">แชร์รายงานและแดชบอร์ดภายนอก</span><span class="sxs-lookup"><span data-stu-id="ca76f-455">Share reports and dashboards externally</span></span>
+#### <a name="share-reports-and-dashboards-externally"></a>แชร์รายงานและแดชบอร์ดภายนอก
 
-<span data-ttu-id="ca76f-456">แชร์แดชบอร์ดและรายงานกับผู้ใช้ภายนอกองค์กรของคุณจากแอปได้โดยตรง</span><span class="sxs-lookup"><span data-stu-id="ca76f-456">Share dashboards and reports with users outside of your organization, directly from the app.</span></span> <span data-ttu-id="ca76f-457">การแชร์ถูกเปิดใช้งาน สำหรับบัญชีผู้ใช้ขององค์กรและเครือข่ายสังคมภายนอก</span><span class="sxs-lookup"><span data-stu-id="ca76f-457">External sharing in enabled for both organizational and social accounts.</span></span> 
+แชร์แดชบอร์ดและรายงานกับผู้ใช้ภายนอกองค์กรของคุณจากแอปได้โดยตรง การแชร์ถูกเปิดใช้งาน สำหรับบัญชีผู้ใช้ขององค์กรและเครือข่ายสังคมภายนอก 
 
-#### <a name="persistent-filters"></a><span data-ttu-id="ca76f-458">ตัวกรองแบบถาวร</span><span class="sxs-lookup"><span data-stu-id="ca76f-458">Persistent filters</span></span>
+#### <a name="persistent-filters"></a>ตัวกรองแบบถาวร
 
-<span data-ttu-id="ca76f-459">เมื่อคุณปรับตัวกรองและตัวแบ่งส่วนข้อมูลใน Power BI บนเว็บ ตัวเลือกของคุณจะถูกบันทึกไปยังแอปสำหรับอุปกรณ์เคลื่อนที่ของคุณด้วย ดังนั้นคุณจึงสามารถไปยังจุดที่คุณใช้งานค้างไว้ได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-459">When you set filters and slicers in Power BI on the web, your filter choices are saved to your mobile app as well, so you can pick up where you left off.</span></span>
+เมื่อคุณปรับตัวกรองและตัวแบ่งส่วนข้อมูลใน Power BI บนเว็บ ตัวเลือกของคุณจะถูกบันทึกไปยังแอปสำหรับอุปกรณ์เคลื่อนที่ของคุณด้วย ดังนั้นคุณจึงสามารถไปยังจุดที่คุณใช้งานค้างไว้ได้
 
-#### <a name="refresh-reports-on-the-ipad"></a><span data-ttu-id="ca76f-460">รีเฟรชรายงานบน iPad</span><span class="sxs-lookup"><span data-stu-id="ca76f-460">Refresh reports on the iPad</span></span>
+#### <a name="refresh-reports-on-the-ipad"></a>รีเฟรชรายงานบน iPad
 
-<span data-ttu-id="ca76f-461">ตอนนี้รายงาน Power BI มีปุ่มรีเฟรชในแอป iPad</span><span class="sxs-lookup"><span data-stu-id="ca76f-461">Power BI reports now have a refresh button in the iPad app.</span></span>
+ตอนนี้รายงาน Power BI มีปุ่มรีเฟรชในแอป iPad
 
-### <a name="february-2018"></a><span data-ttu-id="ca76f-462">กุมภาพันธ์ 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-462">February 2018</span></span>
+### <a name="february-2018"></a>กุมภาพันธ์ 2018
 
-#### <a name="share-reports"></a><span data-ttu-id="ca76f-463">แชร์รายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-463">Share reports</span></span>
+#### <a name="share-reports"></a>แชร์รายงาน
 
-<span data-ttu-id="ca76f-464">ในตอนนี้ คุณสามารถแชร์รายงานได้โดยตรงจากแอป mobile</span><span class="sxs-lookup"><span data-stu-id="ca76f-464">Now you can share a report directly from the mobile apps.</span></span> <span data-ttu-id="ca76f-465">อ่านเพิ่มเติมเกี่ยวกับ[การแชร์แดชบอร์ดและรายงานจากแอปมือถือ](mobile-share-dashboard-from-the-mobile-apps.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-465">Read more about [sharing dashboards and reports from the mobile apps](mobile-share-dashboard-from-the-mobile-apps.md)</span></span>
+ในตอนนี้ คุณสามารถแชร์รายงานได้โดยตรงจากแอป mobile อ่านเพิ่มเติมเกี่ยวกับ[การแชร์แดชบอร์ดและรายงานจากแอปมือถือ](mobile-share-dashboard-from-the-mobile-apps.md)
 
-#### <a name="improved-tooltips"></a><span data-ttu-id="ca76f-466">เกร็ดคำแนะนำเครื่องมือที่ปรับปรุง</span><span class="sxs-lookup"><span data-stu-id="ca76f-466">Improved tooltips</span></span>
+#### <a name="improved-tooltips"></a>เกร็ดคำแนะนำเครื่องมือที่ปรับปรุง
 
-<span data-ttu-id="ca76f-467">เมื่อคุณแตะและกดค้างรายงานรูปภาพเพื่อเข้าไปยังเกร็ดคำแนะนำ ขณะนี้คุณสามารถลากนิ้วของคุณผ่านภาพเพื่อสำรวจรายละเอียดเกี่ยวกับจุดข้อมูลแต่ละจุดได้ตลอดเวลา</span><span class="sxs-lookup"><span data-stu-id="ca76f-467">When you tap and hold on a report visual to access tooltips, you can now drag your finger across the visual to explore details about each data point along the way.</span></span>
+เมื่อคุณแตะและกดค้างรายงานรูปภาพเพื่อเข้าไปยังเกร็ดคำแนะนำ ขณะนี้คุณสามารถลากนิ้วของคุณผ่านภาพเพื่อสำรวจรายละเอียดเกี่ยวกับจุดข้อมูลแต่ละจุดได้ตลอดเวลา
 
-### <a name="january-2018"></a><span data-ttu-id="ca76f-468">มกราคม 2018</span><span class="sxs-lookup"><span data-stu-id="ca76f-468">January 2018</span></span>
+### <a name="january-2018"></a>มกราคม 2018
 
-#### <a name="report-favorites"></a><span data-ttu-id="ca76f-469">รายการโปรดของรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-469">Report favorites</span></span>
+#### <a name="report-favorites"></a>รายการโปรดของรายงาน
 
-<span data-ttu-id="ca76f-470">แท็กรายงานให้เป็นรายการโปรดเพื่อให้ปรากฏบนการหน้า **รายการโปรด**</span><span class="sxs-lookup"><span data-stu-id="ca76f-470">Tag reports as favorites so they appear on the **Favorites** page.</span></span> <span data-ttu-id="ca76f-471">อ่านข้อมูลเพิ่มเติมเกี่ยวกับ [รายการโปรดในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่](mobile-apps-favorites.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-471">Read more about [favorites in the Power BI mobile apps](mobile-apps-favorites.md).</span></span>
+แท็กรายงานให้เป็นรายการโปรดเพื่อให้ปรากฏบนการหน้า **รายการโปรด** อ่านข้อมูลเพิ่มเติมเกี่ยวกับ [รายการโปรดในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่](mobile-apps-favorites.md)
 
-#### <a name="view-shared-reports"></a><span data-ttu-id="ca76f-472">ดูรายงานทีแชร์</span><span class="sxs-lookup"><span data-stu-id="ca76f-472">View shared reports</span></span>
+#### <a name="view-shared-reports"></a>ดูรายงานทีแชร์
 
-<span data-ttu-id="ca76f-473">ในตอนนี้เมื่อมีบางคนแชร์รายงานกับคุณ มันจะแสดงอยู่บนเพจ **แชร์กับฉัน** พร้อมด้วยแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="ca76f-473">Now when someone shares a report with you, it's listed on the **Shared with me** page along with dashboards.</span></span>
+ในตอนนี้เมื่อมีบางคนแชร์รายงานกับคุณ มันจะแสดงอยู่บนเพจ **แชร์กับฉัน** พร้อมด้วยแดชบอร์ด
 
-#### <a name="improved-hyperlink-support"></a><span data-ttu-id="ca76f-474">ปรับปรุงการรองรับไฮเปอร์ลิงก์แล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-474">Improved hyperlink support</span></span>
+#### <a name="improved-hyperlink-support"></a>ปรับปรุงการรองรับไฮเปอร์ลิงก์แล้ว
 
-<span data-ttu-id="ca76f-475">ขณะนี้คุณสามารถแตะลิงก์ในวิชวล Power BI เพื่อเปิดลิงก์เหล่านั้นในเบราว์เซอร์มือถือของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-475">You can now tap links in Power BI visuals to open them in your mobile browser.</span></span>
+ขณะนี้คุณสามารถแตะลิงก์ในวิชวล Power BI เพื่อเปิดลิงก์เหล่านั้นในเบราว์เซอร์มือถือของคุณ
 
-#### <a name="intune-integration-android"></a><span data-ttu-id="ca76f-476">Intune integration (Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-476">Intune integration (Android)</span></span>
+#### <a name="intune-integration-android"></a>Intune integration (Android)
 
-<span data-ttu-id="ca76f-477">รองรับการเข้าถึงตามเงื่อนไขที่ใช้ Intune mobile device management</span><span class="sxs-lookup"><span data-stu-id="ca76f-477">Support for conditional access using Intune mobile device management.</span></span>
+รองรับการเข้าถึงตามเงื่อนไขที่ใช้ Intune mobile device management
 
-### <a name="december-2017"></a><span data-ttu-id="ca76f-478">ธันวาคม 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-478">December 2017</span></span>
+### <a name="december-2017"></a>ธันวาคม 2017
 
-#### <a name="improved-security-management"></a><span data-ttu-id="ca76f-479">จัดการการรักษาความปลอดภัยที่ได้รับการปรับปรุง</span><span class="sxs-lookup"><span data-stu-id="ca76f-479">Improved security management</span></span> 
+#### <a name="improved-security-management"></a>จัดการการรักษาความปลอดภัยที่ได้รับการปรับปรุง 
 
-<span data-ttu-id="ca76f-480">เราได้เพิ่มการรองรับการเข้าถึงแบบมีเงื่อนไข (CA) และ Microsoft Intune mobile device management (MDM) เพื่อจะรักษาความปลอดภัยของข้อมูลขององค์กรคุณได้ดีขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-480">We've added support for conditional access (CA) and Microsoft Intune mobile device management (MDM) on Android devices, to better secure your organization's data.</span></span> <span data-ttu-id="ca76f-481">พร้อมใช้งานบน iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-481">It's already available on iOS.</span></span>
+เราได้เพิ่มการรองรับการเข้าถึงแบบมีเงื่อนไข (CA) และ Microsoft Intune mobile device management (MDM) เพื่อจะรักษาความปลอดภัยของข้อมูลขององค์กรคุณได้ดีขึ้น พร้อมใช้งานบน iOS
 
-#### <a name="improved-permission-management"></a><span data-ttu-id="ca76f-482">การจัดการสิทธิ์ที่ถูกปรับปรุง</span><span class="sxs-lookup"><span data-stu-id="ca76f-482">Improved permission management</span></span>
+#### <a name="improved-permission-management"></a>การจัดการสิทธิ์ที่ถูกปรับปรุง
 
-<span data-ttu-id="ca76f-483">เราได้ทำการเปลี่ยนแปลงบางอย่างเพื่อให้สามารถจัดการสิทธิ์ของผู้ใช้สำหรับชุดข้อมูล แดชบอร์ด และรายงานได้แม่นยำยิ่งขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-483">We've made some changes that allow for more precise management of user permissions for datasets, dashboards, and reports.</span></span>
+เราได้ทำการเปลี่ยนแปลงบางอย่างเพื่อให้สามารถจัดการสิทธิ์ของผู้ใช้สำหรับชุดข้อมูล แดชบอร์ด และรายงานได้แม่นยำยิ่งขึ้น
 
-#### <a name="auto-installed-apps"></a><span data-ttu-id="ca76f-484">แอปที่ติดตั้งโดยอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="ca76f-484">Auto-installed apps</span></span>
+#### <a name="auto-installed-apps"></a>แอปที่ติดตั้งโดยอัตโนมัติ
 
-<span data-ttu-id="ca76f-485">คุณไม่จำเป็นต้องติดตั้งแอปใน Power BI เลย</span><span class="sxs-lookup"><span data-stu-id="ca76f-485">You don't need to install some of the apps in Power BI at all.</span></span> <span data-ttu-id="ca76f-486">Power BI creators ในองค์กรของคุณสามารถสร้าง *apps* ที่ประกอบด้วยคอลเลกชันของแดชบอร์ดและรายงานได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-486">Power BI app creators in your organization can create *apps* that contain a collection of dashboards and reports.</span></span> <span data-ttu-id="ca76f-487">จากนั้นสามารถเผยแพร่แอป และตั้งค่าให้ติดตั้งโดยอัตโนมัติใน Power BI service และแอปมือถือ Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-487">Then they can publish the app and set it to install automatically in the Power BI service and the Power BI mobile apps.</span></span> <span data-ttu-id="ca76f-488">เมื่อแอปถูกตั้งค่าการติดตั้งสำหรับคุณ จะปรากฏโดยอัตโนมัติในเมนู **Apps** ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-488">When an app is set to install for you, it automatically appears in your **Apps** menu:</span></span>
+คุณไม่จำเป็นต้องติดตั้งแอปใน Power BI เลย Power BI creators ในองค์กรของคุณสามารถสร้าง *apps* ที่ประกอบด้วยคอลเลกชันของแดชบอร์ดและรายงานได้ จากนั้นสามารถเผยแพร่แอป และตั้งค่าให้ติดตั้งโดยอัตโนมัติใน Power BI service และแอปมือถือ Power BI เมื่อแอปถูกตั้งค่าการติดตั้งสำหรับคุณ จะปรากฏโดยอัตโนมัติในเมนู **Apps** ของคุณ
 
 ![Apps ในแอปอุปกรณ์เคลื่อนที่ Power BI](./media/mobile-whats-new-in-the-mobile-apps/power-bi-apps-mobile-apps.png)
 
-### <a name="november-2017"></a><span data-ttu-id="ca76f-490">พฤศจิกายน 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-490">November 2017</span></span>
-#### <a name="iphone-x-optimization"></a><span data-ttu-id="ca76f-491">การปรับให้ iPhone X เหมาะสม</span><span class="sxs-lookup"><span data-stu-id="ca76f-491">iPhone X optimization</span></span>
+### <a name="november-2017"></a>พฤศจิกายน 2017
+#### <a name="iphone-x-optimization"></a>การปรับให้ iPhone X เหมาะสม
 
-<span data-ttu-id="ca76f-492">เราได้ปรับเค้าโครงแอปให้เหมาะสมกับ iPhone X ดังนั้นคุณสามารถสำรวจข้อมูลบนอุปกรณ์ทุกเครื่องตามแบบของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-492">We've optimized the app layout for iPhone X, so you can explore your data in style on every device.</span></span>
+เราได้ปรับเค้าโครงแอปให้เหมาะสมกับ iPhone X ดังนั้นคุณสามารถสำรวจข้อมูลบนอุปกรณ์ทุกเครื่องตามแบบของคุณ
 
-### <a name="october-2017"></a><span data-ttu-id="ca76f-493">ตุลาคม 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-493">October 2017</span></span>
-#### <a name="filters-for-phone-reports-in-android"></a><span data-ttu-id="ca76f-494">ตัวกรองสำหรับรายงานโทรศัพท์ใน Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-494">Filters for phone reports in Android</span></span>
+### <a name="october-2017"></a>ตุลาคม 2017
+#### <a name="filters-for-phone-reports-in-android"></a>ตัวกรองสำหรับรายงานโทรศัพท์ใน Android
 
-<span data-ttu-id="ca76f-495">ถ้าคุณสร้างรายงาน ด้วยหน้าปรับโทรศัพท์ให้เหมาะสมใน Power BI Desktop และรายงานมีตัวกรอง ซึ่งตอนนี้คุณสามารถใช้ตัวกรองเหล่านั้นในรายงานบนโทรศัพท์ Android ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-495">If you create a report with phone-optimized pages in Power BI Desktop, and the report has filters, you can now apply those filters in the phone report on your Android.</span></span> <span data-ttu-id="ca76f-496">อ่านเพิ่มเติมเกี่ยวกับตัวกรองสำหรับรายงาน Power BI บน Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-496">Read more about filters for Power BI reports on Android.</span></span>
+ถ้าคุณสร้างรายงาน ด้วยหน้าปรับโทรศัพท์ให้เหมาะสมใน Power BI Desktop และรายงานมีตัวกรอง ซึ่งตอนนี้คุณสามารถใช้ตัวกรองเหล่านั้นในรายงานบนโทรศัพท์ Android ของคุณ อ่านเพิ่มเติมเกี่ยวกับตัวกรองสำหรับรายงาน Power BI บน Android
 
-#### <a name="show-data-in-reports"></a><span data-ttu-id="ca76f-497">แสดงข้อมูลในรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-497">Show data in reports</span></span>
+#### <a name="show-data-in-reports"></a>แสดงข้อมูลในรายงาน
 
-<span data-ttu-id="ca76f-498">ในตอนนี้คุณสามารถสลับรูปภาพในรายงานของคุณไปยังมุมมองตารางเพื่อดูตัวเลขเบื้องหลังข้อมูล</span><span class="sxs-lookup"><span data-stu-id="ca76f-498">You can now switch visuals in your reports to a table view to see the numbers behind the data.</span></span> <span data-ttu-id="ca76f-499">เพื่อเข้าถึงฟีเจอร์นี้ ให้แตะ "แสดงข้อมูล" จากรูปภาพ...เมนูบนรายงานของคุณหรือไอคอนใหม่บนเมนูการดำเนินการของภาพที่ถูกขยาย</span><span class="sxs-lookup"><span data-stu-id="ca76f-499">To access this feature, tap "Show data" from the visual's ... menu on your report or the new icon on the expanded visual's action menu.</span></span>
+ในตอนนี้คุณสามารถสลับรูปภาพในรายงานของคุณไปยังมุมมองตารางเพื่อดูตัวเลขเบื้องหลังข้อมูล เพื่อเข้าถึงฟีเจอร์นี้ ให้แตะ "แสดงข้อมูล" จากรูปภาพ...เมนูบนรายงานของคุณหรือไอคอนใหม่บนเมนูการดำเนินการของภาพที่ถูกขยาย
 
-### <a name="september-2017"></a><span data-ttu-id="ca76f-500">กันยายน 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-500">September 2017</span></span>
-#### <a name="filters-for-phone-reports-in-iphones"></a><span data-ttu-id="ca76f-501">ตัวกรองสำหรับรายงานโทรศัพท์ใน iPhones</span><span class="sxs-lookup"><span data-stu-id="ca76f-501">Filters for phone reports in iPhones</span></span>
-<span data-ttu-id="ca76f-502">ถ้าคุณสร้างรายงาน ด้วยหน้าปรับโทรศัพท์ให้เหมาะสมใน Power BI Desktop และรายงานมีตัวกรอง ซึ่งตอนนี้คุณสามารถใช้ตัวกรองเหล่านั้นในรายงาน์บนโทรศัพท iPhone ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-502">If you create a report with phone-optimized pages in Power BI Desktop, and the report has filters, you can now apply those filters in the phone report on your iPhone.</span></span> <span data-ttu-id="ca76f-503">อ่านเพิ่มเติมเกี่ยวกับ[ตัวกรองสำหรับรายงาน Power BI บน Iphone](https://powerbi.microsoft.com/blog/filters-coming-for-phone-reports-on-ios/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-503">Read more about [filters for Power BI reports on iPhones](https://powerbi.microsoft.com/blog/filters-coming-for-phone-reports-on-ios/).</span></span>
+### <a name="september-2017"></a>กันยายน 2017
+#### <a name="filters-for-phone-reports-in-iphones"></a>ตัวกรองสำหรับรายงานโทรศัพท์ใน iPhones
+ถ้าคุณสร้างรายงาน ด้วยหน้าปรับโทรศัพท์ให้เหมาะสมใน Power BI Desktop และรายงานมีตัวกรอง ซึ่งตอนนี้คุณสามารถใช้ตัวกรองเหล่านั้นในรายงาน์บนโทรศัพท iPhone ของคุณ อ่านเพิ่มเติมเกี่ยวกับ[ตัวกรองสำหรับรายงาน Power BI บน Iphone](https://powerbi.microsoft.com/blog/filters-coming-for-phone-reports-on-ios/)
 
-### <a name="august-2017"></a><span data-ttu-id="ca76f-504">สิงหาคม 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-504">August 2017</span></span>
-#### <a name="ios-proxy-settings-support"></a><span data-ttu-id="ca76f-505">รองรับการตั้งค่าพร็อกซี iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-505">iOS proxy settings support</span></span>
-<span data-ttu-id="ca76f-506">ขณะนี้คุณสามารถตั้งการตั้งค่าพร็อกซีในแอป mobile iOS Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-506">You can now set proxy settings in the Power BI iOS mobile app.</span></span> <span data-ttu-id="ca76f-507">ซึ่งหมายความ ว่า Power BI จะทำงานกับการเชื่อมต่อ VPN บนอุปกรณ์เคลื่อนที่ ซึ่งอนุญาตให้ผู้ใช้และองค์กร ได้ใช้ประโยชน์จากของ Power BI ในขณะเดินทางได้อย่างปลอดภัย</span><span class="sxs-lookup"><span data-stu-id="ca76f-507">This means that Power BI will now work with VPN connections on your mobile device, allowing more users and organizations to securely leverage the power of Power BI on the go.</span></span>
+### <a name="august-2017"></a>สิงหาคม 2017
+#### <a name="ios-proxy-settings-support"></a>รองรับการตั้งค่าพร็อกซี iOS
+ขณะนี้คุณสามารถตั้งการตั้งค่าพร็อกซีในแอป mobile iOS Power BI ซึ่งหมายความ ว่า Power BI จะทำงานกับการเชื่อมต่อ VPN บนอุปกรณ์เคลื่อนที่ ซึ่งอนุญาตให้ผู้ใช้และองค์กร ได้ใช้ประโยชน์จากของ Power BI ในขณะเดินทางได้อย่างปลอดภัย
 
-### <a name="july-2017"></a><span data-ttu-id="ca76f-508">กรกฎาคม 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-508">July 2017</span></span>
-<span data-ttu-id="ca76f-509">อ่าน[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนกรกฎาคม 2017 ](https://powerbi.microsoft.com/blog/power-bi-service-and-mobile-july-feature-summary/#ios-preview)</span><span class="sxs-lookup"><span data-stu-id="ca76f-509">Read the [mobile apps feature summary for July 2017](https://powerbi.microsoft.com/blog/power-bi-service-and-mobile-july-feature-summary/#ios-preview)</span></span>
+### <a name="july-2017"></a>กรกฎาคม 2017
+อ่าน[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนกรกฎาคม 2017 ](https://powerbi.microsoft.com/blog/power-bi-service-and-mobile-july-feature-summary/#ios-preview)
 
-#### <a name="ios-devices"></a><span data-ttu-id="ca76f-510">อุปกรณ์ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-510">iOS devices</span></span>
-<span data-ttu-id="ca76f-511">**ประสบการณ์ Q&A ใหม่เกี่ยวบน iOS (ตัวอย่าง)** แทนที่จะได้รับคำตอบคำถามของคุณเท่านั้น คุณสามารถใช้ภาษาธรรมชาติเพื่อรับข้อมูลที่มีขอบเขตเชิงลึกได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-511">**New Q&A experience on iOS (Preview)** Instead of just receiving an answer to your question, you can now use natural language to get scoped insights.</span></span> <span data-ttu-id="ca76f-512">แม้คุณจะไม่แน่ใจว่าสิ่งที่คุณกำลังค้นหาคืออะไร ระบบ Q&A จะช่วยให้ข้อมูลเชิงลึกมีความเกี่ยวข้องกับข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-512">Even if you're not sure what you're looking for, Q&A proactively surfaces insights relevant to your data.</span></span> <span data-ttu-id="ca76f-513">ประสบการณ์ Q&A ใหม่บนมือถือ ถูกพัฒนาขึ้นในการทำงานร่วมกันกับทีมวิจัย Microsoft ได้แสดงเทคโนโลยีที่มีประสิทธิภาพภายในผลิตภัณฑ์ของเรา</span><span class="sxs-lookup"><span data-stu-id="ca76f-513">The new Q&A experience on mobile, developed in collaboration with the Microsoft Research team, showcases powerful technologies within our product.</span></span> <span data-ttu-id="ca76f-514">ลองบทเรียน[ถามคำถามเกี่ยวกับข้อมูลของคุณในแอปมือถือบน iOS ](mobile-apps-ios-qna.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-514">Try the tutorial, [Ask questions about your data in the iOS mobile apps](mobile-apps-ios-qna.md).</span></span>
+#### <a name="ios-devices"></a>อุปกรณ์ iOS
+**ประสบการณ์ Q&A ใหม่เกี่ยวบน iOS (ตัวอย่าง)** แทนที่จะได้รับคำตอบคำถามของคุณเท่านั้น คุณสามารถใช้ภาษาธรรมชาติเพื่อรับข้อมูลที่มีขอบเขตเชิงลึกได้ แม้คุณจะไม่แน่ใจว่าสิ่งที่คุณกำลังค้นหาคืออะไร ระบบ Q&A จะช่วยให้ข้อมูลเชิงลึกมีความเกี่ยวข้องกับข้อมูลของคุณ ประสบการณ์ Q&A ใหม่บนมือถือ ถูกพัฒนาขึ้นในการทำงานร่วมกันกับทีมวิจัย Microsoft ได้แสดงเทคโนโลยีที่มีประสิทธิภาพภายในผลิตภัณฑ์ของเรา ลองบทเรียน[ถามคำถามเกี่ยวกับข้อมูลของคุณในแอปมือถือบน iOS ](mobile-apps-ios-qna.md)
 
-### <a name="responsive-visuals"></a><span data-ttu-id="ca76f-515">รูปภาพแบบตอบสนอง</span><span class="sxs-lookup"><span data-stu-id="ca76f-515">Responsive visuals</span></span>
-<span data-ttu-id="ca76f-516">**รูปภาพแบบตอบสนองสำหรับรายงานโทรศัพท์และแดชบอร์ด** คุณสามารถตั้งค่าภาพในแดชบอร์ดหรือรายงานให้เป็นแแบบ *ตอบสนอง* เพื่อจะเปลี่ยนแปลงแบบไดนามิกเพื่อแสดงจำนวนสูงสุดของข้อมูลและข้อมูลเชิงลึก โดยไม่ไม่ข้อจำกัดของหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="ca76f-516">**Responsive visual for phone reports and dashboards** You can set the visuals in your dashboard or report to be *responsive*, to change dynamically to display the maximum amount of data and insight, no matter the screen size.</span></span> <span data-ttu-id="ca76f-517">อ่าน[บล็อกเกี่ยวกับรูปภาพแบบตอบสนอง](https://powerbi.microsoft.com/blog/power-bi-desktop-july-feature-summary-2/#responsiveVisuals)</span><span class="sxs-lookup"><span data-stu-id="ca76f-517">Read the [blog about responsive visuals](https://powerbi.microsoft.com/blog/power-bi-desktop-july-feature-summary-2/#responsiveVisuals).</span></span>
+### <a name="responsive-visuals"></a>รูปภาพแบบตอบสนอง
+**รูปภาพแบบตอบสนองสำหรับรายงานโทรศัพท์และแดชบอร์ด** คุณสามารถตั้งค่าภาพในแดชบอร์ดหรือรายงานให้เป็นแแบบ *ตอบสนอง* เพื่อจะเปลี่ยนแปลงแบบไดนามิกเพื่อแสดงจำนวนสูงสุดของข้อมูลและข้อมูลเชิงลึก โดยไม่ไม่ข้อจำกัดของหน้าจอ อ่าน[บล็อกเกี่ยวกับรูปภาพแบบตอบสนอง](https://powerbi.microsoft.com/blog/power-bi-desktop-july-feature-summary-2/#responsiveVisuals)
 
-### <a name="june-2107"></a><span data-ttu-id="ca76f-518">มิถุนายน 2107</span><span class="sxs-lookup"><span data-stu-id="ca76f-518">June 2107</span></span>
-#### <a name="all-devices"></a><span data-ttu-id="ca76f-519">อุปกรณ์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-519">All devices</span></span>
-<span data-ttu-id="ca76f-520">**ทำให้เป็นแอปโปรด** คุณสามารถทำให้แดชบอร์ดเป็นรายการโปรดได้แล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-520">**Make apps favorites** You can already make a dashboard a favorite.</span></span> <span data-ttu-id="ca76f-521">ล่าสุด[แอปที่เพิ่ม Power BI](../../collaborate-share/service-create-distribute-apps.md) และตอนนี้คุณสามารถทำให้เป็นแอปโปรดได้เช่นกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-521">Recently, [Power BI added apps](../../collaborate-share/service-create-distribute-apps.md), and now you can make apps favorites, too.</span></span> 
+### <a name="june-2107"></a>มิถุนายน 2107
+#### <a name="all-devices"></a>อุปกรณ์ทั้งหมด
+**ทำให้เป็นแอปโปรด** คุณสามารถทำให้แดชบอร์ดเป็นรายการโปรดได้แล้ว ล่าสุด[แอปที่เพิ่ม Power BI](../../collaborate-share/service-create-distribute-apps.md) และตอนนี้คุณสามารถทำให้เป็นแอปโปรดได้เช่นกัน 
 
-### <a name="may-2017"></a><span data-ttu-id="ca76f-522">พฤษภาคม 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-522">May 2017</span></span>
-#### <a name="all-devices"></a><span data-ttu-id="ca76f-523">อุปกรณ์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-523">All devices</span></span>
-<span data-ttu-id="ca76f-524">**เมนูใหม่: แชร์กับฉัน** ไปที่แชร์กับฉันในเมนูแอปสำหรับอุปกรณ์เคลื่อนที่ เพื่อดูเนื้อหาทั้งหมดทีถูกแชร์กับคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-524">**New menu: Shared with me** Go to Shared with me in the mobile app menu to see all the content that's been shared with you.</span></span>
+### <a name="may-2017"></a>พฤษภาคม 2017
+#### <a name="all-devices"></a>อุปกรณ์ทั้งหมด
+**เมนูใหม่: แชร์กับฉัน** ไปที่แชร์กับฉันในเมนูแอปสำหรับอุปกรณ์เคลื่อนที่ เพื่อดูเนื้อหาทั้งหมดทีถูกแชร์กับคุณ
 
-<span data-ttu-id="ca76f-525">**เมนูใหม่: Apps** แอปเป็นคอลเลกชันของแดชบอร์ดและรายงานซึ่งถูกสร้างขึ้นตามวัตถุประสงค์โดยองค์กรของคุณ เพื่อการจัดส่งเมตริกหลักสำหรับการตัดสินใจที่มีข้อมูลเป็นส่วนผลักดันให้ยิ่งง่ายและรวดเร็วขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-525">**New menu: Apps** An app is a collection of dashboards and reports built by your organization to deliver key metrics for faster and easier data-driven decisions.</span></span>
+**เมนูใหม่: Apps** แอปเป็นคอลเลกชันของแดชบอร์ดและรายงานซึ่งถูกสร้างขึ้นตามวัตถุประสงค์โดยองค์กรของคุณ เพื่อการจัดส่งเมตริกหลักสำหรับการตัดสินใจที่มีข้อมูลเป็นส่วนผลักดันให้ยิ่งง่ายและรวดเร็วขึ้น
 
-<span data-ttu-id="ca76f-526">อ่านเพิ่มเติมเกี่ยวกับ[วิธีที่ Power BI จัดระเบียบเนื้อหาของคุณ](mobile-apps-quickstart-view-dashboard-report.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-526">Read more about [how your Power BI content is organized](mobile-apps-quickstart-view-dashboard-report.md).</span></span>
+อ่านเพิ่มเติมเกี่ยวกับ[วิธีที่ Power BI จัดระเบียบเนื้อหาของคุณ](mobile-apps-quickstart-view-dashboard-report.md)
 
-#### <a name="ios-and-android-devices"></a><span data-ttu-id="ca76f-527">อุปกรณ์ iOS และ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-527">iOS and Android devices</span></span>
-<span data-ttu-id="ca76f-528">**แสดงตัวอย่าง power BI Report Server** สร้า และเผยแพร่รายงาน Power BI ภายในองค์กร</span><span class="sxs-lookup"><span data-stu-id="ca76f-528">**Power BI Report Server preview** Create and publish Power BI reports on premises.</span></span> <span data-ttu-id="ca76f-529">จากนั้น[ดูและโต้ตอบกับพวกเขาในอุปกรณ์เคลื่อนที่ iOS หรือ Android ](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-529">Then [view and interact with them in your iOS or Android](mobile-app-ssrs-kpis-mobile-on-premises-reports.md) mobile device.</span></span> 
+#### <a name="ios-and-android-devices"></a>อุปกรณ์ iOS และ Android
+**แสดงตัวอย่าง power BI Report Server** สร้า และเผยแพร่รายงาน Power BI ภายในองค์กร จากนั้น[ดูและโต้ตอบกับพวกเขาในอุปกรณ์เคลื่อนที่ iOS หรือ Android ](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)ของคุณ 
 
-### <a name="april-2017"></a><span data-ttu-id="ca76f-530">เมษายน 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-530">April 2017</span></span>
-<span data-ttu-id="ca76f-531">อ่าน[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนเมษายน 2017 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-march-april-2017/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-531">Read the [mobile apps feature summary for April 2017](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-march-april-2017/)</span></span>
+### <a name="april-2017"></a>เมษายน 2017
+อ่าน[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนเมษายน 2017 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-march-april-2017/)
 
-#### <a name="all-devices"></a><span data-ttu-id="ca76f-532">อุปกรณ์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-532">All devices</span></span>
-<span data-ttu-id="ca76f-533">**รายงานพื้นหลังสีสำหรับโทรศัพท์** เมื่อคุณกำหนดสีพื้นหลังสำหรับรายงานใน Power BI Desktop รายงานบนโทรศัพท์จะมีสีพื้นหลังเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-533">**Background color for phone reports** When you define a background color for a report in Power BI Desktop, the phone report will have the same background color.</span></span> <span data-ttu-id="ca76f-534">อ่านเพิ่มเติมเกี่ยวกับ[การปรับหน้ารายงานให้เหมาะสมกับโทรศัพท์](../../create-reports/desktop-create-phone-report.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-534">More about [optimizing report pages for phones](../../create-reports/desktop-create-phone-report.md).</span></span>
+#### <a name="all-devices"></a>อุปกรณ์ทั้งหมด
+**รายงานพื้นหลังสีสำหรับโทรศัพท์** เมื่อคุณกำหนดสีพื้นหลังสำหรับรายงานใน Power BI Desktop รายงานบนโทรศัพท์จะมีสีพื้นหลังเดียวกัน อ่านเพิ่มเติมเกี่ยวกับ[การปรับหน้ารายงานให้เหมาะสมกับโทรศัพท์](../../create-reports/desktop-create-phone-report.md)
 
-<span data-ttu-id="ca76f-535">**พัฒนาวิชวล Power BI ที่เหมาะกับอุปกรณ์เคลื่อนที่** ให้อ่าน [คู่มือสำหรับนักพัฒนา](https://github.com/PowerBi-Projects/PowerBI-visuals/blob/master/Tutorial/MobileGuideline.md)สำหรับเคล็ดลับเกี่ยวกับการสร้างวิชวล Power BI ที่ดูดี และทำงานได้ดีบนอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-535">**Develop mobile-friendly Power BI visual** Read this [Developer guide](https://github.com/PowerBi-Projects/PowerBI-visuals/blob/master/Tutorial/MobileGuideline.md) for tips on creating Power BI visuals that look good and work well on mobile devices.</span></span>
+**พัฒนาวิชวล Power BI ที่เหมาะกับอุปกรณ์เคลื่อนที่** ให้อ่าน [คู่มือสำหรับนักพัฒนา](https://github.com/PowerBi-Projects/PowerBI-visuals/blob/master/Tutorial/MobileGuideline.md)สำหรับเคล็ดลับเกี่ยวกับการสร้างวิชวล Power BI ที่ดูดี และทำงานได้ดีบนอุปกรณ์เคลื่อนที่
 
-#### <a name="ios-devices"></a><span data-ttu-id="ca76f-536">อุปกรณ์ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-536">iOS devices</span></span>
-<span data-ttu-id="ca76f-537">**พูดคุยกับข้อมูลของคุณ ถามคำถามโดยการพูด** ตอนนี้คุณสามารถ [ถามคำถามของข้อมูลของคุณด้วย Q&A](mobile-apps-ios-qna.md)โดยการพูดคุยแทนที่การพิมพ์</span><span class="sxs-lookup"><span data-stu-id="ca76f-537">**Talk to your data: ask questions by speaking** Now you can [ask questions of your data with Q&A](mobile-apps-ios-qna.md) by talking rather than typing.</span></span> 
+#### <a name="ios-devices"></a>อุปกรณ์ iOS
+**พูดคุยกับข้อมูลของคุณ ถามคำถามโดยการพูด** ตอนนี้คุณสามารถ [ถามคำถามของข้อมูลของคุณด้วย Q&A](mobile-apps-ios-qna.md)โดยการพูดคุยแทนที่การพิมพ์ 
 
-### <a name="march-2017"></a><span data-ttu-id="ca76f-538">มีนาคม 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-538">March 2017</span></span>
-<span data-ttu-id="ca76f-539">อ่าน[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนมีนาคม 2017](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-march-2017/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-539">Read the [mobile apps feature summary for March 2017](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-march-2017/).</span></span>
+### <a name="march-2017"></a>มีนาคม 2017
+อ่าน[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนมีนาคม 2017](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-march-2017/)
 
-#### <a name="all-devices"></a><span data-ttu-id="ca76f-540">อุปกรณ์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-540">All devices</span></span>
-<span data-ttu-id="ca76f-541">**การโต้ตอบกับตัวแบ่งส่วนข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="ca76f-541">**Slicer interactions**</span></span>
+#### <a name="all-devices"></a>อุปกรณ์ทั้งหมด
+**การโต้ตอบกับตัวแบ่งส่วนข้อมูล**
 
-<span data-ttu-id="ca76f-542">เราได้ปรับปรุงการโต้ตอบแบบสัมผัสสำหรับตัวแบ่งส่วนข้อมูลเวลา</span><span class="sxs-lookup"><span data-stu-id="ca76f-542">We've improved touch interaction for time slicers.</span></span>
+เราได้ปรับปรุงการโต้ตอบแบบสัมผัสสำหรับตัวแบ่งส่วนข้อมูลเวลา
 
-#### <a name="ios-devices"></a><span data-ttu-id="ca76f-543">อุปกรณ์ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-543">iOS devices</span></span>
-<span data-ttu-id="ca76f-544">**ถามคำถามของข้อมูลของคุณด้วย Q&A และส่งคำติชม** ลองถามคำถามของข้อมูลของคุณด้วย Q&A และจากนั้นส่งรูปหน้ายิ้มหรือหน้าบึ้งถึงเราเพื่อแจ้งให้เราทราบว่าคุณมีความพึงพอใจต่อเราในระดับใด</span><span class="sxs-lookup"><span data-stu-id="ca76f-544">**Ask questions of your data with Q&A - and give us feedback** Try asking questions of your data with Q&A, and then give us a smile or frown to let us know how we did.</span></span>
+#### <a name="ios-devices"></a>อุปกรณ์ iOS
+**ถามคำถามของข้อมูลของคุณด้วย Q&A และส่งคำติชม** ลองถามคำถามของข้อมูลของคุณด้วย Q&A และจากนั้นส่งรูปหน้ายิ้มหรือหน้าบึ้งถึงเราเพื่อแจ้งให้เราทราบว่าคุณมีความพึงพอใจต่อเราในระดับใด
 
-<span data-ttu-id="ca76f-545">**ใช้ 3D touch สำหรับการกระทำทั่วไป** กดจ้ำบนไอคอนแอป Power BI บนหน้าจอหลัก ของ iPhone 6s หรือรุ่นที่ใหม่กว่าเมื่อต้อง การเข้าถึงการแจ้งเตือน ค้นหา และแดชบอร์ดที่ใช้ล่าสุด</span><span class="sxs-lookup"><span data-stu-id="ca76f-545">**Use 3D touch for common actions** Deep-press the Power BI app icon on the home screen of your iPhone 6s or later to access notifications, search, and recently used dashboards.</span></span>
+**ใช้ 3D touch สำหรับการกระทำทั่วไป** กดจ้ำบนไอคอนแอป Power BI บนหน้าจอหลัก ของ iPhone 6s หรือรุ่นที่ใหม่กว่าเมื่อต้อง การเข้าถึงการแจ้งเตือน ค้นหา และแดชบอร์ดที่ใช้ล่าสุด
 
-<span data-ttu-id="ca76f-546">**รองรับภาษาจากขวาไปซ้าย** แอปสำหรับอุปกรณ์เคลื่อนของ Power BI ขณะนี้รองรับภาษาขวาไปซ้าย</span><span class="sxs-lookup"><span data-stu-id="ca76f-546">**Support for right-to-left languages** Power BI mobile apps now support right-to-left languages.</span></span> <span data-ttu-id="ca76f-547">ในบริบทนี้ "จากขวาไปซ้ายภาษา" หมายถึงระบบการเขียนภาษาฮิบรูและภาษาอาหรับ ซึ่งจะถูกเขียนจากขวาไปซ้าย และจำเป็นต้องมีรูปร่างตามบริบท</span><span class="sxs-lookup"><span data-stu-id="ca76f-547">In this context, "right-to-left languages" refers to Hebrew and Arabic writing systems, which are written from right to left and require contextual shaping.</span></span> <span data-ttu-id="ca76f-548">ดูรายชื่อ [ภาษาที่แอปมือถือ Power BI รองรับ](mobile-apps-supported-languages.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-548">See the list of [Supported languages in the Power BI mobile apps](mobile-apps-supported-languages.md).</span></span>
+**รองรับภาษาจากขวาไปซ้าย** แอปสำหรับอุปกรณ์เคลื่อนของ Power BI ขณะนี้รองรับภาษาขวาไปซ้าย ในบริบทนี้ "จากขวาไปซ้ายภาษา" หมายถึงระบบการเขียนภาษาฮิบรูและภาษาอาหรับ ซึ่งจะถูกเขียนจากขวาไปซ้าย และจำเป็นต้องมีรูปร่างตามบริบท ดูรายชื่อ [ภาษาที่แอปมือถือ Power BI รองรับ](mobile-apps-supported-languages.md)
 
-#### <a name="android-devices"></a><span data-ttu-id="ca76f-549">อุปกรณ์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-549">Android devices</span></span>
-<span data-ttu-id="ca76f-550">**เชื่อมต่อกับเซิร์ฟเวอร์ SSRS มากกว่าหนึ่งรายการ**</span><span class="sxs-lookup"><span data-stu-id="ca76f-550">**Connect to more than one SSRS server**</span></span> 
+#### <a name="android-devices"></a>อุปกรณ์ Android
+**เชื่อมต่อกับเซิร์ฟเวอร์ SSRS มากกว่าหนึ่งรายการ** 
 
-<span data-ttu-id="ca76f-551">ขณะนี้่คุณสามารถมีการเชื่อมต่อกับเซิร์ฟเวอร์ SQL Server Reporting Services(SSRS) ได้สูงสุดห้าเซิร์ฟเวอร์ในเวลาเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-551">Now you can have connections to up to five SQL Server Reporting Services (SSRS) servers at the same time.</span></span>
+ขณะนี้่คุณสามารถมีการเชื่อมต่อกับเซิร์ฟเวอร์ SQL Server Reporting Services(SSRS) ได้สูงสุดห้าเซิร์ฟเวอร์ในเวลาเดียวกัน
 
-<span data-ttu-id="ca76f-552">**ร้องขอการเข้าถึงแดชบอร์ด**</span><span class="sxs-lookup"><span data-stu-id="ca76f-552">**Request access to dashboards**</span></span> 
+**ร้องขอการเข้าถึงแดชบอร์ด** 
 
-<span data-ttu-id="ca76f-553">ถ้าคุณสามารถสแกนรหัส QR สำหรับแดชบอร์ดที่คุณไม่สามารถเข้าถึง ขณะนี้คุณสามารถส่งคำขอสำหรับการเข้าถึงได้จากอุปกรณ์เคลื่อนที่ได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-553">If you scan a QR code for a dashboard that you don't have access to, now you can submit a request for access right from the mobile app.</span></span>
+ถ้าคุณสามารถสแกนรหัส QR สำหรับแดชบอร์ดที่คุณไม่สามารถเข้าถึง ขณะนี้คุณสามารถส่งคำขอสำหรับการเข้าถึงได้จากอุปกรณ์เคลื่อนที่ได้
 
-### <a name="february-2017"></a><span data-ttu-id="ca76f-554">กุมภาพันธ์ 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-554">February 2017</span></span>
-#### <a name="all-devices"></a><span data-ttu-id="ca76f-555">อุปกรณ์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-555">All devices</span></span>
-<span data-ttu-id="ca76f-556">**เลื่อนได้ง่ายขึ้น**</span><span class="sxs-lookup"><span data-stu-id="ca76f-556">**Scrolling made easier**</span></span> 
+### <a name="february-2017"></a>กุมภาพันธ์ 2017
+#### <a name="all-devices"></a>อุปกรณ์ทั้งหมด
+**เลื่อนได้ง่ายขึ้น** 
 
-<span data-ttu-id="ca76f-557">ในตอนนี้คุณสามารถเลื่อนดูในแท่งและแผนภูมิคอลัมน์ในรายงานโดยการสัมผัสแผนภูมิ แทนที่สัมผัสแถบเลื่อนทางด้านข้าง</span><span class="sxs-lookup"><span data-stu-id="ca76f-557">Now you can scroll in bar and column charts in a report by touching the chart itself, rather than touching the scroll bar on the side.</span></span>
+ในตอนนี้คุณสามารถเลื่อนดูในแท่งและแผนภูมิคอลัมน์ในรายงานโดยการสัมผัสแผนภูมิ แทนที่สัมผัสแถบเลื่อนทางด้านข้าง
 
-#### <a name="ios-devices"></a><span data-ttu-id="ca76f-558">อุปกรณ์ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-558">iOS devices</span></span>
-<span data-ttu-id="ca76f-559">**ถามคำถามของข้อมูลของคุณกับตัวอย่างของ Q&A**</span><span class="sxs-lookup"><span data-stu-id="ca76f-559">**Ask questions of your data with a preview of Q&A**</span></span> 
+#### <a name="ios-devices"></a>อุปกรณ์ iOS
+**ถามคำถามของข้อมูลของคุณกับตัวอย่างของ Q&A** 
 
-<span data-ttu-id="ca76f-560">ด้วย Q&A คุณถามคำถามเกี่ยวกับข้อมูลของคุณ โดยใช้คำของคุณเอง และ Power BI จะให้คำตอบ</span><span class="sxs-lookup"><span data-stu-id="ca76f-560">With Q&A, you ask questions about your data in your own words, and Power BI provides the answers.</span></span> <span data-ttu-id="ca76f-561">Q&A นั้นใช้ได้ใน Power BI service https://powerbi.com</span><span class="sxs-lookup"><span data-stu-id="ca76f-561">Q&A is already in the Power BI service on https://powerbi.com.</span></span> <span data-ttu-id="ca76f-562">ในตอนนี้[พร้อมใช้งานในแอปมือถือบน iPhone หรือ iPad ของคุณ](mobile-apps-ios-qna.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-562">Now it's also [available in the mobile app on your iPhone or iPad](mobile-apps-ios-qna.md).</span></span>
+ด้วย Q&A คุณถามคำถามเกี่ยวกับข้อมูลของคุณ โดยใช้คำของคุณเอง และ Power BI จะให้คำตอบ Q&A นั้นใช้ได้ใน Power BI service https://powerbi.com ในตอนนี้[พร้อมใช้งานในแอปมือถือบน iPhone หรือ iPad ของคุณ](mobile-apps-ios-qna.md)
 
-<span data-ttu-id="ca76f-563">**เชื่อมต่อกับเซิร์ฟเวอร์ SSRS มากกว่าหนึ่งรายการ**</span><span class="sxs-lookup"><span data-stu-id="ca76f-563">**Connect to more than one SSRS server**</span></span> 
+**เชื่อมต่อกับเซิร์ฟเวอร์ SSRS มากกว่าหนึ่งรายการ** 
 
-<span data-ttu-id="ca76f-564">ขณะนี้่คุณสามารถมีการเชื่อมต่อกับเซิร์ฟเวอร์ SQL Server Reporting Services(SSRS) ได้สูงสุดห้าเซิร์ฟเวอร์ในเวลาเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-564">Now you can have connections to up to five SQL Server Reporting Services (SSRS) servers at the same time.</span></span>
+ขณะนี้่คุณสามารถมีการเชื่อมต่อกับเซิร์ฟเวอร์ SQL Server Reporting Services(SSRS) ได้สูงสุดห้าเซิร์ฟเวอร์ในเวลาเดียวกัน
 
-#### <a name="android-tablets"></a><span data-ttu-id="ca76f-565">แท็บเล็ต Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-565">Android tablets</span></span>
-<span data-ttu-id="ca76f-566">**แอปสำหรับอุปกรณ์เคลื่อน Power BI** สำหรับแท็บเล็ต Android ใช้งานได้ทั่วโลก</span><span class="sxs-lookup"><span data-stu-id="ca76f-566">**The Power BI mobile app** for Android tablets is now available globally.</span></span> <span data-ttu-id="ca76f-567">เริ่มต้นใช้งานการ[Power BI บนแท็บเล็ต Android](mobile-android-app-get-started.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-567">Get started with the [Power BI on your Android tablet](mobile-android-app-get-started.md).</span></span>
+#### <a name="android-tablets"></a>แท็บเล็ต Android
+**แอปสำหรับอุปกรณ์เคลื่อน Power BI** สำหรับแท็บเล็ต Android ใช้งานได้ทั่วโลก เริ่มต้นใช้งานการ[Power BI บนแท็บเล็ต Android](mobile-android-app-get-started.md)
 
-#### <a name="ios-and-android-devices"></a><span data-ttu-id="ca76f-568">อุปกรณ์ iOS และ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-568">iOS and Android devices</span></span>
-<span data-ttu-id="ca76f-569">**เมนูใหม่สำหรับแดชบอร์ดไทล์** นำทางไปยังรายงานต้นแบบ ขยายไทล์ หรือจัดการการแจ้งเตือน ทั้งหมดได้โดยตรงจากเมนูบนไทล์บนแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="ca76f-569">**New menu for dashboard tiles** Navigate to the underlying report, expand the tile, or manage an alert, all directly from a menu on the tile on a dashboard.</span></span> 
+#### <a name="ios-and-android-devices"></a>อุปกรณ์ iOS และ Android
+**เมนูใหม่สำหรับแดชบอร์ดไทล์** นำทางไปยังรายงานต้นแบบ ขยายไทล์ หรือจัดการการแจ้งเตือน ทั้งหมดได้โดยตรงจากเมนูบนไทล์บนแดชบอร์ด 
 
-<span data-ttu-id="ca76f-570">เมนูนี้ใหม่สำหรับ iOS, Android ในโหมดแนวนอน และแท็บเล็ต Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-570">This menu is new for iOS, Android phones in landscape mode, and Android tablets.</span></span> <span data-ttu-id="ca76f-571">มีแล้วในโทรศัพท์ Windows และ Android ในโหมดแนวตั้ง</span><span class="sxs-lookup"><span data-stu-id="ca76f-571">It was already in Windows and Android phones in portrait modes.</span></span>
+เมนูนี้ใหม่สำหรับ iOS, Android ในโหมดแนวนอน และแท็บเล็ต Android มีแล้วในโทรศัพท์ Windows และ Android ในโหมดแนวตั้ง
 
-### <a name="january-2017"></a><span data-ttu-id="ca76f-572">มกราคม 2017</span><span class="sxs-lookup"><span data-stu-id="ca76f-572">January 2017</span></span>
-<span data-ttu-id="ca76f-573">อ่าน[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนที่เดือนมกราคม 2017 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-january-2017)</span><span class="sxs-lookup"><span data-stu-id="ca76f-573">Read the [January 2017 mobile apps blog feature summary](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-january-2017).</span></span>
+### <a name="january-2017"></a>มกราคม 2017
+อ่าน[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนที่เดือนมกราคม 2017 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-january-2017)
 
-#### <a name="all-devices"></a><span data-ttu-id="ca76f-574">อุปกรณ์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-574">All devices</span></span>
-<span data-ttu-id="ca76f-575">**โหลดแถวมากกว่า 100 แถวในตารางและเมทริกซ์** ขณะน้ ถ้าคุณมีตารางขนาดใหญ่หรือเมทริกซ์บนแดชบอร์ดหรือรายงานของคุณ เราจะแสดงข้อมูลมากที่สุดเท่าที่เป็นไปได้ในไทล์</span><span class="sxs-lookup"><span data-stu-id="ca76f-575">**Load more than 100 rows in tables and matrices** Now, if you have a large table or matrix on your dashboard or report, we show as much data as possible in the tile.</span></span> <span data-ttu-id="ca76f-576">แล้วในโหมดโฟกัส คุณสามารถเลื่อนลงไปโหลดแถวเพิ่ม</span><span class="sxs-lookup"><span data-stu-id="ca76f-576">Then in focus mode, you can scroll down to load additional rows.</span></span>
+#### <a name="all-devices"></a>อุปกรณ์ทั้งหมด
+**โหลดแถวมากกว่า 100 แถวในตารางและเมทริกซ์** ขณะน้ ถ้าคุณมีตารางขนาดใหญ่หรือเมทริกซ์บนแดชบอร์ดหรือรายงานของคุณ เราจะแสดงข้อมูลมากที่สุดเท่าที่เป็นไปได้ในไทล์ แล้วในโหมดโฟกัส คุณสามารถเลื่อนลงไปโหลดแถวเพิ่ม
 
-<span data-ttu-id="ca76f-577">**รายงานโทรศัพท์ ความพร้อมใช้งานทั่วไป** รายงานโทรศัพท์ Power BI จะพร้อมใช้งานแบบทั่วไปแล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-577">**Phone report - general availability** Power BI phone reports are now generally available.</span></span> <span data-ttu-id="ca76f-578">ใน Power BI Desktop คุณสามารถปรับแต่งมุมมองแนวตั้งของรายงานที่มีอยู่สำหรับผู้ชมผ่านมือถือ</span><span class="sxs-lookup"><span data-stu-id="ca76f-578">In Power BI Desktop, you can tailor a portrait view of an existing report for mobile viewers.</span></span> <span data-ttu-id="ca76f-579">เรียนรู้เพิ่มเติมเกี่ยวกับ[การเขียนรายงานโทรศัพท์ใน Power BI Desktop](../../create-reports/desktop-create-phone-report.md)และ[รายงานประสบการณ์การใช้งานบนโทรศัพท์](mobile-apps-view-phone-report.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-579">Learn more about [authoring phone reports in Power BI Desktop](../../create-reports/desktop-create-phone-report.md) and the [report experience on phones](mobile-apps-view-phone-report.md).</span></span>
+**รายงานโทรศัพท์ ความพร้อมใช้งานทั่วไป** รายงานโทรศัพท์ Power BI จะพร้อมใช้งานแบบทั่วไปแล้ว ใน Power BI Desktop คุณสามารถปรับแต่งมุมมองแนวตั้งของรายงานที่มีอยู่สำหรับผู้ชมผ่านมือถือ เรียนรู้เพิ่มเติมเกี่ยวกับ[การเขียนรายงานโทรศัพท์ใน Power BI Desktop](../../create-reports/desktop-create-phone-report.md)และ[รายงานประสบการณ์การใช้งานบนโทรศัพท์](mobile-apps-view-phone-report.md)
 
-#### <a name="ios"></a><span data-ttu-id="ca76f-580">iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-580">iOS</span></span>
-<span data-ttu-id="ca76f-581">**การรับรองตัวตน SSRS ที่ใช้แสดงตัวอย่าง Active Directory Federation Services (ADFS)** ตอนนี้คุณสามารถลงชื่อเข้าใช้เซิร์ฟเวอร์ SQL Server Reporting Services ภายในองค์กรจากอุปกรณ์เคลื่อนทีกับบัญชีองค์กรของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-581">**SSRS Authentication using Active Directory Federation Services (ADFS) Preview** Now you can sign in to on-premises SQL Server Reporting Services servers from your mobile device with your organizational account.</span></span> <span data-ttu-id="ca76f-582">อ่านเพิ่มเติมเกี่ยวกับ[การใช้ OAuth เพื่อเชื่อมต่อกับเซิร์ฟเวอร์ SSRS](mobile-oauth-ssrs.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-582">Read more about [using OAuth to connect to SSRS servers](mobile-oauth-ssrs.md).</span></span>
+#### <a name="ios"></a>iOS
+**การรับรองตัวตน SSRS ที่ใช้แสดงตัวอย่าง Active Directory Federation Services (ADFS)** ตอนนี้คุณสามารถลงชื่อเข้าใช้เซิร์ฟเวอร์ SQL Server Reporting Services ภายในองค์กรจากอุปกรณ์เคลื่อนทีกับบัญชีองค์กรของคุณ อ่านเพิ่มเติมเกี่ยวกับ[การใช้ OAuth เพื่อเชื่อมต่อกับเซิร์ฟเวอร์ SSRS](mobile-oauth-ssrs.md)
 
-#### <a name="android"></a><span data-ttu-id="ca76f-583">Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-583">Android</span></span>
-<span data-ttu-id="ca76f-584">**การรับรองตัวตน SSRS ที่ใช้แสดงตัวอย่าง Active Directory Federation Services (ADFS)** ตอนนี้คุณสามารถลงชื่อเข้าใช้เซิร์ฟเวอร์ SQL Server Reporting Services ภายในองค์กรจากอุปกรณ์เคลื่อนทีกับบัญชีองค์กรของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-584">**SSRS Authentication using Active Directory Federation Services (ADFS) Preview** Now you can sign in to on-premises SQL Server Reporting Services servers from your mobile device with your organizational account.</span></span> <span data-ttu-id="ca76f-585">อ่านเพิ่มเติมเกี่ยวกับ[การใช้ OAuth เพื่อเชื่อมต่อกับเซิร์ฟเวอร์ SSRS](mobile-oauth-ssrs.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-585">Read more about [using OAuth to connect to SSRS servers](mobile-oauth-ssrs.md).</span></span>
+#### <a name="android"></a>Android
+**การรับรองตัวตน SSRS ที่ใช้แสดงตัวอย่าง Active Directory Federation Services (ADFS)** ตอนนี้คุณสามารถลงชื่อเข้าใช้เซิร์ฟเวอร์ SQL Server Reporting Services ภายในองค์กรจากอุปกรณ์เคลื่อนทีกับบัญชีองค์กรของคุณ อ่านเพิ่มเติมเกี่ยวกับ[การใช้ OAuth เพื่อเชื่อมต่อกับเซิร์ฟเวอร์ SSRS](mobile-oauth-ssrs.md)
 
-<span data-ttu-id="ca76f-586">**ใหม่และปรับปรุงแล้ว: ใส่คำอธิบายประกอบ และแชร์ข้อมูลเชิงลึกได้อย่างรวดเร็ว** การแชร์และการใส่คำอธิบายประกอบทำงานอย่างสมบูรณ์บนอุปกรณ์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-586">**New and improved: Annotate and share insights quickly** Sharing and annotating are now fully functional on Android devices.</span></span> <span data-ttu-id="ca76f-587">เมนูที่ถูกปรับปรุง ทำให้การใส่คำอธิบายประกอบง่ายและรวดเร็วขึ้น และแชร์ข้อมูลเชิงลึก และคุณยังสามารถแชร์รายงานมีคำอธิบายประกอบหรือจากแอป Power BI โดยตรง</span><span class="sxs-lookup"><span data-stu-id="ca76f-587">The improved menu makes it easier and quicker to annotate and share insights, and you can also share an annotated report or directly from the Power BI app.</span></span>
+**ใหม่และปรับปรุงแล้ว: ใส่คำอธิบายประกอบ และแชร์ข้อมูลเชิงลึกได้อย่างรวดเร็ว** การแชร์และการใส่คำอธิบายประกอบทำงานอย่างสมบูรณ์บนอุปกรณ์ Android เมนูที่ถูกปรับปรุง ทำให้การใส่คำอธิบายประกอบง่ายและรวดเร็วขึ้น และแชร์ข้อมูลเชิงลึก และคุณยังสามารถแชร์รายงานมีคำอธิบายประกอบหรือจากแอป Power BI โดยตรง
 
-### <a name="december-2016"></a><span data-ttu-id="ca76f-588">ธันวาคม 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-588">December 2016</span></span>
-<span data-ttu-id="ca76f-589">อ่านคำ[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนธันวาคม 2016 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-december-2016)</span><span class="sxs-lookup"><span data-stu-id="ca76f-589">Read the [December 2016 mobile apps blog feature summary](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-december-2016).</span></span>
+### <a name="december-2016"></a>ธันวาคม 2016
+อ่านคำ[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนธันวาคม 2016 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-december-2016)
 
-#### <a name="all-devices"></a><span data-ttu-id="ca76f-590">อุปกรณ์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-590">All devices</span></span>
-<span data-ttu-id="ca76f-591">**รีเฟรชเบื้องหลังแบบออฟไลน์**</span><span class="sxs-lookup"><span data-stu-id="ca76f-591">**Offline background refresh**</span></span>
+#### <a name="all-devices"></a>อุปกรณ์ทั้งหมด
+**รีเฟรชเบื้องหลังแบบออฟไลน์**
 
-<span data-ttu-id="ca76f-592">เพื่อให้แน่ใจว่า คุณสามารถเข้าถึงข้อมูลล่าสุดของคุณในขณะออฟไลน์ เราดำเนินการรีเฟรชในเบื้องหลังของแอป เพื่อให้ข้อมูลธุรกิจของคุณให้ทันเหตุการ แม้ว่าคุณยังไม่ได้เข้าสักพักแล้ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-592">To make sure you can access your latest data while offline, we perform a refresh in the background of the app so your business information is up to date, even if you haven't accessed it for a while.</span></span> <span data-ttu-id="ca76f-593">เมื่อต้องตรวจสอบว่าบางแดชบอร์ดมีข้อมูลล่าสุดเสมอ ก็เพียงทำเครื่องหมายให้เป็นรายการโปรด</span><span class="sxs-lookup"><span data-stu-id="ca76f-593">To make sure certain dashboards are always up to date, just mark them as favorites.</span></span> <span data-ttu-id="ca76f-594">เรียนรู้เพิ่มเติมเกี่ยวกับ[ความสามารถของแบบออฟไลน์ในแอป mobile Power BI](mobile-apps-offline-data.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-594">Learn more about [offline capabilities in the Power BI mobile apps](mobile-apps-offline-data.md).</span></span>
+เพื่อให้แน่ใจว่า คุณสามารถเข้าถึงข้อมูลล่าสุดของคุณในขณะออฟไลน์ เราดำเนินการรีเฟรชในเบื้องหลังของแอป เพื่อให้ข้อมูลธุรกิจของคุณให้ทันเหตุการ แม้ว่าคุณยังไม่ได้เข้าสักพักแล้ว เมื่อต้องตรวจสอบว่าบางแดชบอร์ดมีข้อมูลล่าสุดเสมอ ก็เพียงทำเครื่องหมายให้เป็นรายการโปรด เรียนรู้เพิ่มเติมเกี่ยวกับ[ความสามารถของแบบออฟไลน์ในแอป mobile Power BI](mobile-apps-offline-data.md)
 
-#### <a name="ios-devices"></a><span data-ttu-id="ca76f-595">อุปกรณ์ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-595">iOS devices</span></span>
-<span data-ttu-id="ca76f-596">**ใส่คำอธิบายประกอบ และแชร์**</span><span class="sxs-lookup"><span data-stu-id="ca76f-596">**Annotate and share**</span></span>
+#### <a name="ios-devices"></a>อุปกรณ์ iOS
+**ใส่คำอธิบายประกอบ และแชร์**
 
-<span data-ttu-id="ca76f-597">ในตอนนี้ คุณสามารถใส่คำอธิบายประกอบและแชร์ไทล์ รายงาน หรือการแสดงรูปภาพจากแอป Power BI สำหรับอุปกรณ์ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-597">Now you can annotate and share a tile, report, or visualization from the Power BI mobile app for iOS.</span></span> 
+ในตอนนี้ คุณสามารถใส่คำอธิบายประกอบและแชร์ไทล์ รายงาน หรือการแสดงรูปภาพจากแอป Power BI สำหรับอุปกรณ์ iOS 
 
-* [<span data-ttu-id="ca76f-598">บน iPhone</span><span class="sxs-lookup"><span data-stu-id="ca76f-598">On the iPhone</span></span>](mobile-annotate-and-share-a-tile-from-the-mobile-apps.md)
-* [<span data-ttu-id="ca76f-599">บน iPad</span><span class="sxs-lookup"><span data-stu-id="ca76f-599">On the iPad</span></span>](mobile-annotate-and-share-a-tile-from-the-mobile-apps.md)
+* [บน iPhone](mobile-annotate-and-share-a-tile-from-the-mobile-apps.md)
+* [บน iPad](mobile-annotate-and-share-a-tile-from-the-mobile-apps.md)
 
-<span data-ttu-id="ca76f-600">**ร้องขอการเข้าถึงแดชบอร์ด**</span><span class="sxs-lookup"><span data-stu-id="ca76f-600">**Request access to dashboards**</span></span>
+**ร้องขอการเข้าถึงแดชบอร์ด**
 
-<span data-ttu-id="ca76f-601">ถ้าคุณสามารถสแกนรหัส QR สำหรับแดชบอร์ดที่คุณไม่สามารถเข้าถึง ขณะนี้คุณสามารถส่งคำขอสำหรับการเข้าถึงได้จากอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-601">If you scan a QR code for a dashboard that you don't have access to, now you can submit a request for access right from the mobile app.</span></span>
+ถ้าคุณสามารถสแกนรหัส QR สำหรับแดชบอร์ดที่คุณไม่สามารถเข้าถึง ขณะนี้คุณสามารถส่งคำขอสำหรับการเข้าถึงได้จากอุปกรณ์เคลื่อนที่
 
-<span data-ttu-id="ca76f-602">**กำหนด URL บนไทล์รูปภาพ**</span><span class="sxs-lookup"><span data-stu-id="ca76f-602">**Custom URL on image tile**</span></span>
+**กำหนด URL บนไทล์รูปภาพ**
 
-<span data-ttu-id="ca76f-603">ถ้าไทล์ของรูปภาพมี URL แบบกำหนดโดยเจ้าของแดชบอร์ด เมื่อคุณแตะไทล์ คุณจะไปยัง URL นั้นโดยตรงโดยไม่ต้องเปิดไทล์ในโหมดโฟกัส</span><span class="sxs-lookup"><span data-stu-id="ca76f-603">If an image tile has a custom URL defined by the dashboard owner, when you tap the tile you go directly to that URL without opening the tile in focus mode.</span></span> 
+ถ้าไทล์ของรูปภาพมี URL แบบกำหนดโดยเจ้าของแดชบอร์ด เมื่อคุณแตะไทล์ คุณจะไปยัง URL นั้นโดยตรงโดยไม่ต้องเปิดไทล์ในโหมดโฟกัส 
 
-#### <a name="iphone"></a><span data-ttu-id="ca76f-604">iPhone</span><span class="sxs-lookup"><span data-stu-id="ca76f-604">iPhone</span></span>
-<span data-ttu-id="ca76f-605">**การปรับปรุง Apple Watch**</span><span class="sxs-lookup"><span data-stu-id="ca76f-605">**Apple watch improvements**</span></span>
+#### <a name="iphone"></a>iPhone
+**การปรับปรุง Apple Watch**
 
-<span data-ttu-id="ca76f-606">ตอนนี้คุณสามารถรีเฟรชข้อมูล Apple Watch โดยตรงจากแอป Watch</span><span class="sxs-lookup"><span data-stu-id="ca76f-606">You can now refresh Apple Watch data directly from the Watch app.</span></span> <span data-ttu-id="ca76f-607">ในหน้าดัชนีแดชบอร์ด กดจ้ำเพื่อรีเฟรชข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-607">In the dashboard index page, deep press to refresh your data.</span></span> <span data-ttu-id="ca76f-608">(แอปสำหรับอุปกรณ์เคลื่อน Power BI ต้องทำงานในเบื้องหลังบน iPhone ของคุณ)</span><span class="sxs-lookup"><span data-stu-id="ca76f-608">(The Power BI mobile app must be running in the background on your iPhone for this to work).</span></span>
+ตอนนี้คุณสามารถรีเฟรชข้อมูล Apple Watch โดยตรงจากแอป Watch ในหน้าดัชนีแดชบอร์ด กดจ้ำเพื่อรีเฟรชข้อมูลของคุณ (แอปสำหรับอุปกรณ์เคลื่อน Power BI ต้องทำงานในเบื้องหลังบน iPhone ของคุณ)
 
-#### <a name="android"></a><span data-ttu-id="ca76f-609">Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-609">Android</span></span>
-<span data-ttu-id="ca76f-610">**กำหนด URL บนไทล์รูปภาพ**</span><span class="sxs-lookup"><span data-stu-id="ca76f-610">**Custom URL on image tile**</span></span>
+#### <a name="android"></a>Android
+**กำหนด URL บนไทล์รูปภาพ**
 
-<span data-ttu-id="ca76f-611">ถ้าไทล์ของรูปภาพมี URL แบบกำหนดโดยเจ้าของแดชบอร์ด เมื่อคุณแตะไทล์ คุณจะไปยัง URL นั้นโดยตรงโดยไม่ต้องเปิดไทล์ในโหมดโฟกัส</span><span class="sxs-lookup"><span data-stu-id="ca76f-611">If an image tile has a custom URL defined by the dashboard owner, when you tap the tile you go directly to that URL without opening the tile in focus mode.</span></span> <span data-ttu-id="ca76f-612">รวมทั้แดชบอร์ดที่ประกอบด้วย Url แบบกำหนดเองที่กำหนดไว้ล่วงหน้าสามารถเดี๋ยวนี้เปลี่ยนเส้นทางผู้อ่านรายงานภายในแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-612">Also, dashboard tiles containing predefined custom URLs can now redirect readers to reports within the app.</span></span>
+ถ้าไทล์ของรูปภาพมี URL แบบกำหนดโดยเจ้าของแดชบอร์ด เมื่อคุณแตะไทล์ คุณจะไปยัง URL นั้นโดยตรงโดยไม่ต้องเปิดไทล์ในโหมดโฟกัส รวมทั้แดชบอร์ดที่ประกอบด้วย Url แบบกำหนดเองที่กำหนดไว้ล่วงหน้าสามารถเดี๋ยวนี้เปลี่ยนเส้นทางผู้อ่านรายงานภายในแอป
 
-### <a name="november-2016"></a><span data-ttu-id="ca76f-613">พฤศจิกายน 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-613">November 2016</span></span>
-<span data-ttu-id="ca76f-614">อ่านคำ[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนพฤศจิกายน 2016 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-november-2016/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-614">Read the [November 2016 Power BI mobile apps feature summary](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-november-2016/).</span></span>
+### <a name="november-2016"></a>พฤศจิกายน 2016
+อ่านคำ[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนพฤศจิกายน 2016 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-november-2016/)
 
-#### <a name="android-tablets"></a><span data-ttu-id="ca76f-615">แท็บเล็ต Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-615">Android tablets</span></span>
-<span data-ttu-id="ca76f-616">**แอป Power BI mobile สำหรับแท็บเล็ต Android** ใช่ตัวอย่างอยู่ที่นี่</span><span class="sxs-lookup"><span data-stu-id="ca76f-616">**Power BI mobile app for Android tablets** Yes, the preview is here.</span></span>
+#### <a name="android-tablets"></a>แท็บเล็ต Android
+**แอป Power BI mobile สำหรับแท็บเล็ต Android** ใช่ตัวอย่างอยู่ที่นี่
 
-* <span data-ttu-id="ca76f-617">ใช้งาน[Power BI บนแท็บเล็ต Android ของคุณ](mobile-android-app-get-started.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-617">Experience [Power BI on your Android tablet](mobile-android-app-get-started.md)</span></span>
-* <span data-ttu-id="ca76f-618">สำรวจ[Reporting Services mobile reports และ Kpi บนแท็บเล็ต Android ของคุณ](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-618">Explore [Reporting Services mobile reports and KPIs on your Android tablet](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)</span></span>
+* ใช้งาน[Power BI บนแท็บเล็ต Android ของคุณ](mobile-android-app-get-started.md)
+* สำรวจ[Reporting Services mobile reports และ Kpi บนแท็บเล็ต Android ของคุณ](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)
 
-#### <a name="android-devices"></a><span data-ttu-id="ca76f-619">อุปกรณ์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-619">Android devices</span></span>
-<span data-ttu-id="ca76f-620">**แสดงตัวอย่าง: Intune Mobile Application Management** Power BI รองรับ Microsoft Intune Mobile Application Manager (MAM) ตอนนี้อยู่ในตัวอย่างสำหรับผู้ใช้ Power BI Pro บนอุปกรณ์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-620">**Preview: Intune Mobile Application Management** Power BI support for Microsoft Intune Mobile Application Manager (MAM) is now in preview for Power BI Pro users on Android devices.</span></span> 
+#### <a name="android-devices"></a>อุปกรณ์ Android
+**แสดงตัวอย่าง: Intune Mobile Application Management** Power BI รองรับ Microsoft Intune Mobile Application Manager (MAM) ตอนนี้อยู่ในตัวอย่างสำหรับผู้ใช้ Power BI Pro บนอุปกรณ์ Android 
 
-<span data-ttu-id="ca76f-621">**รายการโปรด** แท็กแดชบอร์ดโปรดของคุณบนอุปกรณ์ Android  และดู [แดชบอร์ด Power BI โปรด และ Reporting Services mobile reports และ Kpi](mobile-android-app-get-started.md#view-your-favorite-dashboards-and-reports) ทั้งหมดของคุณ ที่เก็บไว้ในตำแหน่งที่ตั้งที่สะดวกแห่งหนึ่ง</span><span class="sxs-lookup"><span data-stu-id="ca76f-621">**Favorites** Tag your favorite dashboards on your Android device, and see all your [favorite Power BI dashboards and Reporting Services mobile reports and KPIs](mobile-android-app-get-started.md#view-your-favorite-dashboards-and-reports) collected in one convenient location.</span></span> 
+**รายการโปรด** แท็กแดชบอร์ดโปรดของคุณบนอุปกรณ์ Android  และดู [แดชบอร์ด Power BI โปรด และ Reporting Services mobile reports และ Kpi](mobile-android-app-get-started.md#view-your-favorite-dashboards-and-reports) ทั้งหมดของคุณ ที่เก็บไว้ในตำแหน่งที่ตั้งที่สะดวกแห่งหนึ่ง 
 
-#### <a name="ios-devices"></a><span data-ttu-id="ca76f-622">อุปกรณ์ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-622">iOS devices</span></span>
-<span data-ttu-id="ca76f-623">**ลิงค์** Url ในไทล์และการแสดงภาพสามารถคลิกได้ และเปิดในเบราว์เซอร์ได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-623">**Links** URLs in tiles and visualizations are now clickable, and open in a browser.</span></span>
+#### <a name="ios-devices"></a>อุปกรณ์ iOS
+**ลิงค์** Url ในไทล์และการแสดงภาพสามารถคลิกได้ และเปิดในเบราว์เซอร์ได้
 
-#### <a name="windows-devices"></a><span data-ttu-id="ca76f-624">อุปกรณ์ Windows</span><span class="sxs-lookup"><span data-stu-id="ca76f-624">Windows devices</span></span>
-<span data-ttu-id="ca76f-625">**จัดกึ่งกลางแผนผัง** เพื่อโฟกัสข้อมูลที่ใกล้กับตำแหน่งที่ตั้งของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-625">**Center a map** to focus on data near you in your location</span></span>
+#### <a name="windows-devices"></a>อุปกรณ์ Windows
+**จัดกึ่งกลางแผนผัง** เพื่อโฟกัสข้อมูลที่ใกล้กับตำแหน่งที่ตั้งของคุณ
 
-### <a name="septemberoctober-2016"></a><span data-ttu-id="ca76f-626">กันยายน/ตุลาคม 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-626">September/October 2016</span></span>
-<span data-ttu-id="ca76f-627">อ่านคำ[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนตุลาคม 2016 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-october-2016/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-627">Read the [October 2016 Power BI mobile apps feature summary](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-october-2016/).</span></span>
+### <a name="septemberoctober-2016"></a>กันยายน/ตุลาคม 2016
+อ่านคำ[สรุปฟีเจอร์แอปสำหรับอุปกรณ์เคลื่อนทีเดือนตุลาคม 2016 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-feature-summary-october-2016/)
 
-#### <a name="all-devices"></a><span data-ttu-id="ca76f-628">อุปกรณ์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-628">All devices</span></span>
-<span data-ttu-id="ca76f-629">**รายการโปรดใช้เป็นเพจเริ่มต้น** ถ้าคุณได้ทำเครื่องหมายใดๆ ของแดชบอร์ดว่ารายการโปรด จากนั้นเพจเริ่มต้นของคุณจะเป็นรายการโปรดของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-629">**Favorites as landing page** If you've marked any of your dashboards as favorites, then your landing page will be your Favorites entry.</span></span> 
+#### <a name="all-devices"></a>อุปกรณ์ทั้งหมด
+**รายการโปรดใช้เป็นเพจเริ่มต้น** ถ้าคุณได้ทำเครื่องหมายใดๆ ของแดชบอร์ดว่ารายการโปรด จากนั้นเพจเริ่มต้นของคุณจะเป็นรายการโปรดของคุณ 
 
-<span data-ttu-id="ca76f-630">**การนำทางที่ได้ปรับปรุง** การนำทางหลักมีรูปลักษณ์ใหม่ และการนำทางของกลุ่มถูกย้ายไปยังแค็ตตาล็อกกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="ca76f-630">**Improved navigation** The main navigation has a new look, and groups navigation has moved to the groups catalog.</span></span> 
+**การนำทางที่ได้ปรับปรุง** การนำทางหลักมีรูปลักษณ์ใหม่ และการนำทางของกลุ่มถูกย้ายไปยังแค็ตตาล็อกกลุ่ม 
 
-<span data-ttu-id="ca76f-631">**การปรับปรุงประสิทธิภาพการทำงานรายงานและแดชบอร์ด** ปรับปรุงประสบการณ์การใช้งานการโหลดรายงานและแดชบอร์ดในแอป mobile Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-631">**Report and dashboard performance improvements** Improved the experience of loading reports and dashboards in the Power BI mobile apps</span></span>
+**การปรับปรุงประสิทธิภาพการทำงานรายงานและแดชบอร์ด** ปรับปรุงประสบการณ์การใช้งานการโหลดรายงานและแดชบอร์ดในแอป mobile Power BI
 
-<span data-ttu-id="ca76f-632">**การแจ้งเตือนที่ได้ปรับปรุง** สำหรับการแจ้งเตือนที่อิงตามข้อมูลของคุณ ขณะนี้ประกอบด้วยข้อมูลมากขึ้นที่เกี่ยวกับสิ่งที่ถูกทริกเกอร์การแจ้งเตือนและเหตุผล</span><span class="sxs-lookup"><span data-stu-id="ca76f-632">**Enhanced alert notifications** Notifications for your data-driven alerts now contain more information on what triggered the alert and why.</span></span>
+**การแจ้งเตือนที่ได้ปรับปรุง** สำหรับการแจ้งเตือนที่อิงตามข้อมูลของคุณ ขณะนี้ประกอบด้วยข้อมูลมากขึ้นที่เกี่ยวกับสิ่งที่ถูกทริกเกอร์การแจ้งเตือนและเหตุผล
 
-#### <a name="ios-on-iphones"></a><span data-ttu-id="ca76f-633">iOS บน Iphone</span><span class="sxs-lookup"><span data-stu-id="ca76f-633">iOS on iPhones</span></span>
-<span data-ttu-id="ca76f-634">**การปรับปรุงการรีเฟรชของ Apple Watch** Apple Watch ได้รับการปรับปรุงสำหรับ Watch OS3</span><span class="sxs-lookup"><span data-stu-id="ca76f-634">**Apple Watch refresh improvements** The Apple Watch mobile app has been improved for Watch OS3</span></span>
+#### <a name="ios-on-iphones"></a>iOS บน Iphone
+**การปรับปรุงการรีเฟรชของ Apple Watch** Apple Watch ได้รับการปรับปรุงสำหรับ Watch OS3
 
-#### <a name="android-phones"></a><span data-ttu-id="ca76f-635">โทรศัพท์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-635">Android phones</span></span>
-<span data-ttu-id="ca76f-636">**รีเฟรชไทล์ที่ถูกเพิ่มด้วยตนเอง** ตอนนี้คุณสามารถรีเฟรชไทล์ของแดชบอร์ดของคุณได้ด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="ca76f-636">**Added manual tile refresh** You can now manually refresh your dashboard tiles.</span></span> <span data-ttu-id="ca76f-637">สำหรับไทล์ที่ยึดตาม DirectQuery นี้จะรับข้อมูลล่าสุดจากชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="ca76f-637">For tiles based on DirectQuery, this will retrieve the latest data from the dataset.</span></span>
+#### <a name="android-phones"></a>โทรศัพท์ Android
+**รีเฟรชไทล์ที่ถูกเพิ่มด้วยตนเอง** ตอนนี้คุณสามารถรีเฟรชไทล์ของแดชบอร์ดของคุณได้ด้วยตนเอง สำหรับไทล์ที่ยึดตาม DirectQuery นี้จะรับข้อมูลล่าสุดจากชุดข้อมูล
 
-#### <a name="windows-10-phones"></a><span data-ttu-id="ca76f-638">มือถือ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-638">Windows 10 phones</span></span>
-<span data-ttu-id="ca76f-639">**การกรองทางภูมิศาสตร์** บนโทรศัพท์ Windows 10 ของคุณ คุณสามารถกรองรายงานโดยยึดตามตำแหน่งที่ตั้งปัจจุบันของคุณ และดูเฉพาะข้อมูลคุณต้องการ</span><span class="sxs-lookup"><span data-stu-id="ca76f-639">**Geographic filtering** On your Windows 10 phone you can now filter your report based on your current location, and see only the data you need.</span></span>
+#### <a name="windows-10-phones"></a>มือถือ Windows 10
+**การกรองทางภูมิศาสตร์** บนโทรศัพท์ Windows 10 ของคุณ คุณสามารถกรองรายงานโดยยึดตามตำแหน่งที่ตั้งปัจจุบันของคุณ และดูเฉพาะข้อมูลคุณต้องการ
 
-<span data-ttu-id="ca76f-640">**แสดงภาพ sandDance** แสดงภาพแบบกำหนดเองนี้ใช้งานได้บน Surface Hub</span><span class="sxs-lookup"><span data-stu-id="ca76f-640">**SandDance visualization** This custom visualization is now available on the Surface Hub</span></span>
+**แสดงภาพ sandDance** แสดงภาพแบบกำหนดเองนี้ใช้งานได้บน Surface Hub
 
-### <a name="august-2016"></a><span data-ttu-id="ca76f-641">สิงหาคม 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-641">August 2016</span></span>
-#### <a name="all-phones"></a><span data-ttu-id="ca76f-642">โทรศัพท์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-642">All phones</span></span>
-<span data-ttu-id="ca76f-643">**รายการโปรด** ดูแดชบอร์ดโปรดของคุณจากแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI ทั้งหมด และจัดการรายการโปรดจากแอป Power BI สำหรับอุปกรณ์เคลื่อนสำหรับ iOS และอุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-643">**Favorites** View your favorite dashboards from all Power BI mobile apps, and manage the list of favorites from the Power BI mobile apps for iOS and Windows 10 devices.</span></span> <span data-ttu-id="ca76f-644">อ่านเพิ่มเติมเกี่ยวกับ[รายการโปรดในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่](mobile-apps-favorites.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-644">Read more about [favorites in the Power BI mobile apps](mobile-apps-favorites.md).</span></span>
+### <a name="august-2016"></a>สิงหาคม 2016
+#### <a name="all-phones"></a>โทรศัพท์ทั้งหมด
+**รายการโปรด** ดูแดชบอร์ดโปรดของคุณจากแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI ทั้งหมด และจัดการรายการโปรดจากแอป Power BI สำหรับอุปกรณ์เคลื่อนสำหรับ iOS และอุปกรณ์ Windows 10 อ่านเพิ่มเติมเกี่ยวกับ[รายการโปรดในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่](mobile-apps-favorites.md)
 
-<span data-ttu-id="ca76f-645">**การจัดประเภทข้อมูลแดชบอร์ด** ดูการจัดประเภทข้อมูล ว่าเจ้าของแดชบอร์ดถูกกำหนดแดชบอร์ดของพวกเขา</span><span class="sxs-lookup"><span data-stu-id="ca76f-645">**Dashboard data classification** See the data classifications that dashboard owners have assigned their dashboards.</span></span> <span data-ttu-id="ca76f-646">อ่านเพิ่มเติมเกี่ยวกับ[การจัดประเภทแดชบอร์ด](../../create-reports/service-data-classification.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-646">Read more about [classifying dashboards](../../create-reports/service-data-classification.md).</span></span>
+**การจัดประเภทข้อมูลแดชบอร์ด** ดูการจัดประเภทข้อมูล ว่าเจ้าของแดชบอร์ดถูกกำหนดแดชบอร์ดของพวกเขา อ่านเพิ่มเติมเกี่ยวกับ[การจัดประเภทแดชบอร์ด](../../create-reports/service-data-classification.md)
 
-<span data-ttu-id="ca76f-647">**แจ้งเตือนตามข้อมูล** ได้รับแจ้ง ด้วยข้อความแจ้งเตือนเมื่อเปลี่ยนแปลงข้อมูล ด้วยวิธีที่กำหนดไว้ล่วงหน้าสำหรับ KPI ตัววัด และการ์ดไทล์</span><span class="sxs-lookup"><span data-stu-id="ca76f-647">**Data-driven alerts** Get notified by an alert when your data changes in pre-set ways for KPI, gauge, and card tiles.</span></span> <span data-ttu-id="ca76f-648">เรียนรู้เพิ่มเติมเกี่ยวกับ</span><span class="sxs-lookup"><span data-stu-id="ca76f-648">Learn more about:</span></span>
+**แจ้งเตือนตามข้อมูล** ได้รับแจ้ง ด้วยข้อความแจ้งเตือนเมื่อเปลี่ยนแปลงข้อมูล ด้วยวิธีที่กำหนดไว้ล่วงหน้าสำหรับ KPI ตัววัด และการ์ดไทล์ เรียนรู้เพิ่มเติมเกี่ยวกับ
 
-* <span data-ttu-id="ca76f-649">[การแจ้งเตือนบนแอป Power BI สำหรับโทรศัพท์ Android](mobile-set-data-alerts-in-the-mobile-apps.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-649">[Alerts on the Power BI app for Android phones](mobile-set-data-alerts-in-the-mobile-apps.md).</span></span> 
-* <span data-ttu-id="ca76f-650">[การแจ้งเตือนบนแอป Power BI สำหรับ iOS](mobile-set-data-alerts-in-the-mobile-apps.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-650">[Alerts on the Power BI apps for iOS](mobile-set-data-alerts-in-the-mobile-apps.md).</span></span> 
-* <span data-ttu-id="ca76f-651">[การแจ้งเตือนบนแอป Power BI สำหรับอุปกรณ์ Windows 10](mobile-set-data-alerts-in-the-mobile-apps.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-651">[Alerts on the Power BI app for Windows 10 devices](mobile-set-data-alerts-in-the-mobile-apps.md).</span></span>
+* [การแจ้งเตือนบนแอป Power BI สำหรับโทรศัพท์ Android](mobile-set-data-alerts-in-the-mobile-apps.md) 
+* [การแจ้งเตือนบนแอป Power BI สำหรับ iOS](mobile-set-data-alerts-in-the-mobile-apps.md) 
+* [การแจ้งเตือนบนแอป Power BI สำหรับอุปกรณ์ Windows 10](mobile-set-data-alerts-in-the-mobile-apps.md)
 
-#### <a name="ios-on-iphones-and-ipads"></a><span data-ttu-id="ca76f-652">iOS บน Iphone และ Ipad</span><span class="sxs-lookup"><span data-stu-id="ca76f-652">iOS on iPhones and iPads</span></span>
-<span data-ttu-id="ca76f-653">**ไทล์เต็มหน้าจอในโหมดโฟกัสบน iPad** เมื่อคุณแตะไทล์บน iPad ของคุณ ไทล์จะเปิดแบบเต็มหน้าจอในตอนนี้ในโหมดโฟกัส การใช้ประโยชน์จากขนาดหน้าจอ iPad ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-653">**Tiles full-screen in focus mode on iPad** When you tap a tile on your iPad, the tile will now open full-screen in focus mode, taking advantage of the entire iPad screen size.</span></span>
+#### <a name="ios-on-iphones-and-ipads"></a>iOS บน Iphone และ Ipad
+**ไทล์เต็มหน้าจอในโหมดโฟกัสบน iPad** เมื่อคุณแตะไทล์บน iPad ของคุณ ไทล์จะเปิดแบบเต็มหน้าจอในตอนนี้ในโหมดโฟกัส การใช้ประโยชน์จากขนาดหน้าจอ iPad ทั้งหมด
 
-<span data-ttu-id="ca76f-654">**รีเฟรชไทล์ด้วยตนเอง** รีเฟรชไทล์ของคุณด้วยตนเอง โดยเปิดแดชบอร์ดในแอป Power BI สำหรับอุปกรณ์ iOS และดึงลงจากด้านบนของหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="ca76f-654">**Manually refresh tiles** Manually refresh your tiles by opening the dashboard in the Power BI mobile app for iOS and pulling down from the top of the screen.</span></span> 
+**รีเฟรชไทล์ด้วยตนเอง** รีเฟรชไทล์ของคุณด้วยตนเอง โดยเปิดแดชบอร์ดในแอป Power BI สำหรับอุปกรณ์ iOS และดึงลงจากด้านบนของหน้าจอ 
 
-<span data-ttu-id="ca76f-655">**รองรับ Intune MAM** เพิ่มการรองรับความสามารถสำหรับ Microsoft Intune mobile application management (MAM)</span><span class="sxs-lookup"><span data-stu-id="ca76f-655">**Support for Intune MAM** Added support for Microsoft Intune mobile application management (MAM) capabilities.</span></span>
+**รองรับ Intune MAM** เพิ่มการรองรับความสามารถสำหรับ Microsoft Intune mobile application management (MAM)
 
-<span data-ttu-id="ca76f-656">อ่านเพิ่มเติมเกี่ยวกับ[Microsoft Intune บนแอปสำหรับอุปกรณ์เคลื่อนของ Power BI](../../admin/service-admin-mobile-intune.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-656">Read more about [Microsoft Intune on Power BI mobile apps](../../admin/service-admin-mobile-intune.md).</span></span>
+อ่านเพิ่มเติมเกี่ยวกับ[Microsoft Intune บนแอปสำหรับอุปกรณ์เคลื่อนของ Power BI](../../admin/service-admin-mobile-intune.md)
 
-#### <a name="windows-10-devices"></a><span data-ttu-id="ca76f-657">อุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-657">Windows 10 devices</span></span>
-<span data-ttu-id="ca76f-658">**โหมดเต็มหน้าจอและโหมดการนำเสนอ** แสดงรายงานในโหมดการนำเสนอบน Surface Hub และแสดงแดชบอร์ด รายงาน และไทล์ในโหมดเต็มหน้าจอบนอุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-658">**Full-screen and presentation modes** Display reports in presentation mode on Surface Hub, and display dashboards, reports, and tiles in full-screen mode on Windows 10 devices.</span></span>
+#### <a name="windows-10-devices"></a>อุปกรณ์ Windows 10
+**โหมดเต็มหน้าจอและโหมดการนำเสนอ** แสดงรายงานในโหมดการนำเสนอบน Surface Hub และแสดงแดชบอร์ด รายงาน และไทล์ในโหมดเต็มหน้าจอบนอุปกรณ์ Windows 10
 
-### <a name="july-2016"></a><span data-ttu-id="ca76f-659">กรกฎาคม 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-659">July 2016</span></span>
-#### <a name="all-phones"></a><span data-ttu-id="ca76f-660">โทรศัพท์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-660">All phones</span></span>
-<span data-ttu-id="ca76f-661">ในบริการ Power BI ขณะนี้คุณสามารถ[สร้างมุมมองของแดชบอร์ดโดยเฉพาะสำหรับโทรศัพท์](../../create-reports/service-create-dashboard-mobile-phone-view.md) ในโหมดแนวตั้งได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-661">In the Power BI service you can now [create a view of a dashboard specifically for phones](../../create-reports/service-create-dashboard-mobile-phone-view.md) in portrait mode.</span></span> 
+### <a name="july-2016"></a>กรกฎาคม 2016
+#### <a name="all-phones"></a>โทรศัพท์ทั้งหมด
+ในบริการ Power BI ขณะนี้คุณสามารถ[สร้างมุมมองของแดชบอร์ดโดยเฉพาะสำหรับโทรศัพท์](../../create-reports/service-create-dashboard-mobile-phone-view.md) ในโหมดแนวตั้งได้ 
 
-#### <a name="android-phones"></a><span data-ttu-id="ca76f-662">โทรศัพท์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-662">Android phones</span></span>
-<span data-ttu-id="ca76f-663">**แท็บรายการโปรด** เข้าถึงแดชบอร์ดโปรดของคุณทั้งหมดจากตำแหน่งที่ตั้งเดียว</span><span class="sxs-lookup"><span data-stu-id="ca76f-663">**Favorites tab** Access all your favorite dashboards from a single location.</span></span>
+#### <a name="android-phones"></a>โทรศัพท์ Android
+**แท็บรายการโปรด** เข้าถึงแดชบอร์ดโปรดของคุณทั้งหมดจากตำแหน่งที่ตั้งเดียว
 
-<span data-ttu-id="ca76f-664">**การจัดการความปลอดภัยที่ถูกปรับปรุง** เลือกการจัดประเภทความเสี่ยงสำหรับข้อมูลทางธุรกิจที่แสดงอยู่ในแดชบอร์ดอันใดอันหนึ่ง</span><span class="sxs-lookup"><span data-stu-id="ca76f-664">**Improved security management** Select a risk classification for the business data presented in a specific dashboard.</span></span>
+**การจัดการความปลอดภัยที่ถูกปรับปรุง** เลือกการจัดประเภทความเสี่ยงสำหรับข้อมูลทางธุรกิจที่แสดงอยู่ในแดชบอร์ดอันใดอันหนึ่ง
 
-<span data-ttu-id="ca76f-665">**คำเตือนและแบนเนอร์ที่ถูกปรับปรุง** เราได้ปรับปรุงคำเตือนและแบนเนอร์สำหรับแอปมือถือ</span><span class="sxs-lookup"><span data-stu-id="ca76f-665">**Improved warning and banners** We've improved warnings and banners for the mobile app.</span></span>
+**คำเตือนและแบนเนอร์ที่ถูกปรับปรุง** เราได้ปรับปรุงคำเตือนและแบนเนอร์สำหรับแอปมือถือ
 
-<span data-ttu-id="ca76f-666">**รหัส QR สำหรับหน้ารายงาน** รหัส A QR ที่สร้างขึ้นใน service จะเชื่อมโยงไปยังหน้าใดหน้าหนึ่งแทนที่จะเป็นรายงานทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-666">**QR codes for report pages** A QR code generated in the service will link to a specific page rather than the entire report.</span></span>
+**รหัส QR สำหรับหน้ารายงาน** รหัส A QR ที่สร้างขึ้นใน service จะเชื่อมโยงไปยังหน้าใดหน้าหนึ่งแทนที่จะเป็นรายงานทั้งหมด
 
-<span data-ttu-id="ca76f-667">**การแจ้งเตือนที่ถูกปรับปรุง** แจ้งเตือนตามข้อมูลถูกจัดรูปแบบตามตำแหน่งที่ตั้งของอุปกรณ์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-667">**Improved alerts** Data-driven alerts are now formatted based on your device's locale.</span></span>
+**การแจ้งเตือนที่ถูกปรับปรุง** แจ้งเตือนตามข้อมูลถูกจัดรูปแบบตามตำแหน่งที่ตั้งของอุปกรณ์ของคุณ
 
-#### <a name="ios-on-iphones-and-ipads"></a><span data-ttu-id="ca76f-668">iOS บน Iphone และ Ipad</span><span class="sxs-lookup"><span data-stu-id="ca76f-668">iOS on iPhones and iPads</span></span>
-<span data-ttu-id="ca76f-669">**การจัดการความปลอดภัยที่ถูกปรับปรุง** เลือกการจัดประเภทความเสี่ยงสำหรับข้อมูลทางธุรกิจที่แสดงอยู่ในแดชบอร์ดอันใดอันหนึ่ง</span><span class="sxs-lookup"><span data-stu-id="ca76f-669">**Improved security management** Select a risk classification for the business data presented in a specific dashboard.</span></span>
+#### <a name="ios-on-iphones-and-ipads"></a>iOS บน Iphone และ Ipad
+**การจัดการความปลอดภัยที่ถูกปรับปรุง** เลือกการจัดประเภทความเสี่ยงสำหรับข้อมูลทางธุรกิจที่แสดงอยู่ในแดชบอร์ดอันใดอันหนึ่ง
 
-<span data-ttu-id="ca76f-670">**Mobile insights** มุมมองสรุปข้อมูล (max, min และทั้งหมด) บนแผนภูมิคอลัมน์แผนภูมิไทล์</span><span class="sxs-lookup"><span data-stu-id="ca76f-670">**Mobile insights** View summary data (max, min, and all) on clustered column chart tiles.</span></span>
+**Mobile insights** มุมมองสรุปข้อมูล (max, min และทั้งหมด) บนแผนภูมิคอลัมน์แผนภูมิไทล์
 
-<span data-ttu-id="ca76f-671">**การรีเฟรชด้วยตนเองที่ถูกปรับปรุง** ขณะนี้คุณสามารีเฟรชไทล์แดชบอร์ดของคุณได้ด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="ca76f-671">**Improved manual refresh** You can now manually refresh your dashboard tiles.</span></span> <span data-ttu-id="ca76f-672">สำหรับไทล์ที่ยึดตามคิวรีโดยตรง สิ่งนี้รับข้อมูลล่าสุดจากแบบจำลองข้อมูล</span><span class="sxs-lookup"><span data-stu-id="ca76f-672">For tiles based on Direct Query, this retrieves the latest data from the data model.</span></span>
+**การรีเฟรชด้วยตนเองที่ถูกปรับปรุง** ขณะนี้คุณสามารีเฟรชไทล์แดชบอร์ดของคุณได้ด้วยตนเอง สำหรับไทล์ที่ยึดตามคิวรีโดยตรง สิ่งนี้รับข้อมูลล่าสุดจากแบบจำลองข้อมูล
 
-<span data-ttu-id="ca76f-673">**คำเตือนและแบนเนอร์ที่ถูกปรับปรุง** เราได้ปรับปรุงคำเตือนและแบนเนอร์สำหรับแอปมือถือ</span><span class="sxs-lookup"><span data-stu-id="ca76f-673">**Improved warning and banners** We've improved warnings and banners for the mobile app.</span></span>
+**คำเตือนและแบนเนอร์ที่ถูกปรับปรุง** เราได้ปรับปรุงคำเตือนและแบนเนอร์สำหรับแอปมือถือ
 
-<span data-ttu-id="ca76f-674">**รหัส QR สำหรับหน้ารายงาน** รหัส A QR ที่สร้างขึ้นใน service จะเชื่อมโยงไปยังหน้าใดหน้าหนึ่งแทนที่จะเป็นรายงานทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-674">**QR codes for report pages** A QR code generated in the service will link to a specific page rather than the entire report.</span></span>
+**รหัส QR สำหรับหน้ารายงาน** รหัส A QR ที่สร้างขึ้นใน service จะเชื่อมโยงไปยังหน้าใดหน้าหนึ่งแทนที่จะเป็นรายงานทั้งหมด
 
-<span data-ttu-id="ca76f-675">**การปรับปรุงทั่วไป** เราได้ปรับปรุงข้อความข้อผิดพลาดสำหรับไทล์ในแอปมือถือ</span><span class="sxs-lookup"><span data-stu-id="ca76f-675">**General improvements** We've improved error messages for tiles in the mobile app.</span></span>
+**การปรับปรุงทั่วไป** เราได้ปรับปรุงข้อความข้อผิดพลาดสำหรับไทล์ในแอปมือถือ
 
-#### <a name="windows-10-devices"></a><span data-ttu-id="ca76f-676">อุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-676">Windows 10 devices</span></span>
-<span data-ttu-id="ca76f-677">**การจัดการความปลอดภัยที่ถูกปรับปรุง** เลือกการจัดประเภทความเสี่ยงสำหรับข้อมูลทางธุรกิจที่แสดงอยู่ในแดชบอร์ดอันใดอันหนึ่ง</span><span class="sxs-lookup"><span data-stu-id="ca76f-677">**Improved security management** Select a risk classification for the business data presented in a specific dashboard.</span></span>
+#### <a name="windows-10-devices"></a>อุปกรณ์ Windows 10
+**การจัดการความปลอดภัยที่ถูกปรับปรุง** เลือกการจัดประเภทความเสี่ยงสำหรับข้อมูลทางธุรกิจที่แสดงอยู่ในแดชบอร์ดอันใดอันหนึ่ง
 
-<span data-ttu-id="ca76f-678">**คำเตือนและแบนเนอร์ที่ถูกปรับปรุง** เราได้ปรับปรุงคำเตือนและแบนเนอร์สำหรับแอปมือถือ</span><span class="sxs-lookup"><span data-stu-id="ca76f-678">**Improved warning and banners** We've improved warnings and banners for the mobile app.</span></span>
+**คำเตือนและแบนเนอร์ที่ถูกปรับปรุง** เราได้ปรับปรุงคำเตือนและแบนเนอร์สำหรับแอปมือถือ
 
-### <a name="june-2016"></a><span data-ttu-id="ca76f-679">มิถุนายน 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-679">June 2016</span></span>
-<span data-ttu-id="ca76f-680">ดู[โพสต์ในบล็อกแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI เดือนมิถุนายน](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-june-2016/)สำหรับรายละเอียดเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ca76f-680">See the [June Power BI mobile apps blog post](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-june-2016/) for more details.</span></span>
+### <a name="june-2016"></a>มิถุนายน 2016
+ดู[โพสต์ในบล็อกแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI เดือนมิถุนายน](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-june-2016/)สำหรับรายละเอียดเพิ่มเติม
 
-#### <a name="qr-codes-now-display-in-augmented-reality-ios"></a><span data-ttu-id="ca76f-681">รหัส QR ในขณะนี้แสดงความจริงแบบเสริม (iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-681">QR codes now display in augmented reality (iOS)</span></span>
-<span data-ttu-id="ca76f-682">ตอนนี เมื่อคุณสแกนคิวอาร์โค้ดที่สร้างขึ้นโดย Power BI service ไทล์แสดงในความเป็นจริงเสริม</span><span class="sxs-lookup"><span data-stu-id="ca76f-682">Now when you scan a QR code generated by the Power BI service, the tile renders in augmented reality.</span></span> 
+#### <a name="qr-codes-now-display-in-augmented-reality-ios"></a>รหัส QR ในขณะนี้แสดงความจริงแบบเสริม (iOS)
+ตอนนี เมื่อคุณสแกนคิวอาร์โค้ดที่สร้างขึ้นโดย Power BI service ไทล์แสดงในความเป็นจริงเสริม 
 
-<span data-ttu-id="ca76f-683">อ่านเพิ่มเติมเกี่ยวกับ[การเชื่อมต่อกับข้อมูลในโลกแห่งความจริง](mobile-apps-data-in-real-world-context.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-683">More about [connecting to data in the real world](mobile-apps-data-in-real-world-context.md).</span></span>
+อ่านเพิ่มเติมเกี่ยวกับ[การเชื่อมต่อกับข้อมูลในโลกแห่งความจริง](mobile-apps-data-in-real-world-context.md)
 
-#### <a name="filter-data-with-barcodes-iphone"></a><span data-ttu-id="ca76f-684">กรองข้อมูล ด้วยบาร์โค้ด (iPhone)</span><span class="sxs-lookup"><span data-stu-id="ca76f-684">Filter data with barcodes (iPhone)</span></span>
-<span data-ttu-id="ca76f-685">ตอนนี้คุณสามารถสแกนบาร์โค้ดที่ถูกพิมพ์บนผลิตภัณฑ์หรือชั้นที่ร้านค้าของคุณ เพื่อแสดงรายงาน Power BI ที่เกี่ยวข้องซึ่งกรองตามค่าที่สแกน</span><span class="sxs-lookup"><span data-stu-id="ca76f-685">Now you can scan barcodes printed on products or shelves at your store to display related Power BI reports filtered by the scanned value.</span></span> 
+#### <a name="filter-data-with-barcodes-iphone"></a>กรองข้อมูล ด้วยบาร์โค้ด (iPhone)
+ตอนนี้คุณสามารถสแกนบาร์โค้ดที่ถูกพิมพ์บนผลิตภัณฑ์หรือชั้นที่ร้านค้าของคุณ เพื่อแสดงรายงาน Power BI ที่เกี่ยวข้องซึ่งกรองตามค่าที่สแกน 
 
-<span data-ttu-id="ca76f-686">อ่านเพิ่มเติมเกี่ยวกับ[กรองข้อมูลของคุณด้วยบาร์โค้ด](mobile-apps-scan-barcode-iphone.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-686">More about [filtering your data with barcodes](mobile-apps-scan-barcode-iphone.md).</span></span>
+อ่านเพิ่มเติมเกี่ยวกับ[กรองข้อมูลของคุณด้วยบาร์โค้ด](mobile-apps-scan-barcode-iphone.md)
 
-#### <a name="sql-server-2016-reporting-services-mobile-reports"></a><span data-ttu-id="ca76f-687">รายงานมือถือของ SQL Server 2016 Reporting Services</span><span class="sxs-lookup"><span data-stu-id="ca76f-687">SQL Server 2016 Reporting Services mobile reports</span></span>
-<span data-ttu-id="ca76f-688">ขณะนี้คุณสามารถไล่ดูจาก Reporting Services KPI หรือรายงานมือถือ ไปถึงรายงานมือถืออื่นหรือ URL ที่กำหนดเองได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-688">Now you can drill through from a Reporting Services KPI or a mobile report to another mobile report or to any custom URL.</span></span>
+#### <a name="sql-server-2016-reporting-services-mobile-reports"></a>รายงานมือถือของ SQL Server 2016 Reporting Services
+ขณะนี้คุณสามารถไล่ดูจาก Reporting Services KPI หรือรายงานมือถือ ไปถึงรายงานมือถืออื่นหรือ URL ที่กำหนดเองได้
 
-#### <a name="notification-center"></a><span data-ttu-id="ca76f-689">ศูนย์การแจ้งเตือน</span><span class="sxs-lookup"><span data-stu-id="ca76f-689">Notification center</span></span>
-<span data-ttu-id="ca76f-690">ศูนย์การแจ้งเตือนในแอปสำหรับอุปกรณ์เคลื่อนของ Power BI ของคุณแสดงข้อมูลใหม่หรือแดชบอร์ดที่แชร์กับคุณ หรือการเปลี่ยนแปลงไปยังกลุ่มที่คุณเป็นเจ้าสมาชิก</span><span class="sxs-lookup"><span data-stu-id="ca76f-690">The notification center in your Power BI mobile app shows new data or dashboards that are shared with you, or changes to groups you belong to.</span></span>
+#### <a name="notification-center"></a>ศูนย์การแจ้งเตือน
+ศูนย์การแจ้งเตือนในแอปสำหรับอุปกรณ์เคลื่อนของ Power BI ของคุณแสดงข้อมูลใหม่หรือแดชบอร์ดที่แชร์กับคุณ หรือการเปลี่ยนแปลงไปยังกลุ่มที่คุณเป็นเจ้าสมาชิก
 
-### <a name="may-2016"></a><span data-ttu-id="ca76f-691">พฤษภาคม 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-691">May 2016</span></span>
-#### <a name="ios-devices-and-android-phones"></a><span data-ttu-id="ca76f-692">อุปกรณ์ iOS และโทรศัพท์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-692">iOS devices and Android phones</span></span>
-* <span data-ttu-id="ca76f-693">**รหัส QR** พร้อมใช้งาน **สำหรับรายงาน** เช่นกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-693">**QR codes** are now available **for reports**, too.</span></span> <span data-ttu-id="ca76f-694">สแกนรหัส ด้วยแอป Power BI ของคุณโดยตรงไปยังรายงานที่เกี่ยวข้อง การนำทางหรือการค้นหาไม่จำเป็น</span><span class="sxs-lookup"><span data-stu-id="ca76f-694">Scan the code with your Power BI app to go directly to a related report, with no navigation or search needed.</span></span>
-* <span data-ttu-id="ca76f-695">**ปรับปรุงการจัดการข้อมูล** สำหรับ SQL Server 2016 Reporting Services: ลดเวลาในการโหลดและปริมาณการใช้ข้อมูลบนอุปกรณ์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-695">**Improved data management** for SQL Server 2016 Reporting Services: Reduced load times and data consumption on your device.</span></span>
-* <span data-ttu-id="ca76f-696">**รายงานชุดอุปกรณ์มือถือรูปแบบ SQL Server 2016**: ดูธีมสำหรับรายงานอุปกรณ์มือถือบนอุปกรณ์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-696">**SQL Server 2016 themed mobile reports**: See themes for mobile reports on your device.</span></span>
-* <span data-ttu-id="ca76f-697">**การกรองทางภูมิศาสตร์:** : ตัวกรองรายงานอ้างอิงจากข้อมูลที่อยู่ล่าสุดของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-697">**Geo-filtering**: Filter reports by your current location.</span></span>
+### <a name="may-2016"></a>พฤษภาคม 2016
+#### <a name="ios-devices-and-android-phones"></a>อุปกรณ์ iOS และโทรศัพท์ Android
+* **รหัส QR** พร้อมใช้งาน **สำหรับรายงาน** เช่นกัน สแกนรหัส ด้วยแอป Power BI ของคุณโดยตรงไปยังรายงานที่เกี่ยวข้อง การนำทางหรือการค้นหาไม่จำเป็น
+* **ปรับปรุงการจัดการข้อมูล** สำหรับ SQL Server 2016 Reporting Services: ลดเวลาในการโหลดและปริมาณการใช้ข้อมูลบนอุปกรณ์ของคุณ
+* **รายงานชุดอุปกรณ์มือถือรูปแบบ SQL Server 2016**: ดูธีมสำหรับรายงานอุปกรณ์มือถือบนอุปกรณ์ของคุณ
+* **การกรองทางภูมิศาสตร์:** : ตัวกรองรายงานอ้างอิงจากข้อมูลที่อยู่ล่าสุดของคุณ
 
-### <a name="april-2016"></a><span data-ttu-id="ca76f-698">เมษายน 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-698">April 2016</span></span>
-<span data-ttu-id="ca76f-699">ดู[บล็อกแอปมือถือ Power BI เดือนเมษายน](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-april-2016/)สำหรับรายละเอียดเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ca76f-699">See the [April Power BI Mobile Apps blog](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-april-2016/) for more details.</span></span>
+### <a name="april-2016"></a>เมษายน 2016
+ดู[บล็อกแอปมือถือ Power BI เดือนเมษายน](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-april-2016/)สำหรับรายละเอียดเพิ่มเติม
 
-#### <a name="all-apps"></a><span data-ttu-id="ca76f-700">แอปทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-700">All apps</span></span>
-* <span data-ttu-id="ca76f-701">เลือกตัวเลือกมากกว่าหนึ่งรายการในตัวแบ่งส่วนข้อมูลรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-701">Select more than one option in a report slicer.</span></span>
+#### <a name="all-apps"></a>แอปทั้งหมด
+* เลือกตัวเลือกมากกว่าหนึ่งรายการในตัวแบ่งส่วนข้อมูลรายงาน
 
-#### <a name="android-mobile-app"></a><span data-ttu-id="ca76f-702">แอปสำหรับอุปกรณ์เคลื่อนที่ android</span><span class="sxs-lookup"><span data-stu-id="ca76f-702">Android mobile app</span></span>
-* <span data-ttu-id="ca76f-703">**SQL Server 2016 [Reporting Services mobile report](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)** ตอนนี้บนโทรศัพท์ Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-703">**SQL Server 2016 [Reporting Services mobile reports](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)** now on Android phones.</span></span>
-* <span data-ttu-id="ca76f-704">**แกลเลอรีรายงาน** เปิดรายงานของคุณโดยตรงในแกลเลอรีรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-704">**Report gallery** Open your reports directly in the report gallery.</span></span>
-* <span data-ttu-id="ca76f-705">**การรับรองตัวตนแบบ NTLM** รองรับรายงานมือถือใน SQL Server 2016 Reporting Services</span><span class="sxs-lookup"><span data-stu-id="ca76f-705">**NTLM authentication** support for mobile reports in SQL Server 2016 Reporting Services.</span></span>
+#### <a name="android-mobile-app"></a>แอปสำหรับอุปกรณ์เคลื่อนที่ android
+* **SQL Server 2016 [Reporting Services mobile report](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)** ตอนนี้บนโทรศัพท์ Android
+* **แกลเลอรีรายงาน** เปิดรายงานของคุณโดยตรงในแกลเลอรีรายงาน
+* **การรับรองตัวตนแบบ NTLM** รองรับรายงานมือถือใน SQL Server 2016 Reporting Services
 
-#### <a name="power-bi-app-for-windows-10-devices"></a><span data-ttu-id="ca76f-706">แอป Power BI สำหรับอุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-706">Power BI app for Windows 10 devices</span></span>
-* <span data-ttu-id="ca76f-707">**โหมดการนำเสนอ** แสดงแดชบอร์ด Power BI และรายงานในโหมดการนำเสนอจากแอป Power BI</span><span class="sxs-lookup"><span data-stu-id="ca76f-707">**Presentation mode** Display Power BI dashboards and reports in presentation mode from the Power BI app.</span></span>
-* <span data-ttu-id="ca76f-708">**SQL Server 2016 [Reporting Services mobile reports](mobile-app-windows-10-ssrs-kpis-mobile-reports.md)** ขณะนี้บนอุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-708">**SQL Server 2016 [Reporting Services mobile reports](mobile-app-windows-10-ssrs-kpis-mobile-reports.md)** now on Windows 10 devices.</span></span>
-* <span data-ttu-id="ca76f-709">ดู **เกล็ดเครื่องมือข้อมูล** เมื่อวางเคอร์เซอร์ของคุณเหนือแดชบอร์ดไทล์</span><span class="sxs-lookup"><span data-stu-id="ca76f-709">See **data tooltips** when you hover your mouse over a dashboard tile.</span></span>
+#### <a name="power-bi-app-for-windows-10-devices"></a>แอป Power BI สำหรับอุปกรณ์ Windows 10
+* **โหมดการนำเสนอ** แสดงแดชบอร์ด Power BI และรายงานในโหมดการนำเสนอจากแอป Power BI
+* **SQL Server 2016 [Reporting Services mobile reports](mobile-app-windows-10-ssrs-kpis-mobile-reports.md)** ขณะนี้บนอุปกรณ์ Windows 10
+* ดู **เกล็ดเครื่องมือข้อมูล** เมื่อวางเคอร์เซอร์ของคุณเหนือแดชบอร์ดไทล์
 
-### <a name="march-2016"></a><span data-ttu-id="ca76f-710">มีนาคม 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-710">March 2016</span></span>
-<span data-ttu-id="ca76f-711">อ่าน[บล็อก Power BI Mobile Apps สำหรับเดือนมีนาคม 2016 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-march-2016/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-711">Read the [Power BI Mobile Apps blog for March 2016](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-march-2016/).</span></span>
+### <a name="march-2016"></a>มีนาคม 2016
+อ่าน[บล็อก Power BI Mobile Apps สำหรับเดือนมีนาคม 2016 ](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-march-2016/)
 
-#### <a name="iphone-mobile-app"></a><span data-ttu-id="ca76f-712">แอปสำหรับมือถือ iPhone</span><span class="sxs-lookup"><span data-stu-id="ca76f-712">iPhone mobile app</span></span>
-<span data-ttu-id="ca76f-713">**Apple Watch** ดูไทล์ Power BI ของคุณและ KPI บน [Apple Watch](mobile-apple-watch.md) ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-713">**Apple Watch** View your Power BI tiles and KPIs on your [Apple Watch](mobile-apple-watch.md).</span></span>
+#### <a name="iphone-mobile-app"></a>แอปสำหรับมือถือ iPhone
+**Apple Watch** ดูไทล์ Power BI ของคุณและ KPI บน [Apple Watch](mobile-apple-watch.md) ของคุณ
 
-<span data-ttu-id="ca76f-714">**iOS 9.0 และใหม่กว่า** เพื่อรองรับประสบการณ์การใช้งานที่ดีที่สุดเป็นไปได้และฟิวเจอร์ใหม่สำหรับ Power BI ตอนนี้เราสนับสนุนเฉพาะอุปกรณ์ที่ใช้ iOS 9.0 และใหม่กว่า</span><span class="sxs-lookup"><span data-stu-id="ca76f-714">**iOS 9.0 and later** To accommodate the best possible experience and new features for Power BI, we are now supporting only devices running iOS 9.0 and later.</span></span>
+**iOS 9.0 และใหม่กว่า** เพื่อรองรับประสบการณ์การใช้งานที่ดีที่สุดเป็นไปได้และฟิวเจอร์ใหม่สำหรับ Power BI ตอนนี้เราสนับสนุนเฉพาะอุปกรณ์ที่ใช้ iOS 9.0 และใหม่กว่า
 
-<span data-ttu-id="ca76f-715">**ค้นหาทั้งหมด** เพิ่มรายการใหม่ "ดูล่าสุด" และการค้นหาเพื่อให้คุณสามารถค้นหาข้อมูลคุณต้องการได้อย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-715">**Global search** Added a new "recently viewed" list and global search so you can find the data you need quickly.</span></span>
+**ค้นหาทั้งหมด** เพิ่มรายการใหม่ "ดูล่าสุด" และการค้นหาเพื่อให้คุณสามารถค้นหาข้อมูลคุณต้องการได้อย่างรวดเร็ว
 
-<span data-ttu-id="ca76f-716">**แกลเลอรีรายงาน** เปิดรายงานของคุณโดยตรงในแกลเลอรีรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-716">**Report gallery** Open your reports directly in the report gallery.</span></span>
+**แกลเลอรีรายงาน** เปิดรายงานของคุณโดยตรงในแกลเลอรีรายงาน
 
-<span data-ttu-id="ca76f-717">**ข้อมูลใหม่ออฟไลน์** การรีเฟรชเบื้องหลังใหมได้อัปเดตข้อมูลแคชของคุณโดยอัตโนมัติ เมื่อคุณกำลังออนไลน์ เพื่อให้คุณมีข้อมูลล่าสุด [แม้แต่เมื่อคุณกำลังออฟไลน์](mobile-apps-offline-data.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-717">**Fresh data offline** New background refresh automatically updates your cached data when you're online, so you have the freshest data [even when you're offline](mobile-apps-offline-data.md).</span></span> 
+**ข้อมูลใหม่ออฟไลน์** การรีเฟรชเบื้องหลังใหมได้อัปเดตข้อมูลแคชของคุณโดยอัตโนมัติ เมื่อคุณกำลังออนไลน์ เพื่อให้คุณมีข้อมูลล่าสุด [แม้แต่เมื่อคุณกำลังออฟไลน์](mobile-apps-offline-data.md) 
 
-<span data-ttu-id="ca76f-718">**Bing และ R tiles** เปิด Bing และ R tiles ในโหมดโฟกัส</span><span class="sxs-lookup"><span data-stu-id="ca76f-718">**Bing and R tiles** Open Bing and R tiles in focus mode.</span></span>
+**Bing และ R tiles** เปิด Bing และ R tiles ในโหมดโฟกัส
 
-#### <a name="android-mobile-app"></a><span data-ttu-id="ca76f-719">แอปสำหรับอุปกรณ์เคลื่อนที่ android</span><span class="sxs-lookup"><span data-stu-id="ca76f-719">Android mobile app</span></span>
-<span data-ttu-id="ca76f-720">**รายงานอุปกรณ์มือถือ SQL Server 2016 และ KPI** [ดูรายงานอุปกรณ์มือถือ SQL Server 2016 และ KPI](mobile-app-ssrs-kpis-mobile-on-premises-reports.md) และนำทางระหว่างโฟลเดอร์ SSRS</span><span class="sxs-lookup"><span data-stu-id="ca76f-720">**SQL Server 2016 mobile reports and KPIs** [View SQL Server 2016 mobile reports and KPIs](mobile-app-ssrs-kpis-mobile-on-premises-reports.md), and navigate between SSRS folders.</span></span>
+#### <a name="android-mobile-app"></a>แอปสำหรับอุปกรณ์เคลื่อนที่ android
+**รายงานอุปกรณ์มือถือ SQL Server 2016 และ KPI** [ดูรายงานอุปกรณ์มือถือ SQL Server 2016 และ KPI](mobile-app-ssrs-kpis-mobile-on-premises-reports.md) และนำทางระหว่างโฟลเดอร์ SSRS
 
-<span data-ttu-id="ca76f-721">**ดูรายงาน** เปิดรายงานจากไทล์บนแดชบอร์ดของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-721">**View reports** Open reports from tiles on your dashboards.</span></span>
+**ดูรายงาน** เปิดรายงานจากไทล์บนแดชบอร์ดของคุณ
 
-<span data-ttu-id="ca76f-722">**ข้อมูลใหม่ออฟไลน์** การรีเฟรชเบื้องหลังใหมได้อัปเดตข้อมูลแคชของคุณโดยอัตโนมัติ เมื่อคุณกำลังออนไลน์ เพื่อให้คุณมีข้อมูลล่าสุด [แม้แต่เมื่อคุณกำลังออฟไลน์](mobile-apps-offline-data.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-722">**Fresh data offline** New background refresh automatically updates your cached data when you're online, so you have the freshest data [even when you're offline](mobile-apps-offline-data.md).</span></span> 
+**ข้อมูลใหม่ออฟไลน์** การรีเฟรชเบื้องหลังใหมได้อัปเดตข้อมูลแคชของคุณโดยอัตโนมัติ เมื่อคุณกำลังออนไลน์ เพื่อให้คุณมีข้อมูลล่าสุด [แม้แต่เมื่อคุณกำลังออฟไลน์](mobile-apps-offline-data.md) 
 
-#### <a name="power-bi-app-for-windows-10-devices"></a><span data-ttu-id="ca76f-723">แอป Power BI สำหรับอุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-723">Power BI app for Windows 10 devices</span></span>
-<span data-ttu-id="ca76f-724">**Quick access** เข้าถึงแดชบอร์ด รายงาน และกลุ่มที มีรายการใหม่ "ดูล่าสุด" และการค้นหาทั้งหมดเพื่อให้คุณสามารถค้นหาข้อมูลคุณต้องการ</span><span class="sxs-lookup"><span data-stu-id="ca76f-724">**Quick access** Access your dashboards, reports, and groups quickly with a new "recently viewed" list and global search so you can find the data you need.</span></span>
+#### <a name="power-bi-app-for-windows-10-devices"></a>แอป Power BI สำหรับอุปกรณ์ Windows 10
+**Quick access** เข้าถึงแดชบอร์ด รายงาน และกลุ่มที มีรายการใหม่ "ดูล่าสุด" และการค้นหาทั้งหมดเพื่อให้คุณสามารถค้นหาข้อมูลคุณต้องการ
 
-<span data-ttu-id="ca76f-725">**Bing และ R tiles** เปิด Bing และ R tiles ในโหมดโฟกัส</span><span class="sxs-lookup"><span data-stu-id="ca76f-725">**Bing and R tiles** Open Bing and R tiles in focus mode.</span></span>
+**Bing และ R tiles** เปิด Bing และ R tiles ในโหมดโฟกัส
 
-<span data-ttu-id="ca76f-726">**ไทล์สดเพิ่มเติมบนหน้าจอเริ่มต้น** [ปักหมุด KPI และเรียงการ์ดลงในหน้าจอเริ่มต้นของคุณ](mobile-pin-dashboard-start-screen-windows-10-phone-app.md) ด้วยความที่เป็นไทล์สด ดังนั้นคุณสามารถดูเมตริกที่สำคัญทั้งหมดของคุณได้อย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="ca76f-726">**More live tiles on your Start screen** [Pin KPIs and row cards to your Start screen](mobile-pin-dashboard-start-screen-windows-10-phone-app.md) as live tiles, so you can see all of your critical metrics at a glance.</span></span>
+**ไทล์สดเพิ่มเติมบนหน้าจอเริ่มต้น** [ปักหมุด KPI และเรียงการ์ดลงในหน้าจอเริ่มต้นของคุณ](mobile-pin-dashboard-start-screen-windows-10-phone-app.md) ด้วยความที่เป็นไทล์สด ดังนั้นคุณสามารถดูเมตริกที่สำคัญทั้งหมดของคุณได้อย่างรวดเร็ว
 
-<span data-ttu-id="ca76f-727">**หุบนิ้วเพื่อย่อ/ขยาย** ใช้การหุบนิ้วเพื่อซูมบนแท็บเล็ตของคุณเพื่อตรวจสอบแดชบอร์ดในอย่างละเอียดยิ่งขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-727">**Pinch to zoom** Use pinch-to-zoom on your tablet to examine dashboards in greater detail.</span></span>
+**หุบนิ้วเพื่อย่อ/ขยาย** ใช้การหุบนิ้วเพื่อซูมบนแท็บเล็ตของคุณเพื่อตรวจสอบแดชบอร์ดในอย่างละเอียดยิ่งขึ้น
 
-<span data-ttu-id="ca76f-728">**แจ้งเตือน** รับการแจ้งเตือนเมื่อชุดข้อมูล รายงาน และแดชบอร์ดที่ปรับปรุง ด้วยข้อมูลใหม่</span><span class="sxs-lookup"><span data-stu-id="ca76f-728">**Notifications** Get notified when your datasets, reports, and dashboards update with new data.</span></span>
+**แจ้งเตือน** รับการแจ้งเตือนเมื่อชุดข้อมูล รายงาน และแดชบอร์ดที่ปรับปรุง ด้วยข้อมูลใหม่
 
-<span data-ttu-id="ca76f-729">**แกลเลอรีรายงาน** เปิดรายงานของคุณโดยตรงในแกลเลอรีรายงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-729">**Report gallery** Open your reports directly in the report gallery.</span></span>
+**แกลเลอรีรายงาน** เปิดรายงานของคุณโดยตรงในแกลเลอรีรายงาน
 
-### <a name="february-2016"></a><span data-ttu-id="ca76f-730">กุมภาพันธ์ 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-730">February 2016</span></span>
-#### <a name="android"></a><span data-ttu-id="ca76f-731">Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-731">Android</span></span>
-<span data-ttu-id="ca76f-732">ดูแดชบอร์ดใน[โหมดแนวนอนบนโทรศัพท์ Android ](mobile-apps-view-dashboard.md#view-dashboards-on-your-android-phone)</span><span class="sxs-lookup"><span data-stu-id="ca76f-732">View dashboards in [landscape mode on Android phones](mobile-apps-view-dashboard.md#view-dashboards-on-your-android-phone).</span></span> 
+### <a name="february-2016"></a>กุมภาพันธ์ 2016
+#### <a name="android"></a>Android
+ดูแดชบอร์ดใน[โหมดแนวนอนบนโทรศัพท์ Android ](mobile-apps-view-dashboard.md#view-dashboards-on-your-android-phone) 
 
-#### <a name="power-bi-app-for-windows-10-devices"></a><span data-ttu-id="ca76f-733">แอป Power BI สำหรับอุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-733">Power BI app for Windows 10 devices</span></span>
-<span data-ttu-id="ca76f-734">มุมมอง[รายงานบนโทรศัพท์ Windows 10](mobile-reports-in-the-mobile-apps.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-734">View [reports on your Windows 10 phone](mobile-reports-in-the-mobile-apps.md).</span></span>
+#### <a name="power-bi-app-for-windows-10-devices"></a>แอป Power BI สำหรับอุปกรณ์ Windows 10
+มุมมอง[รายงานบนโทรศัพท์ Windows 10](mobile-reports-in-the-mobile-apps.md)
 
-<span data-ttu-id="ca76f-735">ใช้เวลาเร็วกว่า [ในการเข้าถึงแดชบอร์ดมือ Windows 10 ของคุณ](mobile-tiles-in-the-mobile-apps.md): แชร์ไทล์ภาพหน้าจอหรือเปิดให้รายงานโดยตรงจากแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="ca76f-735">Faster time to [insights on your Windows 10 mobile dashboards](mobile-tiles-in-the-mobile-apps.md): Share a tile snapshot or open a report directly from the dashboard.</span></span>
+ใช้เวลาเร็วกว่า [ในการเข้าถึงแดชบอร์ดมือ Windows 10 ของคุณ](mobile-tiles-in-the-mobile-apps.md): แชร์ไทล์ภาพหน้าจอหรือเปิดให้รายงานโดยตรงจากแดชบอร์ด
 
-### <a name="january-2016"></a><span data-ttu-id="ca76f-736">มกราคม 2016</span><span class="sxs-lookup"><span data-stu-id="ca76f-736">January 2016</span></span>
-<span data-ttu-id="ca76f-737">การปรับปรุงในเดือนมกราคมทั้งหมดมีอยู่[แอป Power BI สำหรับโทรศัพท์ Windows 10](mobile-windows-10-phone-app-get-started.md)ใหม่ เผยแพร่ในเดือน 2015 ธันวาคม</span><span class="sxs-lookup"><span data-stu-id="ca76f-737">All of the January improvements are already in the new [Power BI app for Windows 10 phones](mobile-windows-10-phone-app-get-started.md), released in December 2015.</span></span> <span data-ttu-id="ca76f-738">ในตอนนี้ พวกเขากำลังเผยแพร่ไปยังแอป Power BI อื่น ๆ สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="ca76f-738">Now they're rolling out to the other Power BI apps for mobile devices.</span></span> <span data-ttu-id="ca76f-739">อ่านโพสต์ในบล็อกเกี่ยวกับการปรับปรุงเหล่านี้</span><span class="sxs-lookup"><span data-stu-id="ca76f-739">Read the blog post about these improvements.</span></span>
+### <a name="january-2016"></a>มกราคม 2016
+การปรับปรุงในเดือนมกราคมทั้งหมดมีอยู่[แอป Power BI สำหรับโทรศัพท์ Windows 10](mobile-windows-10-phone-app-get-started.md)ใหม่ เผยแพร่ในเดือน 2015 ธันวาคม ในตอนนี้ พวกเขากำลังเผยแพร่ไปยังแอป Power BI อื่น ๆ สำหรับอุปกรณ์เคลื่อนที่ อ่านโพสต์ในบล็อกเกี่ยวกับการปรับปรุงเหล่านี้
 
-<span data-ttu-id="ca76f-740">**รองรับข้อมูลแบบเรียลไทม์** รีเฟรชแดชบอร์ดแบบเรียลไทม์ เพื่อให้คุณไม่จำเป็นต้องรีเฟรชเอกสารด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="ca76f-740">**Real-time data support** Dashboards refresh in real time, so you don't need to refresh them manually.</span></span>
+**รองรับข้อมูลแบบเรียลไทม์** รีเฟรชแดชบอร์ดแบบเรียลไทม์ เพื่อให้คุณไม่จำเป็นต้องรีเฟรชเอกสารด้วยตนเอง
 
-<span data-ttu-id="ca76f-741">**ตัวบ่งชี้แบบออฟไลน์** เมื่อคุณไม่มีสัญญาณ คุณเห็นตัวบ่งชี้แบบออฟไลน์ด้านบนของแดชบอร์ดของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-741">**Offline indicators** When you don't have signal, you see an offline indicator at the top of your dashboard.</span></span>
+**ตัวบ่งชี้แบบออฟไลน์** เมื่อคุณไม่มีสัญญาณ คุณเห็นตัวบ่งชี้แบบออฟไลน์ด้านบนของแดชบอร์ดของคุณ
 
-<span data-ttu-id="ca76f-742">**เข้าถึงข้อมูลที่แคช** ข้อมูลในแคชไม่หมดอายุ เพื่อให้คุณสามารถเข้าถึงข้อมูลของคุณแคชไว้โดยไม่จำกัดในขณะออฟไลน์</span><span class="sxs-lookup"><span data-stu-id="ca76f-742">**Access cached data** Cached data no longer expires, so you have access to your cached data indefinitely while offline.</span></span>
+**เข้าถึงข้อมูลที่แคช** ข้อมูลในแคชไม่หมดอายุ เพื่อให้คุณสามารถเข้าถึงข้อมูลของคุณแคชไว้โดยไม่จำกัดในขณะออฟไลน์
 
-<span data-ttu-id="ca76f-743">**R tiles และ web widgets** ดูไทล์ชนิดใหม่เหล่านี้ในแดชบอร์ดบนอุปกรณ์เคลื่อนที่ของคุณใหม่</span><span class="sxs-lookup"><span data-stu-id="ca76f-743">**R tiles and web widgets** View these new tile types in dashboards on your mobile device.</span></span>
+**R tiles และ web widgets** ดูไทล์ชนิดใหม่เหล่านี้ในแดชบอร์ดบนอุปกรณ์เคลื่อนที่ของคุณใหม่
 
-<span data-ttu-id="ca76f-744">**แดชบอร์ด Bing** ใน Power BI service คุณสามารถสร้างในตอนนี้ [ผลลัพธ์การค้นหาแดชบอร์ด โดยใช้ Bing](../../connect-data/service-connect-to-services.md)และดูบนอุปกรณ์เคลื่อนที่ของคุณได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-744">**Bing dashboards** In the Power BI service, you can now create [dashboards with Bing search results](../../connect-data/service-connect-to-services.md), and view them on your mobile device.</span></span>
+**แดชบอร์ด Bing** ใน Power BI service คุณสามารถสร้างในตอนนี้ [ผลลัพธ์การค้นหาแดชบอร์ด โดยใช้ Bing](../../connect-data/service-connect-to-services.md)และดูบนอุปกรณ์เคลื่อนที่ของคุณได้
 
-<span data-ttu-id="ca76f-745">**หน้ารายงานปักหมุดเป็นไทล์ของแดชบอร์ด** หลังจากที่คุณสามารถปักหมุดหน้ารายงานทั้งหมดไปยังแดชบอร์ดใน Power BI service คุณสามารถดูหน้ารายงานในแอป Power BI บน iPhone ของคุณ หรือ บนโทรศัพท์ Android ของคุณได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-745">**Report pages pinned as tiles to dashboards** Now that you can pin a whole report page to a dashboard in the Power BI service, you can view report pages in the Power BI app on your iPhone or on your Android phone.</span></span>
+**หน้ารายงานปักหมุดเป็นไทล์ของแดชบอร์ด** หลังจากที่คุณสามารถปักหมุดหน้ารายงานทั้งหมดไปยังแดชบอร์ดใน Power BI service คุณสามารถดูหน้ารายงานในแอป Power BI บน iPhone ของคุณ หรือ บนโทรศัพท์ Android ของคุณได้
 
-### <a name="december-2015"></a><span data-ttu-id="ca76f-746">ธันวาคม 2015</span><span class="sxs-lookup"><span data-stu-id="ca76f-746">December 2015</span></span>
-<span data-ttu-id="ca76f-747">ทีม Power BI จบปี 2015 อย่างเข้มแข็ง เพิ่มหลักและการปรับปรุงหลายตัว</span><span class="sxs-lookup"><span data-stu-id="ca76f-747">The Power BI team ended 2015 strong, with several major additions and updates.</span></span>
+### <a name="december-2015"></a>ธันวาคม 2015
+ทีม Power BI จบปี 2015 อย่างเข้มแข็ง เพิ่มหลักและการปรับปรุงหลายตัว
 
-#### <a name="sql-server-2016-reporting-services-mobile-reports-in-ios"></a><span data-ttu-id="ca76f-748">รายงานมือถือใน iOS ของ SQL Server 2016 Reporting Services</span><span class="sxs-lookup"><span data-stu-id="ca76f-748">SQL Server 2016 Reporting Services mobile reports in iOS</span></span>
-<span data-ttu-id="ca76f-749">ในตอนนี้คุณสามารถดูรายงานมือถือของ SQL Server ในแอป Power BI บนอุปกรณ์ iOS ของคุณ ไม่ว่าจะเป็น iPad หรือ iPhone</span><span class="sxs-lookup"><span data-stu-id="ca76f-749">Now you can view your SQL Server mobile reports in the Power BI app on your iOS device, be it iPad or iPhone.</span></span> <span data-ttu-id="ca76f-750">อ่านเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ca76f-750">Read more:</span></span>
+#### <a name="sql-server-2016-reporting-services-mobile-reports-in-ios"></a>รายงานมือถือใน iOS ของ SQL Server 2016 Reporting Services
+ในตอนนี้คุณสามารถดูรายงานมือถือของ SQL Server ในแอป Power BI บนอุปกรณ์ iOS ของคุณ ไม่ว่าจะเป็น iPad หรือ iPhone อ่านเพิ่มเติม
 
-* <span data-ttu-id="ca76f-751">โพสต์ในบล็อก[SSRS 16 SQL บนแอป Power BI สำหรับ iOS](https://powerbi.microsoft.com/blog/sql-16-ssrs-on-power-bi-app-for-ios/
-)</span><span class="sxs-lookup"><span data-stu-id="ca76f-751">[SQL 16 SSRS on Power BI app for iOS](https://powerbi.microsoft.com/blog/sql-16-ssrs-on-power-bi-app-for-ios/
-) blog post</span></span>
-* <span data-ttu-id="ca76f-752">มุมมอง[SQL Server mobile reports และ Kpi ในเอกสารแอป iPhone และ iPad](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-752">View [SQL Server mobile reports and KPIs in the iPhone and iPad apps](mobile-app-ssrs-kpis-mobile-on-premises-reports.md) documentation</span></span>
+* โพสต์ในบล็อก[SSRS 16 SQL บนแอป Power BI สำหรับ iOS](https://powerbi.microsoft.com/blog/sql-16-ssrs-on-power-bi-app-for-ios/
+)
+* มุมมอง[SQL Server mobile reports และ Kpi ในเอกสารแอป iPhone และ iPad](mobile-app-ssrs-kpis-mobile-on-premises-reports.md)
 
-#### <a name="power-bi-app-for-windows-10-phones"></a><span data-ttu-id="ca76f-753">แอป power BI สำหรับโทรศัพท์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="ca76f-753">Power BI app for Windows 10 phones</span></span>
-<span data-ttu-id="ca76f-754">แอป Power BI ใหม่สำหรับโทรศัพท์ Windows 10 ถูกปรับให้เหมาะสำหรับระบบสัมผัสและประสิทธิภาพของอุปกรณ์เคลื่อน</span><span class="sxs-lookup"><span data-stu-id="ca76f-754">The new Power BI app for Windows 10 phones is optimized for touch and mobile productivity.</span></span> <span data-ttu-id="ca76f-755">สำรวจแดชบอร์ดและรายงาน เชิญเพื่อนร่วมงานเพื่อดูข้อมูลและแชร์ข้อมูลเชิงลึกผ่านทางอีเมล เมื่อต้องการมีส่วนร่วมกับทีมของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-755">Explore dashboards and reports, invite colleagues to view data, and share insights over email to engage your team.</span></span> <span data-ttu-id="ca76f-756">ยิ่งกว่านั้นคุณสามารถ[ปักหมุดแดชบอร์ด Power BI กับหน้าจอเริ่มโทรศัพท์ Windows](mobile-pin-dashboard-start-screen-windows-10-phone-app.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-756">Plus you can [pin Power BI dashboards to your Windows phone Start screen](mobile-pin-dashboard-start-screen-windows-10-phone-app.md).</span></span>
+#### <a name="power-bi-app-for-windows-10-phones"></a>แอป power BI สำหรับโทรศัพท์ Windows 10
+แอป Power BI ใหม่สำหรับโทรศัพท์ Windows 10 ถูกปรับให้เหมาะสำหรับระบบสัมผัสและประสิทธิภาพของอุปกรณ์เคลื่อน สำรวจแดชบอร์ดและรายงาน เชิญเพื่อนร่วมงานเพื่อดูข้อมูลและแชร์ข้อมูลเชิงลึกผ่านทางอีเมล เมื่อต้องการมีส่วนร่วมกับทีมของคุณ ยิ่งกว่านั้นคุณสามารถ[ปักหมุดแดชบอร์ด Power BI กับหน้าจอเริ่มโทรศัพท์ Windows](mobile-pin-dashboard-start-screen-windows-10-phone-app.md)
 
-* <span data-ttu-id="ca76f-757">อ่าน[โทรศัพท์โพสต์ในบล็อกแอป Power BI สำหรับ Windows 10 ](https://powerbi.microsoft.com/blog/announcing-the-power-bi-app-for-windows-10-mobile/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-757">Read the [Power BI app for Windows 10 phones blog post](https://powerbi.microsoft.com/blog/announcing-the-power-bi-app-for-windows-10-mobile/).</span></span>
-* <span data-ttu-id="ca76f-758">[เริ่มต้นใช้งานแอป Power BI สำหรับ Windows 10 โทรศัพท์](mobile-windows-10-phone-app-get-started.md)</span><span class="sxs-lookup"><span data-stu-id="ca76f-758">[Get started with the Power BI app for Windows 10 phones](mobile-windows-10-phone-app-get-started.md).</span></span>
+* อ่าน[โทรศัพท์โพสต์ในบล็อกแอป Power BI สำหรับ Windows 10 ](https://powerbi.microsoft.com/blog/announcing-the-power-bi-app-for-windows-10-mobile/)
+* [เริ่มต้นใช้งานแอป Power BI สำหรับ Windows 10 โทรศัพท์](mobile-windows-10-phone-app-get-started.md)
 
-#### <a name="other-additions"></a><span data-ttu-id="ca76f-759">ส่วนเพิ่มเติมอื่นๆ</span><span class="sxs-lookup"><span data-stu-id="ca76f-759">Other additions</span></span>
-<span data-ttu-id="ca76f-760">อ่าน[โพสต์ในบล็อกแอปสำหรับอุปกรณ์เคลื่อน Power BI เดือนธันวาคม](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-2d00-december-2015/)สำหรับรายละเอียดเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ca76f-760">Read the [Power BI mobile apps December blog post](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-2d00-december-2015/) for more details.</span></span>
+#### <a name="other-additions"></a>ส่วนเพิ่มเติมอื่นๆ
+อ่าน[โพสต์ในบล็อกแอปสำหรับอุปกรณ์เคลื่อน Power BI เดือนธันวาคม](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-2d00-december-2015/)สำหรับรายละเอียดเพิ่มเติม
 
-* <span data-ttu-id="ca76f-761">รับการแจ้งเตือนเมื่อผู้ร่วมงานแชร์แดชบอร์ดกับคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-761">Receive notifications when a colleague shares a dashboard with you.</span></span> <span data-ttu-id="ca76f-762">(iOS)</span><span class="sxs-lookup"><span data-stu-id="ca76f-762">(iOS)</span></span>
-* <span data-ttu-id="ca76f-763">ดูหน้ารายงานเต็มที่ปักหมุดในแดชบอร์ดของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-763">View entire pinned report pages in your dashboards.</span></span> <span data-ttu-id="ca76f-764">(iOS และ Android)</span><span class="sxs-lookup"><span data-stu-id="ca76f-764">(iOS and Android)</span></span>
-* <span data-ttu-id="ca76f-765">[สแกนรหัส QR](https://powerbi.microsoft.com/blog/bridge-the-gap-between-your-physical-world-and-your-bi-using-qr-codes/)และไปยังไทล์ที่เกี่ยวข้องโดยตรงบนโทรศัพท์ Android ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-765">[Scan a QR code](https://powerbi.microsoft.com/blog/bridge-the-gap-between-your-physical-world-and-your-bi-using-qr-codes/) and go directly to a relevant tile on your Android phone.</span></span>
+* รับการแจ้งเตือนเมื่อผู้ร่วมงานแชร์แดชบอร์ดกับคุณ (iOS)
+* ดูหน้ารายงานเต็มที่ปักหมุดในแดชบอร์ดของคุณ (iOS และ Android)
+* [สแกนรหัส QR](https://powerbi.microsoft.com/blog/bridge-the-gap-between-your-physical-world-and-your-bi-using-qr-codes/)และไปยังไทล์ที่เกี่ยวข้องโดยตรงบนโทรศัพท์ Android ของคุณ
 
-### <a name="november-2015"></a><span data-ttu-id="ca76f-766">พฤศจิกายน 2015</span><span class="sxs-lookup"><span data-stu-id="ca76f-766">November 2015</span></span>
-<span data-ttu-id="ca76f-767">อ่าน[โพสต์ในบล็อก Power BI mobile เดือนๆฤศจิกายน 2015](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-2d00-november-2015/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-767">Read the [November 2015 Power BI mobile blog post](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-2d00-november-2015/).</span></span>
+### <a name="november-2015"></a>พฤศจิกายน 2015
+อ่าน[โพสต์ในบล็อก Power BI mobile เดือนๆฤศจิกายน 2015](https://powerbi.microsoft.com/blog/power-bi-mobile-apps-update-2d00-november-2015/)
 
-#### <a name="all-power-bi-mobile-apps"></a><span data-ttu-id="ca76f-768">แอปสำหรับอุปกรณ์เคลื่อนที่ Power BI ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-768">All Power BI mobile apps</span></span>
-* <span data-ttu-id="ca76f-769">ประสบการณ์การต้อนรับใหม่</span><span class="sxs-lookup"><span data-stu-id="ca76f-769">A new welcome experience.</span></span>
-* <span data-ttu-id="ca76f-770">ปรับปรุงความจุของข้อมูลแผนภูมิ</span><span class="sxs-lookup"><span data-stu-id="ca76f-770">Improved chart data capacity.</span></span>
+#### <a name="all-power-bi-mobile-apps"></a>แอปสำหรับอุปกรณ์เคลื่อนที่ Power BI ทั้งหมด
+* ประสบการณ์การต้อนรับใหม่
+* ปรับปรุงความจุของข้อมูลแผนภูมิ
 
-#### <a name="ios-and-android-mobile-apps"></a><span data-ttu-id="ca76f-771">แอปสำหรับอุปกรณ์เคลื่อนที่ Android และ iOS</span><span class="sxs-lookup"><span data-stu-id="ca76f-771">iOS and Android mobile apps</span></span>
-* <span data-ttu-id="ca76f-772">เดี๋ยวนี้องค์กรสามารถ[กำหนดค่าแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI สำหรับ iOS และ Android โดยใช้ Microsoft Intune](../../admin/service-admin-mobile-intune.md)เพื่อจัดการอุปกรณ์และแอปพลิเคชันได้</span><span class="sxs-lookup"><span data-stu-id="ca76f-772">Enterprises can now [configure Power BI mobile apps for iOS and Android with Microsoft Intune](../../admin/service-admin-mobile-intune.md) to manage devices and applications.</span></span>
+#### <a name="ios-and-android-mobile-apps"></a>แอปสำหรับอุปกรณ์เคลื่อนที่ Android และ iOS
+* เดี๋ยวนี้องค์กรสามารถ[กำหนดค่าแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI สำหรับ iOS และ Android โดยใช้ Microsoft Intune](../../admin/service-admin-mobile-intune.md)เพื่อจัดการอุปกรณ์และแอปพลิเคชันได้
 
-#### <a name="iphone-mobile-app"></a><span data-ttu-id="ca76f-773">แอปสำหรับอุปกรณ์เคลื่อนของ iPhone</span><span class="sxs-lookup"><span data-stu-id="ca76f-773">iPhone mobile app</span></span>
-* <span data-ttu-id="ca76f-774">[เพิ่มไทล์รูปภาพไปยังแดชบอร์ด](mobile-iphone-app-get-started.md)ได้โดยตรงจาก iPhone ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-774">[Add a picture tile to a dashboard](mobile-iphone-app-get-started.md) directly from your iPhone.</span></span>
-* <span data-ttu-id="ca76f-775">[สร้างรหัส QR ในบริการ Power BI](../../create-reports/service-create-qr-code-for-tile.md) แล้วสแกนจาก iPhone ของคุณเมื่อต้องเปิดแอป Power BI เพื่อไทล์แบบเฉพาะเจาะจง</span><span class="sxs-lookup"><span data-stu-id="ca76f-775">[Create QR codes in the Power BI service](../../create-reports/service-create-qr-code-for-tile.md), then scan them from your iPhone to open the Power BI app to a specific tile.</span></span>
+#### <a name="iphone-mobile-app"></a>แอปสำหรับอุปกรณ์เคลื่อนของ iPhone
+* [เพิ่มไทล์รูปภาพไปยังแดชบอร์ด](mobile-iphone-app-get-started.md)ได้โดยตรงจาก iPhone ของคุณ
+* [สร้างรหัส QR ในบริการ Power BI](../../create-reports/service-create-qr-code-for-tile.md) แล้วสแกนจาก iPhone ของคุณเมื่อต้องเปิดแอป Power BI เพื่อไทล์แบบเฉพาะเจาะจง
 
-#### <a name="the-power-bi-app-for-windows-devices"></a><span data-ttu-id="ca76f-776">แอป Power BI สำหรับอุปกรณ์ Windows</span><span class="sxs-lookup"><span data-stu-id="ca76f-776">The Power BI app for Windows devices</span></span>
-* <span data-ttu-id="ca76f-777">[ลิงค์โดยตรงจากไทล์ไปยัง URL ที่เฉพาะเจาะจง](../../create-reports/service-dashboard-edit-tile.md#hyperlink)</span><span class="sxs-lookup"><span data-stu-id="ca76f-777">[Link directly from a tile to a specific URL](../../create-reports/service-dashboard-edit-tile.md#hyperlink).</span></span>
+#### <a name="the-power-bi-app-for-windows-devices"></a>แอป Power BI สำหรับอุปกรณ์ Windows
+* [ลิงค์โดยตรงจากไทล์ไปยัง URL ที่เฉพาะเจาะจง](../../create-reports/service-dashboard-edit-tile.md#hyperlink)
 
-### <a name="october-2015"></a><span data-ttu-id="ca76f-778">ตุลาคม 2015</span><span class="sxs-lookup"><span data-stu-id="ca76f-778">October 2015</span></span>
-<span data-ttu-id="ca76f-779">อ่านคำ[โพสต์ในบล็อก Power BI mobile กลางเดือนตุลาคม](https://powerbi.microsoft.com/blog/power-bi-mobile-mid-october-updates-are-here/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-779">Read the [mid-October Power BI mobile blog post](https://powerbi.microsoft.com/blog/power-bi-mobile-mid-october-updates-are-here/).</span></span>
+### <a name="october-2015"></a>ตุลาคม 2015
+อ่านคำ[โพสต์ในบล็อก Power BI mobile กลางเดือนตุลาคม](https://powerbi.microsoft.com/blog/power-bi-mobile-mid-october-updates-are-here/)
 
-#### <a name="all-power-bi-mobile-apps"></a><span data-ttu-id="ca76f-780">แอปสำหรับอุปกรณ์เคลื่อนที่ Power BI ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-780">All Power BI mobile apps</span></span>
-* <span data-ttu-id="ca76f-781">แผนภูมิเส้นกับแกน y แบบตามเปอร์เซ็นต์ในขณะนี้คำนวณช่วงแบบเป็นภาพตามข้อมูลจริงของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-781">Line charts with a percentage-based Y-axis now calculate the visual range according to your actual data.</span></span> <span data-ttu-id="ca76f-782">กราฟตอนนี้เริ่มต้นจากจุดข้อมูลต่ำสุดในแผนภูมิ แทนจากค่าเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-782">The graph now starts from the lowest data point in the chart, instead of from a default value.</span></span>
-* <span data-ttu-id="ca76f-783">บรรทัด คอลัมน์ และแผนภูมิแท่งตอนนี้สามารถมีป้ายชื่อข้อมูล</span><span class="sxs-lookup"><span data-stu-id="ca76f-783">Line, column, and bar charts can now have data labels.</span></span> 
+#### <a name="all-power-bi-mobile-apps"></a>แอปสำหรับอุปกรณ์เคลื่อนที่ Power BI ทั้งหมด
+* แผนภูมิเส้นกับแกน y แบบตามเปอร์เซ็นต์ในขณะนี้คำนวณช่วงแบบเป็นภาพตามข้อมูลจริงของคุณ กราฟตอนนี้เริ่มต้นจากจุดข้อมูลต่ำสุดในแผนภูมิ แทนจากค่าเริ่มต้น
+* บรรทัด คอลัมน์ และแผนภูมิแท่งตอนนี้สามารถมีป้ายชื่อข้อมูล 
   
-    ![<span data-ttu-id="ca76f-784">ภาพหน้าจอของแผนภูมิเส้น ที่แสดงเปอร์เซ็นต์ VTB ตามเดือนที่มีป้ายชื่อข้อมูล</span><span class="sxs-lookup"><span data-stu-id="ca76f-784">Screenshot of a line chart, showing the V T B percentage by month with data labels.</span></span> ](media/mobile-whats-new-in-the-mobile-apps/pbi_mobilelinechart.png)
+    ![ภาพหน้าจอของแผนภูมิเส้น ที่แสดงเปอร์เซ็นต์ VTB ตามเดือนที่มีป้ายชื่อข้อมูล ](media/mobile-whats-new-in-the-mobile-apps/pbi_mobilelinechart.png)
 
-#### <a name="iphone"></a><span data-ttu-id="ca76f-785">iPhone</span><span class="sxs-lookup"><span data-stu-id="ca76f-785">iPhone</span></span>
-* <span data-ttu-id="ca76f-786">อัพเดตอยู่เสมอด้วยแดชบอร์ดใหม่ล่าสุดของกลุ่มของคุณ รับการแจ้งเตือนบน iPhone ของคุณแต่ละครั้งที่สมาชิกในทีมเพิ่มแดชบอร์ดไปยังหนึ่งในกลุ่มของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-786">Stay up to date with your groups' newest dashboards -- receive notifications on your iPhone each time a team member adds a dashboard to one of your groups.</span></span>
+#### <a name="iphone"></a>iPhone
+* อัพเดตอยู่เสมอด้วยแดชบอร์ดใหม่ล่าสุดของกลุ่มของคุณ รับการแจ้งเตือนบน iPhone ของคุณแต่ละครั้งที่สมาชิกในทีมเพิ่มแดชบอร์ดไปยังหนึ่งในกลุ่มของคุณ
   
     ![ภาพหน้าจอของแดชบอร์ด ที่แสดงการแจ้งเตือนบน iPhone](media/mobile-whats-new-in-the-mobile-apps/pbi_iph_grpdashalertcrop.png)
-* <span data-ttu-id="ca76f-788">คุณสามารถดูแดชบอร์ดแนวนอน โดยหมุนโทรศัพท์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ca76f-788">You can now view dashboards horizontally, just by turning your phone.</span></span> <span data-ttu-id="ca76f-789">อ่านเพิ่มเติมเกี่ยวกับ[โหมดแนวนอนในแอป iPhone](https://powerbi.microsoft.com/blog/enjoy-the-landscape-with-the-power-bi-iphone-app/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-789">Read more about [landscape mode in the iPhone app](https://powerbi.microsoft.com/blog/enjoy-the-landscape-with-the-power-bi-iphone-app/).</span></span>
+* คุณสามารถดูแดชบอร์ดแนวนอน โดยหมุนโทรศัพท์ของคุณ อ่านเพิ่มเติมเกี่ยวกับ[โหมดแนวนอนในแอป iPhone](https://powerbi.microsoft.com/blog/enjoy-the-landscape-with-the-power-bi-iphone-app/)
   
     ![ภาพหน้าจอของแดชบอร์ด ที่แสดงโหมดแนวนอนใน iPhone](media/mobile-whats-new-in-the-mobile-apps/pbi_iph_landscape.png)
 
-### <a name="september-2015"></a><span data-ttu-id="ca76f-791">กันยายน 2015</span><span class="sxs-lookup"><span data-stu-id="ca76f-791">September 2015</span></span>
-<span data-ttu-id="ca76f-792">การปรับปรุงในแอป Power BI สำหรับอุปกรณ์เคลื่อน Android, iOS (iPhone และ iPad), และ Windows</span><span class="sxs-lookup"><span data-stu-id="ca76f-792">Improvements in the Power BI mobile apps -- Android, iOS (iPhone and iPad), and Windows.</span></span> <span data-ttu-id="ca76f-793">อ่านคำ[โพสต์ในบล็อก Power BI mobile กลางเดือนกันยายน](https://powerbi.microsoft.com/blog/power-bi-mobile-mid-september-updates-are-here/)</span><span class="sxs-lookup"><span data-stu-id="ca76f-793">Read the [mid-September Power BI mobile blog post](https://powerbi.microsoft.com/blog/power-bi-mobile-mid-september-updates-are-here/).</span></span>
+### <a name="september-2015"></a>กันยายน 2015
+การปรับปรุงในแอป Power BI สำหรับอุปกรณ์เคลื่อน Android, iOS (iPhone และ iPad), และ Windows อ่านคำ[โพสต์ในบล็อก Power BI mobile กลางเดือนกันยายน](https://powerbi.microsoft.com/blog/power-bi-mobile-mid-september-updates-are-here/)
 
-#### <a name="android"></a><span data-ttu-id="ca76f-794">Android</span><span class="sxs-lookup"><span data-stu-id="ca76f-794">Android</span></span>
-* <span data-ttu-id="ca76f-795">รองรับพื้นที่การทำงานแบบเป็นกลุ่ม: ทำงานรวมกันกับเพื่อนร่วมงานในกลุ่มในพื้นที่ทำงานเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-795">Support for group workspaces: Collaborate with colleagues in group workspaces.</span></span> 
-* <span data-ttu-id="ca76f-796">รองรับผู้ใช้งานที่ไม่ได้รับอนุญาต:  สำหรับกรณีที่ผู้ใช้ไม่สามารถเข้าใช้ระบบในแอปได้ เราได้เพิ่มวิธีที่จะทำให้ติดต่อหรือส่งคำติชมให้เราได้อย่างเร็วขึ้นและสะดวกขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-796">Support for non-authenticated users:  For the few scenarios when users fail or can't sign in to the app, we added a fast, convenient way to contact support and send feedback.</span></span>
-* <span data-ttu-id="ca76f-797">ปรับปรุงประสบการณ์ของผู้ใช้เมื่อเข้าถึงแดชบอร์ดโดยใช้ตามบทบาทความปลอดภัย</span><span class="sxs-lookup"><span data-stu-id="ca76f-797">Improved user experience when accessing dashboards using role-based security.</span></span>          
-* <span data-ttu-id="ca76f-798">ปรับปรุงการจัดรูปแบบข้อมูลของแผนภูมิและจัดแนวของแดชบอร์ดไทล์ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="ca76f-798">Improved data formatting of charts and alignment of all dashboard tiles.</span></span> 
+#### <a name="android"></a>Android
+* รองรับพื้นที่การทำงานแบบเป็นกลุ่ม: ทำงานรวมกันกับเพื่อนร่วมงานในกลุ่มในพื้นที่ทำงานเดียวกัน 
+* รองรับผู้ใช้งานที่ไม่ได้รับอนุญาต:  สำหรับกรณีที่ผู้ใช้ไม่สามารถเข้าใช้ระบบในแอปได้ เราได้เพิ่มวิธีที่จะทำให้ติดต่อหรือส่งคำติชมให้เราได้อย่างเร็วขึ้นและสะดวกขึ้น
+* ปรับปรุงประสบการณ์ของผู้ใช้เมื่อเข้าถึงแดชบอร์ดโดยใช้ตามบทบาทความปลอดภัย          
+* ปรับปรุงการจัดรูปแบบข้อมูลของแผนภูมิและจัดแนวของแดชบอร์ดไทล์ทั้งหมด 
 
-#### <a name="ios-iphone-and-ipad"></a><span data-ttu-id="ca76f-799">iOS (iPhone และ iPad)</span><span class="sxs-lookup"><span data-stu-id="ca76f-799">iOS (iPhone and iPad)</span></span>
-* <span data-ttu-id="ca76f-800">ตัวนำทางใหม่ที่ได้รับการปรับปรุงแล้ว: ตัวนำทางการวาดใหม่ที่เพิ่มขนาดของจอให้ใหญ่ขึ้นและปรับปรุงระบบนำทางทั่วทั้งแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-800">New & improved navigation: New drawer navigation maximizes screen real estate and improves navigation throughout the app.</span></span> 
-* <span data-ttu-id="ca76f-801">กลุ่มพื้นที่ทำงาน: ทำงานรวมกันกับเพื่อนร่วมงานในกลุ่มในพื้นที่ทำงานเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="ca76f-801">Group workspaces: Collaborate with colleagues in group workspaces.</span></span> 
-* <span data-ttu-id="ca76f-802">อัปเกรดคุณภาพของกระบวนการรับรองตัวตน ประสิทธิภาพการทำงาน ปรับปรุงฟังก์ชันการทำงานการ และเพิ่มประสิทธิภาพของกระบวนการรับรองความถูกต้องของแอป รวมถึงการสนับสนุนสำหรับ SSO (ลงชื่อเข้าระบบครั้งเดียว)</span><span class="sxs-lookup"><span data-stu-id="ca76f-802">Authentication process upgrade Quality, performance, and functionality improvements enhance the app authentication process, including support for SSO (Single Sign-On).</span></span> 
-* <span data-ttu-id="ca76f-803">ปรับปรุงการแสดงข้อมูลของไทล์แผนภูมิเส้นเมื่อต้องการบีบอัดแกน x ได้ดียิ่งขึ้น</span><span class="sxs-lookup"><span data-stu-id="ca76f-803">Improved data representation of line chart tiles to better compress the x-axis.</span></span>
-* <span data-ttu-id="ca76f-804">ปรับปรุงประสบการณ์ของผู้ใช้เมื่อใช้การรักษาความปลอดภัยตามบทบาท</span><span class="sxs-lookup"><span data-stu-id="ca76f-804">Improved user experience when using with role-based security.</span></span>
-* <span data-ttu-id="ca76f-805">ปรับปรุงประสบการณ์ระบบสัมผัสบนไทล์ของแผนภูมิแบบเมทริกซ์: ตอนนี้คุณสามารถดูข้อมูลไปทั่วข้อมูลเมทริกซ์และดูข้อมูลอื่น ๆ ได้อย่างง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="ca76f-805">Touch-optimized improvements for matrix chart tiles: Now you can easily scroll through your matrix data and view all its data easily and intuitively.</span></span>
-* <span data-ttu-id="ca76f-806">ปรับปรุงการจัดรูปแบบข้อมูลของแผนภูมิและจัดแนวของแดชบอร์ดไทล์</span><span class="sxs-lookup"><span data-stu-id="ca76f-806">Improved data formatting of charts and alignments of dashboard tiles.</span></span> 
-* <span data-ttu-id="ca76f-807">นำการรองรับ iOS 7 ออก: เพื่อให้มาตรฐานรักษาความปลอดภัยของ Power BI อยู่ในระดับสูงสุด เราจึงไม่สามารถรองรับหรืออนุญาตให้ติดตั้งบน iOS7 ได้อีกต่อไป</span><span class="sxs-lookup"><span data-stu-id="ca76f-807">Removal of iOS 7 support: To maintain highest security standards for Power BI, we will no longer support iOS 7 installed devices.</span></span> <span data-ttu-id="ca76f-808">iOS 8 และข้างต้นจำเป็น</span><span class="sxs-lookup"><span data-stu-id="ca76f-808">iOS 8 and above is required.</span></span> 
-* <span data-ttu-id="ca76f-809">ส่งคำติชมและการให้คะแนนเข้าไปในแอป: เพิ่มความสามารถภายในแอปในการส่งคำติชมและให้คะแนนกลับคืนสู่บริษัทเพื่อที่เราจะได้นำไปพัฒนาตามแนวทางที่วางไว้และสามารถทำโฆษณาได้ง่ายขึ้นจากในแอป</span><span class="sxs-lookup"><span data-stu-id="ca76f-809">Send feedback and rating added in app: Added in-app capability to send feedback and provide ratings so that we can increase the community's influence on our roadmap and promote issues easily and directly from the app.</span></span>
+#### <a name="ios-iphone-and-ipad"></a>iOS (iPhone และ iPad)
+* ตัวนำทางใหม่ที่ได้รับการปรับปรุงแล้ว: ตัวนำทางการวาดใหม่ที่เพิ่มขนาดของจอให้ใหญ่ขึ้นและปรับปรุงระบบนำทางทั่วทั้งแอป 
+* กลุ่มพื้นที่ทำงาน: ทำงานรวมกันกับเพื่อนร่วมงานในกลุ่มในพื้นที่ทำงานเดียวกัน 
+* อัปเกรดคุณภาพของกระบวนการรับรองตัวตน ประสิทธิภาพการทำงาน ปรับปรุงฟังก์ชันการทำงานการ และเพิ่มประสิทธิภาพของกระบวนการรับรองความถูกต้องของแอป รวมถึงการสนับสนุนสำหรับ SSO (ลงชื่อเข้าระบบครั้งเดียว) 
+* ปรับปรุงการแสดงข้อมูลของไทล์แผนภูมิเส้นเมื่อต้องการบีบอัดแกน x ได้ดียิ่งขึ้น
+* ปรับปรุงประสบการณ์ของผู้ใช้เมื่อใช้การรักษาความปลอดภัยตามบทบาท
+* ปรับปรุงประสบการณ์ระบบสัมผัสบนไทล์ของแผนภูมิแบบเมทริกซ์: ตอนนี้คุณสามารถดูข้อมูลไปทั่วข้อมูลเมทริกซ์และดูข้อมูลอื่น ๆ ได้อย่างง่ายดาย
+* ปรับปรุงการจัดรูปแบบข้อมูลของแผนภูมิและจัดแนวของแดชบอร์ดไทล์ 
+* นำการรองรับ iOS 7 ออก: เพื่อให้มาตรฐานรักษาความปลอดภัยของ Power BI อยู่ในระดับสูงสุด เราจึงไม่สามารถรองรับหรืออนุญาตให้ติดตั้งบน iOS7 ได้อีกต่อไป iOS 8 และข้างต้นจำเป็น 
+* ส่งคำติชมและการให้คะแนนเข้าไปในแอป: เพิ่มความสามารถภายในแอปในการส่งคำติชมและให้คะแนนกลับคืนสู่บริษัทเพื่อที่เราจะได้นำไปพัฒนาตามแนวทางที่วางไว้และสามารถทำโฆษณาได้ง่ายขึ้นจากในแอป
 
-#### <a name="windows"></a><span data-ttu-id="ca76f-810">Windows</span><span class="sxs-lookup"><span data-stu-id="ca76f-810">Windows</span></span>
-* <span data-ttu-id="ca76f-811">ไทล์แผนถูกปรับปรุงเพื่อให้แสดงผลในโหมดในโฟกัสสูงสุดของอสังหาริมทรัพย์บนหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="ca76f-811">Improved map tile rendering in in-focus mode to maximize screen real estate.</span></span>
-* <span data-ttu-id="ca76f-812">ปรับปรุงประสบการณ์ของผู้ใช้เมื่อเข้าถึงแดชบอร์ดโดยใช้ตามบทบาทความปลอดภัย</span><span class="sxs-lookup"><span data-stu-id="ca76f-812">Improved user experience when accessing dashboards using role-based security.</span></span> 
-* <span data-ttu-id="ca76f-813">ความสามารถใหม่ช่วยให้คุณสามารถกลับไปกลับมาระเรียกดูแดชบอร์ดไทล์และสำรวจเหล่าได้โดยตรงในโหมดในโฟกัส โดยไม่จำเป็นต้องกลับไปยังแดชบอร์ดเพื่อเลือกไทล์ถัดไป</span><span class="sxs-lookup"><span data-stu-id="ca76f-813">A new capability allows you to browse back and forth through dashboard tiles exploring them directly in in-focus mode without the need to return to the dashboard to select the next tile.</span></span>
-* <span data-ttu-id="ca76f-814">เพิ่มเติมความเสถียรและประสิทธิภาพการปรับปรุงการทำงาน</span><span class="sxs-lookup"><span data-stu-id="ca76f-814">Additional stability and performance improvements.</span></span>
+#### <a name="windows"></a>Windows
+* ไทล์แผนถูกปรับปรุงเพื่อให้แสดงผลในโหมดในโฟกัสสูงสุดของอสังหาริมทรัพย์บนหน้าจอ
+* ปรับปรุงประสบการณ์ของผู้ใช้เมื่อเข้าถึงแดชบอร์ดโดยใช้ตามบทบาทความปลอดภัย 
+* ความสามารถใหม่ช่วยให้คุณสามารถกลับไปกลับมาระเรียกดูแดชบอร์ดไทล์และสำรวจเหล่าได้โดยตรงในโหมดในโฟกัส โดยไม่จำเป็นต้องกลับไปยังแดชบอร์ดเพื่อเลือกไทล์ถัดไป
+* เพิ่มเติมความเสถียรและประสิทธิภาพการปรับปรุงการทำงาน

@@ -6,8 +6,8 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "61268945"
 ---
-### <a name="this-is-content-within-the-include"></a><span data-ttu-id="69cc2-101">นี่คือเนื้อหาภายในการรวม</span><span class="sxs-lookup"><span data-stu-id="69cc2-101">This is content within the include</span></span>
-<span data-ttu-id="69cc2-102">การรวมกับรูปภาพ:</span><span class="sxs-lookup"><span data-stu-id="69cc2-102">An include with an image:</span></span>
+### <a name="this-is-content-within-the-include"></a>นี่คือเนื้อหาภายในการรวม
+การรวมกับรูปภาพ:
 
 ![windows-azure-logo](./media/example-include-images/windows-azure.png)
 

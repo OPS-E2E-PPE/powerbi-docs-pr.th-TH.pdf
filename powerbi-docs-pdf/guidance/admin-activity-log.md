@@ -2,45 +2,45 @@
 title: เข้าถึงบันทึกกิจกรรม Power BI
 description: คำแนะนำและรหัสสคริปต์ของตัวอย่าง PowerShell สำหรับการทำงานกับบันทึกกิจกรรม Power BI
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: asaxton
 ms.service: powerbi
 ms.subservice: powerbi-admin
 ms.topic: sample
 ms.date: 09/03/2020
-ms.openlocfilehash: 18ce155419f712cce2c4973949cd02ffbd870724
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: 0e86966225060c24aa154c0b29ea533dad89908b
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96394669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99088706"
 ---
-# <a name="access-the-power-bi-activity-log"></a><span data-ttu-id="23896-103">เข้าถึงบันทึกกิจกรรม Power BI</span><span class="sxs-lookup"><span data-stu-id="23896-103">Access the Power BI activity log</span></span>
+# <a name="access-the-power-bi-activity-log"></a>เข้าถึงบันทึกกิจกรรม Power BI
 
-<span data-ttu-id="23896-104">บทความนี้เหมาะสำหรับผู้ดูแลระบบ Power BI ซึ่งต้องการเข้าถึงบันทึกกิจกรรมของ Power BI</span><span class="sxs-lookup"><span data-stu-id="23896-104">This article targets Power BI administrators who need to access the Power BI activity log.</span></span> <span data-ttu-id="23896-105">เนื่องจากยังไม่มีอินเทอร์เฟซผู้ใช้ในการค้นหาบันทึกกิจกรรม คุณจึงต้องใช้ Power BI REST API และ cmdlet สำหรับการจัดการ</span><span class="sxs-lookup"><span data-stu-id="23896-105">Because there's no user interface to search the activity log yet, you'll need to use the Power BI REST API and management cmdlets.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="23896-106">บทความนี้ไม่ได้แนะนำหรืออธิบายเกี่ยวกับบันทึกกิจกรรม Power BI</span><span class="sxs-lookup"><span data-stu-id="23896-106">This article doesn't introduce or describe the Power BI activity log.</span></span> <span data-ttu-id="23896-107">สำหรับข้อมูลเพิ่มเติมดู [ติดตามกิจกรรมของผู้ใช้ใน Power BI](../admin/service-admin-auditing.md#use-the-activity-log)</span><span class="sxs-lookup"><span data-stu-id="23896-107">For more information, see [Track user activities in Power BI](../admin/service-admin-auditing.md#use-the-activity-log).</span></span>
-
-## <a name="powershell-sample"></a><span data-ttu-id="23896-108">ตัวอย่าง PowerShell</span><span class="sxs-lookup"><span data-stu-id="23896-108">PowerShell sample</span></span>
-
-<span data-ttu-id="23896-109">ตัวอย่าง PowerShell พร้อมใช้งาน เพื่อช่วยให้คุณสามารถเรียนรู้วิธีการกรองและเรียกคืนข้อมูลเกี่ยวกับเหตุการณ์การบันทึกกิจกรรม Power BI ได้</span><span class="sxs-lookup"><span data-stu-id="23896-109">A PowerShell sample is available to help you learn how to filter and retrieve Power BI activity log events.</span></span> <span data-ttu-id="23896-110">ส่วนย่อยของรหัสและสถานการณ์ทั้งหมดมีคำอธิบายประกอบพร้อมด้วยคำแนะนำเกี่ยวกับวิธีใช้ และข้อเสียหรือปัญหาทั่วไปที่ต้องระวัง</span><span class="sxs-lookup"><span data-stu-id="23896-110">All code fragments and scenarios are annotated with how-to instructions and common gaps or issues to watch out for.</span></span> <span data-ttu-id="23896-111">ซึ่งจะครอบคลุมสถานการณ์สองรูปแบบ:</span><span class="sxs-lookup"><span data-stu-id="23896-111">Two scenarios are covered:</span></span>
-
-- <span data-ttu-id="23896-112">เรียกคืนรายการของผู้ใช้สำหรับแอปที่เฉพาะเจาะจง</span><span class="sxs-lookup"><span data-stu-id="23896-112">Retrieve a list of users for specific app.</span></span>
-- <span data-ttu-id="23896-113">เรียกคืนรายการของผู้ใช้สำหรับการแชร์รายงานโดยตรง</span><span class="sxs-lookup"><span data-stu-id="23896-113">Retrieve a list of users for direct report sharing.</span></span>
+บทความนี้เหมาะสำหรับผู้ดูแลระบบ Power BI ซึ่งต้องการเข้าถึงบันทึกกิจกรรมของ Power BI เนื่องจากยังไม่มีอินเทอร์เฟซผู้ใช้ในการค้นหาบันทึกกิจกรรม คุณจึงต้องใช้ Power BI REST API และ cmdlet สำหรับการจัดการ
 
 > [!NOTE]
-> <span data-ttu-id="23896-114">คุณจะต้องมีความคุ้นเคยกับ [Power BI Admin API](/rest/api/power-bi/admin) และ [มอดูล Power BI PowerShell](/powershell/power-bi/overview?view=powerbi-ps)</span><span class="sxs-lookup"><span data-stu-id="23896-114">You'll need to have some familiarity with the [Power BI Admin API](/rest/api/power-bi/admin) and [Power BI PowerShell modules](/powershell/power-bi/overview?view=powerbi-ps).</span></span> <span data-ttu-id="23896-115">คุณต้องติดตั้งมอดูล PowerShell ก่อนที่จะดำเนินการบล็อกสคริปต์เหล่านี้</span><span class="sxs-lookup"><span data-stu-id="23896-115">PowerShell modules must be installed prior to executing these script blocks.</span></span> <span data-ttu-id="23896-116">สำหรับข้อมูลเพิ่มเติมดู [ติดตามกิจกรรมของผู้ใช้ใน Power BI](../admin/service-admin-auditing.md#use-the-activity-log)</span><span class="sxs-lookup"><span data-stu-id="23896-116">For more information, see [Track user activities in Power BI](../admin/service-admin-auditing.md#use-the-activity-log).</span></span>
+> บทความนี้ไม่ได้แนะนำหรืออธิบายเกี่ยวกับบันทึกกิจกรรม Power BI สำหรับข้อมูลเพิ่มเติมดู [ติดตามกิจกรรมของผู้ใช้ใน Power BI](../admin/service-admin-auditing.md#use-the-activity-log)
+
+## <a name="powershell-sample"></a>ตัวอย่าง PowerShell
+
+ตัวอย่าง PowerShell พร้อมใช้งาน เพื่อช่วยให้คุณสามารถเรียนรู้วิธีการกรองและเรียกคืนข้อมูลเกี่ยวกับเหตุการณ์การบันทึกกิจกรรม Power BI ได้ ส่วนย่อยของรหัสและสถานการณ์ทั้งหมดมีคำอธิบายประกอบพร้อมด้วยคำแนะนำเกี่ยวกับวิธีใช้ และข้อเสียหรือปัญหาทั่วไปที่ต้องระวัง ซึ่งจะครอบคลุมสถานการณ์สองรูปแบบ:
+
+- เรียกคืนรายการของผู้ใช้สำหรับแอปที่เฉพาะเจาะจง
+- เรียกคืนรายการของผู้ใช้สำหรับการแชร์รายงานโดยตรง
+
+> [!NOTE]
+> คุณจะต้องมีความคุ้นเคยกับ [Power BI Admin API](/rest/api/power-bi/admin) และ [มอดูล Power BI PowerShell](/powershell/power-bi/overview?view=powerbi-ps&preserve-view=true) คุณต้องติดตั้งมอดูล PowerShell ก่อนที่จะดำเนินการบล็อกสคริปต์เหล่านี้ สำหรับข้อมูลเพิ่มเติมดู [ติดตามกิจกรรมของผู้ใช้ใน Power BI](../admin/service-admin-auditing.md#use-the-activity-log)
 >
-> <span data-ttu-id="23896-117">การเรียกคืนข้อมูลกิจกรรมของ Power BI อาจมีความล่าช้าได้ถึง 30 นาที</span><span class="sxs-lookup"><span data-stu-id="23896-117">There can be a lag of up to 30 minutes to retrieve Power BI events.</span></span>
+> การเรียกคืนข้อมูลกิจกรรมของ Power BI อาจมีความล่าช้าได้ถึง 30 นาที
 
-<span data-ttu-id="23896-118">หากต้องการใช้ตัวอย่าง คุณต้องทำตามข้อกำหนดต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="23896-118">To use the sample, you must meet the following requirements:</span></span>
+หากต้องการใช้ตัวอย่าง คุณต้องทำตามข้อกำหนดต่อไปนี้:
 
-- <span data-ttu-id="23896-119">ติดตั้ง[มอดูล Power BI PowerShell](/powershell/power-bi/overview)</span><span class="sxs-lookup"><span data-stu-id="23896-119">Install the [Power BI PowerShell modules](/powershell/power-bi/overview).</span></span>
-- <span data-ttu-id="23896-120">ผู้ใช้สคริปต์ PowerShell ต้องลงชื่อเข้าใช้ด้วย [Connect-PowerBIServiceAccount cmdlet](/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount) และระบุข้อมูลประจำตัว Power BI เมื่อได้รับข้อความแจ้งเตือน</span><span class="sxs-lookup"><span data-stu-id="23896-120">The user of the PowerShell script must sign in using the [Connect-PowerBIServiceAccount cmdlet](/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount) and enter Power BI admin credentials when prompted.</span></span> <span data-ttu-id="23896-121">จำเป็นต้องมีสิทธิ์ผู้ดูแลระบบเพื่อใช้ API บันทึกกิจกรรม</span><span class="sxs-lookup"><span data-stu-id="23896-121">Admin privileges are required to use the Activity Log API.</span></span>
+- ติดตั้ง[มอดูล Power BI PowerShell](/powershell/power-bi/overview)
+- ผู้ใช้สคริปต์ PowerShell ต้องลงชื่อเข้าใช้ด้วย [Connect-PowerBIServiceAccount cmdlet](/powershell/module/microsoftpowerbimgmt.profile/connect-powerbiserviceaccount) และระบุข้อมูลประจำตัว Power BI เมื่อได้รับข้อความแจ้งเตือน จำเป็นต้องมีสิทธิ์ผู้ดูแลระบบเพื่อใช้ API บันทึกกิจกรรม
 
 > [!IMPORTANT]
-> <span data-ttu-id="23896-122">ผู้ใช้ที่ไม่มีสิทธิ์ของผู้ดูแลระบบจะไม่สามารถดำเนินการกับส่วนย่อยของรหัสในสคริปต์ตัวอย่างได้</span><span class="sxs-lookup"><span data-stu-id="23896-122">Users without admin privileges won't be able to execute code fragments in the sample script.</span></span>
+> ผู้ใช้ที่ไม่มีสิทธิ์ของผู้ดูแลระบบจะไม่สามารถดำเนินการกับส่วนย่อยของรหัสในสคริปต์ตัวอย่างได้
 
 ```powershell
 # Written by Sergei Gundorov; v1 development started on 07/08/2020
@@ -193,10 +193,10 @@ for($s=0; $s -le 30; $s++)
 }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="23896-123">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="23896-123">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="23896-124">สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="23896-124">For more information related to this article, check out the following resources:</span></span>
+สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:
 
-- [<span data-ttu-id="23896-125">ติดตามกิจกรรมของผู้ใช้ใน Power BI</span><span class="sxs-lookup"><span data-stu-id="23896-125">Track user activities in Power BI</span></span>](../admin/service-admin-auditing.md#use-the-activity-log)
-- <span data-ttu-id="23896-126">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="23896-126">Questions?</span></span> [<span data-ttu-id="23896-127">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="23896-127">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="23896-128">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="23896-128">Suggestions?</span></span> [<span data-ttu-id="23896-129">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="23896-129">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+- [ติดตามกิจกรรมของผู้ใช้ใน Power BI](../admin/service-admin-auditing.md#use-the-activity-log)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)

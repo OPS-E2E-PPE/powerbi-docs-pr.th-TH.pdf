@@ -16,50 +16,50 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97887787"
 ---
-# <a name="power-bi-visuals-interactivity-utils"></a><span data-ttu-id="d8ffd-104">utils การโต้ตอบวิชวลของ Power BI</span><span class="sxs-lookup"><span data-stu-id="d8ffd-104">Power BI visuals interactivity utils</span></span>
+# <a name="power-bi-visuals-interactivity-utils"></a>utils การโต้ตอบวิชวลของ Power BI
 
-<span data-ttu-id="d8ffd-105">InteractiveivityUtils (`InteractivityUtils`) เป็นชุดของฟังก์ชันและคลาสเพื่อให้ง่ายต่อการใช้งานการเลือกข้ามและการกรองข้าม</span><span class="sxs-lookup"><span data-stu-id="d8ffd-105">Interactivity utils (`InteractivityUtils`) is a set of functions and classes that can be used to simplify the implementation of cross-selection and cross-filtering.</span></span>
+InteractiveivityUtils (`InteractivityUtils`) เป็นชุดของฟังก์ชันและคลาสเพื่อให้ง่ายต่อการใช้งานการเลือกข้ามและการกรองข้าม
 
 > [!NOTE]
-> <span data-ttu-id="d8ffd-106">การอัปเดตยูทิลิตี้การโต้ตอบใหม่จะรองรับเฉพาะเครื่องเวอร์ชันล่าสุดเท่านั้น (3.x.x และใหม่กว่า)</span><span class="sxs-lookup"><span data-stu-id="d8ffd-106">The new updates of interactivity utils support only the latest version of tools (3.x.x and above).</span></span>
+> การอัปเดตยูทิลิตี้การโต้ตอบใหม่จะรองรับเฉพาะเครื่องเวอร์ชันล่าสุดเท่านั้น (3.x.x และใหม่กว่า)
 
-## <a name="installation"></a><span data-ttu-id="d8ffd-107">การติดตั้ง</span><span class="sxs-lookup"><span data-stu-id="d8ffd-107">Installation</span></span>
+## <a name="installation"></a>การติดตั้ง
 
-1. <span data-ttu-id="d8ffd-108">หากต้องการติดตั้งแพ็คเกจ คุณควรเรียกใช้คำสั่งต่อไปนี้ในไดเรกทอรีด้วยโครงการการแสดงผลด้วยภาพของ Power BI ปัจจุบันของคุณ</span><span class="sxs-lookup"><span data-stu-id="d8ffd-108">To install the package, run the following command in the directory with your current Power BI visual project.</span></span>
+1. หากต้องการติดตั้งแพ็คเกจ คุณควรเรียกใช้คำสั่งต่อไปนี้ในไดเรกทอรีด้วยโครงการการแสดงผลด้วยภาพของ Power BI ปัจจุบันของคุณ
 
     ```bash
     npm install powerbi-visuals-utils-interactivityutils --save
     ```
 
-2. <span data-ttu-id="d8ffd-109">ถ้าคุณกำลังใช้รุ่น 3.0 หรือใหม่กว่าหรือเครื่องมือ ให้ติดตั้ง `powerbi-models` เพื่อแก้ไขการขึ้นต่อกัน</span><span class="sxs-lookup"><span data-stu-id="d8ffd-109">If you're using version 3.0 or later or the tool, install `powerbi-models` to resolve dependencies.</span></span>
+2. ถ้าคุณกำลังใช้รุ่น 3.0 หรือใหม่กว่าหรือเครื่องมือ ให้ติดตั้ง `powerbi-models` เพื่อแก้ไขการขึ้นต่อกัน
 
     ```bash
     npm install powerbi-models --save
     ```
 
-3. <span data-ttu-id="d8ffd-110">หากต้องการใช้ยูทิลิตี้การโต้ตอบ คุณต้องนำเข้าคอมโพเนนต์ที่จำเป็นในโค้ดต้นฉบับของการแสดงผลด้วยภาพ</span><span class="sxs-lookup"><span data-stu-id="d8ffd-110">To use interactivity utils, import the required component in the source code of the Power BI visual.</span></span>
+3. หากต้องการใช้ยูทิลิตี้การโต้ตอบ คุณต้องนำเข้าคอมโพเนนต์ที่จำเป็นในโค้ดต้นฉบับของการแสดงผลด้วยภาพ
 
     ```typescript
     import { interactivitySelectionService } from "powerbi-visuals-utils-interactivityutils";
     ```
 
-### <a name="including-the-css-files"></a><span data-ttu-id="d8ffd-111">รวมถึงไฟล์ CSS</span><span class="sxs-lookup"><span data-stu-id="d8ffd-111">Including the CSS files</span></span>
+### <a name="including-the-css-files"></a>รวมถึงไฟล์ CSS
 
-<span data-ttu-id="d8ffd-112">หากต้องการใช้แพ็คเกจกับการแสดงผลด้วยภาพของ Power BI คุณควรนำเข้าไฟล์ CSS ไปยังไฟล์ `.less`  ดังนี้</span><span class="sxs-lookup"><span data-stu-id="d8ffd-112">To use the package with your Power BI visual, import the following CSS file to your `.less` file.</span></span>
+หากต้องการใช้แพ็คเกจกับการแสดงผลด้วยภาพของ Power BI คุณควรนำเข้าไฟล์ CSS ไปยังไฟล์ `.less`  ดังนี้
 
 `node_modules/powerbi-visuals-utils-interactivityutils/lib/index.css`
 
-<span data-ttu-id="d8ffd-113">นำเข้าไฟล์ CSS เป็นไฟล์ `.less` เนื่องจากเครื่องมือการแสดงผลด้วยภาพของ Power BI คลุมกฎ CSS ภายนอก</span><span class="sxs-lookup"><span data-stu-id="d8ffd-113">Import the CSS file as a `.less` file because the Power BI visuals tool wraps external CSS rules.</span></span>
+นำเข้าไฟล์ CSS เป็นไฟล์ `.less` เนื่องจากเครื่องมือการแสดงผลด้วยภาพของ Power BI คลุมกฎ CSS ภายนอก
 
 ```less
 @import (less) "node_modules/powerbi-visuals-utils-interactivityutils/lib/index.css";
 ```
 
-## <a name="selectabledatapoint-properties"></a><span data-ttu-id="d8ffd-114">คุณสมบัติ SelectableDataPoint</span><span class="sxs-lookup"><span data-stu-id="d8ffd-114">SelectableDataPoint properties</span></span>
+## <a name="selectabledatapoint-properties"></a>คุณสมบัติ SelectableDataPoint
 
-<span data-ttu-id="d8ffd-115">โดยทั่วไปจุดข้อมูลประกอบด้วยตัวเลือกและค่าต่างๆ</span><span class="sxs-lookup"><span data-stu-id="d8ffd-115">Usually, data points contain selections and values.</span></span> <span data-ttu-id="d8ffd-116">อินเทอร์เฟซจะขยายอินเทอร์เฟซ `SelectableDataPoint`</span><span class="sxs-lookup"><span data-stu-id="d8ffd-116">The interface extends the `SelectableDataPoint` interface.</span></span>
+โดยทั่วไปจุดข้อมูลประกอบด้วยตัวเลือกและค่าต่างๆ อินเทอร์เฟซจะขยายอินเทอร์เฟซ `SelectableDataPoint`
 
-<span data-ttu-id="d8ffd-117">`SelectableDataPoint` มีคุณสมบัติตามที่อธิบายไว้ด้านล่างแล้ว</span><span class="sxs-lookup"><span data-stu-id="d8ffd-117">`SelectableDataPoint` already contains properties as described below.</span></span>
+`SelectableDataPoint` มีคุณสมบัติตามที่อธิบายไว้ด้านล่างแล้ว
 
 ```typescript
   /** Flag for identifying that a data point was selected */
@@ -77,9 +77,9 @@ ms.locfileid: "97887787"
   specificIdentity?: powerbi.extensibility.ISelectionId;
 ```
 
-## <a name="defining-an-interface-for-data-points"></a><span data-ttu-id="d8ffd-118">กำหนดอินเทอร์เฟซสำหรับจุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="d8ffd-118">Defining an interface for data points</span></span>
+## <a name="defining-an-interface-for-data-points"></a>กำหนดอินเทอร์เฟซสำหรับจุดข้อมูล
 
-1. <span data-ttu-id="d8ffd-119">สร้างอินสแตนซ์ของยูทิลิตี้แบบโต้ตอบและบันทึกวัตถุเป็นคุณสมบัติของการแสดงผลด้วยภาพ</span><span class="sxs-lookup"><span data-stu-id="d8ffd-119">Create an instance of interactivity utils and save the object as a property of the visual</span></span>
+1. สร้างอินสแตนซ์ของยูทิลิตี้แบบโต้ตอบและบันทึกวัตถุเป็นคุณสมบัติของการแสดงผลด้วยภาพ
 
     ```typescript
     export class Visual implements IVisual {
@@ -102,12 +102,12 @@ ms.locfileid: "97887787"
     }
     ```
 
-2. <span data-ttu-id="d8ffd-120">ขยายคลาสของลักษณะการทำงานพื้นฐาน</span><span class="sxs-lookup"><span data-stu-id="d8ffd-120">Extend the base behavior class.</span></span>
+2. ขยายคลาสของลักษณะการทำงานพื้นฐาน
 
     > [!NOTE]
-    > <span data-ttu-id="d8ffd-121">`BaseBehavior` ได้รับการแนะนำใน[ยูทิลิตี้แบบโต้ตอบเวอร์ชัน 5.6.x](https://www.npmjs.com/package/powerbi-visuals-utils-interactivityutils/v/5.6.0)</span><span class="sxs-lookup"><span data-stu-id="d8ffd-121">`BaseBehavior` was introduced in the [5.6.x version of interactivity utils](https://www.npmjs.com/package/powerbi-visuals-utils-interactivityutils/v/5.6.0).</span></span> <span data-ttu-id="d8ffd-122">หากคุณใช้เวอร์ชันเก่า ให้สร้างคลาสลักษณะการทำงานจากตัวอย่างด้านล่าง</span><span class="sxs-lookup"><span data-stu-id="d8ffd-122">If you use an older version, create a behavior class from the sample below.</span></span>
+    > `BaseBehavior` ได้รับการแนะนำใน[ยูทิลิตี้แบบโต้ตอบเวอร์ชัน 5.6.x](https://www.npmjs.com/package/powerbi-visuals-utils-interactivityutils/v/5.6.0) หากคุณใช้เวอร์ชันเก่า ให้สร้างคลาสลักษณะการทำงานจากตัวอย่างด้านล่าง
 
-3. <span data-ttu-id="d8ffd-123">กำหนดอินเทอร์เฟซสำหรับตัวเลือกของคลาสลักษณะการทำงาน</span><span class="sxs-lookup"><span data-stu-id="d8ffd-123">Define the interface for the behavior class options.</span></span>
+3. กำหนดอินเทอร์เฟซสำหรับตัวเลือกของคลาสลักษณะการทำงาน
 
     ```typescript
     import { SelectableDataPoint } from "./interactivitySelectionService";
@@ -127,18 +127,18 @@ ms.locfileid: "97887787"
     }
     ```
 
-4. <span data-ttu-id="d8ffd-124">กำหนดคลาสสำหรับ `visual behavior`</span><span class="sxs-lookup"><span data-stu-id="d8ffd-124">Define a class for `visual behavior`.</span></span> <span data-ttu-id="d8ffd-125">หรือขยายคลาส `BaseBehavior`</span><span class="sxs-lookup"><span data-stu-id="d8ffd-125">Or, extend the `BaseBehavior` class.</span></span>
+4. กำหนดคลาสสำหรับ `visual behavior` หรือขยายคลาส `BaseBehavior`
 
-    <span data-ttu-id="d8ffd-126">**กำหนดคลาสสำหรับ `visual behavior`**</span><span class="sxs-lookup"><span data-stu-id="d8ffd-126">**Defining a class for `visual behavior`**</span></span>
+    **กำหนดคลาสสำหรับ `visual behavior`**
 
-    <span data-ttu-id="d8ffd-127">คลาสจะรับผิดชอบในการจัดการ `click` `contextmenu` กิจกรรมของเม้าส์</span><span class="sxs-lookup"><span data-stu-id="d8ffd-127">The class is responsible to handle `click` `contextmenu` mouse events.</span></span>
+    คลาสจะรับผิดชอบในการจัดการ `click` `contextmenu` กิจกรรมของเม้าส์
 
-    <span data-ttu-id="d8ffd-128">เมื่อผู้ใช้คลิกองค์ประกอบข้อมูล การแสดงผลด้วยภาพจะใช้ตัวจัดการการเลือกเพื่อเลือกจุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="d8ffd-128">When a user clicks on data elements, the visual calls the selection handler to select data points.</span></span> <span data-ttu-id="d8ffd-129">หากผู้ใช้คลิกที่องค์ประกอบพื้นหลังของการแสดงผลด้วยภาพ จะเป็นการเรียกใช้ตัวจัดการล้างการเลือก</span><span class="sxs-lookup"><span data-stu-id="d8ffd-129">if the user clicks on the background element of the visual, it calls the clear selection handler.</span></span>
+    เมื่อผู้ใช้คลิกองค์ประกอบข้อมูล การแสดงผลด้วยภาพจะใช้ตัวจัดการการเลือกเพื่อเลือกจุดข้อมูล หากผู้ใช้คลิกที่องค์ประกอบพื้นหลังของการแสดงผลด้วยภาพ จะเป็นการเรียกใช้ตัวจัดการล้างการเลือก
 
-    <span data-ttu-id="d8ffd-130">และคลาสจะมีวิธีการที่สอดคล้องกันดังนี้:</span><span class="sxs-lookup"><span data-stu-id="d8ffd-130">The class has the following correspond methods:</span></span>
+    และคลาสจะมีวิธีการที่สอดคล้องกันดังนี้:
     * `bindClick`
     * `bindClearCatcher`
-    * <span data-ttu-id="d8ffd-131">`bindContextMenu`.</span><span class="sxs-lookup"><span data-stu-id="d8ffd-131">`bindContextMenu`.</span></span>
+    * `bindContextMenu`.
 
     ```typescript
     export class Behavior<SelectableDataPointType extends BaseDataPoint> implements IInteractiveBehavior {
@@ -171,7 +171,7 @@ ms.locfileid: "97887787"
     }
     ```
 
-    <span data-ttu-id="d8ffd-132">**การขยาย`BaseBehavior`คลาส**</span><span class="sxs-lookup"><span data-stu-id="d8ffd-132">**Extending the `BaseBehavior` class**</span></span>
+    **การขยาย`BaseBehavior`คลาส**
 
     ```typescript
     import powerbi from "powerbi-visuals-api";
@@ -186,7 +186,7 @@ ms.locfileid: "97887787"
     }
     ```
 
-5. <span data-ttu-id="d8ffd-133">หากต้องการจัดการการคลิกที่องค์ประกอบ ให้เรียกใช้วิธีการ *การเลือกวัตถุ* d3`on`</span><span class="sxs-lookup"><span data-stu-id="d8ffd-133">To handle click on elements, call the *d3* selection object `on` method.</span></span> <span data-ttu-id="d8ffd-134">นอกจากนี้ยังใช้สำหรับ `elementsSelection` และ `clearCatcherSelection`</span><span class="sxs-lookup"><span data-stu-id="d8ffd-134">This also applies for `elementsSelection` and `clearCatcherSelection`.</span></span>
+5. หากต้องการจัดการการคลิกที่องค์ประกอบ ให้เรียกใช้วิธีการ *การเลือกวัตถุ* d3`on` นอกจากนี้ยังใช้สำหรับ `elementsSelection` และ `clearCatcherSelection`
 
     ```typescript
     protected bindClick() {
@@ -203,7 +203,7 @@ ms.locfileid: "97887787"
     }
     ```
 
-6. <span data-ttu-id="d8ffd-135">เพิ่มตัวจัดการที่คล้ายกันสำหรับเหตุการณ์ `contextmenu` เพื่อเรียกใช้วิธีการ `showContextMenu` ของผู้จัดการการเลือก</span><span class="sxs-lookup"><span data-stu-id="d8ffd-135">Add a similar handler for the `contextmenu` event, to call the selection manager's `showContextMenu` method.</span></span>
+6. เพิ่มตัวจัดการที่คล้ายกันสำหรับเหตุการณ์ `contextmenu` เพื่อเรียกใช้วิธีการ `showContextMenu` ของผู้จัดการการเลือก
 
     ```typescript
     protected bindContextMenu() {
@@ -226,7 +226,7 @@ ms.locfileid: "97887787"
     }
     ```
 
-7. <span data-ttu-id="d8ffd-136">เพื่อกำหนดฟังก์ชันให้กับตัวจัดการยูทิลิตี้การโต้ตอบให้เรียกใช้วิธีการ `bindEvents`</span><span class="sxs-lookup"><span data-stu-id="d8ffd-136">To assign functions to handlers, the interactivity utils calls the `bindEvents` method.</span></span> <span data-ttu-id="d8ffd-137">เพิ่มการเรียกไปยังวิธีการ `bindEvents` ต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="d8ffd-137">Add the following calls to  the `bindEvents` method:</span></span>
+7. เพื่อกำหนดฟังก์ชันให้กับตัวจัดการยูทิลิตี้การโต้ตอบให้เรียกใช้วิธีการ `bindEvents` เพิ่มการเรียกไปยังวิธีการ `bindEvents` ต่อไปนี้:
     * `bindClick`
     * `bindClearCatcher`
     * `bindContextMenu`
@@ -245,7 +245,7 @@ ms.locfileid: "97887787"
       }
     ```
 
-8. <span data-ttu-id="d8ffd-138">เมธอด `renderSelection` จะรับผิดชอบในการปรับปรุงสถานะวิชวลขององค์ประกอบในแผนภูมิ</span><span class="sxs-lookup"><span data-stu-id="d8ffd-138">The `renderSelection` method is responsible for updating the visual state of elements in the chart.</span></span> <span data-ttu-id="d8ffd-139">ตัวอย่างของวิธีการ `renderSelection` การดำเนินการ:</span><span class="sxs-lookup"><span data-stu-id="d8ffd-139">Here's a sample implementation of `renderSelection`.</span></span>
+8. เมธอด `renderSelection` จะรับผิดชอบในการปรับปรุงสถานะวิชวลขององค์ประกอบในแผนภูมิ ตัวอย่างของวิธีการ `renderSelection` การดำเนินการ:
 
     ```typescript
     public renderSelection(hasSelection: boolean): void {
@@ -259,7 +259,7 @@ ms.locfileid: "97887787"
     }
     ```
 
-9. <span data-ttu-id="d8ffd-140">ขั้นตอนสุดท้ายคือการสร้างอินสแตนซ์ของ `visual behavior` และเรียกใช้วิธีการ `bind` ของอินสแตนซ์ยูทิลิตี้การโต้ตอบดังนี้:</span><span class="sxs-lookup"><span data-stu-id="d8ffd-140">The last step is creating an instance of `visual behavior`, and calling the `bind` method of the interactivity utils instance.</span></span>
+9. ขั้นตอนสุดท้ายคือการสร้างอินสแตนซ์ของ `visual behavior` และเรียกใช้วิธีการ `bind` ของอินสแตนซ์ยูทิลิตี้การโต้ตอบดังนี้:
 
     ```typescript
     this.interactivity.bind(<BaseBehaviorOptions<VisualDataPoint>>{
@@ -270,10 +270,10 @@ ms.locfileid: "97887787"
     });
     ```
 
-    * <span data-ttu-id="d8ffd-141">`selectionMerge` เป็นออบเจ็กต์การเลือก *d3* ซึ่งจะแสดงองค์ประกอบที่สามารถเลือกได้ทั้งหมดในการแสดงผลด้วยภาพ</span><span class="sxs-lookup"><span data-stu-id="d8ffd-141">`selectionMerge` is the *d3* selection object, which represents all the visuals's selectable elements.</span></span>
-    * <span data-ttu-id="d8ffd-142">`select(this.target)` เป็นออบเจ็กต์การเลือก *d3* ซึ่งจะแสดงองค์ประกอบ DOM หลักของการแสดงผลด้วยภาพ</span><span class="sxs-lookup"><span data-stu-id="d8ffd-142">`select(this.target)` is the *d3* selection object, which represents the visual's main DOM elements.</span></span>
-    * <span data-ttu-id="d8ffd-143">`this.categories` เป็นจุดข้อมูลที่มีองค์ประกอบ ที่ซึ่งอินเทอร์เฟซคือ `VisualDataPoint` (หรือ `categories: VisualDataPoint[];`)</span><span class="sxs-lookup"><span data-stu-id="d8ffd-143">`this.categories` are data points with elements, where the interface is `VisualDataPoint` or `categories: VisualDataPoint[];`.</span></span>
-    * <span data-ttu-id="d8ffd-144">`this.behavior` เป็นอินสแตนซ์ใหม่ของ `visual behavior` ที่สร้างขึ้นในตัวจัดการของการแสดงผลด้วยภาพดังที่แสดงด้านล่าง</span><span class="sxs-lookup"><span data-stu-id="d8ffd-144">`this.behavior` is a new instance of `visual behavior` created in the constructor of the visual, as shown below.</span></span>
+    * `selectionMerge` เป็นออบเจ็กต์การเลือก *d3* ซึ่งจะแสดงองค์ประกอบที่สามารถเลือกได้ทั้งหมดในการแสดงผลด้วยภาพ
+    * `select(this.target)` เป็นออบเจ็กต์การเลือก *d3* ซึ่งจะแสดงองค์ประกอบ DOM หลักของการแสดงผลด้วยภาพ
+    * `this.categories` เป็นจุดข้อมูลที่มีองค์ประกอบ ที่ซึ่งอินเทอร์เฟซคือ `VisualDataPoint` (หรือ `categories: VisualDataPoint[];`)
+    * `this.behavior` เป็นอินสแตนซ์ใหม่ของ `visual behavior` ที่สร้างขึ้นในตัวจัดการของการแสดงผลด้วยภาพดังที่แสดงด้านล่าง
 
       ```typescript
       export class Visual implements IVisual {
@@ -285,10 +285,10 @@ ms.locfileid: "97887787"
         // ...
       }
       ```
-## <a name="next-steps"></a><span data-ttu-id="d8ffd-145">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="d8ffd-145">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-* [<span data-ttu-id="d8ffd-146">อ่านวิธีการจัดการกับการเลือกในการสลับบุ๊กมาร์ก</span><span class="sxs-lookup"><span data-stu-id="d8ffd-146">Read how to handle selections on bookmarks switching</span></span>](bookmarks-support.md#visuals-with-selection)
+* [อ่านวิธีการจัดการกับการเลือกในการสลับบุ๊กมาร์ก](bookmarks-support.md#visuals-with-selection)
 
-* [<span data-ttu-id="d8ffd-147">อ่านวิธีการเพิ่มเมนูบริบทสำหรับจุดข้อมูลภาพ</span><span class="sxs-lookup"><span data-stu-id="d8ffd-147">Read how to add context menu for visuals data points</span></span>](context-menu.md)
+* [อ่านวิธีการเพิ่มเมนูบริบทสำหรับจุดข้อมูลภาพ](context-menu.md)
 
-* [<span data-ttu-id="d8ffd-148">อ่านวิธีการใช้ตัวจัดการการเลือกเพื่อเพิ่มการเลือกลงในการแสดงด้วยภาพของ Power BI</span><span class="sxs-lookup"><span data-stu-id="d8ffd-148">Read how to use selection manager to add selections into Power BI Visuals</span></span>](selection-api.md)
+* [อ่านวิธีการใช้ตัวจัดการการเลือกเพื่อเพิ่มการเลือกลงในการแสดงด้วยภาพของ Power BI](selection-api.md)

@@ -16,14 +16,14 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97888707"
 ---
-# <a name="add-context-menu-to-power-bi-visual"></a><span data-ttu-id="74280-104">เพิ่มเมนูบริบทไปยัง Power BI Visual</span><span class="sxs-lookup"><span data-stu-id="74280-104">Add context menu to Power BI Visual</span></span>
+# <a name="add-context-menu-to-power-bi-visual"></a>เพิ่มเมนูบริบทไปยัง Power BI Visual
 
-<span data-ttu-id="74280-105">คุณสามารถใช้ `selectionManager.showContextMenu()`กับพารามิเตอร์ `selectionId`และตำแหน่ง (เป็นวัตถุ `{x:, y:}`) เพื่อให้ Power BI แสดงเมนูบริบทสำหรับการแสดงผลด้วยภาพของคุณได้</span><span class="sxs-lookup"><span data-stu-id="74280-105">You can use `selectionManager.showContextMenu()` with parameters `selectionId` and a position (as an `{x:, y:}` object) to have Power BI display a context menu for your visual.</span></span>
+คุณสามารถใช้ `selectionManager.showContextMenu()`กับพารามิเตอร์ `selectionId`และตำแหน่ง (เป็นวัตถุ `{x:, y:}`) เพื่อให้ Power BI แสดงเมนูบริบทสำหรับการแสดงผลด้วยภาพของคุณได้
 
 > [!IMPORTANT]
-> <span data-ttu-id="74280-106">`selectionManager.showContextMenu()`ได้รับการแนะนำใน Visuals API 1.7.0</span><span class="sxs-lookup"><span data-stu-id="74280-106">The `selectionManager.showContextMenu()` was introduced in Visuals API 2.2.0.</span></span>
+> `selectionManager.showContextMenu()`ได้รับการแนะนำใน Visuals API 1.7.0
 
-<span data-ttu-id="74280-107">โดยทั่วไปแล้วจะถูกเพิ่มเป็นการ "คลิกขวา" ที่เหตุการณ์ (หรือ "แตะ" สำหรับอุปกรณ์สัมผัส) ที่มีการเพิ่มเมนูบริบทในตัวอย่าง BarChart สำหรับการอ้างอิง:</span><span class="sxs-lookup"><span data-stu-id="74280-107">Typically it's added as a right-click event (or long-press for touch devices) Context-Menu was added to the sample BarChart for reference:</span></span>
+โดยทั่วไปแล้วจะถูกเพิ่มเป็นการ "คลิกขวา" ที่เหตุการณ์ (หรือ "แตะ" สำหรับอุปกรณ์สัมผัส) ที่มีการเพิ่มเมนูบริบทในตัวอย่าง BarChart สำหรับการอ้างอิง:
 
 ```typescript
     public update(options: VisualUpdateOptions) {

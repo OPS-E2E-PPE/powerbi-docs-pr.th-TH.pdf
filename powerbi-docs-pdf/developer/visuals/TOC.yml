@@ -12,7 +12,7 @@
       items:
         - name: 'บทช่วยสอน: การพัฒนาการ์ดวงกลม Power BI ภาพ'
           href: develop-circle-card.md
-        - name: สร้างวิชวลตามการตอบสนอง
+        - name: 'บทช่วยสอน: สร้างวิชวล Power BI โดยใช้การตอบสนอง'
           href: create-react-visual.md
         - name: สร้างแผนภูมิแท่ง
           href: create-bar-chart.md

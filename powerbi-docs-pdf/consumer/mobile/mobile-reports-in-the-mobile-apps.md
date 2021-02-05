@@ -15,199 +15,199 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 12/18/2020
 ms.locfileid: "97675442"
 ---
-# <a name="explore-reports-in-the-power-bi-mobile-apps"></a><span data-ttu-id="59a76-104">สำรวจรายงานในแอปอุปกรณ์เคลื่อนที่ Power BI</span><span class="sxs-lookup"><span data-stu-id="59a76-104">Explore reports in the Power BI mobile apps</span></span>
-<span data-ttu-id="59a76-105">นำไปใช้กับ:</span><span class="sxs-lookup"><span data-stu-id="59a76-105">Applies to:</span></span>
+# <a name="explore-reports-in-the-power-bi-mobile-apps"></a>สำรวจรายงานในแอปอุปกรณ์เคลื่อนที่ Power BI
+นำไปใช้กับ:
 
 | ![iPhone](././media/mobile-reports-in-the-mobile-apps/ios-logo-40-px.png) | ![iPad](././media/mobile-reports-in-the-mobile-apps/ios-logo-40-px.png) | ![โทรศัพท์ Android](././media/mobile-reports-in-the-mobile-apps/android-logo-40-px.png) | ![แท็บเล็ต Android](././media/mobile-reports-in-the-mobile-apps/android-logo-40-px.png) | ![อุปกรณ์ Windows 10](./media/mobile-reports-in-the-mobile-apps/win-10-logo-40-px.png) |
 |:---: |:---: |:---: |:---: |:---: |
-| <span data-ttu-id="59a76-111">iPhone</span><span class="sxs-lookup"><span data-stu-id="59a76-111">iPhones</span></span> |<span data-ttu-id="59a76-112">iPad</span><span class="sxs-lookup"><span data-stu-id="59a76-112">iPads</span></span> |<span data-ttu-id="59a76-113">โทรศัพท์ Android</span><span class="sxs-lookup"><span data-stu-id="59a76-113">Android phones</span></span> |<span data-ttu-id="59a76-114">แท็บเล็ต Android</span><span class="sxs-lookup"><span data-stu-id="59a76-114">Android tablets</span></span> |<span data-ttu-id="59a76-115">อุปกรณ์ Windows 10</span><span class="sxs-lookup"><span data-stu-id="59a76-115">Windows 10 devices</span></span> |
+| iPhone |iPad |โทรศัพท์ Android |แท็บเล็ต Android |อุปกรณ์ Windows 10 |
 
 >[!NOTE]
-><span data-ttu-id="59a76-116">การสนับสนุนแอปอุปกรณ์เคลื่อนที่ Power BI สำหรับ **โทรศัพท์ที่ใช้ Windows 10 Mobile** จะถูกยกเลิกในวันที่ 16 มีนาคม 2021</span><span class="sxs-lookup"><span data-stu-id="59a76-116">Power BI mobile app support for **phones using Windows 10 Mobile** will be discontinued on March 16, 2021.</span></span> [<span data-ttu-id="59a76-117">ศึกษาเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="59a76-117">Learn more</span></span>](/legal/powerbi/powerbi-mobile/power-bi-mobile-app-end-of-support-for-windows-phones)
+>การสนับสนุนแอปอุปกรณ์เคลื่อนที่ Power BI สำหรับ **โทรศัพท์ที่ใช้ Windows 10 Mobile** จะถูกยกเลิกในวันที่ 16 มีนาคม 2021 [ศึกษาเพิ่มเติม](/legal/powerbi/powerbi-mobile/power-bi-mobile-app-end-of-support-for-windows-phones)
 
-<span data-ttu-id="59a76-118">รายงาน Power BI คือมุมมองแบบโต้ตอบของข้อมูลของคุณ ที่มีการแสดงผลด้วยภาพที่แสดงการค้นพบและข้อมูลเชิงลึกแตกต่างจากข้อมูลนั้น</span><span class="sxs-lookup"><span data-stu-id="59a76-118">A Power BI report is an interactive view of your data, with visuals that represent different findings and insights from that data.</span></span> <span data-ttu-id="59a76-119">การดูรายงานในแอปอุปกรณ์เคลื่อนที่ Power BI เป็นขั้นตอนที่สามในกระบวนการแบบสามขั้นตอน</span><span class="sxs-lookup"><span data-stu-id="59a76-119">Viewing reports in the Power BI mobile apps is the third step in a three-step process:</span></span>
+รายงาน Power BI คือมุมมองแบบโต้ตอบของข้อมูลของคุณ ที่มีการแสดงผลด้วยภาพที่แสดงการค้นพบและข้อมูลเชิงลึกแตกต่างจากข้อมูลนั้น การดูรายงานในแอปอุปกรณ์เคลื่อนที่ Power BI เป็นขั้นตอนที่สามในกระบวนการแบบสามขั้นตอน
 
-1. <span data-ttu-id="59a76-120">[สร้างรายงานใน Power BI Desktop](../../create-reports/desktop-report-view.md)</span><span class="sxs-lookup"><span data-stu-id="59a76-120">[Create reports in Power BI Desktop](../../create-reports/desktop-report-view.md).</span></span> <span data-ttu-id="59a76-121">คุณยังสามารถ [ปรับรายงานให้เหมาะสมสำหรับโทรศัพท์](mobile-apps-view-phone-report.md) ใน Power BI Desktop ได้</span><span class="sxs-lookup"><span data-stu-id="59a76-121">You can even [optimize a report for phones](mobile-apps-view-phone-report.md) in Power BI Desktop.</span></span>
-2. <span data-ttu-id="59a76-122">เผยแพร่รายงานเหล่านั้นไปยังบริการ Power BI [(https://powerbi.com)](https://powerbi.com)หรือ[เซิร์ฟเวอร์รายงาน Power BI](../../report-server/get-started.md)</span><span class="sxs-lookup"><span data-stu-id="59a76-122">Publish those reports to the Power BI service [(https://powerbi.com)](https://powerbi.com) or [Power BI Report Server](../../report-server/get-started.md).</span></span>  
-3. <span data-ttu-id="59a76-123">โต้ตอบกับรายงานเหล่านั้นในแอปอุปกรณ์เคลื่อนที่ Power BI</span><span class="sxs-lookup"><span data-stu-id="59a76-123">Interact with the reports in the Power BI mobile apps.</span></span>
+1. [สร้างรายงานใน Power BI Desktop](../../create-reports/desktop-report-view.md) คุณยังสามารถ [ปรับรายงานให้เหมาะสมสำหรับโทรศัพท์](mobile-apps-view-phone-report.md) ใน Power BI Desktop ได้
+2. เผยแพร่รายงานเหล่านั้นไปยังบริการ Power BI [(https://powerbi.com)](https://powerbi.com)หรือ[เซิร์ฟเวอร์รายงาน Power BI](../../report-server/get-started.md)  
+3. โต้ตอบกับรายงานเหล่านั้นในแอปอุปกรณ์เคลื่อนที่ Power BI
 
-## <a name="open-a-power-bi-report-in-the-mobile-app"></a><span data-ttu-id="59a76-124">เปิดรายงาน Power BI ในแอปอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="59a76-124">Open a Power BI report in the mobile app</span></span>
-<span data-ttu-id="59a76-125">รายงาน Power BI ถูกเก็บไว้ในตำแหน่งที่ต่างกันในแอปอุปกรณ์เคลื่อนที่ตามตำแหน่งที่คุณได้รับรายงานเหล่านั้น</span><span class="sxs-lookup"><span data-stu-id="59a76-125">Power BI reports are stored in different places in the mobile app, depending on where you got them.</span></span> <span data-ttu-id="59a76-126">รายงานเหล่านั้นอาจอยู่ในแอป แชร์กับฉัน พื้นที่ทำงาน (รวมถึงพื้นที่ทำงานขงฉัน) หรือบนเซิร์ฟเวอร์รายงานได้</span><span class="sxs-lookup"><span data-stu-id="59a76-126">They can be in Apps, Shared with me, Workspaces (including My Workspace), or on a report server.</span></span> <span data-ttu-id="59a76-127">ในบางครั้ง คุณเข้าถึงแดชบอร์ดที่เกี่ยวข้องเพื่อเข้าถึงรายงาน และในบางครั้ง ก็มีแสดงรายการไว้</span><span class="sxs-lookup"><span data-stu-id="59a76-127">Sometimes, you go through a related dashboard to get to a report, and sometimes they're listed.</span></span>
+## <a name="open-a-power-bi-report-in-the-mobile-app"></a>เปิดรายงาน Power BI ในแอปอุปกรณ์เคลื่อนที่
+รายงาน Power BI ถูกเก็บไว้ในตำแหน่งที่ต่างกันในแอปอุปกรณ์เคลื่อนที่ตามตำแหน่งที่คุณได้รับรายงานเหล่านั้น รายงานเหล่านั้นอาจอยู่ในแอป แชร์กับฉัน พื้นที่ทำงาน (รวมถึงพื้นที่ทำงานขงฉัน) หรือบนเซิร์ฟเวอร์รายงานได้ ในบางครั้ง คุณเข้าถึงแดชบอร์ดที่เกี่ยวข้องเพื่อเข้าถึงรายงาน และในบางครั้ง ก็มีแสดงรายการไว้
 
-<span data-ttu-id="59a76-128">ในรายการและเมนู คุณจะพบไอคอนถัดจากชื่อรายงาน ซึ่งช่วยให้คุณเข้าใจว่ารายการนี้คือรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-128">In lists and menus, you'll find an icon next to a report name, which helps you understand that the item is a report:</span></span>
+ในรายการและเมนู คุณจะพบไอคอนถัดจากชื่อรายงาน ซึ่งช่วยให้คุณเข้าใจว่ารายการนี้คือรายงาน
 
 ![รายงานในพื้นที่ทำงานของฉัน](./media/mobile-reports-in-the-mobile-apps/reports-my-workspace.png)
 
-<span data-ttu-id="59a76-130">มีสองไอคอนสำหรับรายงานในแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI:</span><span class="sxs-lookup"><span data-stu-id="59a76-130">There are two icons for reports in the Power BI mobile apps:</span></span>
+มีสองไอคอนสำหรับรายงานในแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI:
 
-* ![ไอคอนรายงาน](./media/mobile-reports-in-the-mobile-apps/report-default-icon.png) <span data-ttu-id="59a76-132">ระบุรายงานที่จะปรากฏในการจัดตำแหน่งตามแนวนอนในแอป</span><span class="sxs-lookup"><span data-stu-id="59a76-132">indicates a report that will appear in landscape orientation in the app.</span></span> <span data-ttu-id="59a76-133">ซึ่งจะมีลักษณะเหมือนกับการจัดตำแหน่งที่ปรากฏในเบราว์เซอร์</span><span class="sxs-lookup"><span data-stu-id="59a76-133">It will look the same as it looks in a browser.</span></span>
+* ![ไอคอนรายงาน](./media/mobile-reports-in-the-mobile-apps/report-default-icon.png) ระบุรายงานที่จะปรากฏในการจัดตำแหน่งตามแนวนอนในแอป ซึ่งจะมีลักษณะเหมือนกับการจัดตำแหน่งที่ปรากฏในเบราว์เซอร์
 
-* ![ไอคอนรายงานบนโทรศัพท์](./media/mobile-reports-in-the-mobile-apps/report-phone-icon.png) <span data-ttu-id="59a76-135">ระบุรายงานที่มีหน้ารายงานที่ปรับให้เหมาะสมสำหรับโทรศัพท์อย่างน้อยหนึ่งหน้า ซึ่งจะแสดงในการจัดตำแหน่งตามแนวตั้ง</span><span class="sxs-lookup"><span data-stu-id="59a76-135">indicates a report that has at least one phone-optimized page that will appear in portrait orientation.</span></span>
+* ![ไอคอนรายงานบนโทรศัพท์](./media/mobile-reports-in-the-mobile-apps/report-phone-icon.png) ระบุรายงานที่มีหน้ารายงานที่ปรับให้เหมาะสมสำหรับโทรศัพท์อย่างน้อยหนึ่งหน้า ซึ่งจะแสดงในการจัดตำแหน่งตามแนวตั้ง
 
 > [!NOTE]
-> <span data-ttu-id="59a76-136">เมื่อคุณถือโทรศัพท์ของคุณตามการจัดตำแหน่งในแนวนอน คุณจะได้รับเค้าโครงแนวนอนเสมอ แม้ว่าหน้ารายงานจะมีเค้าโครงแบบอุปกรณ์มือถือก็ตาม</span><span class="sxs-lookup"><span data-stu-id="59a76-136">When you hold your phone in a landscape orientation, you'll always get the landscape layout, even if the report page is in mobile layout.</span></span>
+> เมื่อคุณถือโทรศัพท์ของคุณตามการจัดตำแหน่งในแนวนอน คุณจะได้รับเค้าโครงแนวนอนเสมอ แม้ว่าหน้ารายงานจะมีเค้าโครงแบบอุปกรณ์มือถือก็ตาม
 
-<span data-ttu-id="59a76-137">หากต้องการรับรายงานจากแดชบอร์ด ให้แตะที่ **ตัวเลือกเพิ่มเติม** (...) ตรงมุมขวาบนของไทล์ จากนั้นจึงแตะที่ **เปิดรายงาน**:</span><span class="sxs-lookup"><span data-stu-id="59a76-137">To get to a report from a dashboard, tap **More options** (...) in the upper-right corner of a tile and then tap **Open report**:</span></span>
+หากต้องการรับรายงานจากแดชบอร์ด ให้แตะที่ **ตัวเลือกเพิ่มเติม** (...) ตรงมุมขวาบนของไทล์ จากนั้นจึงแตะที่ **เปิดรายงาน**:
   
   ![เปิดรายงาน](./media/mobile-reports-in-the-mobile-apps/power-bi-android-open-report-tile.png)
   
-  <span data-ttu-id="59a76-139">ไม่สามารถเปิดไทล์ทั้งหมดเป็นรายงานได้</span><span class="sxs-lookup"><span data-stu-id="59a76-139">Not all tiles can be opened as reports.</span></span> <span data-ttu-id="59a76-140">ตัวอย่างเช่น ไทล์ที่สร้างขึ้นเมื่อคุณถามคำถามในกล่องการถามตอบจะไม่เปิดรายงานเมื่อคุณแตะ</span><span class="sxs-lookup"><span data-stu-id="59a76-140">For example, tiles that are created when you ask a question in the Q&A box don't open reports when you tap them.</span></span>
+  ไม่สามารถเปิดไทล์ทั้งหมดเป็นรายงานได้ ตัวอย่างเช่น ไทล์ที่สร้างขึ้นเมื่อคุณถามคำถามในกล่องการถามตอบจะไม่เปิดรายงานเมื่อคุณแตะ
   
-## <a name="zoom-in-on-your-data"></a><span data-ttu-id="59a76-141">ซูมข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="59a76-141">Zoom in on your data</span></span>   
-<span data-ttu-id="59a76-142">ใช้การถ่างนิ้วเพื่อซูมรายงานของคุณเพื่อดูรายละเอียดมากขึ้น</span><span class="sxs-lookup"><span data-stu-id="59a76-142">Use the pinch gesture to zoom into your reports to examine them in greater detail.</span></span> <span data-ttu-id="59a76-143">หุบนิ้วเข้าเพื่อซูมออก</span><span class="sxs-lookup"><span data-stu-id="59a76-143">Unpinch to zoom back out again.</span></span> <span data-ttu-id="59a76-144">ขยายนิ้วเพื่อซูมบนโทรศัพท์ Android และ iOS และแท็บเล็ต</span><span class="sxs-lookup"><span data-stu-id="59a76-144">Pinch-to-zoom is supported on Android and iOS phones and tablets.</span></span>
+## <a name="zoom-in-on-your-data"></a>ซูมข้อมูลของคุณ   
+ใช้การถ่างนิ้วเพื่อซูมรายงานของคุณเพื่อดูรายละเอียดมากขึ้น หุบนิ้วเข้าเพื่อซูมออก ขยายนิ้วเพื่อซูมบนโทรศัพท์ Android และ iOS และแท็บเล็ต
 
-## <a name="interact-with-reports"></a><span data-ttu-id="59a76-145">โต้ตอบกับรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-145">Interact with reports</span></span>
-<span data-ttu-id="59a76-146">หลังจากที่คุณมีรายงานที่เปิดในแอปแล้ว คุณสามารถเริ่มทำงานกับรายงานดังกล่าวได้</span><span class="sxs-lookup"><span data-stu-id="59a76-146">After you have a report open in the app, you can start working with it.</span></span> <span data-ttu-id="59a76-147">คุณสามารถดำเนินงานได้หลายรูปแบบด้วยรายงานและข้อมูลในรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-147">You can do many things with your report and its data.</span></span> <span data-ttu-id="59a76-148">ในส่วนท้ายของรายงาน คุณจะพบการดำเนินการซึ่งคุณสามารถใช้กับรายงานได้</span><span class="sxs-lookup"><span data-stu-id="59a76-148">In the report footer, you'll find actions that you can take on the report.</span></span> <span data-ttu-id="59a76-149">ด้วยการแตะและการแตะยาวบนข้อมูลที่แสดงในรายงาน คุณยังสามารถแบ่งส่วนและตัดข้อมูลได้</span><span class="sxs-lookup"><span data-stu-id="59a76-149">By tapping and long tapping on the data shown in the report, you can also slice and dice the data.</span></span>
+## <a name="interact-with-reports"></a>โต้ตอบกับรายงาน
+หลังจากที่คุณมีรายงานที่เปิดในแอปแล้ว คุณสามารถเริ่มทำงานกับรายงานดังกล่าวได้ คุณสามารถดำเนินงานได้หลายรูปแบบด้วยรายงานและข้อมูลในรายงาน ในส่วนท้ายของรายงาน คุณจะพบการดำเนินการซึ่งคุณสามารถใช้กับรายงานได้ ด้วยการแตะและการแตะยาวบนข้อมูลที่แสดงในรายงาน คุณยังสามารถแบ่งส่วนและตัดข้อมูลได้
 
-### <a name="single-tap-versus-double-tap-interaction"></a><span data-ttu-id="59a76-150">การโต้ตอบแบบแตะครั้งเดียวเทียบกับการโต้ตอบแบบสองครั้ง</span><span class="sxs-lookup"><span data-stu-id="59a76-150">Single-tap versus double-tap interaction</span></span>
-<span data-ttu-id="59a76-151">เมื่อคุณดาวน์โหลดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ จะมีการตั้งค่าสำหรับการโต้ตอบแบบแตะครั้งเดียว</span><span class="sxs-lookup"><span data-stu-id="59a76-151">When you download the Power BI mobile app, it is set for single tap interaction.</span></span> <span data-ttu-id="59a76-152">ซึ่งหมายความว่าเมื่อคุณแตะในวิชวลเพื่อทำการดำเนินการบางอย่างเช่น การเลือกรายการตัวแบ่งส่วนข้อมูล การเน้นข้าม การคลิกที่ลิงก์หรือปุ่ม ฯลฯ การแตะทั้งสองเลือกวิชวลและดำเนินการตามที่คุณต้องการ</span><span class="sxs-lookup"><span data-stu-id="59a76-152">This means that when you tap in a visual to do some action, such as selecting a slicer item, cross highlighting, clicking on a link or button, etc., the tap both selects the visual and performs the action you wanted.</span></span>
+### <a name="single-tap-versus-double-tap-interaction"></a>การโต้ตอบแบบแตะครั้งเดียวเทียบกับการโต้ตอบแบบสองครั้ง
+เมื่อคุณดาวน์โหลดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ จะมีการตั้งค่าสำหรับการโต้ตอบแบบแตะครั้งเดียว ซึ่งหมายความว่าเมื่อคุณแตะในวิชวลเพื่อทำการดำเนินการบางอย่างเช่น การเลือกรายการตัวแบ่งส่วนข้อมูล การเน้นข้าม การคลิกที่ลิงก์หรือปุ่ม ฯลฯ การแตะทั้งสองเลือกวิชวลและดำเนินการตามที่คุณต้องการ
 
-<span data-ttu-id="59a76-153">ถ้าคุณต้องการ คุณสามารถสลับไปยังการโต้ตอบแบบแตะสองครั้งได้</span><span class="sxs-lookup"><span data-stu-id="59a76-153">If you prefer, you can switch to double-tap interaction.</span></span> <span data-ttu-id="59a76-154">ด้วยการแตะสองครั้ง การแตะครั้งแรกที่วิชวลเพื่อเลือก และจากนั้นแตะอีกครั้งในวิชวลเพื่อดำเนินการตามที่คุณต้องการ</span><span class="sxs-lookup"><span data-stu-id="59a76-154">With double tap interaction, you first tap on a visual to select it, and then tap again in the visual to perform your desired action.</span></span>
+ถ้าคุณต้องการ คุณสามารถสลับไปยังการโต้ตอบแบบแตะสองครั้งได้ ด้วยการแตะสองครั้ง การแตะครั้งแรกที่วิชวลเพื่อเลือก และจากนั้นแตะอีกครั้งในวิชวลเพื่อดำเนินการตามที่คุณต้องการ
 
-<span data-ttu-id="59a76-155">เมื่อต้องการสลับไปยังการโต้ตอบแบบสองครั้งแตะหรือสลับกลับไปยังการโต้ตอบแบบแตะครั้งเดียว ให้ไปที่[การตั้งค่าการโต้ตอบของแอป](./mobile-app-interaction-settings.md)</span><span class="sxs-lookup"><span data-stu-id="59a76-155">To switch to double-tap interaction, or to switch back to single-tap interaction, go to [app interaction settings](./mobile-app-interaction-settings.md).</span></span>
+เมื่อต้องการสลับไปยังการโต้ตอบแบบสองครั้งแตะหรือสลับกลับไปยังการโต้ตอบแบบแตะครั้งเดียว ให้ไปที่[การตั้งค่าการโต้ตอบของแอป](./mobile-app-interaction-settings.md)
 
-### <a name="single-select-versus-multi-select-mode-for-data-point-selection"></a><span data-ttu-id="59a76-156">เลือกแบบครั้งเดียวเมื่อเทียบกับโหมดเลือกแบบหลายรายการสำหรับการเลือกจุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="59a76-156">Single-select versus multi-select mode for data point selection</span></span>
+### <a name="single-select-versus-multi-select-mode-for-data-point-selection"></a>เลือกแบบครั้งเดียวเมื่อเทียบกับโหมดเลือกแบบหลายรายการสำหรับการเลือกจุดข้อมูล
 
-<span data-ttu-id="59a76-157">ในรายงาน คุณสามารถแตะที่จุดข้อมูลเพื่อเลือก</span><span class="sxs-lookup"><span data-stu-id="59a76-157">In a report, you tap on a data point to select it.</span></span> <span data-ttu-id="59a76-158">คุณสามารถเลือกว่าคุณต้องการใช้โหมดเลือกแบบครั้งเดียวหรือเลือกแบบหลายรายการ</span><span class="sxs-lookup"><span data-stu-id="59a76-158">You can choose whether you want to use single-select or multi-select mode.</span></span> <span data-ttu-id="59a76-159">ในโหมดเลือกแบบครั้งเดียว เมื่อคุณแตะจุดข้อมูลเพื่อเลือก การเลือกนั้นจะแทนที่การเลือกก่อนหน้าใดๆ ที่คุณได้ทำไว้</span><span class="sxs-lookup"><span data-stu-id="59a76-159">In single-select mode, when you tap on a data point to select it, that selection replaces any previous selection you've made.</span></span> <span data-ttu-id="59a76-160">ในโหมดเลือกแบบหลายรายการ เมื่อคุณแตะจุดข้อมูลเพื่อเลือก การเลือกของคุณจะถูก *เพิ่ม* ไปยังการเลือกใดๆ ที่คุณมีอยู่ในขณะนี้และผลลัพธ์รวมของการเลือกทั้งหมดของคุณจะได้รับการเน้นในภาพทั้งหมดของรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-160">In multi-select mode, when you tap on a data point to select it, your selection is *added* to any selection you currently have, and the combined result of all your selections is highlighted across all the report's visuals.</span></span>
+ในรายงาน คุณสามารถแตะที่จุดข้อมูลเพื่อเลือก คุณสามารถเลือกว่าคุณต้องการใช้โหมดเลือกแบบครั้งเดียวหรือเลือกแบบหลายรายการ ในโหมดเลือกแบบครั้งเดียว เมื่อคุณแตะจุดข้อมูลเพื่อเลือก การเลือกนั้นจะแทนที่การเลือกก่อนหน้าใดๆ ที่คุณได้ทำไว้ ในโหมดเลือกแบบหลายรายการ เมื่อคุณแตะจุดข้อมูลเพื่อเลือก การเลือกของคุณจะถูก *เพิ่ม* ไปยังการเลือกใดๆ ที่คุณมีอยู่ในขณะนี้และผลลัพธ์รวมของการเลือกทั้งหมดของคุณจะได้รับการเน้นในภาพทั้งหมดของรายงาน
 
-<span data-ttu-id="59a76-161">หากต้องการยกเลิกการเลือกจุดข้อมูล เพียงแค่แตะอีกครั้ง</span><span class="sxs-lookup"><span data-stu-id="59a76-161">To deselect a selected data point, simply tap it again.</span></span>
+หากต้องการยกเลิกการเลือกจุดข้อมูล เพียงแค่แตะอีกครั้ง
 
-<span data-ttu-id="59a76-162">เมื่อต้องการสลับไปมาระหว่างโหมดการเลือกแบบครั้งเดียวและเลือกแบบหลายรายการ ให้ไปที่[การตั้งค่าการโต้ตอบแอป](./mobile-app-interaction-settings.md)</span><span class="sxs-lookup"><span data-stu-id="59a76-162">To switch between single-select and multi-select mode, go to the [app interaction settings](./mobile-app-interaction-settings.md).</span></span>
+เมื่อต้องการสลับไปมาระหว่างโหมดการเลือกแบบครั้งเดียวและเลือกแบบหลายรายการ ให้ไปที่[การตั้งค่าการโต้ตอบแอป](./mobile-app-interaction-settings.md)
 
-### <a name="using-tap-and-long-tap"></a><span data-ttu-id="59a76-163">การใช้การแตะและการแตะแบบยาว</span><span class="sxs-lookup"><span data-stu-id="59a76-163">Using tap and long tap</span></span>
-<span data-ttu-id="59a76-164">การแตะจะเหมือนกับการคลิกเมาส์</span><span class="sxs-lookup"><span data-stu-id="59a76-164">A tap is the same as a mouse click.</span></span> <span data-ttu-id="59a76-165">ดังนั้นถ้าคุณต้องการไฮไลท์รายงานแบบเชื่อมโยงตามจุดข้อมูล ให้แตะจุดข้อมูลนั้น</span><span class="sxs-lookup"><span data-stu-id="59a76-165">So, if you want to cross-highlight the report based on a data point, tap that data point.</span></span>
-<span data-ttu-id="59a76-166">เมื่อคุณแตะค่าตัวแบ่งส่วนข้อมูล ค่าจะถูกเลือกและส่วนที่เหลือของรายงานจะแบ่งอตามค่านั้น</span><span class="sxs-lookup"><span data-stu-id="59a76-166">When you tap a slicer value, the value is selected and the rest of the report is sliced by that value.</span></span>
-<span data-ttu-id="59a76-167">เมื่อคุณแตะที่ลิงก์ ปุ่ม หรือบุ๊กมาร์ก การดำเนินการที่ผู้สร้างรายงานกำหนดไว้จะเกิดขึ้น</span><span class="sxs-lookup"><span data-stu-id="59a76-167">When you tap a link, button, or bookmark, the action defined by the report author will occur.</span></span>
+### <a name="using-tap-and-long-tap"></a>การใช้การแตะและการแตะแบบยาว
+การแตะจะเหมือนกับการคลิกเมาส์ ดังนั้นถ้าคุณต้องการไฮไลท์รายงานแบบเชื่อมโยงตามจุดข้อมูล ให้แตะจุดข้อมูลนั้น
+เมื่อคุณแตะค่าตัวแบ่งส่วนข้อมูล ค่าจะถูกเลือกและส่วนที่เหลือของรายงานจะแบ่งอตามค่านั้น
+เมื่อคุณแตะที่ลิงก์ ปุ่ม หรือบุ๊กมาร์ก การดำเนินการที่ผู้สร้างรายงานกำหนดไว้จะเกิดขึ้น
 
-<span data-ttu-id="59a76-168">คุณอาจสังเกตเห็นว่าเมื่อคุณแตะบนการแสดงผลด้วยภาพ เส้นขอบจะปรากฏขึ้น</span><span class="sxs-lookup"><span data-stu-id="59a76-168">You probably noticed that when you tap a visual, a border appears.</span></span> <span data-ttu-id="59a76-169">ที่มุมบนขวาของเส้นขอบ คุณจะเห็น **ตัวเลือกเพิ่มเติม** (...) ถ้าคุณแตะจุดไข่ปลา คุณจะเห็นเมนูการดำเนินการที่คุณสามารถทำได้ใการแสดงผลด้วยภาพนั้น:</span><span class="sxs-lookup"><span data-stu-id="59a76-169">In the upper-right corner of the border, you'll see **More options** (...). If you tap the ellipsis, you'll see a menu of actions you can take on that visual:</span></span>
+คุณอาจสังเกตเห็นว่าเมื่อคุณแตะบนการแสดงผลด้วยภาพ เส้นขอบจะปรากฏขึ้น ที่มุมบนขวาของเส้นขอบ คุณจะเห็น **ตัวเลือกเพิ่มเติม** (...) ถ้าคุณแตะจุดไข่ปลา คุณจะเห็นเมนูการดำเนินการที่คุณสามารถทำได้ใการแสดงผลด้วยภาพนั้น:
 
 ![การแสดงผลด้วยภาพและเมนู](./media/mobile-reports-in-the-mobile-apps/report-visual-menu.png)
 
-### <a name="tooltip-and-drill-actions"></a><span data-ttu-id="59a76-171">คำแนะนำเครื่องมือและการดำเนินการเจาะรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="59a76-171">Tooltip and drill actions</span></span>
-<span data-ttu-id="59a76-172">เมื่อคุณแตะเป็นเวลานาน (แตะค้างไว้) ที่จุดข้อมูล คำแนะนำเครื่องมือซึ่งระบุค่าที่แสดงจุดข้อมูลจะปรากฏขึ้น</span><span class="sxs-lookup"><span data-stu-id="59a76-172">When you long tap (tap and hold) a data point, a tooltip that shows the values the data point represents will appear:</span></span>
+### <a name="tooltip-and-drill-actions"></a>คำแนะนำเครื่องมือและการดำเนินการเจาะรายละเอียด
+เมื่อคุณแตะเป็นเวลานาน (แตะค้างไว้) ที่จุดข้อมูล คำแนะนำเครื่องมือซึ่งระบุค่าที่แสดงจุดข้อมูลจะปรากฏขึ้น
 
 ![คำแนะนำเครื่องมือ](./media/mobile-reports-in-the-mobile-apps/report-tooltip.png)
 
-<span data-ttu-id="59a76-174">ถ้าผู้สร้างรายงานกำหนดค่าคำแนะนำเครื่องมือของหน้ารายงาน คำแนะนำเครื่องมือค่าเริ่มต้นจะถูกแทนที่ด้วยคำแนะนำเครื่องมือของหน้ารายงาน:</span><span class="sxs-lookup"><span data-stu-id="59a76-174">If the report author configured a report page tooltip, the default tooltip is replaced with the report page tooltip:</span></span>
+ถ้าผู้สร้างรายงานกำหนดค่าคำแนะนำเครื่องมือของหน้ารายงาน คำแนะนำเครื่องมือค่าเริ่มต้นจะถูกแทนที่ด้วยคำแนะนำเครื่องมือของหน้ารายงาน:
 
 ![คำแนะนำเครื่องมือของหน้ารายงาน](./media/mobile-reports-in-the-mobile-apps/report-page-tooltip.png)
 
 > [!NOTE]
-> <span data-ttu-id="59a76-176">คำแนะนำเครื่องมือรายงานรองรับอุปกรณ์ที่มีวิวพอร์ต 640 พิกเซลและ 320 พิกเซล</span><span class="sxs-lookup"><span data-stu-id="59a76-176">Report tooltips are supported for devices of at least 640 pixels and 320 pixel viewports.</span></span> <span data-ttu-id="59a76-177">ถ้าอุปกรณ์ของคุณมีขนาดเล็กกว่า แอปจะแสดงคำแนะนำเครื่องมือค่าเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="59a76-177">If your device is smaller, the app shows default tooltips.</span></span>
+> คำแนะนำเครื่องมือรายงานรองรับอุปกรณ์ที่มีวิวพอร์ต 640 พิกเซลและ 320 พิกเซล ถ้าอุปกรณ์ของคุณมีขนาดเล็กกว่า แอปจะแสดงคำแนะนำเครื่องมือค่าเริ่มต้น
 
-<span data-ttu-id="59a76-178">ผู้สร้างรายงานสามารถกำหนดลำดับชั้นในข้อมูลและความสัมพันธ์ระหว่างหน้ารายงานต่าง ๆ</span><span class="sxs-lookup"><span data-stu-id="59a76-178">Report authors can define hierarchies in the data and relationships among report pages.</span></span> <span data-ttu-id="59a76-179">ลำดับชั้นช่วยให้สามารถดูรายละเอียดแนวลึก ดูข้อมูลสรุป และลงรายละเอียดหน้ารายงานอื่นจากการแสดงผลด้วยภาพและค่าได้</span><span class="sxs-lookup"><span data-stu-id="59a76-179">Hierarchies allow you to drill down, drill up, and drill through to another report page from a visual and a value.</span></span> <span data-ttu-id="59a76-180">ดังนั้น เมื่อคุณแตะแบบยาวที่ค่า นอกเหนือจากคำแนะนำเครื่องมือ ตัวเลือกการดูรายละเอียดที่เกี่ยวข้องจะปรากฏในส่วนท้าย:</span><span class="sxs-lookup"><span data-stu-id="59a76-180">So, when you long tap a value, in addition to the tooltip, the relevant drill options will appear in the footer:</span></span>
+ผู้สร้างรายงานสามารถกำหนดลำดับชั้นในข้อมูลและความสัมพันธ์ระหว่างหน้ารายงานต่าง ๆ ลำดับชั้นช่วยให้สามารถดูรายละเอียดแนวลึก ดูข้อมูลสรุป และลงรายละเอียดหน้ารายงานอื่นจากการแสดงผลด้วยภาพและค่าได้ ดังนั้น เมื่อคุณแตะแบบยาวที่ค่า นอกเหนือจากคำแนะนำเครื่องมือ ตัวเลือกการดูรายละเอียดที่เกี่ยวข้องจะปรากฏในส่วนท้าย:
 
 ![การดำเนินการดูรายละเอียด](./media/mobile-reports-in-the-mobile-apps/report-drill-actions.png)
 
 
-<span data-ttu-id="59a76-182">เมื่อคุณแตะส่วนที่เฉพาะเจาะจงของการแสดงผลด้วยภาพ จากนั้นจึงแตะตัวเลือก *การเข้าถึงรายละเอียด* Power BI จะนำคุณไปยังหน้าอื่นในรายงาน ซึ่งกรองตามค่าที่คุณแตะ</span><span class="sxs-lookup"><span data-stu-id="59a76-182">When you tap a specific part of a visual and then tap the *drillthrough* option, Power BI takes you to a different page in the report, filtered to the value you tapped.</span></span> <span data-ttu-id="59a76-183">ผู้สร้างรายงานสามารถกำหนดหนึ่งหรือหลายตัวเลือกสำหรับการเข้าถึงรายละเอียด ซึ่งแต่ละตัวเลือกจะนำคุณไปยังรายงานคนละหน้า</span><span class="sxs-lookup"><span data-stu-id="59a76-183">A report author can define one or more drillthrough options, each taking you to a different page.</span></span> <span data-ttu-id="59a76-184">ในกรณีดังกล่าว คุณสามารถเลือกได้ว่าตัวเลือกใดที่คุณต้องการเข้าถึงรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="59a76-184">In that case, you can choose which option you want to drill through.</span></span> <span data-ttu-id="59a76-185">ปุ่มย้อนกลับจะนำคุณกลับไปยังหน้าก่อนหน้า</span><span class="sxs-lookup"><span data-stu-id="59a76-185">The back button takes you back to the previous page.</span></span>
+เมื่อคุณแตะส่วนที่เฉพาะเจาะจงของการแสดงผลด้วยภาพ จากนั้นจึงแตะตัวเลือก *การเข้าถึงรายละเอียด* Power BI จะนำคุณไปยังหน้าอื่นในรายงาน ซึ่งกรองตามค่าที่คุณแตะ ผู้สร้างรายงานสามารถกำหนดหนึ่งหรือหลายตัวเลือกสำหรับการเข้าถึงรายละเอียด ซึ่งแต่ละตัวเลือกจะนำคุณไปยังรายงานคนละหน้า ในกรณีดังกล่าว คุณสามารถเลือกได้ว่าตัวเลือกใดที่คุณต้องการเข้าถึงรายละเอียด ปุ่มย้อนกลับจะนำคุณกลับไปยังหน้าก่อนหน้า
 
 
-<span data-ttu-id="59a76-186">หากต้องการดูข้อมูลเพิ่มเติม กรุณาอ่านวิธีการ [เพิ่มการเข้าถึงรายละเอียดใน Power BI Desktop](../../create-reports/desktop-drillthrough.md)</span><span class="sxs-lookup"><span data-stu-id="59a76-186">For more information, read about how to [add drillthrough in Power BI Desktop](../../create-reports/desktop-drillthrough.md).</span></span>
+หากต้องการดูข้อมูลเพิ่มเติม กรุณาอ่านวิธีการ [เพิ่มการเข้าถึงรายละเอียดใน Power BI Desktop](../../create-reports/desktop-drillthrough.md)
    
    > [!IMPORTANT]
-   > <span data-ttu-id="59a76-187">ในแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI การดำเนินการดูรายละเอียดในเมทริกซ์และภาพตารางจะเปิดใช้งานผ่านค่าเซลล์เท่านั้น โดยไม่ผ่านคอลัมน์หรือส่วนหัวของแถว</span><span class="sxs-lookup"><span data-stu-id="59a76-187">In the Power BI mobile apps, drill actions in matrix and table visuals are enabled through cell values only, not through column or row headers.</span></span>
+   > ในแอปสำหรับอุปกรณ์เคลื่อนที่ Power BI การดำเนินการดูรายละเอียดในเมทริกซ์และภาพตารางจะเปิดใช้งานผ่านค่าเซลล์เท่านั้น โดยไม่ผ่านคอลัมน์หรือส่วนหัวของแถว
    
    
    
-### <a name="using-the-actions-in-the-report-footer"></a><span data-ttu-id="59a76-188">การใช้การดำเนินการในส่วนท้ายของรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-188">Using the actions in the report footer</span></span>
-<span data-ttu-id="59a76-189">จากส่วนท้ายของรายงาน คุณสามารถดำเนินการได้หลายอย่างบนหน้ารายงานปัจจุบันหรือในรายงานทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="59a76-189">From the report footer, you can perform several actions on the current report page or on the entire report.</span></span> <span data-ttu-id="59a76-190">ส่วนท้ายช่วยให้คุณสามารถเข้าถึงการดำเนินการที่ใช้บ่อยที่สุดได้อย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="59a76-190">The footer provides quick access to the most commonly used actions.</span></span> <span data-ttu-id="59a76-191">คุณสามารถเข้าถึงการดำเนินการอื่น ๆ ได้โดยการแตะที่ปุ่ม **ตัวเลือกเพิ่มเติม** (...):</span><span class="sxs-lookup"><span data-stu-id="59a76-191">You can access other actions by tapping the **More options** (...) button:</span></span>
+### <a name="using-the-actions-in-the-report-footer"></a>การใช้การดำเนินการในส่วนท้ายของรายงาน
+จากส่วนท้ายของรายงาน คุณสามารถดำเนินการได้หลายอย่างบนหน้ารายงานปัจจุบันหรือในรายงานทั้งหมด ส่วนท้ายช่วยให้คุณสามารถเข้าถึงการดำเนินการที่ใช้บ่อยที่สุดได้อย่างรวดเร็ว คุณสามารถเข้าถึงการดำเนินการอื่น ๆ ได้โดยการแตะที่ปุ่ม **ตัวเลือกเพิ่มเติม** (...):
 
 ![ส่วนท้ายของรายงาน](./media/mobile-reports-in-the-mobile-apps/report-footer.png)
 
-<span data-ttu-id="59a76-193">คุณสามารถดำเนินการเหล่านี้ได้จากส่วนท้าย:</span><span class="sxs-lookup"><span data-stu-id="59a76-193">You can perform from these actions from the footer:</span></span>
-* <span data-ttu-id="59a76-194">รีเซ็ตตัวกรองรายงานและการเลือกไฮไลต์แบบเชื่อมโยงกลับไปยังสถานะเดิม</span><span class="sxs-lookup"><span data-stu-id="59a76-194">Reset the report filter and cross-highlight selections back to their original state.</span></span>
-* <span data-ttu-id="59a76-195">เปิดบานหน้าต่างการสนทนาเพื่อดูข้อคิดเห็น หรือเพิ่มข้อคิดเห็นไปที่รายงานนี้</span><span class="sxs-lookup"><span data-stu-id="59a76-195">Open the conversation pane to view comments or to add comments to the report.</span></span>
-* <span data-ttu-id="59a76-196">เปิดบานหน้าต่างตัวกรองเพื่อดูหรือปรับเปลี่ยนตัวกรองที่ถูกนำไปใช้ในรายงานในขณะนี้</span><span class="sxs-lookup"><span data-stu-id="59a76-196">Open the filter pane to view or modify the filter currently applied to the report.</span></span>
-* <span data-ttu-id="59a76-197">ระบุรายการหน้าต่าง ๆ ในรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-197">List all pages in the report.</span></span> <span data-ttu-id="59a76-198">การแตะที่ชื่อหน้าจะโหลดและแสดงหน้านั้น</span><span class="sxs-lookup"><span data-stu-id="59a76-198">Tapping a page name will load and present that page.</span></span>
-<span data-ttu-id="59a76-199">คุณสามารถย้ายระหว่างหน้ารายงานโดยการปัดนิ้วจากขอบของหน้าจอของคุณไปยังศูนย์กลาง</span><span class="sxs-lookup"><span data-stu-id="59a76-199">You can move between report pages by swiping from the edge of your screen to the center.</span></span>
-* <span data-ttu-id="59a76-200">ดูการดำเนินการทั้งหมดบนรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-200">View all report actions.</span></span>
+คุณสามารถดำเนินการเหล่านี้ได้จากส่วนท้าย:
+* รีเซ็ตตัวกรองรายงานและการเลือกไฮไลต์แบบเชื่อมโยงกลับไปยังสถานะเดิม
+* เปิดบานหน้าต่างการสนทนาเพื่อดูข้อคิดเห็น หรือเพิ่มข้อคิดเห็นไปที่รายงานนี้
+* เปิดบานหน้าต่างตัวกรองเพื่อดูหรือปรับเปลี่ยนตัวกรองที่ถูกนำไปใช้ในรายงานในขณะนี้
+* ระบุรายการหน้าต่าง ๆ ในรายงาน การแตะที่ชื่อหน้าจะโหลดและแสดงหน้านั้น
+คุณสามารถย้ายระหว่างหน้ารายงานโดยการปัดนิ้วจากขอบของหน้าจอของคุณไปยังศูนย์กลาง
+* ดูการดำเนินการทั้งหมดบนรายงาน
 
-#### <a name="all-report-actions"></a><span data-ttu-id="59a76-201">การดำเนินการทั้งหมดบนรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-201">All report actions</span></span>
-<span data-ttu-id="59a76-202">เมื่อคุณแตะที่ปุ่ม **ตัวเลือกเพิ่มเติม** (...) ในส่วนท้ายของรายงาน คุณจะเห็นการดำเนินการทั้งหมดที่คุณสามารถทำได้บนรายงาน:</span><span class="sxs-lookup"><span data-stu-id="59a76-202">When you tap the **More options** (...) button in the report footer, you'll see all the actions that you can perform on a report:</span></span>
+#### <a name="all-report-actions"></a>การดำเนินการทั้งหมดบนรายงาน
+เมื่อคุณแตะที่ปุ่ม **ตัวเลือกเพิ่มเติม** (...) ในส่วนท้ายของรายงาน คุณจะเห็นการดำเนินการทั้งหมดที่คุณสามารถทำได้บนรายงาน:
 
 
 ![การดำเนินการทั้งหมดบนรายงาน](./media/mobile-reports-in-the-mobile-apps/power-bi-mobile-report-all-actions.png)
 
-<span data-ttu-id="59a76-204">การดำเนินการบางอย่างอาจถูกปิดใช้งาน ทั้งนี้ขึ้นอยู่กับความสามารถของรายงานที่ระบุ</span><span class="sxs-lookup"><span data-stu-id="59a76-204">Some of the actions might be disabled because they're dependent on the specific report capabilities.</span></span>
-<span data-ttu-id="59a76-205">ตัวอย่างเช่น:</span><span class="sxs-lookup"><span data-stu-id="59a76-205">For example:</span></span>
+การดำเนินการบางอย่างอาจถูกปิดใช้งาน ทั้งนี้ขึ้นอยู่กับความสามารถของรายงานที่ระบุ
+ตัวอย่างเช่น:
 
-<span data-ttu-id="59a76-206">**บุ๊กมาร์ก** จะปรากฏขึ้นเฉพาะเมื่อมีการตั้งค่า [บุ๊กมาร์ก](mobile-reports-in-the-mobile-apps.md#bookmarks) ในรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-206">**Bookmarks** is present only if [bookmarks](mobile-reports-in-the-mobile-apps.md#bookmarks) have been set in the report.</span></span> <span data-ttu-id="59a76-207">ทั้งบุ๊กมาร์กส่วนตัวที่คุณสามารถกำหนดในบริการของ Power BI และบุ๊กมาร์กที่กำหนดโดยผู้สร้างรายงานจะแสดงขึ้น</span><span class="sxs-lookup"><span data-stu-id="59a76-207">Both personal bookmarks that you can define in Power BI service and bookmarks defined by the report creator are shown.</span></span> <span data-ttu-id="59a76-208">หากมีการกำหนดหนึ่งในบุ๊กมาร์กให้เป็นบุ๊กมาร์กค่าเริ่มต้นแล้ว รายงานจะเปิดไปยังมุมมองนั้นเมื่อโหลดรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-208">If one of the bookmarks has been defined as the default bookmark, the report will open to that view when it loads.</span></span>
+**บุ๊กมาร์ก** จะปรากฏขึ้นเฉพาะเมื่อมีการตั้งค่า [บุ๊กมาร์ก](mobile-reports-in-the-mobile-apps.md#bookmarks) ในรายงาน ทั้งบุ๊กมาร์กส่วนตัวที่คุณสามารถกำหนดในบริการของ Power BI และบุ๊กมาร์กที่กำหนดโดยผู้สร้างรายงานจะแสดงขึ้น หากมีการกำหนดหนึ่งในบุ๊กมาร์กให้เป็นบุ๊กมาร์กค่าเริ่มต้นแล้ว รายงานจะเปิดไปยังมุมมองนั้นเมื่อโหลดรายงาน
 
-<span data-ttu-id="59a76-209">**คำอธิบายประกอบและการแชร์** อาจปิดใช้งานถ้ามี [นโยบายการป้องกัน Intune](/intune/app-protection-policies) ในองค์กรของคุณที่ห้ามการแชร์จากแอปอุปกรณ์เคลื่อนที่ Power BI</span><span class="sxs-lookup"><span data-stu-id="59a76-209">**Annotate and share** might be turned off if there's an [Intune protection policy](/intune/app-protection-policies) in your organization that prohibits sharing from a Power BI mobile app.</span></span>
+**คำอธิบายประกอบและการแชร์** อาจปิดใช้งานถ้ามี [นโยบายการป้องกัน Intune](/intune/app-protection-policies) ในองค์กรของคุณที่ห้ามการแชร์จากแอปอุปกรณ์เคลื่อนที่ Power BI
 
-<span data-ttu-id="59a76-210">**เชิญ** จะถูกเปิดใช้งานเฉพาะเมื่อคุณมีสิทธิ์ในการแชร์รายงานกับผู้อื่นเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="59a76-210">**Invite** is enabled only if you have permission to share the report with others.</span></span> <span data-ttu-id="59a76-211">คุณจะมีสิทธิ์เฉพาะในกรณีที่คุณเป็นเจ้าของรายงาน หรือถ้าเจ้าของให้สิทธิ์แก่คุณในการแชร์ต่อ</span><span class="sxs-lookup"><span data-stu-id="59a76-211">You'll have permission only if you're the owner of the report or if the owner has given you reshare permission.</span></span>
+**เชิญ** จะถูกเปิดใช้งานเฉพาะเมื่อคุณมีสิทธิ์ในการแชร์รายงานกับผู้อื่นเท่านั้น คุณจะมีสิทธิ์เฉพาะในกรณีที่คุณเป็นเจ้าของรายงาน หรือถ้าเจ้าของให้สิทธิ์แก่คุณในการแชร์ต่อ
 
-<span data-ttu-id="59a76-212">**การกรองตามตำแหน่งที่ตั้งปัจจุบัน** จะเปิดใช้งาน หากผู้สร้างรายงานจัดประเภทข้อมูลในรายงานด้วยข้อมูลทางภูมิศาสตร์</span><span class="sxs-lookup"><span data-stu-id="59a76-212">**Filter by current location** is enabled if the report author categorized the report with geographical data.</span></span> <span data-ttu-id="59a76-213">สำหรับข้อมูลเพิ่มเติม กรุณาอ่านเกี่ยวกับ[การระบุข้อมูลทางภูมิศาสตร์ในรายงาน](../../transform-model/desktop-mobile-geofiltering.md)</span><span class="sxs-lookup"><span data-stu-id="59a76-213">For more information, read about [identifying geographical data in a report](../../transform-model/desktop-mobile-geofiltering.md).</span></span>
+**การกรองตามตำแหน่งที่ตั้งปัจจุบัน** จะเปิดใช้งาน หากผู้สร้างรายงานจัดประเภทข้อมูลในรายงานด้วยข้อมูลทางภูมิศาสตร์ สำหรับข้อมูลเพิ่มเติม กรุณาอ่านเกี่ยวกับ[การระบุข้อมูลทางภูมิศาสตร์ในรายงาน](../../transform-model/desktop-mobile-geofiltering.md)
 
-<span data-ttu-id="59a76-214">**สแกนเพื่อกรองรายงานตามบาร์โค้ด** จะเปิดใช้งานเฉพาะเมื่อมีการแท็กชุดข้อมูลในรายงานของคุณเป็น **บาร์โค้ด**</span><span class="sxs-lookup"><span data-stu-id="59a76-214">**Scan to filter the report by barcode** is enabled only if the dataset in your report is tagged as **Barcode**.</span></span> <span data-ttu-id="59a76-215">สำหรับข้อมูลเพิ่มเติม กรุณาอ่านเกี่ยวกับ [การแท็กบาร์โค้ดใน Power BI Desktop](../../transform-model/desktop-mobile-barcodes.md)</span><span class="sxs-lookup"><span data-stu-id="59a76-215">For more information, read about [tagging barcodes in Power BI Desktop](../../transform-model/desktop-mobile-barcodes.md).</span></span>
+**สแกนเพื่อกรองรายงานตามบาร์โค้ด** จะเปิดใช้งานเฉพาะเมื่อมีการแท็กชุดข้อมูลในรายงานของคุณเป็น **บาร์โค้ด** สำหรับข้อมูลเพิ่มเติม กรุณาอ่านเกี่ยวกับ [การแท็กบาร์โค้ดใน Power BI Desktop](../../transform-model/desktop-mobile-barcodes.md)
 
-### <a name="bookmarks"></a><span data-ttu-id="59a76-216">บุ๊กมาร์ก</span><span class="sxs-lookup"><span data-stu-id="59a76-216">Bookmarks</span></span>
+### <a name="bookmarks"></a>บุ๊กมาร์ก
 
-<span data-ttu-id="59a76-217">แอป Power BI สำหรับอุปกรณ์เคลื่อนที่รองรับทั้งบุ๊กมาร์กรายงานซึ่งผู้สร้างรายงานได้กำหนดและบุ๊กมาร์กส่วนตัวที่ี่คุณสามารถกำหนดในบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="59a76-217">The Power BI mobile app supports both report bookmarks that the report creator has defined and personal bookmarks that you can define in the Power BI service.</span></span> <span data-ttu-id="59a76-218">คุณสามารถค้นหาเมนูบุ๊กมาร์กภายใต้ **ตัวเลือกเพิ่มเติม** (...) บน [แถบเครื่องมือการดำเนินการรายงาน](mobile-reports-in-the-mobile-apps.md#all-report-actions)</span><span class="sxs-lookup"><span data-stu-id="59a76-218">You can find the bookmarks menu under **More options** (...) on the [report actions toolbar](mobile-reports-in-the-mobile-apps.md#all-report-actions).</span></span>
+แอป Power BI สำหรับอุปกรณ์เคลื่อนที่รองรับทั้งบุ๊กมาร์กรายงานซึ่งผู้สร้างรายงานได้กำหนดและบุ๊กมาร์กส่วนตัวที่ี่คุณสามารถกำหนดในบริการของ Power BI คุณสามารถค้นหาเมนูบุ๊กมาร์กภายใต้ **ตัวเลือกเพิ่มเติม** (...) บน [แถบเครื่องมือการดำเนินการรายงาน](mobile-reports-in-the-mobile-apps.md#all-report-actions)
 
-<span data-ttu-id="59a76-219">บุ๊กมาร์กค่าเริ่มต้นจะถูกระบุด้วยไอคอนพิเศษ</span><span class="sxs-lookup"><span data-stu-id="59a76-219">Default bookmarks are indicated by a special icon.</span></span> <span data-ttu-id="59a76-220">สำหรับบุ๊กมาร์กส่วนบุคคล คุณสามารถตั้งค่า ยกเลิกหรือเปลี่ยนการตั้งค่าเริ่มต้นโดยการแตะ **ตัวเลือกเพิ่มเติม (...)** ถัดจากบุ๊กมาร์กที่คุณต้องการเปลี่ยนแปลง และการเลือก **สร้างค่าเริ่มต้น** หรือ **ล้างข้อมูลค่าเริ่มต้น**</span><span class="sxs-lookup"><span data-stu-id="59a76-220">For personal bookmarks you can set, unset, or change the default setting by tapping **More options (...)** next to the bookmark you want to change and choosing **Make default** or **Clear default**.</span></span>
+บุ๊กมาร์กค่าเริ่มต้นจะถูกระบุด้วยไอคอนพิเศษ สำหรับบุ๊กมาร์กส่วนบุคคล คุณสามารถตั้งค่า ยกเลิกหรือเปลี่ยนการตั้งค่าเริ่มต้นโดยการแตะ **ตัวเลือกเพิ่มเติม (...)** ถัดจากบุ๊กมาร์กที่คุณต้องการเปลี่ยนแปลง และการเลือก **สร้างค่าเริ่มต้น** หรือ **ล้างข้อมูลค่าเริ่มต้น**
 
 ![เมนูบุ๊กมาร์ก](./media/mobile-reports-in-the-mobile-apps/power-bi-mobile-report-bookmark-menu.png)
 
-<span data-ttu-id="59a76-222">เมื่อมุมมองบุ๊กมาร์กของรายงานเปิดขึ้น ชื่อของบุ๊กมาร์กจะปรากฏที่ด้านบนของรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-222">When a bookmark view of a report is open, the name of the bookmark appears at the top of the report.</span></span>
+เมื่อมุมมองบุ๊กมาร์กของรายงานเปิดขึ้น ชื่อของบุ๊กมาร์กจะปรากฏที่ด้านบนของรายงาน
 
 ![มุมมองบุ๊กมาร์ก](./media/mobile-reports-in-the-mobile-apps/power-bi-mobile-report-bookmark-title.png)
 
-<span data-ttu-id="59a76-224">[เรียนรู้เพิ่มเติมเกี่ยวกับบุ๊กมาร์กในบริการ Power BI](../end-user-bookmarks.md)</span><span class="sxs-lookup"><span data-stu-id="59a76-224">[Learn more about bookmarks in the Power BI service](../end-user-bookmarks.md).</span></span>
+[เรียนรู้เพิ่มเติมเกี่ยวกับบุ๊กมาร์กในบริการ Power BI](../end-user-bookmarks.md)
 
-## <a name="investigate-anomalies-in-time-series-data"></a><span data-ttu-id="59a76-225">ตรวจสอบความผิดปกติในชุดข้อมูลเวลา</span><span class="sxs-lookup"><span data-stu-id="59a76-225">Investigate anomalies in time series data</span></span>
+## <a name="investigate-anomalies-in-time-series-data"></a>ตรวจสอบความผิดปกติในชุดข้อมูลเวลา
 
-<span data-ttu-id="59a76-226">[การตรวจหาสิ่งผิดปกติ](https://powerbi.microsoft.com/blog/anomaly-detection-preview/) เป็นคุณลักษณะของ Power BI ที่ตรวจหาสิ่งผิดปกติโดยอัตโนมัติ (เช่น ค่าที่อยู่นอกช่วงที่คาดไว้) บนแผนภูมิเส้นพร้อมชุดข้อมูลเวลา</span><span class="sxs-lookup"><span data-stu-id="59a76-226">[Anomaly detection](https://powerbi.microsoft.com/blog/anomaly-detection-preview/) is a Power BI feature that automatically detects anomalies (i.e. values that lay outside expected ranges) on line charts with time series data.</span></span> <span data-ttu-id="59a76-227">นอกจากนี้ยังให้คำอธิบายที่เป็นไปได้โดยจัดอันดับตามความสามารถในการอธิบายสำหรับสาเหตุของค่าที่ผิดปกติ</span><span class="sxs-lookup"><span data-stu-id="59a76-227">In addition, it provides possible explanations, ranked according their explanatory strength, for the cause of the anomalous values.</span></span> <span data-ttu-id="59a76-228">การตรวจหาสิ่งผิดปกติจะพร้อมใช้งานหากผู้สร้างรายงานเปิดใช้งานบนแผนภูมิแล้ว</span><span class="sxs-lookup"><span data-stu-id="59a76-228">Anomaly detection is available if it has been enabled on the chart by the report creator.</span></span> 
+[การตรวจหาสิ่งผิดปกติ](https://powerbi.microsoft.com/blog/anomaly-detection-preview/) เป็นคุณลักษณะของ Power BI ที่ตรวจหาสิ่งผิดปกติโดยอัตโนมัติ (เช่น ค่าที่อยู่นอกช่วงที่คาดไว้) บนแผนภูมิเส้นพร้อมชุดข้อมูลเวลา นอกจากนี้ยังให้คำอธิบายที่เป็นไปได้โดยจัดอันดับตามความสามารถในการอธิบายสำหรับสาเหตุของค่าที่ผิดปกติ การตรวจหาสิ่งผิดปกติจะพร้อมใช้งานหากผู้สร้างรายงานเปิดใช้งานบนแผนภูมิแล้ว 
 
-<span data-ttu-id="59a76-229">เมื่อคุณดูรายงานที่เปิดใช้งานการตรวจหาสิ่งผิดปกติบนแผนภูมิที่มีชุดข้อมูลเวลาคุณจะเห็นความผิดปกติที่ระบุบนแผนภูมิเช่นเดียวกับที่คุณทำในบริการของ Power BI และใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="59a76-229">When you view a report that has anomaly detection enabled on a chart with time series data, you’ll see the the anomalies indicated on chart, just like you would in the Power BI service and in Power BI Desktop.</span></span> 
+เมื่อคุณดูรายงานที่เปิดใช้งานการตรวจหาสิ่งผิดปกติบนแผนภูมิที่มีชุดข้อมูลเวลาคุณจะเห็นความผิดปกติที่ระบุบนแผนภูมิเช่นเดียวกับที่คุณทำในบริการของ Power BI และใน Power BI Desktop 
 
 ![สกรีนช็อตของแผนภูมิเส้นที่มีตัวบ่งชี้ความผิดปกติ](media/mobile-reports-in-the-mobile-apps/mobile-detected-anomalies.png)
 
-<span data-ttu-id="59a76-231">หากต้องการดูข้อมูลเพิ่มเติมและคำอธิบายคุณต้องเปิดแผงความผิดปกติ</span><span class="sxs-lookup"><span data-stu-id="59a76-231">To see additional information and the explanations, you need to open the Anomalies panel.</span></span> <span data-ttu-id="59a76-232">มีหลายวิธีในการทำขั้นตอนนี้:</span><span class="sxs-lookup"><span data-stu-id="59a76-232">There are a number of ways to do this:</span></span>
-* <span data-ttu-id="59a76-233">แตะตัวบ่งชี้ความผิดปกติบนแผนภูมิ</span><span class="sxs-lookup"><span data-stu-id="59a76-233">Tap the anomaly indication on the chart.</span></span> 
-* <span data-ttu-id="59a76-234">แตะ **ตัวเลือกเพิ่มเติม (…)** และเลือก **แสดงความผิดปกติ** จากเมนูที่ปรากฏขึ้น</span><span class="sxs-lookup"><span data-stu-id="59a76-234">Tap **More options (…)** and choose **Show anomalies** from the menu that appears.</span></span>    
-* <span data-ttu-id="59a76-235">แตะจุดข้อมูลเพื่อแสดงคำแนะนำเครื่องมือและเลือก **ความผิดปกติ**</span><span class="sxs-lookup"><span data-stu-id="59a76-235">Tap the data point to display a tooltip, and choose **Anomalies**.</span></span>
+หากต้องการดูข้อมูลเพิ่มเติมและคำอธิบายคุณต้องเปิดแผงความผิดปกติ มีหลายวิธีในการทำขั้นตอนนี้:
+* แตะตัวบ่งชี้ความผิดปกติบนแผนภูมิ 
+* แตะ **ตัวเลือกเพิ่มเติม (…)** และเลือก **แสดงความผิดปกติ** จากเมนูที่ปรากฏขึ้น    
+* แตะจุดข้อมูลเพื่อแสดงคำแนะนำเครื่องมือและเลือก **ความผิดปกติ**
 
-<span data-ttu-id="59a76-236">รูปภาพด้านล่างแสดงให้เห็นถึงสามวิธีในการเปิดแผงความผิดปกติ</span><span class="sxs-lookup"><span data-stu-id="59a76-236">The image below illustrates the three ways of opening the Anomalies panel.</span></span>
+รูปภาพด้านล่างแสดงให้เห็นถึงสามวิธีในการเปิดแผงความผิดปกติ
 
 ![สกรีนช็อตที่แสดงวิธีการเปิดแผงความผิดปกติ](media/mobile-reports-in-the-mobile-apps/mobile-opening-anomalies-panel.png)
 
-<span data-ttu-id="59a76-238">ในแผงความผิดปกติคุณจะเห็นคำอธิบายภาษาธรรมชาติเกี่ยวกับความผิดปกติที่ตรวจพบรวมถึงปัจจัยที่เชื่อมโยงซึ่งเรียงตามความสามารถในการอธิบาย</span><span class="sxs-lookup"><span data-stu-id="59a76-238">In the anomalies panel you’ll see a natural language explanation of the anomaly detected, as well as associated factors sorted by their explanatory strength.</span></span> <span data-ttu-id="59a76-239">ปัดจากขวาไปซ้ายเพื่อดูปัจจัยที่เกี่ยวข้องทั้งหมดและจุดแข็งของสิ่งนั้น</span><span class="sxs-lookup"><span data-stu-id="59a76-239">Swipe from right to left to view all relevant factors and their strengths.</span></span>
+ในแผงความผิดปกติคุณจะเห็นคำอธิบายภาษาธรรมชาติเกี่ยวกับความผิดปกติที่ตรวจพบรวมถึงปัจจัยที่เชื่อมโยงซึ่งเรียงตามความสามารถในการอธิบาย ปัดจากขวาไปซ้ายเพื่อดูปัจจัยที่เกี่ยวข้องทั้งหมดและจุดแข็งของสิ่งนั้น
 
 ![สกรีนช็อตที่แสดงจากขวาไปซ้ายเพื่อดูคำอธิบายความผิดปกติ](media/mobile-reports-in-the-mobile-apps/mobile-swipe-to-see-explanations.png)
 
-<span data-ttu-id="59a76-241">ในขณะที่แผงความผิดปกติจะปรากฏให้เห็น แต่รายงานสำหรับอุปกรณ์เคลื่อนที่ยังคงเลื่อนอยู่ข้างใต้ได้ ดังนั้นคุณจึงสามารถโต้ตอบกับรายงานของคุณ การแบ่งส่วนและการแบ่งส่วนข้อมูลเพื่อทำความเข้าใจความผิดปกติในข้อมูลของคุณได้ดีขึ้น</span><span class="sxs-lookup"><span data-stu-id="59a76-241">While the Anomalies panel is visible, the mobile report is still scrollable under it, so you can continue interacting with your report, slicing and dicing to better understand anomalies in your data.</span></span> <span data-ttu-id="59a76-242">สำหรับการโต้ตอบแต่ละครั้ง Power BI จะเรียกใช้การตรวจหาสิ่งผิดปกติอีกครั้งเพื่อตรวจจับสิ่งผิดปกติในข้อมูลในขอบเขต</span><span class="sxs-lookup"><span data-stu-id="59a76-242">For each interaction, Power BI re-runs anomaly detection to detect anomalies in the data in scope.</span></span> 
+ในขณะที่แผงความผิดปกติจะปรากฏให้เห็น แต่รายงานสำหรับอุปกรณ์เคลื่อนที่ยังคงเลื่อนอยู่ข้างใต้ได้ ดังนั้นคุณจึงสามารถโต้ตอบกับรายงานของคุณ การแบ่งส่วนและการแบ่งส่วนข้อมูลเพื่อทำความเข้าใจความผิดปกติในข้อมูลของคุณได้ดีขึ้น สำหรับการโต้ตอบแต่ละครั้ง Power BI จะเรียกใช้การตรวจหาสิ่งผิดปกติอีกครั้งเพื่อตรวจจับสิ่งผิดปกติในข้อมูลในขอบเขต 
 
-## <a name="refresh-your-data"></a><span data-ttu-id="59a76-243">รีเฟรชข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="59a76-243">Refresh your data</span></span>
+## <a name="refresh-your-data"></a>รีเฟรชข้อมูลของคุณ
 
-<span data-ttu-id="59a76-244">หากคุณไม่แน่ใจว่าคุณกำลังดูข้อมูลล่าสุดคุณสามารถดึงข้อมูลใหม่ลงในรายงานของคุณจากบริการของ Power BI:</span><span class="sxs-lookup"><span data-stu-id="59a76-244">If you're not sure you’re viewing the most up-to-date data, you can pull new data down to your report from the Power BI service:</span></span>
+หากคุณไม่แน่ใจว่าคุณกำลังดูข้อมูลล่าสุดคุณสามารถดึงข้อมูลใหม่ลงในรายงานของคุณจากบริการของ Power BI:
 
-* <span data-ttu-id="59a76-245">บนอุปกรณ์ iOS และแท็บเล็ต Android ให้ดึงลงเล็กน้อยจากบนลงล่างบนหน้ารายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-245">On iOS devices and Android tablets, pull down slightly from top to bottom on the report page.</span></span>
-* <span data-ttu-id="59a76-246">บนโทรศัพท์ Android คุณสามารถใช้การดำเนินการแบบดึงลงหรือปุ่มรีเฟรชโดยขึ้นอยู่กับว่าคุณได้ตั้งค่าในการ [ตั้งค่าการโต้ตอบ](mobile-app-interaction-settings.md) อย่างไร</span><span class="sxs-lookup"><span data-stu-id="59a76-246">On Android phones, you can use either the pull-down action or a refresh button, depending on how you've set it up in the [interaction settings](mobile-app-interaction-settings.md).</span></span>
-* <span data-ttu-id="59a76-247">บนอุปกรณ์ Windows ให้ใช้ปุ่มรีเฟรชที่มุมบนขวาของจอแสดงผล</span><span class="sxs-lookup"><span data-stu-id="59a76-247">On Windows devices, use the refresh button in the upper right of the display.</span></span>
+* บนอุปกรณ์ iOS และแท็บเล็ต Android ให้ดึงลงเล็กน้อยจากบนลงล่างบนหน้ารายงาน
+* บนโทรศัพท์ Android คุณสามารถใช้การดำเนินการแบบดึงลงหรือปุ่มรีเฟรชโดยขึ้นอยู่กับว่าคุณได้ตั้งค่าในการ [ตั้งค่าการโต้ตอบ](mobile-app-interaction-settings.md) อย่างไร
+* บนอุปกรณ์ Windows ให้ใช้ปุ่มรีเฟรชที่มุมบนขวาของจอแสดงผล
 
-    <span data-ttu-id="59a76-248">หน้ารายงานที่มี [การรีเฟรชหน้าอัตโนมัติ](../../create-reports/desktop-automatic-page-refresh.md) จะรีเฟรชโดยอัตโนมัติตามที่กำหนดค่าไว้ (เฉพาะแอป Windows เท่านั้น)</span><span class="sxs-lookup"><span data-stu-id="59a76-248">Report pages that have [auto page refresh](../../create-reports/desktop-automatic-page-refresh.md) will automatically refresh as configured (Windows app only).</span></span>
+    หน้ารายงานที่มี [การรีเฟรชหน้าอัตโนมัติ](../../create-reports/desktop-automatic-page-refresh.md) จะรีเฟรชโดยอัตโนมัติตามที่กำหนดค่าไว้ (เฉพาะแอป Windows เท่านั้น)
 
 >[!NOTE]
-><span data-ttu-id="59a76-249">วิธีการรีเฟรชข้างต้นไม่รีเฟรชชุดข้อมูลเบื้องต้น</span><span class="sxs-lookup"><span data-stu-id="59a76-249">The above refresh methods do not refresh the underlying dataset.</span></span> <span data-ttu-id="59a76-250">แต่มีการปรับปรุงรายงานที่คุณกำลังดูบนแอปสำหรับอุปกรณ์เคลื่อนที่ที่มีข้อมูลใหม่ๆ ที่อาจมีอยู่ใน Power BI</span><span class="sxs-lookup"><span data-stu-id="59a76-250">Rather, they update the report you're viewing on the mobile app with any new data that might exist in Power BI.</span></span>
+>วิธีการรีเฟรชข้างต้นไม่รีเฟรชชุดข้อมูลเบื้องต้น แต่มีการปรับปรุงรายงานที่คุณกำลังดูบนแอปสำหรับอุปกรณ์เคลื่อนที่ที่มีข้อมูลใหม่ๆ ที่อาจมีอยู่ใน Power BI
 
-### <a name="how-do-i-know-when-my-report-was-last-refreshed"></a><span data-ttu-id="59a76-251">ฉันจะทราบได้อย่างไรว่ารายงานของฉันถูกรีเฟรชครั้งล่าสุดเมื่อใด</span><span class="sxs-lookup"><span data-stu-id="59a76-251">How do I know when my report was last refreshed?</span></span>
+### <a name="how-do-i-know-when-my-report-was-last-refreshed"></a>ฉันจะทราบได้อย่างไรว่ารายงานของฉันถูกรีเฟรชครั้งล่าสุดเมื่อใด
 
-<span data-ttu-id="59a76-252">หากต้องการทราบว่ารายงานของคุณได้รับการรีเฟรชครั้งล่าสุดหรือไม่ ให้แตะส่วนหัวรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-252">To find out when your report was last refreshed, tap the report header.</span></span> <span data-ttu-id="59a76-253">แผนภูมิการนำทางไปยังรายงานจะแสดงรวมถึงวันที่และเวลาของการรีเฟรชครั้งล่าสุด</span><span class="sxs-lookup"><span data-stu-id="59a76-253">The navigation tree to the report will be displayed, including the date and time of the last refresh.</span></span> 
+หากต้องการทราบว่ารายงานของคุณได้รับการรีเฟรชครั้งล่าสุดหรือไม่ ให้แตะส่วนหัวรายงาน แผนภูมิการนำทางไปยังรายงานจะแสดงรวมถึงวันที่และเวลาของการรีเฟรชครั้งล่าสุด 
 
 ![สกรีนช็อตของข้อมูลรีเฟรชรายงานบนมือถือ-แอป](media/mobile-reports-in-the-mobile-apps/power-bi-mobile-report-refresh-info.png)
  
-## <a name="configure-your-experience-with-reports"></a><span data-ttu-id="59a76-255">กำหนดค่าประสบการณ์การใช้งานของคุณด้วยรายงาน</span><span class="sxs-lookup"><span data-stu-id="59a76-255">Configure your experience with reports</span></span>
-<span data-ttu-id="59a76-256">แอป Power BI สำหรับอุปกรณ์เคลื่อนที่มีจำนวนการตั้งค่าที่ช่วยให้คุณสามารถควบคุมประสบการณ์การใช้งานรายงานของคุณได้</span><span class="sxs-lookup"><span data-stu-id="59a76-256">The Power BI mobile app has a number of settings that enable you to control your report experience.</span></span> <span data-ttu-id="59a76-257">ในขณะนี้ คุณสามารถกำหนดค่า</span><span class="sxs-lookup"><span data-stu-id="59a76-257">Currently you can configure</span></span>
-* <span data-ttu-id="59a76-258">**การโต้ตอบกับวิชวลรายงาน**: คุณสามารถเลือกใช้การโต้ตอบแบบแตะครั้งเดียวหรือการโต้ตอบแบบแตะสองครั้ง</span><span class="sxs-lookup"><span data-stu-id="59a76-258">**Interaction with report visuals**: You can choose to use either single-tap or double-tap interaction.</span></span>
-* <span data-ttu-id="59a76-259">**วิธีการรีเฟรชข้อมูล**: คุณสามารถเลือกที่จะใช้ปุ่มรีเฟรชหรือการดำเนินการแบบดึงลงสำหรับการรีเฟรชข้อมูลรายงานได้</span><span class="sxs-lookup"><span data-stu-id="59a76-259">**Data refresh method**: You can choose to have either a refresh button or a pull-down action for refreshing report data.</span></span>
-* <span data-ttu-id="59a76-260">**การแสดงผลส่วนท้ายของรายงาน**: คุณสามารถเลือกที่จะแสดงส่วนท้ายที่เทียบชิดขอบที่จะมองเห็นได้เสมอ หรือส่วนท้ายแบบไดนามิกที่ซ่อนและปรากฏขึ้นใหม่ตามการดำเนินการของคุณ (ตัวอย่างเช่น การเลื่อน)</span><span class="sxs-lookup"><span data-stu-id="59a76-260">**Report footer visibility**: You can choose to have either a docked footer that is always visible, or a dynamic footer that hides and reappears depending on your actions (scrolling, for instance).</span></span>
+## <a name="configure-your-experience-with-reports"></a>กำหนดค่าประสบการณ์การใช้งานของคุณด้วยรายงาน
+แอป Power BI สำหรับอุปกรณ์เคลื่อนที่มีจำนวนการตั้งค่าที่ช่วยให้คุณสามารถควบคุมประสบการณ์การใช้งานรายงานของคุณได้ ในขณะนี้ คุณสามารถกำหนดค่า
+* **การโต้ตอบกับวิชวลรายงาน**: คุณสามารถเลือกใช้การโต้ตอบแบบแตะครั้งเดียวหรือการโต้ตอบแบบแตะสองครั้ง
+* **วิธีการรีเฟรชข้อมูล**: คุณสามารถเลือกที่จะใช้ปุ่มรีเฟรชหรือการดำเนินการแบบดึงลงสำหรับการรีเฟรชข้อมูลรายงานได้
+* **การแสดงผลส่วนท้ายของรายงาน**: คุณสามารถเลือกที่จะแสดงส่วนท้ายที่เทียบชิดขอบที่จะมองเห็นได้เสมอ หรือส่วนท้ายแบบไดนามิกที่ซ่อนและปรากฏขึ้นใหม่ตามการดำเนินการของคุณ (ตัวอย่างเช่น การเลื่อน)
 
-<span data-ttu-id="59a76-261">ดู [การตั้งค่าการโต้ตอบของแอป](./mobile-app-interaction-settings.md) สำหรับข้อมูลเกี่ยวกับวิธีการเปลี่ยนการตั้งค่าเหล่านี้</span><span class="sxs-lookup"><span data-stu-id="59a76-261">See [app interaction settings](./mobile-app-interaction-settings.md) for information about how to change these settings.</span></span>
+ดู [การตั้งค่าการโต้ตอบของแอป](./mobile-app-interaction-settings.md) สำหรับข้อมูลเกี่ยวกับวิธีการเปลี่ยนการตั้งค่าเหล่านี้
 
 
-## <a name="next-steps"></a><span data-ttu-id="59a76-262">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="59a76-262">Next steps</span></span>
-* [<span data-ttu-id="59a76-263">ดูและโต้ตอบกับรายงาน Power BI ที่ปรับให้เหมาะสมกับโทรศัพท์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="59a76-263">View and interact with Power BI reports optimized for your phone</span></span>](mobile-apps-view-phone-report.md)
-* [<span data-ttu-id="59a76-264">สร้างเวอร์ชันของรายงานที่ปรับให้เหมาะสมที่สุดสำหรับโทรศัพท์แล้ว</span><span class="sxs-lookup"><span data-stu-id="59a76-264">Create a version of a report that's optimized for phones</span></span>](../../create-reports/desktop-create-phone-report.md)
-* <span data-ttu-id="59a76-265">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="59a76-265">Questions?</span></span> [<span data-ttu-id="59a76-266">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="59a76-266">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
+## <a name="next-steps"></a>ขั้นตอนถัดไป
+* [ดูและโต้ตอบกับรายงาน Power BI ที่ปรับให้เหมาะสมกับโทรศัพท์ของคุณ](mobile-apps-view-phone-report.md)
+* [สร้างเวอร์ชันของรายงานที่ปรับให้เหมาะสมที่สุดสำหรับโทรศัพท์แล้ว](../../create-reports/desktop-create-phone-report.md)
+* มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)

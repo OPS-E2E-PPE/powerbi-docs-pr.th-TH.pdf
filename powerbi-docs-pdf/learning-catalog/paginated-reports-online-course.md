@@ -2,119 +2,120 @@
 title: หลักสูตรรายงานที่มีการแบ่งหน้าของ Power BI ในหนึ่งวัน
 description: หลักสูตรที่ใช้วิดีโอนี้มีจุดประสงค์เพื่อเสริมกำลังให้คุณในฐานะผู้เขียนรายงานที่มีความรู้ด้านเทคนิคที่จำเป็นในการสร้าง เผยแพร่ และแจกจ่ายรายงานที่มีการแบ่งหน้าของ Power BI
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: maggies
 featuredvideoid: DN1t5p9aui0
 ms.service: powerbi
 ms.subservice: powerbi
 ms.topic: tutorial
-ms.date: 11/11/2020
-ms.openlocfilehash: e05078bf51cd33fb565dc783386258fe9ea305d1
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.date: 12/31/2020
+ms.openlocfilehash: 4a1c6786503b2418fc6fea27e2cb91a3f136a257
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96416381"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99087809"
 ---
-# <a name="power-bi-paginated-reports-in-a-day-course"></a><span data-ttu-id="ee2d0-103">หลักสูตรรายงานที่มีการแบ่งหน้าของ Power BI ในหนึ่งวัน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-103">Power BI Paginated Reports in a Day course</span></span>
+# <a name="power-bi-paginated-reports-in-a-day-course"></a>หลักสูตรรายงานที่มีการแบ่งหน้าของ Power BI ในหนึ่งวัน
 
-<span data-ttu-id="ee2d0-104">หลักสูตรวิดีโอ **รายงานที่มีการแบ่งหน้าของ Power BI ในหนึ่งวัน** ช่วยเสริมกำลังให้คุณในฐานะผู้เขียนรายงานที่มีความรู้ด้านเทคนิคที่จำเป็นในการสร้าง เผยแพร่ และแจกจ่ายรายงานที่มีการแบ่งหน้าของ Power BI</span><span class="sxs-lookup"><span data-stu-id="ee2d0-104">The **Power BI Paginated Reports in a Day** video-based course empowers you as a report author with the technical knowledge required to create, publish, and distribute Power BI paginated reports.</span></span> <span data-ttu-id="ee2d0-105">ซึ่งประกอบด้วยเนื้อหาที่สามารถดูได้เกือบ 4 ชั่วโมง 20 นาที พร้อมให้บริการตามความต้องการและไม่มีค่าใช้จ่าย</span><span class="sxs-lookup"><span data-stu-id="ee2d0-105">It comprises almost 4 hours 20 minutes of viewable content—available on demand, and is free of charge.</span></span> <span data-ttu-id="ee2d0-106">นอกจากนี้ ยังมี [ชุดการเรียนการสอนด้วยตนเอง](#self-study-kit) ซึ่งคุณสามารถดาวน์โหลดและใช้เพื่อดำเนินการแล็บการใช้เครื่องให้เสร็จสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="ee2d0-106">There's also a [self-study kit](#self-study-kit) that you can download and use to complete eight hands-on labs.</span></span>
+หลักสูตรวิดีโอ **รายงานที่มีการแบ่งหน้าของ Power BI ในหนึ่งวัน** ช่วยเสริมกำลังให้คุณในฐานะผู้เขียนรายงานที่มีความรู้ด้านเทคนิคที่จำเป็นในการสร้าง เผยแพร่ และแจกจ่ายรายงานที่มีการแบ่งหน้าของ Power BI ซึ่งประกอบด้วยเนื้อหาที่สามารถดูได้เกือบ 4 ชั่วโมง 20 นาที พร้อมให้บริการตามความต้องการและไม่มีค่าใช้จ่าย นอกจากนี้ ยังมี [ชุดการเรียนการสอนด้วยตนเอง](#self-study-kit) ซึ่งคุณสามารถดาวน์โหลดและใช้เพื่อดำเนินการแล็บการใช้เครื่องให้เสร็จสมบูรณ์
 
-<span data-ttu-id="ee2d0-107">โดยเฉพาะ เป้าหมายของหลักสูตร:</span><span class="sxs-lookup"><span data-stu-id="ee2d0-107">Specifically, the course targets:</span></span>
+โดยเฉพาะ เป้าหมายของหลักสูตร:
 
-- <span data-ttu-id="ee2d0-108">ผู้เขียนรายงาน Power BI</span><span class="sxs-lookup"><span data-stu-id="ee2d0-108">Power BI report authors</span></span>
-- <span data-ttu-id="ee2d0-109">นักวิเคราะห์ของ Excel</span><span class="sxs-lookup"><span data-stu-id="ee2d0-109">Excel analysts</span></span>
-- <span data-ttu-id="ee2d0-110">ผู้เขียนรายงานที่มีทักษะ SQL Server Reporting Services (SSRS) ต้องการการทบทวน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-110">Report authors with SQL Server Reporting Services (SSRS) skills, requiring a refresher</span></span>
-- <span data-ttu-id="ee2d0-111">ผู้เขียน Crystal Reports</span><span class="sxs-lookup"><span data-stu-id="ee2d0-111">Crystal Reports authors</span></span>
+- ผู้เขียนรายงาน Power BI
+- นักวิเคราะห์ของ Excel
+- ผู้เขียนรายงานที่มีทักษะ SQL Server Reporting Services (SSRS) ต้องการการทบทวน
+- ผู้เขียน Crystal Reports
 
-<span data-ttu-id="ee2d0-112">เมื่อคุณจบหลักสูตรนี้แล้ว คุณจะทราบวิธี:</span><span class="sxs-lookup"><span data-stu-id="ee2d0-112">After you complete the course, you'll know how to:</span></span>
+เมื่อคุณจบหลักสูตรนี้แล้ว คุณจะทราบวิธี:
 
 > [!div class="checklist"]
-> - <span data-ttu-id="ee2d0-113">ออกแบบเค้าโครงรายงาน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-113">Design report layouts</span></span>
-> - <span data-ttu-id="ee2d0-114">เชื่อมต่อไปยังแหล่งข้อมูลเพื่อดึงข้อมูลรายงาน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-114">Connect to data sources to retrieve report data</span></span>
-> - <span data-ttu-id="ee2d0-115">ทำงานกับพารามิเตอร์</span><span class="sxs-lookup"><span data-stu-id="ee2d0-115">Work with parameters</span></span>
-> - <span data-ttu-id="ee2d0-116">แสดงภาพข้อมูลรายงาน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-116">Visualize report data</span></span>
-> - <span data-ttu-id="ee2d0-117">เพิ่มคุณลักษณะเชิงโต้ตอบ</span><span class="sxs-lookup"><span data-stu-id="ee2d0-117">Add interactive features</span></span>
-> - <span data-ttu-id="ee2d0-118">เผยแพร่ ใช้ ส่งมอบ และฝังรายงานที่มีการแบ่งหน้า</span><span class="sxs-lookup"><span data-stu-id="ee2d0-118">Publish, consume, deliver, and embed paginated reports</span></span>
+> - ออกแบบเค้าโครงรายงาน
+> - เชื่อมต่อไปยังแหล่งข้อมูลเพื่อดึงข้อมูลรายงาน
+> - ทำงานกับพารามิเตอร์
+> - แสดงภาพข้อมูลรายงาน
+> - เพิ่มคุณลักษณะเชิงโต้ตอบ
+> - เผยแพร่ ใช้ ส่งมอบ และฝังรายงานที่มีการแบ่งหน้า
 
-<span data-ttu-id="ee2d0-119">ชมวิดีโอต้อนรับและวิดีโอแนะนำเพื่อเริ่มหลักสูตร</span><span class="sxs-lookup"><span data-stu-id="ee2d0-119">Watch the welcome and introduction video to start the course.</span></span>
+ชมวิดีโอต้อนรับและวิดีโอแนะนำเพื่อเริ่มหลักสูตร
 
 > [!VIDEO https://www.youtube.com/embed/DN1t5p9aui0]
 
-## <a name="course-outline"></a><span data-ttu-id="ee2d0-120">โครงร่างหลักสูตร</span><span class="sxs-lookup"><span data-stu-id="ee2d0-120">Course outline</span></span>
+## <a name="course-outline"></a>โครงร่างหลักสูตร
 
-<span data-ttu-id="ee2d0-121">[หลักสูตร 24 วิดีโอ](https://www.youtube.com/playlist?list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT) ถูกจัดระเบียบเป็นแปดโมดูล</span><span class="sxs-lookup"><span data-stu-id="ee2d0-121">The [course of 24 videos](https://www.youtube.com/playlist?list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT) is organized into eight modules.</span></span> <span data-ttu-id="ee2d0-122">เราแนะนำให้คุณดูวิดีโอตามลำดับที่บันทึก เริ่มต้นด้วยวิดีโอ 01 และจบด้วยวิดีโอ 24</span><span class="sxs-lookup"><span data-stu-id="ee2d0-122">We recommend you watch the videos in the recorded sequence, starting with video 01 and ending with video 24.</span></span>
+[หลักสูตร 25 วิดีโอ](https://www.youtube.com/playlist?list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)ถูกแบ่งออกเป็นแปดโมดูล เราขอแนะนำให้คุณดูวิดีโอตามลำดับที่บันทึกไว้โดยเริ่มจากวิดีโอ 01 และลงท้ายด้วยวิดีโอ 25
 
-- <span data-ttu-id="ee2d0-123">**บทนำ**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-123">**Introduction**</span></span>
-  - <span data-ttu-id="ee2d0-124">วิดีโอ 01: [ยินดีต้อนรับและการแนะนำหลักสูตร](https://www.youtube.com/watch?v=DN1t5p9aui0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-124">Video 01: [Welcome and Course Introduction](https://www.youtube.com/watch?v=DN1t5p9aui0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-- <span data-ttu-id="ee2d0-125">**โมดูล 01: การรายงานของ Power BI**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-125">**Module 01: Power BI Reporting**</span></span>
-  - <span data-ttu-id="ee2d0-126">วิดีโอ 02: [การรายงานของ Power BI - ตอนที่ 1](https://www.youtube.com/watch?v=s6Amctk3Z_g&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-126">Video 02: [Power BI Reporting - Part 1](https://www.youtube.com/watch?v=s6Amctk3Z_g&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-127">วิดีโอ 03: [การรายงานของ Power BI - ตอนที่ 2](https://www.youtube.com/watch?v=jXTiYJKw1Rs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-127">Video 03: [Power BI Reporting - Part 2](https://www.youtube.com/watch?v=jXTiYJKw1Rs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-- <span data-ttu-id="ee2d0-128">**โมดูล 02: การออกแบบเค้าโครงรายงาน**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-128">**Module 02: Designing Report Layouts**</span></span>
-  - <span data-ttu-id="ee2d0-129">วิดีโอ 04: [การออกแบบเค้าโครงรายงาน - ตอนที่ 1](https://www.youtube.com/watch?v=EjHANN3rGNs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-129">Video 04: [Designing Report Layouts - Part 1](https://www.youtube.com/watch?v=EjHANN3rGNs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-130">วิดีโอ 05: [การออกแบบเค้าโครงรายงาน - ตอนที่ 2](https://www.youtube.com/watch?v=2CZIrJU_HZU&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-130">Video 05: [Designing Report Layouts - Part 2](https://www.youtube.com/watch?v=2CZIrJU_HZU&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-131">วิดีโอ 06: [การออกแบบเค้าโครงรายงาน - ตอนที่ 3](https://www.youtube.com/watch?v=eaFFzkT6pxE&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-131">Video 06: [Designing Report Layouts - Part 3](https://www.youtube.com/watch?v=eaFFzkT6pxE&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-132">วิดีโอ 07: [การออกแบบเค้าโครงรายงาน - ตอนที่ 4](https://www.youtube.com/watch?v=0z576TI27Vg&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-132">Video 07: [Designing Report Layouts - Part 4](https://www.youtube.com/watch?v=0z576TI27Vg&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-- <span data-ttu-id="ee2d0-133">**โมดูล 03: การดึงข้อมูลรายงาน**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-133">**Module 03: Retrieving Report Data**</span></span>
-  - <span data-ttu-id="ee2d0-134">วิดีโอ 08: [การดึงข้อมูลรายงาน - ตอนที่ 1](https://www.youtube.com/watch?v=SHGTTYXtio0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-134">Video 08: [Retrieving Report Data - Part 1](https://www.youtube.com/watch?v=SHGTTYXtio0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-135">วิดีโอ 09: [การดึงข้อมูลรายงาน - ตอนที่ 2](https://www.youtube.com/watch?v=1Dzd9wb7XUY&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-135">Video 09: [Retrieving Report Data - Part 2](https://www.youtube.com/watch?v=1Dzd9wb7XUY&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-136">วิดีโอ 10: [การดึงข้อมูลรายงาน - ตอนที่ 3](https://www.youtube.com/watch?v=OFXG7sl5L2o&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-136">Video 10: [Retrieving Report Data - Part 3](https://www.youtube.com/watch?v=OFXG7sl5L2o&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-- <span data-ttu-id="ee2d0-137">**โมดูล 04: การทำงานกับพารามิเตอร์**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-137">**Module 04: Working with Parameters**</span></span>
-  - <span data-ttu-id="ee2d0-138">วิดีโอ 11: [การทำงานกับพารามิเตอร์ - ตอนที่ 1](https://www.youtube.com/watch?v=o7WaK88kheA&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-138">Video 11: [Working with Parameters - Part 1](https://www.youtube.com/watch?v=o7WaK88kheA&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-139">วิดีโอ 12: [การทำงานกับพารามิเตอร์ - ตอนที่ 2](https://www.youtube.com/watch?v=okj6wO72clQ&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-139">Video 12: [Working with Parameters - Part 2](https://www.youtube.com/watch?v=okj6wO72clQ&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-140">วิดีโอ 13: [การทำงานกับพารามิเตอร์ - ตอนที่ 3](https://www.youtube.com/watch?v=13-6sWIRD74&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-140">Video 13: [Working with Parameters - Part 3](https://www.youtube.com/watch?v=13-6sWIRD74&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-- <span data-ttu-id="ee2d0-141">**โมดูล 05: การแสดงภาพข้อมูลรายงาน**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-141">**Module 05: Visualizing Report Data**</span></span>
-  - <span data-ttu-id="ee2d0-142">วิดีโอ 14: [การแสดงภาพข้อมูลรายงาน - ตอนที่ 1](https://www.youtube.com/watch?v=b4TxBBtOWSw&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-142">Video 14: [Visualizing Report Data - Part 1](https://www.youtube.com/watch?v=b4TxBBtOWSw&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-143">วิดีโอ 15: [การแสดงภาพข้อมูลรายงาน - ตอนที่ 2](https://www.youtube.com/watch?v=JhEa_TugXeE&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-143">Video 15: [Visualizing Report Data - Part 2](https://www.youtube.com/watch?v=JhEa_TugXeE&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-144">วิดีโอ 16: [การแสดงภาพข้อมูลรายงาน - ตอนที่ 3](https://www.youtube.com/watch?v=dliLsRvQB-c&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-144">Video 16: [Visualizing Report Data - Part 3](https://www.youtube.com/watch?v=dliLsRvQB-c&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-145">วิดีโอ 17: [การแสดงภาพข้อมูลรายงาน - ตอนที่ 4](https://www.youtube.com/watch?v=5yHxuRRP_eU&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-145">Video 17: [Visualizing Report Data - Part 4](https://www.youtube.com/watch?v=5yHxuRRP_eU&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-- <span data-ttu-id="ee2d0-146">**โมดูล 06: การเพิ่มคุณลักษณะเชิงโต้ตอบ**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-146">**Module 06: Adding Interactive Features**</span></span>
-  - <span data-ttu-id="ee2d0-147">วิดีโอ 18: [การเพิ่มคุณลักษณะเชิงโต้ตอบ - ตอนที่ 1](https://www.youtube.com/watch?v=LInMHpTEaI0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-147">Video 18: [Adding Interactive Features - Part 1](https://www.youtube.com/watch?v=LInMHpTEaI0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-148">วิดีโอ 19: [การเพิ่มคุณลักษณะเชิงโต้ตอบ - ตอนที่ 2](https://www.youtube.com/watch?v=b_pr1xsbRJc&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-148">Video 19: [Adding Interactive Features - Part 2](https://www.youtube.com/watch?v=b_pr1xsbRJc&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-- <span data-ttu-id="ee2d0-149">**โมดูล 07: การพัฒนารายงานที่เหนือชั้นกว่า**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-149">**Module 07: Beyond Report Development**</span></span>
-  - <span data-ttu-id="ee2d0-150">วิดีโอ 20: [การพัฒนารายงานที่เหนือชั้นกว่า - ตอนที่ 1](https://www.youtube.com/watch?v=1CgDVDslwvs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-150">Video 20: [Beyond Report Development - Part 1](https://www.youtube.com/watch?v=1CgDVDslwvs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-151">วิดีโอ 21: [การพัฒนารายงานที่เหนือชั้นกว่า - ตอนที่ 2](https://www.youtube.com/watch?v=KRwtl7h0ynI&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-151">Video 21: [Beyond Report Development - Part 2](https://www.youtube.com/watch?v=KRwtl7h0ynI&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-- <span data-ttu-id="ee2d0-152">**โมดูล 08: เนื้อหาโบนัส**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-152">**Module 08: Bonus Content**</span></span>
-  - <span data-ttu-id="ee2d0-153">วิดีโอ 22: [เนื้อหาโบนัส: การทบทวนความรู้](https://www.youtube.com/watch?v=w5zlJ8BodxI&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-153">Video 22: [Bonus Content: Review](https://www.youtube.com/watch?v=w5zlJ8BodxI&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-154">วิดีโอ 23: [เนื้อหาโบนัส: วิวัฒนาการของการจัดทำรายงานที่ระบุหมายเลขหน้า](https://www.youtube.com/watch?v=pevpai65MvY&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-154">Video 23: [Bonus Content: Evolution of Paginated Reporting](https://www.youtube.com/watch?v=pevpai65MvY&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
-  - <span data-ttu-id="ee2d0-155">วิดีโอ 24: [เนื้อหาโบนัส: การลดอุปสรรคในการกรอกข้อมูล](https://www.youtube.com/watch?v=vu32LfckCt8&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-155">Video 24: [Bonus Content: Lowering the Barrier to Entry](https://www.youtube.com/watch?v=vu32LfckCt8&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)</span></span>
+- **บทนำ**
+  - วิดีโอ 01: [ยินดีต้อนรับและการแนะนำหลักสูตร](https://www.youtube.com/watch?v=DN1t5p9aui0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+- **โมดูล 01: การรายงานของ Power BI**
+  - วิดีโอ 02: [การรายงานของ Power BI - ตอนที่ 1](https://www.youtube.com/watch?v=s6Amctk3Z_g&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 03: [การรายงานของ Power BI - ตอนที่ 2](https://www.youtube.com/watch?v=jXTiYJKw1Rs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+- **โมดูล 02: การออกแบบเค้าโครงรายงาน**
+  - วิดีโอ 04: [การออกแบบเค้าโครงรายงาน - ตอนที่ 1](https://www.youtube.com/watch?v=EjHANN3rGNs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 05: [การออกแบบเค้าโครงรายงาน - ตอนที่ 2](https://www.youtube.com/watch?v=2CZIrJU_HZU&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 06: [การออกแบบเค้าโครงรายงาน - ตอนที่ 3](https://www.youtube.com/watch?v=eaFFzkT6pxE&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 07: [การออกแบบเค้าโครงรายงาน - ตอนที่ 4](https://www.youtube.com/watch?v=0z576TI27Vg&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+- **โมดูล 03: การดึงข้อมูลรายงาน**
+  - วิดีโอ 08: [การดึงข้อมูลรายงาน - ตอนที่ 1](https://www.youtube.com/watch?v=SHGTTYXtio0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 09: [การดึงข้อมูลรายงาน - ตอนที่ 2](https://www.youtube.com/watch?v=1Dzd9wb7XUY&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 10: [การดึงข้อมูลรายงาน - ตอนที่ 3](https://www.youtube.com/watch?v=OFXG7sl5L2o&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+- **โมดูล 04: การทำงานกับพารามิเตอร์**
+  - วิดีโอ 11: [การทำงานกับพารามิเตอร์ - ตอนที่ 1](https://www.youtube.com/watch?v=o7WaK88kheA&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 12: [การทำงานกับพารามิเตอร์ - ตอนที่ 2](https://www.youtube.com/watch?v=okj6wO72clQ&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 13: [การทำงานกับพารามิเตอร์ - ตอนที่ 3](https://www.youtube.com/watch?v=13-6sWIRD74&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+- **โมดูล 05: การแสดงภาพข้อมูลรายงาน**
+  - วิดีโอ 14: [การแสดงภาพข้อมูลรายงาน - ตอนที่ 1](https://www.youtube.com/watch?v=b4TxBBtOWSw&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 15: [การแสดงภาพข้อมูลรายงาน - ตอนที่ 2](https://www.youtube.com/watch?v=JhEa_TugXeE&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 16: [การแสดงภาพข้อมูลรายงาน - ตอนที่ 3](https://www.youtube.com/watch?v=dliLsRvQB-c&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 17: [การแสดงภาพข้อมูลรายงาน - ตอนที่ 4](https://www.youtube.com/watch?v=5yHxuRRP_eU&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+- **โมดูล 06: การเพิ่มคุณลักษณะเชิงโต้ตอบ**
+  - วิดีโอ 18: [การเพิ่มคุณลักษณะเชิงโต้ตอบ - ตอนที่ 1](https://www.youtube.com/watch?v=LInMHpTEaI0&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 19: [การเพิ่มคุณลักษณะเชิงโต้ตอบ - ตอนที่ 2](https://www.youtube.com/watch?v=b_pr1xsbRJc&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+- **โมดูล 07: การพัฒนารายงานที่เหนือชั้นกว่า**
+  - วิดีโอ 20: [การพัฒนารายงานที่เหนือชั้นกว่า - ตอนที่ 1](https://www.youtube.com/watch?v=1CgDVDslwvs&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 21: [การพัฒนารายงานที่เหนือชั้นกว่า - ตอนที่ 2](https://www.youtube.com/watch?v=KRwtl7h0ynI&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+- **โมดูล 08: เนื้อหาโบนัส**
+  - วิดีโอ 22: [เนื้อหาโบนัส: การทบทวนความรู้](https://www.youtube.com/watch?v=w5zlJ8BodxI&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 23: [เนื้อหาโบนัส: วิวัฒนาการของการจัดทำรายงานที่ระบุหมายเลขหน้า](https://www.youtube.com/watch?v=pevpai65MvY&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 24: [เนื้อหาโบนัส: การลดอุปสรรคในการกรอกข้อมูล](https://www.youtube.com/watch?v=vu32LfckCt8&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
+  - วิดีโอ 25: [เนื้อหาโบนัส: การอัปเดตประจำเดือนธันวาคม 2020 ](https://www.youtube.com/watch?v=-7M4muS_3BI&list=PL1N57mwBHtN1icIhpjQOaRL8r9G-wytpT)
 
-## <a name="self-study-kit"></a><span data-ttu-id="ee2d0-156">ชุดการเรียนรู้ด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="ee2d0-156">Self-study kit</span></span>
+## <a name="self-study-kit"></a>ชุดการเรียนรู้ด้วยตนเอง
 
-<span data-ttu-id="ee2d0-157">คุณสามารถดาวน์โหลดและตั้งค่าชุดการเรียนรู้ด้วยตนเอง ซึ่งประกอบด้วยเนื้อหาการนำเสนอและแล็บปฏิบัติการสาธิตทั้งแปด:</span><span class="sxs-lookup"><span data-stu-id="ee2d0-157">You can download and set up a self-study kit, which consists of the presentation content and eight hands-on labs:</span></span>
+คุณสามารถดาวน์โหลดและตั้งค่าชุดการเรียนรู้ด้วยตนเอง ซึ่งประกอบด้วยเนื้อหาการนำเสนอและแล็บปฏิบัติการสาธิตทั้งแปด:
 
-1. <span data-ttu-id="ee2d0-158">ใช้ [ลิงก์นี้](https://aka.ms/priad-student) เพื่อดาวน์โหลดชุดการเรียนรู้ด้วยตนเอง (.zip) ลงในเครื่องพีซีของคุณ (Windows 7 หรือใหม่กว่า)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-158">Use [this link](https://aka.ms/priad-student) to download the self-study kit (.zip) locally to your PC (Windows 7, or later).</span></span>
-1. <span data-ttu-id="ee2d0-159">เปิดคุณสมบัติไฟล์ของไฟล์ zip และทำครื่องหมายที่ “ยกเลิกการบล็อก” (Windows อาจตั้งค่าสถานะไฟล์เป็นอาจไม่น่าเชื่อถือ)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-159">Open the file properties of the zip file, and check "unblock" (Windows may flag the file as potentially untrusted).</span></span>
-1. <span data-ttu-id="ee2d0-160">สร้างโฟลเดอร์หลักสูตรราก</span><span class="sxs-lookup"><span data-stu-id="ee2d0-160">Create a root course folder.</span></span> <span data-ttu-id="ee2d0-161">เราขอแนะนำให้คุณตั้งชื่อเช่น "C:\Training"</span><span class="sxs-lookup"><span data-stu-id="ee2d0-161">We recommend you name it something like "C:\Training".</span></span> <span data-ttu-id="ee2d0-162">โปรดจำตำแหน่งที่ตั้งนี้ เนื่องจากคุณจำเป็นต้องเข้าถึงไฟล์หลักสูตรในระหว่างแล็บ</span><span class="sxs-lookup"><span data-stu-id="ee2d0-162">Remember this location, because you'll need to access the course files during the labs.</span></span> <span data-ttu-id="ee2d0-163">เอกสารประกอบแล็บทั้งหมดอ้างอิงไปยังตำแหน่งที่ตั้งนี้เป็น **&lt;CourseFolder&gt;**</span><span class="sxs-lookup"><span data-stu-id="ee2d0-163">All lab documents refer to this location as **&lt;CourseFolder&gt;**.</span></span>
-1. <span data-ttu-id="ee2d0-164">แตกเนื้อหาไฟล์ **PowerBIPRIAD-Student.zip** ไปยังโฟลเดอร์หลักสูตรรากของคุณ</span><span class="sxs-lookup"><span data-stu-id="ee2d0-164">Extract the **PowerBIPRIAD-Student.zip** file contents to your root course folder.</span></span>
-1. <span data-ttu-id="ee2d0-165">ในโฟลเดอร์ **&lt;CourseFolder&gt;\PowerBIPRIAD** เปิดไฟล์ **Readme.txt** และดำเนินการผ่านคำแนะนำในการตั้งค่า</span><span class="sxs-lookup"><span data-stu-id="ee2d0-165">In the **&lt;CourseFolder&gt;\PowerBIPRIAD** folder, open the **ReadMe.txt** file and work through the setup instructions.</span></span>
+1. ใช้ [ลิงก์นี้](https://aka.ms/priad-student) เพื่อดาวน์โหลดชุดการเรียนรู้ด้วยตนเอง (.zip) ลงในเครื่องพีซีของคุณ (Windows 7 หรือใหม่กว่า)
+1. เปิดคุณสมบัติไฟล์ของไฟล์ zip และทำครื่องหมายที่ “ยกเลิกการบล็อก” (Windows อาจตั้งค่าสถานะไฟล์เป็นอาจไม่น่าเชื่อถือ)
+1. สร้างโฟลเดอร์หลักสูตรราก เราขอแนะนำให้คุณตั้งชื่อเช่น "C:\Training" โปรดจำตำแหน่งที่ตั้งนี้ เนื่องจากคุณจำเป็นต้องเข้าถึงไฟล์หลักสูตรในระหว่างแล็บ เอกสารประกอบแล็บทั้งหมดอ้างอิงไปยังตำแหน่งที่ตั้งนี้เป็น **&lt;CourseFolder&gt;**
+1. แตกเนื้อหาไฟล์ **PowerBIPRIAD-Student.zip** ไปยังโฟลเดอร์หลักสูตรรากของคุณ
+1. ในโฟลเดอร์ **&lt;CourseFolder&gt;\PowerBIPRIAD** เปิดไฟล์ **Readme.txt** และดำเนินการผ่านคำแนะนำในการตั้งค่า
 
 > [!TIP]
-> <span data-ttu-id="ee2d0-166">ไฟล์ **Readme.txt**, เอกสารแล็บและไฟล์งานนำเสนอ (PDF) พร้อมใช้งานในภาษาอังกฤษและอีกแปดภาษาดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="ee2d0-166">The **ReadMe.txt** file, lab documents and presentation file (PDF) are available in English and also the following eight languages:</span></span>
-> - <span data-ttu-id="ee2d0-167">ภาษาเยอรมัน (de-DE)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-167">German (de-DE)</span></span>
-> - <span data-ttu-id="ee2d0-168">ภาษาสเปน (es-ES)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-168">Spanish (es-ES)</span></span>
-> - <span data-ttu-id="ee2d0-169">ภาษาฝรั่งเศส (fr-FR)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-169">French (fr-FR)</span></span>
-> - <span data-ttu-id="ee2d0-170">ภาษาอิตาลี (it-IT)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-170">Italian (it-IT)</span></span>
-> - <span data-ttu-id="ee2d0-171">ภาษาญี่ปุ่น (ja-JP)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-171">Japanese (ja-JP)</span></span>
-> - <span data-ttu-id="ee2d0-172">ภาษาเกาหลี (ko-KR)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-172">Korean (ko-KR)</span></span>
-> - <span data-ttu-id="ee2d0-173">ภาษาโปรตุเกส, ภาษาบราซิล (pt-BR)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-173">Portuguese, Brazilian (pt-BR)</span></span>
-> - <span data-ttu-id="ee2d0-174">ภาษาจีนตัวอักษรประยุกต์ (zh-CN)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-174">Chinese, simplified characters (zh-CN)</span></span>
+> ไฟล์ **Readme.txt**, เอกสารแล็บและไฟล์งานนำเสนอ (PDF) พร้อมใช้งานในภาษาอังกฤษและอีกแปดภาษาดังต่อไปนี้:
+> - ภาษาเยอรมัน (de-DE)
+> - ภาษาสเปน (es-ES)
+> - ภาษาฝรั่งเศส (fr-FR)
+> - ภาษาอิตาลี (it-IT)
+> - ภาษาญี่ปุ่น (ja-JP)
+> - ภาษาเกาหลี (ko-KR)
+> - ภาษาโปรตุเกส, ภาษาบราซิล (pt-BR)
+> - ภาษาจีนตัวอักษรประยุกต์ (zh-CN)
 
 > [!NOTE]
-> <span data-ttu-id="ee2d0-175">คุณมีหน้าที่รับผิดชอบในการมีบัญชี Power BI ของตนเอง</span><span class="sxs-lookup"><span data-stu-id="ee2d0-175">You're responsible for having your own Power BI account.</span></span> <span data-ttu-id="ee2d0-176">หากคุณไม่ได้มีบัญชีอยู่แล้ว ดูที่ [ลงทะเบียน Power BI เป็นรายบุคคล](../fundamentals/service-self-service-signup-for-power-bi.md)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-176">If you don't already have one, see [Sign up for Power BI as an individual](../fundamentals/service-self-service-signup-for-power-bi.md).</span></span>
+> คุณมีหน้าที่รับผิดชอบในการมีบัญชี Power BI ของตนเอง หากคุณไม่ได้มีบัญชีอยู่แล้ว ดูที่ [ลงทะเบียน Power BI เป็นรายบุคคล](../fundamentals/service-self-service-signup-for-power-bi.md)
 >
-> <span data-ttu-id="ee2d0-177">คุณต้องลงชื่อเข้าใช้ Power BI เพื่อเผยแพร่ไฟล์ Power BI Desktop ไปยังพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-177">You must sign in to Power BI to publish a Power BI Desktop file to a workspace.</span></span> <span data-ttu-id="ee2d0-178">ผลลัพธ์การเผยแพร่ในชุดข้อมูลที่ใช้เป็นแหล่งข้อมูลรายงาน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-178">The publication results in a dataset that's used as a report data source.</span></span> <span data-ttu-id="ee2d0-179">คุณไม่จำเป็นต้องมีสิทธิ์การใช้งาน Power BI Pro หรือการสมัครใช้งาน Power BI Premium เพื่อใช้ชุดข้อมูลเป็นแหล่งข้อมูลรายงาน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-179">You don't need a Power BI Pro license or a Power BI Premium subscription to use a dataset as a report data source.</span></span>
+> คุณต้องลงชื่อเข้าใช้ Power BI เพื่อเผยแพร่ไฟล์ Power BI Desktop ไปยังพื้นที่ทำงาน ผลลัพธ์การเผยแพร่ในชุดข้อมูลที่ใช้เป็นแหล่งข้อมูลรายงาน คุณไม่จำเป็นต้องมีสิทธิ์การใช้งาน Power BI Pro หรือการสมัครใช้งาน Power BI Premium เพื่อใช้ชุดข้อมูลเป็นแหล่งข้อมูลรายงาน
 >
-> <span data-ttu-id="ee2d0-180">งานในแล็บบางงานจะเกี่ยวข้องกับการเผยแพร่รายงานที่มีการแบ่งหน้าของคุณไปยังพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-180">Some lab tasks involve publishing your paginated report to a workspace.</span></span> <span data-ttu-id="ee2d0-181">คุณจะสามารถเปิดรายงานที่มีการแบ่งหน้าได้ก็ต่อเมื่อรายงานนั้นได้ถูกบันทึกไว้ในพื้นที่ทำงาน[ที่มีความจุ](../admin/service-premium-what-is.md#reserved-capacities)เท่านั้น ซึ่งได้เปิดใช้งานปริมาณงานของรายงานที่มีการแบ่งหน้า</span><span class="sxs-lookup"><span data-stu-id="ee2d0-181">You can only open a paginated report when it's been saved to a workspace on a [capacity](../admin/service-premium-what-is.md#reserved-capacities), which has the paginated reports workload enabled.</span></span> <span data-ttu-id="ee2d0-182">หากคุณไม่สามารถเข้าถึงพื้นที่ทำงานที่เหมาะสม แล็บจะมีลิงก์ให้คุณสำหรับรับชมวิดีโอที่แสดงการเผยแพร่รายงานแทน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-182">If you don't have access to a suitable workspace, the lab will provide you with a link to watch a video that demonstrates report publication instead.</span></span>
+> งานในแล็บบางงานจะเกี่ยวข้องกับการเผยแพร่รายงานที่มีการแบ่งหน้าของคุณไปยังพื้นที่ทำงาน คุณจะสามารถเปิดรายงานที่มีการแบ่งหน้าได้ก็ต่อเมื่อรายงานนั้นได้ถูกบันทึกไว้ในพื้นที่ทำงาน[ที่มีความจุ](../admin/service-premium-what-is.md#reserved-capacities)เท่านั้น ซึ่งได้เปิดใช้งานปริมาณงานของรายงานที่มีการแบ่งหน้า หากคุณไม่สามารถเข้าถึงพื้นที่ทำงานที่เหมาะสม แล็บจะมีลิงก์ให้คุณสำหรับรับชมวิดีโอที่แสดงการเผยแพร่รายงานแทน
 
-## <a name="instructor-kit"></a><span data-ttu-id="ee2d0-183">ชุดผู้สอน</span><span class="sxs-lookup"><span data-stu-id="ee2d0-183">Instructor kit</span></span>
+## <a name="instructor-kit"></a>ชุดผู้สอน
 
-<span data-ttu-id="ee2d0-184">ใช้ [ลิงก์นี้](https://aka.ms/priad-instructor) เพื่อดาวน์โหลดชุดผู้สอน (.zip) ลงในเครื่องพีซีของคุณ</span><span class="sxs-lookup"><span data-stu-id="ee2d0-184">Use [this link](https://aka.ms/priad-instructor) to download the instructor kit (.zip) locally to your PC.</span></span>
+ใช้ [ลิงก์นี้](https://aka.ms/priad-instructor) เพื่อดาวน์โหลดชุดผู้สอน (.zip) ลงในเครื่องพีซีของคุณ
 
-## <a name="next-steps"></a><span data-ttu-id="ee2d0-185">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="ee2d0-185">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="ee2d0-186">สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="ee2d0-186">For more information related to this article, check out the following resources:</span></span>
+สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:
 
-- <span data-ttu-id="ee2d0-187">บทช่วยสอน: [สร้างรายงานแบบระบุหมายเลขหน้าและอัปโหลดไปยังบริการของ Power BI](../paginated-reports/paginated-reports-quickstart-aw.md)</span><span class="sxs-lookup"><span data-stu-id="ee2d0-187">Tutorial: [Create a paginated report and upload it to the Power BI service](../paginated-reports/paginated-reports-quickstart-aw.md)</span></span>
-- <span data-ttu-id="ee2d0-188">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="ee2d0-188">Questions?</span></span> [<span data-ttu-id="ee2d0-189">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="ee2d0-189">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="ee2d0-190">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="ee2d0-190">Suggestions?</span></span> [<span data-ttu-id="ee2d0-191">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="ee2d0-191">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+- บทช่วยสอน: [สร้างรายงานแบบระบุหมายเลขหน้าและอัปโหลดไปยังบริการของ Power BI](../paginated-reports/paginated-reports-quickstart-aw.md)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)

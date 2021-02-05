@@ -2,141 +2,155 @@
 title: ใช้ตัวควบคุม Microsoft Cloud App Security ใน Power BI
 description: เรียนรู้วิธีการใช้ Microsoft Cloud App Security พร้อมกับ Power BI
 author: paulinbar
-ms.author: painbar
 ms.reviewer: ''
 ms.service: powerbi
 ms.subservice: powerbi-eim
 ms.topic: how-to
 ms.date: 06/15/2020
+ms.author: painbar
 LocalizationGroup: Data from files
-ms.openlocfilehash: f7bd3a59395e9f5f1ea167b7e7988aeb9882a72f
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: 7907242c3ef71b1b621820cbb66bd93e88ff1c99
+ms.sourcegitcommit: c33e53e1fab1f29872297524a7b4f5af6c806798
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96413345"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99532716"
 ---
-# <a name="using-microsoft-cloud-app-security-controls-in-power-bi"></a><span data-ttu-id="ad9e8-103">ใช้ตัวควบคุม Microsoft Cloud App Security ใน Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-103">Using Microsoft Cloud App Security controls in Power BI</span></span>
+# <a name="using-microsoft-cloud-app-security-controls-in-power-bi"></a>ใช้ตัวควบคุม Microsoft Cloud App Security ใน Power BI
 
-<span data-ttu-id="ad9e8-104">ด้วยการใช้ Cloud App Security กับ Power BI คุณสามารถช่วยปกป้องรายงาน ข้อมูล และบริการของ Power BI มิให้รั่วไหลโดยไม่ได้ตั้งใจหรือมิให้ถูกละเมิด</span><span class="sxs-lookup"><span data-stu-id="ad9e8-104">Using Cloud App Security with Power BI, you can help protect your Power BI reports, data, and services from unintended leaks or breaches.</span></span> <span data-ttu-id="ad9e8-105">ด้วย Cloud App Security คุณสามารถสร้างนโยบายการเข้าถึงตามเงื่อนไขสำหรับข้อมูลขององค์กรโดยใช้ตัวควบคุมเซสชันแบบเรียลไทม์ใน Azure Active Directory (Azure AD) ซึ่งช่วยให้มั่นใจได้ว่าการวิเคราะห์ Power BI ของคุณมีความปลอดภัย</span><span class="sxs-lookup"><span data-stu-id="ad9e8-105">With Cloud App Security, you create conditional access policies for your organization’s data, using real-time session controls in Azure Active Directory (Azure AD), that help to ensure your Power BI analytics are secure.</span></span> <span data-ttu-id="ad9e8-106">หลังจากที่มีการกำหนดนโยบายเหล่านี้ ผู้ดูแลระบบสามารถตรวจสอบการเข้าถึงและกิจกรรมของผู้ใช้ ทำการวิเคราะห์ความเสี่ยงแบบเรียลไทม์ และตั้งค่าตัวควบคุมเฉพาะป้ายชื่อได้</span><span class="sxs-lookup"><span data-stu-id="ad9e8-106">Once these policies have been set, administrators can monitor user access and activity, perform real-time risk analysis, and set label-specific controls.</span></span> 
+ด้วยการใช้ Cloud App Security กับ Power BI คุณสามารถช่วยปกป้องรายงาน ข้อมูล และบริการของ Power BI มิให้รั่วไหลโดยไม่ได้ตั้งใจหรือมิให้ถูกละเมิด ด้วย Cloud App Security คุณสามารถสร้างนโยบายการเข้าถึงตามเงื่อนไขสำหรับข้อมูลขององค์กรของคุณโดยใช้การควบคุมเซสชันแบบเรียลไทม์ใน Azure Active Directory (Azure AD) ซึ่งช่วยให้แน่ใจว่าการวิเคราะห์ Power BI ของคุณมีความปลอดภัย หลังจากที่มีการกำหนดนโยบายเหล่านี้ ผู้ดูแลระบบสามารถตรวจสอบการเข้าถึงและกิจกรรมของผู้ใช้ ทำการวิเคราะห์ความเสี่ยงแบบเรียลไทม์ และตั้งค่าตัวควบคุมเฉพาะป้ายชื่อได้ 
 
 ![การใช้บานหน้าต่างตัวควบคุม Cloud App Security](media/service-security-using-microsoft-cloud-app-security-controls/cloud-app-security-controls-01.png)
 
-<span data-ttu-id="ad9e8-108">คุณสามารถกำหนดค่า Cloud App Security สำหรับแอปและบริการทุกประเภท ไม่ใช่เพียงแค่ Power BI เท่านั้น</span><span class="sxs-lookup"><span data-stu-id="ad9e8-108">You can configure Cloud App Security for all sorts of apps and services, not only Power BI.</span></span> <span data-ttu-id="ad9e8-109">คุณจะต้องกำหนดค่า Cloud App Security ในการทำงานกับ Power BI เพื่อใช้ประโยชน์จากการคุ้มครอง Cloud App Security สำหรับข้อมูล Power BI และการวิเคราะห์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-109">You’ll need to configure Cloud App Security to work with Power BI to benefit from Cloud App Security protections for your Power BI data and analytics.</span></span> <span data-ttu-id="ad9e8-110">สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Cloud App Security รวมถึงภาพรวมของวิธีการทำงาน แดชบอร์ด และคะแนนความเสี่ยงของแอป ให้ดูเอกสารประกอบ [Cloud App Security](/cloud-app-security/)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-110">For more information about Cloud App Security, including an overview of how it works, the dashboard, and app risk scores, see the [Cloud App Security](/cloud-app-security/) documentation.</span></span>
+คุณสามารถกำหนดค่า Cloud App Security สำหรับแอปและบริการทุกประเภท ไม่ใช่เพียงแค่ Power BI เท่านั้น คุณจะต้องกำหนดค่า Cloud App Security ในการทำงานกับ Power BI เพื่อใช้ประโยชน์จากการคุ้มครอง Cloud App Security สำหรับข้อมูล Power BI และการวิเคราะห์ของคุณ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับ Cloud App Security รวมถึงภาพรวมของวิธีการทำงาน แดชบอร์ด และคะแนนความเสี่ยงของแอป ให้ดูเอกสารประกอบ [Cloud App Security](/cloud-app-security/)
+
+## <a name="cloud-app-security-licensing"></a>การให้สิทธิการใช้งาน Cloud App Security
+
+ในการใช้ Cloud App Security กับ Power BI คุณต้องใช้และกำหนดค่าบริการการรักษาความปลอดภัยของ Microsoft ที่เกี่ยวข้อง ซึ่งบางรายการถูกตั้งค่าไว้นอก Power BI เพื่อให้มี Cloud App Security ในผู้เช่าของคุณ คุณต้องมี[สิทธิการใช้งาน](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2NXYO)ต่อไปนี้:
+* Microsoft Cloud App Security: ให้ความจุ Cloud App Security สำหรับแอปที่สนับสนุนทั้งหมด ส่วนหนึ่งของ EMS E5 และ Microsoft 365 E5 suites
+* Office 365 Cloud App Security: มีความสามารถของ Cloud App Security สำหรับ Office 365 เท่านั้น ส่วนหนึ่งของชุดโปรแกรม Office 365 E5
 
 
-## <a name="using-cloud-app-security-with-power-bi"></a><span data-ttu-id="ad9e8-111">ใช้ Cloud App Security กับ Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-111">Using Cloud App Security with Power BI</span></span>
+## <a name="configure-real-time-controls-for-power-bi-with-cloud-app-security"></a>กำหนดค่าตัวควบคุมแบบเรียลไทม์สำหรับ Power BI ด้วย Cloud App Security
 
-<span data-ttu-id="ad9e8-112">ในการใช้ Cloud App Security กับ Power BI คุณต้องใช้และกำหนดค่าบริการการรักษาความปลอดภัยของ Microsoft ที่เกี่ยวข้อง ซึ่งบางรายการถูกตั้งค่าไว้นอก Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-112">To use Cloud App Security with Power BI, you must use and configure relevant Microsoft security services, some of which are set outside Power BI.</span></span>
+> [!NOTE]
+> * จำเป็นต้องมีสิทธิ์การใช้งาน Azure Active Directory Premium P1 เพื่อประโยชน์จากการควบคุมแบบเรียลไทม์ Cloud App Security
 
-### <a name="cloud-app-security-licensing"></a><span data-ttu-id="ad9e8-113">การให้สิทธิการใช้งาน Cloud App Security</span><span class="sxs-lookup"><span data-stu-id="ad9e8-113">Cloud App Security licensing</span></span>
+หัวข้อต่อไปนี้อธิบายขั้นตอนสำหรับการกำหนดค่าตัวควบคุมแบบเรียลไทม์สำหรับ Power BI ด้วย Cloud App Security
 
-<span data-ttu-id="ad9e8-114">เพื่อให้มี Cloud App Security ในผู้เช่าของคุณ คุณต้องมี[สิทธิการใช้งาน](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2NXYO)ต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="ad9e8-114">In order to have Cloud App Security in your tenant, you must have one of the following [licenses](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2NXYO):</span></span>
-* <span data-ttu-id="ad9e8-115">Microsoft Cloud App Security: ให้ความจุ Cloud App Security สำหรับแอปที่สนับสนุนทั้งหมด ส่วนหนึ่งของ EMS E5 และ Microsoft 365 E5 suites</span><span class="sxs-lookup"><span data-stu-id="ad9e8-115">Microsoft Cloud App Security: Provides Cloud App Security capabilities for all supported apps, part of the EMS E5 and Microsoft 365 E5 suites.</span></span>
-* <span data-ttu-id="ad9e8-116">Office 365 Cloud App Security: มีความสามารถของ Cloud App Security สำหรับ Office 365 เท่านั้น ส่วนหนึ่งของชุดโปรแกรม Office 365 E5</span><span class="sxs-lookup"><span data-stu-id="ad9e8-116">Office 365 Cloud App Security: Provides Cloud App Security capabilities only for Office 365, part of the Office 365 E5 suite.</span></span>
-* <span data-ttu-id="ad9e8-117">Azure Active Directory Premium P1 เพื่อใช้ประโยชน์จากความสามารถของ Cloud App Security หลัก</span><span class="sxs-lookup"><span data-stu-id="ad9e8-117">Azure Active Directory Premium P1, in order to benefit from the major Cloud App Security capabilities.</span></span>
+### <a name="set-session-policies-in-azure-ad-required"></a>กำหนดนโยบายสำหรับเซสชันใน Azure AD (จำเป็น)
+ขั้นตอนที่จำเป็นในการตั้งค่าตัวควบคุมเซสชันจะเสร็จสมบูรณ์ในพอร์ทัล Azure AD และ Cloud App Security ในพอร์ทัล Azure AD คุณสามารถสร้างนโยบายการเข้าถึงแบบมีเงื่อนไขสำหรับ Power BI และเซสชันเส้นทางที่ใช้ใน Power BI ผ่านทางบริการของ Cloud App Security 
 
-<span data-ttu-id="ad9e8-118">หัวข้อต่อไปนี้อธิบายขั้นตอนสำหรับการใช้ Cloud App Security ใน Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-118">The sections below describe the steps for using Cloud App Security in Power BI.</span></span>
+Cloud App Security ทำงานโดยใช้สถาปัตยกรรมพร็อกซีแบบย้อนกลับ และรวมเข้ากับการเข้าถึงแบบมีเงื่อนไขของ Azure AD เพื่อตรวจสอบกิจกรรมผู้ใช้ Power BI แบบเรียลไทม์ ขั้นตอนต่อไปนี้มีไว้เพื่อช่วยให้คุณเข้าใจกระบวนการ และมีคำแนะนำโดยละเอียดทีละขั้นตอนในเนื้อหาที่เชื่อมโยงในแต่ละขั้นตอนต่อไปนี้ นอกจากนี้ คุณยังสามารถอ่านบทความ [Cloud App Security](/cloud-app-security/proxy-deployment-aad) ที่อธิบายถึงกระบวนการทั้งหมดได้
 
-### <a name="set-session-policies-in-azure-ad-required"></a><span data-ttu-id="ad9e8-119">กำหนดนโยบายสำหรับเซสชันใน Azure AD (จำเป็น)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-119">Set session policies in Azure AD (required)</span></span>
-<span data-ttu-id="ad9e8-120">ขั้นตอนที่จำเป็นในการตั้งค่าตัวควบคุมเซสชันจะเสร็จสมบูรณ์ในพอร์ทัล Azure AD และ Cloud App Security</span><span class="sxs-lookup"><span data-stu-id="ad9e8-120">The steps necessary to set session controls are completed in the Azure AD and Cloud App Security portals.</span></span> <span data-ttu-id="ad9e8-121">ในพอร์ทัล Azure AD คุณสามารถสร้างนโยบายการเข้าถึงแบบมีเงื่อนไขสำหรับ Power BI และเซสชันเส้นทางที่ใช้ใน Power BI ผ่านทางบริการของ Cloud App Security</span><span class="sxs-lookup"><span data-stu-id="ad9e8-121">In the Azure AD portal, you create a conditional access policy for Power BI, and route sessions used in Power BI through the Cloud App Security service.</span></span> 
+1.  [สร้างนโยบายการทดสอบการเข้าถึงแบบมีเงื่อนไขของ Azure AD](/cloud-app-security/proxy-deployment-aad#add-azure-ad)
+2.  [ลงชื่อเข้าใช้แต่ละแอปโดยผู้ใช้ที่ระบุไว้ในนโยบาย](/cloud-app-security/proxy-deployment-aad#sign-in-scoped)
+3.  [ตรวจสอบว่าแอปจะได้รับการกำหนดค่าให้ใช้ตัวควบคุมการเข้าถึงและเซสชันหรือไม่](/cloud-app-security/proxy-deployment-aad#portal)
+4.  [ทดสอบการใช้งาน](/cloud-app-security/proxy-deployment-aad#step-4-test-the-deployment)
 
-<span data-ttu-id="ad9e8-122">Cloud App Security ทำงานโดยใช้สถาปัตยกรรมพร็อกซีแบบย้อนกลับ และรวมเข้ากับการเข้าถึงแบบมีเงื่อนไขของ Azure AD เพื่อตรวจสอบกิจกรรมผู้ใช้ Power BI แบบเรียลไทม์</span><span class="sxs-lookup"><span data-stu-id="ad9e8-122">Cloud App Security operates using a reverse-proxy architecture, and is integrated with Azure AD conditional access to monitor Power BI user activity in real-time.</span></span> <span data-ttu-id="ad9e8-123">ขั้นตอนต่อไปนี้มีไว้เพื่อช่วยให้คุณเข้าใจกระบวนการ และมีคำแนะนำโดยละเอียดทีละขั้นตอนในเนื้อหาที่เชื่อมโยงในแต่ละขั้นตอนต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="ad9e8-123">The following steps are provided here to help you understand the process, and detailed step-by-step instructions are provided in the linked content in each of the following steps.</span></span> <span data-ttu-id="ad9e8-124">นอกจากนี้ คุณยังสามารถอ่านบทความ [Cloud App Security](/cloud-app-security/proxy-deployment-aad) ที่อธิบายถึงกระบวนการทั้งหมดได้</span><span class="sxs-lookup"><span data-stu-id="ad9e8-124">You can also read this [Cloud App Security article](/cloud-app-security/proxy-deployment-aad) that describes the process in whole.</span></span>
+กระบวนการสำหรับการตั้งค่านโยบายเซสชันมีการอธิบายรายละเอียดไว้ในบทความ[นโยบายเซสชัน](/cloud-app-security/session-policy-aad) 
 
-1.  [<span data-ttu-id="ad9e8-125">สร้างนโยบายการทดสอบการเข้าถึงแบบมีเงื่อนไขของ Azure AD</span><span class="sxs-lookup"><span data-stu-id="ad9e8-125">Create an Azure AD conditional access test policy</span></span>](/cloud-app-security/proxy-deployment-aad#add-azure-ad)
-2.  [<span data-ttu-id="ad9e8-126">ลงชื่อเข้าใช้แต่ละแอปโดยผู้ใช้ที่ระบุไว้ในนโยบาย</span><span class="sxs-lookup"><span data-stu-id="ad9e8-126">Sign into each app using a user scoped to the policy</span></span>](/cloud-app-security/proxy-deployment-aad#sign-in-scoped)
-3.  [<span data-ttu-id="ad9e8-127">ตรวจสอบว่าแอปจะได้รับการกำหนดค่าให้ใช้ตัวควบคุมการเข้าถึงและเซสชันหรือไม่</span><span class="sxs-lookup"><span data-stu-id="ad9e8-127">Verify the apps are configured to use access and session controls</span></span>](/cloud-app-security/proxy-deployment-aad#portal)
-4.  [<span data-ttu-id="ad9e8-128">ทดสอบการใช้งาน</span><span class="sxs-lookup"><span data-stu-id="ad9e8-128">Test the deployment</span></span>](/cloud-app-security/proxy-deployment-aad#step-4-test-the-deployment)
+### <a name="set-anomaly-detection-policies-to-monitor-power-bi-activities-recommended"></a>ตั้งค่านโยบายการตรวจจับความผิดปกติเพื่อตรวจสอบกิจกรรม Power BI (แนะนำ)
+คุณสามารถกำหนดนโยบายการตรวจจับความผิดปกติของ Power BI ที่สามารถกำหนดขอบเขตได้อย่างอิสระ เพื่อที่จะปรับใช้เฉพาะกับผู้ใช้และกลุ่มที่คุณต้องการรวมและไม่รวมในนโยบายเท่านั้น [เรียนรู้เพิ่มเติม](/cloud-app-security/anomaly-detection-policy#scope-anomaly-detection-policies)
 
-<span data-ttu-id="ad9e8-129">กระบวนการสำหรับการตั้งค่านโยบายเซสชันมีการอธิบายรายละเอียดไว้ในบทความ[นโยบายเซสชัน](/cloud-app-security/session-policy-aad)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-129">The process for setting session policies is described in detail in the [Session policies](/cloud-app-security/session-policy-aad) article.</span></span> 
+Cloud App Security ยังมีฟังก์ชันการตรวจจับภายในแบบเฉพาะสองแบบสำหรับ Power BI [ดูส่วนในภายหลังในเอกสารนี้สำหรับรายละเอียด](#built-in-cloud-app-security-detections-for-power-bi).
 
-### <a name="set-anomaly-detection-policies-to-monitor-power-bi-activities-recommended"></a><span data-ttu-id="ad9e8-130">ตั้งค่านโยบายการตรวจจับความผิดปกติเพื่อตรวจสอบกิจกรรม Power BI (แนะนำ)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-130">Set anomaly detection policies to monitor Power BI activities (recommended)</span></span>
-<span data-ttu-id="ad9e8-131">คุณสามารถกำหนดนโยบายการตรวจจับความผิดปกติของ Power BI ที่สามารถกำหนดขอบเขตได้อย่างอิสระ เพื่อที่จะปรับใช้เฉพาะกับผู้ใช้และกลุ่มที่คุณต้องการรวมและไม่รวมในนโยบายเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="ad9e8-131">You can define anomaly Power BI detection policies that can be independently scoped, so that they apply to only the users and groups you want to include and exclude in the policy.</span></span> <span data-ttu-id="ad9e8-132">[เรียนรู้เพิ่มเติม](/cloud-app-security/anomaly-detection-policy#scope-anomaly-detection-policies)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-132">[Learn more](/cloud-app-security/anomaly-detection-policy#scope-anomaly-detection-policies).</span></span>
+### <a name="use-microsoft-information-protection-sensitivity-labels-recommended"></a>ใช้ป้ายชื่อระดับความลับ Microsoft Information Protection (แนะนำ)
 
-<span data-ttu-id="ad9e8-133">Cloud App Security ยังมีฟังก์ชันการตรวจจับภายในแบบเฉพาะสองแบบสำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-133">Cloud App Security also has two dedicated, built-in detections for Power BI.</span></span> <span data-ttu-id="ad9e8-134">[ดูส่วนในภายหลังในเอกสารนี้สำหรับรายละเอียด](#built-in-cloud-app-security-detections-for-power-bi).</span><span class="sxs-lookup"><span data-stu-id="ad9e8-134">[See the section later on in this document for detail](#built-in-cloud-app-security-detections-for-power-bi).</span></span>
+ป้ายชื่อระดับความลับช่วยให้คุณสามารถจัดประเภทและช่วยปกป้องเนื้อหาที่สำคัญได้ เพื่อให้บุคลากรในองค์กรของคุณสามารถทำงานร่วมกับคู่ค้าภายนอกองค์กรของคุณได้ แต่ยังคงระมัดระวังและตระหนักถึงเนื้อหาและข้อมูลที่เป็นความลับ 
 
-### <a name="use-microsoft-information-protection-sensitivity-labels-recommended"></a><span data-ttu-id="ad9e8-135">ใช้ป้ายชื่อระดับความลับ Microsoft Information Protection (แนะนำ)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-135">Use Microsoft Information Protection sensitivity labels (recommended)</span></span>
+คุณสามารถอ่านบทความเกี่ยวกับ[ป้ายชื่อระดับความลับใน Power BI](service-security-sensitivity-label-overview.md) ซึ่งจะมีรายละเอียดเกี่ยวกับกระบวนการของการใช้ป้ายชื่อระดับความลับสำหรับ Power BI. ดูด้านล่างสำหรับ[ตัวอย่างของนโยบาย Power BI ตามป้ายชื่อระดับความลับ](#example).
 
-<span data-ttu-id="ad9e8-136">ป้ายชื่อระดับความลับช่วยให้คุณสามารถจัดประเภทและช่วยปกป้องเนื้อหาที่สำคัญได้ เพื่อให้บุคลากรในองค์กรของคุณสามารถทำงานร่วมกับคู่ค้าภายนอกองค์กรของคุณได้ แต่ยังคงระมัดระวังและตระหนักถึงเนื้อหาและข้อมูลที่เป็นความลับ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-136">Sensitivity labels enable you to classify and help protect sensitive content, so that people in your organization can collaborate with partners outside your organization, yet still be careful and aware of sensitive content and data.</span></span> 
+## <a name="custom-policies-to-alert-on-suspicious-user-activity-in-power-bi"></a>นโยบายแบบกำหนดเองเพื่อแจ้งเตือนเกี่ยวกับกิจกรรมของผู้ใช้ที่น่าสงสัยใน Power BI
 
-<span data-ttu-id="ad9e8-137">คุณสามารถอ่านบทความเกี่ยวกับ[ป้ายชื่อระดับความลับใน Power BI](service-security-sensitivity-label-overview.md) ซึ่งจะมีรายละเอียดเกี่ยวกับกระบวนการของการใช้ป้ายชื่อระดับความลับสำหรับ Power BI.</span><span class="sxs-lookup"><span data-stu-id="ad9e8-137">You can read the article on [sensitivity labels in Power BI](service-security-sensitivity-label-overview.md), which goes into detail about the process of using sensitivity labels for Power BI.</span></span> <span data-ttu-id="ad9e8-138">ดูด้านล่างสำหรับ[ตัวอย่างของนโยบาย Power BI ตามป้ายชื่อระดับความลับ](#example).</span><span class="sxs-lookup"><span data-stu-id="ad9e8-138">See below for an [example of a Power BI policy based on sensitivity labels](#example).</span></span>
+นโยบายกิจกรรม Cloud App Security เปิดใช้งานผู้ดูแลระบบเพื่อกำหนดกฎแบบกำหนดเองของตนเองเพื่อช่วยในการตรวจหาพฤติกรรมของผู้ใช้ที่เบี่ยงเบนจากบรรทัดฐานและแม้กระทั่งอาจมีการดำเนินการโดยอัตโนมัติถ้าดูเหมือนว่าจะเป็นอันตรายเกินไป ตัวอย่างเช่น:
 
-## <a name="built-in-cloud-app-security-detections-for-power-bi"></a><span data-ttu-id="ad9e8-139">ฟังก์ชันการตรวจจับที่มีอยู่ภายใน Cloud App Security สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-139">Built-in Cloud App Security detections for Power BI</span></span>
+* **การลบป้ายชื่อความไวขนาดใหญ่** ตัวอย่างเช่น: แจ้งเตือนฉันเมื่อมีการเอาป้ายชื่อความลับออกโดยผู้ใช้รายเดียวจาก20รายงานที่แตกต่างกันในหน้าต่างเวลาที่สั้นกว่า5นาที
 
-<span data-ttu-id="ad9e8-140">ฟังก์ชันการตรวจจับของ Cloud App Security ช่วยให้ผู้ดูแลระบบสามารถตรวจสอบกิจกรรมที่เฉพาะเจาะจงของแอปที่ตรวจสอบได้</span><span class="sxs-lookup"><span data-stu-id="ad9e8-140">Cloud App Security detections enable administrators to monitor specific activities of a monitored app.</span></span> <span data-ttu-id="ad9e8-141">สำหรับ Power BI ขณะนี้มีฟังก์ชันการตรวจจับภายในแบบเฉพาะของ Cloud App Security อยู่สองแบบ:</span><span class="sxs-lookup"><span data-stu-id="ad9e8-141">For Power BI, there are currently two dedicated, built-in Cloud App Security detections:</span></span> 
+* **การเข้ารหัสการดาวน์เกรดป้ายชื่อความไว** ตัวอย่างเช่น: แจ้งเตือนฉันเมื่อมีการจัดประเภทป้ายชื่อความไวของ ' ข้อมูลลับเฉพาะ ' ในขณะนี้เป็น ' สาธารณะ '
 
-* <span data-ttu-id="ad9e8-142">**การแชร์ที่น่าสงสัย** – ตรวจจับเมื่อผู้ใช้แชร์รายงานที่มีความสำคัญกับอีเมลที่ไม่คุ้นเคย (ภายนอกไปยังองค์กร)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-142">**Suspicious share** – detects when a user shares a sensitive report with an unfamiliar (external to the organization) email.</span></span> <span data-ttu-id="ad9e8-143">รายงานที่สำคัญคือรายงานที่มีป้ายชื่อระดับความลับ ซึ่งตั้งค่าเป็น **สำหรับใช้ภายในเท่านั้น** หรือสูงกว่า</span><span class="sxs-lookup"><span data-stu-id="ad9e8-143">A sensitive report is a report whose sensitivity label is set to **INTERNAL-ONLY** or higher.</span></span> 
+> [!NOTE]
+> * สามารถค้นหาตัวระบุที่ไม่ซ้ำกันของสิ่งประดิษฐ์ Power BI และป้ายชื่อความไวได้โดยใช้[POWER BI REST api](/rest/api/power-bi/) ดู[รับ](/rest/api/power-bi/datasets/getdatasets)ชุดข้อมูลหรือ[รับรายงาน](/rest/api/power-bi/reports/getreports)
 
-* <span data-ttu-id="ad9e8-144">**การแชร์รายงานจำนวนมาก** – ตรวจพบเมื่อผู้ใช้แชร์รายงานจำนวนมากในเซสชันเดียว</span><span class="sxs-lookup"><span data-stu-id="ad9e8-144">**Mass share of reports** – detects when a user shares a massive number of reports in a single session.</span></span>
 
-<span data-ttu-id="ad9e8-145">การตั้งค่าสำหรับการตรวจจับเหล่านี้จะได้รับการกำหนดค่าในพอร์ทัล Cloud App Security</span><span class="sxs-lookup"><span data-stu-id="ad9e8-145">Settings for these detections are configured in the Cloud App Security portal.</span></span> <span data-ttu-id="ad9e8-146">[เรียนรู้เพิ่มเติม](/cloud-app-security/anomaly-detection-policy#unusual-activities-by-user)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-146">[Learn more](/cloud-app-security/anomaly-detection-policy#unusual-activities-by-user).</span></span> 
+มีการกำหนดค่านโยบายกิจกรรมแบบกำหนดเองในพอร์ทัล Cloud App Security [เรียนรู้เพิ่มเติม](/cloud-app-security/user-activity-policies) 
 
-## <a name="power-bi-admin-role-in-cloud-app-security"></a><span data-ttu-id="ad9e8-147">บทบาทผู้ดูแลระบบ Power BI ใน Cloud App Security</span><span class="sxs-lookup"><span data-stu-id="ad9e8-147">Power BI admin role in Cloud App Security</span></span>
+## <a name="built-in-cloud-app-security-detections-for-power-bi"></a>ฟังก์ชันการตรวจจับที่มีอยู่ภายใน Cloud App Security สำหรับ Power BI
 
-<span data-ttu-id="ad9e8-148">บทบาทใหม่ถูกสร้างขึ้นสำหรับผู้ดูแลระบบ Power BI เมื่อใช้ Cloud App Security กับ Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-148">A new role is created for Power BI admins when using Cloud App Security with Power BI.</span></span> <span data-ttu-id="ad9e8-149">เมื่อคุณเข้าสู่ระบบในฐานะผู้ดูแลระบบ Power BI ไปยัง [พอร์ทัล Cloud App Security](https://portal.cloudappsecurity.com/) คุณมีสิทธิ์การเข้าถึงแบบจำกัดในข้อมูลที่เกี่ยวข้องกับ Power BI การแจ้งเตือน ผู้ใช้ที่มีความเสี่ยง บันทึกกิจกรรม และข้อมูลอื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-149">When you log in as a Power BI admin to the [Cloud App Security portal](https://portal.cloudappsecurity.com/), you have limited access to Power-BI-relevant data, alerts, users at risk, activity logs, and other information.</span></span>
+ฟังก์ชันการตรวจจับของ Cloud App Security ช่วยให้ผู้ดูแลระบบสามารถตรวจสอบกิจกรรมที่เฉพาะเจาะจงของแอปที่ตรวจสอบได้ สำหรับ Power BI ขณะนี้มีฟังก์ชันการตรวจจับภายในแบบเฉพาะของ Cloud App Security อยู่สองแบบ: 
 
-## <a name="considerations-and-limitations"></a><span data-ttu-id="ad9e8-150">ข้อควรพิจารณาและข้อจำกัด</span><span class="sxs-lookup"><span data-stu-id="ad9e8-150">Considerations and limitations</span></span> 
-<span data-ttu-id="ad9e8-151">การใช้ Cloud App Security กับ Power BI ได้รับการออกแบบมาเพื่อช่วยรักษาความปลอดภัยเนื้อหาและข้อมูลขององค์กรของคุณด้วยฟังก์ชันการตรวจจับที่ตรวจสอบเซสชันของผู้ใช้และกิจกรรมของพวกเขา</span><span class="sxs-lookup"><span data-stu-id="ad9e8-151">Using Cloud App Security with Power BI is designed to help secure your organization’s content and data, with detections that monitor user sessions and their activities.</span></span> <span data-ttu-id="ad9e8-152">เมื่อใช้ Cloud App Security กับ Power BI มีข้อจำกัดและข้อพิจารณาบางอย่างที่คุณควรจำไว้:</span><span class="sxs-lookup"><span data-stu-id="ad9e8-152">When using Cloud App Security with Power BI, there are a few considerations and limitations you should keep in mind:</span></span>
+* **การแชร์ที่น่าสงสัย** – ตรวจจับเมื่อผู้ใช้แชร์รายงานที่มีความสำคัญกับอีเมลที่ไม่คุ้นเคย (ภายนอกไปยังองค์กร) รายงานที่สำคัญคือรายงานที่มีป้ายชื่อระดับความลับ ซึ่งตั้งค่าเป็น **สำหรับใช้ภายในเท่านั้น** หรือสูงกว่า 
 
-* <span data-ttu-id="ad9e8-153">Cloud App Security สามารถใช้งานได้เฉพาะบนไฟล์ Excel, PowerPoint และ PDF เท่านั้น</span><span class="sxs-lookup"><span data-stu-id="ad9e8-153">Cloud App Security can only operate on Excel, PowerPoint, and PDF files.</span></span>
-* <span data-ttu-id="ad9e8-154">ถ้าคุณต้องการใช้ความสามารถของป้ายชื่อระดับความลับในนโยบายเซสชันของคุณสำหรับ Power BI คุณจำเป็นต้องมีสิทธิ์การใช้งานของ Azure Information Protection Premium P1 หรือ Premium P2</span><span class="sxs-lookup"><span data-stu-id="ad9e8-154">If you want to use sensitivity labels capabilities in your session policies for Power BI, you need to have an Azure Information Protection Premium P1 or Premium P2 license.</span></span> <span data-ttu-id="ad9e8-155">สามารถซื้อ Microsoft Azure Information Protection แบบสแตนด์อโลนหรือผ่านหนึ่งในชุดโปรแกรมสิทธิ์การใช้งานของ Microsoft ได้</span><span class="sxs-lookup"><span data-stu-id="ad9e8-155">Microsoft Azure Information Protection can be purchased either standalone or through one of the Microsoft licensing suites.</span></span> <span data-ttu-id="ad9e8-156">ดู [การกำหนดราคา Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) สำหรับรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="ad9e8-156">See [Azure Information Protection pricing](https://azure.microsoft.com/pricing/details/information-protection/) for detail.</span></span> <span data-ttu-id="ad9e8-157">นอกจากนี้ ป้ายชื่อระดับความลับจะต้องถูกนำไปใช้กับสินทรัพย์ Power BI ของคุณ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-157">In addition, sensitivity labels must have been applied on your Power BI assets.</span></span>
-* <span data-ttu-id="ad9e8-158">การควบคุมเซสชันนั้นพร้อมใช้งานสำหรับเบราว์เซอร์ใด ๆ ในแพลตฟอร์มหลักบนระบบปฏิบัติการใด ๆ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-158">Session control is available for any browser on any major platform on any operating system.</span></span> <span data-ttu-id="ad9e8-159">เราแนะนำให้ใช้ Internet Explorer 11, Microsoft Edge (ล่าสุด), Google Chrome (ล่าสุด), Mozilla Firefox (ล่าสุด) หรือ Apple Safari (ล่าสุด)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-159">We recommend using Internet Explorer 11, Microsoft Edge (latest), Google Chrome (latest), Mozilla Firefox (latest), or Apple Safari (latest).</span></span> <span data-ttu-id="ad9e8-160">การเรียกใช้ API สาธารณะของ Power BI และเซสชันที่ไม่ใช่เบราว์เซอร์อื่น ๆ ไม่ได้รับการสนับสนุน เนื่องจากเป็นส่วนหนึ่งของตัวควบคุมเซสชันของ Cloud App Security</span><span class="sxs-lookup"><span data-stu-id="ad9e8-160">Power BI public API calls and other non-browser-based sessions aren't supported as part of Cloud App Security session control.</span></span> <span data-ttu-id="ad9e8-161">[ดูรายละเอียดเพิ่มเติม](/cloud-app-security/proxy-intro-aad#supported-apps-and-clients)</span><span class="sxs-lookup"><span data-stu-id="ad9e8-161">[See more detail](/cloud-app-security/proxy-intro-aad#supported-apps-and-clients).</span></span>
+* **การแชร์รายงานจำนวนมาก** – ตรวจพบเมื่อผู้ใช้แชร์รายงานจำนวนมากในเซสชันเดียว
+
+การตั้งค่าสำหรับการตรวจจับเหล่านี้จะได้รับการกำหนดค่าในพอร์ทัล Cloud App Security [เรียนรู้เพิ่มเติม](/cloud-app-security/anomaly-detection-policy#unusual-activities-by-user) 
+
+## <a name="power-bi-admin-role-in-cloud-app-security"></a>บทบาทผู้ดูแลระบบ Power BI ใน Cloud App Security
+
+บทบาทใหม่ถูกสร้างขึ้นสำหรับผู้ดูแลระบบ Power BI เมื่อใช้ Cloud App Security กับ Power BI เมื่อคุณเข้าสู่ระบบในฐานะผู้ดูแลระบบ Power BI ไปยัง [พอร์ทัล Cloud App Security](https://portal.cloudappsecurity.com/) คุณมีสิทธิ์การเข้าถึงแบบจำกัดในข้อมูลที่เกี่ยวข้องกับ Power BI การแจ้งเตือน ผู้ใช้ที่มีความเสี่ยง บันทึกกิจกรรม และข้อมูลอื่น ๆ
+
+## <a name="considerations-and-limitations"></a>ข้อควรพิจารณาและข้อจำกัด 
+การใช้ Cloud App Security กับ Power BI ได้รับการออกแบบมาเพื่อช่วยรักษาความปลอดภัยเนื้อหาและข้อมูลขององค์กรของคุณด้วยฟังก์ชันการตรวจจับที่ตรวจสอบเซสชันของผู้ใช้และกิจกรรมของพวกเขา เมื่อใช้ Cloud App Security กับ Power BI มีข้อจำกัดและข้อพิจารณาบางอย่างที่คุณควรจำไว้:
+
+* Cloud App Security สามารถใช้งานได้เฉพาะบนไฟล์ Excel, PowerPoint และ PDF เท่านั้น
+* ถ้าคุณต้องการใช้ความสามารถของป้ายชื่อระดับความลับในนโยบายเซสชันของคุณสำหรับ Power BI คุณจำเป็นต้องมีสิทธิ์การใช้งานของ Azure Information Protection Premium P1 หรือ Premium P2 สามารถซื้อ Microsoft Azure Information Protection แบบสแตนด์อโลนหรือผ่านหนึ่งในชุดโปรแกรมสิทธิ์การใช้งานของ Microsoft ได้ ดู [การกำหนดราคา Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/) สำหรับรายละเอียด นอกจากนี้ ป้ายชื่อระดับความลับจะต้องถูกนำไปใช้กับสินทรัพย์ Power BI ของคุณ
+* การควบคุมเซสชันนั้นพร้อมใช้งานสำหรับเบราว์เซอร์ใด ๆ ในแพลตฟอร์มหลักบนระบบปฏิบัติการใด ๆ เราแนะนำให้ใช้ Internet Explorer 11, Microsoft Edge (ล่าสุด), Google Chrome (ล่าสุด), Mozilla Firefox (ล่าสุด) หรือ Apple Safari (ล่าสุด) การเรียกใช้ API สาธารณะของ Power BI และเซสชันที่ไม่ใช่เบราว์เซอร์อื่น ๆ ไม่ได้รับการสนับสนุน เนื่องจากเป็นส่วนหนึ่งของตัวควบคุมเซสชันของ Cloud App Security [ดูรายละเอียดเพิ่มเติม](/cloud-app-security/proxy-intro-aad#supported-apps-and-clients)
 
 > [!CAUTION]
-> * <span data-ttu-id="ad9e8-162">ในนโยบายเซสชันในส่วน "การดำเนินการ" ความสามารถในการ "ป้องกัน" จะใช้ได้เฉพาะในกรณีที่ไม่มีป้ายชื่ออยู่ในรายการเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="ad9e8-162">In the session policy, in the “Action” part, the “protect” capability will only work if no label exists on the item.</span></span> <span data-ttu-id="ad9e8-163">ถ้ามีป้ายชื่ออยู่แล้ว การดำเนินการ "ป้องกัน" จะไม่ถูกนำไปใช้ คุณไม่สามารถแทนที่ป้ายชื่อที่มีอยู่ที่มีการนำไปใช้กับรายการใน Power BI แล้ว</span><span class="sxs-lookup"><span data-stu-id="ad9e8-163">If a label already exists, the “protect” action won't apply; you can’t override an existing label that has already been applied to an item in Power BI.</span></span>
+> * ในนโยบายเซสชันในส่วน "การดำเนินการ" ความสามารถในการ "ป้องกัน" จะใช้ได้เฉพาะในกรณีที่ไม่มีป้ายชื่ออยู่ในรายการเท่านั้น ถ้ามีป้ายชื่ออยู่แล้ว การดำเนินการ "ป้องกัน" จะไม่ถูกนำไปใช้ คุณไม่สามารถแทนที่ป้ายชื่อที่มีอยู่ที่มีการนำไปใช้กับรายการใน Power BI แล้ว
 
-## <a name="example"></a><span data-ttu-id="ad9e8-164">ตัวอย่าง:</span><span class="sxs-lookup"><span data-stu-id="ad9e8-164">Example</span></span>
+## <a name="example"></a>ตัวอย่าง:
 
-<span data-ttu-id="ad9e8-165">ตัวอย่างต่อไปนี้แสดงวิธีการสร้างนโยบายเซสชันใหม่โดยใช้ Cloud App Security กับ Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-165">The following example shows you how to create a new session policy using Cloud App Security with Power BI.</span></span>
+ตัวอย่างต่อไปนี้แสดงวิธีการสร้างนโยบายเซสชันใหม่โดยใช้ Cloud App Security กับ Power BI
 
-<span data-ttu-id="ad9e8-166">ก่อนอื่น ให้สร้างนโยบายเซสชันใหม่</span><span class="sxs-lookup"><span data-stu-id="ad9e8-166">First, create a new session policy.</span></span> <span data-ttu-id="ad9e8-167">เลือก **นโยบาย** จากเมนูด้านซ้ายในพอร์ทัล **Cloud App Security**</span><span class="sxs-lookup"><span data-stu-id="ad9e8-167">Select **Policies** from the left menu in the **Cloud App Security** portal.</span></span>
+ก่อนอื่น ให้สร้างนโยบายเซสชันใหม่ เลือก **นโยบาย** จากเมนูด้านซ้ายในพอร์ทัล **Cloud App Security**
 
 ![สร้างนโยบายเซสชันใหม่](media/service-security-using-microsoft-cloud-app-security-controls/cloud-app-security-controls-02.png)
 
-<span data-ttu-id="ad9e8-169">ในหน้าต่างที่ปรากฏขึ้น เลือกเมนูดรอปดาวน์ **สร้างนโยบาย**</span><span class="sxs-lookup"><span data-stu-id="ad9e8-169">In the window that appears, select the **Create policy** drop-down.</span></span>
+ในหน้าต่างที่ปรากฏขึ้น เลือกเมนูดรอปดาวน์ **สร้างนโยบาย**
 
 ![เลือกสร้างนโยบาย](media/service-security-using-microsoft-cloud-app-security-controls/cloud-app-security-controls-03.png)
 
-<span data-ttu-id="ad9e8-171">จากรายการของตัวเลือกในเมนูดรอปดาวน์ ให้เลือก **นโยบายเซสชัน**.</span><span class="sxs-lookup"><span data-stu-id="ad9e8-171">From the list of options in the drop-down, select **Session policy**.</span></span>
+จากรายการของตัวเลือกในเมนูดรอปดาวน์ ให้เลือก **นโยบายเซสชัน**.
 
 ![เลือกนโยบายเซสชัน](media/service-security-using-microsoft-cloud-app-security-controls/cloud-app-security-controls-04.png)
 
-<span data-ttu-id="ad9e8-173">ในหน้าต่างที่ปรากฏขึ้น ให้สร้างนโยบายเซสชัน</span><span class="sxs-lookup"><span data-stu-id="ad9e8-173">In the window that appears, create the session policy.</span></span> <span data-ttu-id="ad9e8-174">ขั้นตอนที่เป็นตัวเลขจะอธิบายการตั้งค่าสำหรับภาพต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="ad9e8-174">The numbered steps describe settings for the following image.</span></span>
+ในหน้าต่างที่ปรากฏขึ้น ให้สร้างนโยบายเซสชัน ขั้นตอนที่เป็นตัวเลขจะอธิบายการตั้งค่าสำหรับภาพต่อไปนี้
 
-  1. <span data-ttu-id="ad9e8-175">ในเมนูดรอปดาวน์ **แม่แบบนโยบาย** ให้เลือก *ไม่มีแม่แบบ*.</span><span class="sxs-lookup"><span data-stu-id="ad9e8-175">In the **Policy template** drop-down, choose *No template*.</span></span>
-  2. <span data-ttu-id="ad9e8-176">สำหรับกล่อง **ชื่อนโยบาย** ใส่ชื่อที่เกี่ยวข้องสำหรับนโยบายเซสชันของคุณ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-176">For the **Policy name** box, provide a relevant name for your session policy.</span></span>
-  3. <span data-ttu-id="ad9e8-177">สำหรับ **ชนิดการควบคุมเซสชัน** ให้เลือก *ไฟล์ตัวควบคุมที่ ดาวน์โหลดไว้ (ด้วย DLP)* .</span><span class="sxs-lookup"><span data-stu-id="ad9e8-177">For **Session control type**, select *Control file downloaded (with DLP)*.</span></span>
+  1. ในเมนูดรอปดาวน์ **แม่แบบนโยบาย** ให้เลือก *ไม่มีแม่แบบ*.
+  2. สำหรับกล่อง **ชื่อนโยบาย** ใส่ชื่อที่เกี่ยวข้องสำหรับนโยบายเซสชันของคุณ
+  3. สำหรับ **ชนิดการควบคุมเซสชัน** ให้เลือก *ไฟล์ตัวควบคุมที่ ดาวน์โหลดไว้ (ด้วย DLP)* .
 
-      <span data-ttu-id="ad9e8-178">สำหรับส่วน **แหล่งที่มาของกิจกรรม** ให้เลือกนโยบายการบล็อกที่เกี่ยวข้อง</span><span class="sxs-lookup"><span data-stu-id="ad9e8-178">For the **Activity source** section, choose relevant blocking policies.</span></span> <span data-ttu-id="ad9e8-179">เราขอแนะนำให้บล็อกอุปกรณ์ที่ไม่มีการจัดการและไม่สอดคล้องกัน</span><span class="sxs-lookup"><span data-stu-id="ad9e8-179">We recommend blocking unmanaged and non-compliant devices.</span></span> <span data-ttu-id="ad9e8-180">เลือกบล็อกการดาวน์โหลดเมื่อเซสชันอยู่ใน Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-180">Choose to block downloads when the session is in Power BI.</span></span>
+      สำหรับส่วน **แหล่งที่มาของกิจกรรม** ให้เลือกนโยบายการบล็อกที่เกี่ยวข้อง เราขอแนะนำให้บล็อกอุปกรณ์ที่ไม่มีการจัดการและไม่สอดคล้องกัน เลือกบล็อกการดาวน์โหลดเมื่อเซสชันอยู่ใน Power BI
 
         ![สร้างนโยบายเซสชัน - การดาวน์โหลดบล็อก](media/service-security-using-microsoft-cloud-app-security-controls/cloud-app-security-controls-05.png)
 
-        <span data-ttu-id="ad9e8-182">เมื่อคุณเลื่อนลง คุณจะเห็นตัวเลือกเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ad9e8-182">When you scroll down you see more options.</span></span> <span data-ttu-id="ad9e8-183">รูปภาพต่อไปนี้แสดงตัวเลือกเหล่านั้นพร้อมด้วยตัวอย่างเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="ad9e8-183">The following image shows those options, with additional examples.</span></span> 
+        เมื่อคุณเลื่อนลง คุณจะเห็นตัวเลือกเพิ่มเติม รูปภาพต่อไปนี้แสดงตัวเลือกเหล่านั้นพร้อมด้วยตัวอย่างเพิ่มเติม 
 
-  4. <span data-ttu-id="ad9e8-184">เลือก *ป้ายชื่อการรักษาความลับ* เป็น *ความลับสูงสุด* หรือระดับความลับที่เหมาะสมที่สุดสำหรับองค์กรของคุณ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-184">Choose *Confidentiality label* as *highly confidential* or whatever best fits your organization.</span></span>
-  5. <span data-ttu-id="ad9e8-185">เปลี่ยน **วิธีการตรวจสอบ** เป็น *ไม่มี*.</span><span class="sxs-lookup"><span data-stu-id="ad9e8-185">Change the **Inspection method** to *none*.</span></span>
-  6. <span data-ttu-id="ad9e8-186">เลือกตัวเลือก **บล็อก** ที่เหมาะกับความต้องการของคุณ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-186">Choose the **Block** option that fits your needs.</span></span>
-  7. <span data-ttu-id="ad9e8-187">ตรวจสอบให้แน่ใจว่าคุณได้สร้างการแจ้งเตือนสำหรับการดำเนินการดังกล่าว</span><span class="sxs-lookup"><span data-stu-id="ad9e8-187">Make sure you create an alert for such an action.</span></span>
+  4. เลือก *ป้ายชื่อการรักษาความลับ* เป็น *ความลับสูงสุด* หรือระดับความลับที่เหมาะสมที่สุดสำหรับองค์กรของคุณ
+  5. เปลี่ยน **วิธีการตรวจสอบ** เป็น *ไม่มี*.
+  6. เลือกตัวเลือก **บล็อก** ที่เหมาะกับความต้องการของคุณ
+  7. ตรวจสอบให้แน่ใจว่าคุณได้สร้างการแจ้งเตือนสำหรับการดำเนินการดังกล่าว
 
         ![เลือกการตั้งค่านโยบายเซสชัน](media/service-security-using-microsoft-cloud-app-security-controls/cloud-app-security-controls-06.png)
 
         
 
-  8. <span data-ttu-id="ad9e8-189">สุดท้าย ตรวจสอบให้แน่ใจว่าคุณเลือกปุ่ม **สร้าง** เพื่อสร้างนโยบายเซสชัน</span><span class="sxs-lookup"><span data-stu-id="ad9e8-189">Finally make sure you select the **Create** button to create the session policy.</span></span>
+  8. สุดท้าย ตรวจสอบให้แน่ใจว่าคุณเลือกปุ่ม **สร้าง** เพื่อสร้างนโยบายเซสชัน
 
         ![สร้างนโยบายเซสชัน](media/service-security-using-microsoft-cloud-app-security-controls/cloud-app-security-controls-07.png)
 
-## <a name="next-steps"></a><span data-ttu-id="ad9e8-191">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="ad9e8-191">Next steps</span></span>
-<span data-ttu-id="ad9e8-192">บทความนี้อธิบายวิธีการที่ Cloud App Security สามารถให้ข้อมูลและการป้องกันเนื้อหาสำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-192">This article described how Cloud App Security can provide data and content protections for Power BI.</span></span> <span data-ttu-id="ad9e8-193">นอกจากนี้ คุณอาจสนใจบทความต่อไปนี้ซึ่งอธิบายการคุ้มครองข้อมูลสำหรับ Power BI และเนื้อหาการสนับสนุนสำหรับบริการ Azure ที่เปิดใช้งาน</span><span class="sxs-lookup"><span data-stu-id="ad9e8-193">You might also be interested in the following articles, which describe Data Protection for Power BI and supporting content for the Azure services that enable it.</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
+บทความนี้อธิบายวิธีการที่ Cloud App Security สามารถให้ข้อมูลและการป้องกันเนื้อหาสำหรับ Power BI นอกจากนี้ คุณอาจสนใจบทความต่อไปนี้ซึ่งอธิบายการคุ้มครองข้อมูลสำหรับ Power BI และเนื้อหาการสนับสนุนสำหรับบริการ Azure ที่เปิดใช้งาน
 
-* [<span data-ttu-id="ad9e8-194">ภาพรวมของป้ายชื่อระดับความลับใน Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-194">Overview of sensitivity labels in Power BI</span></span>](service-security-sensitivity-label-overview.md)
-* [<span data-ttu-id="ad9e8-195">เปิดใช้งานป้ายชื่อระดับความลับใน Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-195">Enable sensitivity labels in Power BI</span></span>](service-security-enable-data-sensitivity-labels.md)
-* [<span data-ttu-id="ad9e8-196">วิธีการใช้ป้ายชื่อระดับความลับใน Power BI</span><span class="sxs-lookup"><span data-stu-id="ad9e8-196">How to apply sensitivity labels in Power BI</span></span>](service-security-apply-data-sensitivity-labels.md)
+* [ภาพรวมของป้ายชื่อระดับความลับใน Power BI](service-security-sensitivity-label-overview.md)
+* [เปิดใช้งานป้ายชื่อระดับความลับใน Power BI](service-security-enable-data-sensitivity-labels.md)
+* [วิธีการใช้ป้ายชื่อระดับความลับใน Power BI](service-security-apply-data-sensitivity-labels.md)
 
-<span data-ttu-id="ad9e8-197">นอกจากนี้คุณอาจสนใจในบทความเกี่ยวกับ Azure และการรักษาความปลอดภัยต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="ad9e8-197">You might also be interested in the following Azure and security articles:</span></span>
+นอกจากนี้คุณอาจสนใจในบทความเกี่ยวกับ Azure และการรักษาความปลอดภัยต่อไปนี้:
 
-* [<span data-ttu-id="ad9e8-198">ปกป้องแอปด้วยการควบคุมการเข้าถึงแอปแบบมีเงื่อนไข Microsoft Cloud App Security</span><span class="sxs-lookup"><span data-stu-id="ad9e8-198">Protect apps with Microsoft Cloud App Security Conditional Access App Control</span></span>](/cloud-app-security/proxy-intro-aad)
-* [<span data-ttu-id="ad9e8-199">ปรับใช้การควบคุมการเข้าถึงแอปแบบมีเงื่อนไขสำหรับแอปที่แนะนำ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-199">Deploy Conditional Access App Control for featured apps</span></span>](/cloud-app-security/proxy-deployment-aad)
-* [<span data-ttu-id="ad9e8-200">นโยบายเซสชัน</span><span class="sxs-lookup"><span data-stu-id="ad9e8-200">Session policies</span></span>](/cloud-app-security/session-policy-aad)
-* [<span data-ttu-id="ad9e8-201">ภาพรวมของป้ายชื่อระดับความลับ</span><span class="sxs-lookup"><span data-stu-id="ad9e8-201">Overview of sensitivity labels</span></span>](/microsoft-365/compliance/sensitivity-labels)
-* [<span data-ttu-id="ad9e8-202">รายงานเมตริกการป้องกันข้อมูล</span><span class="sxs-lookup"><span data-stu-id="ad9e8-202">Data protection metrics report</span></span>](service-security-data-protection-metrics-report.md)
+* [ปกป้องแอปด้วยการควบคุมการเข้าถึงแอปแบบมีเงื่อนไข Microsoft Cloud App Security](/cloud-app-security/proxy-intro-aad)
+* [ปรับใช้การควบคุมการเข้าถึงแอปแบบมีเงื่อนไขสำหรับแอปที่แนะนำ](/cloud-app-security/proxy-deployment-aad)
+* [นโยบายเซสชัน](/cloud-app-security/session-policy-aad)
+* [ภาพรวมของป้ายชื่อระดับความลับ](/microsoft-365/compliance/sensitivity-labels)
+* [รายงานเมตริกการป้องกันข้อมูล](service-security-data-protection-metrics-report.md)

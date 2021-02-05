@@ -1,5 +1,5 @@
 ### YamlMime:Hub
-title: เอกสารประกอบการใช้งานสำหรับนักพัฒนา Power BI สำหรับข้อมูลเชิงลึก BI แบบฝังที่ดีขึ้นในการวิเคราะห์แบบฝังของ Power BI
+title: เอกสารสำหรับนักพัฒนา Power BI
 summary: ในฐานะนักพัฒนา Power BI คุณสามารถฝังเนื้อหา Power BI พัฒนาวิชวล Power BI และทำให้กระบวนการ Power BI เป็นอัตโนมัติได้
 brand: power-bi
 metadata:
@@ -13,12 +13,12 @@ metadata:
   author: KesemSharabi
   ms.author: kesharab
   ms.date: 31/03/2020
-  ms.openlocfilehash: 701f9e5e02d8b8cb8d019deebd9ae226560e07df
-  ms.sourcegitcommit: eeaf607e7c1d89ef7312421731e1729ddce5a5cc
-  ms.translationtype: HT
+  ms.openlocfilehash: 51bd353206d605cd0627e10e226d0950adf8de0f
+  ms.sourcegitcommit: 84f0e7f31e62cae3bea2dcf2d62c2f023cc2d404
+  ms.translationtype: MT
   ms.contentlocale: th-TH
-  ms.lasthandoff: 01/05/2021
-  ms.locfileid: "97885694"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98781455"
 highlightedContent:
   items:
   - title: การวิเคราะห์แบบฝังตัวด้วย Power BI
@@ -30,6 +30,9 @@ highlightedContent:
   - title: วิชวลใน Power BI
     itemType: overview
     url: visuals/power-bi-custom-visuals.md
+  - title: Power BI แบบฝังตัววิเคราะห์ไคลเอ็นต์ Api
+    itemType: whats-new
+    url: /javascript/api/overview/powerbi/
   - title: การกำหนดค่าแอปแบบแม่แบบอัตโนมัติ
     itemType: concept
     url: template-apps/template-apps-auto-install.md
@@ -105,6 +108,6 @@ additionalContent:
     - title: เครื่องมือ Playground
       summary: ลองคุณลักษณะและสำรวจ Api
       url: https://aka.ms/pbieplayground
-    - title: JavaScript wiki
-      summary: สำรวจฐานความรู้ JavaScript
-      url: https://github.com/Microsoft/powerbi-javascript/wiki
+    - title: Power BI แบบฝังตัววิเคราะห์ไคลเอ็นต์ Api
+      summary: สำรวจ Api ของไคลเอ็นต์ Power BI embedded analytics
+      url: /javascript/api/overview/powerbi/

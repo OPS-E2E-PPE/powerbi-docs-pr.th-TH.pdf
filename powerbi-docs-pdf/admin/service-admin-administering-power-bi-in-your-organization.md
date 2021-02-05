@@ -17,70 +17,70 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 12/17/2020
 ms.locfileid: "97621475"
 ---
-# <a name="what-is-power-bi-administration"></a><span data-ttu-id="90607-103">การดูแลระบบ Power BI คืออะไร</span><span class="sxs-lookup"><span data-stu-id="90607-103">What is Power BI administration</span></span>
+# <a name="what-is-power-bi-administration"></a>การดูแลระบบ Power BI คืออะไร
 
-<span data-ttu-id="90607-104">การดูแลระบบ Power BI คือการจัดการการตั้งค่าทั้งองค์กรที่ควบคุมวิธีการทำงานของ Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-104">Power BI administration is the management of the organization-wide settings that control how Power BI works.</span></span> <span data-ttu-id="90607-105">ผู้ใช้ที่ได้รับมอบหมายบทบาทผู้ดูแลระบบกำหนดค่า ตรวจสอบ และเตรียมใช้งานทรัพยากรขององค์กร</span><span class="sxs-lookup"><span data-stu-id="90607-105">Users that are assigned to admin roles configure, monitor, and provision organizational resources.</span></span> <span data-ttu-id="90607-106">บทความนี้ให้ภาพรวมของบทบาทการดูแล งาน และเครื่องมือต่าง ๆ เพื่อช่วยคุณเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="90607-106">This article provides an overview of administration roles, tasks, and tools to help you get started.</span></span>
+การดูแลระบบ Power BI คือการจัดการการตั้งค่าทั้งองค์กรที่ควบคุมวิธีการทำงานของ Power BI ผู้ใช้ที่ได้รับมอบหมายบทบาทผู้ดูแลระบบกำหนดค่า ตรวจสอบ และเตรียมใช้งานทรัพยากรขององค์กร บทความนี้ให้ภาพรวมของบทบาทการดูแล งาน และเครื่องมือต่าง ๆ เพื่อช่วยคุณเริ่มต้น
 
 ![ภาพหน้าจอของพอร์ทัลผู้ดูแลระบบ Power B I ที่แสดงการตั้งค่าทั่วทั้งองค์กร](media/service-admin-administering-power-bi-in-your-organization/admin-portal.png)
 
-## <a name="administrator-roles-related-to-power-bi"></a><span data-ttu-id="90607-108">บทบาทผู้ดูแลระบบที่เกี่ยวข้องกับ Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-108">Administrator roles related to Power BI</span></span>
+## <a name="administrator-roles-related-to-power-bi"></a>บทบาทผู้ดูแลระบบที่เกี่ยวข้องกับ Power BI
 
-<span data-ttu-id="90607-109">มีบทบาทหลายอย่างที่ทำงานร่วมกันเพื่อดูแล Power BI สำหรับองค์กรของคุณ</span><span class="sxs-lookup"><span data-stu-id="90607-109">There are several roles that work together to administer Power BI for your organization.</span></span> <span data-ttu-id="90607-110">มีการมอบหมายบทบาทผู้ดูแลระบบส่วนใหญ่ในศูนย์การจัดการ Microsoft 365 หรือโดยใช้ PowerShell</span><span class="sxs-lookup"><span data-stu-id="90607-110">Most admin roles are assigned in the Microsoft 365 admin center or by using PowerShell.</span></span> <span data-ttu-id="90607-111">มีการมอบหมายบทบาทผู้ดูแลระบบ Power BI Premium Capacity และ Power BI Embedded Capacity เมื่อสร้างความจุ</span><span class="sxs-lookup"><span data-stu-id="90607-111">The Power BI Premium Capacity and Power BI Embedded Capacity admin roles are assigned when the capacity is created.</span></span> <span data-ttu-id="90607-112">หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับบทบาทผู้ดูแลระบบแต่ละคน โปรดดู [เกี่ยวกับบทบาทผู้ดูแลระบบ](/microsoft-365/admin/add-users/about-admin-roles)</span><span class="sxs-lookup"><span data-stu-id="90607-112">To learn more about each of the admin roles, see [About admin roles](/microsoft-365/admin/add-users/about-admin-roles).</span></span> <span data-ttu-id="90607-113">เมื่อต้องการเรียนรู้วิธีการกำหนดบทบาทผู้ดูแลระบบ ให้ดู [กำหนดบทบาทผู้ดูแลระบบ](/microsoft-365/admin/add-users/assign-admin-roles)</span><span class="sxs-lookup"><span data-stu-id="90607-113">To learn how to assign admin roles, see [Assign admin roles](/microsoft-365/admin/add-users/assign-admin-roles).</span></span>
+มีบทบาทหลายอย่างที่ทำงานร่วมกันเพื่อดูแล Power BI สำหรับองค์กรของคุณ มีการมอบหมายบทบาทผู้ดูแลระบบส่วนใหญ่ในศูนย์การจัดการ Microsoft 365 หรือโดยใช้ PowerShell มีการมอบหมายบทบาทผู้ดูแลระบบ Power BI Premium Capacity และ Power BI Embedded Capacity เมื่อสร้างความจุ หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับบทบาทผู้ดูแลระบบแต่ละคน โปรดดู [เกี่ยวกับบทบาทผู้ดูแลระบบ](/microsoft-365/admin/add-users/about-admin-roles) เมื่อต้องการเรียนรู้วิธีการกำหนดบทบาทผู้ดูแลระบบ ให้ดู [กำหนดบทบาทผู้ดูแลระบบ](/microsoft-365/admin/add-users/assign-admin-roles)
 
-| <span data-ttu-id="90607-114">**ชนิดของผู้ดูแลระบบ**</span><span class="sxs-lookup"><span data-stu-id="90607-114">**Type of administrator**</span></span> | <span data-ttu-id="90607-115">**ขอบเขตการดูแลระบบ**</span><span class="sxs-lookup"><span data-stu-id="90607-115">**Administrative scope**</span></span> | <span data-ttu-id="90607-116">**งาน Power BI**</span><span class="sxs-lookup"><span data-stu-id="90607-116">**Power BI tasks**</span></span> |
+| **ชนิดของผู้ดูแลระบบ** | **ขอบเขตการดูแลระบบ** | **งาน Power BI** |
 | --- | --- | --- |
-| <span data-ttu-id="90607-117">ผู้ดูแลระบบส่วนกลาง</span><span class="sxs-lookup"><span data-stu-id="90607-117">Global admin</span></span> | <span data-ttu-id="90607-118">Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="90607-118">Microsoft 365</span></span> | <span data-ttu-id="90607-119">มีการเข้าถึงคุณลักษณะการจัดการทั้งหมดสำหรับองค์กรได้ไม่จำกัด</span><span class="sxs-lookup"><span data-stu-id="90607-119">Has unlimited access to all management features for the organization</span></span> |
-| | | <span data-ttu-id="90607-120">มอบหมายบทบาทให้กับผู้ใช้อื่น</span><span class="sxs-lookup"><span data-stu-id="90607-120">Assigns roles to other users</span></span> |
-| <span data-ttu-id="90607-121">ผู้ดูแลการเรียกเก็บเงิน</span><span class="sxs-lookup"><span data-stu-id="90607-121">Billing admin</span></span> | <span data-ttu-id="90607-122">Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="90607-122">Microsoft 365</span></span> | <span data-ttu-id="90607-123">จัดการการสมัครใช้งาน</span><span class="sxs-lookup"><span data-stu-id="90607-123">Manage subscriptions</span></span> |
-| | | <span data-ttu-id="90607-124">ซื้อสิทธิการใช้งาน</span><span class="sxs-lookup"><span data-stu-id="90607-124">Purchase licenses</span></span> |
-| <span data-ttu-id="90607-125">ผู้ดูแลสิทธิการใช้งาน</span><span class="sxs-lookup"><span data-stu-id="90607-125">License admin</span></span> | <span data-ttu-id="90607-126">Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="90607-126">Microsoft 365</span></span> | <span data-ttu-id="90607-127">มอบหมายหรือลบสิทธิการใช้งาน</span><span class="sxs-lookup"><span data-stu-id="90607-127">Assign or remove licenses for users</span></span> |
-| <span data-ttu-id="90607-128">ผู้ดูแลระบบผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="90607-128">User admin</span></span> | <span data-ttu-id="90607-129">Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="90607-129">Microsoft 365</span></span> | <span data-ttu-id="90607-130">สร้างและจัดการผู้ใช้และกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="90607-130">Create and manage users and groups</span></span> |
-| | | <span data-ttu-id="90607-131">รีเซ็ตรหัสผ่านของผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="90607-131">Reset user passwords</span></span> |
-| <span data-ttu-id="90607-132">ผู้ดูแลระบบ Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-132">Power BI admin</span></span> | <span data-ttu-id="90607-133">บริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-133">Power BI service</span></span> | <span data-ttu-id="90607-134">การเข้าถึงงานการจัดการ Power BI แบบเต็มรูปแบบ</span><span class="sxs-lookup"><span data-stu-id="90607-134">Full access to Power BI management tasks</span></span>|
-| | | <span data-ttu-id="90607-135">เปิดและปิดใช้งานคุณลักษณะของ Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-135">Enable and disable Power BI features</span></span> |
-| | | <span data-ttu-id="90607-136">รายงานการใช้งานและประสิทธิภาพ</span><span class="sxs-lookup"><span data-stu-id="90607-136">Report on usage and performance</span></span> |
-| | | <span data-ttu-id="90607-137">ตรวจทานและจัดการการตรวจสอบ</span><span class="sxs-lookup"><span data-stu-id="90607-137">Review and manage auditing</span></span> |
-| <span data-ttu-id="90607-138">ผู้ดูแลระบบ Power BI Premium Capacity</span><span class="sxs-lookup"><span data-stu-id="90607-138">Power BI Premium Capacity admin</span></span> | <span data-ttu-id="90607-139">ความจุ Premium เดียว</span><span class="sxs-lookup"><span data-stu-id="90607-139">A single Premium capacity</span></span> | <span data-ttu-id="90607-140">กำหนดพื้นที่ทำงานสำหรับความจุ</span><span class="sxs-lookup"><span data-stu-id="90607-140">Assign workspaces to the capacity</span></span>|
-| | | <span data-ttu-id="90607-141">จัดการสิทธิ์ของผู้ใช้ไปยังความจุ</span><span class="sxs-lookup"><span data-stu-id="90607-141">Manage user permission to the capacity</span></span> |
-| | | <span data-ttu-id="90607-142">จัดการปริมาณงานเพื่อกำหนดค่าการใช้หน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="90607-142">Manage workloads to configure memory usage</span></span> |
-| | | <span data-ttu-id="90607-143">รีสตาร์ทความจุ</span><span class="sxs-lookup"><span data-stu-id="90607-143">Restart the capacity</span></span> |
-| <span data-ttu-id="90607-144">ผู้ดูแลระบบ Power BI Embedded Capacity</span><span class="sxs-lookup"><span data-stu-id="90607-144">Power BI Embedded Capacity admin</span></span> | <span data-ttu-id="90607-145">ความจุ Embedded เดียว</span><span class="sxs-lookup"><span data-stu-id="90607-145">A single Embedded capacity</span></span> | <span data-ttu-id="90607-146">กำหนดพื้นที่ทำงานสำหรับความจุ</span><span class="sxs-lookup"><span data-stu-id="90607-146">Assign workspaces to the capacity</span></span>|
-| | | <span data-ttu-id="90607-147">จัดการสิทธิ์ของผู้ใช้ไปยังความจุ</span><span class="sxs-lookup"><span data-stu-id="90607-147">Manage user permission to the capacity</span></span> |
-| | | <span data-ttu-id="90607-148">จัดการปริมาณงานเพื่อกำหนดค่าการใช้หน่วยความจำ</span><span class="sxs-lookup"><span data-stu-id="90607-148">Manage workloads to configure memory usage</span></span> |
-| | | <span data-ttu-id="90607-149">รีสตาร์ทความจุ</span><span class="sxs-lookup"><span data-stu-id="90607-149">Restart the capacity</span></span> |
+| ผู้ดูแลระบบส่วนกลาง | Microsoft 365 | มีการเข้าถึงคุณลักษณะการจัดการทั้งหมดสำหรับองค์กรได้ไม่จำกัด |
+| | | มอบหมายบทบาทให้กับผู้ใช้อื่น |
+| ผู้ดูแลการเรียกเก็บเงิน | Microsoft 365 | จัดการการสมัครใช้งาน |
+| | | ซื้อสิทธิการใช้งาน |
+| ผู้ดูแลสิทธิการใช้งาน | Microsoft 365 | มอบหมายหรือลบสิทธิการใช้งาน |
+| ผู้ดูแลระบบผู้ใช้ | Microsoft 365 | สร้างและจัดการผู้ใช้และกลุ่ม |
+| | | รีเซ็ตรหัสผ่านของผู้ใช้ |
+| ผู้ดูแลระบบ Power BI | บริการ Power BI | การเข้าถึงงานการจัดการ Power BI แบบเต็มรูปแบบ|
+| | | เปิดและปิดใช้งานคุณลักษณะของ Power BI |
+| | | รายงานการใช้งานและประสิทธิภาพ |
+| | | ตรวจทานและจัดการการตรวจสอบ |
+| ผู้ดูแลระบบ Power BI Premium Capacity | ความจุ Premium เดียว | กำหนดพื้นที่ทำงานสำหรับความจุ|
+| | | จัดการสิทธิ์ของผู้ใช้ไปยังความจุ |
+| | | จัดการปริมาณงานเพื่อกำหนดค่าการใช้หน่วยความจำ |
+| | | รีสตาร์ทความจุ |
+| ผู้ดูแลระบบ Power BI Embedded Capacity | ความจุ Embedded เดียว | กำหนดพื้นที่ทำงานสำหรับความจุ|
+| | | จัดการสิทธิ์ของผู้ใช้ไปยังความจุ |
+| | | จัดการปริมาณงานเพื่อกำหนดค่าการใช้หน่วยความจำ |
+| | | รีสตาร์ทความจุ |
 
-## <a name="administrative-tasks-and-tools"></a><span data-ttu-id="90607-150">งานและเครื่องมือดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="90607-150">Administrative tasks and tools</span></span>
+## <a name="administrative-tasks-and-tools"></a>งานและเครื่องมือดูแลระบบ
 
-<span data-ttu-id="90607-151">ผู้ดูแลระบบ Power BI ทำงานส่วนใหญ่ในพอร์ทัลผู้ดูแลระบบ Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-151">Power BI admins work mostly in the Power BI admin portal.</span></span> <span data-ttu-id="90607-152">อย่างไรก็ตาม คุณควรคุ้นเคยกับเครื่องมือที่เกี่ยวข้องและศูนย์การจัดการ</span><span class="sxs-lookup"><span data-stu-id="90607-152">You should, however, be familiar with related tools and admin centers.</span></span> <span data-ttu-id="90607-153">ดูตารางด้านบนเพื่อกำหนดบทบาทที่ต้องใช้ในการทำงานโดยใช้เครื่องมือที่แสดงไว้ที่นี่</span><span class="sxs-lookup"><span data-stu-id="90607-153">Look at the table above to determine which role is required to do tasks using the tools listed here.</span></span>
+ผู้ดูแลระบบ Power BI ทำงานส่วนใหญ่ในพอร์ทัลผู้ดูแลระบบ Power BI อย่างไรก็ตาม คุณควรคุ้นเคยกับเครื่องมือที่เกี่ยวข้องและศูนย์การจัดการ ดูตารางด้านบนเพื่อกำหนดบทบาทที่ต้องใช้ในการทำงานโดยใช้เครื่องมือที่แสดงไว้ที่นี่
 
-| <span data-ttu-id="90607-154">**เครื่องมือ**</span><span class="sxs-lookup"><span data-stu-id="90607-154">**Tool**</span></span> | <span data-ttu-id="90607-155">**งานที่ทำทั่วไป**</span><span class="sxs-lookup"><span data-stu-id="90607-155">**Typical tasks**</span></span> |
+| **เครื่องมือ** | **งานที่ทำทั่วไป** |
 | --- | --- |
-| [<span data-ttu-id="90607-156">พอร์ทัลผู้ดูแล Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-156">Power BI Admin portal</span></span>](https://app.powerbi.com/admin-portal) | <span data-ttu-id="90607-157">จัดหา และทำงานกับความจุพรีเมียม</span><span class="sxs-lookup"><span data-stu-id="90607-157">Acquire and work with Premium capacity</span></span> |
-| | <span data-ttu-id="90607-158">รักษาคุณภาพของบริการ</span><span class="sxs-lookup"><span data-stu-id="90607-158">Ensure quality of service</span></span> |
-| | <span data-ttu-id="90607-159">จัดการพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="90607-159">Manage workspaces</span></span> |
-| | <span data-ttu-id="90607-160">เผยแพร่วิชวล Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-160">Publish Power BI visuals</span></span> |
-| | <span data-ttu-id="90607-161">ตรวจสอบรหัสที่ใช้การฝัง Power BI ในแอปพลิเคชันอื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="90607-161">Verify codes used to embed Power BI in other applications</span></span> |
-| | <span data-ttu-id="90607-162">แก้ไขปัญหาการเข้าถึงข้อมูลและปัญหาอื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="90607-162">Troubleshoot data access and other issues</span></span> |
-| [<span data-ttu-id="90607-163">ศูนย์การจัดการ Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="90607-163">Microsoft 365 admin center</span></span>](https://admin.microsoft.com) | <span data-ttu-id="90607-164">จัดการผู้ใช้และกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="90607-164">Manage users and groups</span></span> |
-| | <span data-ttu-id="90607-165">ซื้อและกำหนดสิทธิการใช้งาน</span><span class="sxs-lookup"><span data-stu-id="90607-165">Purchase and assign licenses</span></span> |
-| | <span data-ttu-id="90607-166">บล็อกผู้ใช้จากการเข้าถึง Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-166">Block users from accessing Power BI</span></span> |
-| [<span data-ttu-id="90607-167">ศูนย์การรักษาความปลอดภัยและการปฏิบัติตามนโยบาย Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="90607-167">Microsoft 365 Security & Compliance Center</span></span>](https://protection.office.com) | <span data-ttu-id="90607-168">ตรวจทานและจัดการการตรวจสอบ</span><span class="sxs-lookup"><span data-stu-id="90607-168">Review and manage auditing</span></span> |
-| | <span data-ttu-id="90607-169">การติดตามและการจัดประเภทข้อมูล</span><span class="sxs-lookup"><span data-stu-id="90607-169">Data classification and tracking</span></span> |
-| | <span data-ttu-id="90607-170">นโยบายการป้องกันการสูญหายของข้อมูล</span><span class="sxs-lookup"><span data-stu-id="90607-170">Data loss prevention policies</span></span> |
-| | <span data-ttu-id="90607-171">การกำกับดูแลข้อมูล</span><span class="sxs-lookup"><span data-stu-id="90607-171">Information governance</span></span> |
-| [<span data-ttu-id="90607-172">Azure Active Directory ในพอร์ทัลของ Azure</span><span class="sxs-lookup"><span data-stu-id="90607-172">Azure Active Directory in the Azure portal</span></span>](https://aad.portal.azure.com) | <span data-ttu-id="90607-173">กำหนดค่าเงื่อนไขการเข้าถึงแหล่งข้อมูล Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-173">Configure conditional access to Power BI resources</span></span> |
-| | <span data-ttu-id="90607-174">เตรียมใช้งานความจุ Power BI Embedded</span><span class="sxs-lookup"><span data-stu-id="90607-174">Provision Power BI Embedded capacity</span></span> |
-| [<span data-ttu-id="90607-175">cmdlets ของ PowerShell</span><span class="sxs-lookup"><span data-stu-id="90607-175">PowerShell cmdlets</span></span>](/powershell/power-bi/overview) | <span data-ttu-id="90607-176">จัดการพื้นที่ทำงานและลักษณะอื่น ๆ ของ Power BI ผ่านสคริปต์</span><span class="sxs-lookup"><span data-stu-id="90607-176">Manage workspaces and other aspects of Power BI through scripts</span></span> |
-| [<span data-ttu-id="90607-177">Api และ SDK การดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="90607-177">Administrative APIs and SDK</span></span>](service-admin-reference.md) | <span data-ttu-id="90607-178">สร้างเครื่องมือผู้ดูแลระบบแบบกำหนดเอง</span><span class="sxs-lookup"><span data-stu-id="90607-178">Build custom admin tools.</span></span> <span data-ttu-id="90607-179">ตัวอย่างเช่น Power BI Desktop สามารถใช้ API เหล่านี้เพื่อสร้างรายงานจากข้อมูลที่เกี่ยวข้องกับการดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="90607-179">For example, Power BI Desktop can use these APIs to build reports based on data related to administration.</span></span> |
+| [พอร์ทัลผู้ดูแล Power BI](https://app.powerbi.com/admin-portal) | จัดหา และทำงานกับความจุพรีเมียม |
+| | รักษาคุณภาพของบริการ |
+| | จัดการพื้นที่ทำงาน |
+| | เผยแพร่วิชวล Power BI |
+| | ตรวจสอบรหัสที่ใช้การฝัง Power BI ในแอปพลิเคชันอื่น ๆ |
+| | แก้ไขปัญหาการเข้าถึงข้อมูลและปัญหาอื่น ๆ |
+| [ศูนย์การจัดการ Microsoft 365](https://admin.microsoft.com) | จัดการผู้ใช้และกลุ่ม |
+| | ซื้อและกำหนดสิทธิการใช้งาน |
+| | บล็อกผู้ใช้จากการเข้าถึง Power BI |
+| [ศูนย์การรักษาความปลอดภัยและการปฏิบัติตามนโยบาย Microsoft 365](https://protection.office.com) | ตรวจทานและจัดการการตรวจสอบ |
+| | การติดตามและการจัดประเภทข้อมูล |
+| | นโยบายการป้องกันการสูญหายของข้อมูล |
+| | การกำกับดูแลข้อมูล |
+| [Azure Active Directory ในพอร์ทัลของ Azure](https://aad.portal.azure.com) | กำหนดค่าเงื่อนไขการเข้าถึงแหล่งข้อมูล Power BI |
+| | เตรียมใช้งานความจุ Power BI Embedded |
+| [cmdlets ของ PowerShell](/powershell/power-bi/overview) | จัดการพื้นที่ทำงานและลักษณะอื่น ๆ ของ Power BI ผ่านสคริปต์ |
+| [Api และ SDK การดูแลระบบ](service-admin-reference.md) | สร้างเครื่องมือผู้ดูแลระบบแบบกำหนดเอง ตัวอย่างเช่น Power BI Desktop สามารถใช้ API เหล่านี้เพื่อสร้างรายงานจากข้อมูลที่เกี่ยวข้องกับการดูแลระบบ |
 
-## <a name="next-steps"></a><span data-ttu-id="90607-180">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="90607-180">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="90607-181">เมื่อคุณทราบพื้นฐานของสิ่งที่เกี่ยวข้องกับการดูแลระบบ Power BI แล้ว ให้ศึกษาบทความเหล่านี้เพื่อเรียนรู้เพิ่มเติม:</span><span class="sxs-lookup"><span data-stu-id="90607-181">Now that you know the basics of what’s involved with Power BI administration, consult these articles to learn more:</span></span>
+เมื่อคุณทราบพื้นฐานของสิ่งที่เกี่ยวข้องกับการดูแลระบบ Power BI แล้ว ให้ศึกษาบทความเหล่านี้เพื่อเรียนรู้เพิ่มเติม:
 
-- [<span data-ttu-id="90607-182">ใช้พอร์ทัลผู้ดูแล Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-182">Use the Power BI admin portal</span></span>](service-admin-portal.md)
-- [<span data-ttu-id="90607-183">คำแนะนำเกี่ยวกับการตั้งค่าของผู้เช่า</span><span class="sxs-lookup"><span data-stu-id="90607-183">Tenant settings guidance</span></span>](../guidance/admin-tenant-settings.md)
-- [<span data-ttu-id="90607-184">ใช้ PowerShell cmdlets</span><span class="sxs-lookup"><span data-stu-id="90607-184">Use PowerShell cmdlets</span></span>](/powershell/power-bi/overview)
-- [<span data-ttu-id="90607-185">การดูแล Power BI คำถามที่ถามบ่อย</span><span class="sxs-lookup"><span data-stu-id="90607-185">Power BI administration FAQ</span></span>](service-admin-faq.md)
-- [<span data-ttu-id="90607-186">การให้สิทธิการใช้งานบริการ Power BI สำหรับผู้ที่อยู่ในองค์กรของคุณ</span><span class="sxs-lookup"><span data-stu-id="90607-186">Licensing the Power BI service for users in your organization</span></span>](service-admin-licensing-organization.md)
-- <span data-ttu-id="90607-187">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="90607-187">Questions?</span></span> [<span data-ttu-id="90607-188">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-188">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="90607-189">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="90607-189">Suggestions?</span></span> [<span data-ttu-id="90607-190">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="90607-190">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+- [ใช้พอร์ทัลผู้ดูแล Power BI](service-admin-portal.md)
+- [คำแนะนำเกี่ยวกับการตั้งค่าของผู้เช่า](../guidance/admin-tenant-settings.md)
+- [ใช้ PowerShell cmdlets](/powershell/power-bi/overview)
+- [การดูแล Power BI คำถามที่ถามบ่อย](service-admin-faq.md)
+- [การให้สิทธิการใช้งานบริการ Power BI สำหรับผู้ที่อยู่ในองค์กรของคุณ](service-admin-licensing-organization.md)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)

@@ -8,113 +8,110 @@ ms.custom: contperf-fy20q4
 ms.service: powerbi
 ms.subservice: pbi-explore
 ms.topic: how-to
-ms.date: 09/17/2020
+ms.date: 01/12/2021
 LocalizationGroup: Share your work
-ms.openlocfilehash: 3d32851c5ff0722f59caa5536b67fb1c3267907b
-ms.sourcegitcommit: 7bf09116163afaae312eb2b232eb7967baee2c92
-ms.translationtype: HT
+ms.openlocfilehash: 6001cbd1b503084012b358c4dabf7db27405b9c4
+ms.sourcegitcommit: e8c3f327ac0fc73c118874a24d2601733f8f9e45
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97622073"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98718634"
 ---
-# <a name="export-reports-to-powerpoint"></a><span data-ttu-id="dd06e-103">ส่งออกรายงานไปยัง PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-103">Export reports to PowerPoint</span></span>
+# <a name="export-reports-to-powerpoint"></a>ส่งออกรายงานไปยัง PowerPoint
 
 [!INCLUDE[consumer-appliesto-yynn](../includes/consumer-appliesto-yynn.md)]
 
 
-<span data-ttu-id="dd06e-104">ด้วยบริการของ Power BI (app.powerbi.com) คุณสามารถเผยแพร่รายงานของคุณไปยัง Microsoft PowerPoint และสร้างชุดสไลด์ที่ยึดตามรายงาน Power BI ของคุณได้อย่างง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="dd06e-104">With the Power BI service (app.powerbi.com), you can publish your report to Microsoft PowerPoint and easily create a slide deck based on your Power BI report.</span></span> <span data-ttu-id="dd06e-105">ขณะส่งออกเป็น PowerPoint กรณีต่อไปนี้จะเกิดขึ้น:</span><span class="sxs-lookup"><span data-stu-id="dd06e-105">When you export to PowerPoint, the following occurs:</span></span>
+ด้วยบริการของ Power BI (app.powerbi.com) คุณสามารถเผยแพร่รายงานของคุณไปยัง Microsoft PowerPoint และสร้างชุดสไลด์ที่ยึดตามรายงาน Power BI ของคุณได้อย่างง่ายดาย ขณะส่งออกเป็น PowerPoint กรณีต่อไปนี้จะเกิดขึ้น:
 
-* <span data-ttu-id="dd06e-106">แต่ละหน้าในรายงาน Power BI กลายเป็นแต่ละสไลด์ใน PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-106">Each page in the Power BI report becomes an individual slide in PowerPoint.</span></span>
-* <span data-ttu-id="dd06e-107">แต่ละหน้าในรายงาน Power BI จะถูกส่งออกเป็นรูปภาพความละเอียดสูงหนึ่งรูปใน PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-107">Each page in the Power BI report is exported as a single high-resolution image in PowerPoint.</span></span>
-* <span data-ttu-id="dd06e-108">คุณสามารถสงวนการตั้งค่าตัวกรองและตัวแบ่งส่วนข้อมูลที่คุณเพิ่มไปยังรายงานได้</span><span class="sxs-lookup"><span data-stu-id="dd06e-108">You can preserve the filters and slicers settings that you've added to the report.</span></span>
-* <span data-ttu-id="dd06e-109">ลิงก์ถูกสร้างขึ้นใน PowerPoint ที่เชื่อมโยงกลับไปยังรายงาน Power BI</span><span class="sxs-lookup"><span data-stu-id="dd06e-109">A link is created in PowerPoint that links back to the Power BI report.</span></span>
+* แต่ละหน้าในรายงาน Power BI กลายเป็นแต่ละสไลด์ใน PowerPoint
+* แต่ละหน้าในรายงาน Power BI จะถูกส่งออกเป็นรูปภาพความละเอียดสูงหนึ่งรูปใน PowerPoint
+* คุณสามารถสงวนการตั้งค่าตัวกรองและตัวแบ่งส่วนข้อมูลที่คุณเพิ่มไปยังรายงานได้
+* ลิงก์ถูกสร้างขึ้นใน PowerPoint ที่เชื่อมโยงกลับไปยังรายงาน Power BI
 
-<span data-ttu-id="dd06e-110">รับ **รายงาน Power BI** ของคุณ ที่ถูกส่งออกเป็น **PowerPoint** อย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="dd06e-110">Getting your **Power BI report** exported into **PowerPoint** is quick.</span></span> <span data-ttu-id="dd06e-111">ทำตามขั้นตอนที่แสดงในส่วนถัดไป</span><span class="sxs-lookup"><span data-stu-id="dd06e-111">Follow the steps outlined in the next section.</span></span>
+รับ **รายงาน Power BI** ของคุณ ที่ถูกส่งออกเป็น **PowerPoint** อย่างรวดเร็ว ทำตามขั้นตอนที่แสดงในส่วนถัดไป
 
-<span data-ttu-id="dd06e-112">คุณยังสามารถคัดลอกหนึ่งวิชวลต่อหนึ่งครั้งจากบริการของ Power BI และวางลงใน PowerPoint (หรือโปรแกรมอื่นๆ ที่รองรับการวาง) ได้</span><span class="sxs-lookup"><span data-stu-id="dd06e-112">You can also copy one visual at a time from the Power BI service and paste it into PowerPoint (or any other program that supports pasting).</span></span> <span data-ttu-id="dd06e-113">เลือกไอคอน **คัดลอกเป็นรูปภาพ** เพื่อคัดลอกวิชวลไปยังคลิปบอร์ดของคุณ</span><span class="sxs-lookup"><span data-stu-id="dd06e-113">Select the **Copy as image** icon to copy the visual to your clipboard.</span></span> <span data-ttu-id="dd06e-114">จากนั้นจึงเปิด PowerPoint และวางวิชวล</span><span class="sxs-lookup"><span data-stu-id="dd06e-114">Then, open PowerPoint and paste the visual.</span></span> <span data-ttu-id="dd06e-115">สำหรับข้อมูลเพิ่มเติม ดู [คัดลอกวิชวลเป็นรูปภาพคงที่](../visuals/power-bi-visualization-copy-paste.md)</span><span class="sxs-lookup"><span data-stu-id="dd06e-115">For more information, see [Copy visuals as static images](../visuals/power-bi-visualization-copy-paste.md).</span></span>
+คุณยังสามารถคัดลอกหนึ่งวิชวลต่อหนึ่งครั้งจากบริการของ Power BI และวางลงใน PowerPoint (หรือโปรแกรมอื่นๆ ที่รองรับการวาง) ได้ เลือกไอคอน **คัดลอกเป็นรูปภาพ** เพื่อคัดลอกวิชวลไปยังคลิปบอร์ดของคุณ จากนั้นจึงเปิด PowerPoint และวางวิชวล สำหรับข้อมูลเพิ่มเติม ดู [คัดลอกวิชวลเป็นรูปภาพคงที่](../visuals/power-bi-visualization-copy-paste.md)
 
 ![เลือกไอคอนคัดลอกเป็นรูปภาพ](media/end-user-powerpoint/power-bi-copy.png)
 
-## <a name="export-your-power-bi-report-to-powerpoint"></a><span data-ttu-id="dd06e-117">ส่งออกรายงาน Power BI ของคุณไปยัง PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-117">Export your Power BI report to PowerPoint</span></span>
-<span data-ttu-id="dd06e-118">ใน **บริการ Power BI** ให้เลือกรายงานที่จะแสดงบนพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="dd06e-118">In the **Power BI service**, select a report to display it on the canvas.</span></span> <span data-ttu-id="dd06e-119">คุณยังสามารถเลือกรายงานจาก **หน้าแรก** **แอป** หรือคอนเทนเนอร์อื่นจากบนบานหน้าต่างนำทางได้</span><span class="sxs-lookup"><span data-stu-id="dd06e-119">You can also select a report from **Home**, **Apps**, or any other container from the nav pane.</span></span>
+## <a name="export-your-power-bi-report-to-powerpoint"></a>ส่งออกรายงาน Power BI ของคุณไปยัง PowerPoint
+ใน **บริการ Power BI** ให้เลือกรายงานที่จะแสดงบนพื้นที่ทำงาน คุณยังสามารถเลือกรายงานจาก **หน้าแรก** **แอป** หรือคอนเทนเนอร์อื่นจากบนบานหน้าต่างนำทางได้
 
-[!INCLUDE [power-bi-service-new-look-include](../includes/power-bi-service-new-look-include.md)]
-
-<span data-ttu-id="dd06e-120">เมื่อรายงานที่คุณต้องการส่งออกไปยัง PowerPoint ถูกแสดงอยู่บนพื้นที่แก้ไข ให้เลือก **ไฟล์** > **ส่งออกไปยัง PowerPoint** จากแถบเมนู</span><span class="sxs-lookup"><span data-stu-id="dd06e-120">When the report you want to export to PowerPoint is displayed on the canvas, select **File** > **Export to PowerPoint** from the menu bar.</span></span>
+เมื่อรายงานที่คุณต้องการส่งออกไปยัง PowerPoint ถูกแสดงอยู่บนพื้นที่แก้ไข ให้เลือก **ไฟล์** > **ส่งออกไปยัง PowerPoint** จากแถบเมนู
 
 ![เลือก ส่งออก จากแถบเมนู](media/end-user-powerpoint/power-bi-export.png)
 
-<span data-ttu-id="dd06e-122">ป็อปอัพจะปรากฏในที่ซึ่งคุณมีตัวเลือกที่จะเลือก **ค่าปัจจุบัน** หรือ **ค่าเริ่มต้น**</span><span class="sxs-lookup"><span data-stu-id="dd06e-122">A pop-up appears where you have the option to select **Current values** or **Default values**.</span></span> <span data-ttu-id="dd06e-123">**ค่าปัจจุบัน** ส่งออกรายงานในสถานะปัจจุบัน ซึ่งรวมถึงการเปลี่ยนแปลงที่ใช้งานอยู่ที่คุณทำกับตัวแบ่งส่วนข้อมูลและตัวกรอง</span><span class="sxs-lookup"><span data-stu-id="dd06e-123">**Current values** exports the report in the current state, which includes the active changes you made to slicer and filter values.</span></span>  <span data-ttu-id="dd06e-124">ผู้ใช้งานส่วนใหญ่เลือกตัวเลือกนี้</span><span class="sxs-lookup"><span data-stu-id="dd06e-124">Most users select this option.</span></span> <span data-ttu-id="dd06e-125">หากคุณได้ทำการเลื่อน **ค่าปัจจุบัน** ไม่ได้รวมสถานะการเลื่อนของวิชวล แต่จะส่งออกส่วนบนสุดของข้อมูลแทน</span><span class="sxs-lookup"><span data-stu-id="dd06e-125">If you've scrolled, **Current values** does not include the scroll state of the visual, but instead exports the top portion of the data.</span></span> <span data-ttu-id="dd06e-126">หรือเลือก **ค่าเริ่มต้น** เพื่อส่งออกรายงานในสถานะดั้งเดิมตามที่ *ผู้ออกแบบ* แชร์ไว้ โดยไม่ครอบคลุมการเปลี่ยนแปลงใด ๆ ที่คุณทำไว้กับสถานะเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="dd06e-126">Alternatively, selecting **Default values** exports the report in the original state, as the *designer* shared it, and doesn't reflect any changes you've made to the original state.</span></span>
+ป็อปอัพจะปรากฏในที่ซึ่งคุณมีตัวเลือกที่จะเลือก **ค่าปัจจุบัน** หรือ **ค่าเริ่มต้น** **ค่าปัจจุบัน** ส่งออกรายงานในสถานะปัจจุบัน ซึ่งรวมถึงการเปลี่ยนแปลงที่ใช้งานอยู่ที่คุณทำกับตัวแบ่งส่วนข้อมูลและตัวกรอง  ผู้ใช้งานส่วนใหญ่เลือกตัวเลือกนี้ หากคุณได้ทำการเลื่อน **ค่าปัจจุบัน** ไม่ได้รวมสถานะการเลื่อนของวิชวล แต่จะส่งออกส่วนบนสุดของข้อมูลแทน หรือเลือก **ค่าเริ่มต้น** เพื่อส่งออกรายงานในสถานะดั้งเดิมตามที่ *ผู้ออกแบบ* แชร์ไว้ โดยไม่ครอบคลุมการเปลี่ยนแปลงใด ๆ ที่คุณทำไว้กับสถานะเริ่มต้น
 
 ![เลือกสิ่งที่จะส่งออก](media/end-user-powerpoint/power-bi-current-values.png)
  
-<span data-ttu-id="dd06e-128">นอกจากนี้ ยังมีกล่องกาเครื่องหมายเพื่อเลือกว่าจะส่งออกแท็บที่ซ่อนรายงานไว้หรือไม่</span><span class="sxs-lookup"><span data-stu-id="dd06e-128">Additionally, there's a check box to select whether or not to export the hidden tabs of a report.</span></span> <span data-ttu-id="dd06e-129">เลือกช่องทำเครื่องหมายนี้หากคุณต้องการส่งออกเฉพาะแท็บรายงานที่ปรากฏขึ้นสำหรับคุณในเบราเซอร์</span><span class="sxs-lookup"><span data-stu-id="dd06e-129">Select this check box if you want to export only report tabs that are visible to you in your browser.</span></span> <span data-ttu-id="dd06e-130">หากต้องการรับแท็บซ่อนทั้งหมดเป็นส่วนหนึ่งในข้อมูลส่งออก คุณจะต้องไม่ทำเครื่องหมายในช่องนี้</span><span class="sxs-lookup"><span data-stu-id="dd06e-130">If you prefer to get all the hidden tabs as part of your export, leave this check box cleared.</span></span> <span data-ttu-id="dd06e-131">ถ้ากล่องกาเครื่องหมายเป็นสีเทา แสดงว่าไม่มีแท็บที่ซ่อนอยู่ในรายงาน</span><span class="sxs-lookup"><span data-stu-id="dd06e-131">If the check box is grayed out, there are no hidden tabs in the report.</span></span> <span data-ttu-id="dd06e-132">ตัวอย่างของแท็บที่ซ่อนไว้จะเป็นแท็บคำแนะนำเครื่องมือ [คำแนะนำเครื่องมือแบบกำหนดเอง](../create-reports/desktop-tooltips.md) จะถูกสร้างขึ้นโดย *ผู้ออกแบบ* รายงานและไม่แสดงเป็นแท็บรายงานใน Power BI service สำหรับ *ผู้ใช้ทางธุรกิจ*</span><span class="sxs-lookup"><span data-stu-id="dd06e-132">An example of a hidden tab would be a tooltip tab. [Custom tooltips](../create-reports/desktop-tooltips.md) are created by report *designers* and don't display as report tabs in the Power BI service for *business users*.</span></span> 
+นอกจากนี้ ยังมีกล่องกาเครื่องหมายเพื่อเลือกว่าจะส่งออกแท็บที่ซ่อนรายงานไว้หรือไม่ เลือกช่องทำเครื่องหมายนี้หากคุณต้องการส่งออกเฉพาะแท็บรายงานที่ปรากฏขึ้นสำหรับคุณในเบราเซอร์ หากต้องการรับแท็บซ่อนทั้งหมดเป็นส่วนหนึ่งในข้อมูลส่งออก คุณจะต้องไม่ทำเครื่องหมายในช่องนี้ ถ้ากล่องกาเครื่องหมายเป็นสีเทา แสดงว่าไม่มีแท็บที่ซ่อนอยู่ในรายงาน ตัวอย่างของแท็บที่ซ่อนไว้จะเป็นแท็บคำแนะนำเครื่องมือ [คำแนะนำเครื่องมือแบบกำหนดเอง](../create-reports/desktop-tooltips.md) จะถูกสร้างขึ้นโดย *ผู้ออกแบบ* รายงานและไม่แสดงเป็นแท็บรายงานใน Power BI service สำหรับ *ผู้ใช้ทางธุรกิจ* 
 
-<span data-ttu-id="dd06e-133">คุณยังสามารถเลือกที่จะส่งออกเฉพาะหน้าปัจจุบันที่คุณกำลังดูในรายงานได้โดยการเลือกตัวเลือก **ส่งออกหน้าปัจจุบันเท่านั้น**</span><span class="sxs-lookup"><span data-stu-id="dd06e-133">You may also choose to export only the current page you're viewing in a report by checking the **Only export current page** option.</span></span>  <span data-ttu-id="dd06e-134">ตามค่าเริ่มต้น การดำเนินการนี้จะถูกยกเลิกการเลือกและหน้าทั้งหมดจะถูกส่งออกจากรายงานของคุณ</span><span class="sxs-lookup"><span data-stu-id="dd06e-134">By default, this is unchecked and all pages will be exported from your report.</span></span>
+คุณยังสามารถเลือกที่จะส่งออกเฉพาะหน้าปัจจุบันที่คุณกำลังดูในรายงานได้โดยการเลือกตัวเลือก **ส่งออกหน้าปัจจุบันเท่านั้น**  ตามค่าเริ่มต้น การดำเนินการนี้จะถูกยกเลิกการเลือกและหน้าทั้งหมดจะถูกส่งออกจากรายงานของคุณ
 
-<span data-ttu-id="dd06e-135">เมื่อคุณได้ทำการเลือกของคุณแล้ว เลือก **ส่งออก** เพื่อดำเนินต่อ</span><span class="sxs-lookup"><span data-stu-id="dd06e-135">After you make your selections, select **Export** to continue.</span></span> <span data-ttu-id="dd06e-136">คุณจะเห็นแบนเนอร์การแจ้งเตือนในมุมบนขวาของหน้าต่างเบราว์เซอร์ของ Power BI service ซึ่ง รายงานจะส่งออกไปยัง PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-136">You'll see a notification banner in the upper-right corner of the Power BI service browser window that the report is being exported to PowerPoint.</span></span> 
+เมื่อคุณได้ทำการเลือกของคุณแล้ว เลือก **ส่งออก** เพื่อดำเนินต่อ คุณจะเห็นแบนเนอร์การแจ้งเตือนในมุมบนขวาของหน้าต่างเบราว์เซอร์ของ Power BI service ซึ่ง รายงานจะส่งออกไปยัง PowerPoint 
 
 
 
 ![การแจ้งเตือนการส่งออกไปยัง PowerPoint ที่กำลังอยู่ระหว่างดำเนินการ](media/end-user-powerpoint/power-bi-export-progress.png)
 
-<span data-ttu-id="dd06e-138">การส่งออกนี้อาจใช้เวลาสักครู่</span><span class="sxs-lookup"><span data-stu-id="dd06e-138">Exporting might take a few minutes.</span></span> <span data-ttu-id="dd06e-139">ปัจจัยที่สามารถส่งผลกระทบต่อเวลาจำเป็นต้องมีโครงสร้างของรายงาน และมีการโหลดบน Power BI service ปัจจุบัน</span><span class="sxs-lookup"><span data-stu-id="dd06e-139">Factors that can affect the time required include the structure of the report and the current load on the Power BI service.</span></span> <span data-ttu-id="dd06e-140">คุณสามารถทำงานใน Power BI ในขณะที่กำลังส่งออกรายงาน</span><span class="sxs-lookup"><span data-stu-id="dd06e-140">You can continue to work in Power BI while the report is being exported.</span></span>
+การส่งออกนี้อาจใช้เวลาสักครู่ ปัจจัยที่สามารถส่งผลกระทบต่อเวลาจำเป็นต้องมีโครงสร้างของรายงาน และมีการโหลดบน Power BI service ปัจจุบัน คุณสามารถทำงานใน Power BI ในขณะที่กำลังส่งออกรายงาน
 
-<span data-ttu-id="dd06e-141">หลังจากบริการ Power BI สิ้นสุดกระบวนการส่งออก แบนเนอร์แจ้งเตือนจะเปลี่ยนไปเพื่อแจ้งข้อมูลให้คุณทราบ</span><span class="sxs-lookup"><span data-stu-id="dd06e-141">After the Power BI service has finished the export process, the notification banner changes to let you know.</span></span> <span data-ttu-id="dd06e-142">ไฟล์ของคุณพร้อมแล้วในเบราว์เซอร์ที่แสดงไฟล์ที่ดาวน์โหลด</span><span class="sxs-lookup"><span data-stu-id="dd06e-142">Your file is then available where your browser displays downloaded files.</span></span> <span data-ttu-id="dd06e-143">ในรูปต่อไปนี้ จะแสดงเป็นแบนเนอร์ดาวน์โหลดชิดด้านล่างของหน้าต่างเบราว์เซอร์</span><span class="sxs-lookup"><span data-stu-id="dd06e-143">In the following image, it's shown as a download banner along the bottom of the browser window.</span></span>
+หลังจากบริการ Power BI สิ้นสุดกระบวนการส่งออก แบนเนอร์แจ้งเตือนจะเปลี่ยนไปเพื่อแจ้งข้อมูลให้คุณทราบ ไฟล์ของคุณพร้อมแล้วในเบราว์เซอร์ที่แสดงไฟล์ที่ดาวน์โหลด ในรูปต่อไปนี้ จะแสดงเป็นแบนเนอร์ดาวน์โหลดชิดด้านล่างของหน้าต่างเบราว์เซอร์
 
 ![การแจ้งเตือนเบราว์เซอร์ที่ด้านล่างของหน้าจอ](media/end-user-powerpoint/power-bi-browsers.png)
 
-<span data-ttu-id="dd06e-145">และมีแค่นั้น</span><span class="sxs-lookup"><span data-stu-id="dd06e-145">And that's all there is to it.</span></span> <span data-ttu-id="dd06e-146">คุณสามารถดาวน์โหลดไฟล์ ให้เปิดมันด้วย PowerPoint และปรับเปลี่ยนหรือปรับปรุงเหมือนกับที่คุณต้องการชุด PowerPoint ใดๆ</span><span class="sxs-lookup"><span data-stu-id="dd06e-146">You can download the file, open it with PowerPoint, and then modify or enhance it like you would any other PowerPoint deck.</span></span>
+และมีแค่นั้น คุณสามารถดาวน์โหลดไฟล์ ให้เปิดมันด้วย PowerPoint และปรับเปลี่ยนหรือปรับปรุงเหมือนกับที่คุณต้องการชุด PowerPoint ใดๆ
 
-## <a name="open-the-powerpoint-file"></a><span data-ttu-id="dd06e-147">เปิดไฟล์ PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-147">Open the PowerPoint file</span></span>
-<span data-ttu-id="dd06e-148">เมื่อคุณเปิดไฟล์ PowerPoint ที่ส่งออก Power BI คุณจะพบองค์ประกอบที่ยอดเยี่ยม และมีประโยชน์บางอย่าง</span><span class="sxs-lookup"><span data-stu-id="dd06e-148">When you open the PowerPoint file that Power BI exported, you find a few cool and useful elements.</span></span> <span data-ttu-id="dd06e-149">ดูที่รูปภาพต่อไปนี้ จากนั้นเช็คเอาท์องค์ประกอบที่ลำดับเลขที่ซึ่งอธิบายฟีเจอร์ยอดเยี่ยมเหล่านั้นบางอย่าง</span><span class="sxs-lookup"><span data-stu-id="dd06e-149">Take a look at the following image, and check out the numbered elements that describe some of those cool features.</span></span> <span data-ttu-id="dd06e-150">หน้าใน PowerPoint จะถูกสร้างขึ้นในขนาดมาตรฐาน 9:16 เสมอ โดยไม่คำนึงถึงขนาดหน้าเดิมหรือมิติในรายงาน Power BI</span><span class="sxs-lookup"><span data-stu-id="dd06e-150">Pages in PowerPoint are always created in the standard 9:16 size, regardless of the original page sizes or dimensions in the Power BI report.</span></span>
+## <a name="open-the-powerpoint-file"></a>เปิดไฟล์ PowerPoint
+เมื่อคุณเปิดไฟล์ PowerPoint ที่ส่งออก Power BI คุณจะพบองค์ประกอบที่ยอดเยี่ยม และมีประโยชน์บางอย่าง ดูที่รูปภาพต่อไปนี้ จากนั้นเช็คเอาท์องค์ประกอบที่ลำดับเลขที่ซึ่งอธิบายฟีเจอร์ยอดเยี่ยมเหล่านั้นบางอย่าง หน้าใน PowerPoint จะถูกสร้างขึ้นในขนาดมาตรฐาน 9:16 เสมอ โดยไม่คำนึงถึงขนาดหน้าเดิมหรือมิติในรายงาน Power BI
 
 ![เปิด PowerPoint](media/end-user-powerpoint/power-bi-powerpoint-numbered.png)
 
-1. <span data-ttu-id="dd06e-152">หน้าแรกของชุดสไลด์มีชื่อของรายงานของคุณ และลิงก์เพื่อให้คุณสามารถดูรายงาน  **Power BI** ที่ยึดตามชุดสไลด์</span><span class="sxs-lookup"><span data-stu-id="dd06e-152">The first page of the slide deck includes the name of your report and a link so that you can **View in Power BI** the report on which the slide deck is based.</span></span>
-2. <span data-ttu-id="dd06e-153">คุณจะได้รับข้อมูลที่เป็นประโยชน์เกี่ยวกับรายงานนี้ด้วยเช่นกัน</span><span class="sxs-lookup"><span data-stu-id="dd06e-153">You get some useful information about the report, too.</span></span> <span data-ttu-id="dd06e-154">**รีเฟรชข้อมูลล่าสุด** ใช้เพื่อแสดงวันที่และเวลาสำหรับรายงานที่ส่งออก</span><span class="sxs-lookup"><span data-stu-id="dd06e-154">**Last data refresh** shows the date and time on which the exported report is based.</span></span> <span data-ttu-id="dd06e-155">**ดาวน์โหลดที่** ใช้เพื่อแสดงวันที่และเวลาเมื่อส่งออกรายงาน Power BI เป็นไฟล์ PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-155">**Downloaded at** shows the date and time when the Power BI report was exported into a PowerPoint file.</span></span> <span data-ttu-id="dd06e-156">เวลา **ที่ดาวน์โหลด** ได้รับการตั้งค่าเป็นโซนเวลาของคอมพิวเตอร์ของคุณในเวลาที่ส่งออก</span><span class="sxs-lookup"><span data-stu-id="dd06e-156">The **Downloaded at** time is set to your computer's time zone at the time of the export.</span></span>
+1. หน้าแรกของชุดสไลด์มีชื่อของรายงานของคุณ และลิงก์เพื่อให้คุณสามารถดูรายงาน  **Power BI** ที่ยึดตามชุดสไลด์
+2. คุณจะได้รับข้อมูลที่เป็นประโยชน์เกี่ยวกับรายงานนี้ด้วยเช่นกัน **รีเฟรชข้อมูลล่าสุด** ใช้เพื่อแสดงวันที่และเวลาสำหรับรายงานที่ส่งออก **ดาวน์โหลดที่** ใช้เพื่อแสดงวันที่และเวลาเมื่อส่งออกรายงาน Power BI เป็นไฟล์ PowerPoint เวลา **ที่ดาวน์โหลด** ได้รับการตั้งค่าเป็นโซนเวลาของคอมพิวเตอร์ของคุณในเวลาที่ส่งออก
 
 
-3. <span data-ttu-id="dd06e-157">แต่ละหน้ารายงานเป็นสไลด์แยกต่างหาก ดังที่แสดงในบานหน้าต่างนำทาง</span><span class="sxs-lookup"><span data-stu-id="dd06e-157">Each report page is a separate slide, as shown in the nav pane.</span></span> 
-4. <span data-ttu-id="dd06e-158">รายงานที่คุณเผยแพร่แล้วจะแสดงในภาษาตามการตั้งค่า Power BI ของคุณ หรือจากการตั้งค่าตำแหน่งที่ตั้งของเบราว์เซอร์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="dd06e-158">Your published report is rendered in the language according to your Power BI settings, or otherwise by the locale setting of your browser.</span></span> <span data-ttu-id="dd06e-159">ดูหรือตั้งค่าภาษาในเบราว์เซอร์ของคุณโดยเลือก ![ไอคอนรูปเฟือง](media/end-user-powerpoint/power-bi-settings-icon.png) > **การตั้งค่า** > **ทั่วไป** > **ภาษา**</span><span class="sxs-lookup"><span data-stu-id="dd06e-159">To see or set your language preference in your browser, select the cog icon ![Cog icon](media/end-user-powerpoint/power-bi-settings-icon.png) > **Settings** > **General** > **Language**.</span></span> <span data-ttu-id="dd06e-160">สำหรับข้อมูลของพื้นที่ ให้ดู[ภาษาที่รองรับและประเทศหรือภูมิภาคสำหรับ Power BI](../fundamentals/supported-languages-countries-regions.md)</span><span class="sxs-lookup"><span data-stu-id="dd06e-160">For locale information, see [Supported languages and countries or regions for Power BI](../fundamentals/supported-languages-countries-regions.md).</span></span>
+3. แต่ละหน้ารายงานเป็นสไลด์แยกต่างหาก ดังที่แสดงในบานหน้าต่างนำทาง 
+4. รายงานที่คุณเผยแพร่แล้วจะแสดงในภาษาตามการตั้งค่า Power BI ของคุณ หรือจากการตั้งค่าตำแหน่งที่ตั้งของเบราว์เซอร์ของคุณ ดูหรือตั้งค่าภาษาในเบราว์เซอร์ของคุณโดยเลือก ![ไอคอนรูปเฟือง](media/end-user-powerpoint/power-bi-settings-icon.png) > **การตั้งค่า** > **ทั่วไป** > **ภาษา** สำหรับข้อมูลของพื้นที่ ให้ดู[ภาษาที่รองรับและประเทศหรือภูมิภาคสำหรับ Power BI](../fundamentals/supported-languages-countries-regions.md)
 
 
-<span data-ttu-id="dd06e-161">เมื่อคุณดูแต่ละสไลด์ คุณจะสังเกตเห็นว่า แต่ละหน้ารายงานคือรูปภาพที่แยกจากกัน</span><span class="sxs-lookup"><span data-stu-id="dd06e-161">When you view an individual slide, you see that each report page is an independent image.</span></span> <span data-ttu-id="dd06e-162">การเลื่อนใน PowerPoint ไม่พร้อมใช้งานเนื่องจากแต่ละสไลด์เป็นรูปภาพคงที่</span><span class="sxs-lookup"><span data-stu-id="dd06e-162">Scrolling in PowerPoint is not available since each slide is a static image.</span></span>
+เมื่อคุณดูแต่ละสไลด์ คุณจะสังเกตเห็นว่า แต่ละหน้ารายงานคือรูปภาพที่แยกจากกัน การเลื่อนใน PowerPoint ไม่พร้อมใช้งานเนื่องจากแต่ละสไลด์เป็นรูปภาพคงที่
 
 ![หน้าจอแสดงผลส่วนการแสดงผลแต่ละส่วนเป็นภาพแยกจากกัน](media/end-user-powerpoint/power-bi-images.png)
 
-<span data-ttu-id="dd06e-164">สิ่งที่คุณทำกับชุด PowerPoint ของคุณจากที่นั่น หรือจากรูปภาพที่มีความละเอียดสูงใด ขึ้นอยู่กับคุณ</span><span class="sxs-lookup"><span data-stu-id="dd06e-164">What you do with your PowerPoint deck from there, or any of the high-resolution images, is up to you.</span></span>
+สิ่งที่คุณทำกับชุด PowerPoint ของคุณจากที่นั่น หรือจากรูปภาพที่มีความละเอียดสูงใด ขึ้นอยู่กับคุณ
 
-## <a name="considerations-and-troubleshooting"></a><span data-ttu-id="dd06e-165">ข้อควรพิจารณาและการแก้ไขปัญหา</span><span class="sxs-lookup"><span data-stu-id="dd06e-165">Considerations and troubleshooting</span></span>
-<span data-ttu-id="dd06e-166">มีข้อควรพิจารณาและข้อจำกัดสองสามตัวที่ควรทราบเมื่อทำงานกับฟีเจอร์ **ส่งออกไปยัง PowerPoint**</span><span class="sxs-lookup"><span data-stu-id="dd06e-166">There are a few considerations and limitations to keep in mind when you work with the **Export to PowerPoint** feature.</span></span>
+## <a name="considerations-and-troubleshooting"></a>ข้อควรพิจารณาและการแก้ไขปัญหา
+มีข้อควรพิจารณาและข้อจำกัดสองสามตัวที่ควรทราบเมื่อทำงานกับฟีเจอร์ **ส่งออกไปยัง PowerPoint**
  
 
-* <span data-ttu-id="dd06e-167">ถ้าคุณไม่เห็นตัวเลือก **การส่งออก** ตรวจสอบให้แน่ใจว่าคุณได้เปิดใช้งาน "รูปลักษณ์ใหม่" และคุณกำลังดูรายงานอยู่ (ไม่ใช่แดชบอร์ด)</span><span class="sxs-lookup"><span data-stu-id="dd06e-167">If you don't see the **Export** option, make sure that you have turned on "New look" and that you are viewing a report (not a dashboard).</span></span>
+* ถ้าคุณไม่เห็นตัวเลือกการ **ส่งออก** ตรวจสอบให้แน่ใจว่าคุณกำลังดูรายงาน (ไม่ใช่แดชบอร์ด)
 
-    ![ภาพหน้าจอของปุ่มสลับรูปลักษณ์ใหม่](media/end-user-powerpoint/power-bi-new-look.png)
+* [ตัวกรอง URL](../collaborate-share/service-url-filters.md) จะไม่ถูกนำมาพิจารณาหากคุณเลือก **ค่าปัจจุบัน** สำหรับการส่งออกของคุณ
 
-* <span data-ttu-id="dd06e-169">[ตัวกรอง URL](../collaborate-share/service-url-filters.md) จะไม่ถูกนำมาพิจารณาหากคุณเลือก **ค่าปัจจุบัน** สำหรับการส่งออกของคุณ</span><span class="sxs-lookup"><span data-stu-id="dd06e-169">[URL filters](../collaborate-share/service-url-filters.md) aren't currently respected when you choose **Current Values** for your export.</span></span>
+* เมื่อทำการส่งออกไปยัง PowerPoint หากรายงานใช้แบบอักษรแบบกำหนดเอง แบบอักษรดังกล่าวจะถูกแทนที่ด้วยแบบอักษรเริ่มต้น
 
-* <span data-ttu-id="dd06e-170">เมื่อทำการส่งออกไปยัง PowerPoint หากรายงานใช้แบบอักษรแบบกำหนดเอง แบบอักษรดังกล่าวจะถูกแทนที่ด้วยแบบอักษรเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="dd06e-170">When exporting to PowerPoint, if the report uses a custom font, that font will be replaced with a default font.</span></span>
+* ชนิดวิชวลต่อไปนี้ไม่ได้รับการรองรับ และจะไม่ถูกส่งออกไปยัง PowerPoint:
+   - ไม่รองรับ [วิชวลแบบกำหนดเองที่ไม่ได้รับการรับรอง](../developer/visuals/power-bi-custom-visuals-certified.md)) 
+   - ไม่รองรับ[วิชวล ESRI ArcGIS](../visuals/power-bi-visualizations-arcgis.md)
+   - ไม่รองรับวิชวล R และ Python
+   - ภาพพื้นหลังจะถูกตัดรูปด้วยพื้นที่ที่กำหนดขอบเขตของแผนภูมิ แนะนำให้คุณลบภาพพื้นหลังก่อนส่งออกเป็นไฟล์ PowerPoint
 
-* <span data-ttu-id="dd06e-171">ชนิดวิชวลต่อไปนี้ไม่ได้รับการรองรับ และจะไม่ถูกส่งออกไปยัง PowerPoint:</span><span class="sxs-lookup"><span data-stu-id="dd06e-171">The following visual types are not supported, and will not be exported to PowerPoint:</span></span>
-   - <span data-ttu-id="dd06e-172">ไม่รองรับ [วิชวลแบบกำหนดเองที่ไม่ได้รับการรับรอง](../developer/visuals/power-bi-custom-visuals-certified.md))</span><span class="sxs-lookup"><span data-stu-id="dd06e-172">[Custom visuals that haven't been certified](../developer/visuals/power-bi-custom-visuals-certified.md)) aren't supported.</span></span> 
-   - <span data-ttu-id="dd06e-173">ไม่รองรับ[วิชวล ESRI ArcGIS](../visuals/power-bi-visualizations-arcgis.md)</span><span class="sxs-lookup"><span data-stu-id="dd06e-173">The [ESRI ArcGIS visual](../visuals/power-bi-visualizations-arcgis.md) is not supported</span></span>
-   - <span data-ttu-id="dd06e-174">ไม่รองรับวิชวล R และ Python</span><span class="sxs-lookup"><span data-stu-id="dd06e-174">R and Python visuals are not supported.</span></span>
-   - <span data-ttu-id="dd06e-175">ภาพพื้นหลังจะถูกตัดรูปด้วยพื้นที่ที่กำหนดขอบเขตของแผนภูมิ</span><span class="sxs-lookup"><span data-stu-id="dd06e-175">Background images are cropped with the chart's bounding area.</span></span> <span data-ttu-id="dd06e-176">แนะนำให้คุณลบภาพพื้นหลังก่อนส่งออกเป็นไฟล์ PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-176">We recommend that you remove background images before you export to PowerPoint.</span></span>
+* ไม่สามารถส่งออกรายงานบางรายการได้ สิ่งเหล่านี้รวมถึง:
+    - ถ้าคุณแชร์แดชบอร์ดกับบุคคลภายนอกองค์กรของคุณ (และดังนั้น ผู้ใช้ที่ไม่อยู่ในผู้เช่า Power BI ของคุณ) ผู้ใช้รายนั้นจะไม่สามารถส่งรายงานที่เกี่ยวข้องของแดชบอร์ดที่แชร์เป็น PowerPoint ได้ ตัวอย่างเช่น ถ้าคุณเป็นเช่นนั้น aaron@contoso.comคุณสามารถแชร์ให้david@cohowinery.comได้ แต่ david@cohowinery.com ไม่สามารถส่งออกรายงานที่เชื่อมโยงไปยังไฟล์ PowerPoint
+    - รายงานที่มีจำนวนหน้ารายงานมากกว่า 50 หน้า รายงานจนไม่มีข้อจำกัดนี้ ดู [พิมพ์รายงานจน](end-user-paginated-report.md#interact-with-a-paginated-report) สำหรับรายละเอียด
+    - รายงานที่มีขนาดใหญ่กว่า 500 MB เมื่อส่งออก 
+    - รายงานที่มีการส่งออกไปยัง PowerPoint ในเวอร์ชันที่เก่ากว่า
+    - รายงานที่ใช้เวลานานกว่าหนึ่งชั่วโมงเพื่อดำเนินการ 
+    - หน้ารายงานที่ใช้เวลานานกว่า 6 นาทีในการโหลด 
 
-* <span data-ttu-id="dd06e-177">ไม่สามารถส่งออกรายงานบางรายการได้</span><span class="sxs-lookup"><span data-stu-id="dd06e-177">Some reports cannot be exported.</span></span> <span data-ttu-id="dd06e-178">สิ่งเหล่านี้รวมถึง:</span><span class="sxs-lookup"><span data-stu-id="dd06e-178">These include:</span></span>
-    - <span data-ttu-id="dd06e-179">ถ้าคุณแชร์แดชบอร์ดกับบุคคลภายนอกองค์กรของคุณ (และดังนั้น ผู้ใช้ที่ไม่อยู่ในผู้เช่า Power BI ของคุณ) ผู้ใช้รายนั้นจะไม่สามารถส่งรายงานที่เกี่ยวข้องของแดชบอร์ดที่แชร์เป็น PowerPoint ได้</span><span class="sxs-lookup"><span data-stu-id="dd06e-179">If you share a dashboard with someone outside of your organization, and thereby, a user who isn't in your Power BI tenant, that user can't export the shared dashboard's associated reports to PowerPoint.</span></span> <span data-ttu-id="dd06e-180">ตัวอย่างเช่น ถ้าคุณเป็นเช่นนั้น aaron@contoso.comคุณสามารถแชร์ให้david@cohowinery.comได้</span><span class="sxs-lookup"><span data-stu-id="dd06e-180">For example, if you're aaron@contoso.com, you can share with david@cohowinery.com.</span></span> <span data-ttu-id="dd06e-181">แต่ david@cohowinery.com ไม่สามารถส่งออกรายงานที่เชื่อมโยงไปยังไฟล์ PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-181">But david@cohowinery.com can't export the associated reports to PowerPoint.</span></span>
-    - <span data-ttu-id="dd06e-182">รายงานที่มีจำนวนหน้ารายงานมากกว่า 50 หน้า</span><span class="sxs-lookup"><span data-stu-id="dd06e-182">Reports with more than 50 report pages.</span></span> <span data-ttu-id="dd06e-183">เฉพาะรายงาน 50 หน้าแรกจะมีการส่งออก</span><span class="sxs-lookup"><span data-stu-id="dd06e-183">Only the first 50 pages will be exported.</span></span>
-    - <span data-ttu-id="dd06e-184">รายงานที่มีการส่งออกไปยัง PowerPoint ในเวอร์ชันที่เก่ากว่า</span><span class="sxs-lookup"><span data-stu-id="dd06e-184">Reports being exported to older versions of PowerPoint.</span></span>
-    - <span data-ttu-id="dd06e-185">รายงานที่ใช้เวลานานกว่าหนึ่งชั่วโมงเพื่อดำเนินการ</span><span class="sxs-lookup"><span data-stu-id="dd06e-185">Reports that take longer than an hour to process.</span></span> 
-    - <span data-ttu-id="dd06e-186">หน้ารายงานที่ใช้เวลานานกว่า 6 นาทีในการโหลด</span><span class="sxs-lookup"><span data-stu-id="dd06e-186">Report pages that take longer than 6 minutes to load.</span></span> 
-
-* <span data-ttu-id="dd06e-187">หากรายการเมนู **ส่งออกเป็น PowerPoint** ไม่พร้อมใช้งานใน Power BI service อาจเป็นไปได้ว่าผู้ดูแลระบบ Power BI ของคุณหรือเจ้าของรายงานได้ปิดใช้งานคุณลักษณะนี้</span><span class="sxs-lookup"><span data-stu-id="dd06e-187">If the **Export to PowerPoint** menu item isn't available in the Power BI service, it's likely because your Power BI admin or report owner disabled the feature.</span></span> <span data-ttu-id="dd06e-188">ติดต่อผู้ดูแลระบบของคุณหรือเจ้าของเพื่อสอบถามรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="dd06e-188">Contact your admin or the owner for details.</span></span>
-* <span data-ttu-id="dd06e-189">Power BI service ใช้การตั้งค่าภาษาของ Power BI ของคุณเป็นภาษาสำหรับการส่งออกไปยัง PowerPoint</span><span class="sxs-lookup"><span data-stu-id="dd06e-189">The Power BI service uses your Power BI language setting as the language for the PowerPoint export.</span></span> <span data-ttu-id="dd06e-190">ดูหรือตั้งค่าภาษาในเบราว์เซอร์ของคุณโดยเลือก ![ไอคอนรูปเฟือง](media/end-user-powerpoint/power-bi-settings-icon.png) > **การตั้งค่า** > **ทั่วไป** > **ภาษา**</span><span class="sxs-lookup"><span data-stu-id="dd06e-190">To see or set your language preference, in your browser, select the cog icon ![Cog icon](media/end-user-powerpoint/power-bi-settings-icon.png) > **Settings** > **General** > **Language**.</span></span>
-
+* หากรายการเมนู **ส่งออกเป็น PowerPoint** ไม่พร้อมใช้งานใน Power BI service อาจเป็นไปได้ว่าผู้ดูแลระบบ Power BI ของคุณหรือเจ้าของรายงานได้ปิดใช้งานคุณลักษณะนี้ ติดต่อผู้ดูแลระบบของคุณหรือเจ้าของเพื่อสอบถามรายละเอียด
+* Power BI service ใช้การตั้งค่าภาษาของ Power BI ของคุณเป็นภาษาสำหรับการส่งออกไปยัง PowerPoint ดูหรือตั้งค่าภาษาในเบราว์เซอร์ของคุณโดยเลือก ![ไอคอนรูปเฟือง](media/end-user-powerpoint/power-bi-settings-icon.png) > **การตั้งค่า** > **ทั่วไป** > **ภาษา**
 
 
-## <a name="next-steps"></a><span data-ttu-id="dd06e-191">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="dd06e-191">Next steps</span></span>
-<span data-ttu-id="dd06e-192">[คัดลอกวิชวลเป็นรูปภาพแบบคงที่](../visuals/power-bi-visualization-copy-paste.md)  </span><span class="sxs-lookup"><span data-stu-id="dd06e-192">[Copy visuals as static images](../visuals/power-bi-visualization-copy-paste.md)  </span></span>  
-[<span data-ttu-id="dd06e-193">พิมพ์หน้ารายงาน</span><span class="sxs-lookup"><span data-stu-id="dd06e-193">Print a report</span></span>](end-user-print.md)
+
+## <a name="next-steps"></a>ขั้นตอนถัดไป
+[คัดลอกวิชวลเป็นรูปภาพแบบคงที่](../visuals/power-bi-visualization-copy-paste.md)    
+[พิมพ์หน้ารายงาน](end-user-print.md)

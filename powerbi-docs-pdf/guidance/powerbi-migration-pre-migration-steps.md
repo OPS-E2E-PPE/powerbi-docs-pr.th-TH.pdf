@@ -2,152 +2,152 @@
 title: เตรียมโยกย้ายข้อมูลไปยัง Power BI
 description: คำแนะนำเกี่ยวกับขั้นตอนก่อนการโยกย้ายข้อมูล เมื่อโยกย้ายข้อมูลไปยัง Power BI
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: asaxton
 ms.service: powerbi
 ms.subservice: powerbi
 ms.topic: conceptual
 ms.date: 08/20/2020
-ms.openlocfilehash: 33bee844aced23973bd033cf0d9ae9d8caa4d267
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: 52e82be26643e06fa123f5a4364577dd3272af2b
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96418589"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99087993"
 ---
-# <a name="prepare-to-migrate-to-power-bi"></a><span data-ttu-id="c82f7-103">เตรียมการโยกย้ายข้อมูลไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="c82f7-103">Prepare to migrate to Power BI</span></span>
+# <a name="prepare-to-migrate-to-power-bi"></a>เตรียมการโยกย้ายข้อมูลไปยัง Power BI
 
-<span data-ttu-id="c82f7-104">บทความนี้อธิบายเกี่ยวกับการดำเนินการที่คุณสามารถทำได้ก่อนที่จะโยกย้ายไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="c82f7-104">This article describes actions you can consider prior to migrating to Power BI.</span></span>
+บทความนี้อธิบายเกี่ยวกับการดำเนินการที่คุณสามารถทำได้ก่อนที่จะโยกย้ายไปยัง Power BI
 
 :::image type="content" source="media/powerbi-migration-pre-migration-steps/migrate-to-powerbi-pre-migration-steps.png" alt-text="รูปภาพแสดงขั้นตอนของการโยกย้ายข้อมูล Power BI ในบทความนี้จะเน้นที่ขั้นตอนก่อนการโยกย้ายข้อมูล":::
 
 > [!NOTE]
-> <span data-ttu-id="c82f7-106">คุณสามารถดูคำอธิบายทั้งหมดของกราฟิกด้านบนได้ที่ [ภาพรวมการโยกย้ายข้อมูล Power BI](powerbi-migration-overview.md)</span><span class="sxs-lookup"><span data-stu-id="c82f7-106">For a complete explanation of the above graphic, see [Power BI migration overview](powerbi-migration-overview.md).</span></span>
+> คุณสามารถดูคำอธิบายทั้งหมดของกราฟิกด้านบนได้ที่ [ภาพรวมการโยกย้ายข้อมูล Power BI](powerbi-migration-overview.md)
 
-<span data-ttu-id="c82f7-107">ขั้นตอนก่อนการโยกย้ายข้อมูลนั้นเน้นที่การวางแผนล่วงหน้า ซึ่งเป็นการเตรียมการที่สำคัญก่อนการย้ายด้วยวิธีการโยกย้ายข้อมูลทั้งห้าขั้นตอน</span><span class="sxs-lookup"><span data-stu-id="c82f7-107">The pre-migration steps emphasize up-front planning, which is important preparation before moving through the five migration stages.</span></span> <span data-ttu-id="c82f7-108">ขั้นตอนก่อนการโยกย้ายข้อมูลส่วนใหญ่จะเกิดขึ้นครั้งเดียว แต่สำหรับองค์กรขนาดใหญ่ อาจต้องทำขั้นตอนบางส่วนซ้ำสำหรับแต่ละหน่วยงานธุรกิจหรือพื้นที่แผนก</span><span class="sxs-lookup"><span data-stu-id="c82f7-108">Most of the pre-migration steps will occur once, though for larger organizations some portions may be iterative for each business unit or departmental area.</span></span>
+ขั้นตอนก่อนการโยกย้ายข้อมูลนั้นเน้นที่การวางแผนล่วงหน้า ซึ่งเป็นการเตรียมการที่สำคัญก่อนการย้ายด้วยวิธีการโยกย้ายข้อมูลทั้งห้าขั้นตอน ขั้นตอนก่อนการโยกย้ายข้อมูลส่วนใหญ่จะเกิดขึ้นครั้งเดียว แต่สำหรับองค์กรขนาดใหญ่ อาจต้องทำขั้นตอนบางส่วนซ้ำสำหรับแต่ละหน่วยงานธุรกิจหรือพื้นที่แผนก
 
-<span data-ttu-id="c82f7-109">ข้อมูลที่ส่งออกมาจากขั้นตอนก่อนการโยกย้ายข้อมูลรวมถึงแบบจำลองนโยบายการกำกับดูแล การวางแผนการปรับใช้ระดับสูงเบื้องต้น นอกเหนือจากคลังรายงานและข้อมูลที่จะโยกย้าย</span><span class="sxs-lookup"><span data-stu-id="c82f7-109">The output from the pre-migration steps includes an initial governance model, initial high-level deployment planning, in addition to an inventory of the reports and data to be migrated.</span></span> <span data-ttu-id="c82f7-110">ข้อมูลเพิ่มเติมจากกิจกรรมในขั้นตอนที่ 1, 2 และ 3 เป็นสิ่งที่จำเป็นในการประมาณระดับความพยายามอย่างเต็มที่ในการโยกย้ายโซลูชันแต่ละรายการ</span><span class="sxs-lookup"><span data-stu-id="c82f7-110">Additional information from activities in Stages 1, 2, and 3 will be necessary to fully estimate the level of effort for migrating individual solutions.</span></span>
-
-> [!TIP]
-> <span data-ttu-id="c82f7-111">หัวข้อส่วนใหญ่ที่กล่าวถึงในบทความนี้ยังใช้กับโครงการการใช้งาน Power BI มาตรฐานด้วย</span><span class="sxs-lookup"><span data-stu-id="c82f7-111">Most of the topics discussed in this article also apply to a standard Power BI implementation project.</span></span>
-
-## <a name="create-costbenefit-analysis-and-evaluation"></a><span data-ttu-id="c82f7-112">สร้างการวิเคราะห์และการประเมินต้นทุน/ประโยชน์</span><span class="sxs-lookup"><span data-stu-id="c82f7-112">Create cost/benefit analysis and evaluation</span></span>
-
-<span data-ttu-id="c82f7-113">ข้อควรพิจารณาที่สำคัญหลายประการในระหว่างการประเมินเบื้องต้นรวมถึงการได้รับ:</span><span class="sxs-lookup"><span data-stu-id="c82f7-113">Several top considerations during the initial evaluation include obtaining:</span></span>
-
-- <span data-ttu-id="c82f7-114">ความชัดเจนในเรื่องธุรกิจและกลยุทธ์ BI เพื่อก้าวไปสู่สถานะในอนาคตที่ต้องการ:</span><span class="sxs-lookup"><span data-stu-id="c82f7-114">Clarity on the business case and BI strategy to reach a specific desired future state.</span></span>
-- <span data-ttu-id="c82f7-115">ความชัดเจนเกี่ยวกับความสำเร็จ และวิธีการวัดผลความก้าวหน้าและความสำเร็จของการเริ่มต้นการโยกย้ายข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c82f7-115">Clarity on what success means, and how to measure progress and success for the migration initiative.</span></span>
-- <span data-ttu-id="c82f7-116">ผลลัพธ์การคำนวณการประมาณการต้นทุนและผลตอบแทนต่อการลงทุน (ROI)</span><span class="sxs-lookup"><span data-stu-id="c82f7-116">Cost estimates and return on investment (ROI) calculation results.</span></span>
-- <span data-ttu-id="c82f7-117">ผลลัพธ์ที่ประสบความสำเร็จสำหรับการริเริ่มใช้งาน Power BI ที่มีประสิทธิผลหลาย ๆ ครั้งซึ่งมีขอบเขตและระดับความซับซ้อนที่น้อยกว่า</span><span class="sxs-lookup"><span data-stu-id="c82f7-117">Successful results for several productive Power BI initiatives that are smaller in scope and complexity level.</span></span>
-
-## <a name="identify-stakeholders-and-executive-support"></a><span data-ttu-id="c82f7-118">ระบุผู้ถือผลประโยชน์ร่วมและการสนับสนุนจากผู้บริหาร</span><span class="sxs-lookup"><span data-stu-id="c82f7-118">Identify stakeholders and executive support</span></span>
-
-<span data-ttu-id="c82f7-119">ข้อควรพิจารณาหลายประการในการระบุผู้ถือผลประโยชน์ร่วมประกอบด้วย:</span><span class="sxs-lookup"><span data-stu-id="c82f7-119">Several considerations for identifying stakeholders include:</span></span>
-
-- <span data-ttu-id="c82f7-120">ตรวจสอบความสอดคล้องกับผู้ถือผลประโยชน์ร่วมในกรณีธุรกิจและกลยุทธ์ BI</span><span class="sxs-lookup"><span data-stu-id="c82f7-120">Ensure alignment with stakeholders on the business case and BI strategy.</span></span>
-- <span data-ttu-id="c82f7-121">รวมตัวแทนจากทั่วทั้งหน่วยธุรกิจ—แม้ว่าจะกำหนดให้ทำการโยกย้ายเนื้อหาภายหลังในตารางเวลาก็ตาม—เพื่อทำความเข้าใจแรงจูงใจและความกังวล</span><span class="sxs-lookup"><span data-stu-id="c82f7-121">Include representatives from throughout the business units—even if their content is slated for migration on a later timetable—to understand their motivations and concerns.</span></span>
-- <span data-ttu-id="c82f7-122">เกี่ยวโยงกับผู้สนับสนุน Power BI ในช่วงต้น</span><span class="sxs-lookup"><span data-stu-id="c82f7-122">Involve Power BI champions early.</span></span>
-- <span data-ttu-id="c82f7-123">สร้างและปฏิบัติตามแผนการสื่อสารกับผู้ถือผลประโยชน์ร่วม</span><span class="sxs-lookup"><span data-stu-id="c82f7-123">Create, and follow, a communication plan with stakeholders.</span></span>
+ข้อมูลที่ส่งออกมาจากขั้นตอนก่อนการโยกย้ายข้อมูลรวมถึงแบบจำลองนโยบายการกำกับดูแล การวางแผนการปรับใช้ระดับสูงเบื้องต้น นอกเหนือจากคลังรายงานและข้อมูลที่จะโยกย้าย ข้อมูลเพิ่มเติมจากกิจกรรมในขั้นตอนที่ 1, 2 และ 3 เป็นสิ่งที่จำเป็นในการประมาณระดับความพยายามอย่างเต็มที่ในการโยกย้ายโซลูชันแต่ละรายการ
 
 > [!TIP]
-> <span data-ttu-id="c82f7-124">หากคุณมีความกังวลว่าตนเองกำลังสื่อสารมากเกินไป นั่นคือสิ่งที่ถูกต้องแล้ว</span><span class="sxs-lookup"><span data-stu-id="c82f7-124">If you fear you're starting to overcommunicate, then it's probably just about right.</span></span>
+> หัวข้อส่วนใหญ่ที่กล่าวถึงในบทความนี้ยังใช้กับโครงการการใช้งาน Power BI มาตรฐานด้วย
 
-## <a name="generate-initial-governance-model"></a><span data-ttu-id="c82f7-125">สร้างแบบจำลองนโยบายการกำกับดูแลเบื้องต้น</span><span class="sxs-lookup"><span data-stu-id="c82f7-125">Generate initial governance model</span></span>
+## <a name="create-costbenefit-analysis-and-evaluation"></a>สร้างการวิเคราะห์และการประเมินต้นทุน/ประโยชน์
 
-<span data-ttu-id="c82f7-126">รายการที่สำคัญหลายรายการซึ่งต้องแก้ไขก่อนการใช้งาน Power BI่ ประกอบด้วย:</span><span class="sxs-lookup"><span data-stu-id="c82f7-126">Several key items to address early in a Power BI implementation include:</span></span>
+ข้อควรพิจารณาที่สำคัญหลายประการในระหว่างการประเมินเบื้องต้นรวมถึงการได้รับ:
 
-- <span data-ttu-id="c82f7-127">เป้าหมายเฉพาะสำหรับการใช้งาน Power BI และส่วนที่ Power BI เหมาะกับกลยุทธ์ BI โดยรวมสำหรับองค์กร</span><span class="sxs-lookup"><span data-stu-id="c82f7-127">Specific goals for Power BI adoption and where Power BI fits into the overall BI strategy for the organization.</span></span>
-- <span data-ttu-id="c82f7-128">วิธีการที่จะใช้ในการจัดการบทบาทผู้ดูแลระบบ Power BI โดยเฉพาะในองค์กรแบบกระจายอำนาจ</span><span class="sxs-lookup"><span data-stu-id="c82f7-128">How the Power BI administrator role will be handled, particularly in decentralized organizations.</span></span>
-- <span data-ttu-id="c82f7-129">นโยบายที่เกี่ยวข้องกับการบรรลุผลสำเร็จเกี่ยวกับข้อมูลที่เชื่อถือได้: การใช้แหล่งข้อมูลที่เชื่อถือได้ การแก้ไขปัญหาคุณภาพของข้อมูล และการใช้คำศัพท์ที่สอดคล้องกันและคำจำกัดความทั่วไป</span><span class="sxs-lookup"><span data-stu-id="c82f7-129">Policies related to achieving trusted data: use of authoritative data sources, addressing data quality issues, and use of consistent terminology and common definitions.</span></span>
-- <span data-ttu-id="c82f7-130">กลยุทธ์ความปลอดภัยและสิทธิความเป็นส่วนตัวของข้อมูลสำหรับแหล่งข้อมูล รูปแบบข้อมูล รายงาน และการนำส่งเนื้อหาให้กับผู้ใช้ภายในและผู้ใช้ภายนอก</span><span class="sxs-lookup"><span data-stu-id="c82f7-130">Security and data privacy strategy for data sources, data models, reports, and content delivery to internal and external users.</span></span>
-- <span data-ttu-id="c82f7-131">วิธีการตอบสนองต่อการปฏิบัติตามข้อบังคับภายในและภายนอก กฎระเบียบ และข้อกำหนดการตรวจสอบอย่างถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="c82f7-131">How internal and external compliance, regulatory, and audit requirements will be met.</span></span>
+- ความชัดเจนในเรื่องธุรกิจและกลยุทธ์ BI เพื่อก้าวไปสู่สถานะในอนาคตที่ต้องการ:
+- ความชัดเจนเกี่ยวกับความสำเร็จ และวิธีการวัดผลความก้าวหน้าและความสำเร็จของการเริ่มต้นการโยกย้ายข้อมูล
+- ผลลัพธ์การคำนวณการประมาณการต้นทุนและผลตอบแทนต่อการลงทุน (ROI)
+- ผลลัพธ์ที่ประสบความสำเร็จสำหรับการริเริ่มใช้งาน Power BI ที่มีประสิทธิผลหลาย ๆ ครั้งซึ่งมีขอบเขตและระดับความซับซ้อนที่น้อยกว่า
+
+## <a name="identify-stakeholders-and-executive-support"></a>ระบุผู้ถือผลประโยชน์ร่วมและการสนับสนุนจากผู้บริหาร
+
+ข้อควรพิจารณาหลายประการในการระบุผู้ถือผลประโยชน์ร่วมประกอบด้วย:
+
+- ตรวจสอบความสอดคล้องกับผู้ถือผลประโยชน์ร่วมในกรณีธุรกิจและกลยุทธ์ BI
+- รวมตัวแทนจากทั่วทั้งหน่วยธุรกิจ—แม้ว่าจะกำหนดให้ทำการโยกย้ายเนื้อหาภายหลังในตารางเวลาก็ตาม—เพื่อทำความเข้าใจแรงจูงใจและความกังวล
+- เกี่ยวโยงกับผู้สนับสนุน Power BI ในช่วงต้น
+- สร้างและปฏิบัติตามแผนการสื่อสารกับผู้ถือผลประโยชน์ร่วม
+
+> [!TIP]
+> หากคุณมีความกังวลว่าตนเองกำลังสื่อสารมากเกินไป นั่นคือสิ่งที่ถูกต้องแล้ว
+
+## <a name="generate-initial-governance-model"></a>สร้างแบบจำลองนโยบายการกำกับดูแลเบื้องต้น
+
+รายการที่สำคัญหลายรายการซึ่งต้องแก้ไขก่อนการใช้งาน Power BI่ ประกอบด้วย:
+
+- เป้าหมายเฉพาะสำหรับการใช้งาน Power BI และส่วนที่ Power BI เหมาะกับกลยุทธ์ BI โดยรวมสำหรับองค์กร
+- วิธีการที่จะใช้ในการจัดการบทบาทผู้ดูแลระบบ Power BI โดยเฉพาะในองค์กรแบบกระจายอำนาจ
+- นโยบายที่เกี่ยวข้องกับการบรรลุผลสำเร็จเกี่ยวกับข้อมูลที่เชื่อถือได้: การใช้แหล่งข้อมูลที่เชื่อถือได้ การแก้ไขปัญหาคุณภาพของข้อมูล และการใช้คำศัพท์ที่สอดคล้องกันและคำจำกัดความทั่วไป
+- กลยุทธ์ความปลอดภัยและสิทธิความเป็นส่วนตัวของข้อมูลสำหรับแหล่งข้อมูล รูปแบบข้อมูล รายงาน และการนำส่งเนื้อหาให้กับผู้ใช้ภายในและผู้ใช้ภายนอก
+- วิธีการตอบสนองต่อการปฏิบัติตามข้อบังคับภายในและภายนอก กฎระเบียบ และข้อกำหนดการตรวจสอบอย่างถูกต้อง
 
 > [!IMPORTANT]
-> <span data-ttu-id="c82f7-132">รูปแบบนโยบายการกำกับดูแลที่มีประสิทธิภาพสูงสุด มีจุดประสงค์ที่จะสร้างสมดุลระหว่างการเพิ่มขีดความสามารถของผู้ใช้กับระดับการควบคุมที่จำเป็น</span><span class="sxs-lookup"><span data-stu-id="c82f7-132">The most effective governance model strives to balance user empowerment with the necessary level of control.</span></span> <span data-ttu-id="c82f7-133">ดูข้อมูลเพิ่มเติม อ่านเกี่ยวกับ[วินัยที่แกนกลาง](center-of-excellence-microsoft-business-intelligence-transformation.md#discipline-at-the-core) และ[ความยืดหยุ่นที่ขอบ](center-of-excellence-microsoft-business-intelligence-transformation.md#flexibility-at-the-edge)</span><span class="sxs-lookup"><span data-stu-id="c82f7-133">See more information, read about [discipline at the core](center-of-excellence-microsoft-business-intelligence-transformation.md#discipline-at-the-core) and [flexibility at the edge](center-of-excellence-microsoft-business-intelligence-transformation.md#flexibility-at-the-edge).</span></span>
+> รูปแบบนโยบายการกำกับดูแลที่มีประสิทธิภาพสูงสุด มีจุดประสงค์ที่จะสร้างสมดุลระหว่างการเพิ่มขีดความสามารถของผู้ใช้กับระดับการควบคุมที่จำเป็น ดูข้อมูลเพิ่มเติม อ่านเกี่ยวกับ[วินัยที่แกนกลาง](center-of-excellence-microsoft-business-intelligence-transformation.md#discipline-at-the-core) และ[ความยืดหยุ่นที่ขอบ](center-of-excellence-microsoft-business-intelligence-transformation.md#flexibility-at-the-edge)
 
-## <a name="conduct-initial-deployment-planning"></a><span data-ttu-id="c82f7-134">ดำเนินการวางแผนการปรับใช้เบื้องต้น</span><span class="sxs-lookup"><span data-stu-id="c82f7-134">Conduct initial deployment planning</span></span>
+## <a name="conduct-initial-deployment-planning"></a>ดำเนินการวางแผนการปรับใช้เบื้องต้น
 
-<span data-ttu-id="c82f7-135">การวางแผนการปรับใช้เบื้องต้นเกี่ยวข้องกับการกำหนดมาตรฐาน นโยบาย และการกำหนดลักษณะสำหรับการใช้งาน Power BI ขององค์กร</span><span class="sxs-lookup"><span data-stu-id="c82f7-135">Initial deployment planning involves defining standards, policies, and preferences for the organization's Power BI implementation.</span></span>
+การวางแผนการปรับใช้เบื้องต้นเกี่ยวข้องกับการกำหนดมาตรฐาน นโยบาย และการกำหนดลักษณะสำหรับการใช้งาน Power BI ขององค์กร
 
-<span data-ttu-id="c82f7-136">โปรดทราบว่า[ขั้นตอนที่ 2](powerbi-migration-planning.md) อ้างอิงการวางแผนการปรับใช้ระดับโซลูชัน</span><span class="sxs-lookup"><span data-stu-id="c82f7-136">Note that [Stage 2](powerbi-migration-planning.md) references solution-level deployment planning.</span></span> <span data-ttu-id="c82f7-137">กิจกรรมขั้นที่ 2 ควรเคารพการตัดสินใจระดับองค์กรทุกครั้งที่ทำได้</span><span class="sxs-lookup"><span data-stu-id="c82f7-137">The Stage 2 activities should respect the organizational-level decisions whenever possible.</span></span>
+โปรดทราบว่า[ขั้นตอนที่ 2](powerbi-migration-planning.md) อ้างอิงการวางแผนการปรับใช้ระดับโซลูชัน กิจกรรมขั้นที่ 2 ควรเคารพการตัดสินใจระดับองค์กรทุกครั้งที่ทำได้
 
-<span data-ttu-id="c82f7-138">รายการที่สำคัญบางอย่างซึ่งต้องจัดการในช่วงต้นของการใช้งาน Power BI ประกอบด้วย :</span><span class="sxs-lookup"><span data-stu-id="c82f7-138">Some critical items to address early in a Power BI implementation include:</span></span>
+รายการที่สำคัญบางอย่างซึ่งต้องจัดการในช่วงต้นของการใช้งาน Power BI ประกอบด้วย :
 
-- <span data-ttu-id="c82f7-139">การตัดสินใจเกี่ยวกับ[การตั้งค่าผู้เช่า Power BI](admin-tenant-settings.md) ซึ่งควรจัดทำเป็นเอกสาร</span><span class="sxs-lookup"><span data-stu-id="c82f7-139">[Power BI tenant setting](admin-tenant-settings.md) decisions, which should be documented.</span></span>
-- <span data-ttu-id="c82f7-140">[การจัดการพื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md) การตัดสินใจซึ่งควรจัดทำเป็นเอกสาร</span><span class="sxs-lookup"><span data-stu-id="c82f7-140">[Workspace management](../collaborate-share/service-new-workspaces.md) decisions, which should be documented.</span></span>
-- <span data-ttu-id="c82f7-141">การพิจารณาและการตั้งค่าที่เกี่ยวข้องกับข้อมูลและ[กระบวนการแจกจ่ายเนื้อหา](../collaborate-share/service-how-to-collaborate-distribute-dashboards-reports.md) เช่น แอป พื้นที่การทำงาน การแบ่งปัน การสมัครใช้งาน และการฝังเนื้อหา</span><span class="sxs-lookup"><span data-stu-id="c82f7-141">Considerations and preferences related to data and [content distribution methods](../collaborate-share/service-how-to-collaborate-distribute-dashboards-reports.md), such as apps, workspaces, sharing, subscriptions, and embedding of content.</span></span>
-- <span data-ttu-id="c82f7-142">การกำหนดค่าที่เกี่ยวข้องกับ[โหมดชุดข้อมูล](../connect-data/service-dataset-modes-understand.md) เช่น โหมดการนำเข้า โหมด DirectQuery หรือรวมทั้งสองโหมดใน[การประกอบแบบจำลอง](composite-model-guidance.md)</span><span class="sxs-lookup"><span data-stu-id="c82f7-142">Preferences related to [dataset modes](../connect-data/service-dataset-modes-understand.md), such as use of Import mode, DirectQuery mode, or combining the two modes in a [Composite model](composite-model-guidance.md).</span></span>
-- <span data-ttu-id="c82f7-143">[การรักษาความปลอดภัยข้อมูลและการเข้าถึง](../admin/service-admin-power-bi-security.md)</span><span class="sxs-lookup"><span data-stu-id="c82f7-143">[Securing data and access](../admin/service-admin-power-bi-security.md).</span></span>
-- <span data-ttu-id="c82f7-144">การทำงานกับ[ชุดข้อมูลที่ใช้ร่วมกัน](../connect-data/service-datasets-share.md)สำหรับการนำกลับมาใช้ใหม่</span><span class="sxs-lookup"><span data-stu-id="c82f7-144">Working with [shared datasets](../connect-data/service-datasets-share.md) for reusability.</span></span>
-- <span data-ttu-id="c82f7-145">การใช้[การรับรองความถูกต้องของข้อมูล](../collaborate-share/service-endorsement-overview.md)เพื่อส่งเสริมการใช้ข้อมูลที่เชื่อถือได้และน่าเชื่อถือ</span><span class="sxs-lookup"><span data-stu-id="c82f7-145">Applying [data certification](../collaborate-share/service-endorsement-overview.md) to promote the use of authoritative and trustworthy data.</span></span>
-- <span data-ttu-id="c82f7-146">การใช้[ประเภทของรายงาน](../create-reports/index.yml)ที่แตกต่างกัน รวมทั้ง รายงาน Power BI รายงาน Excel หรือรายงานแบบแบ่งหน้าสำหรับกรณีการใช้งานหรือหน่วยธุรกิจที่แตกต่างกัน</span><span class="sxs-lookup"><span data-stu-id="c82f7-146">Use of different [report types](../create-reports/index.yml), including Power BI reports, Excel reports, or paginated reports for different use cases or business units.</span></span>
-- <span data-ttu-id="c82f7-147">เปลี่ยนแนวทางการจัดการสำหรับการจัดการอาร์ทิแฟกต์ BI แบบรวมศูนย์ และอาร์ทิแฟกต์ BI ที่จัดการทางธุรกิจ</span><span class="sxs-lookup"><span data-stu-id="c82f7-147">Change management approaches for managing centralized BI artifacts and business-managed BI artifacts.</span></span>
-- <span data-ttu-id="c82f7-148">แผนการฝึกอบรมสำหรับผู้บริโภค ผู้สร้างรูปแบบข้อมูล ผู้เขียนรายงาน และผู้ดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="c82f7-148">Training plans for consumers, data modelers, report authors, and administrators.</span></span>
-- <span data-ttu-id="c82f7-149">สนับสนุนผู้เขียนเนื้อหาโดยใช้[เทมเพลต Power BI Desktop](../create-reports/desktop-templates.md) [ภาพแบบกำหนดเอง](https://powerbi.microsoft.com/blog/how-to-govern-power-bi-visuals-inside-your-organization/)และมาตรฐานการออกแบบรายงานที่จัดทำเป็นเอกสาร</span><span class="sxs-lookup"><span data-stu-id="c82f7-149">Support for content authors by using [Power BI Desktop templates](../create-reports/desktop-templates.md), [custom visuals](https://powerbi.microsoft.com/blog/how-to-govern-power-bi-visuals-inside-your-organization/), and documented report design standards.</span></span>
-- <span data-ttu-id="c82f7-150">ขั้นตอนและกระบวนการจัดการความต้องการของผู้ใช้ เช่น การขอใบอนุญาตการใช้งานใหม่ การเพิ่มแหล่งข้อมูลเกตเวย์ใหม่ การได้รับสิทธิ์ในแหล่งข้อมูลเกตเวย์ การขอพื้นที่ทำงานใหม่ การเปลี่ยนแปลงสิทธิ์เกี่ยวกับพื้นที่ทำงาน และข้อกำหนดทั่วไปอื่น ๆ ที่อาจพบได้เป็นประจำ</span><span class="sxs-lookup"><span data-stu-id="c82f7-150">Procedures and processes for managing user requirements, such as requesting new licenses, adding new gateway data sources, gaining permission to gateway data sources, requesting new workspaces, workspace permissions changes, and other common requirements that may be encountered on a regular basis.</span></span>
+- การตัดสินใจเกี่ยวกับ[การตั้งค่าผู้เช่า Power BI](admin-tenant-settings.md) ซึ่งควรจัดทำเป็นเอกสาร
+- [การจัดการพื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md) การตัดสินใจซึ่งควรจัดทำเป็นเอกสาร
+- การพิจารณาและการตั้งค่าที่เกี่ยวข้องกับข้อมูลและ[กระบวนการแจกจ่ายเนื้อหา](../collaborate-share/service-how-to-collaborate-distribute-dashboards-reports.md) เช่น แอป พื้นที่การทำงาน การแบ่งปัน การสมัครใช้งาน และการฝังเนื้อหา
+- การกำหนดค่าที่เกี่ยวข้องกับ[โหมดชุดข้อมูล](../connect-data/service-dataset-modes-understand.md) เช่น โหมดการนำเข้า โหมด DirectQuery หรือรวมทั้งสองโหมดใน[การประกอบแบบจำลอง](composite-model-guidance.md)
+- [การรักษาความปลอดภัยข้อมูลและการเข้าถึง](../admin/service-admin-power-bi-security.md)
+- การทำงานกับ[ชุดข้อมูลที่ใช้ร่วมกัน](../connect-data/service-datasets-share.md)สำหรับการนำกลับมาใช้ใหม่
+- การใช้[การรับรองความถูกต้องของข้อมูล](../collaborate-share/service-endorsement-overview.md)เพื่อส่งเสริมการใช้ข้อมูลที่เชื่อถือได้และน่าเชื่อถือ
+- การใช้[ประเภทของรายงาน](../create-reports/index.yml)ที่แตกต่างกัน รวมทั้ง รายงาน Power BI รายงาน Excel หรือรายงานแบบแบ่งหน้าสำหรับกรณีการใช้งานหรือหน่วยธุรกิจที่แตกต่างกัน
+- เปลี่ยนแนวทางการจัดการสำหรับการจัดการอาร์ทิแฟกต์ BI แบบรวมศูนย์ และอาร์ทิแฟกต์ BI ที่จัดการทางธุรกิจ
+- แผนการฝึกอบรมสำหรับผู้บริโภค ผู้สร้างรูปแบบข้อมูล ผู้เขียนรายงาน และผู้ดูแลระบบ
+- สนับสนุนผู้เขียนเนื้อหาโดยใช้[เทมเพลต Power BI Desktop](../create-reports/desktop-templates.md) [ภาพแบบกำหนดเอง](https://powerbi.microsoft.com/blog/how-to-govern-power-bi-visuals-inside-your-organization/)และมาตรฐานการออกแบบรายงานที่จัดทำเป็นเอกสาร
+- ขั้นตอนและกระบวนการจัดการความต้องการของผู้ใช้ เช่น การขอใบอนุญาตการใช้งานใหม่ การเพิ่มแหล่งข้อมูลเกตเวย์ใหม่ การได้รับสิทธิ์ในแหล่งข้อมูลเกตเวย์ การขอพื้นที่ทำงานใหม่ การเปลี่ยนแปลงสิทธิ์เกี่ยวกับพื้นที่ทำงาน และข้อกำหนดทั่วไปอื่น ๆ ที่อาจพบได้เป็นประจำ
 
 > [!IMPORTANT]
-> <span data-ttu-id="c82f7-151">การวางแผนการปรับใช้งานเป็นกระบวนการที่ต้องดำเนินการซ้ำ</span><span class="sxs-lookup"><span data-stu-id="c82f7-151">Deployment planning is an iterative process.</span></span> <span data-ttu-id="c82f7-152">ซึ่งจะมีการปรับปรุงและเพิ่มการตัดสินใจในการปรับใช้งานอีกหลายครั้ง เนื่องจากประสบการณ์ขององค์กรของคุณกับ Power BI นั้นเพิ่มพูนขึ้น และ Power BI พัฒนาขึ้น</span><span class="sxs-lookup"><span data-stu-id="c82f7-152">Deployment decisions will be refined and augmented many times as your organization's experience with Power BI grows, and as Power BI evolves.</span></span> <span data-ttu-id="c82f7-153">การตัดสินใจในระหว่างกระบวนการนี้จะถูกใช้ในระหว่างการวางแผนการปรับใช้งานระดับโซลูชันที่กล่าวถึงใน[ขั้นตอนที่ 2](powerbi-migration-planning.md)ของกระบวนการโยกย้ายข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c82f7-153">The decisions made during this process will be used during the solution-level deployment planning discussed in [Stage 2](powerbi-migration-planning.md) of the migration process.</span></span>
+> การวางแผนการปรับใช้งานเป็นกระบวนการที่ต้องดำเนินการซ้ำ ซึ่งจะมีการปรับปรุงและเพิ่มการตัดสินใจในการปรับใช้งานอีกหลายครั้ง เนื่องจากประสบการณ์ขององค์กรของคุณกับ Power BI นั้นเพิ่มพูนขึ้น และ Power BI พัฒนาขึ้น การตัดสินใจในระหว่างกระบวนการนี้จะถูกใช้ในระหว่างการวางแผนการปรับใช้งานระดับโซลูชันที่กล่าวถึงใน[ขั้นตอนที่ 2](powerbi-migration-planning.md)ของกระบวนการโยกย้ายข้อมูล
 
-## <a name="establish-initial-architecture"></a><span data-ttu-id="c82f7-154">สร้างสถาปัตยกรรมเบื้องต้น</span><span class="sxs-lookup"><span data-stu-id="c82f7-154">Establish initial architecture</span></span>
+## <a name="establish-initial-architecture"></a>สร้างสถาปัตยกรรมเบื้องต้น
 
-<span data-ttu-id="c82f7-155">[สถาปัตยกรรมโซลูชันของ BI](center-of-excellence-business-intelligence-solution-architecture.md) ของคุณจะพัฒนาและเติบโตขึ้นเมื่อเวลาผ่านไป</span><span class="sxs-lookup"><span data-stu-id="c82f7-155">Your [BI solution architecture](center-of-excellence-business-intelligence-solution-architecture.md) will evolve and mature over time.</span></span> <span data-ttu-id="c82f7-156">งานการตั้งค่า Power BI ที่ต้องจัดการทันทีประกอบด้วย:</span><span class="sxs-lookup"><span data-stu-id="c82f7-156">Power BI setup tasks to handle right away include:</span></span>
+[สถาปัตยกรรมโซลูชันของ BI](center-of-excellence-business-intelligence-solution-architecture.md) ของคุณจะพัฒนาและเติบโตขึ้นเมื่อเวลาผ่านไป งานการตั้งค่า Power BI ที่ต้องจัดการทันทีประกอบด้วย:
 
-- <span data-ttu-id="c82f7-157">การตั้งค่าผู้เช่า Power BI และการรวมเข้ากับ Azure Active Directory:</span><span class="sxs-lookup"><span data-stu-id="c82f7-157">Power BI tenant setup and integration with Azure Active Directory.</span></span>
-- <span data-ttu-id="c82f7-158">กำหนด[ผู้ดูแลระบบ Power BI](../admin/service-admin-role.md)</span><span class="sxs-lookup"><span data-stu-id="c82f7-158">Define [Power BI administrators](../admin/service-admin-role.md).</span></span>
-- <span data-ttu-id="c82f7-159">จัดหาและกำหนด[สิทธิ์การใช้งานของผู้ใช้](../admin/service-admin-licensing-organization.md)เบื้องต้น</span><span class="sxs-lookup"><span data-stu-id="c82f7-159">Procure and assign initial [user licenses](../admin/service-admin-licensing-organization.md).</span></span>
-- <span data-ttu-id="c82f7-160">กำหนดค่าและตรวจสอบ[การตั้งค่าผู้เช่า Power BI](admin-tenant-settings.md)</span><span class="sxs-lookup"><span data-stu-id="c82f7-160">Configure and review [Power BI tenant settings](admin-tenant-settings.md).</span></span>
-- <span data-ttu-id="c82f7-161">ตั้งค่า[บทบาทพื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces) และกำหนดการเข้าถึงกลุ่มความปลอดภัยของ Azure Active Directory และผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="c82f7-161">Setup [workspace roles](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces) and assign access to Azure Active Directory security groups and users.</span></span>
-- <span data-ttu-id="c82f7-162">กำหนดค่ากลุ่มเครื่อง[เกตเวย์ข้อมูล](../connect-data/service-gateway-deployment-guidance.md)เบื้องต้น—ด้วยแผนที่จะอัปเดตอย่างเป็นประจำ</span><span class="sxs-lookup"><span data-stu-id="c82f7-162">Configure an initial [data gateway](../connect-data/service-gateway-deployment-guidance.md) cluster—with a plan to update regularly.</span></span>
-- <span data-ttu-id="c82f7-163">จัดหา[สิทธิ์การใช้งานความจุแบบพรีเมียม](../admin/service-admin-premium-purchase.md)เบื้องต้น (ถ้ามี)</span><span class="sxs-lookup"><span data-stu-id="c82f7-163">Procure initial [Premium capacity license](../admin/service-admin-premium-purchase.md) (if applicable).</span></span>
-- <span data-ttu-id="c82f7-164">กำหนดค่า[ปริมาณการใช้งานความจุพรีเมียม](../admin/service-admin-premium-workloads.md)—ด้วยแผนที่จะจัดการอย่างต่อเนื่อง</span><span class="sxs-lookup"><span data-stu-id="c82f7-164">Configure [Premium capacity workloads](../admin/service-admin-premium-workloads.md)—with a plan to manage on an ongoing basis.</span></span>
+- การตั้งค่าผู้เช่า Power BI และการรวมเข้ากับ Azure Active Directory:
+- กำหนด[ผู้ดูแลระบบ Power BI](../admin/service-admin-role.md)
+- จัดหาและกำหนด[สิทธิ์การใช้งานของผู้ใช้](../admin/service-admin-licensing-organization.md)เบื้องต้น
+- กำหนดค่าและตรวจสอบ[การตั้งค่าผู้เช่า Power BI](admin-tenant-settings.md)
+- ตั้งค่า[บทบาทพื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces) และกำหนดการเข้าถึงกลุ่มความปลอดภัยของ Azure Active Directory และผู้ใช้
+- กำหนดค่ากลุ่มเครื่อง[เกตเวย์ข้อมูล](../connect-data/service-gateway-deployment-guidance.md)เบื้องต้น—ด้วยแผนที่จะอัปเดตอย่างเป็นประจำ
+- จัดหา[สิทธิ์การใช้งานความจุแบบพรีเมียม](../admin/service-admin-premium-purchase.md)เบื้องต้น (ถ้ามี)
+- กำหนดค่า[ปริมาณการใช้งานความจุพรีเมียม](../admin/service-admin-premium-workloads.md)—ด้วยแผนที่จะจัดการอย่างต่อเนื่อง
 
-## <a name="define-success-criteria-for-migration"></a><span data-ttu-id="c82f7-165">กำหนดเกณฑ์ความสำเร็จในการโยกย้าย</span><span class="sxs-lookup"><span data-stu-id="c82f7-165">Define success criteria for migration</span></span>
+## <a name="define-success-criteria-for-migration"></a>กำหนดเกณฑ์ความสำเร็จในการโยกย้าย
 
-<span data-ttu-id="c82f7-166">งานแรกคือการทำความเข้าใจว่าความสำเร็จเป็นอย่างไรสำหรับการโยกย้ายโซลูชันส่วนบุคคล</span><span class="sxs-lookup"><span data-stu-id="c82f7-166">The first task is to understand what success looks like for migrating an individual solution.</span></span> <span data-ttu-id="c82f7-167">คำถามที่คุณอาจถามมีดังนี้:</span><span class="sxs-lookup"><span data-stu-id="c82f7-167">Questions you might ask include:</span></span>
+งานแรกคือการทำความเข้าใจว่าความสำเร็จเป็นอย่างไรสำหรับการโยกย้ายโซลูชันส่วนบุคคล คำถามที่คุณอาจถามมีดังนี้:
 
-- <span data-ttu-id="c82f7-168">**อะไรคือแรงจูงใจและวัตถุประสงค์เฉพาะสำหรับการโยกย้ายข้อมูลครั้งนี้?**</span><span class="sxs-lookup"><span data-stu-id="c82f7-168">**What are the specific motivations and objectives for this migration?**</span></span> <span data-ttu-id="c82f7-169">สำหรับข้อมูลเพิ่มเติม ดู[ภาพรวมการโยกย้ายข้อมูลใน Power BI (พิจารณาสาเหตุการโยกย้าย)](powerbi-migration-overview.md#consider-migration-reasons)</span><span class="sxs-lookup"><span data-stu-id="c82f7-169">For more information, see [Power BI migration overview (Consider migration reasons)](powerbi-migration-overview.md#consider-migration-reasons).</span></span> <span data-ttu-id="c82f7-170">บทความนี้อธิบายถึงสาเหตุที่พบบ่อยที่สุดสำหรับการโยกย้ายข้อมูลไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="c82f7-170">This article describes the most common reasons for migrating to Power BI.</span></span> <span data-ttu-id="c82f7-171">คุณต้องระบุวัตถุประสงค์ของคุณไว้ที่ระดับองค์กรด้วย</span><span class="sxs-lookup"><span data-stu-id="c82f7-171">Certainly, your objectives should be specified at the organizational level.</span></span> <span data-ttu-id="c82f7-172">นอกเหนือจากนั้น การโยกย้ายโซลูชัน BI แบบเดิมอาจได้รับประโยชน์อย่างมากจากการประหยัดต้นทุน ในขณะที่การโยกย้ายโซลูชัน BI แบบเดิมอาจมุ่งเน้นที่การได้รับประโยชน์จากการเพิ่มประสิทธิภาพแบบเวิร์กโฟลว์</span><span class="sxs-lookup"><span data-stu-id="c82f7-172">Beyond that, migrating one legacy BI solution may benefit significantly from cost savings, whereas migrating a different legacy BI solution may focus on gaining workflow optimization benefits.</span></span>
-- <span data-ttu-id="c82f7-173">**ต้นทุน/ประโยชน์หรือ ROI ที่คาดหวังสำหรับการโยกย้ายข้อมูลนี้คืออะไร?**</span><span class="sxs-lookup"><span data-stu-id="c82f7-173">**What's the expected cost/benefit or ROI for this migration?**</span></span> <span data-ttu-id="c82f7-174">การทำความเข้าใจอย่างชัดเจนเกี่ยวกับความคาดหมายที่เกี่ยวข้องกับต้นทุน ความสามารถที่เพิ่มขึ้น ลดความซับซ้อน หรือเพิ่มความคล่องตัวเป็นประโยชน์ในการวัดผลความสำเร็จ</span><span class="sxs-lookup"><span data-stu-id="c82f7-174">Having a clear understanding of expectations related to cost, increased capabilities, decreased complexity, or increased agility, is helpful in measuring success.</span></span> <span data-ttu-id="c82f7-175">ซึ่งสามารถให้หลักการชี้นำเพื่อช่วยในการตัดสินใจในระหว่างกระบวนการโยกย้ายข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c82f7-175">It can provide guiding principles to help with decision-making during the migration process.</span></span>
-- <span data-ttu-id="c82f7-176">**อะไรคือตัวชี้วัดผลงานหลัก (KPI) ที่จะใช้ในการวัดผลความสำเร็จ?**</span><span class="sxs-lookup"><span data-stu-id="c82f7-176">**What key performance indicators (KPIs) will be used to measure success?**</span></span> <span data-ttu-id="c82f7-177">รายการต่อไปนี้จะนำเสนอตัวอย่าง KPI บางส่วน:</span><span class="sxs-lookup"><span data-stu-id="c82f7-177">The following list presents some example KPIs:</span></span>
-    - <span data-ttu-id="c82f7-178">จำนวนรายงานที่แสดงผลจากแพลตฟอร์ม BI เดิมลดลงเดือนต่อเดือน</span><span class="sxs-lookup"><span data-stu-id="c82f7-178">Number of reports rendered from legacy BI platform, decreasing month over month.</span></span>
-    - <span data-ttu-id="c82f7-179">จำนวนรายงานที่แสดงผลจาก Power BI เพิ่มขึ้นเดือนต่อเดือน</span><span class="sxs-lookup"><span data-stu-id="c82f7-179">Number of reports rendered from Power BI, increasing month over month.</span></span>
-    - <span data-ttu-id="c82f7-180">จำนวนรายงานผู้บริโภค Power BI เพิ่มขึ้นทุกไตรมาสต่อไตรมาส</span><span class="sxs-lookup"><span data-stu-id="c82f7-180">Number of Power BI report consumers, increasing quarter over quarter.</span></span>
-    - <span data-ttu-id="c82f7-181">เปอร์เซ็นต์ของรายงานที่โยกย้ายข้อมูลไปยังการผลิตตามวันที่เป้าหมาย</span><span class="sxs-lookup"><span data-stu-id="c82f7-181">Percentage of reports migrated to production by target date.</span></span>
-    - <span data-ttu-id="c82f7-182">การลดต้นทุนค่าใช้จ่ายในการออกใบอนุญาตปีต่อปี</span><span class="sxs-lookup"><span data-stu-id="c82f7-182">Cost reduction in licensing cost year over year.</span></span>
+- **อะไรคือแรงจูงใจและวัตถุประสงค์เฉพาะสำหรับการโยกย้ายข้อมูลครั้งนี้?** สำหรับข้อมูลเพิ่มเติม ดู[ภาพรวมการโยกย้ายข้อมูลใน Power BI (พิจารณาสาเหตุการโยกย้าย)](powerbi-migration-overview.md#consider-migration-reasons) บทความนี้อธิบายถึงสาเหตุที่พบบ่อยที่สุดสำหรับการโยกย้ายข้อมูลไปยัง Power BI คุณต้องระบุวัตถุประสงค์ของคุณไว้ที่ระดับองค์กรด้วย นอกเหนือจากนั้น การโยกย้ายโซลูชัน BI แบบเดิมอาจได้รับประโยชน์อย่างมากจากการประหยัดต้นทุน ในขณะที่การโยกย้ายโซลูชัน BI แบบเดิมอาจมุ่งเน้นที่การได้รับประโยชน์จากการเพิ่มประสิทธิภาพแบบเวิร์กโฟลว์
+- **ต้นทุน/ประโยชน์หรือ ROI ที่คาดหวังสำหรับการโยกย้ายข้อมูลนี้คืออะไร?** การทำความเข้าใจอย่างชัดเจนเกี่ยวกับความคาดหมายที่เกี่ยวข้องกับต้นทุน ความสามารถที่เพิ่มขึ้น ลดความซับซ้อน หรือเพิ่มความคล่องตัวเป็นประโยชน์ในการวัดผลความสำเร็จ ซึ่งสามารถให้หลักการชี้นำเพื่อช่วยในการตัดสินใจในระหว่างกระบวนการโยกย้ายข้อมูล
+- **อะไรคือตัวชี้วัดผลงานหลัก (KPI) ที่จะใช้ในการวัดผลความสำเร็จ?** รายการต่อไปนี้จะนำเสนอตัวอย่าง KPI บางส่วน:
+    - จำนวนรายงานที่แสดงผลจากแพลตฟอร์ม BI เดิมลดลงเดือนต่อเดือน
+    - จำนวนรายงานที่แสดงผลจาก Power BI เพิ่มขึ้นเดือนต่อเดือน
+    - จำนวนรายงานผู้บริโภค Power BI เพิ่มขึ้นทุกไตรมาสต่อไตรมาส
+    - เปอร์เซ็นต์ของรายงานที่โยกย้ายข้อมูลไปยังการผลิตตามวันที่เป้าหมาย
+    - การลดต้นทุนค่าใช้จ่ายในการออกใบอนุญาตปีต่อปี
 
 > [!TIP]
-> <span data-ttu-id="c82f7-183">[การบันทึกกิจกรรม Power BI](../admin/service-admin-auditing.md) สามารถใช้เป็นแหล่งในการวัดความก้าวหน้าของ KPI ได้</span><span class="sxs-lookup"><span data-stu-id="c82f7-183">The [Power BI activity log](../admin/service-admin-auditing.md) can be used as a source for measuring KPI progress.</span></span>
+> [การบันทึกกิจกรรม Power BI](../admin/service-admin-auditing.md) สามารถใช้เป็นแหล่งในการวัดความก้าวหน้าของ KPI ได้
 
-## <a name="prepare-inventory-of-existing-reports"></a><span data-ttu-id="c82f7-184">จัดเตรียมคลังรายงานที่มีอยู่</span><span class="sxs-lookup"><span data-stu-id="c82f7-184">Prepare inventory of existing reports</span></span>
+## <a name="prepare-inventory-of-existing-reports"></a>จัดเตรียมคลังรายงานที่มีอยู่
 
-<span data-ttu-id="c82f7-185">การจัดตรียมคลังรายงานที่มีอยู่ในแพลตฟอร์ม BI เดิมเป็นขั้นตอนสำคัญในการทำความเข้าใจสิ่งที่มีอยู่แล้ว</span><span class="sxs-lookup"><span data-stu-id="c82f7-185">Preparing an inventory of existing reports in the legacy BI platform is a critical step towards understanding what already exists.</span></span> <span data-ttu-id="c82f7-186">ผลลัพธ์ของขั้นตอนนี้เป็นข้อมูลในการประเมินระดับความพยายามในการโยกย้ายข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c82f7-186">The outcome of this step is an input to assessing the migration effort level.</span></span> <span data-ttu-id="c82f7-187">กิจกรรมที่เกี่ยวข้องกับการจัดเตรียมรายการคลังทั้งหมดอาจรวมถึง:</span><span class="sxs-lookup"><span data-stu-id="c82f7-187">Activities related to preparing an inventory may include:</span></span>
+การจัดตรียมคลังรายงานที่มีอยู่ในแพลตฟอร์ม BI เดิมเป็นขั้นตอนสำคัญในการทำความเข้าใจสิ่งที่มีอยู่แล้ว ผลลัพธ์ของขั้นตอนนี้เป็นข้อมูลในการประเมินระดับความพยายามในการโยกย้ายข้อมูล กิจกรรมที่เกี่ยวข้องกับการจัดเตรียมรายการคลังทั้งหมดอาจรวมถึง:
 
-1. <span data-ttu-id="c82f7-188">**คลังรายงาน:** รวบรวมรายการรายงานและแดชบอร์ดที่ผู้สมัครโยกย้าย</span><span class="sxs-lookup"><span data-stu-id="c82f7-188">**Inventory of reports:** Compile a list of reports and dashboards that are migration candidates.</span></span>
-2. <span data-ttu-id="c82f7-189">**คลังแหล่งข้อมูล:** รวบรวมรายชื่อแหล่งข้อมูลทั้งหมดที่เข้าถึงโดยรายงานที่มีอยู่</span><span class="sxs-lookup"><span data-stu-id="c82f7-189">**Inventory of data sources:** Compile a list of all data sources accessed by existing reports.</span></span> <span data-ttu-id="c82f7-190">ซึ่งควรมีทั้งแหล่งข้อมูลขององค์กรตลอดจนแหล่งข้อมูลของแผนกและส่วนบุคคล</span><span class="sxs-lookup"><span data-stu-id="c82f7-190">It should include both enterprise data sources as well as departmental and personal data sources.</span></span> <span data-ttu-id="c82f7-191">กระบวนการนี้อาจค้นพบแหล่งข้อมูลที่แผนกไอทีไม่รู้จักมาก่อน ซึ่งมักเรียกกันว่า _Shadow IT_</span><span class="sxs-lookup"><span data-stu-id="c82f7-191">This process may unearth data sources not previously known to the IT department, often referred to as _shadow IT_.</span></span>
-3. <span data-ttu-id="c82f7-192">**บันทึกการตรวจสอบ:** รับข้อมูลจากบันทึกการตรวจสอบแพลตฟอร์ม BI เดิม เพื่อทำความเข้าใจรูปแบบการใช้งานและช่วยในการจัดลำดับความสำคัญ</span><span class="sxs-lookup"><span data-stu-id="c82f7-192">**Audit log:** Obtain data from the legacy BI platform audit log to understand usage patterns and assist with prioritization.</span></span> <span data-ttu-id="c82f7-193">ข้อมูลสำคัญที่จะได้รับจากบันทึกการตรวจสอบประกอบด้วย:</span><span class="sxs-lookup"><span data-stu-id="c82f7-193">Important information to obtain from the audit log includes:</span></span>
-    - <span data-ttu-id="c82f7-194">จำนวนครั้งโดยเฉลี่ยของแต่ละรายงานที่ปฏิบัติการต่อสัปดาห์/เดือน/ไตรมาส</span><span class="sxs-lookup"><span data-stu-id="c82f7-194">Average number of times each report was executed per week/month/quarter.</span></span>
-    - <span data-ttu-id="c82f7-195">จำนวนรายงานผู้บริโภคเฉลี่ยต่อสัปดาห์/เดือน/ไตรมาส</span><span class="sxs-lookup"><span data-stu-id="c82f7-195">Average number of consumers per report per week/month/quarter.</span></span>
-    - <span data-ttu-id="c82f7-196">รายงานแต่ละรายงานสำหรับผู้บริโภค โดยเฉพาะรายงานที่ใช้โดยผู้บริหาร</span><span class="sxs-lookup"><span data-stu-id="c82f7-196">The consumers for each report, particularly reports used by executives.</span></span>
-    - <span data-ttu-id="c82f7-197">วันที่ล่าสุดแต่ละรายงานถูกปฏิบัติการ</span><span class="sxs-lookup"><span data-stu-id="c82f7-197">Most recent date each report was executed.</span></span>
+1. **คลังรายงาน:** รวบรวมรายการรายงานและแดชบอร์ดที่ผู้สมัครโยกย้าย
+2. **คลังแหล่งข้อมูล:** รวบรวมรายชื่อแหล่งข้อมูลทั้งหมดที่เข้าถึงโดยรายงานที่มีอยู่ ซึ่งควรมีทั้งแหล่งข้อมูลขององค์กรตลอดจนแหล่งข้อมูลของแผนกและส่วนบุคคล กระบวนการนี้อาจค้นพบแหล่งข้อมูลที่แผนกไอทีไม่รู้จักมาก่อน ซึ่งมักเรียกกันว่า _Shadow IT_
+3. **บันทึกการตรวจสอบ:** รับข้อมูลจากบันทึกการตรวจสอบแพลตฟอร์ม BI เดิม เพื่อทำความเข้าใจรูปแบบการใช้งานและช่วยในการจัดลำดับความสำคัญ ข้อมูลสำคัญที่จะได้รับจากบันทึกการตรวจสอบประกอบด้วย:
+    - จำนวนครั้งโดยเฉลี่ยของแต่ละรายงานที่ปฏิบัติการต่อสัปดาห์/เดือน/ไตรมาส
+    - จำนวนรายงานผู้บริโภคเฉลี่ยต่อสัปดาห์/เดือน/ไตรมาส
+    - รายงานแต่ละรายงานสำหรับผู้บริโภค โดยเฉพาะรายงานที่ใช้โดยผู้บริหาร
+    - วันที่ล่าสุดแต่ละรายงานถูกปฏิบัติการ
 
 > [!NOTE]
-> <span data-ttu-id="c82f7-198">ในหลายกรณี เนื้อหาจะยังไม่ถูกโยกย้ายข้อมูลไปยัง Power BI อย่างที่เป็นอยู่</span><span class="sxs-lookup"><span data-stu-id="c82f7-198">In many cases, the content isn't migrated to Power BI exactly as is.</span></span> <span data-ttu-id="c82f7-199">การโยกย้ายข้อมูลเป็นโอกาสในการออกแบบสถาปัตยกรรมข้อมูลใหม่และ/หรือปรับปรุงการนำส่งรายงาน</span><span class="sxs-lookup"><span data-stu-id="c82f7-199">The migration represents an opportunity to redesign the data architecture and/or improve report delivery.</span></span> <span data-ttu-id="c82f7-200">การรวบรวมคลังรายงานเป็นสิ่งสำคัญในการทำความเข้าใจสิ่งที่มีอยู่ในปัจจุบัน เพื่อให้คุณสามารถเริ่มประเมินได้ว่าจะต้องมีการปรับโครงสร้างใดเกิดขึ้น</span><span class="sxs-lookup"><span data-stu-id="c82f7-200">Compiling an inventory of reports is crucial to understanding what currently exists so you can begin to assess what refactoring needs to occur.</span></span> <span data-ttu-id="c82f7-201">บทความที่เหลือในชุดนี้อธิบายถึงการปรับปรุงที่เป็นไปได้ในรายละเอียดเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="c82f7-201">The remaining articles in this series describe possible improvements in more detail.</span></span>
+> ในหลายกรณี เนื้อหาจะยังไม่ถูกโยกย้ายข้อมูลไปยัง Power BI อย่างที่เป็นอยู่ การโยกย้ายข้อมูลเป็นโอกาสในการออกแบบสถาปัตยกรรมข้อมูลใหม่และ/หรือปรับปรุงการนำส่งรายงาน การรวบรวมคลังรายงานเป็นสิ่งสำคัญในการทำความเข้าใจสิ่งที่มีอยู่ในปัจจุบัน เพื่อให้คุณสามารถเริ่มประเมินได้ว่าจะต้องมีการปรับโครงสร้างใดเกิดขึ้น บทความที่เหลือในชุดนี้อธิบายถึงการปรับปรุงที่เป็นไปได้ในรายละเอียดเพิ่มเติม
 
-## <a name="explore-automation-options"></a><span data-ttu-id="c82f7-202">ตรวจค้นตัวเลือกอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="c82f7-202">Explore automation options</span></span>
+## <a name="explore-automation-options"></a>ตรวจค้นตัวเลือกอัตโนมัติ
 
-<span data-ttu-id="c82f7-203">เป็นไปไม่ได้ที่จะทำให้กระบวนการแปลง Power BI เป็นแบบอัตโนมัติแบบ end-to-end โดยสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="c82f7-203">It isn't possible to completely automate a Power BI conversion process end-to-end.</span></span>
+เป็นไปไม่ได้ที่จะทำให้กระบวนการแปลง Power BI เป็นแบบอัตโนมัติแบบ end-to-end โดยสมบูรณ์
 
-<span data-ttu-id="c82f7-204">การรวบรวมคลังข้อมูลและรายงานที่มีอยู่เป็นตัวเลือกที่เป็นไปได้สำหรับระบบอัตโนมัติ เมื่อคุณมีเครื่องมือที่มีอยู่ซึ่งสามารถทำให้คุณได้</span><span class="sxs-lookup"><span data-stu-id="c82f7-204">Compiling the existing inventory of data and reports is a possible candidate for automation when you have an existing tool that can do it for you.</span></span> <span data-ttu-id="c82f7-205">ขอบเขตที่สามารถใช้ระบบอัตโนมัติสำหรับบางส่วนของกระบวนการโยกย้ายข้อมูล—เช่น การรวบรวมรายการคลังที่มีอยู่—ขึ้นอยู่กับเครื่องมือที่คุณมีเป็นอย่างมาก</span><span class="sxs-lookup"><span data-stu-id="c82f7-205">The extent to which automation can be used for some portions of the migration process—such as compiling the existing inventory—highly depends upon the tools you have.</span></span>
+การรวบรวมคลังข้อมูลและรายงานที่มีอยู่เป็นตัวเลือกที่เป็นไปได้สำหรับระบบอัตโนมัติ เมื่อคุณมีเครื่องมือที่มีอยู่ซึ่งสามารถทำให้คุณได้ ขอบเขตที่สามารถใช้ระบบอัตโนมัติสำหรับบางส่วนของกระบวนการโยกย้ายข้อมูล—เช่น การรวบรวมรายการคลังที่มีอยู่—ขึ้นอยู่กับเครื่องมือที่คุณมีเป็นอย่างมาก
 
-## <a name="next-steps"></a><span data-ttu-id="c82f7-206">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="c82f7-206">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="c82f7-207">ใน[บทความถัดไปในชุดการโยกย้ายข้อมูล Power BI นี้](powerbi-migration-requirements.md)จะเรียนรู้เกี่ยวกับขั้นตอนที่ 1 ซึ่งเกี่ยวข้องกับการรวบรวมและจัดลำดับความสำคัญของข้อกำหนดเมื่อโยกย้ายไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="c82f7-207">In the [next article in this Power BI migration series](powerbi-migration-requirements.md), learn about Stage 1, which is concerned with gathering and prioritizing requirements when migrating to Power BI.</span></span>
+ใน[บทความถัดไปในชุดการโยกย้ายข้อมูล Power BI นี้](powerbi-migration-requirements.md)จะเรียนรู้เกี่ยวกับขั้นตอนที่ 1 ซึ่งเกี่ยวข้องกับการรวบรวมและจัดลำดับความสำคัญของข้อกำหนดเมื่อโยกย้ายไปยัง Power BI
 
-<span data-ttu-id="c82f7-208">แหล่งข้อมูลที่เป็นประโยชน์อื่น ๆ:</span><span class="sxs-lookup"><span data-stu-id="c82f7-208">Other helpful resources include:</span></span>
+แหล่งข้อมูลที่เป็นประโยชน์อื่น ๆ:
 
-- [<span data-ttu-id="c82f7-209">การแปลง BI ของ Microsoft</span><span class="sxs-lookup"><span data-stu-id="c82f7-209">Microsoft's BI transformation</span></span>](center-of-excellence-microsoft-business-intelligence-transformation.md)
-- [<span data-ttu-id="c82f7-210">การวางแผนเอกสารทางเทคนิคเกี่ยวกับการปรับใช้ Power BI สำหรับองค์กร</span><span class="sxs-lookup"><span data-stu-id="c82f7-210">Planning a Power BI enterprise deployment whitepaper</span></span>](https://aka.ms/PBIEnterpriseDeploymentWP)
-- <span data-ttu-id="c82f7-211">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c82f7-211">Questions?</span></span> [<span data-ttu-id="c82f7-212">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="c82f7-212">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="c82f7-213">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="c82f7-213">Suggestions?</span></span> [<span data-ttu-id="c82f7-214">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="c82f7-214">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+- [การแปลง BI ของ Microsoft](center-of-excellence-microsoft-business-intelligence-transformation.md)
+- [การวางแผนเอกสารทางเทคนิคเกี่ยวกับการปรับใช้ Power BI สำหรับองค์กร](https://aka.ms/PBIEnterpriseDeploymentWP)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)
 
-<span data-ttu-id="c82f7-215">คู่ค้า Power BI ที่มีประสบการณ์พร้อมที่จะช่วยองค์กรของคุณให้ประสบความสำเร็จด้วยกระบวนการโยกย้ายข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c82f7-215">Experienced Power BI partners are available to help your organization succeed with the migration process.</span></span> <span data-ttu-id="c82f7-216">หากต้องการตรวจสอบรายชื่อของพันธมิตรของ Power BI ไปที่[พอร์ทัลของพันธมิตรของ Power BI](https://powerbi.microsoft.com/partners/)</span><span class="sxs-lookup"><span data-stu-id="c82f7-216">To engage a Power BI partner, visit the [Power BI partner portal](https://powerbi.microsoft.com/partners/).</span></span>
+คู่ค้า Power BI ที่มีประสบการณ์พร้อมที่จะช่วยองค์กรของคุณให้ประสบความสำเร็จด้วยกระบวนการโยกย้ายข้อมูล หากต้องการตรวจสอบรายชื่อของพันธมิตรของ Power BI ไปที่[พอร์ทัลของพันธมิตรของ Power BI](https://powerbi.microsoft.com/partners/)

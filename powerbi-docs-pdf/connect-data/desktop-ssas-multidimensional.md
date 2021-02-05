@@ -9,115 +9,115 @@ ms.subservice: pbi-data-sources
 ms.topic: how-to
 ms.date: 01/15/2020
 LocalizationGroup: Connect to data
-ms.openlocfilehash: 9567c0511a771b9b92de74171dec5fed3110e2d8
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: b3ff42b33ccf2d93217d9d88ada4dfbe45a5436c
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96410907"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99085463"
 ---
-# <a name="connect-to-ssas-multidimensional-models-in-power-bi-desktop"></a><span data-ttu-id="63d74-103">เชื่อมต่อกับแบบจำลองหลายมิติ SSAS ใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="63d74-103">Connect to SSAS multidimensional models in Power BI Desktop</span></span>
+# <a name="connect-to-ssas-multidimensional-models-in-power-bi-desktop"></a>เชื่อมต่อกับแบบจำลองหลายมิติ SSAS ใน Power BI Desktop
 
-<span data-ttu-id="63d74-104">คุณสามารถเข้าถึง *แบบจำลองหลายมิติ SSAS* หรือที่รู้จักกันโดยทั่วไปว่า *SSAS MD* ด้วย Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="63d74-104">With Power BI Desktop, you can access *SSAS multidimensional models*, commonly referred to as *SSAS MD*.</span></span>
+คุณสามารถเข้าถึง *แบบจำลองหลายมิติ SSAS* หรือที่รู้จักกันโดยทั่วไปว่า *SSAS MD* ด้วย Power BI Desktop
 
-<span data-ttu-id="63d74-105">เมื่อต้องการเชื่อมต่อกับฐานข้อมูล SSAS MD ให้เลือก **รับข้อมูล** เลือก **ฐานข้อมูล** > **ฐานข้อมูล SQL Server Analysis Services** จากนั้นเลือก **เชื่อมต่อ**:</span><span class="sxs-lookup"><span data-stu-id="63d74-105">To connect to an SSAS MD database, select **Get Data**, choose **Database** > **SQL Server Analysis Services database**, and then select **Connect**:</span></span>
+เมื่อต้องการเชื่อมต่อกับฐานข้อมูล SSAS MD ให้เลือก **รับข้อมูล** เลือก **ฐานข้อมูล** > **ฐานข้อมูล SQL Server Analysis Services** จากนั้นเลือก **เชื่อมต่อ**:
 
 ![ฐานข้อมูล SQL Server Analysis Services (SSAS), กล่องโต้ตอบรับข้อมูล, Power BI Desktop](media/desktop-ssas-multidimensional/ssas-multidimensional-2.png)
 
-<span data-ttu-id="63d74-107">ทั้งบริการ Power BI และ Power BI Desktop รองรับแบบจำลองหลายมิติ SSAS ในโหมด Live connection</span><span class="sxs-lookup"><span data-stu-id="63d74-107">The Power BI service and Power BI Desktop both support SSAS multidimensional models in live connection mode.</span></span> <span data-ttu-id="63d74-108">คุณสามารถเผยแพร่และอัปโหลดรายงานที่ใช้ **แบบจำลองหลายมิติ SSAS** ในโหมด Live ไปยังบริการ Power BI ได้</span><span class="sxs-lookup"><span data-stu-id="63d74-108">You can publish and upload reports that use **SSAS Multidimensional models** in live mode to the Power BI service.</span></span>
+ทั้งบริการ Power BI และ Power BI Desktop รองรับแบบจำลองหลายมิติ SSAS ในโหมด Live connection คุณสามารถเผยแพร่และอัปโหลดรายงานที่ใช้ **แบบจำลองหลายมิติ SSAS** ในโหมด Live ไปยังบริการ Power BI ได้
 
-## <a name="capabilities-and-features-of-ssas-md"></a><span data-ttu-id="63d74-109">ความสามารถและคุณลักษณะของ SSAS MD</span><span class="sxs-lookup"><span data-stu-id="63d74-109">Capabilities and features of SSAS MD</span></span>
+## <a name="capabilities-and-features-of-ssas-md"></a>ความสามารถและคุณลักษณะของ SSAS MD
 
-<span data-ttu-id="63d74-110">คุณลักษณะและความสามารถของ Power BI และการเชื่อมต่อ SSAS MD จะอธิบายในส่วนต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="63d74-110">The following sections describe features and capabilities of Power BI and SSAS MD connections.</span></span>
+คุณลักษณะและความสามารถของ Power BI และการเชื่อมต่อ SSAS MD จะอธิบายในส่วนต่อไปนี้
 
-### <a name="tabular-metadata-of-multidimensional-models"></a><span data-ttu-id="63d74-111">เมตาดาต้า Tabular ของแบบจำลองหลายมิติ</span><span class="sxs-lookup"><span data-stu-id="63d74-111">Tabular metadata of multidimensional models</span></span>
+### <a name="tabular-metadata-of-multidimensional-models"></a>เมตาดาต้า Tabular ของแบบจำลองหลายมิติ
 
-<span data-ttu-id="63d74-112">ตารางต่อไปนี้แสดงความเกี่ยวข้องกันระหว่างวัตถุหลายมิติและเมตาดาต้า Tabular ที่ส่งกลับมายัง Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="63d74-112">The following table shows the correspondence between multidimensional objects and the tabular metadata that's returned to Power BI Desktop.</span></span> <span data-ttu-id="63d74-113">Power BI จะคิวรีแบบจำลองสำหรับเมตาดาต้า Tabular</span><span class="sxs-lookup"><span data-stu-id="63d74-113">Power BI queries the model for tabular metadata.</span></span> <span data-ttu-id="63d74-114">Power BI Desktop จะเรียกใช้คิวรี DAX ที่เหมาะสมกับ SSAS เมื่อคุณสร้างการแสดงภาพเช่น ตาราง เมตริก แผนภูมิ หรือตัวแบ่งส่วนข้อมูล โดยยึดตามเมตาดาต้าที่ส่งกลับ</span><span class="sxs-lookup"><span data-stu-id="63d74-114">Based on the returned metadata, Power BI Desktop runs appropriate DAX queries against SSAS when you create a visualization (such as a table, matrix, chart, or slicer).</span></span>
+ตารางต่อไปนี้แสดงความเกี่ยวข้องกันระหว่างวัตถุหลายมิติและเมตาดาต้า Tabular ที่ส่งกลับมายัง Power BI Desktop Power BI จะคิวรีแบบจำลองสำหรับเมตาดาต้า Tabular Power BI Desktop จะเรียกใช้คิวรี DAX ที่เหมาะสมกับ SSAS เมื่อคุณสร้างการแสดงภาพเช่น ตาราง เมตริก แผนภูมิ หรือตัวแบ่งส่วนข้อมูล โดยยึดตามเมตาดาต้าที่ส่งกลับ
 
-| <span data-ttu-id="63d74-115">วัตถุ BISM หลายมิติ</span><span class="sxs-lookup"><span data-stu-id="63d74-115">BISM-Multidimentional object</span></span> | <span data-ttu-id="63d74-116">เมตาดาต้า Tabular</span><span class="sxs-lookup"><span data-stu-id="63d74-116">Tabular Metadata</span></span> |
+| วัตถุ BISM หลายมิติ | เมตาดาต้า Tabular |
 | --- | --- |
-| <span data-ttu-id="63d74-117">คิวบ์</span><span class="sxs-lookup"><span data-stu-id="63d74-117">Cube</span></span> |<span data-ttu-id="63d74-118">แบบจำลอง</span><span class="sxs-lookup"><span data-stu-id="63d74-118">Model</span></span> |
-| <span data-ttu-id="63d74-119">มิติคิวบ์</span><span class="sxs-lookup"><span data-stu-id="63d74-119">Cube dimension</span></span> |<span data-ttu-id="63d74-120">ตาราง</span><span class="sxs-lookup"><span data-stu-id="63d74-120">Table</span></span> |
-| <span data-ttu-id="63d74-121">แอตทริบิวต์ของมิติ (หลัก), ชื่อ</span><span class="sxs-lookup"><span data-stu-id="63d74-121">Dimension attributes (keys), name</span></span> |<span data-ttu-id="63d74-122">คอลัมน์</span><span class="sxs-lookup"><span data-stu-id="63d74-122">Columns</span></span> |
-| <span data-ttu-id="63d74-123">กลุ่มหน่วยวัด</span><span class="sxs-lookup"><span data-stu-id="63d74-123">Measure group</span></span> |<span data-ttu-id="63d74-124">ตาราง</span><span class="sxs-lookup"><span data-stu-id="63d74-124">Table</span></span> |
-| <span data-ttu-id="63d74-125">หน่วยวัด</span><span class="sxs-lookup"><span data-stu-id="63d74-125">Measure</span></span> |<span data-ttu-id="63d74-126">หน่วยวัด</span><span class="sxs-lookup"><span data-stu-id="63d74-126">Measure</span></span> |
-| <span data-ttu-id="63d74-127">หน่วยวัดโดยไม่มีกลุ่มหน่วยวัดที่เกี่ยวข้อง</span><span class="sxs-lookup"><span data-stu-id="63d74-127">Measures without associated measure group</span></span> |<span data-ttu-id="63d74-128">ภายในตารางที่เรียกว่า *หน่วยวัด*</span><span class="sxs-lookup"><span data-stu-id="63d74-128">Within table called *Measures*</span></span> |
-| <span data-ttu-id="63d74-129">กลุ่มหน่วยวัด -> ความสัมพันธ์ของมิติคิวบ์</span><span class="sxs-lookup"><span data-stu-id="63d74-129">Measure group -> Cube dimension relationship</span></span> |<span data-ttu-id="63d74-130">ความสัมพันธ์</span><span class="sxs-lookup"><span data-stu-id="63d74-130">Relationship</span></span> |
-| <span data-ttu-id="63d74-131">เปอร์สเปคทีฟ</span><span class="sxs-lookup"><span data-stu-id="63d74-131">Perspective</span></span> |<span data-ttu-id="63d74-132">เปอร์สเปคทีฟ</span><span class="sxs-lookup"><span data-stu-id="63d74-132">Perspective</span></span> |
-| <span data-ttu-id="63d74-133">KPI</span><span class="sxs-lookup"><span data-stu-id="63d74-133">KPI</span></span> |<span data-ttu-id="63d74-134">KPI</span><span class="sxs-lookup"><span data-stu-id="63d74-134">KPI</span></span> |
-| <span data-ttu-id="63d74-135">ลำดับชั้นผู้ใช้/หลัก-รอง</span><span class="sxs-lookup"><span data-stu-id="63d74-135">User/parent-child hierarchies</span></span> |<span data-ttu-id="63d74-136">ลำดับชั้น</span><span class="sxs-lookup"><span data-stu-id="63d74-136">Hierarchies</span></span> |
+| คิวบ์ |แบบจำลอง |
+| มิติคิวบ์ |ตาราง |
+| แอตทริบิวต์ของมิติ (หลัก), ชื่อ |คอลัมน์ |
+| กลุ่มหน่วยวัด |ตาราง |
+| หน่วยวัด |หน่วยวัด |
+| หน่วยวัดโดยไม่มีกลุ่มหน่วยวัดที่เกี่ยวข้อง |ภายในตารางที่เรียกว่า *หน่วยวัด* |
+| กลุ่มหน่วยวัด -> ความสัมพันธ์ของมิติคิวบ์ |ความสัมพันธ์ |
+| เปอร์สเปคทีฟ |เปอร์สเปคทีฟ |
+| KPI |KPI |
+| ลำดับชั้นผู้ใช้/หลัก-รอง |ลำดับชั้น |
 
-### <a name="measures-measure-groups-and-kpis"></a><span data-ttu-id="63d74-137">หน่วยวัด กลุ่มหน่วยวัด และ KPI</span><span class="sxs-lookup"><span data-stu-id="63d74-137">Measures, measure groups, and KPIs</span></span>
+### <a name="measures-measure-groups-and-kpis"></a>หน่วยวัด กลุ่มหน่วยวัด และ KPI
 
-<span data-ttu-id="63d74-138">กลุ่มหน่วยวัดในคิวบ์หลายมิติจะแสดงเป็นตารางที่มีเครื่องหมาย Sigma (∑ ) อยู่ข้าง ๆ ในบานหน้าต่าง **เขตข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="63d74-138">Measure groups in a multidimensional cube are exposed as tables with a sigma (∑) beside them in the **Fields** pane.</span></span> <span data-ttu-id="63d74-139">หน่วยวัดจากการคำนวณโดยไม่มีกลุ่มหน่วยวัดที่เกี่ยวข้องจะได้รับการจัดกลุ่มภายใต้ตารางพิเศษที่เรียกว่า *หน่วยวัด* ในเมตาดาต้า Tabular</span><span class="sxs-lookup"><span data-stu-id="63d74-139">Calculated measures without an associated measure group are grouped under a special table called *Measures* in the tabular metadata.</span></span>
+กลุ่มหน่วยวัดในคิวบ์หลายมิติจะแสดงเป็นตารางที่มีเครื่องหมาย Sigma (∑ ) อยู่ข้าง ๆ ในบานหน้าต่าง **เขตข้อมูล** หน่วยวัดจากการคำนวณโดยไม่มีกลุ่มหน่วยวัดที่เกี่ยวข้องจะได้รับการจัดกลุ่มภายใต้ตารางพิเศษที่เรียกว่า *หน่วยวัด* ในเมตาดาต้า Tabular
 
-<span data-ttu-id="63d74-140">เพื่อช่วยลดความซับซ้อนของแบบจำลองในแบบจำลองหลายมิติ คุณสามารถกำหนดชุดของหน่วยวัดหรือ KPI ในคิวบ์ที่จะอยู่ภายใน *โฟลเดอร์การแสดง*</span><span class="sxs-lookup"><span data-stu-id="63d74-140">To help simplify complex models in a multidimensional model, you can define a set of measures or KPIs in a cube to be located within a *display folder*.</span></span> <span data-ttu-id="63d74-141">Power BI จดจำโฟลเดอร์การแสดงในเมตาดาต้า Tabular และแสดงหน่วยวัดและ KPI ภายในโฟลเดอร์การแสดง</span><span class="sxs-lookup"><span data-stu-id="63d74-141">Power BI recognizes display folders in tabular metadata, and it shows measures and KPIs within the display folders.</span></span> <span data-ttu-id="63d74-142">KPI ในฐานข้อมูลหลายมิติสนับสนุน *ค่า* *เป้าหมาย* *กราฟิกสถานะ* และ *กราฟิกแนวโน้ม*</span><span class="sxs-lookup"><span data-stu-id="63d74-142">KPIs in multidimensional databases support *Value*, *Goal*, *Status Graphic*, and *Trend Graphic*.</span></span>
+เพื่อช่วยลดความซับซ้อนของแบบจำลองในแบบจำลองหลายมิติ คุณสามารถกำหนดชุดของหน่วยวัดหรือ KPI ในคิวบ์ที่จะอยู่ภายใน *โฟลเดอร์การแสดง* Power BI จดจำโฟลเดอร์การแสดงในเมตาดาต้า Tabular และแสดงหน่วยวัดและ KPI ภายในโฟลเดอร์การแสดง KPI ในฐานข้อมูลหลายมิติสนับสนุน *ค่า* *เป้าหมาย* *กราฟิกสถานะ* และ *กราฟิกแนวโน้ม*
 
-### <a name="dimension-attribute-type"></a><span data-ttu-id="63d74-143">ชนิดแอตทริบิวต์มิติ</span><span class="sxs-lookup"><span data-stu-id="63d74-143">Dimension attribute type</span></span>
+### <a name="dimension-attribute-type"></a>ชนิดแอตทริบิวต์มิติ
 
-<span data-ttu-id="63d74-144">แบบจำลองหลายมิติยังสนับสนุนการเชื่อมโยงไปยังแอตทริบิวต์มิติกับแต่ละชนิดของแอตทริบิวต์มิติ</span><span class="sxs-lookup"><span data-stu-id="63d74-144">Multidimensional models also support associating dimension attributes with specific dimension attribute types.</span></span> <span data-ttu-id="63d74-145">ตัวอย่างเช่น มิติ **ภูมิศาสตร์** ที่แอตทริบิวต์มิติของ *เมือง* *รัฐ-จังหวัด* *ประเทศ* และ *รหัสไปรษณีย์* มีชนิดของภูมิศาสตร์ที่เหมาะสมที่เกี่ยวข้องกับ่แอตทริบิวต์มิติที่เปิดเผยในเมตาดาต้า tabular</span><span class="sxs-lookup"><span data-stu-id="63d74-145">For example, a **Geography** dimension where the *City*, *State-Province*, *Country*, and *Postal Code* dimension attributes have appropriate geography types associated with them are exposed in the tabular metadata.</span></span> <span data-ttu-id="63d74-146">Power BI จดจำเมตาดาต้า และทำให้คุณสามารถสร้างการแสดงภาพแผนที่ได้</span><span class="sxs-lookup"><span data-stu-id="63d74-146">Power BI recognizes the metadata, enabling you to create map visualizations.</span></span> <span data-ttu-id="63d74-147">คุณจะสามารถจำความสัมพันธ์เหล่านี้ได้โดยไอคอน *แผนที่* ที่อยู่ถัดจากองค์ประกอบในบานหน้าต่าง **เขตข้อมูล** ใน Power BI</span><span class="sxs-lookup"><span data-stu-id="63d74-147">You'll recognize these associations by the *map* icon next to the element in the **Field** pane in Power BI.</span></span>
+แบบจำลองหลายมิติยังสนับสนุนการเชื่อมโยงไปยังแอตทริบิวต์มิติกับแต่ละชนิดของแอตทริบิวต์มิติ ตัวอย่างเช่น มิติ **ภูมิศาสตร์** ที่แอตทริบิวต์มิติของ *เมือง* *รัฐ-จังหวัด* *ประเทศ* และ *รหัสไปรษณีย์* มีชนิดของภูมิศาสตร์ที่เหมาะสมที่เกี่ยวข้องกับ่แอตทริบิวต์มิติที่เปิดเผยในเมตาดาต้า tabular Power BI จดจำเมตาดาต้า และทำให้คุณสามารถสร้างการแสดงภาพแผนที่ได้ คุณจะสามารถจำความสัมพันธ์เหล่านี้ได้โดยไอคอน *แผนที่* ที่อยู่ถัดจากองค์ประกอบในบานหน้าต่าง **เขตข้อมูล** ใน Power BI
 
-<span data-ttu-id="63d74-148">Power BI ยังสามารถแสดงรูปภาพได้เมื่อคุณใส่เขตข้อมูลที่ประกอบด้วย URL (Uniform Resource Locator) ของรูปภาพ</span><span class="sxs-lookup"><span data-stu-id="63d74-148">Power BI can also render images when you provide a field that contains URLs (uniform resource locators) of the images.</span></span> <span data-ttu-id="63d74-149">คุณอาจระบุเขตข้อมูลเหล่านี้เป็นชนิด *ImageURL* ในเครื่องมือข้อมูล SQL Server (หรือใน Power BI)</span><span class="sxs-lookup"><span data-stu-id="63d74-149">You may specify these fields as *ImageURL* types in SQL Server Data Tools (or then in Power BI).</span></span> <span data-ttu-id="63d74-150">จากนั้นข้อมูลชนิดจะถูกกำหนดให้กับ Power BI ในเมตาดาต้า Tabular</span><span class="sxs-lookup"><span data-stu-id="63d74-150">Its type information is then provided to Power BI in the tabular metadata.</span></span> <span data-ttu-id="63d74-151">นอกจากนี้ Power BI สามารถเรียกใช้รูปภาพเหล่านั้นจาก URL และแสดงภาพเหล่านั้นในวิชวล</span><span class="sxs-lookup"><span data-stu-id="63d74-151">Power BI can then retrieve those images from the URL and display them in visuals.</span></span>
+Power BI ยังสามารถแสดงรูปภาพได้เมื่อคุณใส่เขตข้อมูลที่ประกอบด้วย URL (Uniform Resource Locator) ของรูปภาพ คุณอาจระบุเขตข้อมูลเหล่านี้เป็นชนิด *ImageURL* ในเครื่องมือข้อมูล SQL Server (หรือใน Power BI) จากนั้นข้อมูลชนิดจะถูกกำหนดให้กับ Power BI ในเมตาดาต้า Tabular นอกจากนี้ Power BI สามารถเรียกใช้รูปภาพเหล่านั้นจาก URL และแสดงภาพเหล่านั้นในวิชวล
 
-### <a name="parent-child-hierarchies"></a><span data-ttu-id="63d74-152">ลำดับชั้นหลัก-รอง</span><span class="sxs-lookup"><span data-stu-id="63d74-152">Parent-child hierarchies</span></span>
+### <a name="parent-child-hierarchies"></a>ลำดับชั้นหลัก-รอง
 
-<span data-ttu-id="63d74-153">แบบจำลองหลายมิติสนับสนุนลำดับชั้นหลัก-รอง ซึ่งจะแสดงเป็นแบบ *ลำดับชั้น* ในเมตาดาต้า Tabular</span><span class="sxs-lookup"><span data-stu-id="63d74-153">Multidimensional models support parent-child hierarchies, which are presented as a *hierarchy* in the tabular metadata.</span></span> <span data-ttu-id="63d74-154">แต่ละระดับของลำดับชั้นหลัก-รองจะแสดงเป็นคอลัมน์ที่ซ่อนอยู่ในเมตาดาต้า Tabular</span><span class="sxs-lookup"><span data-stu-id="63d74-154">Each level of the parent-child hierarchy is exposed as a hidden column in the tabular metadata.</span></span> <span data-ttu-id="63d74-155">แอตทริบิวต์หลักของมิติหลัก-รองจะไม่แสดงในเมตาดาต้า Tabular</span><span class="sxs-lookup"><span data-stu-id="63d74-155">The key attribute of the parent-child dimension isn't exposed in the tabular metadata.</span></span>
+แบบจำลองหลายมิติสนับสนุนลำดับชั้นหลัก-รอง ซึ่งจะแสดงเป็นแบบ *ลำดับชั้น* ในเมตาดาต้า Tabular แต่ละระดับของลำดับชั้นหลัก-รองจะแสดงเป็นคอลัมน์ที่ซ่อนอยู่ในเมตาดาต้า Tabular แอตทริบิวต์หลักของมิติหลัก-รองจะไม่แสดงในเมตาดาต้า Tabular
 
-### <a name="dimension-calculated-members"></a><span data-ttu-id="63d74-156">สมาชิกที่คำนวณจากมิติ</span><span class="sxs-lookup"><span data-stu-id="63d74-156">Dimension calculated members</span></span>
+### <a name="dimension-calculated-members"></a>สมาชิกที่คำนวณจากมิติ
 
-<span data-ttu-id="63d74-157">แบบจำลองหลายมิติสนับสนุนการสร้าง *สมาชิกจากการคำนวณ* ชนิดต่าง ๆ</span><span class="sxs-lookup"><span data-stu-id="63d74-157">Multidimensional models support creation of various types of *calculated members*.</span></span> <span data-ttu-id="63d74-158">สองชนิดที่พบบ่อยที่สุดของสมาชิกจากการคำนวณมีดังนี้:</span><span class="sxs-lookup"><span data-stu-id="63d74-158">The two most common types of calculated members are:</span></span>
+แบบจำลองหลายมิติสนับสนุนการสร้าง *สมาชิกจากการคำนวณ* ชนิดต่าง ๆ สองชนิดที่พบบ่อยที่สุดของสมาชิกจากการคำนวณมีดังนี้:
 
-* <span data-ttu-id="63d74-159">สมาชิกจากการคำนวณในลำดับชั้นแอตทริบิวต์ที่ไม่ใช่ข้อมูลที่เกี่ยวข้องของ *ทั้งหมด*</span><span class="sxs-lookup"><span data-stu-id="63d74-159">Calculated members on attribute hierarchies that aren't siblings of *All*</span></span>
-* <span data-ttu-id="63d74-160">สมาชิกจากการคำนวณในลำดับชั้นของผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="63d74-160">Calculated members on user hierarchies</span></span>
+* สมาชิกจากการคำนวณในลำดับชั้นแอตทริบิวต์ที่ไม่ใช่ข้อมูลที่เกี่ยวข้องของ *ทั้งหมด*
+* สมาชิกจากการคำนวณในลำดับชั้นของผู้ใช้
 
-<span data-ttu-id="63d74-161">แบบจำลองหลายมิติแสดง *สมาชิกจากการคำนวณในลำดับชั้นแอตทริบิวต์ที่คำนวณ* เป็นค่าของคอลัมน์</span><span class="sxs-lookup"><span data-stu-id="63d74-161">Multidimensional models expose *calculated members on attribute hierarchies* as values of a column.</span></span> <span data-ttu-id="63d74-162">คุณมีตัวเลือกและข้อจำกัดเพิ่มเติมหากคุณแสดงสมาชิกจากการคำนวณชนิดนี้:</span><span class="sxs-lookup"><span data-stu-id="63d74-162">You have a few additional options and constraints if you expose this type of calculated member:</span></span>
+แบบจำลองหลายมิติแสดง *สมาชิกจากการคำนวณในลำดับชั้นแอตทริบิวต์ที่คำนวณ* เป็นค่าของคอลัมน์ คุณมีตัวเลือกและข้อจำกัดเพิ่มเติมหากคุณแสดงสมาชิกจากการคำนวณชนิดนี้:
 
-* <span data-ttu-id="63d74-163">แอตทริบิวต์ของมิติอาจมี *UnknownMember* เป็นตัวเลือก</span><span class="sxs-lookup"><span data-stu-id="63d74-163">A dimension attribute can have an optional *UnknownMember*.</span></span>
+* แอตทริบิวต์ของมิติอาจมี *UnknownMember* เป็นตัวเลือก
 
-* <span data-ttu-id="63d74-164">แอตทริบิวต์ที่ประกอบด้วยสมาชิกจากการคำนวณไม่สามารถเป็นแอตทริบิวต์หลักของมิติ เว้นแต่เป็นแอตทริบิวต์ของมิติเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="63d74-164">An attribute containing calculated members can't be the key attribute of the dimension unless it's the only attribute of the dimension.</span></span>
+* แอตทริบิวต์ที่ประกอบด้วยสมาชิกจากการคำนวณไม่สามารถเป็นแอตทริบิวต์หลักของมิติ เว้นแต่เป็นแอตทริบิวต์ของมิติเท่านั้น
 
-* <span data-ttu-id="63d74-165">แอตทริบิวต์ที่ประกอบด้วยสมาชิกจากการคำนวณไม่สามารถเป็นแอตทริบิวต์หลัก-รอง</span><span class="sxs-lookup"><span data-stu-id="63d74-165">An attribute containing calculated members can't be a parent-child attribute.</span></span>
+* แอตทริบิวต์ที่ประกอบด้วยสมาชิกจากการคำนวณไม่สามารถเป็นแอตทริบิวต์หลัก-รอง
 
-<span data-ttu-id="63d74-166">สมาชิกจากการคำนวณของลำดับชั้นผู้ใช้จะไม่แสดงใน Power BI</span><span class="sxs-lookup"><span data-stu-id="63d74-166">The calculated members of user hierarchies aren't exposed in Power BI.</span></span> <span data-ttu-id="63d74-167">คุณสามารถเชื่อมต่อกับคิวบ์ที่ประกอบด้วยสมาชิกจากการคำนวณบนลำดับชั้นของผู้ใช้แทน</span><span class="sxs-lookup"><span data-stu-id="63d74-167">You can instead connect to a cube that contains calculated members on user hierarchies.</span></span> <span data-ttu-id="63d74-168">อย่างไรก็ตาม คุณจะไม่สามารถดูสมาชิกจากการคำนวณถ้าพวกเขาไม่ตรงกับข้อจำกัดที่เรากล่าวถึงในรายการหัวข้อย่อยก่อนหน้านี้</span><span class="sxs-lookup"><span data-stu-id="63d74-168">However, you'll be unable to see calculated members if they don't meet the constraints that we mentioned in the previous bulleted list.</span></span>
+สมาชิกจากการคำนวณของลำดับชั้นผู้ใช้จะไม่แสดงใน Power BI คุณสามารถเชื่อมต่อกับคิวบ์ที่ประกอบด้วยสมาชิกจากการคำนวณบนลำดับชั้นของผู้ใช้แทน อย่างไรก็ตาม คุณจะไม่สามารถดูสมาชิกจากการคำนวณถ้าพวกเขาไม่ตรงกับข้อจำกัดที่เรากล่าวถึงในรายการหัวข้อย่อยก่อนหน้านี้
 
-### <a name="security"></a><span data-ttu-id="63d74-169">ความปลอดภัย</span><span class="sxs-lookup"><span data-stu-id="63d74-169">Security</span></span>
+### <a name="security"></a>ความปลอดภัย
 
-<span data-ttu-id="63d74-170">แบบจำลองหลายมิติรองรับการรักษาความปลอดภัยระดับมิติและระดับเซลล์โดยวิธีของ *บทบาท*</span><span class="sxs-lookup"><span data-stu-id="63d74-170">Multidimensional models support dimension and cell level security by way of *roles*.</span></span> <span data-ttu-id="63d74-171">เมื่อคุณเชื่อมต่อไปยังคิวบ์ด้วย Power BI คุณจะได้รับการตรวจสอบสิทธิ์และได้รับการประเมินสิทธิ์ที่เหมาะสม</span><span class="sxs-lookup"><span data-stu-id="63d74-171">When you connect to a cube with Power BI, you're authenticated and evaluated for appropriate permissions.</span></span> <span data-ttu-id="63d74-172">หากผู้ใช้มีการใช้ *การรักษาความปลอดภัยของมิติ* ผู้ใช้ใน Power BI จะมองไม่เห็นสมาชิกของมิติที่เกี่ยวข้อง</span><span class="sxs-lookup"><span data-stu-id="63d74-172">If a user has *dimension security* applied, the respective dimension members aren't seen by the user in Power BI.</span></span> <span data-ttu-id="63d74-173">อย่างไรก็ตาม เมื่อผู้ใช้มีการกำหนดสิทธิ์ *การรักษาความปลอดภัยของเซลล์* จะทำให้เซลล์บางเซลล์ได้รับการจำกัด และผู้ใช้รายนั้นจะไม่สามารถเชื่อมต่อกับคิวบ์โดยใช้ Power BI ได้</span><span class="sxs-lookup"><span data-stu-id="63d74-173">However, when a user has defined a *cell security* permission where certain cells are restricted, that user can't connect to the cube using Power BI.</span></span>
+แบบจำลองหลายมิติรองรับการรักษาความปลอดภัยระดับมิติและระดับเซลล์โดยวิธีของ *บทบาท* เมื่อคุณเชื่อมต่อไปยังคิวบ์ด้วย Power BI คุณจะได้รับการตรวจสอบสิทธิ์และได้รับการประเมินสิทธิ์ที่เหมาะสม หากผู้ใช้มีการใช้ *การรักษาความปลอดภัยของมิติ* ผู้ใช้ใน Power BI จะมองไม่เห็นสมาชิกของมิติที่เกี่ยวข้อง อย่างไรก็ตาม เมื่อผู้ใช้มีการกำหนดสิทธิ์ *การรักษาความปลอดภัยของเซลล์* จะทำให้เซลล์บางเซลล์ได้รับการจำกัด และผู้ใช้รายนั้นจะไม่สามารถเชื่อมต่อกับคิวบ์โดยใช้ Power BI ได้
 
-## <a name="considerations-and-limitations"></a><span data-ttu-id="63d74-174">ข้อควรพิจารณาและข้อจำกัด</span><span class="sxs-lookup"><span data-stu-id="63d74-174">Considerations and limitations</span></span>
+## <a name="considerations-and-limitations"></a>ข้อควรพิจารณาและข้อจำกัด
 
-<span data-ttu-id="63d74-175">มีข้อจำกัดบางอย่างในการใช้ SSAS MD:</span><span class="sxs-lookup"><span data-stu-id="63d74-175">There are certain limitations to using SSAS MD:</span></span>
+มีข้อจำกัดบางอย่างในการใช้ SSAS MD:
 
-* <span data-ttu-id="63d74-176">เฉพาะรุ่น Enterprise และ BI ของ SQL Server 2014 เท่านั้นที่รองรับการเชื่อมต่อแบบสด</span><span class="sxs-lookup"><span data-stu-id="63d74-176">Only enterprise and BI editions of SQL Server 2014 support live connections.</span></span> <span data-ttu-id="63d74-177">สำหรับ SQL Server รุ่นมาตรฐาน จำเป็นต้องใช้ SQL Server 2016 หรือใหม่กว่าสำหรับการเชื่อมต่อแบบสด</span><span class="sxs-lookup"><span data-stu-id="63d74-177">For the standard edition of SQL Server, SQL Server 2016 or later is required for live connections.</span></span>
+* เฉพาะรุ่น Enterprise และ BI ของ SQL Server 2014 เท่านั้นที่รองรับการเชื่อมต่อแบบสด สำหรับ SQL Server รุ่นมาตรฐาน จำเป็นต้องใช้ SQL Server 2016 หรือใหม่กว่าสำหรับการเชื่อมต่อแบบสด
 
-* <span data-ttu-id="63d74-178">*การดำเนินการ* และ *ชุดที่ตั้งชื่อ* จะไม่แสดงใน Power BI</span><span class="sxs-lookup"><span data-stu-id="63d74-178">*Actions* and *named sets* aren't exposed to Power BI.</span></span> <span data-ttu-id="63d74-179">ในการสร้างวิชวลและรายงาน คุณยังสามารถเชื่อมต่อกับคิวบ์ที่ประกอบด้วยการดำเนินการหรือชุดที่ตั้งชื่อ</span><span class="sxs-lookup"><span data-stu-id="63d74-179">To create visuals and reports, you can still connect to cubes that also contain actions or named sets.</span></span>
+* *การดำเนินการ* และ *ชุดที่ตั้งชื่อ* จะไม่แสดงใน Power BI ในการสร้างวิชวลและรายงาน คุณยังสามารถเชื่อมต่อกับคิวบ์ที่ประกอบด้วยการดำเนินการหรือชุดที่ตั้งชื่อ
 
-* <span data-ttu-id="63d74-180">เมื่อ Power BI แสดงเมตาดาต้าสำหรับแบบจำลอง SSAS บางครั้งคุณไม่สามารถดึงข้อมูลจากแบบจำลองได้</span><span class="sxs-lookup"><span data-stu-id="63d74-180">When Power BI displays metadata for an SSAS model, occasionally you can't retrieve data from the model.</span></span> <span data-ttu-id="63d74-181">สถานการณ์นี้อาจเกิดขึ้นหากคุณติดตั้งตัวให้บริการ MSOLAP เวอร์ชัน 32 บิต แต่ไม่ใช่เวอร์ชัน 64 บิต</span><span class="sxs-lookup"><span data-stu-id="63d74-181">This scenario can occur if you've installed the 32-bit version of the MSOLAP provider, but not the 64-bit version.</span></span> <span data-ttu-id="63d74-182">การติดตั้งเวอร์ชัน 64 บิตอาจแก้ปัญหานี้</span><span class="sxs-lookup"><span data-stu-id="63d74-182">Installing the 64-bit version may resolve the issue.</span></span>
+* เมื่อ Power BI แสดงเมตาดาต้าสำหรับแบบจำลอง SSAS บางครั้งคุณไม่สามารถดึงข้อมูลจากแบบจำลองได้ สถานการณ์นี้อาจเกิดขึ้นหากคุณติดตั้งตัวให้บริการ MSOLAP เวอร์ชัน 32 บิต แต่ไม่ใช่เวอร์ชัน 64 บิต การติดตั้งเวอร์ชัน 64 บิตอาจแก้ปัญหานี้
 
-* <span data-ttu-id="63d74-183">คุณไม่สามารถสร้างหน่วยวัด *ระดับรายงาน* ในขณะที่กำลังเขียนรายงาน ซึ่งกำลังเชื่อมต่ออยู่กับแบบจำลองหลายมิติของ SSAS</span><span class="sxs-lookup"><span data-stu-id="63d74-183">You can't create *report level* measures when authoring a report that is connected live to an SSAS multidimensional model.</span></span> <span data-ttu-id="63d74-184">หน่วยวัดเดียวเท่านั้นที่สามารถใช้งานได้คือหน่วยวัดที่ถูกกำหนดไว้ในแบบจำลอง MD</span><span class="sxs-lookup"><span data-stu-id="63d74-184">The only measures that are available are measures defined in the MD model.</span></span>
+* คุณไม่สามารถสร้างหน่วยวัด *ระดับรายงาน* ในขณะที่กำลังเขียนรายงาน ซึ่งกำลังเชื่อมต่ออยู่กับแบบจำลองหลายมิติของ SSAS หน่วยวัดเดียวเท่านั้นที่สามารถใช้งานได้คือหน่วยวัดที่ถูกกำหนดไว้ในแบบจำลอง MD
 
-## <a name="supported-features-of-ssas-md-in-power-bi-desktop"></a><span data-ttu-id="63d74-185">คุณลักษณะที่รองรับของ MD SSAS ใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="63d74-185">Supported features of SSAS MD in Power BI Desktop</span></span>
+## <a name="supported-features-of-ssas-md-in-power-bi-desktop"></a>คุณลักษณะที่รองรับของ MD SSAS ใน Power BI Desktop
 
-<span data-ttu-id="63d74-186">การใช้องค์ประกอบต่อไปนี้ได้รับการรองรับใน SSAS MD รุ่นนี้</span><span class="sxs-lookup"><span data-stu-id="63d74-186">Consumption of the following elements is supported in this release of SSAS MD.</span></span> <span data-ttu-id="63d74-187">สำหรับข้อมูลเพิ่มเติมเกี่ยวกับคุณลักษณะเหล่านี้ ให้ดู [ทำความเข้าใจ Power View สำหรับแบบจำลองหลายมิติ](/sql/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models?view=sql-server-2014)</span><span class="sxs-lookup"><span data-stu-id="63d74-187">For more information about these features, see [Understanding power view for multidimensional models](/sql/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models?view=sql-server-2014).</span></span>
+การใช้องค์ประกอบต่อไปนี้ได้รับการรองรับใน SSAS MD รุ่นนี้ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับคุณลักษณะเหล่านี้ ให้ดู [ทำความเข้าใจ Power View สำหรับแบบจำลองหลายมิติ](/sql/analysis-services/multidimensional-models/understanding-power-view-for-multidimensional-models)
 
-* <span data-ttu-id="63d74-188">สมาชิกเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="63d74-188">Default members</span></span>
-* <span data-ttu-id="63d74-189">แอตทริบิวต์ของมิติ</span><span class="sxs-lookup"><span data-stu-id="63d74-189">Dimension attributes</span></span>
-* <span data-ttu-id="63d74-190">ชนิดแอตทริบิวต์ของมิติ</span><span class="sxs-lookup"><span data-stu-id="63d74-190">Dimension attribute types</span></span>
-* <span data-ttu-id="63d74-191">สมาชิกจากการคำนวณของมิติ ซึ่ง:</span><span class="sxs-lookup"><span data-stu-id="63d74-191">Dimension calculated members, which:</span></span>
-  * <span data-ttu-id="63d74-192">ต้องเป็นสมาชิกจริงรายการเดียวเมื่อมิติมีมากกว่าหนึ่งแอตทริบิวต์</span><span class="sxs-lookup"><span data-stu-id="63d74-192">must be a single real member when the dimension has more than one attribute;</span></span>
-  * <span data-ttu-id="63d74-193">ไม่สามารถเป็นแอตทริบิวต์หลักของมิติ เว้นแต่ว่าจะเป็นแอตทริบิวต์เดียวเท่านั้น และ</span><span class="sxs-lookup"><span data-stu-id="63d74-193">can't be the key attribute of the dimension unless it's the only attribute; and</span></span>
-  * <span data-ttu-id="63d74-194">ไม่สามารถเป็นแอตทริบิวต์หลัก-รองได้</span><span class="sxs-lookup"><span data-stu-id="63d74-194">can't be a parent-child attribute.</span></span>
-* <span data-ttu-id="63d74-195">การรักษาความปลอดภัยมิติ</span><span class="sxs-lookup"><span data-stu-id="63d74-195">Dimension security</span></span>
-* <span data-ttu-id="63d74-196">แสดงโฟลเดอร์</span><span class="sxs-lookup"><span data-stu-id="63d74-196">Display folders</span></span>
-* <span data-ttu-id="63d74-197">ลำดับชั้น</span><span class="sxs-lookup"><span data-stu-id="63d74-197">Hierarchies</span></span>
-* <span data-ttu-id="63d74-198">ImageUrls</span><span class="sxs-lookup"><span data-stu-id="63d74-198">ImageUrls</span></span>
-* <span data-ttu-id="63d74-199">KPI</span><span class="sxs-lookup"><span data-stu-id="63d74-199">KPIs</span></span>
-* <span data-ttu-id="63d74-200">แนวโน้มของ KPI</span><span class="sxs-lookup"><span data-stu-id="63d74-200">KPI trends</span></span>
-* <span data-ttu-id="63d74-201">หน่วยวัด (มีหรือไม่มีกลุ่มหน่วยวัด)</span><span class="sxs-lookup"><span data-stu-id="63d74-201">Measures (with or without measure groups)</span></span>
-* <span data-ttu-id="63d74-202">หน่วยวัดเป็นตัวแปร</span><span class="sxs-lookup"><span data-stu-id="63d74-202">Measures as variant</span></span>
+* สมาชิกเริ่มต้น
+* แอตทริบิวต์ของมิติ
+* ชนิดแอตทริบิวต์ของมิติ
+* สมาชิกจากการคำนวณของมิติ ซึ่ง:
+  * ต้องเป็นสมาชิกจริงรายการเดียวเมื่อมิติมีมากกว่าหนึ่งแอตทริบิวต์
+  * ไม่สามารถเป็นแอตทริบิวต์หลักของมิติ เว้นแต่ว่าจะเป็นแอตทริบิวต์เดียวเท่านั้น และ
+  * ไม่สามารถเป็นแอตทริบิวต์หลัก-รองได้
+* การรักษาความปลอดภัยมิติ
+* แสดงโฟลเดอร์
+* ลำดับชั้น
+* ImageUrls
+* KPI
+* แนวโน้มของ KPI
+* หน่วยวัด (มีหรือไม่มีกลุ่มหน่วยวัด)
+* หน่วยวัดเป็นตัวแปร
 
-## <a name="troubleshooting"></a><span data-ttu-id="63d74-203">การแก้ไขปัญหา</span><span class="sxs-lookup"><span data-stu-id="63d74-203">Troubleshooting</span></span>
+## <a name="troubleshooting"></a>การแก้ไขปัญหา
 
-<span data-ttu-id="63d74-204">รายการต่อไปนี้อธิบายถึงปัญหาที่ทราบแล้วทั้งหมด เมื่อเชื่อมต่อกับ SQL Server Analysis Services (SSAS)</span><span class="sxs-lookup"><span data-stu-id="63d74-204">The following list describes all known issues when connecting to SQL Server Analysis Services (SSAS).</span></span>
+รายการต่อไปนี้อธิบายถึงปัญหาที่ทราบแล้วทั้งหมด เมื่อเชื่อมต่อกับ SQL Server Analysis Services (SSAS)
 
-* <span data-ttu-id="63d74-205">**ข้อผิดพลาด : ไม่สามารถโหลด Schema สำหรับแบบจำลอง** - ข้อผิดพลาดนี้มักจะเกิดขึ้นเมื่อผู้ใช้ที่เชื่อมต่อกับ Analysis Services ไม่สามารถเข้าถึงฐานข้อมูล/คิวบ์ได้</span><span class="sxs-lookup"><span data-stu-id="63d74-205">**Error : Couldn't load model schema** - This error usually occurs when the user connecting to Analysis Services doesn't have access to database/cube.</span></span>
+* **ข้อผิดพลาด : ไม่สามารถโหลด Schema สำหรับแบบจำลอง** - ข้อผิดพลาดนี้มักจะเกิดขึ้นเมื่อผู้ใช้ที่เชื่อมต่อกับ Analysis Services ไม่สามารถเข้าถึงฐานข้อมูล/คิวบ์ได้

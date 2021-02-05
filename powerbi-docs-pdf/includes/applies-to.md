@@ -15,4 +15,4 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 11/25/2020
 ms.locfileid: "96119851"
 ---
-<span data-ttu-id="d473b-103">**นำไปใช้กับ:**</span><span class="sxs-lookup"><span data-stu-id="d473b-103">**APPLIES TO:**</span></span>
+**นำไปใช้กับ:**

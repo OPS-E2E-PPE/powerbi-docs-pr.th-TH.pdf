@@ -12,4 +12,4 @@ ms.lasthandoff: 10/09/2020
 ms.locfileid: "91862935"
 ---
 >[!NOTE]
-><span data-ttu-id="c737d-101">สามารถสร้างและดูวิชวลคำบรรยายอัจฉริยะได้ทั้งใน Power BI Desktop และบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="c737d-101">Smart narrative visuals can be created and viewed in both Power BI Desktop and the Power BI service.</span></span> <span data-ttu-id="c737d-102">ขั้นตอนและภาพในบทความนี้นำมาจาก Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="c737d-102">The steps and illustrations in this article are from Power BI Desktop.</span></span> 
+>สามารถสร้างและดูวิชวลคำบรรยายอัจฉริยะได้ทั้งใน Power BI Desktop และบริการของ Power BI ขั้นตอนและภาพในบทความนี้นำมาจาก Power BI Desktop 

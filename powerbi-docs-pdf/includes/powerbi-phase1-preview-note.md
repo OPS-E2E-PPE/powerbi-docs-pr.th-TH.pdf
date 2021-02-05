@@ -7,7 +7,7 @@ ms.lasthandoff: 05/29/2019
 ms.locfileid: "61062181"
 ---
 >[!NOTE]
-><span data-ttu-id="ca37c-101">นี่คือบันทึกย่อภายในการทดสอบรวม</span><span class="sxs-lookup"><span data-stu-id="ca37c-101">This is a note inside a test include.</span></span>
+>นี่คือบันทึกย่อภายในการทดสอบรวม
 > 
 > 
 

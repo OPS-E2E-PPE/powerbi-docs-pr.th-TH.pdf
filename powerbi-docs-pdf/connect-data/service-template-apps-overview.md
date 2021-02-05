@@ -8,117 +8,122 @@ ms.service: powerbi
 ms.subservice: powerbi-template-apps
 ms.topic: how-to
 ms.date: 12/14/2020
-ms.openlocfilehash: a11ac8edb9abab29f58c3e4eda15ae204d105b26
-ms.sourcegitcommit: 46cf62d9bb33ac7b7eae7910fbba6756f626c65f
+ms.openlocfilehash: f9a3558bd83f9c2e263d69ad37c3e985c2c6199a
+ms.sourcegitcommit: 96080432af4c8e3fe46c23274478ccffa0970efb
 ms.translationtype: HT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97491747"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597584"
 ---
-# <a name="what-are-power-bi-template-apps"></a><span data-ttu-id="a73d2-104">แอปแม่แบบ Power BI คืออะไร</span><span class="sxs-lookup"><span data-stu-id="a73d2-104">What are Power BI template apps?</span></span>
+# <a name="what-are-power-bi-template-apps"></a>แอปแม่แบบ Power BI คืออะไร
 
-<span data-ttu-id="a73d2-105">แอป *แม่แบบ Power BI* ใหม่เปิดให้คู่ค้า Power BI สร้างแอป Power BI ด้วยโค๊ดเพียงเล็กน้อยหรือไม่มีเลย และปรับใช้กับลูกค้า Power BI ทุกท่าน</span><span class="sxs-lookup"><span data-stu-id="a73d2-105">The new Power BI *template apps* enable Power BI partners to build Power BI apps with little or no coding, and deploy them to any Power BI customer.</span></span>  <span data-ttu-id="a73d2-106">บทความนี้คือภาพรวมของโปรแกรมแอปแม่แบบ Power BI</span><span class="sxs-lookup"><span data-stu-id="a73d2-106">This article is an overview of the Power BI template app program.</span></span>
+แอป *แม่แบบ Power BI* ใหม่เปิดให้คู่ค้า Power BI สร้างแอป Power BI ด้วยโค๊ดเพียงเล็กน้อยหรือไม่มีเลย และปรับใช้กับลูกค้า Power BI ทุกท่าน  บทความนี้คือภาพรวมของโปรแกรมแอปแม่แบบ Power BI
 
-<span data-ttu-id="a73d2-107">ในสถานะคู่ค้าของ Power BI คุณสร้างชุดเนื้อหานอกกรอบของลูกค้าของคุณและเผยแพร่ด้วยตัวของคุณเอง</span><span class="sxs-lookup"><span data-stu-id="a73d2-107">As a Power BI partner, you create a set of out-of-the-box content for your customers and publish it yourself.</span></span>  
+ในสถานะคู่ค้าของ Power BI คุณสร้างชุดเนื้อหานอกกรอบของลูกค้าของคุณและเผยแพร่ด้วยตัวของคุณเอง  
 
-<span data-ttu-id="a73d2-108">คุณสร้างแอปแม่แบบที่ช่วยให้ลูกค้าของคุณสามารถเชื่อมต่อและสร้างอินสแตนซ์ภายในบัญชีของตนเอง</span><span class="sxs-lookup"><span data-stu-id="a73d2-108">You build template apps that allow your customers to connect and instantiate within their own accounts.</span></span> <span data-ttu-id="a73d2-109">ในฐานะเป็นผู้เชี่ยวชาญด้านโดเมน พวกเขาสามารถปลดล็อกข้อมูลในลักษณะที่ผู้ใช้งานทางธุรกิจสามารถใช้งานได้อย่างง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="a73d2-109">As domain experts, they can unlock the data in a way that's easy for their business users to consume.</span></span>  
+คุณสร้างแอปแม่แบบที่ช่วยให้ลูกค้าของคุณสามารถเชื่อมต่อและสร้างอินสแตนซ์ภายในบัญชีของตนเอง ในฐานะเป็นผู้เชี่ยวชาญด้านโดเมน พวกเขาสามารถปลดล็อกข้อมูลในลักษณะที่ผู้ใช้งานทางธุรกิจสามารถใช้งานได้อย่างง่ายดาย  
 
-<span data-ttu-id="a73d2-110">คุณส่งแอปเทมเพลตไปยัง Partner Center</span><span class="sxs-lookup"><span data-stu-id="a73d2-110">You submit a template apps to the Partner center.</span></span> <span data-ttu-id="a73d2-111">แอปจะสามารถใช้งานได้อย่างสาธารณะใน [Power BI Apps marketplace](https://app.powerbi.com/getdata/services) และ [Microsoft AppSource](https://appsource.microsoft.com/?product=power-bi).</span><span class="sxs-lookup"><span data-stu-id="a73d2-111">The apps then become publicly available in the [Power BI Apps marketplace](https://app.powerbi.com/getdata/services) and on [Microsoft AppSource](https://appsource.microsoft.com/?product=power-bi).</span></span> <span data-ttu-id="a73d2-112">นี่คือภาพรวมระดับสูงที่ประสบการณ์การสร้างแอปเทมเพลตสาธารณะ</span><span class="sxs-lookup"><span data-stu-id="a73d2-112">Here's a high-level look at the public template app creation experience.</span></span>
+คุณส่งแอปเทมเพลตไปยัง Partner Center แอปจะสามารถใช้งานได้อย่างสาธารณะใน [Power BI Apps marketplace](https://app.powerbi.com/getdata/services) และ [Microsoft AppSource](https://appsource.microsoft.com/?product=power-bi). นี่คือภาพรวมระดับสูงที่ประสบการณ์การสร้างแอปเทมเพลตสาธารณะ
 
-## <a name="power-bi-apps-marketplace"></a><span data-ttu-id="a73d2-113">Power BI Apps marketplace</span><span class="sxs-lookup"><span data-stu-id="a73d2-113">Power BI Apps marketplace</span></span>
+## <a name="power-bi-apps-marketplace"></a>Power BI Apps marketplace
 
-<span data-ttu-id="a73d2-114">Power BI Template Apps อนุญาตให้ Power BI Pro หรือผู้ใช้ Power BI Premium สามารถเข้าถึงรายงานและแดชบอร์ดเชิงลึกที่สามารถเชื่อมต่อกับแหล่งข้อมูลแบบสดๆ ได้</span><span class="sxs-lookup"><span data-stu-id="a73d2-114">Power BI Template Apps allow Power BI Pro or Power BI Premium users to gain immediate insights through prepackaged dashboards and reports that can be connected to live data sources.</span></span> <span data-ttu-id="a73d2-115">Power BI Apps หลายๆ ตัวพร้อมใช้แล้วใน [Power BI Apps marketplace](https://app.powerbi.com/getdata/services).</span><span class="sxs-lookup"><span data-stu-id="a73d2-115">Many Power BI Apps are already available in the [Power BI Apps marketplace](https://app.powerbi.com/getdata/services).</span></span>
+Power BI Template Apps อนุญาตให้ Power BI Pro หรือผู้ใช้ Power BI Premium สามารถเข้าถึงรายงานและแดชบอร์ดเชิงลึกที่สามารถเชื่อมต่อกับแหล่งข้อมูลแบบสดๆ ได้ Power BI Apps หลายๆ ตัวพร้อมใช้แล้วใน [Power BI Apps marketplace](https://app.powerbi.com/getdata/services).
 
 :::row:::
     :::column:::
-        <span data-ttu-id="a73d2-116">[![เว็บแอป Microsoft Project](./media/service-template-apps-overview/project-web.png)](https://app.powerbi.com/groups/me/getapps/services/pbi_msprojectonline.pbi-microsoftprojectwebapp)</span><span class="sxs-lookup"><span data-stu-id="a73d2-116">[![Microsoft Project web app](./media/service-template-apps-overview/project-web.png)](https://app.powerbi.com/groups/me/getapps/services/pbi_msprojectonline.pbi-microsoftprojectwebapp)</span></span>
+        [![เว็บแอป Microsoft Project](./media/service-template-apps-overview/project-web.png)](https://app.powerbi.com/groups/me/getapps/services/pbi_msprojectonline.pbi-microsoftprojectwebapp)
     :::column-end:::
     :::column:::
-        <span data-ttu-id="a73d2-117">[![เว็บแอปการวิเคราะห์ผู้ใช้ Microsoft 365](./media/service-template-apps-overview/microsoft365-usage-analytics.png)](https://app.powerbi.com/groups/me/getapps/services/cia_microsoft365.microsoft-365-usage-analytics)</span><span class="sxs-lookup"><span data-stu-id="a73d2-117">[![Microsoft 365 Usage Analytics web app](./media/service-template-apps-overview/microsoft365-usage-analytics.png)](https://app.powerbi.com/groups/me/getapps/services/cia_microsoft365.microsoft-365-usage-analytics)</span></span>
+        [![เว็บแอปการวิเคราะห์ผู้ใช้ Microsoft 365](./media/service-template-apps-overview/microsoft365-usage-analytics.png)](https://app.powerbi.com/groups/me/getapps/services/cia_microsoft365.microsoft-365-usage-analytics)
     :::column-end:::
     :::column:::
-        <span data-ttu-id="a73d2-118">[![Dynamic 365 Business Central - เว็บแอปยอดขาย](./media/service-template-apps-overview/dynamics-sales.png)](https://app.powerbi.com/groups/me/getapps/services/microsoftdynsmb.businesscentral_sales)</span><span class="sxs-lookup"><span data-stu-id="a73d2-118">[![Dynamic 365 Business Central - Sales web app](./media/service-template-apps-overview/dynamics-sales.png)](https://app.powerbi.com/groups/me/getapps/services/microsoftdynsmb.businesscentral_sales)</span></span>
+        [![Dynamic 365 Business Central - เว็บแอปยอดขาย](./media/service-template-apps-overview/dynamics-sales.png)](https://app.powerbi.com/groups/me/getapps/services/microsoftdynsmb.businesscentral_sales)
     :::column-end:::
     :::column:::
-        <span data-ttu-id="a73d2-119">[![เว็บแอปความพึงพอใจของลูกค้า Microsoft Forms Pro](./media/service-template-apps-overview/forms-pro.png)](https://app.powerbi.com/groups/me/getapps/services/msfp.formsprocustomersatisfaction)</span><span class="sxs-lookup"><span data-stu-id="a73d2-119">[![Microsoft Forms Pro Customer Satisfaction web app](./media/service-template-apps-overview/forms-pro.png)](https://app.powerbi.com/groups/me/getapps/services/msfp.formsprocustomersatisfaction)</span></span>
+        [![เว็บแอปความพึงพอใจของลูกค้า Microsoft Forms Pro](./media/service-template-apps-overview/forms-pro.png)](https://app.powerbi.com/groups/me/getapps/services/msfp.formsprocustomersatisfaction)
     :::column-end:::
 :::row-end:::
 
-## <a name="process"></a><span data-ttu-id="a73d2-120">กระบวนการ</span><span class="sxs-lookup"><span data-stu-id="a73d2-120">Process</span></span>
-<span data-ttu-id="a73d2-121">ขั้นตอนทั่วไปในการพัฒนาและการส่งแอปเทมเพลตที่มีหลายขั้นตอน</span><span class="sxs-lookup"><span data-stu-id="a73d2-121">The general process to develop and submit a template app involves several stages.</span></span> <span data-ttu-id="a73d2-122">ขั้นตอนบางอย่างสามารถรวมกิจกรรมมากกว่าหนึ่งรายการในเวลาเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="a73d2-122">Some stages can include more than one activity at the same time.</span></span>
-
-
-| <span data-ttu-id="a73d2-123">ขั้น</span><span class="sxs-lookup"><span data-stu-id="a73d2-123">Stage</span></span> | <span data-ttu-id="a73d2-124">Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="a73d2-124">Power BI Desktop</span></span> |  |<span data-ttu-id="a73d2-125">บริการ power BI</span><span class="sxs-lookup"><span data-stu-id="a73d2-125">Power BI service</span></span>  |  |<span data-ttu-id="a73d2-126">ศูนย์คู่ค้า</span><span class="sxs-lookup"><span data-stu-id="a73d2-126">Partner Center</span></span>  |
-|---|--------|--|---------|---------|---------|
-| <span data-ttu-id="a73d2-127">**หนึ่ง**</span><span class="sxs-lookup"><span data-stu-id="a73d2-127">**One**</span></span> | <span data-ttu-id="a73d2-128">สร้างแบบจำลองข้อมูลและรายงานในไฟล์ .pbix</span><span class="sxs-lookup"><span data-stu-id="a73d2-128">Build a data model and report in a .pbix file</span></span> |  | <span data-ttu-id="a73d2-129">สร้างพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="a73d2-129">Create a workspace.</span></span> <span data-ttu-id="a73d2-130">นำเข้าไฟล์ .pbix</span><span class="sxs-lookup"><span data-stu-id="a73d2-130">Import .pbix file.</span></span> <span data-ttu-id="a73d2-131">สร้างแดชบอร์ดเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="a73d2-131">Create a complementary dashboard</span></span>  |  | <span data-ttu-id="a73d2-132">ลงทะเบียนเป็นคู่ค้า</span><span class="sxs-lookup"><span data-stu-id="a73d2-132">Register as a partner</span></span> |
-| <span data-ttu-id="a73d2-133">**สอง**</span><span class="sxs-lookup"><span data-stu-id="a73d2-133">**Two**</span></span> |  |  | <span data-ttu-id="a73d2-134">สร้างแพคเกจทดสอบและเรียกใช้การตรวจสอบภายใน</span><span class="sxs-lookup"><span data-stu-id="a73d2-134">Create a test package and run internal validation</span></span>        |  | |
-| <span data-ttu-id="a73d2-135">**สาม**</span><span class="sxs-lookup"><span data-stu-id="a73d2-135">**Three**</span></span> | |  | <span data-ttu-id="a73d2-136">เลื่อนระดับแพคเกจทดสอบเป็นเตรียมการผลิตสำหรับการตรวจสอบนอกผู้เช่า Power BI ของคุณและส่งไปที่ AppSource</span><span class="sxs-lookup"><span data-stu-id="a73d2-136">Promote the test package to preproduction for validation outside your Power BI tenant, and submit it to AppSource</span></span>  |  | <span data-ttu-id="a73d2-137">แพคเกจเตรียมการผลิตของคุณ สร้างแอปแม่แบบ Power BI และเริ่มกระบวนการตรวจสอบ</span><span class="sxs-lookup"><span data-stu-id="a73d2-137">With your preproduction package, create a Power BI template app offer and start the validation process</span></span> |
-| <span data-ttu-id="a73d2-138">**สี่**</span><span class="sxs-lookup"><span data-stu-id="a73d2-138">**Four**</span></span> | |  | <span data-ttu-id="a73d2-139">เลื่อนระดับแพคเกจเตรียมการผลิตไปเป็นการผลิต</span><span class="sxs-lookup"><span data-stu-id="a73d2-139">Promote the preproduction package to production</span></span> |  | <span data-ttu-id="a73d2-140">ถ่ายทอดสด</span><span class="sxs-lookup"><span data-stu-id="a73d2-140">Go live</span></span> |
-
-## <a name="before-you-begin"></a><span data-ttu-id="a73d2-141">ก่อนที่คุณเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="a73d2-141">Before you begin</span></span>
-
-<span data-ttu-id="a73d2-142">สร้างแอปแม่แบบ คุณต้องมีสิทธิ์เข้าถึงเพื่อสร้างแอปแม่แบบ</span><span class="sxs-lookup"><span data-stu-id="a73d2-142">To create the template app, you need permissions to create one.</span></span> <span data-ttu-id="a73d2-143">ดูพอร์ทัลของผู้ดูแลระบบ Power BI การตั้งค่าแอปแม่แบบสำหรับรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="a73d2-143">See the Power BI admin portal, Template app settings for details.</span></span> 
-
-<span data-ttu-id="a73d2-144">การเผยแพร่เป็นแอปเทมเพลตไปยังบริการ Power BI และ AppSource คุณต้องมีคุณสมบัติตามข้อกำหนดสำหรับ[กลายเป็นผู้เผยแพร่ใน Partner Center](/azure/marketplace/become-publisher)</span><span class="sxs-lookup"><span data-stu-id="a73d2-144">To publish a template app to the Power BI service and AppSource, you must meet the requirements for [becoming a Partner Center publisher](/azure/marketplace/become-publisher).</span></span>
- 
-## <a name="high-level-steps"></a><span data-ttu-id="a73d2-145">ขั้นตอนระดับสูง</span><span class="sxs-lookup"><span data-stu-id="a73d2-145">High-level steps</span></span>
-
-<span data-ttu-id="a73d2-146">นี่คือขั้นตอนระดับสูง</span><span class="sxs-lookup"><span data-stu-id="a73d2-146">Here are the high-level steps.</span></span> 
-
-1. <span data-ttu-id="a73d2-147">[ตรวจสอบข้อกำหนดต่างๆ](#requirements) เพื่อให้แน่ใจว่าคุณได้ปฎิบัติตามข้อกำหนดเหล่านั้น</span><span class="sxs-lookup"><span data-stu-id="a73d2-147">[Review the requirements](#requirements) to make sure you meet them.</span></span> 
-
-2. <span data-ttu-id="a73d2-148">สร้างรายงานใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="a73d2-148">Build a report in Power BI Desktop.</span></span> <span data-ttu-id="a73d2-149">ใช้พารามิเตอร์เพื่อให้คุณสามารถบันทึกเป็นไฟล์ที่บุคคลอื่นสามารถใช้ได้</span><span class="sxs-lookup"><span data-stu-id="a73d2-149">Use parameters so you can save it as a file other people can use.</span></span> 
-
-3. <span data-ttu-id="a73d2-150">สร้างพื้นที่ทำงานสำหรับแอปแม่แบบของคุณในผู้เช่าของคุณบนบริการ Power BI (app.powerbi.com)</span><span class="sxs-lookup"><span data-stu-id="a73d2-150">Create a workspace for your template app in your tenant on the Power BI service (app.powerbi.com).</span></span> 
-
-4. <span data-ttu-id="a73d2-151">นำเข้าไฟล์.pbix และเพิ่มเนื้อหาเช่นแดชบอร์ดลงในแอปของคุณ</span><span class="sxs-lookup"><span data-stu-id="a73d2-151">Import your .pbix file and add content such as a dashboard to your app.</span></span> 
-
-5. <span data-ttu-id="a73d2-152">สร้างแพคเกจทดสอบเพื่อทดสอบแอปแม่แบบด้วยตนเองภายในองค์กรของคุณ</span><span class="sxs-lookup"><span data-stu-id="a73d2-152">Create a test package to test the template app yourself within your organization.</span></span> 
-
-6. <span data-ttu-id="a73d2-153">เลื่อนระดับแอปทดสอบเป็นก่อนเตรียมการผลิตเพื่อส่งแอปสำหรับการตรวจสอบความถูกต้องใน AppSource และเพื่อทำการทดสอบภายนอกผู้เช่าของคุณเอง</span><span class="sxs-lookup"><span data-stu-id="a73d2-153">Promote the test app to pre-production to submit the app for validation in AppSource, and to test outside your own tenant.</span></span> 
-
-7. <span data-ttu-id="a73d2-154">ส่งเนื้อหาไปที่ [Partner Center](/azure/marketplace/partner-center-portal/create-power-bi-app-offer) เพื่อทำการเผยแพร่</span><span class="sxs-lookup"><span data-stu-id="a73d2-154">Submit the content to [Partner center](/azure/marketplace/partner-center-portal/create-power-bi-app-offer) for publishing.</span></span> 
-
-8. <span data-ttu-id="a73d2-155">ทำให้ข้อเสนอของคุณไปยัง 'ถ่ายทอดสด' ใน AppSource และย้ายแอปของคุณไปยังการผลิตใน Power BI</span><span class="sxs-lookup"><span data-stu-id="a73d2-155">Make your offer go 'Live' in AppSource, and move your app to production in Power BI.</span></span>
-
-9. <span data-ttu-id="a73d2-156">ตอนนี้ คุณสามารถเริ่มพัฒนาเวอร์ชันถัดไปในพื้นที่ทำงานที่มีอยู่ของคุณ ในการเตรียมการผลิต</span><span class="sxs-lookup"><span data-stu-id="a73d2-156">Now you can start developing the next version in the same workspace, in preproduction.</span></span> 
-
-## <a name="requirements"></a><span data-ttu-id="a73d2-157">ข้อกำหนด</span><span class="sxs-lookup"><span data-stu-id="a73d2-157">Requirements</span></span>
-
-<span data-ttu-id="a73d2-158">สร้างแอปแม่แบบ คุณต้องมีสิทธิ์เข้าถึงเพื่อสร้างแอปแม่แบบ</span><span class="sxs-lookup"><span data-stu-id="a73d2-158">To create the template app, you need permissions to create one.</span></span> <span data-ttu-id="a73d2-159">ดู[พอร์ทัลของผู้ดูแลระบบ Power BI การตั้งค่าแอปแม่แบบ](../admin/service-admin-portal.md#template-apps-settings)สำหรับรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="a73d2-159">See the Power BI [admin portal, Template app settings](../admin/service-admin-portal.md#template-apps-settings) for details.</span></span>
-
-<span data-ttu-id="a73d2-160">การเผยแพร่เป็นแอปเทมเพลตไปยังบริการ Power BI และ AppSource คุณต้องมีคุณสมบัติตามข้อกำหนดสำหรับ[กลายเป็นผู้เผยแพร่ใน Partner Center](/azure/marketplace/become-publisher)</span><span class="sxs-lookup"><span data-stu-id="a73d2-160">To publish a template app to the Power BI service and AppSource, you must meet the requirements for [becoming a Partner Center publisher](/azure/marketplace/become-publisher).</span></span>
  > [!NOTE] 
- > <span data-ttu-id="a73d2-161">การส่งแอปแม่แบบจะได้รับการจัดการใน [Partner Center](/azure/marketplace/partner-center-portal/create-power-bi-app-offer)</span><span class="sxs-lookup"><span data-stu-id="a73d2-161">Template apps submissions are managed in [Partner Center](/azure/marketplace/partner-center-portal/create-power-bi-app-offer).</span></span> <span data-ttu-id="a73d2-162">ใช้บัญชีที่ลงทะเบียนเดียวกันในศูนย์นักพัฒนา Microsoft เพื่อลงชื่อเข้าใช้</span><span class="sxs-lookup"><span data-stu-id="a73d2-162">Use the same Microsoft Developer Center registration account to sign in.</span></span> <span data-ttu-id="a73d2-163">คุณควรมีบัญชี Microsoft บัญชีเดียวเท่านั้นสำหรับข้อเสนอ AppSource ของคุณ</span><span class="sxs-lookup"><span data-stu-id="a73d2-163">You should have only one Microsoft account for your AppSource offerings.</span></span> <span data-ttu-id="a73d2-164">ไม่ควรมีบัญชีเฉพาะกับแต่ละบริการหรือข้อเสนอ</span><span class="sxs-lookup"><span data-stu-id="a73d2-164">Accounts shouldn't be specific to individual services or offers.</span></span>
+ > แอป Marketplace ไม่สามารถใช้ได้กับอินสแตนซ์ระบบคลาวด์ของรัฐบาลสหรัฐอเมริกา ดูที่ [Power BI สำหรับลูกค้าภาครัฐของประเทศสหรัฐอเมริกา](../admin/service-govus-overview.md)สำหรับรายละเอียดเพิ่มเติม
 
-## <a name="tips"></a><span data-ttu-id="a73d2-165">เคล็ดลับ</span><span class="sxs-lookup"><span data-stu-id="a73d2-165">Tips</span></span> 
 
-- <span data-ttu-id="a73d2-166">ตรวจสอบให้แน่ใจว่า แอปของคุณรวมถึงข้อมูลตัวอย่างสามารถเริ่มต้นใช้งานในการคลิกเดียว</span><span class="sxs-lookup"><span data-stu-id="a73d2-166">Make sure your app includes sample data to get everyone started in a click.</span></span> 
-- <span data-ttu-id="a73d2-167">ตรวจสอบแอปพลิเคชันของคุณอย่างรอบครอบโดยการติดตั้งในผู้เช่าของคุณและผู้เช่าสำรอง</span><span class="sxs-lookup"><span data-stu-id="a73d2-167">Carefully examine your application by installing it in your tenant and in a secondary tenant.</span></span> <span data-ttu-id="a73d2-168">ตรวจสอบให้แน่ใจว่าลูกค้าได้ดูสิ่งที่คุณต้องการดูเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="a73d2-168">Make sure customers only see what you want them to see.</span></span> 
-- <span data-ttu-id="a73d2-169">ใช้ AppSource เป็นร้านค้าออนไลน์ของคุณในการโฮสต์แอปพลิเคชันของคุณ</span><span class="sxs-lookup"><span data-stu-id="a73d2-169">Use AppSource as your online store to host your application.</span></span> <span data-ttu-id="a73d2-170">ด้วยวิธีนี้ทุกคนสามารถใช้ Power BI ค้นหาแอปของคุณได้</span><span class="sxs-lookup"><span data-stu-id="a73d2-170">This way everyone using Power BI can find your app.</span></span> 
-- <span data-ttu-id="a73d2-171">พิจารณาเสนอชุดเนื้อหามากกว่าหนึ่งชุด สำหรับสถานการณ์ที่แตกต่างกัน</span><span class="sxs-lookup"><span data-stu-id="a73d2-171">Consider offering more than one template app for separate unique scenarios.</span></span> 
-- <span data-ttu-id="a73d2-172">เปิดใช้งานการกำหนดค่าข้อมูล ตัวอย่าง สนับสนุนการเชื่อมต่อแบบกำหนดเองและการกำหนดค่าพารามิเตอร์ ด้วยตัวติดตั้ง</span><span class="sxs-lookup"><span data-stu-id="a73d2-172">Enable data customization; for example, support custom connection and parameters configuration by the installer.</span></span>
-- <span data-ttu-id="a73d2-173">หากคุณเป็น ISV และกําลังกระจายแอปของคุณผ่านบริการเว็บของคุณ ให้พิจารณาการกําหนดค่าพารามิเตอร์อัตโนมัติระหว่างการติดตั้ง เพื่อทําให้สิ่งต่าง ๆ ง่ายขึ้นสําหรับลูกค้าของคุณและเพิ่มโอกาสในการติดตั้งที่ประสบความสําเร็จ</span><span class="sxs-lookup"><span data-stu-id="a73d2-173">If you are an ISV and are distributing your app through your web service, consider automating parameter configuration during installation to make things easier for your customers and to increase the likelihood of a successful installation.</span></span> <span data-ttu-id="a73d2-174">ดูรายละเอียดที่[การกำหนดค่าอัตโนมัติของการติดตั้งแอปเทมเพลต](../developer/template-apps/template-apps-auto-install.md)</span><span class="sxs-lookup"><span data-stu-id="a73d2-174">See [Automated configuration of a template app installation](../developer/template-apps/template-apps-auto-install.md) for details.</span></span>
+## <a name="process"></a>กระบวนการ
 
-<span data-ttu-id="a73d2-175">ดู[เคล็ดลับสำหรับการเขียนแอปแม่แบบใน Power BI](service-template-apps-tips.md) สำหรับคำแนะนำเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="a73d2-175">See [Tips for authoring template apps in Power BI](service-template-apps-tips.md) for more suggestions.</span></span>
+ขั้นตอนทั่วไปในการพัฒนาและการส่งแอปเทมเพลตที่มีหลายขั้นตอน ขั้นตอนบางอย่างสามารถรวมกิจกรรมมากกว่าหนึ่งรายการในเวลาเดียวกัน
 
-## <a name="known-limitations"></a><span data-ttu-id="a73d2-176">ข้อจำกัดที่ทราบ</span><span class="sxs-lookup"><span data-stu-id="a73d2-176">Known limitations</span></span>
 
-| <span data-ttu-id="a73d2-177">ลักษณะการทำงาน</span><span class="sxs-lookup"><span data-stu-id="a73d2-177">Feature</span></span> | <span data-ttu-id="a73d2-178">ข้อจำกัดที่ทราบ</span><span class="sxs-lookup"><span data-stu-id="a73d2-178">Known Limitation</span></span> |
+| ขั้น | Power BI Desktop |  |บริการ power BI  |  |ศูนย์คู่ค้า  |
+|---|--------|--|---------|---------|---------|
+| **หนึ่ง** | สร้างแบบจำลองข้อมูลและรายงานในไฟล์ .pbix |  | สร้างพื้นที่ทำงาน นำเข้าไฟล์ .pbix สร้างแดชบอร์ดเพิ่มเติม  |  | ลงทะเบียนเป็นคู่ค้า |
+| **สอง** |  |  | สร้างแพคเกจทดสอบและเรียกใช้การตรวจสอบภายใน        |  | |
+| **สาม** | |  | เลื่อนระดับแพคเกจทดสอบเป็นเตรียมการผลิตสำหรับการตรวจสอบนอกผู้เช่า Power BI ของคุณและส่งไปที่ AppSource  |  | แพคเกจเตรียมการผลิตของคุณ สร้างแอปแม่แบบ Power BI และเริ่มกระบวนการตรวจสอบ |
+| **สี่** | |  | เลื่อนระดับแพคเกจเตรียมการผลิตไปเป็นการผลิต |  | ถ่ายทอดสด |
+
+## <a name="before-you-begin"></a>ก่อนที่คุณเริ่มต้น
+
+สร้างแอปแม่แบบ คุณต้องมีสิทธิ์เข้าถึงเพื่อสร้างแอปแม่แบบ ดูพอร์ทัลของผู้ดูแลระบบ Power BI การตั้งค่าแอปแม่แบบสำหรับรายละเอียด 
+
+การเผยแพร่เป็นแอปเทมเพลตไปยังบริการ Power BI และ AppSource คุณต้องมีคุณสมบัติตามข้อกำหนดสำหรับ[กลายเป็นผู้เผยแพร่ใน Partner Center](/azure/marketplace/become-publisher)
+ 
+## <a name="high-level-steps"></a>ขั้นตอนระดับสูง
+
+นี่คือขั้นตอนระดับสูง 
+
+1. [ตรวจสอบข้อกำหนดต่างๆ](#requirements) เพื่อให้แน่ใจว่าคุณได้ปฎิบัติตามข้อกำหนดเหล่านั้น 
+
+2. สร้างรายงานใน Power BI Desktop ใช้พารามิเตอร์เพื่อให้คุณสามารถบันทึกเป็นไฟล์ที่บุคคลอื่นสามารถใช้ได้ 
+
+3. สร้างพื้นที่ทำงานสำหรับแอปแม่แบบของคุณในผู้เช่าของคุณบนบริการ Power BI (app.powerbi.com) 
+
+4. นำเข้าไฟล์.pbix และเพิ่มเนื้อหาเช่นแดชบอร์ดลงในแอปของคุณ 
+
+5. สร้างแพคเกจทดสอบเพื่อทดสอบแอปแม่แบบด้วยตนเองภายในองค์กรของคุณ 
+
+6. เลื่อนระดับแอปทดสอบเป็นก่อนเตรียมการผลิตเพื่อส่งแอปสำหรับการตรวจสอบความถูกต้องใน AppSource และเพื่อทำการทดสอบภายนอกผู้เช่าของคุณเอง 
+
+7. ส่งเนื้อหาไปที่ [Partner Center](/azure/marketplace/partner-center-portal/create-power-bi-app-offer) เพื่อทำการเผยแพร่ 
+
+8. ทำให้ข้อเสนอของคุณไปยัง 'ถ่ายทอดสด' ใน AppSource และย้ายแอปของคุณไปยังการผลิตใน Power BI
+
+9. ตอนนี้ คุณสามารถเริ่มพัฒนาเวอร์ชันถัดไปในพื้นที่ทำงานที่มีอยู่ของคุณ ในการเตรียมการผลิต 
+
+## <a name="requirements"></a>ข้อกำหนด
+
+สร้างแอปแม่แบบ คุณต้องมีสิทธิ์เข้าถึงเพื่อสร้างแอปแม่แบบ ดู[พอร์ทัลของผู้ดูแลระบบ Power BI การตั้งค่าแอปแม่แบบ](../admin/service-admin-portal.md#template-apps-settings)สำหรับรายละเอียด
+
+การเผยแพร่เป็นแอปเทมเพลตไปยังบริการ Power BI และ AppSource คุณต้องมีคุณสมบัติตามข้อกำหนดสำหรับ[กลายเป็นผู้เผยแพร่ใน Partner Center](/azure/marketplace/become-publisher)
+ > [!NOTE] 
+ > การส่งแอปแม่แบบจะได้รับการจัดการใน [Partner Center](/azure/marketplace/partner-center-portal/create-power-bi-app-offer) ใช้บัญชีที่ลงทะเบียนเดียวกันในศูนย์นักพัฒนา Microsoft เพื่อลงชื่อเข้าใช้ คุณควรมีบัญชี Microsoft บัญชีเดียวเท่านั้นสำหรับข้อเสนอ AppSource ของคุณ ไม่ควรมีบัญชีเฉพาะกับแต่ละบริการหรือข้อเสนอ
+
+## <a name="tips"></a>เคล็ดลับ 
+
+- ตรวจสอบให้แน่ใจว่า แอปของคุณรวมถึงข้อมูลตัวอย่างสามารถเริ่มต้นใช้งานในการคลิกเดียว 
+- ตรวจสอบแอปพลิเคชันของคุณอย่างรอบครอบโดยการติดตั้งในผู้เช่าของคุณและผู้เช่าสำรอง ตรวจสอบให้แน่ใจว่าลูกค้าได้ดูสิ่งที่คุณต้องการดูเท่านั้น 
+- ใช้ AppSource เป็นร้านค้าออนไลน์ของคุณในการโฮสต์แอปพลิเคชันของคุณ ด้วยวิธีนี้ทุกคนสามารถใช้ Power BI ค้นหาแอปของคุณได้ 
+- พิจารณาเสนอชุดเนื้อหามากกว่าหนึ่งชุด สำหรับสถานการณ์ที่แตกต่างกัน 
+- เปิดใช้งานการกำหนดค่าข้อมูล ตัวอย่าง สนับสนุนการเชื่อมต่อแบบกำหนดเองและการกำหนดค่าพารามิเตอร์ ด้วยตัวติดตั้ง
+- หากคุณเป็น ISV และกําลังกระจายแอปของคุณผ่านบริการเว็บของคุณ ให้พิจารณาการกําหนดค่าพารามิเตอร์อัตโนมัติระหว่างการติดตั้ง เพื่อทําให้สิ่งต่าง ๆ ง่ายขึ้นสําหรับลูกค้าของคุณและเพิ่มโอกาสในการติดตั้งที่ประสบความสําเร็จ ดูรายละเอียดที่[การกำหนดค่าอัตโนมัติของการติดตั้งแอปเทมเพลต](../developer/template-apps/template-apps-auto-install.md)
+
+ดู[เคล็ดลับสำหรับการเขียนแอปแม่แบบใน Power BI](service-template-apps-tips.md) สำหรับคำแนะนำเพิ่มเติม
+
+## <a name="known-limitations"></a>ข้อจำกัดที่ทราบ
+
+| ลักษณะการทำงาน | ข้อจำกัดที่ทราบ |
 |---------|---------|
-|<span data-ttu-id="a73d2-179">เนื้อหา:  ชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a73d2-179">Contents:  Datasets</span></span>   | <span data-ttu-id="a73d2-180">ควรมีชุดข้อมูลหนึ่งชุด</span><span class="sxs-lookup"><span data-stu-id="a73d2-180">Exactly one dataset should be present.</span></span> <span data-ttu-id="a73d2-181">อนุญาตเฉพาะชุดข้อมูลที่สร้างขึ้นใน Power BI Desktop (ไฟล์.pbix)</span><span class="sxs-lookup"><span data-stu-id="a73d2-181">Only datasets built in Power BI Desktop (.pbix files) are allowed.</span></span> <br><span data-ttu-id="a73d2-182">ไม่ได้รับการสนับสนุน ชุดข้อมูลจากอื่น ๆ แอปแม่แบบ ชุดข้อมูลพื้นที่ทำงานข้าม รายงานแบบแบ่งหน้า (ไฟล์.rdl) เวิร์กบุ๊ก Excel</span><span class="sxs-lookup"><span data-stu-id="a73d2-182">Not supported: Datasets from other template apps, cross-workspace datasets, paginated reports (.rdl files), Excel workbooks</span></span> |
-|<span data-ttu-id="a73d2-183">เนื้อหา: แดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="a73d2-183">Contents: Dashboards</span></span> | <span data-ttu-id="a73d2-184">ไม่อนุญาตให้ใช้ไทล์แบบเรียลไทม์ (หรืออีกนัยหนึ่งก็คือ ไม่มีการสนับสนุนสำหรับพุชหรือชุดข้อมูลการสตรีม)</span><span class="sxs-lookup"><span data-stu-id="a73d2-184">Real-time tiles aren't allowed (in other words, no support for push or streaming datasets)</span></span> |
-|<span data-ttu-id="a73d2-185">เนื้อหา: กระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a73d2-185">Contents: Dataflows</span></span> | <span data-ttu-id="a73d2-186">ไม่ได้รับการสนับสนุน กระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a73d2-186">Not supported: Dataflows</span></span> |
-|<span data-ttu-id="a73d2-187">เนื้อหาจากไฟล์</span><span class="sxs-lookup"><span data-stu-id="a73d2-187">Contents from files</span></span> | <span data-ttu-id="a73d2-188">สนับสนุนเฉพาะไฟล์ .pbix</span><span class="sxs-lookup"><span data-stu-id="a73d2-188">Only PBIX files are allowed.</span></span> <br><span data-ttu-id="a73d2-189">ไม่ได้รับการสนับสนุน: แฟ้ม.rdl (รายงานแบบแบ่งหน้า) เวิร์กบุ๊ก Excel</span><span class="sxs-lookup"><span data-stu-id="a73d2-189">Not supported: .rdl files (paginated reports), Excel workbooks</span></span>   |
-| <span data-ttu-id="a73d2-190">แหล่งข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a73d2-190">Data sources</span></span> | <span data-ttu-id="a73d2-191">แหล่งข้อมูลที่สนับสนุนสำหรับระบบคลาวด์ที่ทำกำหนดการรีเฟรชข้อมูลแล้ว</span><span class="sxs-lookup"><span data-stu-id="a73d2-191">Data sources supported for cloud Scheduled Data refresh are allowed.</span></span> <br><span data-ttu-id="a73d2-192">ไม่ได้รับการสนับสนุน</span><span class="sxs-lookup"><span data-stu-id="a73d2-192">Not supported:</span></span> <li><span data-ttu-id="a73d2-193">เชื่อมต่อแบบสด (AS Azure ไม่มี)</span><span class="sxs-lookup"><span data-stu-id="a73d2-193">Live connections (no Azure AS)</span></span></li> <li><span data-ttu-id="a73d2-194">แหล่งข้อมูล (เกตเวย์ส่วนบุคคลและองค์กรไม่ได้รับการสนับสนุน) ในองค์กร</span><span class="sxs-lookup"><span data-stu-id="a73d2-194">On-premises data sources (personal and enterprise gateways aren't supported)</span></span></li> <li><span data-ttu-id="a73d2-195">แบบเรียลไทม์ (ไม่มีการสนับสนุนสำหรับชุดข้อมูลแบบพุช)</span><span class="sxs-lookup"><span data-stu-id="a73d2-195">Real time (no support for push dataset)</span></span></li> <li><span data-ttu-id="a73d2-196">โมเดลแบบรวม</span><span class="sxs-lookup"><span data-stu-id="a73d2-196">Composite models</span></span></li></ul> |
-| <span data-ttu-id="a73d2-197">ชุดข้อมูล: พื้นที่ทำงานข้าม</span><span class="sxs-lookup"><span data-stu-id="a73d2-197">Dataset: cross-workspace</span></span> | <span data-ttu-id="a73d2-198">ชุดข้อมูลพื้นที่ทำงานข้ามไม่ได้รับอนุญาต</span><span class="sxs-lookup"><span data-stu-id="a73d2-198">No cross-workspace datasets are allowed</span></span>  |
-| <span data-ttu-id="a73d2-199">พารามิเตอร์คำถาม</span><span class="sxs-lookup"><span data-stu-id="a73d2-199">Query parameters</span></span> | <span data-ttu-id="a73d2-200">ไม่ได้รับการสนับสนุน พารามิเตอร์ประเภท "Any" "Date" หรือ "Binary" บล็อกการดำเนินการรีเฟรชสำหรับชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a73d2-200">Not supported: Parameters of type "Any", "Date" or "Binary" type block refresh operation for dataset</span></span> |
-| <span data-ttu-id="a73d2-201">วิชวล Power BI</span><span class="sxs-lookup"><span data-stu-id="a73d2-201">Power BI visuals</span></span> | <span data-ttu-id="a73d2-202">สนับสนุนเฉพาะวิชวล Power BI ที่พร้อมใช้งานแบบสาธารณะ</span><span class="sxs-lookup"><span data-stu-id="a73d2-202">Only publicly available Power BI visuals are supported.</span></span> <span data-ttu-id="a73d2-203">ไม่สนับสนุน[วิชวล Power BI ขององค์กร](../developer/visuals/power-bi-custom-visuals-organization.md)</span><span class="sxs-lookup"><span data-stu-id="a73d2-203">[Organizational Power BI visuals](../developer/visuals/power-bi-custom-visuals-organization.md) not supported</span></span> |
-| <span data-ttu-id="a73d2-204">บริการคลาวด์สาธารณะ</span><span class="sxs-lookup"><span data-stu-id="a73d2-204">Sovereign clouds</span></span> | <span data-ttu-id="a73d2-205">แอปเทมเพลตไม่สามารถใช้งานได้ในบริการคลาวด์สาธารณะ</span><span class="sxs-lookup"><span data-stu-id="a73d2-205">Template apps are not available in sovereign clouds</span></span> |
+|เนื้อหา:  ชุดข้อมูล   | ควรมีชุดข้อมูลหนึ่งชุด อนุญาตเฉพาะชุดข้อมูลที่สร้างขึ้นใน Power BI Desktop (ไฟล์.pbix) <br>ไม่ได้รับการสนับสนุน ชุดข้อมูลจากอื่น ๆ แอปแม่แบบ ชุดข้อมูลพื้นที่ทำงานข้าม รายงานแบบแบ่งหน้า (ไฟล์.rdl) เวิร์กบุ๊ก Excel |
+|เนื้อหา: แดชบอร์ด | ไม่อนุญาตให้ใช้ไทล์แบบเรียลไทม์ (หรืออีกนัยหนึ่งก็คือ ไม่มีการสนับสนุนสำหรับพุชหรือชุดข้อมูลการสตรีม) |
+|เนื้อหา: กระแสข้อมูล | ไม่ได้รับการสนับสนุน กระแสข้อมูล |
+|เนื้อหาจากไฟล์ | สนับสนุนเฉพาะไฟล์ .pbix <br>ไม่ได้รับการสนับสนุน: แฟ้ม.rdl (รายงานแบบแบ่งหน้า) เวิร์กบุ๊ก Excel   |
+| แหล่งข้อมูล | แหล่งข้อมูลที่สนับสนุนสำหรับระบบคลาวด์ที่ทำกำหนดการรีเฟรชข้อมูลแล้ว <br>ไม่ได้รับการสนับสนุน <li>เชื่อมต่อแบบสด (AS Azure ไม่มี)</li> <li>แหล่งข้อมูล (เกตเวย์ส่วนบุคคลและองค์กรไม่ได้รับการสนับสนุน) ในองค์กร</li> <li>แบบเรียลไทม์ (ไม่มีการสนับสนุนสำหรับชุดข้อมูลแบบพุช)</li> <li>โมเดลแบบรวม</li></ul> |
+| ชุดข้อมูล: พื้นที่ทำงานข้าม | ชุดข้อมูลพื้นที่ทำงานข้ามไม่ได้รับอนุญาต  |
+| พารามิเตอร์คำถาม | ไม่ได้รับการสนับสนุน พารามิเตอร์ประเภท "Any" "Date" หรือ "Binary" บล็อกการดำเนินการรีเฟรชสำหรับชุดข้อมูล |
+| วิชวล Power BI | สนับสนุนเฉพาะวิชวล Power BI ที่พร้อมใช้งานแบบสาธารณะ ไม่สนับสนุน[วิชวล Power BI ขององค์กร](../developer/visuals/power-bi-custom-visuals-organization.md) |
+| บริการคลาวด์สาธารณะ | แอปเทมเพลตไม่สามารถใช้งานได้ในบริการคลาวด์สาธารณะ |
 
-## <a name="support"></a><span data-ttu-id="a73d2-206">การสนับสนุน</span><span class="sxs-lookup"><span data-stu-id="a73d2-206">Support</span></span>
-<span data-ttu-id="a73d2-207">สำหรับการสนับสนุนในระหว่างการพัฒนา กรุณาใช้ [https://powerbi.microsoft.com/support](https://powerbi.microsoft.com/support)</span><span class="sxs-lookup"><span data-stu-id="a73d2-207">For support during development, use [https://powerbi.microsoft.com/support](https://powerbi.microsoft.com/support).</span></span> <span data-ttu-id="a73d2-208">เรากำลังตรวจสอบและจัดการไซต์นี้</span><span class="sxs-lookup"><span data-stu-id="a73d2-208">We actively monitor and manage this site.</span></span> <span data-ttu-id="a73d2-209">ปัญหาของลูกค้าจะไปถึงทีมงานที่เกี่ยวข้องได้อย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="a73d2-209">Customer incidents quickly find their way to the appropriate team.</span></span>
+## <a name="support"></a>การสนับสนุน
+สำหรับการสนับสนุนในระหว่างการพัฒนา กรุณาใช้ [https://powerbi.microsoft.com/support](https://powerbi.microsoft.com/support) เรากำลังตรวจสอบและจัดการไซต์นี้ ปัญหาของลูกค้าจะไปถึงทีมงานที่เกี่ยวข้องได้อย่างรวดเร็ว
 
-## <a name="next-steps"></a><span data-ttu-id="a73d2-210">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="a73d2-210">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-[<span data-ttu-id="a73d2-211">สร้างแอปแม่แบบ</span><span class="sxs-lookup"><span data-stu-id="a73d2-211">Create a template app</span></span>](service-template-apps-create.md)
+[สร้างแอปแม่แบบ](service-template-apps-create.md)

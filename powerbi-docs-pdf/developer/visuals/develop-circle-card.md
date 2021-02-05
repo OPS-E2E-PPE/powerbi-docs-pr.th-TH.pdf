@@ -15,153 +15,153 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97885648"
 ---
-# <a name="tutorial-develop-a-power-bi-circle-card-visual"></a><span data-ttu-id="dfb6a-104">บทช่วยสอน: พัฒนาวิชวลการ์ดวงกลม Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-104">Tutorial: Develop a Power BI circle card visual</span></span>
+# <a name="tutorial-develop-a-power-bi-circle-card-visual"></a>บทช่วยสอน: พัฒนาวิชวลการ์ดวงกลม Power BI
 
-<span data-ttu-id="dfb6a-105">ในฐานะนักพัฒนาคุณสามารถสร้างวิชวล Power BI ของคุณเองได้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-105">As a developer you can create your own Power BI visuals.</span></span> <span data-ttu-id="dfb6a-106">ภาพเหล่านี้สามารถใช้โดยคุณองค์กรของคุณหรือบุคคลที่สามได้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-106">These visuals can be used by you, your organization or by third parties.</span></span>
+ในฐานะนักพัฒนาคุณสามารถสร้างวิชวล Power BI ของคุณเองได้ ภาพเหล่านี้สามารถใช้โดยคุณองค์กรของคุณหรือบุคคลที่สามได้
 
-<span data-ttu-id="dfb6a-107">ในบทช่วยสอนนี้คุณจะพัฒนาการแสดงผลด้วยภาพของ Power BI ที่ชื่อว่าการ์ดวงกลมที่แสดงค่าหน่วยวัดที่จัดรูปแบบภายในวงกลม</span><span class="sxs-lookup"><span data-stu-id="dfb6a-107">In this tutorial, you'll develop a Power BI visual named circle card that displays a formatted measure value inside a circle.</span></span> <span data-ttu-id="dfb6a-108">วิชวลการ์ดวงกลมสนับสนุนการกำหนดเองของสีเติมและความหนาของเส้นขอบ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-108">The circle card visual supports customization of fill color and outline thickness.</span></span>
+ในบทช่วยสอนนี้คุณจะพัฒนาการแสดงผลด้วยภาพของ Power BI ที่ชื่อว่าการ์ดวงกลมที่แสดงค่าหน่วยวัดที่จัดรูปแบบภายในวงกลม วิชวลการ์ดวงกลมสนับสนุนการกำหนดเองของสีเติมและความหนาของเส้นขอบ
 
-<span data-ttu-id="dfb6a-109">ในบทช่วยสอนนี้ คุณจะเรียนรู้วิธีการ:</span><span class="sxs-lookup"><span data-stu-id="dfb6a-109">In this tutorial, you learn how to:</span></span>
+ในบทช่วยสอนนี้ คุณจะเรียนรู้วิธีการ:
 > [!div class="checklist"]
-> * <span data-ttu-id="dfb6a-110">สร้างโครงการการพัฒนาสำหรับวิชวลของคุณ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-110">Create a development project for your visual.</span></span>
-> * <span data-ttu-id="dfb6a-111">พัฒนาวิชวลของคุณด้วยองค์ประกอบภาพ D3</span><span class="sxs-lookup"><span data-stu-id="dfb6a-111">Develop your visual with D3 visual elements.</span></span>
-> * <span data-ttu-id="dfb6a-112">กำหนดค่าวิชวลของคุณเพื่อประมวลผลข้อมูล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-112">Configure your visual to process data.</span></span>
+> * สร้างโครงการการพัฒนาสำหรับวิชวลของคุณ
+> * พัฒนาวิชวลของคุณด้วยองค์ประกอบภาพ D3
+> * กำหนดค่าวิชวลของคุณเพื่อประมวลผลข้อมูล
 
-## <a name="prerequisites"></a><span data-ttu-id="dfb6a-113">สิ่งที่จำเป็นต้องมี</span><span class="sxs-lookup"><span data-stu-id="dfb6a-113">Prerequisites</span></span>
+## <a name="prerequisites"></a>สิ่งที่จำเป็นต้องมี
 
-<span data-ttu-id="dfb6a-114">ก่อนที่คุณจะเริ่มพัฒนาวิชวล Power BI ของคุณให้ตรวจสอบว่าคุณมีทุกอย่างที่แสดงอยู่ในส่วนนี้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-114">Before you start developing your Power BI visual, verify that you have everything listed in this section.</span></span>
+ก่อนที่คุณจะเริ่มพัฒนาวิชวล Power BI ของคุณให้ตรวจสอบว่าคุณมีทุกอย่างที่แสดงอยู่ในส่วนนี้
 
-* <span data-ttu-id="dfb6a-115">คุณจำเป็นต้องมีบัญชี **Power BI Pro**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-115">You need a **Power BI Pro** account.</span></span> <span data-ttu-id="dfb6a-116">ถ้าคุณยังไม่มี [ลงทะเบียนสำหรับ](https://powerbi.microsoft.com/pricing/)รุ่นทดลองใช้ฟรี</span><span class="sxs-lookup"><span data-stu-id="dfb6a-116">If you don't have one, [sign up for a free trial](https://powerbi.microsoft.com/pricing/).</span></span>
+* คุณจำเป็นต้องมีบัญชี **Power BI Pro** ถ้าคุณยังไม่มี [ลงทะเบียนสำหรับ](https://powerbi.microsoft.com/pricing/)รุ่นทดลองใช้ฟรี
 
-* <span data-ttu-id="dfb6a-117">[ รหัส Visual Studio (VS Code)](https://www.visualstudio.com/)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-117">[Visual Studio Code (VS Code)](https://www.visualstudio.com/).</span></span> <span data-ttu-id="dfb6a-118">VS Code คือสภาพแวดล้อมการพัฒนาแบบบูรณาการที่เหมาะสม (IDE) สำหรับการพัฒนาแอปพลิเคชัน JavaScript และ TypeScript</span><span class="sxs-lookup"><span data-stu-id="dfb6a-118">VS Code is an ideal Integrated Development Environment (IDE) for developing JavaScript and TypeScript applications.</span></span>
+* [ รหัส Visual Studio (VS Code)](https://www.visualstudio.com/) VS Code คือสภาพแวดล้อมการพัฒนาแบบบูรณาการที่เหมาะสม (IDE) สำหรับการพัฒนาแอปพลิเคชัน JavaScript และ TypeScript
 
-* <span data-ttu-id="dfb6a-119">[Windows PowerShell](/powershell/scripting/install/installing-windows-powershell) เวอร์ชัน4หรือใหม่กว่า (สำหรับ Windows)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-119">[Windows PowerShell](/powershell/scripting/install/installing-windows-powershell) version 4 or later (for Windows).</span></span> <span data-ttu-id="dfb6a-120">[Terminal](https://macpaw.com/how-to/use-terminal-on-mac) (สำหรับ OSX)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-120">Or [Terminal](https://macpaw.com/how-to/use-terminal-on-mac) (for OSX).</span></span>
+* [Windows PowerShell](/powershell/scripting/install/installing-windows-powershell) เวอร์ชัน4หรือใหม่กว่า (สำหรับ Windows) [Terminal](https://macpaw.com/how-to/use-terminal-on-mac) (สำหรับ OSX)
 
-* <span data-ttu-id="dfb6a-121">สภาพแวดล้อมที่พร้อมสำหรับการพัฒนาวิชวล Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-121">An environment ready for developing a Power BI visual.</span></span> <span data-ttu-id="dfb6a-122">[ตั้งค่าสภาพแวดล้อมของคุณสำหรับการพัฒนา](environment-setup.md)วิชวล Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-122">[Set up your environment for developing a Power BI visual](environment-setup.md).</span></span>
+* สภาพแวดล้อมที่พร้อมสำหรับการพัฒนาวิชวล Power BI [ตั้งค่าสภาพแวดล้อมของคุณสำหรับการพัฒนา](environment-setup.md)วิชวล Power BI
 
-* <span data-ttu-id="dfb6a-123">บทช่วยสอนนี้ใช้รายงาน **การวิเคราะห์การขายของสหรัฐอเมริกา**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-123">This tutorial uses the **US Sales Analysis** report.</span></span> <span data-ttu-id="dfb6a-124">คุณสามารถ [ดาวน์โหลด](https://microsoft.github.io/PowerBI-visuals/docs/step-by-step-lab/images/US_Sales_Analysis.pbix) รายงานนี้และอัปโหลดไปยังบริการของ Power BI หรือใช้รายงานของคุณเองได้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-124">You can [download](https://microsoft.github.io/PowerBI-visuals/docs/step-by-step-lab/images/US_Sales_Analysis.pbix) this report and upload it to Power BI service, or use your own report.</span></span> <span data-ttu-id="dfb6a-125">หากคุณต้องการข้อมูลเพิ่มเติมเกี่ยวกับการบริการของ Power BI และการอัปโหลดไฟล์โปรดดูที่ [เริ่มต้นสร้างในบทช่วยสอน](../../fundamentals/service-get-started.md) บริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-125">If you need more information about Power BI service, and uploading files, refer to the [Get started creating in the Power BI service](../../fundamentals/service-get-started.md) tutorial.</span></span>
+* บทช่วยสอนนี้ใช้รายงาน **การวิเคราะห์การขายของสหรัฐอเมริกา** คุณสามารถ [ดาวน์โหลด](https://microsoft.github.io/PowerBI-visuals/docs/step-by-step-lab/images/US_Sales_Analysis.pbix) รายงานนี้และอัปโหลดไปยังบริการของ Power BI หรือใช้รายงานของคุณเองได้ หากคุณต้องการข้อมูลเพิ่มเติมเกี่ยวกับการบริการของ Power BI และการอัปโหลดไฟล์โปรดดูที่ [เริ่มต้นสร้างในบทช่วยสอน](../../fundamentals/service-get-started.md) บริการของ Power BI
 
-## <a name="create-a-development-project"></a><span data-ttu-id="dfb6a-126">สร้างโครงการการพัฒนา</span><span class="sxs-lookup"><span data-stu-id="dfb6a-126">Create a development project</span></span>
+## <a name="create-a-development-project"></a>สร้างโครงการการพัฒนา
 
-<span data-ttu-id="dfb6a-127">ในส่วนนี้คุณจะสร้างโครงการสำหรับการแสดงผลด้วยภาพของการ์ดวงกลม</span><span class="sxs-lookup"><span data-stu-id="dfb6a-127">In this section you'll create a project for the circle card visual.</span></span>
+ในส่วนนี้คุณจะสร้างโครงการสำหรับการแสดงผลด้วยภาพของการ์ดวงกลม
 
-1. <span data-ttu-id="dfb6a-128">เปิด PowerShell และนำทางไปยังโฟลเดอร์ที่คุณต้องการสร้างโครงการของคุณ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-128">Open PowerShell and navigate to the folder you want to create your project in.</span></span>
+1. เปิด PowerShell และนำทางไปยังโฟลเดอร์ที่คุณต้องการสร้างโครงการของคุณ
 
-2. <span data-ttu-id="dfb6a-129">ป้อนคำสั่งต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="dfb6a-129">Enter the following command:</span></span>
+2. ป้อนคำสั่งต่อไปนี้:
 
     ```PowerShell
     pbiviz new CircleCard
     ```
 
-3. <span data-ttu-id="dfb6a-130">นำทางไปยังโฟลเดอร์ของโครงการ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-130">Navigate to the project's folder.</span></span>
+3. นำทางไปยังโฟลเดอร์ของโครงการ
 
     ```powershell
     cd CircleCard
     ```
 
-4. <span data-ttu-id="dfb6a-131">เริ่มการแสดงผลด้วยภาพของการ์ดวงกลม</span><span class="sxs-lookup"><span data-stu-id="dfb6a-131">Start the circle card visual.</span></span> <span data-ttu-id="dfb6a-132">ขณะนี้วิชวลของคุณกำลังทำงานอยู่ในขณะที่โฮสต์บนคอมพิวเตอร์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-132">Your visual is now running while being hosted on your computer.</span></span>
+4. เริ่มการแสดงผลด้วยภาพของการ์ดวงกลม ขณะนี้วิชวลของคุณกำลังทำงานอยู่ในขณะที่โฮสต์บนคอมพิวเตอร์ของคุณ
 
     ```powershell
     pbiviz start
     ```
     >[!IMPORTANT]
-    ><span data-ttu-id="dfb6a-133">อย่าปิดหน้าต่าง PowerSell จนกว่าจะถึงตอนท้ายของบทช่วยสอน</span><span class="sxs-lookup"><span data-stu-id="dfb6a-133">Do not close the PowerSell window until the end of the tutorial.</span></span> <span data-ttu-id="dfb6a-134">เมื่อต้องการหยุดการแสดงผลด้วยภาพให้ใส่ Ctrl + C และถ้าได้รับพร้อมท์ให้สิ้นสุดชุดงานให้ป้อน Y และกด *ใส่*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-134">To stop the visual from running, enter Ctrl+C and if prompted to terminate the batch job, enter Y, and press *Enter*.</span></span>
+    >อย่าปิดหน้าต่าง PowerSell จนกว่าจะถึงตอนท้ายของบทช่วยสอน เมื่อต้องการหยุดการแสดงผลด้วยภาพให้ใส่ Ctrl + C และถ้าได้รับพร้อมท์ให้สิ้นสุดชุดงานให้ป้อน Y และกด *ใส่*
 
-## <a name="view-the-circle-card-in-power-bi-service"></a><span data-ttu-id="dfb6a-135">ดูการ์ดวงกลมในบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-135">View the circle card in Power BI service</span></span>
+## <a name="view-the-circle-card-in-power-bi-service"></a>ดูการ์ดวงกลมในบริการของ Power BI
 
-<span data-ttu-id="dfb6a-136">ในการทดสอบการแสดงผลด้วยภาพของการ์ดวงกลมในบริการของ Power BI เราจะใช้รายงานการวิเคราะห์การขายของ **สหรัฐ**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-136">To test the circle card visual in Power BI service, we'll use the **US Sales Analysis** report.</span></span> <span data-ttu-id="dfb6a-137">คุณสามารถ [ดาวน์โหลด](https://microsoft.github.io/PowerBI-visuals/docs/step-by-step-lab/images/US_Sales_Analysis.pbix) รายงานนี้และอัปโหลดไปยังบริการของ Power BI ได้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-137">You can [download](https://microsoft.github.io/PowerBI-visuals/docs/step-by-step-lab/images/US_Sales_Analysis.pbix) this report and upload it to Power BI service.</span></span>
+ในการทดสอบการแสดงผลด้วยภาพของการ์ดวงกลมในบริการของ Power BI เราจะใช้รายงานการวิเคราะห์การขายของ **สหรัฐ** คุณสามารถ [ดาวน์โหลด](https://microsoft.github.io/PowerBI-visuals/docs/step-by-step-lab/images/US_Sales_Analysis.pbix) รายงานนี้และอัปโหลดไปยังบริการของ Power BI ได้
 
-<span data-ttu-id="dfb6a-138">คุณยังสามารถใช้รายงานของคุณเองเพื่อทดสอบการแสดงผลด้วยภาพของการ์ดวงกลม</span><span class="sxs-lookup"><span data-stu-id="dfb6a-138">You can also use your own report to test the circle card visuals.</span></span>
+คุณยังสามารถใช้รายงานของคุณเองเพื่อทดสอบการแสดงผลด้วยภาพของการ์ดวงกลม
 
 >[!NOTE]
-><span data-ttu-id="dfb6a-139">ก่อนที่คุณจะดำเนินการต่อให้ตรวจสอบว่าคุณ [เปิดใช้งานการตั้งค่านักพัฒนาวิชวล](environment-setup.md#set-up-power-bi-service-for-developing-a-visual)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-139">Before you continue, verify that you [enabled the visuals developer settings](environment-setup.md#set-up-power-bi-service-for-developing-a-visual).</span></span>
+>ก่อนที่คุณจะดำเนินการต่อให้ตรวจสอบว่าคุณ [เปิดใช้งานการตั้งค่านักพัฒนาวิชวล](environment-setup.md#set-up-power-bi-service-for-developing-a-visual)
 
-1. <span data-ttu-id="dfb6a-140">ลงชื่อเข้าใช้ [PowerBI.com](https://powerbi.microsoft.com/) และเปิดรายงาน **การวิเคราะห์การขาย** สหรัฐ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-140">Sign in to [PowerBI.com](https://powerbi.microsoft.com/) and open the **US Sales Analysis** report.</span></span>
+1. ลงชื่อเข้าใช้ [PowerBI.com](https://powerbi.microsoft.com/) และเปิดรายงาน **การวิเคราะห์การขาย** สหรัฐ
 
-2. <span data-ttu-id="dfb6a-141">เลือก **ตัวเลือกเพิ่มเติม** > **แก้ไข**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-141">Select **More options** > **Edit**.</span></span>
-
-    >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-142">![สกรีนช็อตของตัวเลือกการแก้ไขในบริการ Power B I](media/develop-circle-card/edit-report.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-142">![Screenshot of the edit option in Power B I service.](media/develop-circle-card/edit-report.png)</span></span>
-
-3. <span data-ttu-id="dfb6a-143">สร้างหน้าใหม่สำหรับการทดสอบโดยการคลิกที่ปุ่ม **หน้าใหม่** ที่ด้านล่างของส่วนติดต่อบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-143">Create a new page for testing, by clicking on the **New page** button at the bottom of the Power BI service interface.</span></span>
+2. เลือก **ตัวเลือกเพิ่มเติม** > **แก้ไข**
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-144">![สกรีนช็อตของปุ่มหน้าใหม่ในบริการ Power B I](media/develop-circle-card/new-page.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-144">![Screenshot of the new page button in Power B I service.](media/develop-circle-card/new-page.png)</span></span>
+    >![สกรีนช็อตของตัวเลือกการแก้ไขในบริการ Power B I](media/develop-circle-card/edit-report.png)
 
-4. <span data-ttu-id="dfb6a-145">จากบานหน้าต่าง **การแสดงภาพ** ให้เลือก **วิชวลของนักพัฒนา**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-145">From the **Visualizations** pane, select the **Developer Visual**.</span></span>
-
-    >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-146">![สกรีนช็อตของวิชวลของนักพัฒนาในบานหน้าต่างการแสดงภาพ](media/develop-circle-card/developer-visual.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-146">![Screenshot of the developer visual in the visualizations pane.](media/develop-circle-card/developer-visual.png)</span></span>
-
-    <span data-ttu-id="dfb6a-147">ภาพนี้แสดงการแสดงผลด้วยภาพแบบกำหนดเองที่คุณกำลังใช้งานบนคอมพิวเตอร์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-147">This visual represents the custom visual that you're running on your computer.</span></span> <span data-ttu-id="dfb6a-148">พร้อมใช้งานเฉพาะเมื่อเปิดใช้งานการตั้งค่าการ [การตรวจแก้จุดบกพร่องของวิชวลแบบกำหนดเอง](environment-setup.md#set-up-power-bi-service-for-developing-a-visual)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-148">It's only available when the [custom visual debugging](environment-setup.md#set-up-power-bi-service-for-developing-a-visual) setting is enabled.</span></span>
-
-5. <span data-ttu-id="dfb6a-149">ตรวจสอบว่ามีการเพิ่มวิชวลลงในพื้นที่รายงาน</span><span class="sxs-lookup"><span data-stu-id="dfb6a-149">Verify that a visual was added to the report canvas.</span></span>
+3. สร้างหน้าใหม่สำหรับการทดสอบโดยการคลิกที่ปุ่ม **หน้าใหม่** ที่ด้านล่างของส่วนติดต่อบริการของ Power BI
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-150">![สกรีนช็อตของวิชวลใหม่ที่เพิ่มลงในรายงาน](media/develop-circle-card/new-visual.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-150">![Screenshot of the new visual added to the report.](media/develop-circle-card/new-visual.png)</span></span>
+    >![สกรีนช็อตของปุ่มหน้าใหม่ในบริการ Power B I](media/develop-circle-card/new-page.png)
 
-    <span data-ttu-id="dfb6a-151">นี่เป็นวิชวลแบบง่าย ๆ ที่แสดงจำนวนครั้งที่มีการเรียกใช้วิธีการอัปเดต</span><span class="sxs-lookup"><span data-stu-id="dfb6a-151">This is a simple visual that displays the number of times its update method has been called.</span></span> <span data-ttu-id="dfb6a-152">ในขั้นตอนนี้ วิชวลยังไม่ได้เรียกข้อมูลใด</span><span class="sxs-lookup"><span data-stu-id="dfb6a-152">At this stage, the visual does not retrieve any data.</span></span>
+4. จากบานหน้าต่าง **การแสดงภาพ** ให้เลือก **วิชวลของนักพัฒนา**
+
+    >[!div class="mx-imgBorder"]
+    >![สกรีนช็อตของวิชวลของนักพัฒนาในบานหน้าต่างการแสดงภาพ](media/develop-circle-card/developer-visual.png)
+
+    ภาพนี้แสดงการแสดงผลด้วยภาพแบบกำหนดเองที่คุณกำลังใช้งานบนคอมพิวเตอร์ของคุณ พร้อมใช้งานเฉพาะเมื่อเปิดใช้งานการตั้งค่าการ [การตรวจแก้จุดบกพร่องของวิชวลแบบกำหนดเอง](environment-setup.md#set-up-power-bi-service-for-developing-a-visual)
+
+5. ตรวจสอบว่ามีการเพิ่มวิชวลลงในพื้นที่รายงาน
+
+    >[!div class="mx-imgBorder"]
+    >![สกรีนช็อตของวิชวลใหม่ที่เพิ่มลงในรายงาน](media/develop-circle-card/new-visual.png)
+
+    นี่เป็นวิชวลแบบง่าย ๆ ที่แสดงจำนวนครั้งที่มีการเรียกใช้วิธีการอัปเดต ในขั้นตอนนี้ วิชวลยังไม่ได้เรียกข้อมูลใด
 
     >[!NOTE]
-    ><span data-ttu-id="dfb6a-153">หากภาพแสดงข้อความแสดงข้อผิดพลาดในการเชื่อมต่อให้เปิดแท็บใหม่ในเบราว์เซอร์ของคุณไปที่ `https://localhost:8080/assets/status` และอนุญาตให้เบราว์เซอร์ของคุณใช้ที่อยู่นี้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-153">If the visual displays a connection error message, open a new tab in your browser, navigate to `https://localhost:8080/assets/status`, and authorize your browser to use this address.</span></span>
+    >หากภาพแสดงข้อความแสดงข้อผิดพลาดในการเชื่อมต่อให้เปิดแท็บใหม่ในเบราว์เซอร์ของคุณไปที่ `https://localhost:8080/assets/status` และอนุญาตให้เบราว์เซอร์ของคุณใช้ที่อยู่นี้
     >
     >![สกรีนช็อตของวิชวลใหม่ที่แสดงข้อผิดพลาดในการเชื่อมต่อ](media/develop-circle-card/connection-error.png)
 
-6. <span data-ttu-id="dfb6a-155">ในขณะที่เลือกภาพใหม่ให้ไปที่บานหน้าต่าง **เขตข้อมูล** ขยาย **ยอดขาย** และเลือก **ปริมาณ**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-155">While the new visual is selected, go to the **Fields** pane, expand **Sales**, and select **Quantity**.</span></span>
+6. ในขณะที่เลือกภาพใหม่ให้ไปที่บานหน้าต่าง **เขตข้อมูล** ขยาย **ยอดขาย** และเลือก **ปริมาณ**
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-156">![สกรีนช็อตของเขตข้อมูลปริมาณบริการ Power B I ในตารางการขายในรายงานการวิเคราะห์การขายของสหรัฐอเมริกา](media/develop-circle-card/fields-sales-quantity.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-156">![Screenshot of the Power B I service quantity field in the sales table in the U S sales analysis report.](media/develop-circle-card/fields-sales-quantity.png)</span></span>
+    >![สกรีนช็อตของเขตข้อมูลปริมาณบริการ Power B I ในตารางการขายในรายงานการวิเคราะห์การขายของสหรัฐอเมริกา](media/develop-circle-card/fields-sales-quantity.png)
 
-7. <span data-ttu-id="dfb6a-157">หากต้องการทดสอบการตอบสนองของภาพให้ปรับขนาดและสังเกตว่าค่า *อัปเดตจำนวน* จะเพิ่มขึ้นทุกครั้งที่คุณปรับขนาดวิชวล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-157">To test how the visual is responding, resize it and notice that the *Update count* value increments every time you resize the visual.</span></span>
+7. หากต้องการทดสอบการตอบสนองของภาพให้ปรับขนาดและสังเกตว่าค่า *อัปเดตจำนวน* จะเพิ่มขึ้นทุกครั้งที่คุณปรับขนาดวิชวล
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-158">![สกรีนช็อตของวิชวลใหม่ที่แสดงจำนวนการอัปเดตที่แตกต่างกันหลังจากปรับขนาดแล้ว](media/develop-circle-card/resized-visual.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-158">![Screenshot of the new visual displaying a different update count number, after being resized.](media/develop-circle-card/resized-visual.png)</span></span>
+    >![สกรีนช็อตของวิชวลใหม่ที่แสดงจำนวนการอัปเดตที่แตกต่างกันหลังจากปรับขนาดแล้ว](media/develop-circle-card/resized-visual.png)
 
-## <a name="add-visual-elements-and-text"></a><span data-ttu-id="dfb6a-159">เพิ่มองค์ประกอบวิชวลและข้อความ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-159">Add visual elements and text</span></span>
+## <a name="add-visual-elements-and-text"></a>เพิ่มองค์ประกอบวิชวลและข้อความ
 
-<span data-ttu-id="dfb6a-160">ในส่วนนี้ คุณจะได้เรียนรู้วิธีเปลี่ยนวิชวลของคุณให้เป็นวงกลมและทำให้แสดงข้อความ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-160">In this section you'll learn how to turn your visual into a circle, and make it display text.</span></span>
+ในส่วนนี้ คุณจะได้เรียนรู้วิธีเปลี่ยนวิชวลของคุณให้เป็นวงกลมและทำให้แสดงข้อความ
 
 >[!NOTE]
-><span data-ttu-id="dfb6a-161">ในบทช่วยสอนนี้ [รหัส Visual Studio](https://code.visualstudio.com/) (VS Code) ใช้สำหรับการพัฒนาวิชวลของ Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-161">In this tutorial, [Visual Studio Code](https://code.visualstudio.com/) (VS Code) is used for developing the Power BI visual.</span></span>
+>ในบทช่วยสอนนี้ [รหัส Visual Studio](https://code.visualstudio.com/) (VS Code) ใช้สำหรับการพัฒนาวิชวลของ Power BI
 
-### <a name="modify-the-visuals-file"></a><span data-ttu-id="dfb6a-162">ปรับเปลี่ยนไฟล์วิชวล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-162">Modify the visuals file</span></span>
+### <a name="modify-the-visuals-file"></a>ปรับเปลี่ยนไฟล์วิชวล
 
-<span data-ttu-id="dfb6a-163">ตั้งค่าไฟล์ **visual.ts** โดยการลบและเพิ่มรหัสสองสามบรรทัด</span><span class="sxs-lookup"><span data-stu-id="dfb6a-163">Set up the **visual.ts** file by deleting and adding a few lines of code.</span></span>
+ตั้งค่าไฟล์ **visual.ts** โดยการลบและเพิ่มรหัสสองสามบรรทัด
 
-1. <span data-ttu-id="dfb6a-164">เปิดโปรเจกต์ของคุณใน VS Code (**ไฟล์**  >  **เปิดโฟลเดอร์**)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-164">Open your project in VS Code (**File** > **Open Folder**).</span></span>
+1. เปิดโปรเจกต์ของคุณใน VS Code (**ไฟล์**  >  **เปิดโฟลเดอร์**)
 
-2. <span data-ttu-id="dfb6a-165">ใน **บานหน้าต่าง Explorer** ขยายโฟลเดอร์ **src** และเลือกไฟล์ **visual.ts**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-165">In the **Explorer pane**, expand the **src** folder, and select the file **visual.ts**.</span></span>
+2. ใน **บานหน้าต่าง Explorer** ขยายโฟลเดอร์ **src** และเลือกไฟล์ **visual.ts**
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-166">![สกรีนช็อตของการเข้าถึงไฟล์ visual.ts ในรหัส V S](media/develop-circle-card/visual-file.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-166">![Screenshot of accessing the visual.ts file in V S code.](media/develop-circle-card/visual-file.png)</span></span>
+    >![สกรีนช็อตของการเข้าถึงไฟล์ visual.ts ในรหัส V S](media/develop-circle-card/visual-file.png)
 
     > [!IMPORTANT]
-    > <span data-ttu-id="dfb6a-167">สังเกตดูข้อคิดเห็นที่ด้านบนของไฟล์ **visual.ts**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-167">Notice the comments at the top of the **visual.ts** file.</span></span> <span data-ttu-id="dfb6a-168">การอนุญาตให้ใช้แพคเกจวิชวล Power BI จะได้รับโดยไม่เสียค่าใช้จ่ายภายใต้เงื่อนไขของสิทธิ์การใช้งานของสถาบันเทคโนโลยีแมสซาชูเซตส์ (MIT)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-168">Permission to use the Power BI visual packages is granted free of charge under the terms of the Massachusetts Institute of Technology (MIT) License.</span></span> <span data-ttu-id="dfb6a-169">คุณต้องออกจากข้อคิดเห็นที่ด้านบนของไฟล์ ตามส่วนหนึ่งของข้อตกลง</span><span class="sxs-lookup"><span data-stu-id="dfb6a-169">As part of the agreement, you must leave the comments at the top of the file.</span></span>
+    > สังเกตดูข้อคิดเห็นที่ด้านบนของไฟล์ **visual.ts** การอนุญาตให้ใช้แพคเกจวิชวล Power BI จะได้รับโดยไม่เสียค่าใช้จ่ายภายใต้เงื่อนไขของสิทธิ์การใช้งานของสถาบันเทคโนโลยีแมสซาชูเซตส์ (MIT) คุณต้องออกจากข้อคิดเห็นที่ด้านบนของไฟล์ ตามส่วนหนึ่งของข้อตกลง
 
-3. <span data-ttu-id="dfb6a-170">ลบบรรทัดโค้ดต่อไปนี้ออกจากไฟล์ *visual.ts*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-170">Remove the following code lines from the *visual.ts* file.</span></span>
+3. ลบบรรทัดโค้ดต่อไปนี้ออกจากไฟล์ *visual.ts*
 
-    * <span data-ttu-id="dfb6a-171">การนำเข้า *VisualSettings*:</span><span class="sxs-lookup"><span data-stu-id="dfb6a-171">The *VisualSettings* import:</span></span>
+    * การนำเข้า *VisualSettings*:
         ```typescript
         import { VisualSettings } from "./settings";
         ```
 
-    * <span data-ttu-id="dfb6a-172">การยืนยันตัวแปรส่วนตัวระดับคลาสทั้งสี่ครั้ง</span><span class="sxs-lookup"><span data-stu-id="dfb6a-172">The four class-level private variable declarations.</span></span>
+    * การยืนยันตัวแปรส่วนตัวระดับคลาสทั้งสี่ครั้ง
 
-    * <span data-ttu-id="dfb6a-173">ทุกบรรทัดของรหัสภายใน *คอนสตรักเตอร์*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-173">All the lines of code inside the *constructor*.</span></span>
+    * ทุกบรรทัดของรหัสภายใน *คอนสตรักเตอร์*
 
-    * <span data-ttu-id="dfb6a-174">ทุกบรรทัดของรหัสภายในวิธี *การอัปเดต*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-174">All the lines of code inside the *update* method.</span></span>
+    * ทุกบรรทัดของรหัสภายในวิธี *การอัปเดต*
 
-    * <span data-ttu-id="dfb6a-175">บรรทัดโค้ดที่เหลือทั้งหมดใต้วิธี *อัปเดต* รวมถึงวิธี *parseSettings* และ *enumerateObjectInstances*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-175">All the remaining code lines below the *update* method, including the *parseSettings* and *enumerateObjectInstances* methods.</span></span>
+    * บรรทัดโค้ดที่เหลือทั้งหมดใต้วิธี *อัปเดต* รวมถึงวิธี *parseSettings* และ *enumerateObjectInstances*
 
-4. <span data-ttu-id="dfb6a-176">เพิ่มบรรทัดรหัสต่อไปนี้ที่ส่วนท้ายของส่วนการนำเข้า:</span><span class="sxs-lookup"><span data-stu-id="dfb6a-176">Add the following lines of code at the end of the import section:</span></span>
+4. เพิ่มบรรทัดรหัสต่อไปนี้ที่ส่วนท้ายของส่วนการนำเข้า:
 
-    * <span data-ttu-id="dfb6a-177">*IVisualHost* - คอลเลกชันของคุณสมบัติและบริการที่ใช้ในการโต้ตอบกับโฮสต์ภาพ (Power BI)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-177">*IVisualHost* -  A collection of properties and services used to interact with the visual host (Power BI).</span></span>
+    * *IVisualHost* - คอลเลกชันของคุณสมบัติและบริการที่ใช้ในการโต้ตอบกับโฮสต์ภาพ (Power BI)
 
          ```typescript
         import IVisualHost = powerbi.extensibility.IVisualHost;
         ```
 
-    * <span data-ttu-id="dfb6a-178">*ไลบรารี D3*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-178">*D3 library*</span></span>
+    * *ไลบรารี D3*
 
         ```typescript
         import * as d3 from "d3";
@@ -169,9 +169,9 @@ ms.locfileid: "97885648"
         ```
     
         >[!NOTE]
-        ><span data-ttu-id="dfb6a-179">หากคุณไม่ได้ติดตั้งไลบรารีนี้เป็นส่วนหนึ่งของการตั้งค่าของคุณให้ [ติดตั้งไลบรารี D3 JavaScript](environment-setup.md#d3-javascript-library)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-179">If you didn't install this library as part of your setup, [install the D3 JavaScript library](environment-setup.md#d3-javascript-library).</span></span>
+        >หากคุณไม่ได้ติดตั้งไลบรารีนี้เป็นส่วนหนึ่งของการตั้งค่าของคุณให้ [ติดตั้งไลบรารี D3 JavaScript](environment-setup.md#d3-javascript-library)
 
-5. <span data-ttu-id="dfb6a-180">ภายใต้การประกาศคลาส *วิชวล* ให้แทรกคุณสมบัติระดับคลาสต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-180">Below the *Visual* class declaration, insert the following class level properties.</span></span> <span data-ttu-id="dfb6a-181">คุณต้องเพิ่มบรรทัดรหัสที่ขึ้นต้นด้วย `private`</span><span class="sxs-lookup"><span data-stu-id="dfb6a-181">You only need to add the code lines starting with `private`.</span></span>
+5. ภายใต้การประกาศคลาส *วิชวล* ให้แทรกคุณสมบัติระดับคลาสต่อไปนี้ คุณต้องเพิ่มบรรทัดรหัสที่ขึ้นต้นด้วย `private`
 
     ```typescript
     export class Visual implements IVisual {
@@ -186,15 +186,15 @@ ms.locfileid: "97885648"
     }
     ```
 
-6. <span data-ttu-id="dfb6a-182">บันทึกไฟล์ **visual.ts**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-182">Save the **visual.ts** file.</span></span>
+6. บันทึกไฟล์ **visual.ts**
 
-### <a name="add-a-circle-and-text-elements"></a><span data-ttu-id="dfb6a-183">เพิ่มองค์ประกอบวงกลมและข้อความ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-183">Add a circle and text elements</span></span>
+### <a name="add-a-circle-and-text-elements"></a>เพิ่มองค์ประกอบวงกลมและข้อความ
 
-<span data-ttu-id="dfb6a-184">เพิ่มกราฟิกเวกเตอร์ D3 ที่ปรับขนาดได้ (SVG)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-184">Add D3 Scalable Vector Graphics (SVG).</span></span> <span data-ttu-id="dfb6a-185">ซึ่งเปิดใช้งานการสร้างรูปร่างสามแบบ: วงกลมและสององค์ประกอบข้อความ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-185">This enables creating three shapes: a circle, and two text elements.</span></span>
+เพิ่มกราฟิกเวกเตอร์ D3 ที่ปรับขนาดได้ (SVG) ซึ่งเปิดใช้งานการสร้างรูปร่างสามแบบ: วงกลมและสององค์ประกอบข้อความ
 
-1. <span data-ttu-id="dfb6a-186">เปิด **visual.ts** ในรหัส VS</span><span class="sxs-lookup"><span data-stu-id="dfb6a-186">Open **visual.ts** in VS code.</span></span>
+1. เปิด **visual.ts** ในรหัส VS
 
-2. <span data-ttu-id="dfb6a-187">เพิ่มรหัสต่อไปนี้ไปยัง *คอนสตรักเตอร์*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-187">Add the following code to the *constructor*.</span></span>
+2. เพิ่มรหัสต่อไปนี้ไปยัง *คอนสตรักเตอร์*
 
     ```typescript
     this.svg = d3.select(options.element)
@@ -211,17 +211,17 @@ ms.locfileid: "97885648"
     ```
 
     >[!TIP]
-    ><span data-ttu-id="dfb6a-188">เพื่อปรับปรุงความสามารถในการอ่าน ขอแนะนำให้คุณจัดรูปแบบเอกสารทุกครั้งที่คุณคัดลอกข้อมูลโค้ดลงในโปรเจกต์ของคุณ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-188">To improve readability, it's recommended that you format the document every time you copy code snippets into your project.</span></span> <span data-ttu-id="dfb6a-189">คลิกขวาที่ใดก็ได้ในรหัส VS แล้วเลือก *จัดรูปแบบเอกสาร* (Alt+Shift+F)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-189">Right-click anywhere in VS code, and select *Format Document* (Alt+Shift+F).</span></span>
+    >เพื่อปรับปรุงความสามารถในการอ่าน ขอแนะนำให้คุณจัดรูปแบบเอกสารทุกครั้งที่คุณคัดลอกข้อมูลโค้ดลงในโปรเจกต์ของคุณ คลิกขวาที่ใดก็ได้ในรหัส VS แล้วเลือก *จัดรูปแบบเอกสาร* (Alt+Shift+F)
 
-3. <span data-ttu-id="dfb6a-190">บันทึกไฟล์ **visual.ts**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-190">Save the **visual.ts** file.</span></span>
+3. บันทึกไฟล์ **visual.ts**
 
-### <a name="set-the-width-and-height"></a><span data-ttu-id="dfb6a-191">ตั้งค่าความกว้างและความสูง</span><span class="sxs-lookup"><span data-stu-id="dfb6a-191">Set the width and height</span></span>
+### <a name="set-the-width-and-height"></a>ตั้งค่าความกว้างและความสูง
 
-<span data-ttu-id="dfb6a-192">ตั้งค่าความกว้างและความสูงของวิชวลและเริ่มต้นแอตทริบิวต์และสไตล์ขององค์ประกอบของวิชวล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-192">Set the width and height of the visual, and initialize the attributes and styles of the visual's elements.</span></span>
+ตั้งค่าความกว้างและความสูงของวิชวลและเริ่มต้นแอตทริบิวต์และสไตล์ขององค์ประกอบของวิชวล
 
-1. <span data-ttu-id="dfb6a-193">เปิด **visual.ts** ในรหัส VS</span><span class="sxs-lookup"><span data-stu-id="dfb6a-193">Open **visual.ts** in VS Code.</span></span>
+1. เปิด **visual.ts** ในรหัส VS
 
-2. <span data-ttu-id="dfb6a-194">เพิ่มรหัสต่อไปนี้ไปยังวิธี *อัปเดต*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-194">Add the following code to the *update* method.</span></span>
+2. เพิ่มรหัสต่อไปนี้ไปยังวิธี *อัปเดต*
 
     ```typescript
     let width: number = options.viewport.width;
@@ -255,11 +255,11 @@ ms.locfileid: "97885648"
         .style("font-size", fontSizeLabel + "px");
     ```
 
-3. <span data-ttu-id="dfb6a-195">บันทึกไฟล์ **visual.ts**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-195">Save the **visual.ts** file.</span></span>
+3. บันทึกไฟล์ **visual.ts**
 
-### <a name="optional-review-the-code-in-the-visuals-file"></a><span data-ttu-id="dfb6a-196">(ไม่จำเป็น) รีวิวรหัสในไฟล์วิชวล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-196">(Optional) Review the code in the visuals file</span></span>
+### <a name="optional-review-the-code-in-the-visuals-file"></a>(ไม่จำเป็น) รีวิวรหัสในไฟล์วิชวล
 
-<span data-ttu-id="dfb6a-197">ตรวจสอบว่าโค้ดในไฟล์ *visuals.ts* มีลักษณะดังนี้:</span><span class="sxs-lookup"><span data-stu-id="dfb6a-197">Verify that the code in the *visuals.ts* file looks like this:</span></span>
+ตรวจสอบว่าโค้ดในไฟล์ *visuals.ts* มีลักษณะดังนี้:
 
 ```typescript
 /*
@@ -359,81 +359,81 @@ export class Visual implements IVisual {
 }
 ```
 
-### <a name="modify-the-capabilities-file"></a><span data-ttu-id="dfb6a-198">ปรับเปลี่ยนไฟล์ความสามารถ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-198">Modify the capabilities file</span></span>
+### <a name="modify-the-capabilities-file"></a>ปรับเปลี่ยนไฟล์ความสามารถ
 
-<span data-ttu-id="dfb6a-199">ลบบรรทัดรหัสที่ไม่จำเป็นออกจากไฟล์ความสามารถ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-199">Delete unneeded lines of code from the capabilities file.</span></span>
+ลบบรรทัดรหัสที่ไม่จำเป็นออกจากไฟล์ความสามารถ
 
-1. <span data-ttu-id="dfb6a-200">เปิดโปรเจกต์ของคุณใน VS Code (**ไฟล์**  >  **เปิดโฟลเดอร์**)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-200">Open your project in VS Code (**File** > **Open Folder**).</span></span>
+1. เปิดโปรเจกต์ของคุณใน VS Code (**ไฟล์**  >  **เปิดโฟลเดอร์**)
 
-2. <span data-ttu-id="dfb6a-201">บันทึกไฟล์ **capabilities.json**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-201">Select the **capabilities.json** file.</span></span>
+2. บันทึกไฟล์ **capabilities.json**
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-202">![สกรีนช็อตของการเข้าถึงไฟล์ capabilities.json ในรหัส V S ](media/develop-circle-card/capabilities-file.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-202">![Screenshot of accessing the capabilities.json file in V S code.](media/develop-circle-card/capabilities-file.png)</span></span>
+    >![สกรีนช็อตของการเข้าถึงไฟล์ capabilities.json ในรหัส V S ](media/develop-circle-card/capabilities-file.png)
 
-3. <span data-ttu-id="dfb6a-203">ลบองค์ประกอบวัตถุทั้งหมด (บรรทัดที่ 14-60)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-203">Remove all the objects elements (lines 14-60).</span></span>
+3. ลบองค์ประกอบวัตถุทั้งหมด (บรรทัดที่ 14-60)
 
-4. <span data-ttu-id="dfb6a-204">บันทึกไฟล์ **capabilities.json**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-204">Save the **capabilities.json** file.</span></span>
+4. บันทึกไฟล์ **capabilities.json**
 
-### <a name="restart-the-circle-card-visual"></a><span data-ttu-id="dfb6a-205">รีสตาร์ตวิชวลการ์ดวงกลม</span><span class="sxs-lookup"><span data-stu-id="dfb6a-205">Restart the circle card visual</span></span>
+### <a name="restart-the-circle-card-visual"></a>รีสตาร์ตวิชวลการ์ดวงกลม
 
-<span data-ttu-id="dfb6a-206">หยุดวิชวลจากการเรียกใช้และรีสตาร์ต</span><span class="sxs-lookup"><span data-stu-id="dfb6a-206">Stop the visual from running and restart it.</span></span>
+หยุดวิชวลจากการเรียกใช้และรีสตาร์ต
 
-1. <span data-ttu-id="dfb6a-207">ในหน้าต่าง PowerShell ที่เรียกใช้วิชวลให้ป้อน Ctrl + C และหากได้รับแจ้งให้ยุติงานแบตช์ให้ป้อน Y แล้วกด *Enter*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-207">In the PowerShell window running the visual, enter Ctrl+C and if prompted to terminate the batch job, enter Y, and press *Enter*.</span></span>
+1. ในหน้าต่าง PowerShell ที่เรียกใช้วิชวลให้ป้อน Ctrl + C และหากได้รับแจ้งให้ยุติงานแบตช์ให้ป้อน Y แล้วกด *Enter*
 
-2. <span data-ttu-id="dfb6a-208">เริ่มวิชวล ใน PowerShell</span><span class="sxs-lookup"><span data-stu-id="dfb6a-208">In PowerShell, start the visual.</span></span>
+2. เริ่มวิชวล ใน PowerShell
 
     ```powershell
     pbiviz start
     ```
 
-### <a name="test-the-visual-with-the-added-elements"></a><span data-ttu-id="dfb6a-209">ทดสอบวิชวลด้วยองค์ประกอบที่เพิ่มเข้ามา</span><span class="sxs-lookup"><span data-stu-id="dfb6a-209">Test the visual with the added elements</span></span>
+### <a name="test-the-visual-with-the-added-elements"></a>ทดสอบวิชวลด้วยองค์ประกอบที่เพิ่มเข้ามา
 
-<span data-ttu-id="dfb6a-210">ตรวจสอบว่าวิชวลแสดงองค์ประกอบที่เพิ่มใหม่</span><span class="sxs-lookup"><span data-stu-id="dfb6a-210">Verify that the visual displays the newly added elements.</span></span>
+ตรวจสอบว่าวิชวลแสดงองค์ประกอบที่เพิ่มใหม่
 
-1. <span data-ttu-id="dfb6a-211">ในบริการ Power BI เปิดรายงาน *การวิเคราะห์การขาย Power BI ของสหรัฐอเมริกา*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-211">In Power BI service, open the *Power BI US Sales Analysis* report.</span></span> <span data-ttu-id="dfb6a-212">หากคุณใช้รายงานอื่นเพื่อพัฒนาวิชวลการ์ดวงกลมให้ไปที่รายงานนั้น</span><span class="sxs-lookup"><span data-stu-id="dfb6a-212">If you're using a different report to develop the circle card visual, navigate to that report.</span></span>
+1. ในบริการ Power BI เปิดรายงาน *การวิเคราะห์การขาย Power BI ของสหรัฐอเมริกา* หากคุณใช้รายงานอื่นเพื่อพัฒนาวิชวลการ์ดวงกลมให้ไปที่รายงานนั้น
 
-2. <span data-ttu-id="dfb6a-213">ตรวจสอบให้แน่ใจว่าวิชวลเป็นรูปวงกลม</span><span class="sxs-lookup"><span data-stu-id="dfb6a-213">Make sure that the visual is shaped as a circle.</span></span>
+2. ตรวจสอบให้แน่ใจว่าวิชวลเป็นรูปวงกลม
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-214">![สกรีนช็อตของวิชวลการ์ดวงกลมรูปภาพเป็นวงกลม](media/develop-circle-card/circle.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-214">![Screenshot of the circle card visual shaped as a circle.](media/develop-circle-card/circle.png)</span></span>
+    >![สกรีนช็อตของวิชวลการ์ดวงกลมรูปภาพเป็นวงกลม](media/develop-circle-card/circle.png)
 
     >[!NOTE]
-    ><span data-ttu-id="dfb6a-215">หากวิชวลไม่แสดงอะไรเลยจากบานหน้าต่าง **เขตข้อมูล** ลากเขตข้อมูล **ปริมาณ** ลงในวิชวลของนักพัฒนา</span><span class="sxs-lookup"><span data-stu-id="dfb6a-215">If the visual isn't displaying anything, from the **Fields** pane, drag the **Quantity** field into the developer visual.</span></span>
+    >หากวิชวลไม่แสดงอะไรเลยจากบานหน้าต่าง **เขตข้อมูล** ลากเขตข้อมูล **ปริมาณ** ลงในวิชวลของนักพัฒนา
 
-3. <span data-ttu-id="dfb6a-216">ปรับขนาดวิชวล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-216">Resize the visual.</span></span>
+3. ปรับขนาดวิชวล
 
-    <span data-ttu-id="dfb6a-217">สังเกตว่าวงกลมและขนาดข้อความจะพอดีกับขนาดของวิชวล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-217">Notice that the circle and text scale to fit the dimensions of the visual.</span></span> <span data-ttu-id="dfb6a-218">วิธีการอัปเดตจะถูกเรียกเมื่อคุณปรับขนาดวิชวลและด้วยเหตุนี้องค์ประกอบวิชวลจึงถูกปรับขนาด</span><span class="sxs-lookup"><span data-stu-id="dfb6a-218">The update method is called when you resize the visual, and as a result the visual elements get rescaled.</span></span>
+    สังเกตว่าวงกลมและขนาดข้อความจะพอดีกับขนาดของวิชวล วิธีการอัปเดตจะถูกเรียกเมื่อคุณปรับขนาดวิชวลและด้วยเหตุนี้องค์ประกอบวิชวลจึงถูกปรับขนาด
 
-### <a name="enable-auto-reload"></a><span data-ttu-id="dfb6a-219">เปิดใช้งานการโหลดซ้ำอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-219">Enable auto reload</span></span>
+### <a name="enable-auto-reload"></a>เปิดใช้งานการโหลดซ้ำอัตโนมัติ
 
-<span data-ttu-id="dfb6a-220">ใช้การตั้งค่านี้เพื่อให้แน่ใจว่าวิชวลถูกโหลดซ้ำโดยอัตโนมัติทุกครั้งที่คุณบันทึกการเปลี่ยนแปลงโปรเจกต์</span><span class="sxs-lookup"><span data-stu-id="dfb6a-220">Use this setting to ensure that the visual is automatically reloaded each time you save project changes.</span></span>
+ใช้การตั้งค่านี้เพื่อให้แน่ใจว่าวิชวลถูกโหลดซ้ำโดยอัตโนมัติทุกครั้งที่คุณบันทึกการเปลี่ยนแปลงโปรเจกต์
 
-1. <span data-ttu-id="dfb6a-221">ไปที่รายงาน *การวิเคราะห์การขาย Power BI ของสหรัฐอเมริกา* (หรือไปยังโครงการที่มีวิชวลการ์ดวงกลมของคุณ)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-221">Navigate to the *Power BI US Sales Analysis* report (or to the project that has your circle card visual).</span></span>
+1. ไปที่รายงาน *การวิเคราะห์การขาย Power BI ของสหรัฐอเมริกา* (หรือไปยังโครงการที่มีวิชวลการ์ดวงกลมของคุณ)
 
-2. <span data-ttu-id="dfb6a-222">เลือกวิชวลการ์ดวงกลม</span><span class="sxs-lookup"><span data-stu-id="dfb6a-222">Select the circle card visual.</span></span>
+2. เลือกวิชวลการ์ดวงกลม
 
-3. <span data-ttu-id="dfb6a-223">ในแถบเครื่องมือแบบลอยให้เลือก **สลับการโหลดอัตโนมัติ**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-223">In the floating toolbar, select **Toggle Auto Reload**.</span></span>
+3. ในแถบเครื่องมือแบบลอยให้เลือก **สลับการโหลดอัตโนมัติ**
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-224">![สกรีนช็อตของการคลิกตัวเลือกสลับการโหลดอัตโนมัติในแถบเครื่องมือการแสดงวิชวลการ์ดวงกลม](media/develop-circle-card/toggle-auto-reload.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-224">![Screenshot of clicking the toggle auto reload option, in the circle card visual floating toolbar.](media/develop-circle-card/toggle-auto-reload.png)</span></span>
+    >![สกรีนช็อตของการคลิกตัวเลือกสลับการโหลดอัตโนมัติในแถบเครื่องมือการแสดงวิชวลการ์ดวงกลม](media/develop-circle-card/toggle-auto-reload.png)
 
-## <a name="get-the-visual-to-process-data"></a><span data-ttu-id="dfb6a-225">รับวิชวลเพื่อประมวลผลข้อมูล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-225">Get the visual to process data</span></span>
+## <a name="get-the-visual-to-process-data"></a>รับวิชวลเพื่อประมวลผลข้อมูล
 
-<span data-ttu-id="dfb6a-226">ในส่วนนี้ คุณจะกำหนดบทบาทข้อมูลและการแมปมุมมองข้อมูล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-226">In this section, you'll define data roles and data view mappings.</span></span> <span data-ttu-id="dfb6a-227">นอกจากนี้คุณยังจะปรับเปลี่ยนวิชวลเพื่อแสดงชื่อของค่าที่แสดง</span><span class="sxs-lookup"><span data-stu-id="dfb6a-227">You'll also modify the visual to display the name of the value it's displaying.</span></span>
+ในส่วนนี้ คุณจะกำหนดบทบาทข้อมูลและการแมปมุมมองข้อมูล นอกจากนี้คุณยังจะปรับเปลี่ยนวิชวลเพื่อแสดงชื่อของค่าที่แสดง
 
-### <a name="configure-the-capabilities-file"></a><span data-ttu-id="dfb6a-228">กำหนดค่าไฟล์ความสามารถ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-228">Configure the capabilities file</span></span>
+### <a name="configure-the-capabilities-file"></a>กำหนดค่าไฟล์ความสามารถ
 
-<span data-ttu-id="dfb6a-229">ปรับเปลี่ยนไฟล์ **capabilities.json** เพื่อกำหนดบทบาทข้อมูลและการแมปมุมมองข้อมูล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-229">Modify the **capabilities.json** file to define the data role and data view mappings.</span></span>
+ปรับเปลี่ยนไฟล์ **capabilities.json** เพื่อกำหนดบทบาทข้อมูลและการแมปมุมมองข้อมูล
 
-* <span data-ttu-id="dfb6a-230">**การกำหนดบทบาทข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-230">**Defining the data role**</span></span>
+* **การกำหนดบทบาทข้อมูล**
 
-    <span data-ttu-id="dfb6a-231">กำหนดอาร์เรย์ *dataRoles* ที่มีบทบาทข้อมูลเดียวของชนิด *หน่วยวัด*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-231">Define the *dataRoles* array with a single data role of the type *measure*.</span></span> <span data-ttu-id="dfb6a-232">บทบาทข้อมูลนี้เรียกว่า *หน่วยวัด* และแสดงเป็น *หน่วยวัด*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-232">This data role is called *measure*, and is displayed as *Measure*.</span></span> <span data-ttu-id="dfb6a-233">อนุญาตให้ส่งผ่านเขตข้อมูลการวัดหรือเขตข้อมูลที่สรุปได้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-233">It allows passing either a measure field, or a field that's summed up.</span></span>
+    กำหนดอาร์เรย์ *dataRoles* ที่มีบทบาทข้อมูลเดียวของชนิด *หน่วยวัด* บทบาทข้อมูลนี้เรียกว่า *หน่วยวัด* และแสดงเป็น *หน่วยวัด* อนุญาตให้ส่งผ่านเขตข้อมูลการวัดหรือเขตข้อมูลที่สรุปได้
 
-    1. <span data-ttu-id="dfb6a-234">เปิดไฟล์ **capabilities.json** ใน VS Code</span><span class="sxs-lookup"><span data-stu-id="dfb6a-234">Open the **capabilities.json** file in VS Code.</span></span>
+    1. เปิดไฟล์ **capabilities.json** ใน VS Code
 
-    2. <span data-ttu-id="dfb6a-235">ลบเนื้อหาทั้งหมดภายในอาร์เรย์ **dataRoles** (บรรทัด 3-12)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-235">Remove all the content inside the **dataRoles** array (lines 3-12).</span></span>
+    2. ลบเนื้อหาทั้งหมดภายในอาร์เรย์ **dataRoles** (บรรทัด 3-12)
 
-    3. <span data-ttu-id="dfb6a-236">แทรกรหัสต่อไปนี้ในอาร์เรย์ **dataRoles**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-236">Insert the following code to the **dataRoles** array.</span></span>
+    3. แทรกรหัสต่อไปนี้ในอาร์เรย์ **dataRoles**
 
         ```json
         {
@@ -443,17 +443,17 @@ export class Visual implements IVisual {
         }
         ```
 
-    4. <span data-ttu-id="dfb6a-237">บันทึกไฟล์ **capabilities.json**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-237">Save the **capabilities.json** file.</span></span>
+    4. บันทึกไฟล์ **capabilities.json**
 
-* <span data-ttu-id="dfb6a-238">**การกำหนดการแมปมุมมองข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-238">**Defining the data view mapping**</span></span>
+* **การกำหนดการแมปมุมมองข้อมูล**
 
-    <span data-ttu-id="dfb6a-239">กำหนดไฟล์ที่เรียกว่า *หน่วยวัด* ในอาร์เรย์ *dataViewMappings*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-239">Define a filed called *measure* in the *dataViewMappings* array.</span></span> <span data-ttu-id="dfb6a-240">เขตข้อมูลนี้สามารถส่งผ่านไปยังบทบาทข้อมูล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-240">This field can be passed to the data role.</span></span>
+    กำหนดไฟล์ที่เรียกว่า *หน่วยวัด* ในอาร์เรย์ *dataViewMappings* เขตข้อมูลนี้สามารถส่งผ่านไปยังบทบาทข้อมูล
 
-    1. <span data-ttu-id="dfb6a-241">เปิดไฟล์ **capabilities.json** ใน VS Code</span><span class="sxs-lookup"><span data-stu-id="dfb6a-241">Open the **capabilities.json** file in VS Code.</span></span>
+    1. เปิดไฟล์ **capabilities.json** ใน VS Code
 
-    2. <span data-ttu-id="dfb6a-242">ลบเนื้อหาทั้งหมดภายในอาร์เรย์ **dataViewMappings** (บรรทัดที่ 10-30)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-242">Remove all the content inside the **dataViewMappings** array (lines 10-30).</span></span>
+    2. ลบเนื้อหาทั้งหมดภายในอาร์เรย์ **dataViewMappings** (บรรทัดที่ 10-30)
 
-    3. <span data-ttu-id="dfb6a-243">แทรกรหัสต่อไปนี้ในอาร์เรย์ **dataViewMappings**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-243">Insert the following code to the **dataViewMappings** array.</span></span>
+    3. แทรกรหัสต่อไปนี้ในอาร์เรย์ **dataViewMappings**
 
         ```json
         {
@@ -466,85 +466,85 @@ export class Visual implements IVisual {
         }
         ```
 
-    4. <span data-ttu-id="dfb6a-244">บันทึกไฟล์ **capabilities.json**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-244">Save the **capabilities.json** file.</span></span>
+    4. บันทึกไฟล์ **capabilities.json**
 
-### <a name="optional-review-the-capabilities-file-code-changes"></a><span data-ttu-id="dfb6a-245">(ไม่จำเป็น) ตรวจสอบการเปลี่ยนแปลงรหัสไฟล์ความสามารถ</span><span class="sxs-lookup"><span data-stu-id="dfb6a-245">(Optional) Review the capabilities file code changes</span></span>
+### <a name="optional-review-the-capabilities-file-code-changes"></a>(ไม่จำเป็น) ตรวจสอบการเปลี่ยนแปลงรหัสไฟล์ความสามารถ
 
-<span data-ttu-id="dfb6a-246">ตรวจสอบว่าวิชวลของการ์ดวงกลมแสดงเขตข้อมูล *หน่วยวัด* และตรวจสอบการเปลี่ยนแปลงที่คุณทำโดยใช้ตัวเลือก *แสดง Dataview*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-246">Verify that the circle card visual displays the *measure* field, and review the changes you made using the *Show Dataview* option.</span></span> 
+ตรวจสอบว่าวิชวลของการ์ดวงกลมแสดงเขตข้อมูล *หน่วยวัด* และตรวจสอบการเปลี่ยนแปลงที่คุณทำโดยใช้ตัวเลือก *แสดง Dataview* 
 
-1. <span data-ttu-id="dfb6a-247">ในบริการ Power BI เปิดรายงาน *การวิเคราะห์การขาย Power BI ของสหรัฐอเมริกา*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-247">In Power BI service, open the *Power BI US Sales Analysis* report.</span></span> <span data-ttu-id="dfb6a-248">หากคุณใช้รายงานอื่นเพื่อพัฒนาวิชวลการ์ดวงกลมให้ไปที่รายงานนั้น</span><span class="sxs-lookup"><span data-stu-id="dfb6a-248">If you're using a different report to develop the circle card visual, navigate to that report.</span></span>
+1. ในบริการ Power BI เปิดรายงาน *การวิเคราะห์การขาย Power BI ของสหรัฐอเมริกา* หากคุณใช้รายงานอื่นเพื่อพัฒนาวิชวลการ์ดวงกลมให้ไปที่รายงานนั้น
 
-2. <span data-ttu-id="dfb6a-249">สังเกตว่าขณะนี้ภาพการ์ดวงกลมสามารถกำหนดค่าด้วยเขตข้อมูลที่ชื่อ *หน่วยวัด*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-249">Notice that the circle card visual can now be configured with a field titled *Measure*.</span></span> <span data-ttu-id="dfb6a-250">คุณสามารถลากและวางองค์ประกอบจากบานหน้าต่าง **เขตข้อมูล** ลงในเขตข้อมูล *หน่วยวัด*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-250">You can drag and drop elements from the **Fields** pane into the *Measure* field.</span></span>
+2. สังเกตว่าขณะนี้ภาพการ์ดวงกลมสามารถกำหนดค่าด้วยเขตข้อมูลที่ชื่อ *หน่วยวัด* คุณสามารถลากและวางองค์ประกอบจากบานหน้าต่าง **เขตข้อมูล** ลงในเขตข้อมูล *หน่วยวัด*
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-251">![สกรีนช็อตของการวัดการ์ดวงกลมที่ยื่นในบานหน้าต่างการแสดงภาพบริการของ Power BI](media/develop-circle-card/measure.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-251">![Screenshot of the circle card measure filed, in the Power BI service visualization pane.](media/develop-circle-card/measure.png)</span></span>
+    >![สกรีนช็อตของการวัดการ์ดวงกลมที่ยื่นในบานหน้าต่างการแสดงภาพบริการของ Power BI](media/develop-circle-card/measure.png)
 
     > [!Note]
-    > <span data-ttu-id="dfb6a-252">โครงการวิชวลยังไม่ได้รวมตรรกะการผูกข้อมูลเอาไว้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-252">The visual project does not yet include data binding logic.</span></span>
+    > โครงการวิชวลยังไม่ได้รวมตรรกะการผูกข้อมูลเอาไว้
 
-3. <span data-ttu-id="dfb6a-253">ในแถบเครื่องมือลอยให้เลือก **แสดงมุมมองข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-253">In the floating toolbar, select **Show Dataview**.</span></span> 
-
-    >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-254">![สกรีนช็อตของปุ่มแสดงข้อมูลที่อยู่ในแถบเครื่องมือแบบลอยของการ์ดวงกลม](media/develop-circle-card/show-dataview.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-254">![Screenshot of the show dataview button, located in the circle card floating toolbar.](media/develop-circle-card/show-dataview.png)</span></span>
-
-4. <span data-ttu-id="dfb6a-255">เลือกจุดสามจุดเพื่อขยายการแสดงผลและเลือก **แบบเดี่ยว** เพื่อดูค่า</span><span class="sxs-lookup"><span data-stu-id="dfb6a-255">Select the three dots to expand the display, and select **single** to view the value.</span></span>
+3. ในแถบเครื่องมือลอยให้เลือก **แสดงมุมมองข้อมูล** 
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-256">![สกรีนช็อตของรูปค่าตามที่แสดงในการ์ดวงกลมแสดงตัวเลือกมุมมองข้อมูล](media/develop-circle-card/value.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-256">![Screenshot of the value figure as it's displayed in the circle card show dataview option.](media/develop-circle-card/value.png)</span></span>
+    >![สกรีนช็อตของปุ่มแสดงข้อมูลที่อยู่ในแถบเครื่องมือแบบลอยของการ์ดวงกลม](media/develop-circle-card/show-dataview.png)
 
-5. <span data-ttu-id="dfb6a-257">ขยาย **เมตาดาต้า** ตามด้วยอาร์เรย์ **คอลัมน์** และตรวจสอบค่า **รูปแบบ** และ **displayName**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-257">Expand **metadata**, then the **columns** array, and review the **format** and **displayName** values.</span></span>
+4. เลือกจุดสามจุดเพื่อขยายการแสดงผลและเลือก **แบบเดี่ยว** เพื่อดูค่า
 
     >[!div class="mx-imgBorder"]
-    ><span data-ttu-id="dfb6a-258">![สกรีนช็อตของรูปแบบและค่าชื่อที่แสดงในการ์ดวงกลมแสดงตัวเลือกมุมมองข้อมูล](media/develop-circle-card/colunms.png)</span><span class="sxs-lookup"><span data-stu-id="dfb6a-258">![Screenshot of the format and display name values as displayed in the circle card show dataview option.](media/develop-circle-card/colunms.png)</span></span>
+    >![สกรีนช็อตของรูปค่าตามที่แสดงในการ์ดวงกลมแสดงตัวเลือกมุมมองข้อมูล](media/develop-circle-card/value.png)
 
-6. <span data-ttu-id="dfb6a-259">เมื่อต้องการสลับกลับไปที่วิชวล ในแถบเครื่องมือที่ลอยอยู่เหนือวิชวล ให้เลือก **แสดงมุมมองข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-259">To toggle back to the visual, in the toolbar floating above the visual, select **Show Dataview**.</span></span>
+5. ขยาย **เมตาดาต้า** ตามด้วยอาร์เรย์ **คอลัมน์** และตรวจสอบค่า **รูปแบบ** และ **displayName**
 
-### <a name="configure-the-visual-to-consume-data"></a><span data-ttu-id="dfb6a-260">กำหนดค่าวิชวลเพื่อใช้ข้อมูล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-260">Configure the visual to consume data</span></span>
+    >[!div class="mx-imgBorder"]
+    >![สกรีนช็อตของรูปแบบและค่าชื่อที่แสดงในการ์ดวงกลมแสดงตัวเลือกมุมมองข้อมูล](media/develop-circle-card/colunms.png)
 
-<span data-ttu-id="dfb6a-261">ทำการเปลี่ยนแปลงไฟล์ **visual.ts** เพื่อให้วิชวลการ์ดวงกลมสามารถใช้ข้อมูลได้</span><span class="sxs-lookup"><span data-stu-id="dfb6a-261">Make changes to the **visual.ts** file, so that the circle card visual will be able to consume data.</span></span>
+6. เมื่อต้องการสลับกลับไปที่วิชวล ในแถบเครื่องมือที่ลอยอยู่เหนือวิชวล ให้เลือก **แสดงมุมมองข้อมูล**
 
-1. <span data-ttu-id="dfb6a-262">เปิดไฟล์ **visual.ts** ใน VS Code</span><span class="sxs-lookup"><span data-stu-id="dfb6a-262">Open the **visual.ts** file in VS Code.</span></span>
+### <a name="configure-the-visual-to-consume-data"></a>กำหนดค่าวิชวลเพื่อใช้ข้อมูล
 
-2. <span data-ttu-id="dfb6a-263">เพิ่มบรรทัดต่อไปนี้เพื่อนำเข้า `DataView`อินเทอร์เฟซจาก`powerbi` โมดูล</span><span class="sxs-lookup"><span data-stu-id="dfb6a-263">Add the following line to import the `DataView` interface from the `powerbi` module.</span></span>
+ทำการเปลี่ยนแปลงไฟล์ **visual.ts** เพื่อให้วิชวลการ์ดวงกลมสามารถใช้ข้อมูลได้
+
+1. เปิดไฟล์ **visual.ts** ใน VS Code
+
+2. เพิ่มบรรทัดต่อไปนี้เพื่อนำเข้า `DataView`อินเทอร์เฟซจาก`powerbi` โมดูล
 
     ```typescript
     import DataView = powerbi.DataView;
     ```
 
-3. <span data-ttu-id="dfb6a-264">ในวิธีการ *อัปเดต* ให้ดำเนินการดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="dfb6a-264">In the *update* method, do the following:</span></span>
+3. ในวิธีการ *อัปเดต* ให้ดำเนินการดังต่อไปนี้:
 
-    * <span data-ttu-id="dfb6a-265">เพิ่มคำสั่งต่อไปนี้เป็นคำสั่งแรก</span><span class="sxs-lookup"><span data-stu-id="dfb6a-265">Add the following statement as the first statement.</span></span> <span data-ttu-id="dfb6a-266">คำสั่งกำหนด *มุมมองข้อมูล* ให้กับตัวแปรเพื่อให้เข้าถึงได้ง่ายและประกาศให้ตัวแปรอ้างอิงออบเจ็กต์ *มุมมองข้อมูล*</span><span class="sxs-lookup"><span data-stu-id="dfb6a-266">The statement assigns *dataView* to a variable for easy access, and declares the variable to reference the *dataView* object.</span></span>
+    * เพิ่มคำสั่งต่อไปนี้เป็นคำสั่งแรก คำสั่งกำหนด *มุมมองข้อมูล* ให้กับตัวแปรเพื่อให้เข้าถึงได้ง่ายและประกาศให้ตัวแปรอ้างอิงออบเจ็กต์ *มุมมองข้อมูล*
 
         ```typescript
         let dataView: DataView = options.dataViews[0];
         ```
 
-    * <span data-ttu-id="dfb6a-267">แทนที่ **.text ("Value")** ด้วยโค้ดบรรทัดนี้:</span><span class="sxs-lookup"><span data-stu-id="dfb6a-267">Replace **.text("Value")** with this line of code:</span></span>
+    * แทนที่ **.text ("Value")** ด้วยโค้ดบรรทัดนี้:
 
         ```typescript
         .text(<string>dataView.single.value)
         ```
 
-    * <span data-ttu-id="dfb6a-268">แทนที่ **.text("Label")** ด้วยโค้ดบรรทัดนี้:</span><span class="sxs-lookup"><span data-stu-id="dfb6a-268">Replace **.text("Label")** with this line of code:</span></span>
+    * แทนที่ **.text("Label")** ด้วยโค้ดบรรทัดนี้:
 
         ```typescript
         .text(dataView.metadata.columns[0].displayName)
         ```
 
-4. <span data-ttu-id="dfb6a-269">บันทึกไฟล์ **visual.ts**</span><span class="sxs-lookup"><span data-stu-id="dfb6a-269">Save the **visual.ts** file.</span></span>
+4. บันทึกไฟล์ **visual.ts**
 
-5. <span data-ttu-id="dfb6a-270">ตรวจสอบวิชวลในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-270">Review the visual in Power BI service.</span></span> <span data-ttu-id="dfb6a-271">ขณะนี้วิชวลแสดงค่าและชื่อที่แสดง</span><span class="sxs-lookup"><span data-stu-id="dfb6a-271">The visual now displays the value and the display name.</span></span>
+5. ตรวจสอบวิชวลในบริการ Power BI ขณะนี้วิชวลแสดงค่าและชื่อที่แสดง
 
-## <a name="next-steps"></a><span data-ttu-id="dfb6a-272">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="dfb6a-272">Next steps</span></span>
-
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="dfb6a-273">เพิ่มตัวเลือกการจัดรูปแบบไปยังวิชวลการ์ดวงกลม</span><span class="sxs-lookup"><span data-stu-id="dfb6a-273">Add formatting options to the circle card visual</span></span>](custom-visual-develop-tutorial-format-options.md)
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="dfb6a-274">สร้างวิชวลแผนภูมิแท่ง Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-274">Create a Power BI bar chart visual</span></span>](create-bar-chart.md)
+> [เพิ่มตัวเลือกการจัดรูปแบบไปยังวิชวลการ์ดวงกลม](custom-visual-develop-tutorial-format-options.md)
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="dfb6a-275">เรียนรู้วิธีการดีบักภาพ Power BI ที่คุณสร้างขึ้น</span><span class="sxs-lookup"><span data-stu-id="dfb6a-275">Learn how to debug a Power BI visual you created</span></span>](visuals-how-to-debug.md)
+> [สร้างวิชวลแผนภูมิแท่ง Power BI](create-bar-chart.md)
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="dfb6a-276">โครงสร้างของโครงการวิชวล Power BI</span><span class="sxs-lookup"><span data-stu-id="dfb6a-276">Power BI visuals project structure</span></span>](visual-project-structure.md)
+> [เรียนรู้วิธีการดีบักภาพ Power BI ที่คุณสร้างขึ้น](visuals-how-to-debug.md)
+
+> [!div class="nextstepaction"]
+> [โครงสร้างของโครงการวิชวล Power BI](visual-project-structure.md)

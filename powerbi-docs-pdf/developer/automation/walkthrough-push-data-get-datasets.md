@@ -15,34 +15,34 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97887465"
 ---
-# <a name="step-4-get-a-dataset-to-add-rows-into-a-power-bi-table"></a><span data-ttu-id="1a6f7-104">ขั้นตอนที่ 4: รับชุดข้อมูลเพื่อเพิ่มแถวลงในตาราง Power BI</span><span class="sxs-lookup"><span data-stu-id="1a6f7-104">Step 4: Get a dataset to add rows into a Power BI table</span></span>
+# <a name="step-4-get-a-dataset-to-add-rows-into-a-power-bi-table"></a>ขั้นตอนที่ 4: รับชุดข้อมูลเพื่อเพิ่มแถวลงในตาราง Power BI
 
-<span data-ttu-id="1a6f7-105">บทความนี้เป็นส่วนหนึ่งของคำแนะนำทีละขั้นตอนเพื่อ[ส่งข้อมูลไปยังชุดข้อมูล](walkthrough-push-data.md)</span><span class="sxs-lookup"><span data-stu-id="1a6f7-105">This article is part of a step-by-step walkthrough to [push data into a dataset](walkthrough-push-data.md).</span></span>
+บทความนี้เป็นส่วนหนึ่งของคำแนะนำทีละขั้นตอนเพื่อ[ส่งข้อมูลไปยังชุดข้อมูล](walkthrough-push-data.md)
 
-<span data-ttu-id="1a6f7-106">ใน **ขั้นตอนที่ 3** เป็นขั้นตอนการส่งข้อมูลไปยังชุดข้อมูล [สร้างชุดข้อมูลใน Power BI](walkthrough-push-data-create-dataset.md)คุณเรียกใช้การดำเนินการ [สร้างชุดข้อมูล](/rest/api/power-bi/datasets)เพื่อสร้างชุดข้อมูลใน Power BI</span><span class="sxs-lookup"><span data-stu-id="1a6f7-106">In **step 3** of Push data into a dataset, [Create a dataset in Power BI](walkthrough-push-data-create-dataset.md), you called the [Create Dataset](/rest/api/power-bi/datasets) operation to create a dataset in Power BI.</span></span> <span data-ttu-id="1a6f7-107">ในขั้นตอนนี้ ให้คุณใช้การดำเนินการ[รับชุดข้อมูล](/rest/api/power-bi/datasets/getdatasets)และ Newtonsoft.Json เพื่อรับรหัสชุดข้อมูล คุณสามารถใช้รหัสชุดข้อมูลในขั้นตอนที่ 4 เพื่อเพิ่มแถวไปยังชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="1a6f7-107">In this step, you use the [Get Datasets](/rest/api/power-bi/datasets/getdatasets) operation and Newtonsoft.Json to get a dataset id. You use the dataset id in step 4 to add rows to a dataset.</span></span> 
+ใน **ขั้นตอนที่ 3** เป็นขั้นตอนการส่งข้อมูลไปยังชุดข้อมูล [สร้างชุดข้อมูลใน Power BI](walkthrough-push-data-create-dataset.md)คุณเรียกใช้การดำเนินการ [สร้างชุดข้อมูล](/rest/api/power-bi/datasets)เพื่อสร้างชุดข้อมูลใน Power BI ในขั้นตอนนี้ ให้คุณใช้การดำเนินการ[รับชุดข้อมูล](/rest/api/power-bi/datasets/getdatasets)และ Newtonsoft.Json เพื่อรับรหัสชุดข้อมูล คุณสามารถใช้รหัสชุดข้อมูลในขั้นตอนที่ 4 เพื่อเพิ่มแถวไปยังชุดข้อมูล 
 
-<span data-ttu-id="1a6f7-108">เมื่อต้องส่งข้อมูลไปยังชุดข้อมูล Power BI คุณจำเป็นต้องอ้างอิงตารางในชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="1a6f7-108">To push data into a Power BI dataset, you need to reference the table in the dataset.</span></span> <span data-ttu-id="1a6f7-109">เมื่อต้องการอ้างอิงตารางในชุดข้อมูล ก่อนอื่นคุณต้องได้รับ **รหัสชุดข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="1a6f7-109">To reference a table in a dataset, you first need to get a **Dataset ID**.</span></span> <span data-ttu-id="1a6f7-110">คุณได้รับ **รหัสชุดข้อมูล** โดยใช้การดำเนินการ [รับชุดข้อมูล](/rest/api/power-bi/datasets/getdatasets)</span><span class="sxs-lookup"><span data-stu-id="1a6f7-110">You get a **Dataset ID** using the [Get Datasets](/rest/api/power-bi/datasets/getdatasets) operation.</span></span> <span data-ttu-id="1a6f7-111">การดำเนินการ **รับชุดข้อมูล** จะส่งคืนสตริง JSON ที่ประกอบด้วยรายการของชุดข้อมูลทั้งหมดใน Power BI</span><span class="sxs-lookup"><span data-stu-id="1a6f7-111">The **Get Datasets** operation returns a JSON string containing a list of all datasets in Power BI.</span></span> <span data-ttu-id="1a6f7-112">วิธีแนะนำในการยกเลิกการจัดลำดับสตริง JSON อยู่ใน[Newtonsoft.Json](https://www.newtonsoft.com/json)</span><span class="sxs-lookup"><span data-stu-id="1a6f7-112">The recommended way to deserialize a JSON string is with [Newtonsoft.Json](https://www.newtonsoft.com/json).</span></span>
+เมื่อต้องส่งข้อมูลไปยังชุดข้อมูล Power BI คุณจำเป็นต้องอ้างอิงตารางในชุดข้อมูล เมื่อต้องการอ้างอิงตารางในชุดข้อมูล ก่อนอื่นคุณต้องได้รับ **รหัสชุดข้อมูล** คุณได้รับ **รหัสชุดข้อมูล** โดยใช้การดำเนินการ [รับชุดข้อมูล](/rest/api/power-bi/datasets/getdatasets) การดำเนินการ **รับชุดข้อมูล** จะส่งคืนสตริง JSON ที่ประกอบด้วยรายการของชุดข้อมูลทั้งหมดใน Power BI วิธีแนะนำในการยกเลิกการจัดลำดับสตริง JSON อยู่ใน[Newtonsoft.Json](https://www.newtonsoft.com/json)
 
-<span data-ttu-id="1a6f7-113">นี่คือวิธีที่คุณได้รับชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="1a6f7-113">Here's how you get a dataset.</span></span>
+นี่คือวิธีที่คุณได้รับชุดข้อมูล
 
-## <a name="get-a-power-bi-dataset"></a><span data-ttu-id="1a6f7-114">รับชุดข้อมูล Power BI</span><span class="sxs-lookup"><span data-stu-id="1a6f7-114">Get a Power BI dataset</span></span>
+## <a name="get-a-power-bi-dataset"></a>รับชุดข้อมูล Power BI
 
-> <span data-ttu-id="1a6f7-115">**หมายเหตุ**: ก่อนคุณเริ่มต้นใช้งาน ตรวจสอบให้แน่ใจว่า คุณดำเนินการตามขั้นตอนก่อนหน้านี้ในคำแนะนำการ [ส่งข้อมูล](walkthrough-push-data.md)ลงในชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="1a6f7-115">**NOTE**: Before you get started, make sure you have followed the previous steps in the [push data into a dataset](walkthrough-push-data.md) walkthrough.</span></span>
+> **หมายเหตุ**: ก่อนคุณเริ่มต้นใช้งาน ตรวจสอบให้แน่ใจว่า คุณดำเนินการตามขั้นตอนก่อนหน้านี้ในคำแนะนำการ [ส่งข้อมูล](walkthrough-push-data.md)ลงในชุดข้อมูล
 
-1. <span data-ttu-id="1a6f7-116">ในโครงการแอปพลิเคชันคอนโซลที่คุณสร้างในขั้นตอนที่ 2: คำแนะนำการส่งข้อมูล[รับโทเค็นการเข้าถึงการรับรองความถูกต้อง](walkthrough-push-data-get-token.md)ติดตั้งแพคเกจ Newtonsoft.Json NuGet</span><span class="sxs-lookup"><span data-stu-id="1a6f7-116">In the Console Application project you created in Step 2: Walkthrough to push data, [Get an authentication access token](walkthrough-push-data-get-token.md), install the Newtonsoft.Json NuGet package.</span></span> <span data-ttu-id="1a6f7-117">นี่คือวิธีการติดตั้งแพคเกจ:</span><span class="sxs-lookup"><span data-stu-id="1a6f7-117">Here's how to install the package:</span></span>
+1. ในโครงการแอปพลิเคชันคอนโซลที่คุณสร้างในขั้นตอนที่ 2: คำแนะนำการส่งข้อมูล[รับโทเค็นการเข้าถึงการรับรองความถูกต้อง](walkthrough-push-data-get-token.md)ติดตั้งแพคเกจ Newtonsoft.Json NuGet นี่คือวิธีการติดตั้งแพคเกจ:
 
-     <span data-ttu-id="1a6f7-118">a.</span><span class="sxs-lookup"><span data-stu-id="1a6f7-118">a.</span></span> <span data-ttu-id="1a6f7-119">ใน Studio Visual 2015 เลือก **เครื่องมือ** > **ตัวจัดการแพคเกจ NuGet** > **คอนโซลตัวจัดการแพคเกจ**</span><span class="sxs-lookup"><span data-stu-id="1a6f7-119">In Visual Studio 2015, choose **Tools** > **NuGet Package Manager** > **Package Manager Console**.</span></span>
+     a. ใน Studio Visual 2015 เลือก **เครื่องมือ** > **ตัวจัดการแพคเกจ NuGet** > **คอนโซลตัวจัดการแพคเกจ**
 
-     <span data-ttu-id="1a6f7-120">b.</span><span class="sxs-lookup"><span data-stu-id="1a6f7-120">b.</span></span> <span data-ttu-id="1a6f7-121">ใน **คอนโซล Manager แพคเกจ** ใส่ Newtonsoft.Json แพคเกจติดตั้ง</span><span class="sxs-lookup"><span data-stu-id="1a6f7-121">In **Package Manager Console**, enter Install-Package Newtonsoft.Json.</span></span>
-2. <span data-ttu-id="1a6f7-122">หลังจากติดตั้งแพคเกจแล้ว เพิ่ม **การใช้ Newtonsoft.Json;** ไปยัง Program.cs</span><span class="sxs-lookup"><span data-stu-id="1a6f7-122">After the package is installed, add **using Newtonsoft.Json;** to Program.cs.</span></span>
-3. <span data-ttu-id="1a6f7-123">ใน Program.cs เพิ่มรหัสด้านล่างเพื่อรับ **รหัสชุดข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="1a6f7-123">In Program.cs, add the code below to get a **Dataset ID**.</span></span>
-4. <span data-ttu-id="1a6f7-124">เรียกใช้แอปคอนโซลนี้ และเข้าสู่ระบบด้วยบัญชี Power BI ของคุณ</span><span class="sxs-lookup"><span data-stu-id="1a6f7-124">Run the Console App, and login to your Power BI account.</span></span> <span data-ttu-id="1a6f7-125">คุณจะเห็น **รหัสชุดข้อมูล:** ตามด้วยรหัสในหน้าต่างคอนโซล</span><span class="sxs-lookup"><span data-stu-id="1a6f7-125">You should see **Dataset ID:** followed by an id in the Console Window.</span></span>
+     b. ใน **คอนโซล Manager แพคเกจ** ใส่ Newtonsoft.Json แพคเกจติดตั้ง
+2. หลังจากติดตั้งแพคเกจแล้ว เพิ่ม **การใช้ Newtonsoft.Json;** ไปยัง Program.cs
+3. ใน Program.cs เพิ่มรหัสด้านล่างเพื่อรับ **รหัสชุดข้อมูล**
+4. เรียกใช้แอปคอนโซลนี้ และเข้าสู่ระบบด้วยบัญชี Power BI ของคุณ คุณจะเห็น **รหัสชุดข้อมูล:** ตามด้วยรหัสในหน้าต่างคอนโซล
 
-<span data-ttu-id="1a6f7-126">**รับตัวอย่างเป็นชุดข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="1a6f7-126">**Sample get a dataset**</span></span>
+**รับตัวอย่างเป็นชุดข้อมูล**
 
-<span data-ttu-id="1a6f7-127">เพิ่มรหัสนี้ลงใน Program.cs</span><span class="sxs-lookup"><span data-stu-id="1a6f7-127">Add this code into Program.cs.</span></span>
+เพิ่มรหัสนี้ลงใน Program.cs
 
-* <span data-ttu-id="1a6f7-128">ใน static void Main(string[] args):</span><span class="sxs-lookup"><span data-stu-id="1a6f7-128">In static void Main(string[] args):</span></span>
+* ใน static void Main(string[] args):
   
   ```csharp
   static void Main(string[] args)
@@ -58,7 +58,7 @@ ms.locfileid: "97887465"
     string datasetId = GetDataset();
   }
   ```
-* <span data-ttu-id="1a6f7-129">เพิ่มวิธีการ GetDatset():</span><span class="sxs-lookup"><span data-stu-id="1a6f7-129">Add a GetDatset() method:</span></span>
+* เพิ่มวิธีการ GetDatset():
   
   ```csharp
     #region Get a dataset to add rows into a Power BI table
@@ -102,13 +102,13 @@ ms.locfileid: "97887465"
     #endregion
   ```
 
-<span data-ttu-id="1a6f7-130">ขั้นตอนถัดไปจะแสดงวิธีการ[เพิ่มแถวลงในตาราง Power BI](walkthrough-push-data-add-rows.md)</span><span class="sxs-lookup"><span data-stu-id="1a6f7-130">The next step shows you how to [add rows to a Power BI table](walkthrough-push-data-add-rows.md).</span></span>
+ขั้นตอนถัดไปจะแสดงวิธีการ[เพิ่มแถวลงในตาราง Power BI](walkthrough-push-data-add-rows.md)
 
-<span data-ttu-id="1a6f7-131">ด้านล่างนี้คือการ[รายการหัสที่สมบูรณ์](#code)</span><span class="sxs-lookup"><span data-stu-id="1a6f7-131">Below is the [complete code listing](#code).</span></span>
+ด้านล่างนี้คือการ[รายการหัสที่สมบูรณ์](#code)
 
 <a name="code"/>
 
-## <a name="complete-code-listing"></a><span data-ttu-id="1a6f7-132">รายการรหัสเสร็จสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="1a6f7-132">Complete code listing</span></span>
+## <a name="complete-code-listing"></a>รายการรหัสเสร็จสมบูรณ์
 
 ```csharp
 using System;
@@ -264,13 +264,13 @@ namespace walkthrough_push_data
 }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="1a6f7-133">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="1a6f7-133">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-* [<span data-ttu-id="1a6f7-134">เพิ่มแถวในตาราง Power BI</span><span class="sxs-lookup"><span data-stu-id="1a6f7-134">Add rows to a Power BI table</span></span>](walkthrough-push-data-add-rows.md)  
-* [<span data-ttu-id="1a6f7-135">Newtonsoft.Json</span><span class="sxs-lookup"><span data-stu-id="1a6f7-135">Newtonsoft.Json</span></span>](https://www.newtonsoft.com/json)  
-* [<span data-ttu-id="1a6f7-136">รับชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="1a6f7-136">Get Datasets</span></span>](/rest/api/power-bi/datasets/getdatasets)  
-* [<span data-ttu-id="1a6f7-137">ส่งข้อมูลไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="1a6f7-137">Push data into Power BI</span></span>](walkthrough-push-data.md)  
-* [<span data-ttu-id="1a6f7-138">ภาพรวมของ Power BI REST API</span><span class="sxs-lookup"><span data-stu-id="1a6f7-138">Overview of Power BI REST API</span></span>](overview-of-power-bi-rest-api.md)  
-* [<span data-ttu-id="1a6f7-139">การอ้างอิง Power BI REST API</span><span class="sxs-lookup"><span data-stu-id="1a6f7-139">Power BI REST API reference</span></span>](/rest/api/power-bi/)  
+* [เพิ่มแถวในตาราง Power BI](walkthrough-push-data-add-rows.md)  
+* [Newtonsoft.Json](https://www.newtonsoft.com/json)  
+* [รับชุดข้อมูล](/rest/api/power-bi/datasets/getdatasets)  
+* [ส่งข้อมูลไปยัง Power BI](walkthrough-push-data.md)  
+* [ภาพรวมของ Power BI REST API](overview-of-power-bi-rest-api.md)  
+* [การอ้างอิง Power BI REST API](/rest/api/power-bi/)  
 
-<span data-ttu-id="1a6f7-140">คุณมีคำถามเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="1a6f7-140">More questions?</span></span> [<span data-ttu-id="1a6f7-141">ลองไปที่ชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="1a6f7-141">Try the Power BI Community</span></span>](https://community.powerbi.com/)
+คุณมีคำถามเพิ่มเติมหรือไม่ [ลองไปที่ชุมชน Power BI](https://community.powerbi.com/)

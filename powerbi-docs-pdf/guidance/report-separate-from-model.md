@@ -2,73 +2,73 @@
 title: แยกรายงานจากแบบจำลองใน Power BI Desktop
 description: คำแนะนำสำหรับการแยกรายงานจากแบบจำลองใน Power BI Desktop
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: asaxton
 ms.service: powerbi
 ms.subservice: powerbi
 ms.topic: conceptual
 ms.date: 04/11/2020
-ms.openlocfilehash: a45299015883615b4773fe5db1c9864e01a47c4b
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: 20e674765d2a908ff1952b0f316d125d0e3c5bd3
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96418380"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99088315"
 ---
-# <a name="separate-reports-from-models-in-power-bi-desktop"></a><span data-ttu-id="c41ff-103">แยกรายงานจากแบบจำลองใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="c41ff-103">Separate reports from models in Power BI Desktop</span></span>
+# <a name="separate-reports-from-models-in-power-bi-desktop"></a>แยกรายงานจากแบบจำลองใน Power BI Desktop
 
-<span data-ttu-id="c41ff-104">เมื่อสร้างโซลูชัน Power BI Desktop ใหม่ หนึ่งในงานแรกที่คุณต้องทำคือ "รับข้อมูล"</span><span class="sxs-lookup"><span data-stu-id="c41ff-104">When creating a new Power BI Desktop solution, one of the first tasks you need to do is "get data".</span></span> <span data-ttu-id="c41ff-105">การรับข้อมูลอาจส่งผลให้เกิดผลลัพธ์ที่แตกต่างกันสองประการ</span><span class="sxs-lookup"><span data-stu-id="c41ff-105">Getting data can result in two distinctly different outcomes.</span></span> <span data-ttu-id="c41ff-106">ซึ่งอาจ:</span><span class="sxs-lookup"><span data-stu-id="c41ff-106">It could:</span></span>
+เมื่อสร้างโซลูชัน Power BI Desktop ใหม่ หนึ่งในงานแรกที่คุณต้องทำคือ "รับข้อมูล" การรับข้อมูลอาจส่งผลให้เกิดผลลัพธ์ที่แตกต่างกันสองประการ ซึ่งอาจ:
 
-- <span data-ttu-id="c41ff-107">สร้าง [การเชื่อมต่อสด](../connect-data/desktop-report-lifecycle-datasets.md) ไปยังแบบจำลองที่เผยแพร่แล้ว ซึ่งอาจเป็นชุดข้อมูล Power BI หรือแบบจำลอง Analysis Services ที่โฮสต์ระยะไกล</span><span class="sxs-lookup"><span data-stu-id="c41ff-107">Create a [Live Connection](../connect-data/desktop-report-lifecycle-datasets.md) to an already-published model, which could be a Power BI dataset or a remote-hosted Analysis Services model.</span></span>
-- <span data-ttu-id="c41ff-108">เริ่มต้นการพัฒนาแบบจำลองใหม่ ซึ่งอาจเป็นแบบจำลอง Import, DirectQuery หรือ Composite</span><span class="sxs-lookup"><span data-stu-id="c41ff-108">Commence the development of a new model, which could be either an Import, DirectQuery, or Composite model.</span></span>
+- สร้าง [การเชื่อมต่อสด](../connect-data/desktop-report-lifecycle-datasets.md) ไปยังแบบจำลองที่เผยแพร่แล้ว ซึ่งอาจเป็นชุดข้อมูล Power BI หรือแบบจำลอง Analysis Services ที่โฮสต์ระยะไกล
+- เริ่มต้นการพัฒนาแบบจำลองใหม่ ซึ่งอาจเป็นแบบจำลอง Import, DirectQuery หรือ Composite
 
-<span data-ttu-id="c41ff-109">บทความนี้เกี่ยวข้องกับสถานการณ์ที่สอง</span><span class="sxs-lookup"><span data-stu-id="c41ff-109">This article is concerned with the second scenario.</span></span> <span data-ttu-id="c41ff-110">ซึ่งจะให้คำแนะนำกับคุณว่าควรรวมรายงานและแบบจำลองลงในไฟล์ Power BI Desktop เดียวหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c41ff-110">It provides guidance on whether a report and model should be combined into a single Power BI Desktop file.</span></span>
+บทความนี้เกี่ยวข้องกับสถานการณ์ที่สอง ซึ่งจะให้คำแนะนำกับคุณว่าควรรวมรายงานและแบบจำลองลงในไฟล์ Power BI Desktop เดียวหรือไม่
 
-## <a name="single-file-solution"></a><span data-ttu-id="c41ff-111">โซลูชันไฟล์เดียว</span><span class="sxs-lookup"><span data-stu-id="c41ff-111">Single file solution</span></span>
+## <a name="single-file-solution"></a>โซลูชันไฟล์เดียว
 
-<span data-ttu-id="c41ff-112">_โซลูชันไฟล์เดียว_ ทำงานได้ดีเมื่อมีเพียงรายงานเดียวเท่านั้นที่ยึดตามแบบจำลอง</span><span class="sxs-lookup"><span data-stu-id="c41ff-112">A _single file solution_ works well when there's only ever a single report based on the model.</span></span> <span data-ttu-id="c41ff-113">ในกรณีนี้ อาจเป็นไปได้ว่าทั้งแบบจำลองและรายงานเป็นความพยายามของบุคคลเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="c41ff-113">In this case, it's likely that both the model and report are the efforts of the same person.</span></span> <span data-ttu-id="c41ff-114">เรากำหนดให้เป็นโซลูชัน _BI ส่วนบุคคล_ แม้ว่าจะสามารถแชร์รายงานกับผู้อื่นได้</span><span class="sxs-lookup"><span data-stu-id="c41ff-114">We define it as a _Personal BI_ solution, though the report could be shared with others.</span></span> <span data-ttu-id="c41ff-115">โซลูชันดังกล่าวสามารถเป็นตัวแทนรายงานที่มีขอบเขตบทบาทหรือการประเมินความท้าทายทางธุรกิจเพียงครั้งเดียวซึ่งมักจะอธิบายว่าเป็นรายงาน _เฉพาะกิจ_</span><span class="sxs-lookup"><span data-stu-id="c41ff-115">Such solutions can represent role-scoped reports or one-time assessments of a business challenge—often described as _ad hoc_ reports.</span></span>
+_โซลูชันไฟล์เดียว_ ทำงานได้ดีเมื่อมีเพียงรายงานเดียวเท่านั้นที่ยึดตามแบบจำลอง ในกรณีนี้ อาจเป็นไปได้ว่าทั้งแบบจำลองและรายงานเป็นความพยายามของบุคคลเดียวกัน เรากำหนดให้เป็นโซลูชัน _BI ส่วนบุคคล_ แม้ว่าจะสามารถแชร์รายงานกับผู้อื่นได้ โซลูชันดังกล่าวสามารถเป็นตัวแทนรายงานที่มีขอบเขตบทบาทหรือการประเมินความท้าทายทางธุรกิจเพียงครั้งเดียวซึ่งมักจะอธิบายว่าเป็นรายงาน _เฉพาะกิจ_
 
 :::image type="content" source="media/report-separate-from-model/single-file-solution.png" alt-text="ไฟล์เดียวประกอบด้วยแบบจำลองและรายงาน ที่พัฒนาโดยบุคคลเดียวกัน" border="true":::
 
-## <a name="separate-report-files"></a><span data-ttu-id="c41ff-117">แยกไฟล์รายงาน</span><span class="sxs-lookup"><span data-stu-id="c41ff-117">Separate report files</span></span>
+## <a name="separate-report-files"></a>แยกไฟล์รายงาน
 
-<span data-ttu-id="c41ff-118">ซึ่งเหมาะสมที่จะแยกการพัฒนาแบบจำลองและรายงานออกเป็นไฟล์ Power BI Desktop แบบแยกต่างหากเมื่อ:</span><span class="sxs-lookup"><span data-stu-id="c41ff-118">It makes sense to separate model and report development into separate Power BI Desktop files when:</span></span>
+ซึ่งเหมาะสมที่จะแยกการพัฒนาแบบจำลองและรายงานออกเป็นไฟล์ Power BI Desktop แบบแยกต่างหากเมื่อ:
 
-- <span data-ttu-id="c41ff-119">ผู้สร้างแบบจำลองข้อมูลและผู้เขียนรายงานเป็นบุคคลที่แตกต่างกัน</span><span class="sxs-lookup"><span data-stu-id="c41ff-119">Data modelers and report authors are different people.</span></span>
-- <span data-ttu-id="c41ff-120">เป็นที่เข้าใจกันว่าแบบจำลองนั้นจะเป็นแหล่งที่มาของรายงานหลายฉบับทั้งในปัจจุบันและในอนาคต</span><span class="sxs-lookup"><span data-stu-id="c41ff-120">It's understood that a model will be the source for multiple reports, now or in the future.</span></span>
+- ผู้สร้างแบบจำลองข้อมูลและผู้เขียนรายงานเป็นบุคคลที่แตกต่างกัน
+- เป็นที่เข้าใจกันว่าแบบจำลองนั้นจะเป็นแหล่งที่มาของรายงานหลายฉบับทั้งในปัจจุบันและในอนาคต
 
 :::image type="content" source="media/report-separate-from-model/separate-report-files.png" alt-text="มีไฟล์ PBIX สามไฟล์ ไฟล์แรกประกอบด้วยแบบจำลองเท่านั้น อีกสองไฟล์ประกอบด้วยรายงานเท่านั้น และไฟล์ดังกล่าวยังเชื่อมต่อสดกับแบบจำลองที่โฮสต์ในบริการ Power BI อีกด้วย รายงานถูกพัฒนามาจากบุคคลที่แตกต่างกัน " border="true":::
 
-<span data-ttu-id="c41ff-122">ผู้สร้างแบบจำลองข้อมูลยังคงสามารถใช้ประสบการณ์ในการเขียนรายงาน Power BI Desktop เพื่อทดสอบและตรวจสอบการออกแบบแบบจำลองได้</span><span class="sxs-lookup"><span data-stu-id="c41ff-122">Data modelers can still use the Power BI Desktop report authoring experience to test and validate their model designs.</span></span> <span data-ttu-id="c41ff-123">อย่างไรก็ตามหลังจากเผยแพร่ไฟล์ไปยังบริการ Power BI แล้วพวกเขาควรลบรายงานออกจากพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="c41ff-123">However, just after publishing their file to the Power BI service they should remove the report from the workspace.</span></span> <span data-ttu-id="c41ff-124">และพวกเขาต้องจำไว้ว่าให้ลบรายงานทุกครั้งที่เผยแพร่ซ้ำและเขียนทับชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c41ff-124">And, they must remember to remove the report each time they republish and overwrite the dataset.</span></span>
+ผู้สร้างแบบจำลองข้อมูลยังคงสามารถใช้ประสบการณ์ในการเขียนรายงาน Power BI Desktop เพื่อทดสอบและตรวจสอบการออกแบบแบบจำลองได้ อย่างไรก็ตามหลังจากเผยแพร่ไฟล์ไปยังบริการ Power BI แล้วพวกเขาควรลบรายงานออกจากพื้นที่ทำงาน และพวกเขาต้องจำไว้ว่าให้ลบรายงานทุกครั้งที่เผยแพร่ซ้ำและเขียนทับชุดข้อมูล
 
-### <a name="preserve-the-model-interface"></a><span data-ttu-id="c41ff-125">รักษาอินเทอร์เฟซแบบจำลอง</span><span class="sxs-lookup"><span data-stu-id="c41ff-125">Preserve the model interface</span></span>
+### <a name="preserve-the-model-interface"></a>รักษาอินเทอร์เฟซแบบจำลอง
 
-<span data-ttu-id="c41ff-126">บางครั้ง การเปลี่ยนแปลงแบบจำลองนั้นหลีกเลี่ยงไม่ได้</span><span class="sxs-lookup"><span data-stu-id="c41ff-126">Sometimes, model changes are inevitable.</span></span> <span data-ttu-id="c41ff-127">ผู้สร้างแบบจำลองข้อมูลจะต้องระมัดระวัง และไม่ทำลายอินเทอร์เฟซแบบจำลอง</span><span class="sxs-lookup"><span data-stu-id="c41ff-127">Data modelers must take care, then, not the break the model interface.</span></span> <span data-ttu-id="c41ff-128">หากเกิดเหตุการณ์ดังกล่าวขึ้น อาจเป็นไปได้ว่าวิชวลรายงานหรือแดชบอร์ดที่เกี่ยวข้องจะเสียหายด้วย</span><span class="sxs-lookup"><span data-stu-id="c41ff-128">If they do, it's possible that related report visuals or dashboard tiles will break.</span></span> <span data-ttu-id="c41ff-129">วิชวลที่เสียหายจะปรากฏเป็นข้อผิดพลาด และอาจส่งผลให้เกิดความยุ่งยากสำหรับผู้เขียนรายงานและผู้บริโภค</span><span class="sxs-lookup"><span data-stu-id="c41ff-129">Broken visuals appear as errors, and they can result in frustration for report authors and consumers.</span></span> <span data-ttu-id="c41ff-130">และถ้าแย่ไปกว่านั้น เหตุการณ์ดังกล่าวยังทำให้ความน่าเชื่อถือในข้อมูลลดลงอีกด้วย</span><span class="sxs-lookup"><span data-stu-id="c41ff-130">And worse—they can reduce trust in the data.</span></span>
+บางครั้ง การเปลี่ยนแปลงแบบจำลองนั้นหลีกเลี่ยงไม่ได้ ผู้สร้างแบบจำลองข้อมูลจะต้องระมัดระวัง และไม่ทำลายอินเทอร์เฟซแบบจำลอง หากเกิดเหตุการณ์ดังกล่าวขึ้น อาจเป็นไปได้ว่าวิชวลรายงานหรือแดชบอร์ดที่เกี่ยวข้องจะเสียหายด้วย วิชวลที่เสียหายจะปรากฏเป็นข้อผิดพลาด และอาจส่งผลให้เกิดความยุ่งยากสำหรับผู้เขียนรายงานและผู้บริโภค และถ้าแย่ไปกว่านั้น เหตุการณ์ดังกล่าวยังทำให้ความน่าเชื่อถือในข้อมูลลดลงอีกด้วย
 
-<span data-ttu-id="c41ff-131">ดังนั้น กรุณาจัดการการเปลี่ยนแปลงในแบบจำลองอย่างระมัดระวัง</span><span class="sxs-lookup"><span data-stu-id="c41ff-131">So, manage model changes carefully.</span></span> <span data-ttu-id="c41ff-132">ถ้าเป็นไปได้ ให้หลีกเลี่ยงการเปลี่ยนแปลงต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="c41ff-132">If possible, avoid the following changes:</span></span>
+ดังนั้น กรุณาจัดการการเปลี่ยนแปลงในแบบจำลองอย่างระมัดระวัง ถ้าเป็นไปได้ ให้หลีกเลี่ยงการเปลี่ยนแปลงต่อไปนี้:
 
-- <span data-ttu-id="c41ff-133">เปลี่ยนชื่อตาราง คอลัมน์ ลำดับชั้น ระดับลำดับชั้น หรือหน่วยวัด</span><span class="sxs-lookup"><span data-stu-id="c41ff-133">Renaming tables, columns, hierarchies, hierarchy levels, or measures.</span></span>
-- <span data-ttu-id="c41ff-134">ปรับเปลี่ยนชนิดข้อมูลของคอลัมน์</span><span class="sxs-lookup"><span data-stu-id="c41ff-134">Modifying column data types.</span></span>
-- <span data-ttu-id="c41ff-135">ปรับเปลี่ยนนิพจน์หน่วยวัดเพื่อให้มีการส่งกลับชนิดข้อมูลที่แตกต่างกัน</span><span class="sxs-lookup"><span data-stu-id="c41ff-135">Modifying measure expressions so they return a different data type.</span></span>
-- <span data-ttu-id="c41ff-136">ย้ายหน่วยวัดไปยังตารางหลักที่แตกต่างกัน</span><span class="sxs-lookup"><span data-stu-id="c41ff-136">Moving measures to a different home table.</span></span> <span data-ttu-id="c41ff-137">เนื่องจากการย้ายหน่วยวัดสามารถทำลายหน่วยวัดที่กำหนดขอบเขตรายงาน ซึ่งมีคุณสมบัติครบถ้วนด้วยชื่อตารางหลักของพวกเขา</span><span class="sxs-lookup"><span data-stu-id="c41ff-137">It's because moving a measure could break report-scoped measures that fully qualify measures with their home table name.</span></span> <span data-ttu-id="c41ff-138">เราไม่แนะนำให้คุณเขียนนิพจน์ DAX โดยใช้ชื่อหน่วยวัดที่มีคุณสมบัติครบถ้วน</span><span class="sxs-lookup"><span data-stu-id="c41ff-138">We don't recommend you write DAX expressions using fully qualified measures names.</span></span> <span data-ttu-id="c41ff-139">สำหรับข้อมูลเพิ่มเติม ให้ดู [DAX: การอ้างอิงคอลัมน์และหน่วยวัด](dax-column-measure-references.md)</span><span class="sxs-lookup"><span data-stu-id="c41ff-139">For more information, see [DAX: Column and measure references](dax-column-measure-references.md).</span></span>
+- เปลี่ยนชื่อตาราง คอลัมน์ ลำดับชั้น ระดับลำดับชั้น หรือหน่วยวัด
+- ปรับเปลี่ยนชนิดข้อมูลของคอลัมน์
+- ปรับเปลี่ยนนิพจน์หน่วยวัดเพื่อให้มีการส่งกลับชนิดข้อมูลที่แตกต่างกัน
+- ย้ายหน่วยวัดไปยังตารางหลักที่แตกต่างกัน เนื่องจากการย้ายหน่วยวัดสามารถทำลายหน่วยวัดที่กำหนดขอบเขตรายงาน ซึ่งมีคุณสมบัติครบถ้วนด้วยชื่อตารางหลักของพวกเขา เราไม่แนะนำให้คุณเขียนนิพจน์ DAX โดยใช้ชื่อหน่วยวัดที่มีคุณสมบัติครบถ้วน สำหรับข้อมูลเพิ่มเติม ให้ดู [DAX: การอ้างอิงคอลัมน์และหน่วยวัด](dax-column-measure-references.md)
 
-<span data-ttu-id="c41ff-140">การเพิ่มตาราง คอลัมน์ ลำดับชั้น ระดับลำดับชั้น หรือหน่วยวัดใหม่นั้นปลอดภัย ด้วยข้อยกเว้นเดียว: อาจเป็นไปได้ว่าชื่อหน่วยวัดใหม่อาจเหลื่อมกับชื่อหน่วยวัดที่กำหนดขอบเขตรายงาน</span><span class="sxs-lookup"><span data-stu-id="c41ff-140">Adding new tables, columns, hierarchies, hierarchy levels, or measures is safe, with one exception: It's possible that a new measure name could collide with a report-scoped measure name.</span></span> <span data-ttu-id="c41ff-141">เพื่อหลีกเลี่ยงการเหลื่อม เราขอแนะนำให้ผู้เขียนรายงานใช้แบบแผนการตั้งชื่อเมื่อกำหนดหน่วยวัดในรายงานของพวกเขา</span><span class="sxs-lookup"><span data-stu-id="c41ff-141">To avoid collision, we recommend report authors adopt a naming convention when defining measures in their reports.</span></span> <span data-ttu-id="c41ff-142">พวกเขาสามารถนำหน้าชื่อหน่วยวัดที่กำหนดขอบเขตรายงานด้วยเครื่องหมายขีดล่างหรืออักขระอื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="c41ff-142">They can prefix report-scoped measure names with an underscore or some other character(s).</span></span>
+การเพิ่มตาราง คอลัมน์ ลำดับชั้น ระดับลำดับชั้น หรือหน่วยวัดใหม่นั้นปลอดภัย ด้วยข้อยกเว้นเดียว: อาจเป็นไปได้ว่าชื่อหน่วยวัดใหม่อาจเหลื่อมกับชื่อหน่วยวัดที่กำหนดขอบเขตรายงาน เพื่อหลีกเลี่ยงการเหลื่อม เราขอแนะนำให้ผู้เขียนรายงานใช้แบบแผนการตั้งชื่อเมื่อกำหนดหน่วยวัดในรายงานของพวกเขา พวกเขาสามารถนำหน้าชื่อหน่วยวัดที่กำหนดขอบเขตรายงานด้วยเครื่องหมายขีดล่างหรืออักขระอื่น ๆ
 
-<span data-ttu-id="c41ff-143">หากคุณต้องการทำการเปลี่ยนแปลงแบบจำลองของคุณ เราขอแนะนำให้คุณ:</span><span class="sxs-lookup"><span data-stu-id="c41ff-143">If you must make breaking changes to your models, we recommend you either:</span></span>
+หากคุณต้องการทำการเปลี่ยนแปลงแบบจำลองของคุณ เราขอแนะนำให้คุณ:
 
-- <span data-ttu-id="c41ff-144">[ดูเนื้อหาที่เกี่ยวข้องสำหรับชุดข้อมูล](../consumer/end-user-related.md)ในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="c41ff-144">[View related content for the dataset](../consumer/end-user-related.md) in the Power BI service.</span></span>
-- <span data-ttu-id="c41ff-145">สำรวจมุมมอง [สายข้อมูล](../collaborate-share/service-data-lineage.md) ในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="c41ff-145">Explore [Data lineage](../collaborate-share/service-data-lineage.md) view in the Power BI service.</span></span>
+- [ดูเนื้อหาที่เกี่ยวข้องสำหรับชุดข้อมูล](../consumer/end-user-related.md)ในบริการ Power BI
+- สำรวจมุมมอง [สายข้อมูล](../collaborate-share/service-data-lineage.md) ในบริการ Power BI
 
-<span data-ttu-id="c41ff-146">ตัวเลือกทั้งสองช่วยให้คุณสามารถระบุรายงานและแดชบอร์ดที่เกี่ยวข้องได้อย่างรวดเร็ว</span><span class="sxs-lookup"><span data-stu-id="c41ff-146">Both options allow you to quickly identify any related reports and dashboards.</span></span> <span data-ttu-id="c41ff-147">มุมมองสายข้อมูลอาจเป็นตัวเลือกที่ดีกว่าเพราะง่ายต่อการดูบุคคลที่ติดต่อสำหรับอาร์ทิแฟกต์ที่เกี่ยวข้องแต่ละรายการ</span><span class="sxs-lookup"><span data-stu-id="c41ff-147">Data lineage view is probably the better choice because it's easy to see the contact person for each related artifact.</span></span> <span data-ttu-id="c41ff-148">อันที่จริงแล้วเป็นไฮเปอร์ลิงก์ที่เปิดข้อความอีเมลที่ส่งถึงผู้ติดต่อ</span><span class="sxs-lookup"><span data-stu-id="c41ff-148">In fact, it's a hyperlink that opens an email message addressed to the contact.</span></span>
+ตัวเลือกทั้งสองช่วยให้คุณสามารถระบุรายงานและแดชบอร์ดที่เกี่ยวข้องได้อย่างรวดเร็ว มุมมองสายข้อมูลอาจเป็นตัวเลือกที่ดีกว่าเพราะง่ายต่อการดูบุคคลที่ติดต่อสำหรับอาร์ทิแฟกต์ที่เกี่ยวข้องแต่ละรายการ อันที่จริงแล้วเป็นไฮเปอร์ลิงก์ที่เปิดข้อความอีเมลที่ส่งถึงผู้ติดต่อ
 
-<span data-ttu-id="c41ff-149">เราขอแนะนำให้คุณติดต่อเจ้าของอาร์ทิแฟกต์ที่เกี่ยวข้องแต่ละรายการเพื่อแจ้งให้พวกเขาทราบถึงการเปลี่ยนแปลงที่วางแผนไว้</span><span class="sxs-lookup"><span data-stu-id="c41ff-149">We recommend you contact the owner of each related artifact to let them know of any planned breaking changes.</span></span> <span data-ttu-id="c41ff-150">ด้วยวิธีนี้พวกเขาสามารถเตรียมและพร้อมที่จะแก้ไขและเผยแพร่รายงานของพวกเขาเพื่อช่วยลดการหยุดทำงานและความยุ่งยากให้เหลือน้อยที่สุด</span><span class="sxs-lookup"><span data-stu-id="c41ff-150">This way, they can be prepared and ready to fix and republish their reports, helping to minimize downtime and frustration.</span></span>
+เราขอแนะนำให้คุณติดต่อเจ้าของอาร์ทิแฟกต์ที่เกี่ยวข้องแต่ละรายการเพื่อแจ้งให้พวกเขาทราบถึงการเปลี่ยนแปลงที่วางแผนไว้ ด้วยวิธีนี้พวกเขาสามารถเตรียมและพร้อมที่จะแก้ไขและเผยแพร่รายงานของพวกเขาเพื่อช่วยลดการหยุดทำงานและความยุ่งยากให้เหลือน้อยที่สุด
 
-## <a name="next-steps"></a><span data-ttu-id="c41ff-151">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="c41ff-151">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="c41ff-152">สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="c41ff-152">For more information related to this article, check out the following resources:</span></span>
+สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:
 
-- [<span data-ttu-id="c41ff-153">เชื่อมต่อชุดข้อมูลในบริการของ Power BI จาก Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="c41ff-153">Connect to datasets in the Power BI service from Power BI Desktop</span></span>](../connect-data/desktop-report-lifecycle-datasets.md)
-- [<span data-ttu-id="c41ff-154">ดูเนื้อหาที่เกี่ยวข้องในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="c41ff-154">View related content in the Power BI service</span></span>](../consumer/end-user-related.md)
-- [<span data-ttu-id="c41ff-155">สายข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c41ff-155">Data lineage</span></span>](../collaborate-share/service-data-lineage.md)
-- <span data-ttu-id="c41ff-156">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c41ff-156">Questions?</span></span> [<span data-ttu-id="c41ff-157">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="c41ff-157">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="c41ff-158">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="c41ff-158">Suggestions?</span></span> [<span data-ttu-id="c41ff-159">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="c41ff-159">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+- [เชื่อมต่อชุดข้อมูลในบริการของ Power BI จาก Power BI Desktop](../connect-data/desktop-report-lifecycle-datasets.md)
+- [ดูเนื้อหาที่เกี่ยวข้องในบริการ Power BI](../consumer/end-user-related.md)
+- [สายข้อมูล](../collaborate-share/service-data-lineage.md)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)

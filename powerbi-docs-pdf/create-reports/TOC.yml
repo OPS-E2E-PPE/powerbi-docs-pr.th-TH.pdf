@@ -67,6 +67,8 @@
               href: desktop-high-density-sampling.md
             - name: เกี่ยวกับความสามารถในการเข้าถึง
               href: desktop-accessibility-overview.md
+            - name: การเพิกถอนใบรับรอง
+              href: desktop-certificate-revocation.md
             - name: ถามตอบภาษาธรรมชาติ
               items:
                 - name: บทนำถามตอบ
@@ -85,6 +87,8 @@
           items:
             - name: ตัวสร้างรายงานใน Power BI
               href: ../paginated-reports/report-builder-power-bi.md
+            - name: บันทึกการเปลี่ยนแปลงของตัวสร้างรายงาน
+              href: ../paginated-reports/paginated-reports-change-log.md
             - name: ตัวอย่างรายงานที่มีการแบ่งหน้าของ Power BI
               href: ../paginated-reports/paginated-reports-samples.md
             - name: ลองใช้งานมุมมองการออกแบบรายงาน
@@ -244,7 +248,7 @@
               href: ../visuals/power-bi-report-visualizations.md
             - name: เปลี่ยนวิชวลในรายงาน
               href: ../visuals/power-bi-report-change-visualization-type.md
-            - name: ปรับแต่งชื่อวิชวล พื้นหลัง และคำอธิบายใต้ภาพ
+            - name: กำหนดชื่อวิชวลพื้นหลังคำอธิบายแผนภูมิและอื่นๆอีกมากมาย
               href: ../visuals/power-bi-visualization-customize-title-background-and-legend.md
             - name: แสดงรายการโดยไม่มีข้อมูล
               href: desktop-show-items-no-data.md

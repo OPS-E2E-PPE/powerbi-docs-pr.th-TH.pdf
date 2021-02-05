@@ -16,4 +16,4 @@ ms.lasthandoff: 11/25/2020
 ms.locfileid: "96120418"
 ---
 > [!NOTE]
-> <span data-ttu-id="dda94-103">Power BI กำลังเปลี่ยนไปใช้รูปลักษณ์ใหม่ และรูปภาพบางรูปในเอกสารอาจไม่ตรงกับที่ภาพคุณเห็นในบริการ</span><span class="sxs-lookup"><span data-stu-id="dda94-103">Power BI is moving to a new look, and some images in the documentation may not match what you see in the service.</span></span> <span data-ttu-id="dda94-104">เรียนรู้เพิ่มเติมเกี่ยวกับ[รูปลักษณ์ใหม่](../consumer/service-new-look.md) และลองใช้งานด้วยตัวคุณเอง</span><span class="sxs-lookup"><span data-stu-id="dda94-104">Learn more about [the new look](../consumer/service-new-look.md) and try it for yourself.</span></span>
+> Power BI กำลังเปลี่ยนไปใช้รูปลักษณ์ใหม่ และรูปภาพบางรูปในเอกสารอาจไม่ตรงกับที่ภาพคุณเห็นในบริการ เรียนรู้เพิ่มเติมเกี่ยวกับ[รูปลักษณ์ใหม่](../consumer/service-new-look.md) และลองใช้งานด้วยตัวคุณเอง

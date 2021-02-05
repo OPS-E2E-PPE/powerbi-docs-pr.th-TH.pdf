@@ -8,48 +8,48 @@ ms.service: powerbi
 ms.subservice: powerbi-developer
 ms.topic: tutorial
 ms.date: 05/29/2019
-ms.openlocfilehash: 22d30e14256a2e58e05e17207380842392fe0c23
-ms.sourcegitcommit: eeaf607e7c1d89ef7312421731e1729ddce5a5cc
-ms.translationtype: HT
+ms.openlocfilehash: 8959a0ac63ff1f182bcb3544b1925529b1ad3663
+ms.sourcegitcommit: 2e81649476d5cb97701f779267be59e393460097
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97887419"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99422409"
 ---
-# <a name="step-2-get-an-authentication-access-token"></a><span data-ttu-id="80f22-104">ขั้นตอนที่ 2: รับโทเค็นการเข้าถึงการรับรองความถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="80f22-104">Step 2: Get an authentication access token</span></span>
+# <a name="step-2-get-an-authentication-access-token"></a>ขั้นตอนที่ 2: รับโทเค็นการเข้าถึงการรับรองความถูกต้อง
 
-<span data-ttu-id="80f22-105">บทความนี้คือ ขั้นตอนที่สองในชุด[พุชข้อมูลลงในชุดข้อมูล Power BI](walkthrough-push-data.md)</span><span class="sxs-lookup"><span data-stu-id="80f22-105">This article is the second step in the series [Push data into a Power BI dataset](walkthrough-push-data.md).</span></span>
+บทความนี้คือ ขั้นตอนที่สองในชุด[พุชข้อมูลลงในชุดข้อมูล Power BI](walkthrough-push-data.md)
 
-<span data-ttu-id="80f22-106">ในขั้นตอนที่ 1 คุณ[ได้ลงทะเบียนแอปไคลเอ็นต์ใน Azure AD แล้ว](../embedded/register-app.md)</span><span class="sxs-lookup"><span data-stu-id="80f22-106">In step 1, you [registered a client app in Azure AD](../embedded/register-app.md).</span></span> <span data-ttu-id="80f22-107">ในขั้นตอนนี้ คุณจะได้รับโทเค็นการเข้าถึงการรับรองความถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="80f22-107">In this step, you get an authentication access token.</span></span> <span data-ttu-id="80f22-108">แอป Power BI จะรวมกับ Azure AD Directory เพื่อให้สามารถเข้าสู่ระบบได้อย่างปลอดภัยรวมถึงการตรวจสอบสำหรับแอปของคุณ</span><span class="sxs-lookup"><span data-stu-id="80f22-108">Power BI apps are integrated with Azure Active Directory to provide your app with secure sign in and authorization.</span></span> <span data-ttu-id="80f22-109">แอปของคุณใช้โทเค็นเพื่อรับรองความถูกต้องในการเข้าถึง Azure AD และเพื่อเข้าถึงแหล่งข้อมูลของ Power BI</span><span class="sxs-lookup"><span data-stu-id="80f22-109">Your app uses a token to authenticate to Azure AD and gain access to Power BI resources.</span></span>
+ในขั้นตอนที่ 1 คุณ[ได้ลงทะเบียนแอปไคลเอ็นต์ใน Azure AD แล้ว](../embedded/register-app.md) ในขั้นตอนนี้ คุณจะได้รับโทเค็นการเข้าถึงการรับรองความถูกต้อง แอป Power BI จะรวมกับ Azure AD Directory เพื่อให้สามารถเข้าสู่ระบบได้อย่างปลอดภัยรวมถึงการตรวจสอบสำหรับแอปของคุณ แอปของคุณใช้โทเค็นเพื่อรับรองความถูกต้องในการเข้าถึง Azure AD และเพื่อเข้าถึงแหล่งข้อมูลของ Power BI
 
-## <a name="get-an-authentication-access-token"></a><span data-ttu-id="80f22-110">รับโทเค็นการเข้าใช้การรับรองความถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="80f22-110">Get an authentication access token</span></span>
+## <a name="get-an-authentication-access-token"></a>รับโทเค็นการเข้าใช้การรับรองความถูกต้อง
 
-<span data-ttu-id="80f22-111">ก่อนที่จะเริ่ม ตรวจสอบให้แน่ใจว่าคุณได้เสร็จสิ้น[ขั้นตอนก่อนหน้า](../embedded/register-app.md)ในการ[พุชข้อมูลลงในชุดของชุดข้อมูล Power BI](walkthrough-push-data.md)</span><span class="sxs-lookup"><span data-stu-id="80f22-111">Before starting, make sure you've completed the [previous step](../embedded/register-app.md) in the [Push data into a Power BI dataset](walkthrough-push-data.md) series.</span></span> 
+ก่อนที่จะเริ่ม ตรวจสอบให้แน่ใจว่าคุณได้เสร็จสิ้น[ขั้นตอนก่อนหน้า](../embedded/register-app.md)ในการ[พุชข้อมูลลงในชุดของชุดข้อมูล Power BI](walkthrough-push-data.md) 
 
-<span data-ttu-id="80f22-112">ขั้นตอนนี้จำเป็นต้องใช้ Visual Studio 2015 ขึ้นไป</span><span class="sxs-lookup"><span data-stu-id="80f22-112">This procedure requires Visual Studio 2015 or later.</span></span>
+ขั้นตอนนี้จำเป็นต้องใช้ Visual Studio 2015 ขึ้นไป
 
-1. <span data-ttu-id="80f22-113">สร้างโครงการ **แอปพลิเคชันคอนโซล** C# ใหม่ใน Studio Visual 2015</span><span class="sxs-lookup"><span data-stu-id="80f22-113">In Visual Studio, create a new C# **Console Application** project.</span></span>
+1. สร้างโครงการ **แอปพลิเคชันคอนโซล** C# ใหม่ใน Studio Visual 2015
 
-2. <span data-ttu-id="80f22-114">ติดตั้ง[ไลบรารีรับรองความถูกต้อง AD Azure สำหรับแพคเกจ .NET NuGet](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/2.22.302111727)</span><span class="sxs-lookup"><span data-stu-id="80f22-114">Install the [Azure AD Authentication Library for .NET NuGet package](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/2.22.302111727).</span></span> <span data-ttu-id="80f22-115">แอป .Net ของคุณต้องการแพคเกจนี้เพื่อรับโทเค็นรักษาความปลอดภัยการรับรองความถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="80f22-115">Your .Net app needs this package to get an authentication security token.</span></span> 
+2. ติดตั้ง[ไลบรารีรับรองความถูกต้อง AD Azure สำหรับแพคเกจ .NET NuGet](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/2.22.302111727) แอป .Net ของคุณต้องการแพคเกจนี้เพื่อรับโทเค็นรักษาความปลอดภัยการรับรองความถูกต้อง 
 
-     <span data-ttu-id="80f22-116">a.</span><span class="sxs-lookup"><span data-stu-id="80f22-116">a.</span></span> <span data-ttu-id="80f22-117">เลือก **เครื่องมือ** > **ตัวจัดการแพคเกจ NuGet** > **คอนโซลตัวจัดการแพคเกจ**</span><span class="sxs-lookup"><span data-stu-id="80f22-117">Select **Tools** > **NuGet Package Manager** > **Package Manager Console**.</span></span>
+     a. เลือก **เครื่องมือ** > **ตัวจัดการแพคเกจ NuGet** > **คอนโซลตัวจัดการแพคเกจ**
 
-     <span data-ttu-id="80f22-118">b.</span><span class="sxs-lookup"><span data-stu-id="80f22-118">b.</span></span> <span data-ttu-id="80f22-119">ป้อน **Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.21.301221612**</span><span class="sxs-lookup"><span data-stu-id="80f22-119">Enter **Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.21.301221612**</span></span>
+     b. ป้อน **Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.21.301221612**
 
-     <span data-ttu-id="80f22-120">c.</span><span class="sxs-lookup"><span data-stu-id="80f22-120">c.</span></span> <span data-ttu-id="80f22-121">ใน Program.cs เพิ่ม`using Microsoft.IdentityModel.Clients.ActiveDirectory;`</span><span class="sxs-lookup"><span data-stu-id="80f22-121">In Program.cs, add `using Microsoft.IdentityModel.Clients.ActiveDirectory;`.</span></span>
+     c. ใน Program.cs เพิ่ม`using Microsoft.IdentityModel.Clients.ActiveDirectory;`
 
-3. <span data-ttu-id="80f22-122">เพิ่มตัวอย่างรหัสที่แสดงขึ้นหลังจากขั้นตอนเหล่านี้ลงใน Program.cs</span><span class="sxs-lookup"><span data-stu-id="80f22-122">Add the sample code listed after these steps to Program.cs.</span></span>
+3. เพิ่มตัวอย่างรหัสที่แสดงขึ้นหลังจากขั้นตอนเหล่านี้ลงใน Program.cs
 
-4. <span data-ttu-id="80f22-123">แทนที่ "{ClientID }" ด้วย **ไคลเอ็นต์ ID** ที่คุณได้ใน [บทความชุดก่อนหน้า](../embedded/register-app.md)เมื่อคุณลงทะเบียนแอปของคุณ</span><span class="sxs-lookup"><span data-stu-id="80f22-123">Replace "{ClientID}", with the **Client ID** you got in the [previous series article](../embedded/register-app.md) when you registered your app.</span></span>
+4. แทนที่ "{ClientID }" ด้วย **ไคลเอ็นต์ ID** ที่คุณได้ใน [บทความชุดก่อนหน้า](../embedded/register-app.md)เมื่อคุณลงทะเบียนแอปของคุณ
 
-5. <span data-ttu-id="80f22-124">เรียกใช้แอปคอนโซล และลงชื่อเข้าใช้บัญชี Power BI ของคุณ</span><span class="sxs-lookup"><span data-stu-id="80f22-124">Run your console app and sign in to your Power BI account.</span></span> 
+5. เรียกใช้แอปคอนโซล และลงชื่อเข้าใช้บัญชี Power BI ของคุณ 
 
-   <span data-ttu-id="80f22-125">สตริงโทเค็นควรปรากฏในหน้าต่างคอนโซล</span><span class="sxs-lookup"><span data-stu-id="80f22-125">A token string should appear in the console window.</span></span>
+   สตริงโทเค็นควรปรากฏในหน้าต่างคอนโซล
 
-<span data-ttu-id="80f22-126">**ตัวอย่างรหัสเพื่อรับโทเค็นรักษาความปลอดภัยการรับรองความถูกต้อง**</span><span class="sxs-lookup"><span data-stu-id="80f22-126">**Sample code to get authentication security token**</span></span>
+**ตัวอย่างรหัสเพื่อรับโทเค็นรักษาความปลอดภัยการรับรองความถูกต้อง**
 
-<span data-ttu-id="80f22-127">เพิ่มรหัสนี้ลงในโปรแกรม {...}</span><span class="sxs-lookup"><span data-stu-id="80f22-127">Add this code to Program {...}.</span></span>
+เพิ่มรหัสนี้ลงในโปรแกรม {...}
 
-* <span data-ttu-id="80f22-128">ตัวแปรโทเค็นสำหรับเรียกใช้การดำเนินการ:</span><span class="sxs-lookup"><span data-stu-id="80f22-128">A token variable to call operations:</span></span> 
+* ตัวแปรโทเค็นสำหรับเรียกใช้การดำเนินการ: 
   
   ```csharp
   private static string token = string.Empty;
@@ -58,7 +58,7 @@ ms.locfileid: "97887419"
   {
   }
   ```
-* <span data-ttu-id="80f22-129">ใน static void Main(string[] args):</span><span class="sxs-lookup"><span data-stu-id="80f22-129">In static void Main(string[] args):</span></span>
+* ใน static void Main(string[] args):
   
   ```csharp
   static void Main(string[] args)
@@ -67,7 +67,7 @@ ms.locfileid: "97887419"
     token = GetToken();
   }
   ```
-* <span data-ttu-id="80f22-130">เพิ่มวิธีการ GetToken():</span><span class="sxs-lookup"><span data-stu-id="80f22-130">Add a GetToken() method:</span></span>
+* เพิ่มวิธีการ GetToken():
 
 ```csharp
        #region Get an authentication access token
@@ -88,7 +88,7 @@ ms.locfileid: "97887419"
            string resourceUri = "https://analysis.windows.net/powerbi/api";
 
            //OAuth2 authority Uri
-           string authorityUri = "https://login.microsoftonline.net/common/";
+           string authorityUri = "https://login.microsoftonline.com/common/";
 
            //Get access token:
            // To call a Power BI REST operation, create an instance of AuthenticationContext and call AcquireToken
@@ -110,12 +110,12 @@ ms.locfileid: "97887419"
        #endregion
 ```
 
-<span data-ttu-id="80f22-131">หลังจากที่คุณได้รับโทเค็นรับรองความถูกต้อง คุณสามารถเรียกการดำเนินการ Power BI ต่างๆได้</span><span class="sxs-lookup"><span data-stu-id="80f22-131">After you get an authentication token, you can call any Power BI operation.</span></span>
+หลังจากที่คุณได้รับโทเค็นรับรองความถูกต้อง คุณสามารถเรียกการดำเนินการ Power BI ต่างๆได้
 
-<span data-ttu-id="80f22-132">บทความถัดไปในชุดนี้แสดงถึงวิธีการ[สร้างชุดข้อมูลใน Power BI](walkthrough-push-data-create-dataset.md)</span><span class="sxs-lookup"><span data-stu-id="80f22-132">The next article in this series shows you how to [Create a dataset in Power BI](walkthrough-push-data-create-dataset.md).</span></span>
+บทความถัดไปในชุดนี้แสดงถึงวิธีการ[สร้างชุดข้อมูลใน Power BI](walkthrough-push-data-create-dataset.md)
 
 
-## <a name="complete-code-listing"></a><span data-ttu-id="80f22-133">รายการรหัสเสร็จสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="80f22-133">Complete code listing</span></span>
+## <a name="complete-code-listing"></a>รายการรหัสเสร็จสมบูรณ์
 
 ```csharp
 using System;
@@ -180,10 +180,10 @@ namespace walkthrough_push_data
 
 
 
-## <a name="next-steps"></a><span data-ttu-id="80f22-134">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="80f22-134">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-* <span data-ttu-id="80f22-135">บทความถัดไปในชุดนี้คือ[สร้างชุดข้อมูลใน Power BI](walkthrough-push-data-create-dataset.md)</span><span class="sxs-lookup"><span data-stu-id="80f22-135">The next article in this series is [Create a dataset in Power BI](walkthrough-push-data-create-dataset.md)</span></span>
-* [<span data-ttu-id="80f22-136">ภาพรวมของ Power BI REST API</span><span class="sxs-lookup"><span data-stu-id="80f22-136">Overview of Power BI REST API</span></span>](overview-of-power-bi-rest-api.md)  
-* [<span data-ttu-id="80f22-137">Power BI REST APIs</span><span class="sxs-lookup"><span data-stu-id="80f22-137">Power BI REST APIs</span></span>](/rest/api/power-bi/)  
+* บทความถัดไปในชุดนี้คือ[สร้างชุดข้อมูลใน Power BI](walkthrough-push-data-create-dataset.md)
+* [ภาพรวมของ Power BI REST API](overview-of-power-bi-rest-api.md)  
+* [Power BI REST APIs](/rest/api/power-bi/)  
 
-<span data-ttu-id="80f22-138">มีคำถามเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="80f22-138">More questions?</span></span> [<span data-ttu-id="80f22-139">ลองไปที่ชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="80f22-139">Try the Power BI Community</span></span>](https://community.powerbi.com/)
+มีคำถามเพิ่มเติมหรือไม่ [ลองไปที่ชุมชน Power BI](https://community.powerbi.com/)

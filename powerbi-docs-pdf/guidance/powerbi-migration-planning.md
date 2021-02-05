@@ -2,131 +2,131 @@
 title: วางแผนการปรับใช้เพื่อโยกย้ายข้อมูลไปยัง Power BI
 description: คำแนะนำเกี่ยวกับการวางแผนสำหรับการปรับใช้เมื่อโยกย้ายข้อมูลไปยัง Power BI
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: asaxton
 ms.service: powerbi
 ms.subservice: powerbi
 ms.topic: conceptual
 ms.date: 08/20/2020
-ms.openlocfilehash: f161819b6e26c197bacc5534b5abfb426d612624
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: f6b781d6b3f87587e7734d5f842a013fd6fb5c19
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419233"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99086705"
 ---
-# <a name="plan-deployment-to-migrate-to-power-bi"></a><span data-ttu-id="c6691-103">วางแผนการปรับใช้เพื่อโยกย้ายข้อมูลไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-103">Plan deployment to migrate to Power BI</span></span>
+# <a name="plan-deployment-to-migrate-to-power-bi"></a>วางแผนการปรับใช้เพื่อโยกย้ายข้อมูลไปยัง Power BI
 
-<span data-ttu-id="c6691-104">บทความนี้อธิบายถึง **ลำดับขั้นที่ 2** ซึ่งเกี่ยวข้องกับการวางแผนการโยกย้ายข้อมูลสำหรับโซลูชัน Power BI เดียว</span><span class="sxs-lookup"><span data-stu-id="c6691-104">This article describes **Stage 2**, which is concerned with planning the migration for a single Power BI solution.</span></span>
+บทความนี้อธิบายถึง **ลำดับขั้นที่ 2** ซึ่งเกี่ยวข้องกับการวางแผนการโยกย้ายข้อมูลสำหรับโซลูชัน Power BI เดียว
 
 :::image type="content" source="media/powerbi-migration-planning/migrate-to-powerbi-stage-2.png" alt-text="รูปภาพแสดงลำดับขั้นของการโยกย้ายข้อมูล Power BI บทความนี้จะให้ความสำคัญกับลำดับขั้นที่ 2":::
 
 > [!NOTE]
-> <span data-ttu-id="c6691-106">สำหรับคำอธิบายที่สมบูรณ์ของกราฟิกด้านบน โปรดดูที่ [ภาพรวมการโยกย้ายข้อมูล Power BI](powerbi-migration-overview.md)</span><span class="sxs-lookup"><span data-stu-id="c6691-106">For a complete explanation of the above graphic, see [Power BI migration overview](powerbi-migration-overview.md).</span></span>
+> สำหรับคำอธิบายที่สมบูรณ์ของกราฟิกด้านบน โปรดดูที่ [ภาพรวมการโยกย้ายข้อมูล Power BI](powerbi-migration-overview.md)
 
-<span data-ttu-id="c6691-107">จุดมุ่งเน้นของลำดับขั้นที่ 2 คือการกำหนดวิธีการใช้ข้อกำหนดที่กำหนดไว้ในลำดับขั้นที่ 1 เพื่อโยกย้ายโซลูชันไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-107">The focus of Stage 2 is on defining how the requirements that were defined in Stage 1 are used to migrate a solution to Power BI.</span></span>
+จุดมุ่งเน้นของลำดับขั้นที่ 2 คือการกำหนดวิธีการใช้ข้อกำหนดที่กำหนดไว้ในลำดับขั้นที่ 1 เพื่อโยกย้ายโซลูชันไปยัง Power BI
 
-<span data-ttu-id="c6691-108">ผลลัพธ์จากลำดับขั้นที่ 2 ประกอบด้วยการตัดสินใจที่เฉพาะเจาะจงมากที่สุดเท่าที่เป็นไปได้เพื่อเป็นแนวทางในกระบวนการปรับใช้</span><span class="sxs-lookup"><span data-stu-id="c6691-108">The output from Stage 2 includes as many specific decisions as possible to guide the deployment process.</span></span>
+ผลลัพธ์จากลำดับขั้นที่ 2 ประกอบด้วยการตัดสินใจที่เฉพาะเจาะจงมากที่สุดเท่าที่เป็นไปได้เพื่อเป็นแนวทางในกระบวนการปรับใช้
 
-<span data-ttu-id="c6691-109">การตัดสินใจในลักษณะนี้เป็นกระบวนการที่วนซ้ำและไม่เป็นเชิงเส้น</span><span class="sxs-lookup"><span data-stu-id="c6691-109">Decision-making of this nature is an iterative and non-linear process.</span></span> <span data-ttu-id="c6691-110">การวางแผนบางอย่างจะเกิดขึ้นแล้วใน [ขั้นตอนก่อนโยกย้าย](powerbi-migration-pre-migration-steps.md)</span><span class="sxs-lookup"><span data-stu-id="c6691-110">Some planning will have already occurred in the [pre-migration steps](powerbi-migration-pre-migration-steps.md).</span></span> <span data-ttu-id="c6691-111">การเรียนรู้จากการพิสูจน์แนวคิด (อธิบายไว้ใน [ลำดับขั้นที่ 3](powerbi-migration-proof-of-concept.md)) อาจเกิดขึ้นควบคู่ไปกับการวางแผนการปรับใช้</span><span class="sxs-lookup"><span data-stu-id="c6691-111">Learnings from a proof of concept (described in [Stage 3](powerbi-migration-proof-of-concept.md)) may occur in parallel with deployment planning.</span></span> <span data-ttu-id="c6691-112">แม้ในขณะที่สร้างโซลูชัน (อธิบายไว้ใน[ลำดับขั้นที่ 4](powerbi-migration-create-validate-content.md)) ข้อมูลเพิ่มเติมอาจบังเกิดขึ้น ซึ่งมีผลต่อการตัดสินใจในการปรับใช้</span><span class="sxs-lookup"><span data-stu-id="c6691-112">Even while creating the solution (described in [Stage 4](powerbi-migration-create-validate-content.md)), additional information may arise that influences deployment decisions.</span></span>
-
-> [!IMPORTANT]
-> <span data-ttu-id="c6691-113">ลำดับขั้นที่ 1-5 แสดงถึงกิจกรรมที่เกี่ยวข้องกับโซลูชันเฉพาะหนึ่งรายการ</span><span class="sxs-lookup"><span data-stu-id="c6691-113">Stages 1-5 represent activities related to one specific solution.</span></span> <span data-ttu-id="c6691-114">มีการตัดสินใจและกิจกรรมในระดับองค์กร/ผู้เช่าซึ่งส่งผลกระทบต่อกระบวนการในระดับโซลูชัน</span><span class="sxs-lookup"><span data-stu-id="c6691-114">There are decisions and activities at the organizational/tenant level which impact the process at the solution level.</span></span> <span data-ttu-id="c6691-115">กิจกรรมการวางแผนระดับสูงเหล่านั้นในบางส่วนจะถูกกล่าวถึงใน[บทความภาพรวมการโยกย้ายข้อมูล Power BI](powerbi-migration-overview.md)</span><span class="sxs-lookup"><span data-stu-id="c6691-115">Some of those higher-level planning activities are discussed in the [Power BI migration overview](powerbi-migration-overview.md) article.</span></span> <span data-ttu-id="c6691-116">เมื่อเหมาะสม ให้ยืดเวลาการตัดสินใจระดับองค์กรออกไปเพื่อประสิทธิภาพและความสม่ำเสมอ</span><span class="sxs-lookup"><span data-stu-id="c6691-116">When appropriate, defer to the organizational-level decisions for efficiency and consistency.</span></span>
-
-> [!TIP]
-> <span data-ttu-id="c6691-117">หัวข้อที่กล่าวถึงในบทความนี้ยังใช้กับโครงการการใช้งาน Power BI แบบมาตรฐาน</span><span class="sxs-lookup"><span data-stu-id="c6691-117">The topics discussed in this article also apply to a standard Power BI implementation project.</span></span>
-
-## <a name="choose-power-bi-product"></a><span data-ttu-id="c6691-118">เลือกผลิตภัณฑ์ Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-118">Choose Power BI product</span></span>
-
-<span data-ttu-id="c6691-119">หนึ่งในการตัดสินใจอันดับแรกคือการเลือกผลิตภัณฑ์ Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-119">One of the first decisions is to choose the Power BI product.</span></span> <span data-ttu-id="c6691-120">ซึ่งเป็นการตัดสินใจระหว่าง [บริการ Power BI](../fundamentals/power-bi-service-overview.md) หรือ [เซิร์ฟเวอร์รายงาน Power BI](../report-server/get-started.md)</span><span class="sxs-lookup"><span data-stu-id="c6691-120">It's a decision between the [Power BI service](../fundamentals/power-bi-service-overview.md) or [Power BI Report Server](../report-server/get-started.md).</span></span> <span data-ttu-id="c6691-121">เมื่อเผยแพร่เนื้อหาแล้วจะมีตัวเลือกเพิ่มเติมมากมายให้ใช้งาน เช่น การฝัง การส่งมอบผ่านอุปกรณ์เคลื่อนที่ และการสมัครรับอีเมล</span><span class="sxs-lookup"><span data-stu-id="c6691-121">Once content has been published, many additional options become available, such as embedding, mobile delivery, and email subscriptions.</span></span>
-
-<span data-ttu-id="c6691-122">สำหรับข้อมูลเพิ่มเติมเกี่ยวกับข้อควรพิจารณาทางสถาปัตยกรรม โปรดดูที่ **ส่วนที่ 3** ของ [เอกสารรายงานเรื่องการวางแผนการปรับใช้ Power BI สำหรับองค์กร](https://aka.ms/PBIEnterpriseDeploymentWP)</span><span class="sxs-lookup"><span data-stu-id="c6691-122">For more information about architectural considerations, see **Section 3** of the [Planning a Power BI enterprise deployment whitepaper](https://aka.ms/PBIEnterpriseDeploymentWP).</span></span>
-
-> [!CAUTION]
-> <span data-ttu-id="c6691-123">ถ้าคุณถูกชักจูงให้พึ่งพาการใช้ไฟล์ Power BI Desktop ที่จัดเก็บในระบบไฟล์ โปรดทราบว่าสิ่งนั้นไม่ใช่แนวทางที่ดีที่สุด</span><span class="sxs-lookup"><span data-stu-id="c6691-123">If you're tempted to rely on using Power BI Desktop files stored in a file system, be aware that it's not an optimal approach.</span></span> <span data-ttu-id="c6691-124">การใช้บริการ Power BI (หรือเซิร์ฟเวอร์รายงาน Power BI) มีข้อดีอย่างมากสำหรับความปลอดภัย การกระจายเนื้อหา และการทำงานร่วมกัน</span><span class="sxs-lookup"><span data-stu-id="c6691-124">Using the Power BI service (or Power BI Report Server) has significant advantages for security, content distribution, and collaboration.</span></span> <span data-ttu-id="c6691-125">บริการ Power BI ยังช่วยก่อให้เกิดความสามารถในการตรวจสอบและติดตามกิจกรรมอีกด้วย</span><span class="sxs-lookup"><span data-stu-id="c6691-125">The ability to audit and monitor activities is also enabled by the Power BI service.</span></span>
-
-## <a name="decide-on-workspace-management-approach"></a><span data-ttu-id="c6691-126">ตัดสินใจเกี่ยวกับแนวทางการจัดการพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="c6691-126">Decide on workspace management approach</span></span>
-
-<span data-ttu-id="c6691-127">[พื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md) เป็นแนวคิดหลักของบริการ Power BI ซึ่งทำให้การจัดการพื้นที่ทำงานเป็นสิ่งสำคัญในการวางแผน</span><span class="sxs-lookup"><span data-stu-id="c6691-127">[Workspaces](../collaborate-share/service-new-workspaces.md) are a core concept of the Power BI service, which makes workspace management an important aspect of planning.</span></span> <span data-ttu-id="c6691-128">คำถามที่ต้องถามได้แก่:</span><span class="sxs-lookup"><span data-stu-id="c6691-128">Questions to ask include:</span></span>
-
-- <span data-ttu-id="c6691-129">จำเป็นต้องมีพื้นที่ทำงานใหม่สำหรับโซลูชันใหม่นี้หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-129">Is a new workspace needed for this new solution?</span></span>
-- <span data-ttu-id="c6691-130">จำเป็นต้องมีพื้นที่ทำงานแยกกันเพื่อรองรับการพัฒนา การทดสอบ และการผลิตหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-130">Will separate workspaces be needed to accommodate development, test, and production?</span></span>
-- <span data-ttu-id="c6691-131">จะใช้พื้นที่ทำงานแยกกันสำหรับข้อมูลและรายงาน หรือพื้นที่ทำงานเดียวจะเพียงพอหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-131">Will separate workspaces be used for data and reports, or will a single workspace be sufficient?</span></span> <span data-ttu-id="c6691-132">พื้นที่ทำงานแยกกันมีข้อดีหลายประการ โดยเฉพาะอย่างยิ่งสำหรับการรักษาความปลอดภัยชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c6691-132">Separate workspaces have numerous advantages, especially for securing datasets.</span></span> <span data-ttu-id="c6691-133">เมื่อจำเป็น คุณสามารถจัดการพื้นที่ทำงานเหล่านั้นแยกต่างหากจากผู้ใช้ที่เผยแพร่รายงานได้</span><span class="sxs-lookup"><span data-stu-id="c6691-133">When necessary, they can be managed separately from those users who publish reports.</span></span>
-- <span data-ttu-id="c6691-134">ข้อกำหนดด้านความปลอดภัยสำหรับพื้นที่ทำงานคืออะไร</span><span class="sxs-lookup"><span data-stu-id="c6691-134">What are the security requirements for the workspace?</span></span> <span data-ttu-id="c6691-135">ซึ่งมีผลต่อการวางแผนสำหรับ [บทบาทของพื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces)</span><span class="sxs-lookup"><span data-stu-id="c6691-135">It influences planning for [workspace roles](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces).</span></span> <span data-ttu-id="c6691-136">หากผู้บริโภคเนื้อหาจะใช้แอป [สิทธิ์สำหรับแอป](../collaborate-share/service-create-distribute-apps.md#publish-your-app) จะได้รับการจัดการแยกต่างหากจากพื้นที่ทำงาน</span><span class="sxs-lookup"><span data-stu-id="c6691-136">If an app will be used by content consumers, [permissions for the app](../collaborate-share/service-create-distribute-apps.md#publish-your-app) are managed separately from the workspace.</span></span> <span data-ttu-id="c6691-137">สิทธิ์จำเพาะสำหรับผู้ดูแอปช่วยเพิ่มความยืดหยุ่นในการตอบสนองข้อกำหนดด้านความปลอดภัยสำหรับผู้ใช้รายงานหรือแดชบอร์ดแบบอ่านอย่างเดียว</span><span class="sxs-lookup"><span data-stu-id="c6691-137">Distinct permissions for app viewers allow additional flexibility in meeting security requirements for read-only consumers of reports or dashboards.</span></span>
-- <span data-ttu-id="c6691-138">สามารถใช้กลุ่มที่มีอยู่เพื่อรักษาความปลอดภัยเนื้อหาใหม่ได้หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-138">Can existing groups be used for securing the new content?</span></span> <span data-ttu-id="c6691-139">รองรับทั้งกลุ่ม Azure Active Directory และกลุ่ม Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="c6691-139">Both Azure Active Directory and Microsoft 365 groups are supported.</span></span> <span data-ttu-id="c6691-140">การใช้กลุ่มทำให้การจัดการสิทธิ์ทำได้ง่ายกว่าการมอบหมายให้กับผู้ใช้แต่ละคน เมื่อสอดคล้องกับกระบวนการที่มีอยู่</span><span class="sxs-lookup"><span data-stu-id="c6691-140">When aligned with existing processes, using groups makes permissions management easier than assignments to individual users.</span></span>
-- <span data-ttu-id="c6691-141">มีข้อพิจารณาด้านความปลอดภัยที่เกี่ยวข้องกับผู้ใช้ประเภทผู้เยี่ยมชมภายนอกหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-141">Are there any security considerations related to external guest users?</span></span> <span data-ttu-id="c6691-142">คุณอาจต้องทำงานร่วมกับผู้ดูแลระบบ Azure Active Directory และผู้ดูแลระบบ Power BI ของคุณเพื่อกำหนดค่า [การเข้าถึงของผู้ใช้ประเภทผู้เยี่ยมชม](../admin/service-admin-azure-ad-b2b.md)</span><span class="sxs-lookup"><span data-stu-id="c6691-142">You may need to work with your Azure Active Directory administrator and your Power BI administrator to configure [guest user access](../admin/service-admin-azure-ad-b2b.md).</span></span>
-
-> [!TIP]
-> <span data-ttu-id="c6691-143">พิจารณาสร้างพื้นที่ทำงานสำหรับกิจกรรมหรือโครงการทางธุรกิจเฉพาะ</span><span class="sxs-lookup"><span data-stu-id="c6691-143">Consider creating a workspace for a specific business activity or project.</span></span> <span data-ttu-id="c6691-144">คุณอาจถูกชักจูงให้เริ่มต้นจากการจัดโครงสร้างพื้นที่ทำงานตามโครงสร้างองค์กรของคุณ (เช่น พื้นที่ทำงานต่อแผนก) แต่บ่อยครั้งที่แนวทางนี้กว้างเกินไป</span><span class="sxs-lookup"><span data-stu-id="c6691-144">You may be tempted to start off structuring workspaces based on your organizational structure (such as a workspace per department), but this approach frequently ends up being too broad.</span></span>
-
-## <a name="determine-how-content-will-be-consumed"></a><span data-ttu-id="c6691-145">กำหนดวิธีการบริโภคเนื้อหา</span><span class="sxs-lookup"><span data-stu-id="c6691-145">Determine how content will be consumed</span></span>
-
-<span data-ttu-id="c6691-146">การทำความเข้าใจว่าผู้บริโภคของโซลูชันชอบดูรายงานและแดชบอร์ดอย่างไรเป็นประโยชน์</span><span class="sxs-lookup"><span data-stu-id="c6691-146">It's helpful to understand how consumers of a solution prefer to view reports and dashboards.</span></span> <span data-ttu-id="c6691-147">คำถามที่ต้องถามได้แก่:</span><span class="sxs-lookup"><span data-stu-id="c6691-147">Questions to ask include:</span></span>
-
-- <span data-ttu-id="c6691-148">[แอป Power BI](../consumer/end-user-apps.md) (ซึ่งประกอบด้วยรายงานและแดชบอร์ดจากพื้นที่ทำงานเดียว) จะเป็นวิธีที่ดีที่สุดในการส่งมอบเนื้อหาให้กับผู้บริโภคหรือไม่ หรือการเข้าถึงพื้นที่ทำงานโดยตรงจะเพียงพอสำหรับผู้ดูเนื้อหาหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-148">Will a [Power BI app](../consumer/end-user-apps.md) (which comprises reports and dashboards from a single workspace) be the best way to deliver content to consumers, or will direct access to a workspace be sufficient for content viewers?</span></span>
-- <span data-ttu-id="c6691-149">รายงานและแดชบอร์ดบางรายการจะถูกฝังไว้ที่อื่น เช่น [Teams](../collaborate-share/service-embed-report-microsoft-teams.md), [SharePoint Online](../collaborate-share/service-embed-report-spo.md) หรือ [พอร์ทัลหรือเว็บไซต์ที่ปลอดภัย](../collaborate-share/service-embed-secure.md) หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-149">Will certain reports and dashboards be embedded elsewhere, such as [Teams](../collaborate-share/service-embed-report-microsoft-teams.md), [SharePoint Online](../collaborate-share/service-embed-report-spo.md), or a [secure portal or website](../collaborate-share/service-embed-secure.md)?</span></span>
-- <span data-ttu-id="c6691-150">ผู้บริโภคจะเข้าถึงเนื้อหาโดยใช้ [อุปกรณ์เคลื่อนที่](../consumer/mobile/mobile-apps-for-mobile-devices.md) หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-150">Will consumers access content using [mobile devices](../consumer/mobile/mobile-apps-for-mobile-devices.md)?</span></span> <span data-ttu-id="c6691-151">ข้อกำหนดในการส่งรายงานไปยังอุปกรณ์ฟอร์มแฟคเตอร์ขนาดเล็กจะมีผลต่อ [การตัดสินใจในการออกแบบรายงาน](../create-reports/desktop-create-phone-report.md) บางส่วน</span><span class="sxs-lookup"><span data-stu-id="c6691-151">Requirements to deliver reports to small form factor devices will influence some [report design decisions](../create-reports/desktop-create-phone-report.md).</span></span>
-
-## <a name="decide-if-other-content-may-be-created"></a><span data-ttu-id="c6691-152">ตัดสินใจว่าจะสร้างเนื้อหาอื่นหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-152">Decide if other content may be created</span></span>
-
-<span data-ttu-id="c6691-153">มีการตัดสินใจหลักหลายประการที่เกี่ยวข้องกับการอนุญาตให้ผู้บริโภคสร้างเนื้อหาใหม่ เช่น:</span><span class="sxs-lookup"><span data-stu-id="c6691-153">There are several key decisions to be made related to allowing consumers to create new content, such as:</span></span>
-
-- <span data-ttu-id="c6691-154">ผู้บริโภคจะได้รับอนุญาตให้สร้างรายงานใหม่จากชุดข้อมูลที่เผยแพร่หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-154">Will consumers be allowed to create new reports from the published dataset?</span></span> <span data-ttu-id="c6691-155">สามารถเปิดใช้งานความสามารถนี้ได้โดยการมอบหมาย [สิทธิ์การสร้าง](../connect-data/service-datasets-build-permissions.md) ของชุดข้อมูลให้กับผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="c6691-155">This capability can be enabled by assigning dataset [build permission](../connect-data/service-datasets-build-permissions.md) to a user.</span></span>
-- <span data-ttu-id="c6691-156">หากผู้บริโภคต้องการปรับแต่งรายงาน พวกเขาสามารถ [บันทึกสำเนา](../connect-data/service-datasets-copy-reports.md) และปรับแต่งรายงานให้ตรงกับความต้องการของพวกเขาได้หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-156">If consumers want to customize a report, can they [save a copy](../connect-data/service-datasets-copy-reports.md) of it and personalize it to meet their needs?</span></span>
-
-> [!CAUTION]
-> <span data-ttu-id="c6691-157">แม้ว่าความสามารถ _บันทึกสำเนา_ จะเป็นคุณลักษณะที่ดี แต่ก็ควรใช้ด้วยความระมัดระวังเมื่อรายงานมีกราฟิกหรือข้อความส่วนหัว/ส่วนท้ายบางรายการ</span><span class="sxs-lookup"><span data-stu-id="c6691-157">Although the _Save a copy_ capability is a nice feature, it should be used with caution when the report includes certain graphics or header/footer messages.</span></span> <span data-ttu-id="c6691-158">เนื่องจากโลโก้ ไอคอน และข้อความมักเกี่ยวข้องกับข้อกำหนดในการสร้างแบรนด์หรือการปฏิบัติตามกฎระเบียบ สิ่งสำคัญคือต้องควบคุมวิธีการส่งมอบและเผยแพร่อย่างรอบคอบ</span><span class="sxs-lookup"><span data-stu-id="c6691-158">Since logos, icons, and textual messages often relate to branding requirements or regulatory compliance, it's important to carefully control how they're delivered and distributed.</span></span> <span data-ttu-id="c6691-159">หากมีการใช้ _บันทึกสำเนา_ แต่ผู้เขียนใหม่ยังคงไม่เปลี่ยนแปลงกราฟิกหรือข้อความส่วนหัว/ส่วนท้ายต้นฉบับ อาจทำให้เกิดความสับสนว่าอันที่จริงแล้วใครเป็นผู้สร้างรายงาน</span><span class="sxs-lookup"><span data-stu-id="c6691-159">If _Save a copy_ is used, but the original graphics or header/footer messages remain unchanged by the new author, it can result in confusion about who actually produced the report.</span></span> <span data-ttu-id="c6691-160">นอกจากนี้ยังสามารถลดการรู้สึกว่ามีคุณค่าของการสร้างแบรนด์อีกด้วย</span><span class="sxs-lookup"><span data-stu-id="c6691-160">It can also reduce the meaningfulness of the branding.</span></span>
-
-## <a name="evaluate-needs-for-premium-capacity"></a><span data-ttu-id="c6691-161">ประเมินความต้องการสำหรับความจุระดับพรีเมียม</span><span class="sxs-lookup"><span data-stu-id="c6691-161">Evaluate needs for Premium capacity</span></span>
-
-<span data-ttu-id="c6691-162">ความสามารถเพิ่มเติมจะพร้อมใช้งานเมื่อพื้นที่ทำงานถูกเก็บไว้ใน [ความจุระดับพรีเมียม](../admin/service-premium-what-is.md)</span><span class="sxs-lookup"><span data-stu-id="c6691-162">Additional capabilities are available when a workspace is stored on a [Premium capacity](../admin/service-premium-what-is.md).</span></span> <span data-ttu-id="c6691-163">ต่อไปนี้เป็นสาเหตุหลายประการที่ทำให้พื้นที่ทำงานบนความจุระดับพรีเมียมมีข้อได้เปรียบ:</span><span class="sxs-lookup"><span data-stu-id="c6691-163">Here are several reasons why workspaces on Premium capacity can be advantageous:</span></span>
-
-- <span data-ttu-id="c6691-164">ผู้บริโภคที่ไม่มีสิทธิ์การใช้งาน Power BI Pro สามารถเข้าถึงเนื้อหาได้</span><span class="sxs-lookup"><span data-stu-id="c6691-164">Content can be accessed by consumers who don't have a Power BI Pro license.</span></span>
-- <span data-ttu-id="c6691-165">การสนับสนุนสำหรับชุดข้อมูลขนาดใหญ่</span><span class="sxs-lookup"><span data-stu-id="c6691-165">Support for large datasets.</span></span>
-- <span data-ttu-id="c6691-166">การสนับสนุนสำหรับการรีเฟรชข้อมูลที่บ่อยมากขึ้น</span><span class="sxs-lookup"><span data-stu-id="c6691-166">Support for more frequent data refreshes.</span></span>
-- <span data-ttu-id="c6691-167">การสนับสนุนสำหรับการใช้ชุดคุณลักษณะเต็มรูปแบบของกระแสข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c6691-167">Support for using the full feature set of dataflows.</span></span>
-- <span data-ttu-id="c6691-168">คุณลักษณะระดับองค์กร รวมถึงไปป์ไลน์การปรับใช้และจุดสิ้นสุด XMLA</span><span class="sxs-lookup"><span data-stu-id="c6691-168">Enterprise features, including deployment pipelines and the XMLA endpoint.</span></span>
-- <span data-ttu-id="c6691-169">การสนับสนุนสำหรับรายงานที่มีการแบ่งหน้า (เมื่อเปิดใช้งานปริมาณงาน)</span><span class="sxs-lookup"><span data-stu-id="c6691-169">Support for paginated reports (when the workload is enabled).</span></span>
-
-## <a name="determine-data-acquisition-method"></a><span data-ttu-id="c6691-170">กำหนดวิธีการรวบรวมข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c6691-170">Determine data acquisition method</span></span>
-
-<span data-ttu-id="c6691-171">ข้อมูลที่รายงานต้องการอาจมีผลต่อการตัดสินใจหลายประการ</span><span class="sxs-lookup"><span data-stu-id="c6691-171">The data required by a report may influence several decisions.</span></span> <span data-ttu-id="c6691-172">คำถามที่ต้องถามได้แก่:</span><span class="sxs-lookup"><span data-stu-id="c6691-172">Questions to ask include:</span></span>
-
-- <span data-ttu-id="c6691-173">สามารถใช้[ชุดข้อมูลที่แชร์](../connect-data/service-datasets-share.md)ของ Power BI ที่มีอยู่ได้หรือไม่ หรือการสร้างชุดข้อมูล Power BI ใหม่เหมาะสมสำหรับโซลูชันนี้หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-173">Can an existing Power BI [shared dataset](../connect-data/service-datasets-share.md) be used, or is the creation of a new Power BI dataset appropriate for this solution?</span></span>
-- <span data-ttu-id="c6691-174">จำเป็นต้องแต่งเติมชุดข้อมูลที่แชร์ที่มีอยู่ด้วยข้อมูลหรือหน่วยวัดใหม่เพื่อตอบสนองความต้องการเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-174">Does an existing shared dataset need to be augmented with new data or measures to meet additional needs?</span></span>
-- <span data-ttu-id="c6691-175">[โหมดการจัดเก็บข้อมูล](../transform-model/desktop-storage-mode.md) ใดที่จะเหมาะสมที่สุด</span><span class="sxs-lookup"><span data-stu-id="c6691-175">Which [data storage mode](../transform-model/desktop-storage-mode.md) will be most appropriate?</span></span> <span data-ttu-id="c6691-176">ตัวเลือกประกอบด้วย Import, DirectQuery, Composite หรือ Live Connection</span><span class="sxs-lookup"><span data-stu-id="c6691-176">Options include Import, DirectQuery, Composite, or Live Connection.</span></span>
-- <span data-ttu-id="c6691-177">ควรใช้ [การรวม](../transform-model/desktop-aggregations.md) เพื่อเพิ่มประสิทธิภาพคิวรีหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-177">Should [aggregations](../transform-model/desktop-aggregations.md) be used to enhance query performance?</span></span>
-- <span data-ttu-id="c6691-178">การสร้าง [กระแสข้อมูล](../transform-model/dataflows/dataflows-introduction-self-service.md) จะมีประโยชน์และสามารถใช้เป็นแหล่งข้อมูลสำหรับชุดข้อมูลจำนวนมากได้หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-178">Will creation of a [dataflow](../transform-model/dataflows/dataflows-introduction-self-service.md) be useful and can it serve as a source for numerous datasets?</span></span>
-- <span data-ttu-id="c6691-179">จะต้องลงทะเบียน [แหล่งข้อมูลเกตเวย์](../connect-data/service-gateway-data-sources.md) ใหม่หรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-179">Will a new [gateway data source](../connect-data/service-gateway-data-sources.md) need to be registered?</span></span>
-
-## <a name="decide-where-original-content-will-be-stored"></a><span data-ttu-id="c6691-180">ตัดสินใจว่าจะจัดเก็บเนื้อหาต้นฉบับไว้ที่ใด</span><span class="sxs-lookup"><span data-stu-id="c6691-180">Decide where original content will be stored</span></span>
-
-<span data-ttu-id="c6691-181">นอกเหนือจากการวางแผนปลายทางการปรับใช้เป้าหมายแล้ว สิ่งสำคัญคือต้องวางแผนว่าจะจัดเก็บเนื้อหาต้นฉบับหรือต้นทางที่ใด เช่น:</span><span class="sxs-lookup"><span data-stu-id="c6691-181">In addition to planning the target deployment destination, it's also important to plan where the original—or source—content will be stored, such as:</span></span>
-
-- <span data-ttu-id="c6691-182">ระบุตำแหน่งที่ได้รับอนุมัติสำหรับจัดเก็บไฟล์ Power BI Desktop (.pbix) ต้นฉบับ</span><span class="sxs-lookup"><span data-stu-id="c6691-182">Specify an approved location for storing the original Power BI Desktop (.pbix) files.</span></span> <span data-ttu-id="c6691-183">ตามหลักการแล้ว ตำแหน่งที่ตั้งนี้จะพร้อมใช้งานสำหรับผู้ที่แก้ไขเนื้อหาเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="c6691-183">Ideally, this location is available only to people who edit the content.</span></span> <span data-ttu-id="c6691-184">ซึ่งควรสอดคล้องกับวิธีตั้งค่าการรักษาความปลอดภัยในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-184">It should align with how security is set up in the Power BI service.</span></span>
-- <span data-ttu-id="c6691-185">ใช้ตำแหน่งที่ตั้งสำหรับไฟล์ Power BI Desktop ต้นฉบับที่มีการกำหนดเวอร์ชันประวัติหรือตัวควบคุมแหล่งที่มา</span><span class="sxs-lookup"><span data-stu-id="c6691-185">Use a location for original Power BI Desktop files that includes versioning history or source control.</span></span> <span data-ttu-id="c6691-186">การกำหนดเวอร์ชันอนุญาตให้ผู้เขียนเนื้อหาเปลี่ยนกลับไปเป็นเวอร์ชันไฟล์ก่อนหน้า หากจำเป็น</span><span class="sxs-lookup"><span data-stu-id="c6691-186">Versioning permits the content author to revert to a previous file version, if necessary.</span></span> <span data-ttu-id="c6691-187">OneDrive for Business หรือ SharePoint ทำงานได้ดีสำหรับวัตถุประสงค์นี้</span><span class="sxs-lookup"><span data-stu-id="c6691-187">OneDrive for Business or SharePoint work well for this purpose.</span></span>
-- <span data-ttu-id="c6691-188">ระบุตำแหน่งที่ตั้งที่ได้รับการอนุมัติสำหรับการจัดเก็บข้อมูลต้นทางที่ไม่รวมศูนย์ เช่น ไฟล์แฟล็ตหรือไฟล์ Excel</span><span class="sxs-lookup"><span data-stu-id="c6691-188">Specify an approved location for storing non-centralized source data, such as flat files or Excel files.</span></span> <span data-ttu-id="c6691-189">ซึ่งควรเป็นเส้นทางที่ผู้เขียนชุดข้อมูลสามารถเข้าถึงได้โดยไม่มีข้อผิดพลาดและมีการสำรองข้อมูลอย่างสม่ำเสมอ</span><span class="sxs-lookup"><span data-stu-id="c6691-189">It should be a path that any of the dataset authors can reach without error and is backed up regularly.</span></span>
-- <span data-ttu-id="c6691-190">ระบุตำแหน่งที่ตั้งที่ได้รับการอนุมัติสำหรับเนื้อหาที่ส่งออกจากบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-190">Specify an approved location for content exported from the Power BI service.</span></span> <span data-ttu-id="c6691-191">เป้าหมายคือเพื่อให้แน่ใจว่าการรักษาความปลอดภัยที่กำหนดไว้ในบริการ Power BI ไม่ได้ถูกหลีกเลี่ยงโดยไม่ได้ตั้งใจ</span><span class="sxs-lookup"><span data-stu-id="c6691-191">The goal is to ensure that security defined in the Power BI service isn't inadvertently circumvented.</span></span>
+การตัดสินใจในลักษณะนี้เป็นกระบวนการที่วนซ้ำและไม่เป็นเชิงเส้น การวางแผนบางอย่างจะเกิดขึ้นแล้วใน [ขั้นตอนก่อนโยกย้าย](powerbi-migration-pre-migration-steps.md) การเรียนรู้จากการพิสูจน์แนวคิด (อธิบายไว้ใน [ลำดับขั้นที่ 3](powerbi-migration-proof-of-concept.md)) อาจเกิดขึ้นควบคู่ไปกับการวางแผนการปรับใช้ แม้ในขณะที่สร้างโซลูชัน (อธิบายไว้ใน[ลำดับขั้นที่ 4](powerbi-migration-create-validate-content.md)) ข้อมูลเพิ่มเติมอาจบังเกิดขึ้น ซึ่งมีผลต่อการตัดสินใจในการปรับใช้
 
 > [!IMPORTANT]
-> <span data-ttu-id="c6691-192">การระบุตำแหน่งที่ได้รับการป้องกันสำหรับไฟล์ Power BI Desktop ต้นฉบับมีความสำคัญอย่างยิ่งเมื่อมีข้อมูลที่นำเข้า</span><span class="sxs-lookup"><span data-stu-id="c6691-192">Specifying a protected location for original Power BI Desktop files is particularly important when they contain imported data.</span></span>
-
-## <a name="assess-the-level-of-effort"></a><span data-ttu-id="c6691-193">ประเมินระดับความพยายาม</span><span class="sxs-lookup"><span data-stu-id="c6691-193">Assess the level of effort</span></span>
-
-<span data-ttu-id="c6691-194">เมื่อมีข้อมูลเพียงพอจากข้อกำหนด (ซึ่งอธิบายไว้ใน [ลำดับขั้นที่ 1](powerbi-migration-requirements.md)) และกระบวนการวางแผนการปรับใช้โซลูชัน ตอนนี้คุณสามารถประเมินระดับความพยายามได้แล้ว</span><span class="sxs-lookup"><span data-stu-id="c6691-194">Once sufficient information is available from the requirements (which were described in [Stage 1](powerbi-migration-requirements.md)) and the solution deployment planning process, it's now possible to assess the level of effort.</span></span> <span data-ttu-id="c6691-195">จากนั้นคุณสามารถกำหนดแผนโครงการด้วยงาน เส้นเวลา และความรับผิดชอบได้</span><span class="sxs-lookup"><span data-stu-id="c6691-195">It's then possible to formulate a project plan with tasks, timeline, and responsibility.</span></span>
+> ลำดับขั้นที่ 1-5 แสดงถึงกิจกรรมที่เกี่ยวข้องกับโซลูชันเฉพาะหนึ่งรายการ มีการตัดสินใจและกิจกรรมในระดับองค์กร/ผู้เช่าซึ่งส่งผลกระทบต่อกระบวนการในระดับโซลูชัน กิจกรรมการวางแผนระดับสูงเหล่านั้นในบางส่วนจะถูกกล่าวถึงใน[บทความภาพรวมการโยกย้ายข้อมูล Power BI](powerbi-migration-overview.md) เมื่อเหมาะสม ให้ยืดเวลาการตัดสินใจระดับองค์กรออกไปเพื่อประสิทธิภาพและความสม่ำเสมอ
 
 > [!TIP]
-> <span data-ttu-id="c6691-196">ต้นทุนแรงงาน ได้แก่ เงินเดือนและค่าจ้าง มักเป็นค่าใช้จ่ายที่สูงที่สุดในองค์กรส่วนใหญ่</span><span class="sxs-lookup"><span data-stu-id="c6691-196">Labor costs—salaries and wages—are usually among the highest expenses in most organizations.</span></span> <span data-ttu-id="c6691-197">แม้ว่าจะเป็นเรื่องยากที่จะประเมินได้อย่างถูกต้อง แต่การเพิ่มผลิตภาพนั้นก็ให้ผลตอบแทนจากการลงทุน (ROI) ที่ดีเยี่ยม</span><span class="sxs-lookup"><span data-stu-id="c6691-197">Although it can be difficult to accurately estimate, productivity enhancements have an excellent return on investment (ROI).</span></span>
+> หัวข้อที่กล่าวถึงในบทความนี้ยังใช้กับโครงการการใช้งาน Power BI แบบมาตรฐาน
 
-## <a name="next-steps"></a><span data-ttu-id="c6691-198">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="c6691-198">Next steps</span></span>
+## <a name="choose-power-bi-product"></a>เลือกผลิตภัณฑ์ Power BI
 
-<span data-ttu-id="c6691-199">ใน [บทความถัดไปของชุดบทความการโยกย้ายข้อมูล Power BI นี้](powerbi-migration-proof-of-concept.md) คุณจะได้เรียนรู้เกี่ยวกับลำดับขั้นที่ 3 ซึ่งเกี่ยวข้องกับการดำเนินการพิสูจน์แนวคิด (POC) เพื่อลดความเสี่ยงและระบุที่อยู่ที่ไม่รู้จักโดยเร็วที่สุดเมื่อโยกย้ายไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-199">In the [next article in this Power BI migration series](powerbi-migration-proof-of-concept.md), learn about Stage 3, which is concerned with conducting a proof of concept to mitigate risk and address unknowns as early as possible when migrating to Power BI.</span></span>
+หนึ่งในการตัดสินใจอันดับแรกคือการเลือกผลิตภัณฑ์ Power BI ซึ่งเป็นการตัดสินใจระหว่าง [บริการ Power BI](../fundamentals/power-bi-service-overview.md) หรือ [เซิร์ฟเวอร์รายงาน Power BI](../report-server/get-started.md) เมื่อเผยแพร่เนื้อหาแล้วจะมีตัวเลือกเพิ่มเติมมากมายให้ใช้งาน เช่น การฝัง การส่งมอบผ่านอุปกรณ์เคลื่อนที่ และการสมัครรับอีเมล
 
-<span data-ttu-id="c6691-200">แหล่งข้อมูลที่เป็นประโยชน์อื่น ๆ:</span><span class="sxs-lookup"><span data-stu-id="c6691-200">Other helpful resources include:</span></span>
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับข้อควรพิจารณาทางสถาปัตยกรรม โปรดดูที่ **ส่วนที่ 3** ของ [เอกสารรายงานเรื่องการวางแผนการปรับใช้ Power BI สำหรับองค์กร](https://aka.ms/PBIEnterpriseDeploymentWP)
 
-- [<span data-ttu-id="c6691-201">การแปลง BI ของ Microsoft</span><span class="sxs-lookup"><span data-stu-id="c6691-201">Microsoft's BI transformation</span></span>](center-of-excellence-microsoft-business-intelligence-transformation.md)
-- [<span data-ttu-id="c6691-202">เอกสารทางเทคนิคเรื่องการวางแผนการใช้ Power BI สำหรับองค์กร</span><span class="sxs-lookup"><span data-stu-id="c6691-202">Planning a Power BI enterprise deployment whitepaper</span></span>](https://aka.ms/PBIEnterpriseDeploymentWP)
-- <span data-ttu-id="c6691-203">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="c6691-203">Questions?</span></span> [<span data-ttu-id="c6691-204">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-204">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="c6691-205">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="c6691-205">Suggestions?</span></span> [<span data-ttu-id="c6691-206">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="c6691-206">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+> [!CAUTION]
+> ถ้าคุณถูกชักจูงให้พึ่งพาการใช้ไฟล์ Power BI Desktop ที่จัดเก็บในระบบไฟล์ โปรดทราบว่าสิ่งนั้นไม่ใช่แนวทางที่ดีที่สุด การใช้บริการ Power BI (หรือเซิร์ฟเวอร์รายงาน Power BI) มีข้อดีอย่างมากสำหรับความปลอดภัย การกระจายเนื้อหา และการทำงานร่วมกัน บริการ Power BI ยังช่วยก่อให้เกิดความสามารถในการตรวจสอบและติดตามกิจกรรมอีกด้วย
 
-<span data-ttu-id="c6691-207">คู่ค้า Power BI ที่มีประสบการณ์พร้อมที่จะช่วยให้องค์กรของคุณประสบความสำเร็จด้วยกระบวนการโยกย้ายข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c6691-207">Experienced Power BI partners are available to help your organization succeed with the migration process.</span></span> <span data-ttu-id="c6691-208">หากต้องการตรวจสอบรายชื่อของพันธมิตรของ Power BI ไปที่[พอร์ทัลของพันธมิตรของ Power BI](https://powerbi.microsoft.com/partners/)</span><span class="sxs-lookup"><span data-stu-id="c6691-208">To engage a Power BI partner, visit the [Power BI partner portal](https://powerbi.microsoft.com/partners/).</span></span>
+## <a name="decide-on-workspace-management-approach"></a>ตัดสินใจเกี่ยวกับแนวทางการจัดการพื้นที่ทำงาน
+
+[พื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md) เป็นแนวคิดหลักของบริการ Power BI ซึ่งทำให้การจัดการพื้นที่ทำงานเป็นสิ่งสำคัญในการวางแผน คำถามที่ต้องถามได้แก่:
+
+- จำเป็นต้องมีพื้นที่ทำงานใหม่สำหรับโซลูชันใหม่นี้หรือไม่
+- จำเป็นต้องมีพื้นที่ทำงานแยกกันเพื่อรองรับการพัฒนา การทดสอบ และการผลิตหรือไม่
+- จะใช้พื้นที่ทำงานแยกกันสำหรับข้อมูลและรายงาน หรือพื้นที่ทำงานเดียวจะเพียงพอหรือไม่ พื้นที่ทำงานแยกกันมีข้อดีหลายประการ โดยเฉพาะอย่างยิ่งสำหรับการรักษาความปลอดภัยชุดข้อมูล เมื่อจำเป็น คุณสามารถจัดการพื้นที่ทำงานเหล่านั้นแยกต่างหากจากผู้ใช้ที่เผยแพร่รายงานได้
+- ข้อกำหนดด้านความปลอดภัยสำหรับพื้นที่ทำงานคืออะไร ซึ่งมีผลต่อการวางแผนสำหรับ [บทบาทของพื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces) หากผู้บริโภคเนื้อหาจะใช้แอป [สิทธิ์สำหรับแอป](../collaborate-share/service-create-distribute-apps.md#publish-your-app) จะได้รับการจัดการแยกต่างหากจากพื้นที่ทำงาน สิทธิ์จำเพาะสำหรับผู้ดูแอปช่วยเพิ่มความยืดหยุ่นในการตอบสนองข้อกำหนดด้านความปลอดภัยสำหรับผู้ใช้รายงานหรือแดชบอร์ดแบบอ่านอย่างเดียว
+- สามารถใช้กลุ่มที่มีอยู่เพื่อรักษาความปลอดภัยเนื้อหาใหม่ได้หรือไม่ รองรับทั้งกลุ่ม Azure Active Directory และกลุ่ม Microsoft 365 การใช้กลุ่มทำให้การจัดการสิทธิ์ทำได้ง่ายกว่าการมอบหมายให้กับผู้ใช้แต่ละคน เมื่อสอดคล้องกับกระบวนการที่มีอยู่
+- มีข้อพิจารณาด้านความปลอดภัยที่เกี่ยวข้องกับผู้ใช้ประเภทผู้เยี่ยมชมภายนอกหรือไม่ คุณอาจต้องทำงานร่วมกับผู้ดูแลระบบ Azure Active Directory และผู้ดูแลระบบ Power BI ของคุณเพื่อกำหนดค่า [การเข้าถึงของผู้ใช้ประเภทผู้เยี่ยมชม](../admin/service-admin-azure-ad-b2b.md)
+
+> [!TIP]
+> พิจารณาสร้างพื้นที่ทำงานสำหรับกิจกรรมหรือโครงการทางธุรกิจเฉพาะ คุณอาจถูกชักจูงให้เริ่มต้นจากการจัดโครงสร้างพื้นที่ทำงานตามโครงสร้างองค์กรของคุณ (เช่น พื้นที่ทำงานต่อแผนก) แต่บ่อยครั้งที่แนวทางนี้กว้างเกินไป
+
+## <a name="determine-how-content-will-be-consumed"></a>กำหนดวิธีการบริโภคเนื้อหา
+
+การทำความเข้าใจว่าผู้บริโภคของโซลูชันชอบดูรายงานและแดชบอร์ดอย่างไรเป็นประโยชน์ คำถามที่ต้องถามได้แก่:
+
+- [แอป Power BI](../consumer/end-user-apps.md) (ซึ่งประกอบด้วยรายงานและแดชบอร์ดจากพื้นที่ทำงานเดียว) จะเป็นวิธีที่ดีที่สุดในการส่งมอบเนื้อหาให้กับผู้บริโภคหรือไม่ หรือการเข้าถึงพื้นที่ทำงานโดยตรงจะเพียงพอสำหรับผู้ดูเนื้อหาหรือไม่
+- รายงานและแดชบอร์ดบางรายการจะถูกฝังไว้ที่อื่น เช่น [Teams](../collaborate-share/service-embed-report-microsoft-teams.md), [SharePoint Online](../collaborate-share/service-embed-report-spo.md) หรือ [พอร์ทัลหรือเว็บไซต์ที่ปลอดภัย](../collaborate-share/service-embed-secure.md) หรือไม่
+- ผู้บริโภคจะเข้าถึงเนื้อหาโดยใช้ [อุปกรณ์เคลื่อนที่](../consumer/mobile/mobile-apps-for-mobile-devices.md) หรือไม่ ข้อกำหนดในการส่งรายงานไปยังอุปกรณ์ฟอร์มแฟคเตอร์ขนาดเล็กจะมีผลต่อ [การตัดสินใจในการออกแบบรายงาน](../create-reports/desktop-create-phone-report.md) บางส่วน
+
+## <a name="decide-if-other-content-may-be-created"></a>ตัดสินใจว่าจะสร้างเนื้อหาอื่นหรือไม่
+
+มีการตัดสินใจหลักหลายประการที่เกี่ยวข้องกับการอนุญาตให้ผู้บริโภคสร้างเนื้อหาใหม่ เช่น:
+
+- ผู้บริโภคจะได้รับอนุญาตให้สร้างรายงานใหม่จากชุดข้อมูลที่เผยแพร่หรือไม่ สามารถเปิดใช้งานความสามารถนี้ได้โดยการมอบหมาย [สิทธิ์การสร้าง](../connect-data/service-datasets-build-permissions.md) ของชุดข้อมูลให้กับผู้ใช้
+- หากผู้บริโภคต้องการปรับแต่งรายงาน พวกเขาสามารถ [บันทึกสำเนา](../connect-data/service-datasets-copy-reports.md) และปรับแต่งรายงานให้ตรงกับความต้องการของพวกเขาได้หรือไม่
+
+> [!CAUTION]
+> แม้ว่าความสามารถ _บันทึกสำเนา_ จะเป็นคุณลักษณะที่ดี แต่ก็ควรใช้ด้วยความระมัดระวังเมื่อรายงานมีกราฟิกหรือข้อความส่วนหัว/ส่วนท้ายบางรายการ เนื่องจากโลโก้ ไอคอน และข้อความมักเกี่ยวข้องกับข้อกำหนดในการสร้างแบรนด์หรือการปฏิบัติตามกฎระเบียบ สิ่งสำคัญคือต้องควบคุมวิธีการส่งมอบและเผยแพร่อย่างรอบคอบ หากมีการใช้ _บันทึกสำเนา_ แต่ผู้เขียนใหม่ยังคงไม่เปลี่ยนแปลงกราฟิกหรือข้อความส่วนหัว/ส่วนท้ายต้นฉบับ อาจทำให้เกิดความสับสนว่าอันที่จริงแล้วใครเป็นผู้สร้างรายงาน นอกจากนี้ยังสามารถลดการรู้สึกว่ามีคุณค่าของการสร้างแบรนด์อีกด้วย
+
+## <a name="evaluate-needs-for-premium-capacity"></a>ประเมินความต้องการสำหรับความจุระดับพรีเมียม
+
+ความสามารถเพิ่มเติมจะพร้อมใช้งานเมื่อพื้นที่ทำงานถูกเก็บไว้ใน [ความจุระดับพรีเมียม](../admin/service-premium-what-is.md) ต่อไปนี้เป็นสาเหตุหลายประการที่ทำให้พื้นที่ทำงานบนความจุระดับพรีเมียมมีข้อได้เปรียบ:
+
+- ผู้บริโภคที่ไม่มีสิทธิ์การใช้งาน Power BI Pro สามารถเข้าถึงเนื้อหาได้
+- การสนับสนุนสำหรับชุดข้อมูลขนาดใหญ่
+- การสนับสนุนสำหรับการรีเฟรชข้อมูลที่บ่อยมากขึ้น
+- การสนับสนุนสำหรับการใช้ชุดคุณลักษณะเต็มรูปแบบของกระแสข้อมูล
+- คุณลักษณะระดับองค์กร รวมถึงไปป์ไลน์การปรับใช้และจุดสิ้นสุด XMLA
+- การสนับสนุนสำหรับรายงานที่มีการแบ่งหน้า (เมื่อเปิดใช้งานปริมาณงาน)
+
+## <a name="determine-data-acquisition-method"></a>กำหนดวิธีการรวบรวมข้อมูล
+
+ข้อมูลที่รายงานต้องการอาจมีผลต่อการตัดสินใจหลายประการ คำถามที่ต้องถามได้แก่:
+
+- สามารถใช้[ชุดข้อมูลที่แชร์](../connect-data/service-datasets-share.md)ของ Power BI ที่มีอยู่ได้หรือไม่ หรือการสร้างชุดข้อมูล Power BI ใหม่เหมาะสมสำหรับโซลูชันนี้หรือไม่
+- จำเป็นต้องแต่งเติมชุดข้อมูลที่แชร์ที่มีอยู่ด้วยข้อมูลหรือหน่วยวัดใหม่เพื่อตอบสนองความต้องการเพิ่มเติมหรือไม่
+- [โหมดการจัดเก็บข้อมูล](../transform-model/desktop-storage-mode.md) ใดที่จะเหมาะสมที่สุด ตัวเลือกประกอบด้วย Import, DirectQuery, Composite หรือ Live Connection
+- ควรใช้ [การรวม](../transform-model/desktop-aggregations.md) เพื่อเพิ่มประสิทธิภาพคิวรีหรือไม่
+- การสร้าง [กระแสข้อมูล](../transform-model/dataflows/dataflows-introduction-self-service.md) จะมีประโยชน์และสามารถใช้เป็นแหล่งข้อมูลสำหรับชุดข้อมูลจำนวนมากได้หรือไม่
+- จะต้องลงทะเบียน [แหล่งข้อมูลเกตเวย์](../connect-data/service-gateway-data-sources.md) ใหม่หรือไม่
+
+## <a name="decide-where-original-content-will-be-stored"></a>ตัดสินใจว่าจะจัดเก็บเนื้อหาต้นฉบับไว้ที่ใด
+
+นอกเหนือจากการวางแผนปลายทางการปรับใช้เป้าหมายแล้ว สิ่งสำคัญคือต้องวางแผนว่าจะจัดเก็บเนื้อหาต้นฉบับหรือต้นทางที่ใด เช่น:
+
+- ระบุตำแหน่งที่ได้รับอนุมัติสำหรับจัดเก็บไฟล์ Power BI Desktop (.pbix) ต้นฉบับ ตามหลักการแล้ว ตำแหน่งที่ตั้งนี้จะพร้อมใช้งานสำหรับผู้ที่แก้ไขเนื้อหาเท่านั้น ซึ่งควรสอดคล้องกับวิธีตั้งค่าการรักษาความปลอดภัยในบริการ Power BI
+- ใช้ตำแหน่งที่ตั้งสำหรับไฟล์ Power BI Desktop ต้นฉบับที่มีการกำหนดเวอร์ชันประวัติหรือตัวควบคุมแหล่งที่มา การกำหนดเวอร์ชันอนุญาตให้ผู้เขียนเนื้อหาเปลี่ยนกลับไปเป็นเวอร์ชันไฟล์ก่อนหน้า หากจำเป็น OneDrive for Business หรือ SharePoint ทำงานได้ดีสำหรับวัตถุประสงค์นี้
+- ระบุตำแหน่งที่ตั้งที่ได้รับการอนุมัติสำหรับการจัดเก็บข้อมูลต้นทางที่ไม่รวมศูนย์ เช่น ไฟล์แฟล็ตหรือไฟล์ Excel ซึ่งควรเป็นเส้นทางที่ผู้เขียนชุดข้อมูลสามารถเข้าถึงได้โดยไม่มีข้อผิดพลาดและมีการสำรองข้อมูลอย่างสม่ำเสมอ
+- ระบุตำแหน่งที่ตั้งที่ได้รับการอนุมัติสำหรับเนื้อหาที่ส่งออกจากบริการ Power BI เป้าหมายคือเพื่อให้แน่ใจว่าการรักษาความปลอดภัยที่กำหนดไว้ในบริการ Power BI ไม่ได้ถูกหลีกเลี่ยงโดยไม่ได้ตั้งใจ
+
+> [!IMPORTANT]
+> การระบุตำแหน่งที่ได้รับการป้องกันสำหรับไฟล์ Power BI Desktop ต้นฉบับมีความสำคัญอย่างยิ่งเมื่อมีข้อมูลที่นำเข้า
+
+## <a name="assess-the-level-of-effort"></a>ประเมินระดับความพยายาม
+
+เมื่อมีข้อมูลเพียงพอจากข้อกำหนด (ซึ่งอธิบายไว้ใน [ลำดับขั้นที่ 1](powerbi-migration-requirements.md)) และกระบวนการวางแผนการปรับใช้โซลูชัน ตอนนี้คุณสามารถประเมินระดับความพยายามได้แล้ว จากนั้นคุณสามารถกำหนดแผนโครงการด้วยงาน เส้นเวลา และความรับผิดชอบได้
+
+> [!TIP]
+> ต้นทุนแรงงาน ได้แก่ เงินเดือนและค่าจ้าง มักเป็นค่าใช้จ่ายที่สูงที่สุดในองค์กรส่วนใหญ่ แม้ว่าจะเป็นเรื่องยากที่จะประเมินได้อย่างถูกต้อง แต่การเพิ่มผลิตภาพนั้นก็ให้ผลตอบแทนจากการลงทุน (ROI) ที่ดีเยี่ยม
+
+## <a name="next-steps"></a>ขั้นตอนถัดไป
+
+ใน [บทความถัดไปของชุดบทความการโยกย้ายข้อมูล Power BI นี้](powerbi-migration-proof-of-concept.md) คุณจะได้เรียนรู้เกี่ยวกับลำดับขั้นที่ 3 ซึ่งเกี่ยวข้องกับการดำเนินการพิสูจน์แนวคิด (POC) เพื่อลดความเสี่ยงและระบุที่อยู่ที่ไม่รู้จักโดยเร็วที่สุดเมื่อโยกย้ายไปยัง Power BI
+
+แหล่งข้อมูลที่เป็นประโยชน์อื่น ๆ:
+
+- [การแปลง BI ของ Microsoft](center-of-excellence-microsoft-business-intelligence-transformation.md)
+- [เอกสารทางเทคนิคเรื่องการวางแผนการใช้ Power BI สำหรับองค์กร](https://aka.ms/PBIEnterpriseDeploymentWP)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)
+
+คู่ค้า Power BI ที่มีประสบการณ์พร้อมที่จะช่วยให้องค์กรของคุณประสบความสำเร็จด้วยกระบวนการโยกย้ายข้อมูล หากต้องการตรวจสอบรายชื่อของพันธมิตรของ Power BI ไปที่[พอร์ทัลของพันธมิตรของ Power BI](https://powerbi.microsoft.com/partners/)

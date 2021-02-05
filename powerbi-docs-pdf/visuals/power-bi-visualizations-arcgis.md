@@ -17,418 +17,418 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 12/16/2020
 ms.locfileid: "97600725"
 ---
-# <a name="create-arcgis-maps-in-power-bi"></a><span data-ttu-id="4e6f9-103">สร้างแผนที่ ArcGIS ใน Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-103">Create ArcGIS maps in Power BI</span></span>
+# <a name="create-arcgis-maps-in-power-bi"></a>สร้างแผนที่ ArcGIS ใน Power BI
 
 [!INCLUDE[consumer-appliesto-yyyn](../includes/consumer-appliesto-yyyn.md)]    
 
 > [!NOTE]
-> <span data-ttu-id="4e6f9-104">ภาพเหล่านี้สามารถจัดทำและเรียกดูได้ทั้งจาก Power BI Desktop และบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-104">These visuals can be created and viewed in both Power BI Desktop and the Power BI service.</span></span> <span data-ttu-id="4e6f9-105">ขั้นตอนและภาพในบทความนี้นำมาจาก Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="4e6f9-105">The steps and illustrations in this article are from Power BI Desktop.</span></span>
+> ภาพเหล่านี้สามารถจัดทำและเรียกดูได้ทั้งจาก Power BI Desktop และบริการของ Power BI ขั้นตอนและภาพในบทความนี้นำมาจาก Power BI Desktop
 
-<span data-ttu-id="4e6f9-106">ภาพรวมนี้ถูกเขียนขึ้นจากมุมมองของผู้สร้างแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-106">This overview is written from the point of view of a person creating an ArcGIS map for Power BI.</span></span> <span data-ttu-id="4e6f9-107">เมื่อ _ผู้ออกแบบ_ แชร์แผนที่ ArcGIS Map สำหรับ Power BI กับเพื่อนร่วมงาน เพื่อนร่วมงานดังกล่าวสามารถดูและโต้ตอบกับแผนที่ได้ แต่ไม่สามารถบันทึกการเปลี่ยนแปลงได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-107">Once a _designer_ shares an ArcGIS for Power BI map with a colleague, that colleague can view and interact with the map but not save changes.</span></span> <span data-ttu-id="4e6f9-108">หากการเรียนรู้เพิ่มเติมเกี่ยวกับการดูแผนที่ ArcGIS ให้ดูที่[การสำรวจแผนที่ ArcGIS สำหรั Power BI](https://doc.arcgis.com/en/power-bi/use/explore-maps.htm)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-108">To learn more about viewing an ArcGIS map, see [Explore ArcGIS for Power BI](https://doc.arcgis.com/en/power-bi/use/explore-maps.htm).</span></span>
+ภาพรวมนี้ถูกเขียนขึ้นจากมุมมองของผู้สร้างแผนที่ ArcGIS สำหรับ Power BI เมื่อ _ผู้ออกแบบ_ แชร์แผนที่ ArcGIS Map สำหรับ Power BI กับเพื่อนร่วมงาน เพื่อนร่วมงานดังกล่าวสามารถดูและโต้ตอบกับแผนที่ได้ แต่ไม่สามารถบันทึกการเปลี่ยนแปลงได้ หากการเรียนรู้เพิ่มเติมเกี่ยวกับการดูแผนที่ ArcGIS ให้ดูที่[การสำรวจแผนที่ ArcGIS สำหรั Power BI](https://doc.arcgis.com/en/power-bi/use/explore-maps.htm)
 
-<span data-ttu-id="4e6f9-109">การรวมกันระหว่างแผนที่ ArcGIS และ Power BI ทำให้การนำเสนอจุดต่าง ๆ บนแผนที่ก้าวขึ้นไปอีกระดับ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-109">The combination of ArcGIS maps and Power BI takes mapping beyond the presentation of points on a map to a whole new level.</span></span> <span data-ttu-id="4e6f9-110">เลือกแผนที่พื้นฐาน ชนิดของสถานที่ตั้ง ธีม สไตล์สัญลักษณ์ และเลเยอร์อ้างอิง เพื่อสร้างการแสดงภาพแผนที่ที่สวยงามและสื่อความหมาย</span><span class="sxs-lookup"><span data-stu-id="4e6f9-110">Choose from base maps, location types, themes, symbol styles, and reference layers to create gorgeous informative map visualizations.</span></span> <span data-ttu-id="4e6f9-111">การรวมกันของ เลเยอร์ข้อมูลที่เป็นทางการบนแผนที่ และการวิเคราะห์ทางตำแหน่ง ให้คุณทำความเข้าใจการแสดงภาพของคุณที่ลึกซึ้งขึ้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-111">The combination of authoritative data layers on a map with spatial analysis conveys a deeper understanding of the data in your visualization.</span></span> <span data-ttu-id="4e6f9-112">ถึงแม้ว่าคุณไม่สามารถสร้าง ArcGIS Map สำหรับ Power BI บนอุปกรณ์เคลื่อนที่ได้ แต่คุณสามารถดู และโต้ตอบกับแผนที่ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-112">While you cannot create an ArcGIS for Power BI map on a mobile device, you can view and interact with it.</span></span>
+การรวมกันระหว่างแผนที่ ArcGIS และ Power BI ทำให้การนำเสนอจุดต่าง ๆ บนแผนที่ก้าวขึ้นไปอีกระดับ เลือกแผนที่พื้นฐาน ชนิดของสถานที่ตั้ง ธีม สไตล์สัญลักษณ์ และเลเยอร์อ้างอิง เพื่อสร้างการแสดงภาพแผนที่ที่สวยงามและสื่อความหมาย การรวมกันของ เลเยอร์ข้อมูลที่เป็นทางการบนแผนที่ และการวิเคราะห์ทางตำแหน่ง ให้คุณทำความเข้าใจการแสดงภาพของคุณที่ลึกซึ้งขึ้น ถึงแม้ว่าคุณไม่สามารถสร้าง ArcGIS Map สำหรับ Power BI บนอุปกรณ์เคลื่อนที่ได้ แต่คุณสามารถดู และโต้ตอบกับแผนที่ได้
 
 > [!NOTE]
-> <span data-ttu-id="4e6f9-113">ArcGIS สำหรับ Power BI รองรับเซิร์ฟเวอร์รายงาน Power BI ในสภาพแวดล้อมออนไลน์เท่านั้น ซึ่งไม่ได้รับการรองรับในสภาพแวดล้อมแบบออฟไลน์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-113">ArcGIS for Power BI supports Power BI Report Server in online environments only; it isn't supported in an offline environment.</span></span>
+> ArcGIS สำหรับ Power BI รองรับเซิร์ฟเวอร์รายงาน Power BI ในสภาพแวดล้อมออนไลน์เท่านั้น ซึ่งไม่ได้รับการรองรับในสภาพแวดล้อมแบบออฟไลน์
 
 > [!TIP]
-> <span data-ttu-id="4e6f9-114">GIS ย่อมาจากระบบข้อมูลทางภูมิศาสตร์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-114">GIS stands for Geographic Information Systems.</span></span>
+> GIS ย่อมาจากระบบข้อมูลทางภูมิศาสตร์
 
-<span data-ttu-id="4e6f9-115">ตัวอย่างด้านล่างใช้พื้นที่สีเทาเข้ม เพื่อแสดงยอดขายตามภูมิภาคในรูป แผนที่คลื่นความร้อน เทียบกับเลเยอร์รายได้หลังหักภาษีของประชากรปี 2016</span><span class="sxs-lookup"><span data-stu-id="4e6f9-115">The example below uses a dark gray canvas to show regional sales as a heatmap against a demographic layer of 2016 median disposable income.</span></span> <span data-ttu-id="4e6f9-116">ตามที่คุณจะเห็นในขณะที่คุณอ่าน การใช้แผนที่ ArcGIS สำหรับ Power BI จะนำเสนอความสามารถในการทำแผนที่ที่ได้รับการปรับปรุงให้ดีขึ้น ข้อมูลประชากร และการแสดงภาพแผนที่ที่น่าดึงดูดใจได้มากขึ้น เพื่อให้คุณสามารถบอกเล่าเรื่องราวที่ดีที่สุดของคุณได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-116">As you'll see as you read on, using ArcGIS for Power BI offers enhanced mapping capability, demographic data, and even-more compelling map visualizations so you can tell your best story.</span></span>
+ตัวอย่างด้านล่างใช้พื้นที่สีเทาเข้ม เพื่อแสดงยอดขายตามภูมิภาคในรูป แผนที่คลื่นความร้อน เทียบกับเลเยอร์รายได้หลังหักภาษีของประชากรปี 2016 ตามที่คุณจะเห็นในขณะที่คุณอ่าน การใช้แผนที่ ArcGIS สำหรับ Power BI จะนำเสนอความสามารถในการทำแผนที่ที่ได้รับการปรับปรุงให้ดีขึ้น ข้อมูลประชากร และการแสดงภาพแผนที่ที่น่าดึงดูดใจได้มากขึ้น เพื่อให้คุณสามารถบอกเล่าเรื่องราวที่ดีที่สุดของคุณได้
 
 ![การเปิดรูปภาพ ArcGIS](media/power-bi-visualizations-arcgis/arcgis-tutorial-01.png)
 
 > [!TIP]
-> <span data-ttu-id="4e6f9-118">เยี่ยมชม [ **หน้าเพจของ Esri บนแผนที่ ArcGIS สำหรับ Power BI**](https://www.esri.com/powerbi) เพื่อดูหลายๆ ตัวอย่าง และอ่านคำบอกเล่าจากผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-118">Visit [**Esri's page on ArcGIS for Power BI**](https://www.esri.com/powerbi) to see many examples and read testimonials.</span></span> <span data-ttu-id="4e6f9-119">นอกจากนี้ดูแผนที่ **[ArcGIS ของ Esri สำหรับ Power BI](https://doc.arcgis.com/en/power-bi/get-started/about-maps-for-power-bi.htm) ช่วยเหลือ** ออนไลน์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-119">Also view Esri's **[ArcGIS Maps for Power BI online](https://doc.arcgis.com/en/power-bi/get-started/about-maps-for-power-bi.htm) help**.</span></span>
+> เยี่ยมชม [ **หน้าเพจของ Esri บนแผนที่ ArcGIS สำหรับ Power BI**](https://www.esri.com/powerbi) เพื่อดูหลายๆ ตัวอย่าง และอ่านคำบอกเล่าจากผู้ใช้ นอกจากนี้ดูแผนที่ **[ArcGIS ของ Esri สำหรับ Power BI](https://doc.arcgis.com/en/power-bi/get-started/about-maps-for-power-bi.htm) ช่วยเหลือ** ออนไลน์
 
-## <a name="user-consent"></a><span data-ttu-id="4e6f9-120">ความยินยอมของผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-120">User consent</span></span>
+## <a name="user-consent"></a>ความยินยอมของผู้ใช้
 
-<span data-ttu-id="4e6f9-121">ArcGIS สำหรับ Power BI ให้บริการโดย Esri ([https://www.esri.com](https://www.esri.com/))</span><span class="sxs-lookup"><span data-stu-id="4e6f9-121">ArcGIS for Power BI is provided by Esri ([https://www.esri.com](https://www.esri.com/)).</span></span> <span data-ttu-id="4e6f9-122">การใช้แผนที่ ArcGIS สำหรับ Power BI ของคุณต้องอยู่ภายใต้ [ข้อกำหนด](https://go.microsoft.com/fwlink/?LinkID=826322)และ[นโยบายความเป็นส่วนตัว](https://go.microsoft.com/fwlink/?LinkID=826323)ของ Esri</span><span class="sxs-lookup"><span data-stu-id="4e6f9-122">Your use of ArcGIS for Power BI is subject to Esri's [terms](https://go.microsoft.com/fwlink/?LinkID=826322) and [privacy policy](https://go.microsoft.com/fwlink/?LinkID=826323).</span></span> <span data-ttu-id="4e6f9-123">ผู้ใช้ Power BI ที่ต้องการใช้ภาพแผนที่ ArcGIS สำหรับ Power BI จำเป็นต้องตอบรับในกล่องโต้ตอบความยินยอม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-123">Power BI users wishing to use the ArcGIS for Power BI visual must accept the consent dialog.</span></span> <span data-ttu-id="4e6f9-124">กล่องโต้ตอบนี้จะปรากฏในครั้งแรกที่คุณใช้แผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-124">This dialog appears only the first time you use ArcGIS for Power BI.</span></span>
+ArcGIS สำหรับ Power BI ให้บริการโดย Esri ([https://www.esri.com](https://www.esri.com/)) การใช้แผนที่ ArcGIS สำหรับ Power BI ของคุณต้องอยู่ภายใต้ [ข้อกำหนด](https://go.microsoft.com/fwlink/?LinkID=826322)และ[นโยบายความเป็นส่วนตัว](https://go.microsoft.com/fwlink/?LinkID=826323)ของ Esri ผู้ใช้ Power BI ที่ต้องการใช้ภาพแผนที่ ArcGIS สำหรับ Power BI จำเป็นต้องตอบรับในกล่องโต้ตอบความยินยอม กล่องโต้ตอบนี้จะปรากฏในครั้งแรกที่คุณใช้แผนที่ ArcGIS สำหรับ Power BI
 
-## <a name="prerequisites"></a><span data-ttu-id="4e6f9-125">ข้อกำหนดเบื้องต้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-125">Prerequisites</span></span>
+## <a name="prerequisites"></a>ข้อกำหนดเบื้องต้น
 
-<span data-ttu-id="4e6f9-126">บทช่วยสอนนี้ใช้ Power BI Desktop และ[ตัวอย่างการวิเคราะห์การค้าปลีก](https://download.microsoft.com/download/9/6/D/96DDC2FF-2568-491D-AAFA-AFDD6F763AE3/Retail%20Analysis%20Sample%20PBIX.pbix) PBIX</span><span class="sxs-lookup"><span data-stu-id="4e6f9-126">This tutorial uses Power BI Desktop and the PBIX [Retail Analysis sample](https://download.microsoft.com/download/9/6/D/96DDC2FF-2568-491D-AAFA-AFDD6F763AE3/Retail%20Analysis%20Sample%20PBIX.pbix).</span></span> <span data-ttu-id="4e6f9-127">นอกจากนี้ยังสามารถสร้างแผนที่ ArcGIS สำหรับ Power BI ได้โดยใช้บริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-127">ArcGIS for Power BI maps can also be created using the Power BI service.</span></span>
+บทช่วยสอนนี้ใช้ Power BI Desktop และ[ตัวอย่างการวิเคราะห์การค้าปลีก](https://download.microsoft.com/download/9/6/D/96DDC2FF-2568-491D-AAFA-AFDD6F763AE3/Retail%20Analysis%20Sample%20PBIX.pbix) PBIX นอกจากนี้ยังสามารถสร้างแผนที่ ArcGIS สำหรับ Power BI ได้โดยใช้บริการของ Power BI
 
-1. <span data-ttu-id="4e6f9-128">จากด้านบนซ้ายของแถบเมนู เลือก **ไฟล์** > **เปิดรายงาน**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-128">From the upper left section of the menu bar, select  **File** > **Open report**.</span></span>
-2. <span data-ttu-id="4e6f9-129">ค้นหา **ไฟล์ PBIX ตัวอย่างการวิเคราะห์การค้าปลีก** ที่บันทึกไว้ในเครื่องภายในของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-129">Find the  **Retail Analysis sample PBIX file**  saved on your local machine.</span></span>
-3. <span data-ttu-id="4e6f9-130">เปิด **ตัวอย่างการวิเคราะห์ร้านค้าปลีก** ในมุมมองรายงานของ ![ไอคอนมุมมองรายงาน](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-01.png)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-130">Open the  **Retail Analysis Sample**  in report view ![Report view icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-01.png).</span></span>
-4. <span data-ttu-id="4e6f9-131">เลือก</span><span class="sxs-lookup"><span data-stu-id="4e6f9-131">Select</span></span> ![เพิ่มไอคอนหน้าใหม่](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-02.png) <span data-ttu-id="4e6f9-133">ในการเพิ่มหน้าใหม่ลงในรายงาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-133">to add a new page to the report.</span></span>
+1. จากด้านบนซ้ายของแถบเมนู เลือก **ไฟล์** > **เปิดรายงาน**
+2. ค้นหา **ไฟล์ PBIX ตัวอย่างการวิเคราะห์การค้าปลีก** ที่บันทึกไว้ในเครื่องภายในของคุณ
+3. เปิด **ตัวอย่างการวิเคราะห์ร้านค้าปลีก** ในมุมมองรายงานของ ![ไอคอนมุมมองรายงาน](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-01.png)
+4. เลือก ![เพิ่มไอคอนหน้าใหม่](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-02.png) ในการเพิ่มหน้าใหม่ลงในรายงาน
 
-## <a name="create-an-arcgis-for-power-bi-map-visualization"></a><span data-ttu-id="4e6f9-134">สร้างการแสดภาพแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-134">Create an ArcGIS for Power BI map visualization</span></span>
+## <a name="create-an-arcgis-for-power-bi-map-visualization"></a>สร้างการแสดภาพแผนที่ ArcGIS สำหรับ Power BI
 
-<span data-ttu-id="4e6f9-135">ในการเพิ่มแผนที่ไปยังรายงานให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-135">To add a map to a report, follow these steps:</span></span>
+ในการเพิ่มแผนที่ไปยังรายงานให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-136">เลือกไอคอนแผนที่ ArcGIS สำหรับ Power BI จากบานหน้าต่างการจัดรูปแบบการแสดงข้อมูล</span><span class="sxs-lookup"><span data-stu-id="4e6f9-136">Select the ArcGIS for Power BI icon from the Visualizations pane.</span></span>
+1. เลือกไอคอนแผนที่ ArcGIS สำหรับ Power BI จากบานหน้าต่างการจัดรูปแบบการแสดงข้อมูล
 
     ![ไอคอนแผนที่ ArcGIS ในบานหน้าต่างการแสดงผลข้อมูลด้วยภาพ](media/power-bi-visualizations-arcgis/arcgis-tutorial-02.png)
 
-2. <span data-ttu-id="4e6f9-138">Power BI เพิ่มเแม่แบบว่างในพื้นที่ของรายงาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-138">Power BI adds an empty template to the report canvas.</span></span> <span data-ttu-id="4e6f9-139">ในภาพรวมนี้ เราจะใช้เวอร์ชัน **มาตรฐาน** ที่มาพร้อมกับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-139">In this overview, we'll be using the **Standard** version included with Power BI.</span></span> <span data-ttu-id="4e6f9-140">หากคุณลงชื่อเข้าใช้บัญชี ArGIS ที่ถูกต้องตามสิทธิ์การใช้งานที่เหมาะสม คุณจะสามารถเข้าถึงฟีเจอร์เพิ่มเติมได้; สำหรับรายละเอียด โปรดดูที่[การช่วยเหลือแบบออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI ](https://doc.arcgis.com/en/power-bi/get-started/account-types.htm)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-140">If you sign in to a valid ArcGIS account with the proper licensing, you'll have access to more features; for details, see the [ArcGIS for Power BI online help](https://doc.arcgis.com/en/power-bi/get-started/account-types.htm).</span></span>
+2. Power BI เพิ่มเแม่แบบว่างในพื้นที่ของรายงาน ในภาพรวมนี้ เราจะใช้เวอร์ชัน **มาตรฐาน** ที่มาพร้อมกับ Power BI หากคุณลงชื่อเข้าใช้บัญชี ArGIS ที่ถูกต้องตามสิทธิ์การใช้งานที่เหมาะสม คุณจะสามารถเข้าถึงฟีเจอร์เพิ่มเติมได้; สำหรับรายละเอียด โปรดดูที่[การช่วยเหลือแบบออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI ](https://doc.arcgis.com/en/power-bi/get-started/account-types.htm)
 
     ![ลงชื่อเข้าใช้ ArcGIS](media/power-bi-visualizations-arcgis/arcgis-tutorial-03.png)
 
-3. <span data-ttu-id="4e6f9-142">จากบานหน้าต่าง **เขตข้อมูล** ให้ลากเขตข้อมูลไปยังเขตข้อมูล **สถานที่ตั้ง** หรือลากพิกัดลงไปในบักเก็ต **ละติจูด** และ/หรือ **ลองจิจูด** ที่เหมาะสม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-142">From the **Fields** pane, drag a data field to the **Location** field, or drag coordinates into the appropriate **Latitude** and/or  **Longitude**  buckets.</span></span> <span data-ttu-id="4e6f9-143">ในตัวอย่างนี้ เรากำลังใช้ **ร้าน > เมือง**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-143">In this example, we're using **Store > City**.</span></span>
+3. จากบานหน้าต่าง **เขตข้อมูล** ให้ลากเขตข้อมูลไปยังเขตข้อมูล **สถานที่ตั้ง** หรือลากพิกัดลงไปในบักเก็ต **ละติจูด** และ/หรือ **ลองจิจูด** ที่เหมาะสม ในตัวอย่างนี้ เรากำลังใช้ **ร้าน > เมือง**
 
     > [!NOTE]
-    > <span data-ttu-id="4e6f9-144">แผนที่ ArcGIS สำหรับ Power BI จะตรวจโดยอัตโนมัติ ว่าเขตข้อมูลที่คุณเลือกควรจะแสดงเป็นรูปร่างหรือจุดบนแผนที่ถึงจะดีที่สุด</span><span class="sxs-lookup"><span data-stu-id="4e6f9-144">ArcGIS for Power BI automatically detects whether the fields you've selected are best viewed as a shape or a point on a map.</span></span> <span data-ttu-id="4e6f9-145">คุณสามารถปรับเปลี่ยนค่าเริ่มต้นในการตั้งค่า (ดู[จัดรูปแบบการแสดงภาพแผนที่ ArcGIS สำหรับ Power BI](#format-the-arcgis-for-power-bi-visualization))</span><span class="sxs-lookup"><span data-stu-id="4e6f9-145">You can adjust the default in the settings (see [format the ArcGIS for Power BI visualization](#format-the-arcgis-for-power-bi-visualization)).</span></span>
+    > แผนที่ ArcGIS สำหรับ Power BI จะตรวจโดยอัตโนมัติ ว่าเขตข้อมูลที่คุณเลือกควรจะแสดงเป็นรูปร่างหรือจุดบนแผนที่ถึงจะดีที่สุด คุณสามารถปรับเปลี่ยนค่าเริ่มต้นในการตั้งค่า (ดู[จัดรูปแบบการแสดงภาพแผนที่ ArcGIS สำหรับ Power BI](#format-the-arcgis-for-power-bi-visualization))
 
     ![เขตข้อมูลเมือง ArcGIS](media/power-bi-visualizations-arcgis/arcgis-tutorial-04.png)
 
-4. <span data-ttu-id="4e6f9-147">จากบานหน้าต่าง **เขตข้อมูล** ลากเป็นหน่วยวัดไปบักเก็ต **ขนาด** เพื่อปรับปรุงวิธีแสดงข้อมูล</span><span class="sxs-lookup"><span data-stu-id="4e6f9-147">From the **Fields** pane, drag a measure to the **Size** bucket to adjust how the data is shown.</span></span> <span data-ttu-id="4e6f9-148">ในตัวอย่างนี้ เรากำลังใช้ **ยอดขาย > ยอดขายปีที่แล้ว**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-148">In this example, we're using **Sales > Last Year Sales**.</span></span>
+4. จากบานหน้าต่าง **เขตข้อมูล** ลากเป็นหน่วยวัดไปบักเก็ต **ขนาด** เพื่อปรับปรุงวิธีแสดงข้อมูล ในตัวอย่างนี้ เรากำลังใช้ **ยอดขาย > ยอดขายปีที่แล้ว**
 
     ![เขตข้อมูลขนาด ArcGIS](media/power-bi-visualizations-arcgis/arcgis-tutorial-05.png)
 
-<span data-ttu-id="4e6f9-150">คุณได้สร้างแผนที่ ArcGIS Map สำหรับ Power BI แรกแล้ว</span><span class="sxs-lookup"><span data-stu-id="4e6f9-150">You've created your first ArcGIS for Power BI map.</span></span> <span data-ttu-id="4e6f9-151">ในตอนนี้ เรามาปรับแต่งและจัดรูปแบบแผนที่ของเราโดยใช้แผนที่พื้นฐาน ชนิดของสถานที่ตั้ง ธีม และอื่น ๆ อีกมากมาย</span><span class="sxs-lookup"><span data-stu-id="4e6f9-151">Now, let's refine and format our map using base maps, location types, themes, and more.</span></span>
+คุณได้สร้างแผนที่ ArcGIS Map สำหรับ Power BI แรกแล้ว ในตอนนี้ เรามาปรับแต่งและจัดรูปแบบแผนที่ของเราโดยใช้แผนที่พื้นฐาน ชนิดของสถานที่ตั้ง ธีม และอื่น ๆ อีกมากมาย
 
-## <a name="format-the-arcgis-for-power-bi-visualization"></a><span data-ttu-id="4e6f9-152">จัดรูปแบบการแสดงภาพแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-152">Format the ArcGIS for Power BI visualization</span></span>
+## <a name="format-the-arcgis-for-power-bi-visualization"></a>จัดรูปแบบการแสดงภาพแผนที่ ArcGIS สำหรับ Power BI
 
-<span data-ttu-id="4e6f9-153">เพื่อเข้าถึงฟีเจอร์การจัดรูปแบบ **ArcGIS Maps สำหรับ Power BI**:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-153">To access **ArcGIS for Power BI** formatting features:</span></span>
+เพื่อเข้าถึงฟีเจอร์การจัดรูปแบบ **ArcGIS Maps สำหรับ Power BI**:
 
-1. <span data-ttu-id="4e6f9-154">ในบานหน้าต่างการแสดงผลข้อมูลด้วยภาพ ให้คลิกแท็บ **จัดรูปแบบ** เพื่อดูตัวเลือกการจัดรูปแบบ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-154">On the Visualizations pane, click the **Format** tab to view the formatting options.</span></span>
+1. ในบานหน้าต่างการแสดงผลข้อมูลด้วยภาพ ให้คลิกแท็บ **จัดรูปแบบ** เพื่อดูตัวเลือกการจัดรูปแบบ
 
     ![แท็บการจัดรูปแบบ](media/power-bi-visualizations-arcgis/arcgis-tutorial-06.png)
 
-    <span data-ttu-id="4e6f9-156">ตัวเลือกการจัดรูปแบบแผนที่ ArcGIS ประกอบด้วย:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-156">ArcGIS map formatting options include:</span></span>
+    ตัวเลือกการจัดรูปแบบแผนที่ ArcGIS ประกอบด้วย:
 
-    * <span data-ttu-id="4e6f9-157">**เลเยอร์:** เปลี่ยนชื่อของรายการเลเยอร์ (ToC) ให้เปิดหรือปิดรายการเลเยอร์แล้วยึดรายการบนแผนที่ และให้กำหนดตำแหน่งของรายการที่มีการอ้างอิง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-157">**Layers:** Change the title of the Layers list (ToC), turn the layers list on or off, anchor the list over the map, define the position of the anchored list.</span></span> <span data-ttu-id="4e6f9-158">รายการเลเยอร์จะเปิดตามค่าเริ่มต้นและพร้อมใช้งานในการขยายเครื่องมือการทำแผนที่ ![ไอคอนแผนที่](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-03.png)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-158">The Layers list is on by default and is available in the expanded map tools ![Map icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-03.png).</span></span>
-    * <span data-ttu-id="4e6f9-159">**เครื่องมือแผนที่:** เปิดหรือปิดเครื่องมือนำทาง ล็อกขอบเขตของแผนที่ในตำแหน่งปัจจุบันแล้วให้กำหนดตำแหน่งของการ์ดอินโฟกราฟิกบนแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-159">**Map tools:** turn navigation tools on or off, lock the map extent in its current position, define the position of infographics cards on the map.</span></span> <span data-ttu-id="4e6f9-160">ปุ่มขยายและปุ่มย่อจะถูกปิดใช้งานตามค่าเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-160">Zoom in and Zoom out buttons are off by default.</span></span>
-    * <span data-ttu-id="4e6f9-161">**ชนิดของสถานที่ตั้ง:** การระบุประเทศ/ภูมิภาค ที่ข้อมูลของคุณจะการช่วยในการปรับปรุงความแม่นยำของตำแหน่งที่ตั้งบนแผนที่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-161">**Location type:** Specifying the country/region in which your data is located helps to improve the accuracy of locations on your map.</span></span> <span data-ttu-id="4e6f9-162">ถ้าข้อมูลของคุณอยู่ในประเทศ/ภูมิภาคเดียว ให้เลือกประเทศ/ภูมิภาคจากรายการดรอปดาวน์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-162">If your data is in a single country/region, choose the country/region from the drop-down list.</span></span> <span data-ttu-id="4e6f9-163">ถ้าข้อมูลของคุณเป็นส่วนกลาง ให้เลือกโลก</span><span class="sxs-lookup"><span data-stu-id="4e6f9-163">If your data is global, choose World.</span></span>
-    * <span data-ttu-id="4e6f9-164">**ค้นหา:** เปิดหรือปิดฟังก์ชันค้นหาแล้วเปลี่ยนสีเริ่มต้นของหมุด</span><span class="sxs-lookup"><span data-stu-id="4e6f9-164">**Search:** Turn the Search function on or off, change the default color of the pin.</span></span> <span data-ttu-id="4e6f9-165">การค้นหาจะเปิดตามค่าเริ่มต้นและพร้อมใช้งานในเครื่องมือแผนที่ที่ขยายของ ![ไอคอนการค้นหา](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-04.png)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-165">Search is on by default and is available in the expanded map tools ![search icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-04.png).</span></span>
+    * **เลเยอร์:** เปลี่ยนชื่อของรายการเลเยอร์ (ToC) ให้เปิดหรือปิดรายการเลเยอร์แล้วยึดรายการบนแผนที่ และให้กำหนดตำแหน่งของรายการที่มีการอ้างอิง รายการเลเยอร์จะเปิดตามค่าเริ่มต้นและพร้อมใช้งานในการขยายเครื่องมือการทำแผนที่ ![ไอคอนแผนที่](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-03.png)
+    * **เครื่องมือแผนที่:** เปิดหรือปิดเครื่องมือนำทาง ล็อกขอบเขตของแผนที่ในตำแหน่งปัจจุบันแล้วให้กำหนดตำแหน่งของการ์ดอินโฟกราฟิกบนแผนที่ ปุ่มขยายและปุ่มย่อจะถูกปิดใช้งานตามค่าเริ่มต้น
+    * **ชนิดของสถานที่ตั้ง:** การระบุประเทศ/ภูมิภาค ที่ข้อมูลของคุณจะการช่วยในการปรับปรุงความแม่นยำของตำแหน่งที่ตั้งบนแผนที่ของคุณ ถ้าข้อมูลของคุณอยู่ในประเทศ/ภูมิภาคเดียว ให้เลือกประเทศ/ภูมิภาคจากรายการดรอปดาวน์ ถ้าข้อมูลของคุณเป็นส่วนกลาง ให้เลือกโลก
+    * **ค้นหา:** เปิดหรือปิดฟังก์ชันค้นหาแล้วเปลี่ยนสีเริ่มต้นของหมุด การค้นหาจะเปิดตามค่าเริ่มต้นและพร้อมใช้งานในเครื่องมือแผนที่ที่ขยายของ ![ไอคอนการค้นหา](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-04.png)
 
-### <a name="edit-an-arcgis-for-power-bi-map"></a><span data-ttu-id="4e6f9-166">แก้ไขแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-166">Edit an ArcGIS for Power BI map</span></span>
+### <a name="edit-an-arcgis-for-power-bi-map"></a>แก้ไขแผนที่ ArcGIS สำหรับ Power BI
 
-<span data-ttu-id="4e6f9-167">หลังจากที่คุณเพิ่มข้อมูลไปในการแสดงภาพของแผนที่ เครื่องมือแผนที่จะพร้อมใช้งาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-167">After you add data to the map visualization, the map tools become available.</span></span>
+หลังจากที่คุณเพิ่มข้อมูลไปในการแสดงภาพของแผนที่ เครื่องมือแผนที่จะพร้อมใช้งาน
 
 > [!NOTE]
-> <span data-ttu-id="4e6f9-168">บทช่วยสอนนี้จะแสดงเฉพาะฟีเจอร์และตัวเลือกที่พร้อมใช้งานในเวอร์ชัน **มาตรฐาน** ของแผนที่  ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-168">This tutorial shows only the features and options available in the **Standard** version of ArcGIS for Power BI.</span></span> <span data-ttu-id="4e6f9-169">หากคุณลงชื่อเข้าใช้ [บัญชี ArcGIS](https://doc.arcgis.com/en/power-bi/get-started/account-types.htm) ที่ถูกต้อง ด้วยสิทธิ์การใช้งานที่เหมาะสมคุณจะสามารถเข้าถึงคุณลักษณะเพิ่มเติมได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-169">If you're signed in to a valid [ArcGIS account](https://doc.arcgis.com/en/power-bi/get-started/account-types.htm) with the proper licensing, you'll have access to more features.</span></span>
+> บทช่วยสอนนี้จะแสดงเฉพาะฟีเจอร์และตัวเลือกที่พร้อมใช้งานในเวอร์ชัน **มาตรฐาน** ของแผนที่  ArcGIS สำหรับ Power BI หากคุณลงชื่อเข้าใช้ [บัญชี ArcGIS](https://doc.arcgis.com/en/power-bi/get-started/account-types.htm) ที่ถูกต้อง ด้วยสิทธิ์การใช้งานที่เหมาะสมคุณจะสามารถเข้าถึงคุณลักษณะเพิ่มเติมได้
 
-<span data-ttu-id="4e6f9-170">ในการขยายเครื่องมือแผนที่:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-170">To expand the map tools:</span></span>
+ในการขยายเครื่องมือแผนที่:
 
-1. <span data-ttu-id="4e6f9-171">คลิกที่ปุ่มเครื่องมือแผนที่เพื่อขยายเครื่องมือ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-171">Click the Map tools button to expand the tools.</span></span>
+1. คลิกที่ปุ่มเครื่องมือแผนที่เพื่อขยายเครื่องมือ
 
     ![ปุ่มเครื่องมือแผนที่](media/power-bi-visualizations-arcgis/arcgis-tutorial-07.png)
 
-<span data-ttu-id="4e6f9-173">เครื่องมือแผนที่ขยายเพื่อแสดงคุณลักษณะที่พร้อมใช้งาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-173">The map tools expand to show the available features.</span></span> <span data-ttu-id="4e6f9-174">แต่ละคุณลักษณะ เมื่อเลือก บานหน้าต่างงานที่มีรายละเอียดตัวเลือกจะเปิดออกมา</span><span class="sxs-lookup"><span data-stu-id="4e6f9-174">Each feature, when selected, opens a task pane that provides detailed options.</span></span>
+เครื่องมือแผนที่ขยายเพื่อแสดงคุณลักษณะที่พร้อมใช้งาน แต่ละคุณลักษณะ เมื่อเลือก บานหน้าต่างงานที่มีรายละเอียดตัวเลือกจะเปิดออกมา
 
 > [!TIP]
-> <span data-ttu-id="4e6f9-175">Esri มี[เอกสารที่ครอบคลุม](https://go.microsoft.com/fwlink/?LinkID=828772)เกี่ยวกับการใช้แผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-175">Esri provides [comprehensive documentation ](https://go.microsoft.com/fwlink/?LinkID=828772)on using ArcGIS for Power BI.</span></span>
+> Esri มี[เอกสารที่ครอบคลุม](https://go.microsoft.com/fwlink/?LinkID=828772)เกี่ยวกับการใช้แผนที่ ArcGIS สำหรับ Power BI
 
-#### <a name="change-the-base-map"></a><span data-ttu-id="4e6f9-176">เปลี่ยนแผนที่พื้นฐาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-176">Change the base map</span></span>
+#### <a name="change-the-base-map"></a>เปลี่ยนแผนที่พื้นฐาน
 
-<span data-ttu-id="4e6f9-177">แผนที่พื้นฐานมีพื้นหลังหรือบริบทของวิชวลสำหรับข้อมูลในแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-177">A basemap provides a background, or visual context, for the data in a map.</span></span> <span data-ttu-id="4e6f9-178">ตัวอย่างเช่น แผนที่พื้นฐานแสดงถนนที่สามารถให้บริบทสำหรับข้อมูลที่อยู่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-178">For example, a basemap showing streets can provide context for your address data.</span></span> <span data-ttu-id="4e6f9-179">การใช้บัญชี **มาตรฐาน** มีการกำหนดแผนที่หลักสี่รายการ: พื้นที่สีเทาเข้ม, พื้นที่สีเทาอ่อน, OpenStreetMap และแผนที่ถนน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-179">Using the **Standard** account, four base maps are provided: Dark Gray Canvas, Light Gray Canvas, OpenStreetMap, and Streets.</span></span>
+แผนที่พื้นฐานมีพื้นหลังหรือบริบทของวิชวลสำหรับข้อมูลในแผนที่ ตัวอย่างเช่น แผนที่พื้นฐานแสดงถนนที่สามารถให้บริบทสำหรับข้อมูลที่อยู่ของคุณ การใช้บัญชี **มาตรฐาน** มีการกำหนดแผนที่หลักสี่รายการ: พื้นที่สีเทาเข้ม, พื้นที่สีเทาอ่อน, OpenStreetMap และแผนที่ถนน
 
-<span data-ttu-id="4e6f9-180">เมื่อต้องการเปลี่ยนแผนที่พื้นฐาน ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-180">To change the basemap, follow these steps:</span></span>
+เมื่อต้องการเปลี่ยนแผนที่พื้นฐาน ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-181">คลิกปุ่ม **แผนที่พื้นฐาน** ![ไอคอนแผนที่พื้นฐาน](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-05.png) เพื่อแสดงแกลเลอรี</span><span class="sxs-lookup"><span data-stu-id="4e6f9-181">Click the **Basemap** button ![basemap icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-05.png) to display the gallery.</span></span>
-2. <span data-ttu-id="4e6f9-182">เลือก **พื้นที่ทำงานสีเทาเข้ม** ของแผนที่พื้นฐาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-182">Select the **Dark Gray Canvas** basemap.</span></span>
+1. คลิกปุ่ม **แผนที่พื้นฐาน** ![ไอคอนแผนที่พื้นฐาน](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-05.png) เพื่อแสดงแกลเลอรี
+2. เลือก **พื้นที่ทำงานสีเทาเข้ม** ของแผนที่พื้นฐาน
 
     ![การเลือกแผนที่พื้นฐาน](media/power-bi-visualizations-arcgis/arcgis-tutorial-08.png)
 
-    <span data-ttu-id="4e6f9-184">การอัปเดตการแผนที่โดยใช้แผนที่พื้นฐานใหม่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-184">The map updates using the new basemap.</span></span>
+    การอัปเดตการแผนที่โดยใช้แผนที่พื้นฐานใหม่
 
-<span data-ttu-id="4e6f9-185">สำหรับข้อมูลเพิ่มเติม โปรดดูที่การ[เปลี่ยนแผนที่พื้นฐาน](https://doc.arcgis.com/en/power-bi/design/change-the-basemap.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-185">For more information, see [Change the basemap](https://doc.arcgis.com/en/power-bi/design/change-the-basemap.htm) in the ArcGIS for Power BI online help.</span></span>
+สำหรับข้อมูลเพิ่มเติม โปรดดูที่การ[เปลี่ยนแผนที่พื้นฐาน](https://doc.arcgis.com/en/power-bi/design/change-the-basemap.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
 
-#### <a name="show-map-layers"></a><span data-ttu-id="4e6f9-186">แสดงเลเยอร์แผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-186">Show map layers</span></span>
+#### <a name="show-map-layers"></a>แสดงเลเยอร์แผนที่
 
-<span data-ttu-id="4e6f9-187">ในแผนที่ ArcGIS สำหรับ Power BI คุณจะทำงานกับข้อมูลทางภูมิศาสตร์ผ่านเลเยอร์ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-187">In ArcGIS for Power BI, you work with geographic data through layers.</span></span> <span data-ttu-id="4e6f9-188">เลเยอร์คือคอลเลกชันเชิงตรรกะของข้อมูลทางภูมิศาสตร์ที่ใช้ในการสร้างแผนที่ ข้อมูลนั้นยังเป็นพื้นฐานสำหรับการวิเคราะห์ทางภูมิศาสตร์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-188">Layers are logical collections of geographic data that are used to create maps; they are also the basis for geographic analysis.</span></span>
+ในแผนที่ ArcGIS สำหรับ Power BI คุณจะทำงานกับข้อมูลทางภูมิศาสตร์ผ่านเลเยอร์ได้ เลเยอร์คือคอลเลกชันเชิงตรรกะของข้อมูลทางภูมิศาสตร์ที่ใช้ในการสร้างแผนที่ ข้อมูลนั้นยังเป็นพื้นฐานสำหรับการวิเคราะห์ทางภูมิศาสตร์
 
-<span data-ttu-id="4e6f9-189">ในการแสดงรายการเลเยอร์ให้คลิกปุ่ม **เลเยอร์** ![ไอคอนเลเยอร์](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-06.png) ในเครื่องมือแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-189">To display the Layers list, click the **Layers** ![Layers icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-06.png) button in the map tools.</span></span>
+ในการแสดงรายการเลเยอร์ให้คลิกปุ่ม **เลเยอร์** ![ไอคอนเลเยอร์](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-06.png) ในเครื่องมือแผนที่
 
-<span data-ttu-id="4e6f9-190">รายการเลเยอร์จะแสดงแต่ละเลเยอร์ที่สร้างแผนที่ และแต่ละเลเยอร์มีชุดตัวเลือกของตัวเองเพื่อช่วยให้คุณสามารถกำหนดค่าและทำงานกับแผนที่ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-190">The Layers list displays each layer that makes up the map, and each layer has its own set of options to help you customize and work with the map.</span></span> <span data-ttu-id="4e6f9-191">ตัวเลือกที่แตกต่างกันจะปรากฏในเมนูโดยขึ้นอยู่กับชนิดของเลเยอร์ที่เลือก; ตัวอย่างเช่น คุณสามารถเปลี่ยนชนิดของการใช้สัญลักษณ์และตำแหน่งที่ตั้งสำหรับเลเยอร์ที่สร้างขึ้นโดยใช้ข้อมูล Power BI—เช่นเลเยอร์ **เมือง** ที่คุณสร้างขึ้นสำหรับตัวอย่างนี้—แต่ตัวเลือกเหล่านั้นไม่พร้อมใช้งานสำหรับการอ้างอิงหรือเลเยอร์เวลาของไดรฟ์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-191">Different options appear in the menu depending on the type of layer selected; for example, you can change symbology and location type for a layer created using Power BI data—like the **City** layer you created for this example—but those options aren't available for reference or drive-time layers.</span></span>
+รายการเลเยอร์จะแสดงแต่ละเลเยอร์ที่สร้างแผนที่ และแต่ละเลเยอร์มีชุดตัวเลือกของตัวเองเพื่อช่วยให้คุณสามารถกำหนดค่าและทำงานกับแผนที่ได้ ตัวเลือกที่แตกต่างกันจะปรากฏในเมนูโดยขึ้นอยู่กับชนิดของเลเยอร์ที่เลือก; ตัวอย่างเช่น คุณสามารถเปลี่ยนชนิดของการใช้สัญลักษณ์และตำแหน่งที่ตั้งสำหรับเลเยอร์ที่สร้างขึ้นโดยใช้ข้อมูล Power BI—เช่นเลเยอร์ **เมือง** ที่คุณสร้างขึ้นสำหรับตัวอย่างนี้—แต่ตัวเลือกเหล่านั้นไม่พร้อมใช้งานสำหรับการอ้างอิงหรือเลเยอร์เวลาของไดรฟ์
 
 ![ปุ่มเลเยอร์ ArcGIS](media/power-bi-visualizations-arcgis/arcgis-tutorial-09.png)
 
-<span data-ttu-id="4e6f9-193">สำหรับข้อมูลเพิ่มเติม โปรดดูที่[ทำงานกับเลเยอร์](https://doc.arcgis.com/en/power-bi/design/work-with-layers.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-193">For more information, see [Work with layers](https://doc.arcgis.com/en/power-bi/design/work-with-layers.htm) in the ArcGIS for Power BI online help.</span></span>
+สำหรับข้อมูลเพิ่มเติม โปรดดูที่[ทำงานกับเลเยอร์](https://doc.arcgis.com/en/power-bi/design/work-with-layers.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
 
-#### <a name="specify-the-location-type"></a><span data-ttu-id="4e6f9-194">ระบุชนิดของตำแหน่งที่ตั้ง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-194">Specify the location type</span></span>
+#### <a name="specify-the-location-type"></a>ระบุชนิดของตำแหน่งที่ตั้ง
 
-<span data-ttu-id="4e6f9-195">แผนที่ ArcGIS สำหรับ Power BI ใช้ระบบภูมิศาสตร์ที่มีประสิทธิภาพในการทำงานกับข้อมูลตำแหน่งที่ตั้งบนแผนที่อย่างถูกต้องและแสดงรายการเป็นจุดหรือขอบเขตตามค่าเริ่มต้นโดยอัตโนมัติตามชนิดของข้อมูล</span><span class="sxs-lookup"><span data-stu-id="4e6f9-195">ArcGIS for Power BI uses its powerful geo enabling technology to accurately position location data on the map and automatically renders items as points or boundaries by default, based on the type of data.</span></span> <span data-ttu-id="4e6f9-196">ตัวอย่างเช่น พิกัดละติจูด-ลองจิจูดจะแสดงเป็นจุดบนแผนที่ ในขณะที่เขตข้อมูลสถานะจะแสดงเป็นขอบเขตหรือรูปหลายเหลี่ยม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-196">For example, a latitude-longitude coordinate is rendered as a point on the map, whereas a state field is rendered as a boundary, or polygon.</span></span> <span data-ttu-id="4e6f9-197">คุณสามารถเปลี่ยนวิธีแสดงตำแหน่งได้โดยระบุประเภทสถานที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-197">You can change the way locations are rendered by specifying the location type.</span></span>
+แผนที่ ArcGIS สำหรับ Power BI ใช้ระบบภูมิศาสตร์ที่มีประสิทธิภาพในการทำงานกับข้อมูลตำแหน่งที่ตั้งบนแผนที่อย่างถูกต้องและแสดงรายการเป็นจุดหรือขอบเขตตามค่าเริ่มต้นโดยอัตโนมัติตามชนิดของข้อมูล ตัวอย่างเช่น พิกัดละติจูด-ลองจิจูดจะแสดงเป็นจุดบนแผนที่ ในขณะที่เขตข้อมูลสถานะจะแสดงเป็นขอบเขตหรือรูปหลายเหลี่ยม คุณสามารถเปลี่ยนวิธีแสดงตำแหน่งได้โดยระบุประเภทสถานที่
 
-<span data-ttu-id="4e6f9-198">ใช้คุณลักษณะประเภทสถานที่เพื่อปรับปรุงความแม่นยำของตำแหน่งบนแผนที่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-198">Use the Location type feature to improve the accuracy of the locations on your map.</span></span> <span data-ttu-id="4e6f9-199">คุณสามารถทำได้อย่างรวดเร็วโดยเลือกประเทศ/ภูมิภาค ในบานหน้าต่างรูปแบบของการแสดงภาพ (ขยายประเภทประเภทสถานที่ตั้งและเลือกประเทศ/ภูมิภาค ที่เหมาะสม) หรือเข้าถึงตัวเลือกเพิ่มเติมโดยใช้คุณลักษณะประเภทสถานที่ตั้งแบบเต็มในบานหน้าต่างตัวเลือกเลเยอร์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-199">You can quickly do this by choosing a country/region in the visualization's Format pane (expand the Location type category and choose the appropriate country/region), or access more options by using the full Location Type feature in the layer options pane.</span></span>
+ใช้คุณลักษณะประเภทสถานที่เพื่อปรับปรุงความแม่นยำของตำแหน่งบนแผนที่ของคุณ คุณสามารถทำได้อย่างรวดเร็วโดยเลือกประเทศ/ภูมิภาค ในบานหน้าต่างรูปแบบของการแสดงภาพ (ขยายประเภทประเภทสถานที่ตั้งและเลือกประเทศ/ภูมิภาค ที่เหมาะสม) หรือเข้าถึงตัวเลือกเพิ่มเติมโดยใช้คุณลักษณะประเภทสถานที่ตั้งแบบเต็มในบานหน้าต่างตัวเลือกเลเยอร์
 
-<span data-ttu-id="4e6f9-200">คุณลักษณะ **ประเภทสถานที่ตั้ง** แบบเต็มสามารถเข้าถึงได้ผ่านเมนูตัวเลือกเลเยอร์และช่วยให้คุณเลือกได้ว่าจะแสดงข้อมูลของคุณเป็นจุดหรือขอบเขต (รูปหลายเหลี่ยม) นอกเหนือจากการระบุประเทศ/ภูมิภาคที่ข้อมูลนั้นอยู่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-200">The full **Location type** feature is accessible through the layer options menu and allows you to choose whether to represent your data as points or boundaries (polygons), in addition to specifying the country/region in which the data is located.</span></span> <span data-ttu-id="4e6f9-201">เขตแดนมักกำหนดเป็นพื้นที่ทางภูมิศาสตร์มาตรฐาน เช่น ประเทศ จังหวัด รหัสไปรษณีย์ เป็นต้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-201">Boundaries are typically defined as standard geographic areas such as countries, provinces, ZIP codes, and so on.</span></span> <span data-ttu-id="4e6f9-202">หากคุณเลือกเขตแดนและประเทศ/ภูมิภาค ที่เฉพาะเจาะจงสำหรับตำแหน่งข้อมูลของคุณ คุณสามารถเลือกจากขอบเขตมาตรฐานที่หลากหลาย เช่น เขตการปกครอง เขตสำมะโนประชากร มณฑล หรือเทศบาล</span><span class="sxs-lookup"><span data-stu-id="4e6f9-202">If you choose boundaries and a specific country/region for your data locations, you can choose from a variety of standard boundaries, such as counties, census tracts, districts, or municipalities.</span></span> <span data-ttu-id="4e6f9-203">มีสถานที่ตั้งที่แตกต่างกันสำหรับแต่ละประเทศ/ภูมิภาค</span><span class="sxs-lookup"><span data-stu-id="4e6f9-203">Different location types are available for each country/region.</span></span>
+คุณลักษณะ **ประเภทสถานที่ตั้ง** แบบเต็มสามารถเข้าถึงได้ผ่านเมนูตัวเลือกเลเยอร์และช่วยให้คุณเลือกได้ว่าจะแสดงข้อมูลของคุณเป็นจุดหรือขอบเขต (รูปหลายเหลี่ยม) นอกเหนือจากการระบุประเทศ/ภูมิภาคที่ข้อมูลนั้นอยู่ เขตแดนมักกำหนดเป็นพื้นที่ทางภูมิศาสตร์มาตรฐาน เช่น ประเทศ จังหวัด รหัสไปรษณีย์ เป็นต้น หากคุณเลือกเขตแดนและประเทศ/ภูมิภาค ที่เฉพาะเจาะจงสำหรับตำแหน่งข้อมูลของคุณ คุณสามารถเลือกจากขอบเขตมาตรฐานที่หลากหลาย เช่น เขตการปกครอง เขตสำมะโนประชากร มณฑล หรือเทศบาล มีสถานที่ตั้งที่แตกต่างกันสำหรับแต่ละประเทศ/ภูมิภาค
 
-<span data-ttu-id="4e6f9-204">ในการแก้ไขชนิดตำแหน่งข้อมูลของคุณให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-204">To modify your data's location type, follow these steps:</span></span>
+ในการแก้ไขชนิดตำแหน่งข้อมูลของคุณให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-205">ในรายการเลเยอร์ ให้เลือกชั้นข้อมูลที่คุณต้องการใช้งาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-205">In the Layers list, select the data layer you want to work with.</span></span>
-2. <span data-ttu-id="4e6f9-206">คลิกปุ่ม **ตัวเลือกเลเยอร์** และเลือก **ชนิดสถานที่ตั้ง**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-206">Click the **Layer options** button and choose **Location type**.</span></span>
+1. ในรายการเลเยอร์ ให้เลือกชั้นข้อมูลที่คุณต้องการใช้งาน
+2. คลิกปุ่ม **ตัวเลือกเลเยอร์** และเลือก **ชนิดสถานที่ตั้ง**
 
     ![การเลือกชนิดสถานที่ตั้ง](media/power-bi-visualizations-arcgis/arcgis-tutorial-10.png)
 
-    <span data-ttu-id="4e6f9-208">ยอมรับค่าเริ่มต้นเพื่อแสดงสถานที่ตั้งเป็นจุดบนแผนที่และระบุ **หนึ่งประเทศ> สหรัฐอเมริกา**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-208">Accept the default values to render the locations as points on the map and specify **One country > United States**.</span></span>
+    ยอมรับค่าเริ่มต้นเพื่อแสดงสถานที่ตั้งเป็นจุดบนแผนที่และระบุ **หนึ่งประเทศ> สหรัฐอเมริกา**
 
     ![ค่าตัวเลือกชนิดสถานที่ตั้ง](media/power-bi-visualizations-arcgis/arcgis-tutorial-11.png)
 
-<span data-ttu-id="4e6f9-210">สำหรับข้อมูลเพิ่มเติมโ ปรดดูที่การ[ระบุชนิดสถานที่ตั้ง](https://doc.arcgis.com/en/power-bi/design/specify-location-type.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-210">For more information, see [Specify the location type](https://doc.arcgis.com/en/power-bi/design/specify-location-type.htm) in the ArcGIS for Power BI online help.</span></span>
+สำหรับข้อมูลเพิ่มเติมโ ปรดดูที่การ[ระบุชนิดสถานที่ตั้ง](https://doc.arcgis.com/en/power-bi/design/specify-location-type.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
 
-#### <a name="customize-the-maps-symbology"></a><span data-ttu-id="4e6f9-211">ปรับแต่งสัญลักษณ์ของแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-211">Customize the map's symbology</span></span>
+#### <a name="customize-the-maps-symbology"></a>ปรับแต่งสัญลักษณ์ของแผนที่
 
-<span data-ttu-id="4e6f9-212">แผนที่ ArcGIS สำหรับ Power BI ใช้ค่าในบานหน้าต่างเขตข้อมูลเพื่อกำหนดวิธีแสดงตำแหน่งบนแผนที่อย่างชาญฉลาด</span><span class="sxs-lookup"><span data-stu-id="4e6f9-212">ArcGIS for Power BI uses values in the Fields pane to intelligently determine how it should render locations on the map.</span></span> <span data-ttu-id="4e6f9-213">คุณลักษณะ **การใช้สัญลักษณ์** ช่วยให้คุณสามารถปรับเปลี่ยนรูปแบบเริ่มต้นเพื่อบอกเล่าเรื่องราวของคุณได้ดีขึ้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-213">The **Symbology** feature allows you to modify the default styling to better tell your story.</span></span> <span data-ttu-id="4e6f9-214">คุณสามารถเลือกธีมแผนที่อื่น ๆ และปรับแต่งสัญลักษณ์และสีที่ใช้แทนตำแหน่งที่ตั้งบนแผนที่ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-214">You can choose a different map theme and customize the symbols and colors used to represent locations on the map.</span></span> <span data-ttu-id="4e6f9-215">ธีมแผนที่และตัวเลือกรูปแบบต่าง ๆ จะพร้อมใช้งานโดยขึ้นอยู่กับค่าที่คุณเพิ่มลงในบานหน้าต่างฟิลด์ของภาพแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-215">Different map themes and styling options are available, depending on the values you added to the map visual's Fields pane.</span></span>
+แผนที่ ArcGIS สำหรับ Power BI ใช้ค่าในบานหน้าต่างเขตข้อมูลเพื่อกำหนดวิธีแสดงตำแหน่งบนแผนที่อย่างชาญฉลาด คุณลักษณะ **การใช้สัญลักษณ์** ช่วยให้คุณสามารถปรับเปลี่ยนรูปแบบเริ่มต้นเพื่อบอกเล่าเรื่องราวของคุณได้ดีขึ้น คุณสามารถเลือกธีมแผนที่อื่น ๆ และปรับแต่งสัญลักษณ์และสีที่ใช้แทนตำแหน่งที่ตั้งบนแผนที่ได้ ธีมแผนที่และตัวเลือกรูปแบบต่าง ๆ จะพร้อมใช้งานโดยขึ้นอยู่กับค่าที่คุณเพิ่มลงในบานหน้าต่างฟิลด์ของภาพแผนที่
 
-<span data-ttu-id="4e6f9-216">หากต้องการเปลี่ยนสัญลักษณ์ของเลเยอร์ ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-216">To change a layer's symbology, follow these steps:</span></span>
+หากต้องการเปลี่ยนสัญลักษณ์ของเลเยอร์ ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-217">ในรายการเลเยอร์ ให้เลือกชั้นข้อมูลที่คุณต้องการใช้งาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-217">In the Layers list, select the data layer you want to work with.</span></span>
+1. ในรายการเลเยอร์ ให้เลือกชั้นข้อมูลที่คุณต้องการใช้งาน
 
-2. <span data-ttu-id="4e6f9-218">คลิกปุ่ม **ตัวเลือกเลเยอร์** และเลือก **การใช้สัญลักษณ์**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-218">Click the **Layer options** button and choose **Symbology**.</span></span>
+2. คลิกปุ่ม **ตัวเลือกเลเยอร์** และเลือก **การใช้สัญลักษณ์**
 
-<span data-ttu-id="4e6f9-219">บานหน้าต่าง การใช้สัญลักษณ์ จะปรากฏขึ้นพร้อมกับขยายประเภทธีมแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-219">The Symbology pane appears, with the Map theme category expanded.</span></span>
+บานหน้าต่าง การใช้สัญลักษณ์ จะปรากฏขึ้นพร้อมกับขยายประเภทธีมแผนที่
 
-##### <a name="change-the-map-theme"></a><span data-ttu-id="4e6f9-220">เปลี่ยนธีมแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-220">Change the map theme</span></span>
+##### <a name="change-the-map-theme"></a>เปลี่ยนธีมแผนที่
 
-<span data-ttu-id="4e6f9-221">ในตัวอย่างนี้ เนื่องจากเราได้เพิ่มค่าลงในเขตข้อมูล **สถานที่ตั้ง** และ **ขนาด** แผนที่จะใช้ธีม **ขนาด** ตามค่าเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-221">In this example, because we added values to both the **Location** and **Size** fields, the map uses the **Size** theme by default.</span></span>
+ในตัวอย่างนี้ เนื่องจากเราได้เพิ่มค่าลงในเขตข้อมูล **สถานที่ตั้ง** และ **ขนาด** แผนที่จะใช้ธีม **ขนาด** ตามค่าเริ่มต้น
 
-<span data-ttu-id="4e6f9-222">ในการเปลี่ยนธีมแผนที่ ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-222">To change the map theme, follow these steps:</span></span>
+ในการเปลี่ยนธีมแผนที่ ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-223">เลือกธีมแผนที่อื่น ๆ เพื่อดูว่าแผนที่ของคุณเปลี่ยนแปลงไปอย่างไร</span><span class="sxs-lookup"><span data-stu-id="4e6f9-223">Choose some of the other map themes to see how your map changes.</span></span>
+1. เลือกธีมแผนที่อื่น ๆ เพื่อดูว่าแผนที่ของคุณเปลี่ยนแปลงไปอย่างไร
 
     ![ธีมแผนที่](media/power-bi-visualizations-arcgis/arcgis-tutorial-12.png)
 
-2. <span data-ttu-id="4e6f9-225">เลือกธีม **ขนาด**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-225">Choose the **Size** theme.</span></span>
+2. เลือกธีม **ขนาด**
 
-<span data-ttu-id="4e6f9-226">สำหรับข้อมูลโดยละเอียด ให้ดูที่[เปลี่ยนธีมแผนที่](https://doc.arcgis.com/en/power-bi/design/change-the-map-theme.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-226">For detailed information, see [Change the map theme](https://doc.arcgis.com/en/power-bi/design/change-the-map-theme.htm) in the ArcGIS for Power BI online help.</span></span>
+สำหรับข้อมูลโดยละเอียด ให้ดูที่[เปลี่ยนธีมแผนที่](https://doc.arcgis.com/en/power-bi/design/change-the-map-theme.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
 
-##### <a name="layer-transparency"></a><span data-ttu-id="4e6f9-227">ความโปร่งใสของเลเยอร์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-227">Layer transparency</span></span>
+##### <a name="layer-transparency"></a>ความโปร่งใสของเลเยอร์
 
-<span data-ttu-id="4e6f9-228">หากแผนที่ของคุณมีหลายเลเยอร์ การแสดงเลเยอร์ด้วยความโปร่งใสในระดับหนึ่งอาจเป็นประโยชน์เพื่อให้ยังคงมองเห็นรายการในเลเยอร์อื่น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-228">If your map contains several layers, it can be useful to render layers with some level of transparency so that items on other layers are still visible.</span></span>
+หากแผนที่ของคุณมีหลายเลเยอร์ การแสดงเลเยอร์ด้วยความโปร่งใสในระดับหนึ่งอาจเป็นประโยชน์เพื่อให้ยังคงมองเห็นรายการในเลเยอร์อื่น
 
-<span data-ttu-id="4e6f9-229">ในการตั้งค่าความโปร่งใสสำหรับเลเยอร์ ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-229">To set the transparency value for the layer, follow these steps:</span></span>
+ในการตั้งค่าความโปร่งใสสำหรับเลเยอร์ ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-230">ในบานหน้าต่าง **การใช้สัญลักษณ์** ให้ขยายหมวดหมู่ **ความโปร่งใส**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-230">In the **Symbology** pane, expand the **Transparency** category.</span></span>
+1. ในบานหน้าต่าง **การใช้สัญลักษณ์** ให้ขยายหมวดหมู่ **ความโปร่งใส**
 
-2. <span data-ttu-id="4e6f9-231">พิมพ์เปอร์เซ็นต์ในกล่องข้อความหรือเลื่อนแถบเลื่อนไปทางซ้าย (โปร่งใสน้อยกว่า) หรือไปทางขวา (โปร่งใสมากขึ้น)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-231">Type a percentage in the text box or move the slider to the left (less transparent) or to the right (more transparent).</span></span>
+2. พิมพ์เปอร์เซ็นต์ในกล่องข้อความหรือเลื่อนแถบเลื่อนไปทางซ้าย (โปร่งใสน้อยกว่า) หรือไปทางขวา (โปร่งใสมากขึ้น)
 
-##### <a name="symbol-style"></a><span data-ttu-id="4e6f9-232">ลักษณะของสัญลักษณ์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-232">Symbol style</span></span>
+##### <a name="symbol-style"></a>ลักษณะของสัญลักษณ์
 
-<span data-ttu-id="4e6f9-233">รูปแบบสัญลักษณ์ช่วยให้คุณปรับแต่งวิธีการนำเสนอข้อมูลบนแผนที่ได้อย่างละเอียด</span><span class="sxs-lookup"><span data-stu-id="4e6f9-233">Symbol styles allow you to fine-tune how data is presented on the map.</span></span> <span data-ttu-id="4e6f9-234">รูปแบบสัญลักษณ์ตามค่าเริ่มต้นจะขึ้นอยู่กับประเภทสถานที่ตั้งและธีมแผนที่ที่เลือก และตัวเลือกการกำหนดลักษณะที่มีจะแตกต่างกันไป ขึ้นอยู่กับว่าช่องใดมีค่าและลักษณะของค่าเหล่านั้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-234">Default symbol styles are based on the selected Location type and Map theme, and the available styling options are different depending on which field wells contain values and the nature of those values.</span></span>
+รูปแบบสัญลักษณ์ช่วยให้คุณปรับแต่งวิธีการนำเสนอข้อมูลบนแผนที่ได้อย่างละเอียด รูปแบบสัญลักษณ์ตามค่าเริ่มต้นจะขึ้นอยู่กับประเภทสถานที่ตั้งและธีมแผนที่ที่เลือก และตัวเลือกการกำหนดลักษณะที่มีจะแตกต่างกันไป ขึ้นอยู่กับว่าช่องใดมีค่าและลักษณะของค่าเหล่านั้น
 
-<span data-ttu-id="4e6f9-235">ในการเปลี่ยนรูปแบบสัญลักษณ์ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-235">To change the symbol style, follow these steps:</span></span>
+ในการเปลี่ยนรูปแบบสัญลักษณ์ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-236">ในบานหน้าต่าง **การใช้สัญลักษณ์** ขยายหมวดหมู่ **รูปแบบสัญลักษณ์**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-236">In the **Symbology** pane, expand the **Symbol style** category.</span></span>
+1. ในบานหน้าต่าง **การใช้สัญลักษณ์** ขยายหมวดหมู่ **รูปแบบสัญลักษณ์**
 
-2. <span data-ttu-id="4e6f9-237">เปลี่ยนการตั้งค่าสัญลักษณ์ตามต้องการ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-237">Change the symbol settings as desired.</span></span> <span data-ttu-id="4e6f9-238">เลือกรูปร่างสัญลักษณ์ สี ความโปร่งใส และสีโครงร่าง ความหนา และความโปร่งใส</span><span class="sxs-lookup"><span data-stu-id="4e6f9-238">Choose a symbol shape, color, transparency, and outline color, thickness, and transparency.</span></span> <span data-ttu-id="4e6f9-239">ขยายหมวดหมู่ขนาดสัญลักษณ์เพื่อเปลี่ยนตัวเลือกเหล่านั้น; ตัวเลือกต่าง ๆ จะปรากฏขึ้นโดยขึ้นอยู่กับลักษณะของข้อมูลของคุณและธีมแผนที่ที่เลือก</span><span class="sxs-lookup"><span data-stu-id="4e6f9-239">Expand the Symbol size category to change those options; different options appear depending on the nature of your data and the selected map theme.</span></span>
+2. เปลี่ยนการตั้งค่าสัญลักษณ์ตามต้องการ เลือกรูปร่างสัญลักษณ์ สี ความโปร่งใส และสีโครงร่าง ความหนา และความโปร่งใส ขยายหมวดหมู่ขนาดสัญลักษณ์เพื่อเปลี่ยนตัวเลือกเหล่านั้น; ตัวเลือกต่าง ๆ จะปรากฏขึ้นโดยขึ้นอยู่กับลักษณะของข้อมูลของคุณและธีมแผนที่ที่เลือก
 
-    <span data-ttu-id="4e6f9-240">ตัวอย่างด้านล่างแสดงชุดธีมแผนที่ที่ตั้งค่าเป็น **ขนาด** และการปรับเปลี่ยนรูปแบบสัญลักษณ์ต่าง ๆ ให้เป็นความโปร่งใส รูปแบบ และขนาด</span><span class="sxs-lookup"><span data-stu-id="4e6f9-240">The example below shows the map theme set to  **Size**  and several symbol style adjustments to transparency, style, and size.</span></span>
+    ตัวอย่างด้านล่างแสดงชุดธีมแผนที่ที่ตั้งค่าเป็น **ขนาด** และการปรับเปลี่ยนรูปแบบสัญลักษณ์ต่าง ๆ ให้เป็นความโปร่งใส รูปแบบ และขนาด
 
     ![ขนาดแผนที่และสัญลักษณ์](media/power-bi-visualizations-arcgis/arcgis-tutorial-13.png)
 
-3. <span data-ttu-id="4e6f9-242">เมื่อคุณตั้งค่าตัวเลือกรูปแบบเสร็จแล้วให้ปิดบานหน้าต่าง การใช้สัญลักษณ์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-242">When you're done setting styling options, close the Symbology pane.</span></span>
+3. เมื่อคุณตั้งค่าตัวเลือกรูปแบบเสร็จแล้วให้ปิดบานหน้าต่าง การใช้สัญลักษณ์
 
-### <a name="analyze-your-data"></a><span data-ttu-id="4e6f9-243">วิเคราะห์ข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-243">Analyze your data</span></span>
+### <a name="analyze-your-data"></a>วิเคราะห์ข้อมูลของคุณ
 
-<span data-ttu-id="4e6f9-244">แผนที่ ArcGIS สำหรับ Power BI มีเครื่องมือมากมายที่ช่วยให้คุณค้นพบรูปแบบในข้อมูลของคุณและบอกเล่าเรื่องราวที่น่าสนใจด้วยแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-244">ArcGIS for Power BI provides several tools that allow you to discover patterns in your data and tell a compelling story with a map.</span></span>
+แผนที่ ArcGIS สำหรับ Power BI มีเครื่องมือมากมายที่ช่วยให้คุณค้นพบรูปแบบในข้อมูลของคุณและบอกเล่าเรื่องราวที่น่าสนใจด้วยแผนที่
 
-<span data-ttu-id="4e6f9-245">คุณลักษณะการวิเคราะห์ประกอบด้วย:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-245">Analysis features include:</span></span>
+คุณลักษณะการวิเคราะห์ประกอบด้วย:
 
-- <span data-ttu-id="4e6f9-246">การเลือกสถานที่ตั้งบนแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-246">Selecting locations on the map</span></span>
-- <span data-ttu-id="4e6f9-247">ค้นหาที่อยู่ สถานที่ หรือจุดสนใจที่ต้องการ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-247">Searching for a specific address, place, or point of interest</span></span>
-- <span data-ttu-id="4e6f9-248">การเพิ่มเลเยอร์อ้างอิงเพื่อให้บริบทเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-248">Adding a reference layer to provide more context</span></span>
-- <span data-ttu-id="4e6f9-249">การค้นหาสถานที่ตั้งภายในรัศมีที่กำหนดหรือพื้นที่เวลาขับรถ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-249">Finding locations within a specified radius or drive-time area</span></span>
-- <span data-ttu-id="4e6f9-250">การเพิ่มการ์ดที่แสดงรายละเอียดข้อมูลประชากรเกี่ยวกับพื้นที่ที่แสดงบนแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-250">Adding cards that display demographic details about the area displayed on the map</span></span>
+- การเลือกสถานที่ตั้งบนแผนที่
+- ค้นหาที่อยู่ สถานที่ หรือจุดสนใจที่ต้องการ
+- การเพิ่มเลเยอร์อ้างอิงเพื่อให้บริบทเพิ่มเติม
+- การค้นหาสถานที่ตั้งภายในรัศมีที่กำหนดหรือพื้นที่เวลาขับรถ
+- การเพิ่มการ์ดที่แสดงรายละเอียดข้อมูลประชากรเกี่ยวกับพื้นที่ที่แสดงบนแผนที่
 
-#### <a name="select-locations"></a><span data-ttu-id="4e6f9-251">เลือกสถานที่ตั้ง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-251">Select locations</span></span>
+#### <a name="select-locations"></a>เลือกสถานที่ตั้ง
 
-<span data-ttu-id="4e6f9-252">แผนที่ ArcGIS สำหรับ Power BI มีเครื่องมือการเลือกต่างๆ มากมายเพื่อช่วยคุณเลือกสถานที่บนแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-252">ArcGIS for Power BI provides several different selection tools to help you select locations on the map.</span></span> <span data-ttu-id="4e6f9-253">เครื่องมือต่าง ๆ จะปรากฏขึ้นโดยขึ้นอยู่กับประเภทของเลเยอร์ที่เลือกในรายการเลเยอร์ในปัจจุบัน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-253">Different tools appear, depending on the type of layer currently selected in the Layers list.</span></span>
+แผนที่ ArcGIS สำหรับ Power BI มีเครื่องมือการเลือกต่างๆ มากมายเพื่อช่วยคุณเลือกสถานที่บนแผนที่ เครื่องมือต่าง ๆ จะปรากฏขึ้นโดยขึ้นอยู่กับประเภทของเลเยอร์ที่เลือกในรายการเลเยอร์ในปัจจุบัน
 
-<span data-ttu-id="4e6f9-254">ในการแสดงเครื่องมือการเลือก ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-254">To display the selection tools, follow these steps:</span></span>
+ในการแสดงเครื่องมือการเลือก ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-255">จากเครื่องมือแผนที่คลิกปุ่ม **เครื่องมือการเลือก** ![เครื่องมือการเลือก](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-07.png) เพื่อขยายชุดเครื่องมือ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-255">From the map tools, click the **Selection tools** button ![selection tools](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-07.png) to expand the toolset.</span></span>
+1. จากเครื่องมือแผนที่คลิกปุ่ม **เครื่องมือการเลือก** ![เครื่องมือการเลือก](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-07.png) เพื่อขยายชุดเครื่องมือ
 
-    <span data-ttu-id="4e6f9-256">มีเครื่องมือให้เลือกสี่แบบ; เครื่องมือต่าง ๆ อาจปรากฏในเมนู **เครื่องมือการเลือก** ขึ้นอยู่กับชนิดของเลเยอร์ที่ใช้งานอยู่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-256">There are four selection tools available; different tools may appear in the  **Selection tools**  menu, depending on the type of layer that is currently active.</span></span> <span data-ttu-id="4e6f9-257">เนื่องจากแผนที่ในตัวอย่างนี้มีเพียงเลเยอร์ข้อมูล จึงปรากฏเฉพาะเครื่องมือ **เลือกครั้งเดียว** และ **เลือกเป็นช่อง**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-257">Because the map in this example contains only a data layer, only the **Single select** and **Box select** tools appear.</span></span>
+    มีเครื่องมือให้เลือกสี่แบบ; เครื่องมือต่าง ๆ อาจปรากฏในเมนู **เครื่องมือการเลือก** ขึ้นอยู่กับชนิดของเลเยอร์ที่ใช้งานอยู่ เนื่องจากแผนที่ในตัวอย่างนี้มีเพียงเลเยอร์ข้อมูล จึงปรากฏเฉพาะเครื่องมือ **เลือกครั้งเดียว** และ **เลือกเป็นช่อง**
     
-    | <span data-ttu-id="4e6f9-258">**เครื่องมือ**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-258">**Tool**</span></span> | <span data-ttu-id="4e6f9-259">**คำอธิบาย**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-259">**Description**</span></span> |
+    | **เครื่องมือ** | **คำอธิบาย** |
     | --- | --- |
-    | ![เลือกครั้งเดียว](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-08.png) | <span data-ttu-id="4e6f9-261">**เลือกครั้งเดียว** — นี่คือเครื่องมือการเลือกรายการเดียวที่สามารถใช้เพื่อคลิกสถานที่แต่ละแห่ง; เป็นเครื่องมือการเลือกค่าเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-261">**Single select** —This is a single-selection tool that can be used to click individual locations; it is the default selection tool.</span></span> <span data-ttu-id="4e6f9-262">กด Ctrl และคลิกเพื่อเลือกสถานที่หลายแห่ง การคลิกตำแหน่งข้อมูลบนแผนที่จะเป็นการเลือกตำแหน่งเหล่านั้นและทริกเกอร์การโต้ตอบกับการแสดงภาพอื่น ๆ การคลิกหมุดหรือตำแหน่งบนเลเยอร์อ้างอิงจะแสดงคำแนะนำเครื่องมือ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-262">Press Ctrl and click to select multiple locations.Clicking data locations on the map selects them and triggers interactions with other visualizations.Clicking a pin or a location on a reference layer displays its tooltip.</span></span> |
-    | ![เลือกเป็นช่อง](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-09.png)  | <span data-ttu-id="4e6f9-264">**เลือกเป็นช่อง** — ลากตัวเลือกสี่เหลี่ยมผืนผ้าเพื่อเลือกสถานที่หลายแห่งหรือเลือกสถานที่แต่ละแห่งโดยการคลิก เช่นเดียวกับเครื่องมือเลือก การคลิกหมุดหรือตำแหน่งบนเลเยอร์อ้างอิงจะแสดงคำแนะนำเครื่องมือ เมื่อเครื่องมือเลือกเป็นช่องใช้งานอยู่คุณจะไม่สามารถเลื่อนแผนที่ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-264">**Box select** —Drag a rectangle selector to select multiple locations or select individual locations by clicking them.As with the Select tool, clicking a pin or a location on a reference layer displays its tooltip.When the Box select tool is active, you cannot pan the map.</span></span> |
-    | ![ไอคอนเลือกเลเยอร์อ้างอิง](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-10.png)  | <span data-ttu-id="4e6f9-266">**เลเยอร์อ้างอิงเลือก** — หากคุณเพิ่ม [เลเยอร์อ้างอิง](https://doc.arcgis.com/en/maps-for-powerbi/design/add-a-reference-layer.htm) ลงในแผนที่ ให้ใช้เครื่องมือนี้เพื่อเลือกสถานที่โดยคลิกพื้นที่บนเลเยอร์อ้างอิง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-266">**Reference layer select** —If you added a [reference layer](https://doc.arcgis.com/en/maps-for-powerbi/design/add-a-reference-layer.htm) to the map, use this tool to select locations by clicking areas on the reference layer.</span></span> <span data-ttu-id="4e6f9-267">สถานที่ที่อยู่ในพื้นที่ที่คั่นด้วยข้อมูลอ้างอิงจะถูกไฮไลท์; ตำแหน่งในพื้นที่อื่น ๆ ของแผนที่ไม่สามารถใช้งานได้ เครื่องมือนี้จะปรากฏเฉพาะในกรณีที่แผนที่มีชั้นอ้างอิงอย่างน้อยหนึ่งชั้นและชั้นอ้างอิงทำงานอยู่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-267">Locations that are within a delimited area on a reference are highlighted; locations in other areas of the map are unavailable.This tool appears only if the map contains one or more reference layers and a reference layer is currently active.</span></span> |
-    | ![เลือกเวลาขับรถ](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-11.png)  | <span data-ttu-id="4e6f9-269">**เลือกเวลาขับรถ** — หากคุณเพิ่ม [พื้นที่เวลาขับรถ](https://doc.arcgis.com/en/maps-for-powerbi/design/find-nearby-locations.htm) ลงในแผนที่ของคุณให้ใช้เครื่องมือเลือกพื้นที่เวลาขับรถเพื่อเลือกตำแหน่งข้อมูลภายในพื้นที่ที่กำหนด</span><span class="sxs-lookup"><span data-stu-id="4e6f9-269">**Drive-time select** —If you added a [drive-time area](https://doc.arcgis.com/en/maps-for-powerbi/design/find-nearby-locations.htm) to your map, use the drive-time area selection tool to select data locations within the defined area.</span></span> |
+    | ![เลือกครั้งเดียว](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-08.png) | **เลือกครั้งเดียว** — นี่คือเครื่องมือการเลือกรายการเดียวที่สามารถใช้เพื่อคลิกสถานที่แต่ละแห่ง; เป็นเครื่องมือการเลือกค่าเริ่มต้น กด Ctrl และคลิกเพื่อเลือกสถานที่หลายแห่ง การคลิกตำแหน่งข้อมูลบนแผนที่จะเป็นการเลือกตำแหน่งเหล่านั้นและทริกเกอร์การโต้ตอบกับการแสดงภาพอื่น ๆ การคลิกหมุดหรือตำแหน่งบนเลเยอร์อ้างอิงจะแสดงคำแนะนำเครื่องมือ |
+    | ![เลือกเป็นช่อง](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-09.png)  | **เลือกเป็นช่อง** — ลากตัวเลือกสี่เหลี่ยมผืนผ้าเพื่อเลือกสถานที่หลายแห่งหรือเลือกสถานที่แต่ละแห่งโดยการคลิก เช่นเดียวกับเครื่องมือเลือก การคลิกหมุดหรือตำแหน่งบนเลเยอร์อ้างอิงจะแสดงคำแนะนำเครื่องมือ เมื่อเครื่องมือเลือกเป็นช่องใช้งานอยู่คุณจะไม่สามารถเลื่อนแผนที่ได้ |
+    | ![ไอคอนเลือกเลเยอร์อ้างอิง](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-10.png)  | **เลเยอร์อ้างอิงเลือก** — หากคุณเพิ่ม [เลเยอร์อ้างอิง](https://doc.arcgis.com/en/maps-for-powerbi/design/add-a-reference-layer.htm) ลงในแผนที่ ให้ใช้เครื่องมือนี้เพื่อเลือกสถานที่โดยคลิกพื้นที่บนเลเยอร์อ้างอิง สถานที่ที่อยู่ในพื้นที่ที่คั่นด้วยข้อมูลอ้างอิงจะถูกไฮไลท์; ตำแหน่งในพื้นที่อื่น ๆ ของแผนที่ไม่สามารถใช้งานได้ เครื่องมือนี้จะปรากฏเฉพาะในกรณีที่แผนที่มีชั้นอ้างอิงอย่างน้อยหนึ่งชั้นและชั้นอ้างอิงทำงานอยู่ |
+    | ![เลือกเวลาขับรถ](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-11.png)  | **เลือกเวลาขับรถ** — หากคุณเพิ่ม [พื้นที่เวลาขับรถ](https://doc.arcgis.com/en/maps-for-powerbi/design/find-nearby-locations.htm) ลงในแผนที่ของคุณให้ใช้เครื่องมือเลือกพื้นที่เวลาขับรถเพื่อเลือกตำแหน่งข้อมูลภายในพื้นที่ที่กำหนด |
     
-2. <span data-ttu-id="4e6f9-270">เลือกสถานที่อย่างน้อยหนึ่งแห่งบนแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-270">Select one or more locations on the map.</span></span> <span data-ttu-id="4e6f9-271">คุณสามารถเลือกจุดข้อมูลได้สูงสุด 250 จุดต่อครั้ง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-271">You can select a maximum of 250 data points at a time.</span></span>
+2. เลือกสถานที่อย่างน้อยหนึ่งแห่งบนแผนที่ คุณสามารถเลือกจุดข้อมูลได้สูงสุด 250 จุดต่อครั้ง
 
-<span data-ttu-id="4e6f9-272">สำหรับข้อมูลเพิ่มเติม โปรดดูที่การ[เลือกสถานที่ตั้งบนแผนที่](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-272">For more information, see [Select locations on a map](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm) in the ArcGIS for Power BI online help.</span></span>
+สำหรับข้อมูลเพิ่มเติม โปรดดูที่การ[เลือกสถานที่ตั้งบนแผนที่](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
 
-#### <a name="pin-a-location"></a><span data-ttu-id="4e6f9-273">ปักหมุดสถานที่ตั้ง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-273">Pin a location</span></span>
+#### <a name="pin-a-location"></a>ปักหมุดสถานที่ตั้ง
 
-<span data-ttu-id="4e6f9-274">ปักหมุดที่อยู่ สถานที่ หรือจุดที่น่าสนใจบนแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-274">Pin a specific address, place, or point of interest on the map.</span></span> <span data-ttu-id="4e6f9-275">สำหรับตัวอย่างนี้คุณจะค้นหาสนามบินนานาชาติพิตต์สเบิร์ก</span><span class="sxs-lookup"><span data-stu-id="4e6f9-275">For this example, you'll search for the Pittsburgh International Airport.</span></span>
+ปักหมุดที่อยู่ สถานที่ หรือจุดที่น่าสนใจบนแผนที่ สำหรับตัวอย่างนี้คุณจะค้นหาสนามบินนานาชาติพิตต์สเบิร์ก
 
-<span data-ttu-id="4e6f9-276">หากต้องการปักหมุดตำแหน่งที่ตั้ง ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-276">To pin a location, follow these steps:</span></span>
+หากต้องการปักหมุดตำแหน่งที่ตั้ง ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-277">จากเครื่องมือแผนที่ คลิกปุ่ม **ค้นหา** ![ไอคอนค้นหา](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-04.png) เพื่อเปิดบานหน้าต่างค้นหา</span><span class="sxs-lookup"><span data-stu-id="4e6f9-277">From the map tools, click the **Search** button ![search icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-04.png) to open the Search pane.</span></span>
-2. <span data-ttu-id="4e6f9-278">พิมพ์คำหลัก **นานาชาติพิตต์สเบิร์ก** ในช่องค้นหา</span><span class="sxs-lookup"><span data-stu-id="4e6f9-278">Type the keywords **Pittsburgh international** in the search box.</span></span>
+1. จากเครื่องมือแผนที่ คลิกปุ่ม **ค้นหา** ![ไอคอนค้นหา](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-04.png) เพื่อเปิดบานหน้าต่างค้นหา
+2. พิมพ์คำหลัก **นานาชาติพิตต์สเบิร์ก** ในช่องค้นหา
 
-    <span data-ttu-id="4e6f9-279">คำหลักอาจรวมถึงที่อยู่ สถานที่ หรือจุดที่สนใจ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-279">Keywords can include an address, place, or point of interest.</span></span> <span data-ttu-id="4e6f9-280">ขณะที่คุณพิมพ์การค้นหาหรือคำแนะนำล่าสุดที่คล้ายกันซึ่งอิงจากคำหลักที่คล้ายกันจะปรากฏขึ้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-280">As you type, similar recent searches or suggestions based on similar keywords appear.</span></span>
+    คำหลักอาจรวมถึงที่อยู่ สถานที่ หรือจุดที่สนใจ ขณะที่คุณพิมพ์การค้นหาหรือคำแนะนำล่าสุดที่คล้ายกันซึ่งอิงจากคำหลักที่คล้ายกันจะปรากฏขึ้น
 
-3. <span data-ttu-id="4e6f9-281">จากรายการผลลัพธ์ ให้เลือก **สนามบินนานาชาติพิตต์สเบิร์ก** แล้วคลิก **ปิด**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-281">From the results list, choose **Pittsburgh International Airport** and click **Close**.</span></span>
+3. จากรายการผลลัพธ์ ให้เลือก **สนามบินนานาชาติพิตต์สเบิร์ก** แล้วคลิก **ปิด**
 
-    <span data-ttu-id="4e6f9-282">สัญลักษณ์จะปรากฏขึ้นบนแผนที่ และแผนที่ขยายไปยังตำแหน่งที่ตั้งให้โดยอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-282">A symbol appears on the map, and the map automatically zooms to the location.</span></span> <span data-ttu-id="4e6f9-283">หมุดจะยังคงอยู่บนแผนที่ในช่วงเซสชันปัจจุบันเท่านั้น; คุณจะไม่สามารถบันทึกตำแหน่งที่ตรึงไว้ด้วยแผนที่ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-283">Pins remain in place on the map only during the current session; you cannot save a pinned location with the map.</span></span> <span data-ttu-id="4e6f9-284">ตำแหน่งที่ปักหมุดยังปรากฏเป็นเลเยอร์ในรายการเลเยอร์; คุณสามารถเปลี่ยนชื่อเลเยอร์แสดงหรือซ่อนหรือลบออกจากแผนที่ได้เช่นเดียวกับเลเยอร์อื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-284">The pinned location also appears as a layer in the Layers list; you can rename the layer, show or hide it, or remove it from the map, as you can with other layers.</span></span>
+    สัญลักษณ์จะปรากฏขึ้นบนแผนที่ และแผนที่ขยายไปยังตำแหน่งที่ตั้งให้โดยอัตโนมัติ หมุดจะยังคงอยู่บนแผนที่ในช่วงเซสชันปัจจุบันเท่านั้น; คุณจะไม่สามารถบันทึกตำแหน่งที่ตรึงไว้ด้วยแผนที่ได้ ตำแหน่งที่ปักหมุดยังปรากฏเป็นเลเยอร์ในรายการเลเยอร์; คุณสามารถเปลี่ยนชื่อเลเยอร์แสดงหรือซ่อนหรือลบออกจากแผนที่ได้เช่นเดียวกับเลเยอร์อื่น ๆ
 
-4. <span data-ttu-id="4e6f9-285">หากต้องการเปลี่ยนสีของหมุดให้ขยายหมวดหมู่ **ค้นหา** ในบานหน้าต่าง **รูปแบบ** ของภาพแผนที่แล้วเลือกสีใหม่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-285">To change the color of the pin, expand the **Search** category in the map visual's **Format** pane and choose a new color.</span></span>
+4. หากต้องการเปลี่ยนสีของหมุดให้ขยายหมวดหมู่ **ค้นหา** ในบานหน้าต่าง **รูปแบบ** ของภาพแผนที่แล้วเลือกสีใหม่
 
 > [!NOTE]
-> <span data-ttu-id="4e6f9-286">ฟีเจอร์ **ค้นหา** จะแทนที่ฟีเจอร์หมุดก่อนหน้านี้ที่มีอยู่ในแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-286">The **Search** feature replaces the Pins feature previously available in ArcGIS for Power BI.</span></span>
+> ฟีเจอร์ **ค้นหา** จะแทนที่ฟีเจอร์หมุดก่อนหน้านี้ที่มีอยู่ในแผนที่ ArcGIS สำหรับ Power BI
 
-<span data-ttu-id="4e6f9-287">สำหรับข้อมูลเพิ่มเติม โปรดดูที่การ[ปักหมุดตำแหน่งที่ตั้ง](https://doc.arcgis.com/en/power-bi/design/pin-locations.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-287">For more information, see [Pin a location](https://doc.arcgis.com/en/power-bi/design/pin-locations.htm) in the ArcGIS for Power BI online help.</span></span>
+สำหรับข้อมูลเพิ่มเติม โปรดดูที่การ[ปักหมุดตำแหน่งที่ตั้ง](https://doc.arcgis.com/en/power-bi/design/pin-locations.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
 
-#### <a name="add-a-reference-layer"></a><span data-ttu-id="4e6f9-288">เพิ่มเลเยอร์อ้างอิง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-288">Add a reference layer</span></span>
+#### <a name="add-a-reference-layer"></a>เพิ่มเลเยอร์อ้างอิง
 
-<span data-ttu-id="4e6f9-289">เลเยอร์อ้างอิงให้บริบทสำหรับข้อมูล Power BI ที่คุณกำลังแสดงอยู่บนแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-289">Reference layers provide context for the Power BI data you're already displaying on a map.</span></span> <span data-ttu-id="4e6f9-290">เลเยอร์อ้างอิงสามารถรวมข้อมูลประชากรเช่นรายได้ครัวเรือน อายุ หรือการศึกษา</span><span class="sxs-lookup"><span data-stu-id="4e6f9-290">Reference layers can include demographic data, such as household income, age, or education.</span></span> <span data-ttu-id="4e6f9-291">นอกจากนี้ยังสามารถรวมเลเยอร์คุณลักษณะที่แชร์แบบสาธารณะที่มีอยู่ใน ArcGIS ออนไลน? ซึ่งให้ข้อมูลเพิ่มเติมเกี่ยวกับพื้นที่โดยรอบสถานที่บนแผนที่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-291">They can also include publicly shared feature layers available on ArcGIS Online that provide more information about areas surrounding the locations on your map.</span></span>
+เลเยอร์อ้างอิงให้บริบทสำหรับข้อมูล Power BI ที่คุณกำลังแสดงอยู่บนแผนที่ เลเยอร์อ้างอิงสามารถรวมข้อมูลประชากรเช่นรายได้ครัวเรือน อายุ หรือการศึกษา นอกจากนี้ยังสามารถรวมเลเยอร์คุณลักษณะที่แชร์แบบสาธารณะที่มีอยู่ใน ArcGIS ออนไลน? ซึ่งให้ข้อมูลเพิ่มเติมเกี่ยวกับพื้นที่โดยรอบสถานที่บนแผนที่ของคุณ
 
-##### <a name="add-a-demographic-layer"></a><span data-ttu-id="4e6f9-292">เพิ่มเลเยอร์ประชากร</span><span class="sxs-lookup"><span data-stu-id="4e6f9-292">Add a demographic layer</span></span>
+##### <a name="add-a-demographic-layer"></a>เพิ่มเลเยอร์ประชากร
 
-<span data-ttu-id="4e6f9-293">บัญชีมาตรฐาน ArcGIS สำหรับ Power BI มีเลเยอร์ประชากรของสหรัฐอเมริกาให้เลือกจำนวนหนึ่งเพื่อช่วยแสดงบริบทของข้อมูลจาก Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-293">The Standard ArcGIS for Power BI account includes a curated selection of U.S. demographic layers that help contextualize data from Power BI.</span></span>
+บัญชีมาตรฐาน ArcGIS สำหรับ Power BI มีเลเยอร์ประชากรของสหรัฐอเมริกาให้เลือกจำนวนหนึ่งเพื่อช่วยแสดงบริบทของข้อมูลจาก Power BI
 
-<span data-ttu-id="4e6f9-294">หากต้องการเพิ่มเลเยอร์ประชากร ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-294">To add a demographic layer, follow these steps:</span></span>
+หากต้องการเพิ่มเลเยอร์ประชากร ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-295">จากเครื่องมือแผนที่ให้คลิกปุ่ม **เครื่องมือการวิเคราะห์** ปุ่ม ![เครื่องมือการวิเคราะห์](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-12.png) เพื่อขยายชุดเครื่องมือ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-295">From the map tools, click the **Analysis tools** button ![analysis tools icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-12.png) to expand the toolset.</span></span>
-2. <span data-ttu-id="4e6f9-296">คลิกปุ่ม **เลเยอร์การอ้างอิง** ![เลเยอร์อ้างอิงเลือก](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-13.png)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-296">Click the **Reference layer** button ![reference layer select](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-13.png).</span></span>
+1. จากเครื่องมือแผนที่ให้คลิกปุ่ม **เครื่องมือการวิเคราะห์** ปุ่ม ![เครื่องมือการวิเคราะห์](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-12.png) เพื่อขยายชุดเครื่องมือ
+2. คลิกปุ่ม **เลเยอร์การอ้างอิง** ![เลเยอร์อ้างอิงเลือก](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-13.png)
 
-    <span data-ttu-id="4e6f9-297">บานหน้าต่าง **ชั้นอ้างอิง** จะปรากฏขึ้นโดยแสดงแท็บ **ข้อมูลประชากร** และการเลือกเลเยอร์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-297">The **Reference layer** pane appears, displaying the **Demographics** tab and its selection of layers.</span></span>
+    บานหน้าต่าง **ชั้นอ้างอิง** จะปรากฏขึ้นโดยแสดงแท็บ **ข้อมูลประชากร** และการเลือกเลเยอร์
 
-3. <span data-ttu-id="4e6f9-298">เลื่อนผ่านแกลเลอรีและคลิก **เพิ่ม** บนรูปขนาดย่อของเลเยอร์ที่คุณต้องการเพิ่มลงในแผนที่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-298">Scroll through the gallery and click **Add** on the thumbnail of the layer you want to add to your map.</span></span>
+3. เลื่อนผ่านแกลเลอรีและคลิก **เพิ่ม** บนรูปขนาดย่อของเลเยอร์ที่คุณต้องการเพิ่มลงในแผนที่ของคุณ
 
-    <span data-ttu-id="4e6f9-299">สำหรับตัวอย่างนี้ค้นหาเลเยอร์ **รายได้ครัวเรือนโดยเฉลี่ยในสหรัฐอเมริกาปี 2016** แล้วคลิก **เพิ่ม**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-299">For this example, find the **2016 USA Average Household Income** layer and click **Add**.</span></span>
+    สำหรับตัวอย่างนี้ค้นหาเลเยอร์ **รายได้ครัวเรือนโดยเฉลี่ยในสหรัฐอเมริกาปี 2016** แล้วคลิก **เพิ่ม**
     
-    <span data-ttu-id="4e6f9-300">การอัปเดตแผนที่เพื่อแสดงเลเยอร์ใหม่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-300">The map updates to show the new layer.</span></span>
+    การอัปเดตแผนที่เพื่อแสดงเลเยอร์ใหม่
     
     ![เพิ่มเลเยอร์ประชากร](media/power-bi-visualizations-arcgis/arcgis-tutorial-14.png)
     
-<span data-ttu-id="4e6f9-302">เลเยอร์อ้างอิงข้อมูลประชากรเป็นแบบโต้ตอบ;  คลิกพื้นที่เพื่อดูคำแนะนำเครื่องมือที่มีข้อมูลเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-302">Demographic reference layers are interactive; click an area to view a tooltip containing more information.</span></span> <span data-ttu-id="4e6f9-303">คุณยังสามารถใช้เครื่องมือ **การอ้างอิงเลือก** เพื่อ [ เลือกพื้นที่บนแผนที่](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm) ที่อยู่ภายในพื้นที่บนเลเยอร์อ้างอิง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-303">You can also use the **Reference select** tool to [select areas on the map](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm) that fall within an area on the reference layer.</span></span>
+เลเยอร์อ้างอิงข้อมูลประชากรเป็นแบบโต้ตอบ;  คลิกพื้นที่เพื่อดูคำแนะนำเครื่องมือที่มีข้อมูลเพิ่มเติม คุณยังสามารถใช้เครื่องมือ **การอ้างอิงเลือก** เพื่อ [ เลือกพื้นที่บนแผนที่](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm) ที่อยู่ภายในพื้นที่บนเลเยอร์อ้างอิง
 
-##### <a name="add-a-reference-layer-from-arcgis"></a><span data-ttu-id="4e6f9-304">เพิ่มเลเยอร์อ้างอิงจาก ArcGIS</span><span class="sxs-lookup"><span data-stu-id="4e6f9-304">Add a reference layer from ArcGIS</span></span>
+##### <a name="add-a-reference-layer-from-arcgis"></a>เพิ่มเลเยอร์อ้างอิงจาก ArcGIS
 
-<span data-ttu-id="4e6f9-305">แผนที่ ArcGIS สำหรับ Power BI ช่วยให้คุณสามารถค้นหาเลเยอร์ของฟีเจอร์ที่แชร์แบบสาธารณะบน ArcGIS ได้ ให้คุณสามารถเข้าถึงหลายพันเลเยอร์อ้างอิงที่ให้ข้อมูลเกี่ยวกับพื้นที่โดยรอบที่ตั้งบนชั้นข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-305">ArcGIS for Power BI allows you to search for publicly shared feature layers on ArcGIS, giving you access to thousands of reference layers that provide information about the areas surrounding the locations on your data layer.</span></span> <span data-ttu-id="4e6f9-306">เมื่อคุณลงชื่อเข้าใช้แผนที่ ArcGIS สำหรับ Power BI โดยใช้บัญชี ArcGIS ที่ถูกต้อง คุณสามารถค้นหาเนื้อหาในองค์กรของคุณกลุ่มองค์กรของคุณหรือเนื้อหาสาธารณะได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-306">When you sign in to ArcGIS for Power BI using a valid ArcGIS account, you can search for content in your organization, your organization's groups, or public content.</span></span> <span data-ttu-id="4e6f9-307">ในตัวอย่างนี้ เนื่องจากคุณใช้บัญชีมาตรฐาน เนื้อหาที่แชร์แบบสาธารณะเท่านั้นที่จะปรากฏในผลลัพธ์การค้นหา</span><span class="sxs-lookup"><span data-stu-id="4e6f9-307">In this example, because you're using the Standard account, only publicly shared content appears in search results.</span></span>
+แผนที่ ArcGIS สำหรับ Power BI ช่วยให้คุณสามารถค้นหาเลเยอร์ของฟีเจอร์ที่แชร์แบบสาธารณะบน ArcGIS ได้ ให้คุณสามารถเข้าถึงหลายพันเลเยอร์อ้างอิงที่ให้ข้อมูลเกี่ยวกับพื้นที่โดยรอบที่ตั้งบนชั้นข้อมูลของคุณ เมื่อคุณลงชื่อเข้าใช้แผนที่ ArcGIS สำหรับ Power BI โดยใช้บัญชี ArcGIS ที่ถูกต้อง คุณสามารถค้นหาเนื้อหาในองค์กรของคุณกลุ่มองค์กรของคุณหรือเนื้อหาสาธารณะได้ ในตัวอย่างนี้ เนื่องจากคุณใช้บัญชีมาตรฐาน เนื้อหาที่แชร์แบบสาธารณะเท่านั้นที่จะปรากฏในผลลัพธ์การค้นหา
 
-<span data-ttu-id="4e6f9-308">ในการเพิ่มเลเยอร์อ้างอิง ArcGIS ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-308">To add an ArcGIS reference layer, follow these steps:</span></span>
+ในการเพิ่มเลเยอร์อ้างอิง ArcGIS ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-309">ในบานหน้าต่างการอ้างอิงคลิกแท็บ **ArcGIS**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-309">In the Reference pane, click the **ArcGIS** tab.</span></span>
+1. ในบานหน้าต่างการอ้างอิงคลิกแท็บ **ArcGIS**
 
-2. <span data-ttu-id="4e6f9-310">ในช่องค้นหา พิมพ์ **เขตรัฐสภาของสหรัฐอเมริกา** แล้วกด **ป้อน**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-310">In the search field, type **USA Congressional districts** and press **Enter**.</span></span>
+2. ในช่องค้นหา พิมพ์ **เขตรัฐสภาของสหรัฐอเมริกา** แล้วกด **ป้อน**
 
-    <span data-ttu-id="4e6f9-311">แกลเลอรีจะแสดงผลลัพธ์ที่เป็นไปได้หลายประการ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-311">The gallery populates with several possible results.</span></span>
+    แกลเลอรีจะแสดงผลลัพธ์ที่เป็นไปได้หลายประการ
 
-3. <span data-ttu-id="4e6f9-312">ค้นหาในเลเยอร์เขตรัฐสภาของสหรัฐอเมริกาที่ 116 และคลิกเพิ่ม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-312">Locate the USA 116th Congressional Districts layer and click Add.</span></span>
+3. ค้นหาในเลเยอร์เขตรัฐสภาของสหรัฐอเมริกาที่ 116 และคลิกเพิ่ม
 
-    <span data-ttu-id="4e6f9-313">การอัปเดตแผนที่เพื่อแสดงเลเยอร์ใหม่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-313">The map updates to show the new layer.</span></span>
+    การอัปเดตแผนที่เพื่อแสดงเลเยอร์ใหม่
     
     ![เลเยอร์อ้างอิง](media/power-bi-visualizations-arcgis/arcgis-tutorial-15.png)
     
-<span data-ttu-id="4e6f9-315">การอ้างอิงเลเยอร์ ArcGIS เป็นแบบโต้ตอบ; คลิกพื้นที่เพื่อดูคำแนะนำเครื่องมือที่มีข้อมูลเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-315">ArcGIS reference layers are interactive; click an area to view a tooltip containing more information.</span></span> <span data-ttu-id="4e6f9-316">คุณยังสามารถใช้เครื่องมือ **การอ้างอิงเลือก** เพื่อ [ เลือกพื้นที่บนแผนที่](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm) ที่อยู่ภายในพื้นที่บนเลเยอร์อ้างอิง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-316">You can also use the **Reference select** tool to [select areas on the map](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm) that fall within an area on the reference layer.</span></span>
+การอ้างอิงเลเยอร์ ArcGIS เป็นแบบโต้ตอบ; คลิกพื้นที่เพื่อดูคำแนะนำเครื่องมือที่มีข้อมูลเพิ่มเติม คุณยังสามารถใช้เครื่องมือ **การอ้างอิงเลือก** เพื่อ [ เลือกพื้นที่บนแผนที่](https://doc.arcgis.com/en/power-bi/design/select-features-on-the-map.htm) ที่อยู่ภายในพื้นที่บนเลเยอร์อ้างอิง
 
-#### <a name="find-nearby-locations"></a><span data-ttu-id="4e6f9-317">ค้นหาตำแหน่งที่ตั้งใกล้เคียง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-317">Find nearby locations</span></span>
+#### <a name="find-nearby-locations"></a>ค้นหาตำแหน่งที่ตั้งใกล้เคียง
 
-<span data-ttu-id="4e6f9-318">คุณสามารถใช้ตำแหน่งบนแผนที่ของคุณ—รวมถึงสถานที่ที่ปักหมุดไว้—เป็นจุดเริ่มต้นในการค้นหาและเลือกสถานที่ใกล้เคียงบนแผนที่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-318">You can use locations on your map—including a pinned location—as a starting point to find and select nearby locations on your map.</span></span> <span data-ttu-id="4e6f9-319">ตัวอย่างเช่น หากคุณค้นหาสถานที่ที่น่าสนใจคุณสามารถเลือกสถานที่บนแผนที่ของคุณที่อยู่ภายในระยะเวลาขับรถหรือระยะทางที่กำหนดจากสถานที่นั้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-319">For example, if you search for a particular place of interest, you can select locations on your map that are within a specified driving time or distance from that place.</span></span>
+คุณสามารถใช้ตำแหน่งบนแผนที่ของคุณ—รวมถึงสถานที่ที่ปักหมุดไว้—เป็นจุดเริ่มต้นในการค้นหาและเลือกสถานที่ใกล้เคียงบนแผนที่ของคุณ ตัวอย่างเช่น หากคุณค้นหาสถานที่ที่น่าสนใจคุณสามารถเลือกสถานที่บนแผนที่ของคุณที่อยู่ภายในระยะเวลาขับรถหรือระยะทางที่กำหนดจากสถานที่นั้น
 
-<span data-ttu-id="4e6f9-320">ในตัวอย่างนี้ คุณจะใช้สนามบินนานาชาติพิตต์สเบิร์กที่คุณปักหมุดไว้ก่อนหน้านี้เป็นจุดเริ่มต้น ในการค้นหาสถานที่ภายใน 100 ไมล์จากสนามบิน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-320">In this example, you'll use the Pittsburgh International Airport you pinned earlier as a starting point to find locations within 100 miles of the airport.</span></span> <span data-ttu-id="4e6f9-321">ใช้ขั้นตอนที่คล้ายกันเพื่อค้นหาสถานที่ภายในเวลาในการขับรถที่กำหนด</span><span class="sxs-lookup"><span data-stu-id="4e6f9-321">Use similar steps to find locations within a specified drive time.</span></span>
+ในตัวอย่างนี้ คุณจะใช้สนามบินนานาชาติพิตต์สเบิร์กที่คุณปักหมุดไว้ก่อนหน้านี้เป็นจุดเริ่มต้น ในการค้นหาสถานที่ภายใน 100 ไมล์จากสนามบิน ใช้ขั้นตอนที่คล้ายกันเพื่อค้นหาสถานที่ภายในเวลาในการขับรถที่กำหนด
 
-<span data-ttu-id="4e6f9-322">หากต้องการค้นหาสถานที่ภายในระยะทางขับรถเฉพาะจากจุดต้นทาง ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-322">To find locations within a specific driving distance from the point of origin, follow these steps:</span></span>
+หากต้องการค้นหาสถานที่ภายในระยะทางขับรถเฉพาะจากจุดต้นทาง ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-323">จากเครื่องมือแผนที่ให้คลิกปุ่ม **เครื่องมือการวิเคราะห์** ปุ่ม ![เครื่องมือการวิเคราะห์](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-12.png) เพื่อขยายชุดเครื่องมือ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-323">From the map tools, click the **Analysis tools** button ![analysis tools icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-12.png) to expand the toolset.</span></span>
+1. จากเครื่องมือแผนที่ให้คลิกปุ่ม **เครื่องมือการวิเคราะห์** ปุ่ม ![เครื่องมือการวิเคราะห์](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-12.png) เพื่อขยายชุดเครื่องมือ
 
-2. <span data-ttu-id="4e6f9-324">คลิกปุ่ม **เวลาในการขับรถ** ![ไอคอนเวลาในการขับรถ](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-14.png)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-324">Click the **Drive-time** button ![drive time icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-14.png) .</span></span>
+2. คลิกปุ่ม **เวลาในการขับรถ** ![ไอคอนเวลาในการขับรถ](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-14.png)
 
-    <span data-ttu-id="4e6f9-325">บานหน้าต่าง **เวลาในการขับรถ** จะปรากฏขึ้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-325">The **Drive time** pane appears.</span></span>
+    บานหน้าต่าง **เวลาในการขับรถ** จะปรากฏขึ้น
 
-3. <span data-ttu-id="4e6f9-326">คลิกที่เครื่องมือเลือกรายการเดียวและ บนแผนที่เลือกสถานที่ **สนามบินนานาชาติพิตต์สเบิร์ก** ที่คุณปักหมุดไว้ก่อนหน้านี้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-326">Click the single select tool and, on the map, select the **Pittsburgh International Airport** location you pinned earlier.</span></span>
-4. <span data-ttu-id="4e6f9-327">จากเมนูแบบเลื่อนลง **พื้นที่ค้นหา** เลือก **รัศมี** และระบุระยะทาง **100** ไมล์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-327">From the **Search area** drop-down menu, choose **Radius** and specify a distance of **100** miles.</span></span>
-5. <span data-ttu-id="4e6f9-328">คลิก **ตกลง**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-328">Click **OK**.</span></span>
+3. คลิกที่เครื่องมือเลือกรายการเดียวและ บนแผนที่เลือกสถานที่ **สนามบินนานาชาติพิตต์สเบิร์ก** ที่คุณปักหมุดไว้ก่อนหน้านี้
+4. จากเมนูแบบเลื่อนลง **พื้นที่ค้นหา** เลือก **รัศมี** และระบุระยะทาง **100** ไมล์
+5. คลิก **ตกลง**
 
-    <span data-ttu-id="4e6f9-329">แผนที่แสดงวงกลมโดยรอบตำแหน่งที่ตั้งสนามบินที่ปักหมุดไว้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-329">The map shows a circle surrounding the pinned airport location.</span></span> <span data-ttu-id="4e6f9-330">บานหน้าต่างเวลาเวลาในการขับรถจะขยายเพื่อแสดงตัวเลือกรูปแบบสำหรับพื้นที่ระยะห่างในการขับขี่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-330">The Drive time pane expands to show styling options for the driving distance area.</span></span>
+    แผนที่แสดงวงกลมโดยรอบตำแหน่งที่ตั้งสนามบินที่ปักหมุดไว้ บานหน้าต่างเวลาเวลาในการขับรถจะขยายเพื่อแสดงตัวเลือกรูปแบบสำหรับพื้นที่ระยะห่างในการขับขี่
     
     ![ค้นหาตำแหน่งที่ตั้งใกล้เคียง](media/power-bi-visualizations-arcgis/arcgis-tutorial-16.png)
     
-    <span data-ttu-id="4e6f9-332">พื้นที่ระยะการขับขี่ยังปรากฏเป็นเลเยอร์ในรายการเลเยอร์ คุณสามารถเปลี่ยนชื่อเลเยอร์แสดงหรือซ่อนหรือลบออกจากแผนที่ได้เช่นเดียวกับเลเยอร์อื่น ๆ ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-332">The driving distance area also appears as a layer in the Layers list; you can rename the layer, show or hide it, or remove it from the map, as you can with other layers.</span></span>
+    พื้นที่ระยะการขับขี่ยังปรากฏเป็นเลเยอร์ในรายการเลเยอร์ คุณสามารถเปลี่ยนชื่อเลเยอร์แสดงหรือซ่อนหรือลบออกจากแผนที่ได้เช่นเดียวกับเลเยอร์อื่น ๆ ได้
 
-6. <span data-ttu-id="4e6f9-333">เมื่อเลเยอร์เวลาขับเคลื่อนทำงานอยู่ในรายการเลเยอร์ให้ใช้เครื่องมือเลือกเวลาขับรถเพื่อคลิกพื้นที่ระยะทางในการขับขี่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-333">With the drive-time layer active in the Layers list, use the Drive-time select tool to click the driving distance area.</span></span>
+6. เมื่อเลเยอร์เวลาขับเคลื่อนทำงานอยู่ในรายการเลเยอร์ให้ใช้เครื่องมือเลือกเวลาขับรถเพื่อคลิกพื้นที่ระยะทางในการขับขี่
 
-    <span data-ttu-id="4e6f9-334">ตำแหน่งที่ตั้งที่อยู่ในพื้นที่การค้นหาที่เลือก; สถานที่ที่ไม่ได้เลือกบนแผนที่จะมีขนาดเล็กลงหรือโปร่งใสมากขึ้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-334">Locations that fall within the search area are selected; unselected locations on the map appear smaller or become more transparent.</span></span> <span data-ttu-id="4e6f9-335">การแสดงภาพอื่น ๆ ได้รับการอัปเดตเพื่อแสดงตำแหน่งที่ตั้งที่เลือก</span><span class="sxs-lookup"><span data-stu-id="4e6f9-335">Other visualizations are updated to reflect the selected locations.</span></span>
+    ตำแหน่งที่ตั้งที่อยู่ในพื้นที่การค้นหาที่เลือก; สถานที่ที่ไม่ได้เลือกบนแผนที่จะมีขนาดเล็กลงหรือโปร่งใสมากขึ้น การแสดงภาพอื่น ๆ ได้รับการอัปเดตเพื่อแสดงตำแหน่งที่ตั้งที่เลือก
 
-<span data-ttu-id="4e6f9-336">สำหรับข้อมูลเพิ่มเติม โปรดดูที่ [ค้นหาสถานที่ใกล้เคียง](https://doc.arcgis.com/en/power-bi/design/find-nearby-locations.htm) ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-336">For more information, see [Find nearby locations](https://doc.arcgis.com/en/power-bi/design/find-nearby-locations.htm) in the ArcGIS for Power BI online help.</span></span>
+สำหรับข้อมูลเพิ่มเติม โปรดดูที่ [ค้นหาสถานที่ใกล้เคียง](https://doc.arcgis.com/en/power-bi/design/find-nearby-locations.htm) ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
 
-#### <a name="add-infographics-cards"></a><span data-ttu-id="4e6f9-337">เพิ่มการ์ดอินโฟกราฟิก</span><span class="sxs-lookup"><span data-stu-id="4e6f9-337">Add infographics cards</span></span>
+#### <a name="add-infographics-cards"></a>เพิ่มการ์ดอินโฟกราฟิก
 
-<span data-ttu-id="4e6f9-338">เช่นเลเยอร์อ้างอิง การ์ดอินโฟกราฟิกให้รายละเอียดเพิ่มเติมเกี่ยวกับพื้นที่บนแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-338">Like reference layers, infographics cards provide additional details about areas on the map.</span></span> <span data-ttu-id="4e6f9-339">การ์ดอินโฟกราฟิกวางอยู่ด้านบนของแผนที่และแสดงข้อมูลประชากรเฉพาะเกี่ยวกับพื้นที่โดยรอบตำแหน่งที่ตั้งที่เลือกทันทีหรือเกี่ยวกับพื้นที่ทั่วไปที่แสดงในขอบเขตแผนที่ปัจจุบัน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-339">Infographics cards lay on top of the map and display specific demographic information about either the area immediately surrounding a selected location, or about the general area displayed in the current map extent.</span></span> <span data-ttu-id="4e6f9-340">สำหรับข้อมูลโดยละเอียด โปรดดูที่[เพิ่มการ์ดอินโฟกราฟิก](https://doc.arcgis.com/en/power-bi/design/add-infographics.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-340">For detailed information, see [Add infographics cards](https://doc.arcgis.com/en/power-bi/design/add-infographics.htm) in the ArcGIS for Power BI online help.</span></span>
+เช่นเลเยอร์อ้างอิง การ์ดอินโฟกราฟิกให้รายละเอียดเพิ่มเติมเกี่ยวกับพื้นที่บนแผนที่ การ์ดอินโฟกราฟิกวางอยู่ด้านบนของแผนที่และแสดงข้อมูลประชากรเฉพาะเกี่ยวกับพื้นที่โดยรอบตำแหน่งที่ตั้งที่เลือกทันทีหรือเกี่ยวกับพื้นที่ทั่วไปที่แสดงในขอบเขตแผนที่ปัจจุบัน สำหรับข้อมูลโดยละเอียด โปรดดูที่[เพิ่มการ์ดอินโฟกราฟิก](https://doc.arcgis.com/en/power-bi/design/add-infographics.htm)ในความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
 
-### <a name="get-help"></a><span data-ttu-id="4e6f9-341">รับความช่วยเหลือ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-341">Get help</span></span>
+### <a name="get-help"></a>รับความช่วยเหลือ
 
-<span data-ttu-id="4e6f9-342">Esri มีเอกสารออนไลน์ที่ครอบคลุมบนแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-342">Esri provides comprehensive online documentation on ArcGIS for Power BI.</span></span>
+Esri มีเอกสารออนไลน์ที่ครอบคลุมบนแผนที่ ArcGIS สำหรับ Power BI
 
-<span data-ttu-id="4e6f9-343">หากต้องการเข้าถึงความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI จากการแสดงภาพ ให้ทำตามขั้นตอนเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-343">To access the ArcGIS for Power BI online help from the visualization, follow these steps:</span></span>
+หากต้องการเข้าถึงความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI จากการแสดงภาพ ให้ทำตามขั้นตอนเหล่านี้:
 
-1. <span data-ttu-id="4e6f9-344">จากเครื่องมือแผนที่ ให้คลิกปุ่ม **การตั้งค่า** ![ไอคอนการตั้งค่า](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-15.png)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-344">From the map tools, click the **Settings** button ![settings icon](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-15.png).</span></span>
+1. จากเครื่องมือแผนที่ ให้คลิกปุ่ม **การตั้งค่า** ![ไอคอนการตั้งค่า](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-15.png)
 
-2. <span data-ttu-id="4e6f9-345">ในบานหน้าต่าง **การตั้งค่า** คลิกปุ่ม **ความช่วยเหลือ**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-345">On the **Settings** pane, click the **Help** button.</span></span>
-3. <span data-ttu-id="4e6f9-346">คลิก **ตกลง** บนหน้าต่างการยืนยันที่ปรากฏขึ้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-346">Click **OK** on the confirmation window that appears.</span></span>
+2. ในบานหน้าต่าง **การตั้งค่า** คลิกปุ่ม **ความช่วยเหลือ**
+3. คลิก **ตกลง** บนหน้าต่างการยืนยันที่ปรากฏขึ้น
 
-    <span data-ttu-id="4e6f9-347">ความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI จะเปิดขึ้นในหน้าต่างเบราว์เซอร์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-347">The ArcGIS for Power BI online help opens in a browser window.</span></span>
+    ความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI จะเปิดขึ้นในหน้าต่างเบราว์เซอร์
     
-    - <span data-ttu-id="4e6f9-348">ค้นหาคำตอบสำหรับ[คำถามที่พบบ่อย](https://doc.arcgis.com/en/power-bi/get-started/pbi-faq.htm#anchor5)บนความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-348">Find answers to [frequently asked questions](https://doc.arcgis.com/en/power-bi/get-started/pbi-faq.htm#anchor5) on ArcGIS for Power BI online help.</span></span>
-    - <span data-ttu-id="4e6f9-349">คุณสามารถถามคำถาม ค้นหาข้อมูลล่าสุด รายงานปัญหา และค้นหาคำตอบใน [ชุดข้อความชุมชนที่เกี่ยวข้องกับ **แผนที่ ArcGIS สำหรับ Power BI**](https://go.microsoft.com/fwlink/?LinkID=828771) ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-349">You can ask questions, find the latest information, report issues, and find answers on the Power BI [community thread related to  **ArcGIS for Power BI**](https://go.microsoft.com/fwlink/?LinkID=828771).</span></span>
-    - <span data-ttu-id="4e6f9-350">ถ้าคุณมีคำแนะนำเพื่อการปรับปรุง โปรดส่งไปยัง[รายการแนวคิด Power BI](https://ideas.powerbi.com/)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-350">If you have a suggestion for an improvement, please submit it to [Power BI's ideas list](https://ideas.powerbi.com/).</span></span>
+    - ค้นหาคำตอบสำหรับ[คำถามที่พบบ่อย](https://doc.arcgis.com/en/power-bi/get-started/pbi-faq.htm#anchor5)บนความช่วยเหลือออนไลน์ของแผนที่ ArcGIS สำหรับ Power BI
+    - คุณสามารถถามคำถาม ค้นหาข้อมูลล่าสุด รายงานปัญหา และค้นหาคำตอบใน [ชุดข้อความชุมชนที่เกี่ยวข้องกับ **แผนที่ ArcGIS สำหรับ Power BI**](https://go.microsoft.com/fwlink/?LinkID=828771) ได้
+    - ถ้าคุณมีคำแนะนำเพื่อการปรับปรุง โปรดส่งไปยัง[รายการแนวคิด Power BI](https://ideas.powerbi.com/)
     
-### <a name="manage-the-use-of-arcgis-for-power-bi-within-your-organization"></a><span data-ttu-id="4e6f9-351">จัดการการใช้แผนที่ ArcGIS สำหรับ Power BI ภายในองค์กรของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-351">Manage the use of ArcGIS for Power BI within your organization</span></span>
+### <a name="manage-the-use-of-arcgis-for-power-bi-within-your-organization"></a>จัดการการใช้แผนที่ ArcGIS สำหรับ Power BI ภายในองค์กรของคุณ
 
-<span data-ttu-id="4e6f9-352">Power BI ช่วยให้นักออกแบบ ผู้ดูแลระบบ Power BI และผู้ดูแลระบบผู้ใช้สามารถจัดการการใช้แผนที่ ArcGIS สำหรับ Power BI ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-352">Power BI allows designers, Power BI admins, and user administrators to manage the use of ArcGIS for Power BI.</span></span> <span data-ttu-id="4e6f9-353">ส่วนด้านล่างเค้าร่างการดำเนินการที่แต่ละบทบาทที่ทำได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-353">The sections below outline the actions each role can take.</span></span>
+Power BI ช่วยให้นักออกแบบ ผู้ดูแลระบบ Power BI และผู้ดูแลระบบผู้ใช้สามารถจัดการการใช้แผนที่ ArcGIS สำหรับ Power BI ได้ ส่วนด้านล่างเค้าร่างการดำเนินการที่แต่ละบทบาทที่ทำได้
 
-#### <a name="designer-options"></a><span data-ttu-id="4e6f9-354">ตัวเลือกการออกแบบ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-354">Designer options</span></span>
+#### <a name="designer-options"></a>ตัวเลือกการออกแบบ
 
-<span data-ttu-id="4e6f9-355">ใน Power BI Desktop นักออกแบบสามารถปิดใช้งานแผนที่ ArcGIS สำหรับ Power BI บนแท็บความปลอดภัยได้ เลือก **ไฟล์**  >  **ตัวเลือกและการตั้งค่า** จากนั้นเลือก **ตัวเลือก**  >  **ความปลอดภัย**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-355">In Power BI Desktop, designers can disable ArcGIS for Power BI on the security tab. Select  **File**  >  **Options and settings**  and then select  **Options**  >  **Security**.</span></span> <span data-ttu-id="4e6f9-356">เมื่อปิดใช้งาน แผนที่ ArcGIS จะไม่โหลดตามค่าเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="4e6f9-356">When disabled, ArcGIS will not load by default.</span></span>
+ใน Power BI Desktop นักออกแบบสามารถปิดใช้งานแผนที่ ArcGIS สำหรับ Power BI บนแท็บความปลอดภัยได้ เลือก **ไฟล์**  >  **ตัวเลือกและการตั้งค่า** จากนั้นเลือก **ตัวเลือก**  >  **ความปลอดภัย** เมื่อปิดใช้งาน แผนที่ ArcGIS จะไม่โหลดตามค่าเริ่มต้น
 
 ![ตัวเลือกการออกแบบ](media/power-bi-visualizations-arcgis/arcgis-tutorial-17a.png)
 
-#### <a name="administrator-options"></a><span data-ttu-id="4e6f9-358">ตัวเลือกผู้ดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-358">Administrator options</span></span>
+#### <a name="administrator-options"></a>ตัวเลือกผู้ดูแลระบบ
 
-<span data-ttu-id="4e6f9-359">ในบริการ PowerBI ผู้ดูแลระบบสามารถปิดแผนที่ ArcGIS สำหรับ Power BI สำหรับผู้ใช้ทั้งหมดได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-359">In the Power BI service, administrators can turn off ArcGIS for Power BI for all users.</span></span> <span data-ttu-id="4e6f9-360">เลือก **การตั้งค่า** > **พอร์ทัลผู้ดูแลระบบ** > **การตั้งค่าผู้เช่า** .</span><span class="sxs-lookup"><span data-stu-id="4e6f9-360">Select **Settings** > **Admin Portal** > **Tenant settings**.</span></span> <span data-ttu-id="4e6f9-361">เมื่อปิดใช้งาน Power BI จะไม่แสดงไอคอนแผนที่ ArcGIS สำหรับ Power BI ในบานหน้าต่างการจัดรูปแบบการแสดงภาพ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-361">When disabled, Power BI will no longer display the ArcGIS for Power BI icon in the visualizations pane.</span></span>
+ในบริการ PowerBI ผู้ดูแลระบบสามารถปิดแผนที่ ArcGIS สำหรับ Power BI สำหรับผู้ใช้ทั้งหมดได้ เลือก **การตั้งค่า** > **พอร์ทัลผู้ดูแลระบบ** > **การตั้งค่าผู้เช่า** . เมื่อปิดใช้งาน Power BI จะไม่แสดงไอคอนแผนที่ ArcGIS สำหรับ Power BI ในบานหน้าต่างการจัดรูปแบบการแสดงภาพ
 
 ![ตัวเลือกผู้ดูแลระบบ](media/power-bi-visualizations-arcgis/arcgis-tutorial-18a.png)
 
-#### <a name="user-administrator-options"></a><span data-ttu-id="4e6f9-363">ตัวเลือกผู้ดูแลระบบผู้ใช้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-363">User Administrator options</span></span>
+#### <a name="user-administrator-options"></a>ตัวเลือกผู้ดูแลระบบผู้ใช้
 
-<span data-ttu-id="4e6f9-364">Power BI Desktop รองรับการใช้ **นโยบายกลุ่ม** เพื่อปิดใช้แผนที่ ArcGIS สำหรับ Power BI ในคอมพิวเตอร์ของหน่วยงานทุกเครื่อง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-364">Power BI Desktop supports using **Group Policy** to disable ArcGIS for Power BI across an organization's deployed computers.</span></span>
+Power BI Desktop รองรับการใช้ **นโยบายกลุ่ม** เพื่อปิดใช้แผนที่ ArcGIS สำหรับ Power BI ในคอมพิวเตอร์ของหน่วยงานทุกเครื่อง
 
-| <span data-ttu-id="4e6f9-365">**แอตทริบิวต์**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-365">**Attribute**</span></span> | <span data-ttu-id="4e6f9-366">**ค่า**</span><span class="sxs-lookup"><span data-stu-id="4e6f9-366">**Value**</span></span> |
+| **แอตทริบิวต์** | **ค่า** |
 | --- | --- |
-| <span data-ttu-id="4e6f9-367">คีย์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-367">Key</span></span> | <span data-ttu-id="4e6f9-368">Software\Policies\Microsoft\Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="4e6f9-368">Software\Policies\Microsoft\Power BI Desktop</span></span> |
-| <span data-ttu-id="4e6f9-369">valueName</span><span class="sxs-lookup"><span data-stu-id="4e6f9-369">valueName</span></span> | <span data-ttu-id="4e6f9-370">EnableArcGISMaps</span><span class="sxs-lookup"><span data-stu-id="4e6f9-370">EnableArcGISMaps</span></span> |
+| คีย์ | Software\Policies\Microsoft\Power BI Desktop |
+| valueName | EnableArcGISMaps |
 
-<span data-ttu-id="4e6f9-371">ค่า 1 (เลขฐานสิบ) เปิดใช้งานแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-371">A value of 1 (decimal) enables ArcGIS for Power BI.</span></span>
+ค่า 1 (เลขฐานสิบ) เปิดใช้งานแผนที่ ArcGIS สำหรับ Power BI
 
-<span data-ttu-id="4e6f9-372">ค่า 1 (เลขฐานสิบ) เปิดใช้งาแผนที่ ArcGIS สำหรับ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-372">A value of 0 (decimal) disables ArcGIS for Power BI.</span></span>
+ค่า 1 (เลขฐานสิบ) เปิดใช้งาแผนที่ ArcGIS สำหรับ Power BI
 
-## <a name="considerations-and-limitations"></a><span data-ttu-id="4e6f9-373">ข้อควรพิจารณาและข้อจำกัด</span><span class="sxs-lookup"><span data-stu-id="4e6f9-373">Considerations and limitations</span></span>
+## <a name="considerations-and-limitations"></a>ข้อควรพิจารณาและข้อจำกัด
 
-<span data-ttu-id="4e6f9-374">แผนที่ ArcGIS สำหรับ Power BI มีให้ใช้งานในบริการและแอปพลิเคชันต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-374">ArcGIS for Power BI is available in the following services and applications:</span></span>
+แผนที่ ArcGIS สำหรับ Power BI มีให้ใช้งานในบริการและแอปพลิเคชันต่อไปนี้:
 
-| <span data-ttu-id="4e6f9-375">การบริการ/ใบสมัคร</span><span class="sxs-lookup"><span data-stu-id="4e6f9-375">Service/Application</span></span> | <span data-ttu-id="4e6f9-376">ความพร้อมใช้งาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-376">Availability</span></span> |
+| การบริการ/ใบสมัคร | ความพร้อมใช้งาน |
 | --- | --- |
-| <span data-ttu-id="4e6f9-377">Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="4e6f9-377">Power BI Desktop</span></span> | <span data-ttu-id="4e6f9-378">ใช่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-378">Yes</span></span> |
-| <span data-ttu-id="4e6f9-379">การบริการ Power BI (powerbi.com)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-379">Power BI service (powerbi.com)</span></span> | <span data-ttu-id="4e6f9-380">ใช่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-380">Yes</span></span> |
-| <span data-ttu-id="4e6f9-381">แอปพลิเคชัน Power BI สำหรับอุปกรณ์เคลื่อนที่\*</span><span class="sxs-lookup"><span data-stu-id="4e6f9-381">Power BI mobile applications\*</span></span> | <span data-ttu-id="4e6f9-382">ใช่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-382">Yes</span></span> |
-| <span data-ttu-id="4e6f9-383">Power BI ที่เผยแพร่ไปยังเว็บ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-383">Power BI publish to web</span></span> | <span data-ttu-id="4e6f9-384">ใช่ สำหรับนักออกแบบที่ลงชื่อเข้าใช้ในบัญชี ArcGIS ที่ถูกต้องด้วยสิทธิ์การใช้งานเพิ่มเติมที่เหมาะสม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-384">Yes, for designers signed in to a valid ArcGIS account with the appropriate add-on license.</span></span> <span data-ttu-id="4e6f9-385">ผู้บริโภคไม่จำเป็นต้องมีสิทธิ์การใช้งานเพิ่มเติมเพื่อดูเนื้อหาที่เผยแพร่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-385">Consumers do not need the add-on license to view published content.</span></span> |
-| <span data-ttu-id="4e6f9-386">Power BI แบบฝังตัว</span><span class="sxs-lookup"><span data-stu-id="4e6f9-386">Power BI Embedded</span></span> | <span data-ttu-id="4e6f9-387">ใช่ สำหรับนักออกแบบที่ลงชื่อเข้าใช้ในบัญชี ArcGIS ที่ถูกต้องด้วยสิทธิ์การใช้งานเพิ่มเติมที่เหมาะสม</span><span class="sxs-lookup"><span data-stu-id="4e6f9-387">Yes, for designers signed in to a valid ArcGIS account with the appropriate add-on license.</span></span> <span data-ttu-id="4e6f9-388">ผู้บริโภคไม่จำเป็นต้องมีสิทธิ์การใช้งานเพิ่มเติมเพื่อดูเนื้อหาที่เผยแพร่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-388">Consumers do not need the add-on license to view published content.</span></span> |
-| <span data-ttu-id="4e6f9-389">การฝังบริการ Power BI (powerbi.com)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-389">Power BI service embedding (powerbi.com)</span></span> | <span data-ttu-id="4e6f9-390">ไม่ใช่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-390">No</span></span> |
-| <span data-ttu-id="4e6f9-391">เซิร์ฟเวอร์รายงาน Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-391">Power BI Report Server</span></span> | <span data-ttu-id="4e6f9-392">ใช่ ในสภาพแวดล้อมออนไลน์เท่านั้น; ไม่ได้รับการรองรับในสภาพแวดล้อมที่มีการเชื่อมต่อ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-392">Yes, in online environments only; not supported in a disconnected environment.</span></span> |
+| Power BI Desktop | ใช่ |
+| การบริการ Power BI (powerbi.com) | ใช่ |
+| แอปพลิเคชัน Power BI สำหรับอุปกรณ์เคลื่อนที่\* | ใช่ |
+| Power BI ที่เผยแพร่ไปยังเว็บ | ใช่ สำหรับนักออกแบบที่ลงชื่อเข้าใช้ในบัญชี ArcGIS ที่ถูกต้องด้วยสิทธิ์การใช้งานเพิ่มเติมที่เหมาะสม ผู้บริโภคไม่จำเป็นต้องมีสิทธิ์การใช้งานเพิ่มเติมเพื่อดูเนื้อหาที่เผยแพร่ |
+| Power BI แบบฝังตัว | ใช่ สำหรับนักออกแบบที่ลงชื่อเข้าใช้ในบัญชี ArcGIS ที่ถูกต้องด้วยสิทธิ์การใช้งานเพิ่มเติมที่เหมาะสม ผู้บริโภคไม่จำเป็นต้องมีสิทธิ์การใช้งานเพิ่มเติมเพื่อดูเนื้อหาที่เผยแพร่ |
+| การฝังบริการ Power BI (powerbi.com) | ไม่ใช่ |
+| เซิร์ฟเวอร์รายงาน Power BI | ใช่ ในสภาพแวดล้อมออนไลน์เท่านั้น; ไม่ได้รับการรองรับในสภาพแวดล้อมที่มีการเชื่อมต่อ |
 
-<span data-ttu-id="4e6f9-393">\*ในสภาพแวดล้อมของอุปกรณ์เคลื่อนที่ คุณสามารถดูแผนที่ที่สร้างขึ้นโดยใช้การแสดงภาพแผนที่ ArcGIS สำหรับ Power BI ที่มาพร้อมกับ Power BI ([บัญชีมาตรฐาน ](https://doc.arcgis.com/en/maps-for-powerbi/get-started/account-types.htm)) ได้</span><span class="sxs-lookup"><span data-stu-id="4e6f9-393">\*In mobile environments, you can view maps created using the ArcGIS for Power BI visualization included with Power BI ([Standard account](https://doc.arcgis.com/en/maps-for-powerbi/get-started/account-types.htm)).</span></span> <span data-ttu-id="4e6f9-394">แผนที่ที่มีเนื้อหาพรีเมียมจาก ArcGIS ไม่ได้รับการสนับสนุนในสภาพแวดล้อมของอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-394">Maps that contain premium content from ArcGIS are not supported in mobile environments.</span></span>
+\*ในสภาพแวดล้อมของอุปกรณ์เคลื่อนที่ คุณสามารถดูแผนที่ที่สร้างขึ้นโดยใช้การแสดงภาพแผนที่ ArcGIS สำหรับ Power BI ที่มาพร้อมกับ Power BI ([บัญชีมาตรฐาน ](https://doc.arcgis.com/en/maps-for-powerbi/get-started/account-types.htm)) ได้ แผนที่ที่มีเนื้อหาพรีเมียมจาก ArcGIS ไม่ได้รับการสนับสนุนในสภาพแวดล้อมของอุปกรณ์เคลื่อนที่
 
-<span data-ttu-id="4e6f9-395">ในบริการหรือแอปพลิเคชันที่ไม่มีแผนที่ ArcGIS สำหรับ Power BI ให้ใช้งาน การแสดงภาพจะแสดงเป็นภาพว่างที่มีโลโก้ Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-395">In services or applications where ArcGIS for Power BI is not available, the visualization will show as an empty visual with the Power BI logo.</span></span>
+ในบริการหรือแอปพลิเคชันที่ไม่มีแผนที่ ArcGIS สำหรับ Power BI ให้ใช้งาน การแสดงภาพจะแสดงเป็นภาพว่างที่มีโลโก้ Power BI
 
-<span data-ttu-id="4e6f9-396">ตารางต่อไปนี้เปรียบเทียบคุณลักษณะมาตรฐานที่มีให้สำหรับผู้ใช้ Power BI ทั้งหมดกับผู้ใช้ ArcGIS ที่ลงชื่อเข้าใช้:</span><span class="sxs-lookup"><span data-stu-id="4e6f9-396">The following table compares the standard features available to all Power BI users to those available to signed-in ArcGIS users:</span></span>
+ตารางต่อไปนี้เปรียบเทียบคุณลักษณะมาตรฐานที่มีให้สำหรับผู้ใช้ Power BI ทั้งหมดกับผู้ใช้ ArcGIS ที่ลงชื่อเข้าใช้:
 
-| ![ไอคอนที่รวมไว้](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-17.png) <span data-ttu-id="4e6f9-398">มาตรฐาน (ที่รวมอยู่ใน Power BI)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-398">Standard (included with Power BI)</span></span> | ![ไอคอนบัญชี ArcGIS 1](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-18.png) ![ไอคอนบัญชี ArcGIS 2](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-19.png) <span data-ttu-id="4e6f9-401">ด้วยบัญชี ArcGIS ของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-401">With your ArcGIS account</span></span> |
+| ![ไอคอนที่รวมไว้](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-17.png) มาตรฐาน (ที่รวมอยู่ใน Power BI) | ![ไอคอนบัญชี ArcGIS 1](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-18.png) ![ไอคอนบัญชี ArcGIS 2](media/power-bi-visualizations-arcgis/arcgis-tutorial-icon-19.png) ด้วยบัญชี ArcGIS ของคุณ |
 | --- | --- | --- |
-| <span data-ttu-id="4e6f9-402">แผนที่ฐาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-402">Basemaps</span></span> |
-| <span data-ttu-id="4e6f9-403">4 แผนที่ฐานพื้นฐาน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-403">4 basic basemaps</span></span> | <span data-ttu-id="4e6f9-404">แผนที่ฐาน Esri ทั้งหมดพร้อมการเข้าถึงแผนที่ฐานขององค์กรของคุณ รวมถึงแผนที่ฐานที่กำหนดเอง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-404">All Esri basemaps plus access to your organization's basemaps, including custom basemaps</span></span> |
-| <span data-ttu-id="4e6f9-405">ภูมิศาสตร์</span><span class="sxs-lookup"><span data-stu-id="4e6f9-405">Geocoding</span></span> |
-| <span data-ttu-id="4e6f9-406">3,500 ตำแหน่งที่ตั้งต่อแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-406">3,500 locations per map</span></span> | <span data-ttu-id="4e6f9-407">10,000 ตำแหน่งที่ตั้งต่อแผนที่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-407">10,000 locations per map</span></span> |
- | <span data-ttu-id="4e6f9-408">10,000 ตำแหน่งที่ตั้งต่อเดือน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-408">10,000 locations per month</span></span> | <span data-ttu-id="4e6f9-409">ไม่จำกัดรายเดือน</span><span class="sxs-lookup"><span data-stu-id="4e6f9-409">No monthly limit</span></span> |
-| <span data-ttu-id="4e6f9-410">เลเยอร์การอ้างอิง</span><span class="sxs-lookup"><span data-stu-id="4e6f9-410">Reference layers</span></span> |
-| <span data-ttu-id="4e6f9-411">เลเยอร์อ้างอิง 10 เลเยอร์ที่มีข้อมูลประชากรของสหรัฐอเมริกา</span><span class="sxs-lookup"><span data-stu-id="4e6f9-411">10 reference layers that contain U.S. demographics</span></span> | <span data-ttu-id="4e6f9-412">เข้าถึงแผนที่เว็บและเลเยอร์ทั้งหมดจากองค์กร ArcGIS ของคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-412">Access to all web maps and layers from your ArcGIS organization</span></span> |
- | <span data-ttu-id="4e6f9-413">เลเยอร์คุณสมบัติที่แชร์แบบสาธารณะใน ArcGIS</span><span class="sxs-lookup"><span data-stu-id="4e6f9-413">Publicly shared feature layers in ArcGIS</span></span> | <span data-ttu-id="4e6f9-414">เลเยอร์คุณสมบัติที่แชร์แบบสาธารณะใน ArcGIS</span><span class="sxs-lookup"><span data-stu-id="4e6f9-414">Publicly shared feature layers in ArcGIS</span></span> |
- | <span data-ttu-id="4e6f9-415">เข้าถึง ArcGIS Living Atlas ของแผนที่และเลเยอร์ของโลก (บริการคุณลักษณะ)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-415">Access to ArcGIS Living Atlas of the World maps and layers (feature services)</span></span> |
-| <span data-ttu-id="4e6f9-416">อินโฟกราฟิก</span><span class="sxs-lookup"><span data-stu-id="4e6f9-416">Infographics</span></span> |
-| <span data-ttu-id="4e6f9-417">แกลเลอรีของตัวแปรข้อมูลประชากรสหรัฐอเมริกา (7 หมวดหมู่)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-417">Curated gallery of U.S. demographics variables (7 categories)</span></span> | <span data-ttu-id="4e6f9-418">การเข้าถึงเบราว์เซอร์ข้อมูล ArcGIS GeoEnrichment แบบสมบูรณ์ รวมถึงตัวแปรข้อมูลประชากรในสหรัฐอเมริกาและทั่วโลก</span><span class="sxs-lookup"><span data-stu-id="4e6f9-418">Full access to the ArcGIS GeoEnrichment data browser, including U.S. and global demographics variables</span></span> |
+| แผนที่ฐาน |
+| 4 แผนที่ฐานพื้นฐาน | แผนที่ฐาน Esri ทั้งหมดพร้อมการเข้าถึงแผนที่ฐานขององค์กรของคุณ รวมถึงแผนที่ฐานที่กำหนดเอง |
+| ภูมิศาสตร์ |
+| 3,500 ตำแหน่งที่ตั้งต่อแผนที่ | 10,000 ตำแหน่งที่ตั้งต่อแผนที่ |
+ | 10,000 ตำแหน่งที่ตั้งต่อเดือน | ไม่จำกัดรายเดือน |
+| เลเยอร์การอ้างอิง |
+| เลเยอร์อ้างอิง 10 เลเยอร์ที่มีข้อมูลประชากรของสหรัฐอเมริกา | เข้าถึงแผนที่เว็บและเลเยอร์ทั้งหมดจากองค์กร ArcGIS ของคุณ |
+ | เลเยอร์คุณสมบัติที่แชร์แบบสาธารณะใน ArcGIS | เลเยอร์คุณสมบัติที่แชร์แบบสาธารณะใน ArcGIS |
+ | เข้าถึง ArcGIS Living Atlas ของแผนที่และเลเยอร์ของโลก (บริการคุณลักษณะ) |
+| อินโฟกราฟิก |
+| แกลเลอรีของตัวแปรข้อมูลประชากรสหรัฐอเมริกา (7 หมวดหมู่) | การเข้าถึงเบราว์เซอร์ข้อมูล ArcGIS GeoEnrichment แบบสมบูรณ์ รวมถึงตัวแปรข้อมูลประชากรในสหรัฐอเมริกาและทั่วโลก |
 |
 
-## <a name="next-steps"></a><span data-ttu-id="4e6f9-419">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="4e6f9-419">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-- [<span data-ttu-id="4e6f9-420">โต้ตอบกับแผนผังที่ ArcGIS ที่ถูกแชร์กับคุณ</span><span class="sxs-lookup"><span data-stu-id="4e6f9-420">Interacting with an ArcGIS map that has been shared with you</span></span>](https://doc.arcgis.com/en/power-bi/use/explore-maps.htm)
-- <span data-ttu-id="4e6f9-421">[บล็อกโพสต์ที่ประกาศแผนที่ ArcGIS สำหรับการอัปเดต Power BI](https://www.esri.com/arcgis-blog/?s=#ArcGIS%20for%20Power%20BI)</span><span class="sxs-lookup"><span data-stu-id="4e6f9-421">[Blog posts announcing ArcGIS for Power BI](https://www.esri.com/arcgis-blog/?s=#ArcGIS%20for%20Power%20BI) updates</span></span>
-- <span data-ttu-id="4e6f9-422">มีคำถามเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="4e6f9-422">More questions?</span></span> [<span data-ttu-id="4e6f9-423">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="4e6f9-423">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
+- [โต้ตอบกับแผนผังที่ ArcGIS ที่ถูกแชร์กับคุณ](https://doc.arcgis.com/en/power-bi/use/explore-maps.htm)
+- [บล็อกโพสต์ที่ประกาศแผนที่ ArcGIS สำหรับการอัปเดต Power BI](https://www.esri.com/arcgis-blog/?s=#ArcGIS%20for%20Power%20BI)
+- มีคำถามเพิ่มเติมหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)

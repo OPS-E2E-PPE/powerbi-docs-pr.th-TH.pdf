@@ -15,4 +15,4 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 11/25/2020
 ms.locfileid: "96119890"
 ---
-<span data-ttu-id="8f48b-103">✔️&nbsp;Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="8f48b-103">✔️&nbsp;Power BI Desktop</span></span>
+✔️&nbsp;Power BI Desktop

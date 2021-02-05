@@ -6,32 +6,32 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "61256963"
 ---
-<span data-ttu-id="6b2e3-101">คุณทำสำเร็จแล้ว!</span><span class="sxs-lookup"><span data-stu-id="6b2e3-101">You did it!</span></span> <span data-ttu-id="6b2e3-102">**ยินดีด้วย!**</span><span class="sxs-lookup"><span data-stu-id="6b2e3-102">**Congratulations!**</span></span> <span data-ttu-id="6b2e3-103">คุณได้จบส่วนแรกของหลักสูตร **การเรียนรู้พร้อมคำแนะนำ** สำหรับ Power BI แล้ว</span><span class="sxs-lookup"><span data-stu-id="6b2e3-103">You've completed the **Guided Learning** course for Power BI.</span></span> <span data-ttu-id="6b2e3-104">คุณได้วนครบรอบจากการเรียนรู้องค์ประกอบพื้นฐานของ Power BI รับการแนะนำผ่านฟีเจอร์และองค์ประกอบของซอฟต์แวร์ และเรียนรู้วิธีที่สิ่งเหล่านั้นทำงานด้วยกันแล้ว</span><span class="sxs-lookup"><span data-stu-id="6b2e3-104">You've come full circle from learning the basic elements of Power BI, taken a tour through its software features and elements, and learned how they all work together.</span></span>
+คุณทำสำเร็จแล้ว! **ยินดีด้วย!** คุณได้จบส่วนแรกของหลักสูตร **การเรียนรู้พร้อมคำแนะนำ** สำหรับ Power BI แล้ว คุณได้วนครบรอบจากการเรียนรู้องค์ประกอบพื้นฐานของ Power BI รับการแนะนำผ่านฟีเจอร์และองค์ประกอบของซอฟต์แวร์ และเรียนรู้วิธีที่สิ่งเหล่านั้นทำงานด้วยกันแล้ว
 
 ![](media/6-5-guided-learning-completion/c0a0_2.png)
 
-<span data-ttu-id="6b2e3-105">นี่คือส่วนสุดท้าย (และหัวข้อสุดท้าย เว้นแต่ว่าคุณต้องการเรียนรู้ DAX) ของบทเรียน ดังนั้นถ้าคุณผ่านส่วนต่างๆ เหล่านั้นมาตามลำดับ ให้หยุดสักครู่เพื่อให้กำลังใจตนเองก่อน</span><span class="sxs-lookup"><span data-stu-id="6b2e3-105">This is the last section (and the final topic, unless you want to learn DAX) in the course, so if you went through all of these sections in order, take a moment to pat yourself on the back.</span></span> <span data-ttu-id="6b2e3-106">ทำได้ดีมาก!</span><span class="sxs-lookup"><span data-stu-id="6b2e3-106">Good job!</span></span> <span data-ttu-id="6b2e3-107">ตอนนี้คุณเข้าใจ**แนวคิดที่สำคัญ**เหล่านี้อย่างถี่ถ้วนแล้ว:</span><span class="sxs-lookup"><span data-stu-id="6b2e3-107">You're now well versed in all these **important concepts**:</span></span>
+นี่คือส่วนสุดท้าย (และหัวข้อสุดท้าย เว้นแต่ว่าคุณต้องการเรียนรู้ DAX) ของบทเรียน ดังนั้นถ้าคุณผ่านส่วนต่างๆ เหล่านั้นมาตามลำดับ ให้หยุดสักครู่เพื่อให้กำลังใจตนเองก่อน ทำได้ดีมาก! ตอนนี้คุณเข้าใจ**แนวคิดที่สำคัญ**เหล่านี้อย่างถี่ถ้วนแล้ว:
 
-* <span data-ttu-id="6b2e3-108">อะไรคือ [Power BI](../gettingstarted.yml?tutorial-step=1)</span><span class="sxs-lookup"><span data-stu-id="6b2e3-108">What [Power BI is](../gettingstarted.yml?tutorial-step=1)</span></span>
-* <span data-ttu-id="6b2e3-109">[โครงสร้างพื้นฐาน](../gettingstarted.yml?tutorial-step=3)ของ Power BI</span><span class="sxs-lookup"><span data-stu-id="6b2e3-109">The [building blocks](../gettingstarted.yml?tutorial-step=3) of Power BI</span></span>
-* <span data-ttu-id="6b2e3-110">[การรับ](../gettingdata.yml?tutorial-step=3)และ[การวางรูปแบบ](../modeling.yml?tutorial-step=1)ข้อมูล</span><span class="sxs-lookup"><span data-stu-id="6b2e3-110">[Getting](../gettingdata.yml?tutorial-step=3) and [modeling](../modeling.yml?tutorial-step=1) data</span></span>
-* [<span data-ttu-id="6b2e3-111">การแสดงภาพของข้อมูล</span><span class="sxs-lookup"><span data-stu-id="6b2e3-111">Visualizations</span></span>](../visualizations.yml?tutorial-step=1)
-* <span data-ttu-id="6b2e3-112">[การสำรวจข้อมูล](../exploringdata.yml?tutorial-step=1)ในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="6b2e3-112">[Exploring data](../exploringdata.yml?tutorial-step=1) in the Power BI service</span></span>
-* <span data-ttu-id="6b2e3-113">การใช้ [Excel และ Power BI](../powerbiandexcel.yml?tutorial-step=1) ร่วมกัน</span><span class="sxs-lookup"><span data-stu-id="6b2e3-113">Using [Excel and Power BI](../powerbiandexcel.yml?tutorial-step=1) together</span></span>
-* <span data-ttu-id="6b2e3-114">และ[การเผยแพร่และการแชร์](../publishingandsharing.yml?tutorial-step=1)งานของคุณ</span><span class="sxs-lookup"><span data-stu-id="6b2e3-114">And [publishing and sharing](../publishingandsharing.yml?tutorial-step=1) your work</span></span>
+* อะไรคือ [Power BI](../gettingstarted.yml?tutorial-step=1)
+* [โครงสร้างพื้นฐาน](../gettingstarted.yml?tutorial-step=3)ของ Power BI
+* [การรับ](../gettingdata.yml?tutorial-step=3)และ[การวางรูปแบบ](../modeling.yml?tutorial-step=1)ข้อมูล
+* [การแสดงภาพของข้อมูล](../visualizations.yml?tutorial-step=1)
+* [การสำรวจข้อมูล](../exploringdata.yml?tutorial-step=1)ในบริการ Power BI
+* การใช้ [Excel และ Power BI](../powerbiandexcel.yml?tutorial-step=1) ร่วมกัน
+* และ[การเผยแพร่และการแชร์](../publishingandsharing.yml?tutorial-step=1)งานของคุณ
 
-<span data-ttu-id="6b2e3-115">นั่นคือความรู้จำนวนมาก และในเมื่อคุณจำสิ่งเหล่านั้นได้ทั้งหมดแล้ว คุณก็พร้อมที่จะจำสิ่งเหล่านั้นไปใช้!</span><span class="sxs-lookup"><span data-stu-id="6b2e3-115">That's a lot of knowledge, and now that you have all this in your head, you're ready to go put it to use!</span></span> <span data-ttu-id="6b2e3-116">ต่อไปนี้คือ**ลิงก์เพื่อดาวน์โหลด**หรือเพื่อทำให้เบราว์เซอร์ของคุณ**เชื่อมต่อกับบริการ Power BI**:</span><span class="sxs-lookup"><span data-stu-id="6b2e3-116">Here are some **links to downloads** or to get your browser **connected to the Power BI service**:</span></span>
+นั่นคือความรู้จำนวนมาก และในเมื่อคุณจำสิ่งเหล่านั้นได้ทั้งหมดแล้ว คุณก็พร้อมที่จะจำสิ่งเหล่านั้นไปใช้! ต่อไปนี้คือ**ลิงก์เพื่อดาวน์โหลด**หรือเพื่อทำให้เบราว์เซอร์ของคุณ**เชื่อมต่อกับบริการ Power BI**:
 
-* <span data-ttu-id="6b2e3-117">คุณสามารถ[รับ Power BI Desktop รุ่นล่าสุด](https://powerbi.microsoft.com/desktop)ได้ตลอดเวลา</span><span class="sxs-lookup"><span data-stu-id="6b2e3-117">You can always [get the latest Power BI Desktop](https://powerbi.microsoft.com/desktop)</span></span>
-* <span data-ttu-id="6b2e3-118">การไปยัง[บริการ Power BI](https://powerbi.microsoft.com/) นั้นเป็นเรื่องง่าย</span><span class="sxs-lookup"><span data-stu-id="6b2e3-118">Heading to the [Power BI service](https://powerbi.microsoft.com/) is easy</span></span>
-* <span data-ttu-id="6b2e3-119">การรับ[แอปสำหรับอุปกรณ์เคลื่อนที่สำหรับ Power BI](https://powerbi.microsoft.com/mobile/) นั้นง่ายเพียงแตะครั้งเดียว</span><span class="sxs-lookup"><span data-stu-id="6b2e3-119">Getting [mobile apps for Power BI](https://powerbi.microsoft.com/mobile/) is a tap away</span></span>
+* คุณสามารถ[รับ Power BI Desktop รุ่นล่าสุด](https://powerbi.microsoft.com/desktop)ได้ตลอดเวลา
+* การไปยัง[บริการ Power BI](https://powerbi.microsoft.com/) นั้นเป็นเรื่องง่าย
+* การรับ[แอปสำหรับอุปกรณ์เคลื่อนที่สำหรับ Power BI](https://powerbi.microsoft.com/mobile/) นั้นง่ายเพียงแตะครั้งเดียว
 
-<span data-ttu-id="6b2e3-120">และยังมีเนื้อหา**วิธีใช้และการอ้างอิง**พร้อมให้ใช้งานเช่นกัน</span><span class="sxs-lookup"><span data-stu-id="6b2e3-120">There's more **help and reference** content available, too.</span></span> <span data-ttu-id="6b2e3-121">เพียงไปที่ด้านบนของหน้านี้แล้วเลือก **การเรียนรู้ > คู่มือ** เพื่อดูเนื้อหาอ้างอิงเพิ่มเติมของ Power BI ของเรา</span><span class="sxs-lookup"><span data-stu-id="6b2e3-121">Just go to the top of this page, and select **Learning > Documentation** to see our extensive set of Power BI reference content.</span></span>
+และยังมีเนื้อหา**วิธีใช้และการอ้างอิง**พร้อมให้ใช้งานเช่นกัน เพียงไปที่ด้านบนของหน้านี้แล้วเลือก **การเรียนรู้ > คู่มือ** เพื่อดูเนื้อหาอ้างอิงเพิ่มเติมของ Power BI ของเรา
 
 ![](media/6-5-guided-learning-completion/6-5_1.png)
 
-<span data-ttu-id="6b2e3-122">เราหวังว่าคุณจะเพลิดเพลินกับประสบการณ์ของคุณใน**การเรียนรู้พร้อมคำแนะนำของ Power BI** นี้</span><span class="sxs-lookup"><span data-stu-id="6b2e3-122">We hope you've enjoyed your journey through this **Power BI Guided Learning** experience.</span></span> <span data-ttu-id="6b2e3-123">ขอให้คุณโชคดี และขอให้ภาพของ Power BI ของคุณน่าดึงดูดและน่าสนใจอยู่เสมอ</span><span class="sxs-lookup"><span data-stu-id="6b2e3-123">Best of luck to you, and may your Power BI visuals always be immersive and compelling.</span></span>
+เราหวังว่าคุณจะเพลิดเพลินกับประสบการณ์ของคุณใน**การเรียนรู้พร้อมคำแนะนำของ Power BI** นี้ ขอให้คุณโชคดี และขอให้ภาพของ Power BI ของคุณน่าดึงดูดและน่าสนใจอยู่เสมอ
 
-## <a name="one-more-section-for-dax-users"></a><span data-ttu-id="6b2e3-124">อีกส่วนหนึ่งที่เหลือสำหรับผู้ใช้ DAX</span><span class="sxs-lookup"><span data-stu-id="6b2e3-124">One more section for DAX users</span></span>
-<span data-ttu-id="6b2e3-125">ต้องการเพิ่มอีกใช่ไหม</span><span class="sxs-lookup"><span data-stu-id="6b2e3-125">Still want more?</span></span> <span data-ttu-id="6b2e3-126">สนใจการใช้งาน **DAX (นิพจน์การวิเคราะห์ข้อมูล)** เพื่อสร้าง กรอง หรือใช้คอลัมน์และตารางที่กำหนดเองใน Power BI ใช่ไหม</span><span class="sxs-lookup"><span data-stu-id="6b2e3-126">Interested in using **DAX (Data Analysis Expressions)** to create, filter, or use custom columns and tables in Power BI?</span></span> <span data-ttu-id="6b2e3-127">ยังเหลืออีกส่วนที่มีไว้สำหรับคนที่สนใจการเขียนโค้ดใน Power BI และส่วนนั้นเรียกว่า **บทนำสู่ DAX**</span><span class="sxs-lookup"><span data-stu-id="6b2e3-127">There's one more section targeted at people inclined to do some code work in Power BI, and it's called **Introduction to DAX**.</span></span> <span data-ttu-id="6b2e3-128">ลองดูหากคุณสนใจ ส่วนนี้ใช้วิธีการอธิบายอย่างง่ายเช่นเดียวกับส่วนอื่นของการเรียนรู้พร้อมคำแนะนำ</span><span class="sxs-lookup"><span data-stu-id="6b2e3-128">Take a look if you're interested - it uses the same friendly approach as the rest of Guided Learning.</span></span>
+## <a name="one-more-section-for-dax-users"></a>อีกส่วนหนึ่งที่เหลือสำหรับผู้ใช้ DAX
+ต้องการเพิ่มอีกใช่ไหม สนใจการใช้งาน **DAX (นิพจน์การวิเคราะห์ข้อมูล)** เพื่อสร้าง กรอง หรือใช้คอลัมน์และตารางที่กำหนดเองใน Power BI ใช่ไหม ยังเหลืออีกส่วนที่มีไว้สำหรับคนที่สนใจการเขียนโค้ดใน Power BI และส่วนนั้นเรียกว่า **บทนำสู่ DAX** ลองดูหากคุณสนใจ ส่วนนี้ใช้วิธีการอธิบายอย่างง่ายเช่นเดียวกับส่วนอื่นของการเรียนรู้พร้อมคำแนะนำ
 

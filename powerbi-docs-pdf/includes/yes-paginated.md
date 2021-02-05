@@ -15,4 +15,4 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 11/25/2020
 ms.locfileid: "96120670"
 ---
-<span data-ttu-id="4d8ae-103">✔️&nbsp;รายงานที่มีการแบ่งหน้าของ Power BI</span><span class="sxs-lookup"><span data-stu-id="4d8ae-103">✔️&nbsp;Power BI paginated reports</span></span>
+✔️&nbsp;รายงานที่มีการแบ่งหน้าของ Power BI

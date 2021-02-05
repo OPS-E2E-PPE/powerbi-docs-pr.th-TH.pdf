@@ -15,13 +15,13 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97887488"
 ---
-# <a name="push-data-to-a-dataset-complete-code-listing"></a><span data-ttu-id="342df-104">ส่งข้อมูลไปยังชุดข้อมูลรายการรหัสที่สร็จสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="342df-104">Push data to a dataset complete code listing</span></span>
+# <a name="push-data-to-a-dataset-complete-code-listing"></a>ส่งข้อมูลไปยังชุดข้อมูลรายการรหัสที่สร็จสมบูรณ์
 
-<span data-ttu-id="342df-105">บทความนี้เป็นส่วนหนึ่งของคำแนะนำทีละขั้นตอนเพื่อ[ส่งข้อมูลไปยังชุดข้อมูล](walkthrough-push-data.md)</span><span class="sxs-lookup"><span data-stu-id="342df-105">This article is part of a step-by-step walkthrough to [push data into a dataset](walkthrough-push-data.md).</span></span>
+บทความนี้เป็นส่วนหนึ่งของคำแนะนำทีละขั้นตอนเพื่อ[ส่งข้อมูลไปยังชุดข้อมูล](walkthrough-push-data.md)
 
-<span data-ttu-id="342df-106">หลังจากที่คุณทำตามขั้นตอนที่ 2 ถึง 5 ในการ **ส่งข้อมูลไปยังชุดข้อมูล** รหัสแหล่งที่มาที่สมบูรณ์ของคุณควรมีลักษณะดังต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="342df-106">After you follow Steps 2 to 5 in **Push data into a dataset**, your complete source code should look like the following.</span></span>
+หลังจากที่คุณทำตามขั้นตอนที่ 2 ถึง 5 ในการ **ส่งข้อมูลไปยังชุดข้อมูล** รหัสแหล่งที่มาที่สมบูรณ์ของคุณควรมีลักษณะดังต่อไปนี้
 
-## <a name="push-data-to-dataset-code"></a><span data-ttu-id="342df-107">ส่งข้อมูลไปยังรหัสชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="342df-107">Push data to dataset code</span></span>
+## <a name="push-data-to-dataset-code"></a>ส่งข้อมูลไปยังรหัสชุดข้อมูล
 
 ```csharp
       using System;
@@ -222,15 +222,15 @@ ms.locfileid: "97887488"
       }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="342df-108">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="342df-108">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-* [<span data-ttu-id="342df-109">ส่งข้อมูลลงในชุดข้อมูล Power BI</span><span class="sxs-lookup"><span data-stu-id="342df-109">Push data into a Power BI dataset</span></span>](walkthrough-push-data.md)
-* [<span data-ttu-id="342df-110">ลงทะเบียนแอปกับ Azure AD</span><span class="sxs-lookup"><span data-stu-id="342df-110">Register an app with Azure AD</span></span>](../embedded/register-app.md)  
-* [<span data-ttu-id="342df-111">รับโทเค็นการเข้าถึงการรับรองความถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="342df-111">Get an authentication access token</span></span>](walkthrough-push-data-get-token.md)  
-* [<span data-ttu-id="342df-112">สร้างชุดข้อมูลใน Power BI</span><span class="sxs-lookup"><span data-stu-id="342df-112">Create a dataset in Power BI</span></span>](walkthrough-push-data-create-dataset.md)  
-* [<span data-ttu-id="342df-113">รับชุดข้อมูลเพื่อเพิ่มแถวลงในตาราง Power BI</span><span class="sxs-lookup"><span data-stu-id="342df-113">Get a dataset to add rows into a Power BI table</span></span>](walkthrough-push-data-get-datasets.md)  
-* [<span data-ttu-id="342df-114">เพิ่มแถวในตาราง Power BI</span><span class="sxs-lookup"><span data-stu-id="342df-114">Add rows to a Power BI table</span></span>](walkthrough-push-data-add-rows.md)  
-* [<span data-ttu-id="342df-115">การอ้างอิง Power BI REST API</span><span class="sxs-lookup"><span data-stu-id="342df-115">Power BI REST API reference</span></span>](/rest/api/power-bi/)  
-* [<span data-ttu-id="342df-116">ภาพรวมของ Power BI REST API</span><span class="sxs-lookup"><span data-stu-id="342df-116">Overview of Power BI REST API</span></span>](overview-of-power-bi-rest-api.md)  
+* [ส่งข้อมูลลงในชุดข้อมูล Power BI](walkthrough-push-data.md)
+* [ลงทะเบียนแอปกับ Azure AD](../embedded/register-app.md)  
+* [รับโทเค็นการเข้าถึงการรับรองความถูกต้อง](walkthrough-push-data-get-token.md)  
+* [สร้างชุดข้อมูลใน Power BI](walkthrough-push-data-create-dataset.md)  
+* [รับชุดข้อมูลเพื่อเพิ่มแถวลงในตาราง Power BI](walkthrough-push-data-get-datasets.md)  
+* [เพิ่มแถวในตาราง Power BI](walkthrough-push-data-add-rows.md)  
+* [การอ้างอิง Power BI REST API](/rest/api/power-bi/)  
+* [ภาพรวมของ Power BI REST API](overview-of-power-bi-rest-api.md)  
 
-<span data-ttu-id="342df-117">มีคำถามเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="342df-117">More questions?</span></span> [<span data-ttu-id="342df-118">ลองไปที่ชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="342df-118">Try the Power BI Community</span></span>](https://community.powerbi.com/)
+มีคำถามเพิ่มเติมหรือไม่ [ลองไปที่ชุมชน Power BI](https://community.powerbi.com/)

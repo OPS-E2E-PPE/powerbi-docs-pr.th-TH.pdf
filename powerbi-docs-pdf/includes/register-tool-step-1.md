@@ -14,4 +14,4 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 11/06/2020
 ms.locfileid: "93412237"
 ---
-1. <span data-ttu-id="8dca8-103">เปิด[เครื่องมือการลงทะเบียนแอป Power BI](https://app.powerbi.com/embedsetup)</span><span class="sxs-lookup"><span data-stu-id="8dca8-103">Open the [Power BI App Registration Tool](https://app.powerbi.com/embedsetup).</span></span>
+1. เปิด[เครื่องมือการลงทะเบียนแอป Power BI](https://app.powerbi.com/embedsetup)

@@ -16,261 +16,261 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 12/01/2020
 ms.locfileid: "96417738"
 ---
-# <a name="design-power-bi-reports-for-accessibility"></a><span data-ttu-id="9a69f-103">ออกแบบรายงาน Power BI สำหรับการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="9a69f-103">Design Power BI reports for accessibility</span></span>
-<span data-ttu-id="9a69f-104">คุณสามารถออกแบบและสร้างรายงานที่น่าสนใจได้ในขณะที่ยังมีการออกแบบการช่วยสำหรับการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="9a69f-104">You can design and create compelling reports while also designing for accessibility.</span></span> <span data-ttu-id="9a69f-105">เมื่อใดก็ตามที่สร้างรายงาน ไม่ว่าผู้ชมของคุณคือใคร คุณควรสร้างรายงานให้สามารถใช้งานได้โดยผู้คนจำนวนมากที่สุดเท่าที่จะเป็นไปได้โดยไม่จำเป็นต้องปรับเปลี่ยนเพื่อการออกแบบพิเศษ</span><span class="sxs-lookup"><span data-stu-id="9a69f-105">Whenever building a report, no matter who your audience is, you should create your reports to be usable by as many people as possible, without the need to be adapted for a sort of special design.</span></span>
+# <a name="design-power-bi-reports-for-accessibility"></a>ออกแบบรายงาน Power BI สำหรับการเข้าถึง
+คุณสามารถออกแบบและสร้างรายงานที่น่าสนใจได้ในขณะที่ยังมีการออกแบบการช่วยสำหรับการเข้าถึง เมื่อใดก็ตามที่สร้างรายงาน ไม่ว่าผู้ชมของคุณคือใคร คุณควรสร้างรายงานให้สามารถใช้งานได้โดยผู้คนจำนวนมากที่สุดเท่าที่จะเป็นไปได้โดยไม่จำเป็นต้องปรับเปลี่ยนเพื่อการออกแบบพิเศษ
 
 ![การตั้งค่าความคมชัดสูงใน Windows](media/desktop-accessibility/accessibility-05.png)
 
-<span data-ttu-id="9a69f-107">บทความนี้อธิบายถึงคุณลักษณะและเครื่องมือการช่วยสำหรับการเข้าถึงสำหรับการสร้างรายงานที่สามารถเข้าถึงได้ใน Power BI</span><span class="sxs-lookup"><span data-stu-id="9a69f-107">This article describes the accessibility features and tools for creating accessible reports in Power BI.</span></span>
+บทความนี้อธิบายถึงคุณลักษณะและเครื่องมือการช่วยสำหรับการเข้าถึงสำหรับการสร้างรายงานที่สามารถเข้าถึงได้ใน Power BI
 
-<span data-ttu-id="9a69f-108">โดยทั่วไป เมื่อใช้ Power BI กับตัวอ่านหน้าจอ เราแนะนำให้ปิดโหทดสแกนหรือโหมดเรียกดู</span><span class="sxs-lookup"><span data-stu-id="9a69f-108">In general, when using Power BI with a screen reader, we recommend turning scan mode or browse mode off.</span></span>
+โดยทั่วไป เมื่อใช้ Power BI กับตัวอ่านหน้าจอ เราแนะนำให้ปิดโหทดสแกนหรือโหมดเรียกดู
 
-<span data-ttu-id="9a69f-109">หากต้องการปรับปรุงกระบวนการสร้างรายงานด้วยโปรแกรมอ่านหน้าจอ เมนูบริบทจะพร้อมใช้งาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-109">To improve the process of creating reports with screen readers, a context menu is available.</span></span> <span data-ttu-id="9a69f-110">เมนูอนุญาตให้ย้ายเขตข้อมูลในช่องเก็บด้านบนหรือด้านล่างในรายการ **เขตข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="9a69f-110">The menu allows moving fields in the well up or down in the **Fields** list.</span></span> <span data-ttu-id="9a69f-111">เมนูยังช่วยให้ย้ายเขตข้อมูลไปยังช่องเก็บอื่นๆ เช่น **คำอธิบายแผนภูมิ** หรือ **ค่า** หรืออื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="9a69f-111">The menu also allows moving the field to other wells, such as **Legend** or **Value** or others.</span></span>
+หากต้องการปรับปรุงกระบวนการสร้างรายงานด้วยโปรแกรมอ่านหน้าจอ เมนูบริบทจะพร้อมใช้งาน เมนูอนุญาตให้ย้ายเขตข้อมูลในช่องเก็บด้านบนหรือด้านล่างในรายการ **เขตข้อมูล** เมนูยังช่วยให้ย้ายเขตข้อมูลไปยังช่องเก็บอื่นๆ เช่น **คำอธิบายแผนภูมิ** หรือ **ค่า** หรืออื่น ๆ
 
 ![เมนูบริบทในช่องเก็บเขตข้อมูลช่วยให้คุณย้ายเขตข้อมูลขึ้น ลง หรือ ไปยังพื้นที่อื่น](media/desktop-accessibility/accessibility-09.png)
 
-## <a name="types-of-accessibility-features"></a><span data-ttu-id="9a69f-113">ประเภทของคุณลักษณะการช่วยสำหรับการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="9a69f-113">Types of accessibility features</span></span>
+## <a name="types-of-accessibility-features"></a>ประเภทของคุณลักษณะการช่วยสำหรับการเข้าถึง
 
-<span data-ttu-id="9a69f-114">Power BI มีความสามารถในการสร้างรายงานที่สามารถเข้าถึงได้ แต่ในฐานะผู้สร้างรายงาน จะขึ้นอยู่กับคุณว่าจะรวมข้อมูลเหล่านั้นในรายงานของคุณหรือไม่</span><span class="sxs-lookup"><span data-stu-id="9a69f-114">Power BI provides capability to create accessible reports, but as the report author, it's up to you to incorporate them in your reports.</span></span> <span data-ttu-id="9a69f-115">มีคุณลักษณะการช่วยสำหรับการเข้าถึงสามประเภทที่อธิบายไว้ในบทความนี้:</span><span class="sxs-lookup"><span data-stu-id="9a69f-115">There are three categories of accessibility features described in this article:</span></span>
+Power BI มีความสามารถในการสร้างรายงานที่สามารถเข้าถึงได้ แต่ในฐานะผู้สร้างรายงาน จะขึ้นอยู่กับคุณว่าจะรวมข้อมูลเหล่านั้นในรายงานของคุณหรือไม่ มีคุณลักษณะการช่วยสำหรับการเข้าถึงสามประเภทที่อธิบายไว้ในบทความนี้:
 
-* <span data-ttu-id="9a69f-116">คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายใน (ไม่จำเป็นต้องกำหนดค่า)</span><span class="sxs-lookup"><span data-stu-id="9a69f-116">Built-in accessibility features (no configuration required)</span></span>
-* <span data-ttu-id="9a69f-117">คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายใน (่จำเป็นต้องกำหนดค่า)</span><span class="sxs-lookup"><span data-stu-id="9a69f-117">Built-in accessibility features (requiring configuration)</span></span>
-* <span data-ttu-id="9a69f-118">คำแนะนำและข้อควรพิจารณาอื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="9a69f-118">Other tips and considerations</span></span>
+* คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายใน (ไม่จำเป็นต้องกำหนดค่า)
+* คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายใน (่จำเป็นต้องกำหนดค่า)
+* คำแนะนำและข้อควรพิจารณาอื่น ๆ
 
-<span data-ttu-id="9a69f-119">เราจะกล่าวถึงแต่ละหมวดหมู่เหล่านี้ในส่วนต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="9a69f-119">We discuss each of these categories in the following sections.</span></span>
+เราจะกล่าวถึงแต่ละหมวดหมู่เหล่านี้ในส่วนต่อไปนี้
 
-## <a name="built-in-accessibility-features"></a><span data-ttu-id="9a69f-120">คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายใน</span><span class="sxs-lookup"><span data-stu-id="9a69f-120">Built-in accessibility features</span></span>
+## <a name="built-in-accessibility-features"></a>คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายใน
 
-<span data-ttu-id="9a69f-121">Power BI มีคุณลักษณะการเข้าถึงติดตั้งอยู่ภายในผลิตภัณฑ์ ซึ่งไม่จำเป็นต้องมีการกำหนดค่าใด ๆ จากผู้สร้างรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-121">Power BI has accessibility features built into the product, which don't require any configuration from the report author.</span></span> <span data-ttu-id="9a69f-122">คุณลักษณะเหล่านี้มีดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="9a69f-122">These features are the following:</span></span>
+Power BI มีคุณลักษณะการเข้าถึงติดตั้งอยู่ภายในผลิตภัณฑ์ ซึ่งไม่จำเป็นต้องมีการกำหนดค่าใด ๆ จากผู้สร้างรายงาน คุณลักษณะเหล่านี้มีดังต่อไปนี้:
 
-* <span data-ttu-id="9a69f-123">การนำทางของแป้นพิมพ์</span><span class="sxs-lookup"><span data-stu-id="9a69f-123">Keyboard navigation</span></span>
-* <span data-ttu-id="9a69f-124">ความเข้ากันได้ของโปรแกรมอ่านหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="9a69f-124">Screen-reader compatibility</span></span>
-* <span data-ttu-id="9a69f-125">มุมมองสีความคมชัดสูง</span><span class="sxs-lookup"><span data-stu-id="9a69f-125">High contrast colors view</span></span>
-* <span data-ttu-id="9a69f-126">โหมดโฟกัส</span><span class="sxs-lookup"><span data-stu-id="9a69f-126">Focus mode</span></span>
-* <span data-ttu-id="9a69f-127">แสดงตารางข้อมูล</span><span class="sxs-lookup"><span data-stu-id="9a69f-127">Show data table</span></span>
+* การนำทางของแป้นพิมพ์
+* ความเข้ากันได้ของโปรแกรมอ่านหน้าจอ
+* มุมมองสีความคมชัดสูง
+* โหมดโฟกัส
+* แสดงตารางข้อมูล
 
-<span data-ttu-id="9a69f-128">นอกจากนี้ยังมีคุณลักษณะที่ช่วยให้เกิดประสบการณ์การใช้งานรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-128">There are also features that help with the report consumption experience.</span></span> <span data-ttu-id="9a69f-129">บทความที่อธิบายคุณลักษณะเหล่านั้นสามารถพบได้ในส่วน[ขั้นตอนถัดไป](#next-steps)ที่ด้านท้ายของบทความนี้.</span><span class="sxs-lookup"><span data-stu-id="9a69f-129">Articles describing those features can be found in the [Next steps](#next-steps) section, at the end of this article.</span></span>
+นอกจากนี้ยังมีคุณลักษณะที่ช่วยให้เกิดประสบการณ์การใช้งานรายงาน บทความที่อธิบายคุณลักษณะเหล่านั้นสามารถพบได้ในส่วน[ขั้นตอนถัดไป](#next-steps)ที่ด้านท้ายของบทความนี้.
 
-<span data-ttu-id="9a69f-130">ลองมาดูที่คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายในเหล่านี้แต่ละรายการตามลำดับ</span><span class="sxs-lookup"><span data-stu-id="9a69f-130">Let's take a look at each of these built-in accessibility features, in turn.</span></span> 
+ลองมาดูที่คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายในเหล่านี้แต่ละรายการตามลำดับ 
 
-### <a name="keyboard-navigation"></a><span data-ttu-id="9a69f-131">การนำทางของแป้นพิมพ์</span><span class="sxs-lookup"><span data-stu-id="9a69f-131">Keyboard navigation</span></span>
+### <a name="keyboard-navigation"></a>การนำทางของแป้นพิมพ์
 
-<span data-ttu-id="9a69f-132">ในฐานะผู้เขียนรายงาน คุณไม่จำเป็นต้องกังวลว่าผู้ใช้ของคุณจะสามารถใช้แป้นพิมพ์เพื่อนำทางผ่านรายงานได้หรือไม่</span><span class="sxs-lookup"><span data-stu-id="9a69f-132">As a report author, you don't have to worry whether your consumers can use their keyboard to navigate through a report.</span></span> <span data-ttu-id="9a69f-133">วิชวล Power BI คือแป้นพิมพ์ทั้งหมดที่สามารถนำทางได้ และผู้ใช้รายงานของคุณสามารถเดินผ่านจุดข้อมูลต่าง ๆ ในวิชวล สลับระหว่างแท็บหน้า และเข้าถึงความสามารถในการโต้ตอบ รวมถึงการไฮไลต์แบบเชื่อมโยง การกรอง และการแบ่งส่วน</span><span class="sxs-lookup"><span data-stu-id="9a69f-133">Power BI visuals are all keyboard navigable and your report consumer can walk through the data points in visuals, switch between page tabs, and have access to interactive capabilities including cross-highlighting, filtering, and slicing.</span></span>
+ในฐานะผู้เขียนรายงาน คุณไม่จำเป็นต้องกังวลว่าผู้ใช้ของคุณจะสามารถใช้แป้นพิมพ์เพื่อนำทางผ่านรายงานได้หรือไม่ วิชวล Power BI คือแป้นพิมพ์ทั้งหมดที่สามารถนำทางได้ และผู้ใช้รายงานของคุณสามารถเดินผ่านจุดข้อมูลต่าง ๆ ในวิชวล สลับระหว่างแท็บหน้า และเข้าถึงความสามารถในการโต้ตอบ รวมถึงการไฮไลต์แบบเชื่อมโยง การกรอง และการแบ่งส่วน
 
-<span data-ttu-id="9a69f-134">ในขณะที่เป็นผู้ใช้รายงานนำทางไปรอบ ๆ รายงาน โฟกัสจะแสดงขึ้นเพื่อระบุตำแหน่งที่ผู้ใช้อยู่ในรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-134">As a report consumer navigates around a report, focus shows up to indicate where the user is in the report.</span></span> <span data-ttu-id="9a69f-135">ทั้งนี้ขึ้นอยู่กับเบราว์เซอร์ที่ใช้ โหมดโฟกัสอาจปรากฏขึ้นแตกต่างกัน</span><span class="sxs-lookup"><span data-stu-id="9a69f-135">Depending on the browser being used, focus mode may appear differently.</span></span>
+ในขณะที่เป็นผู้ใช้รายงานนำทางไปรอบ ๆ รายงาน โฟกัสจะแสดงขึ้นเพื่อระบุตำแหน่งที่ผู้ใช้อยู่ในรายงาน ทั้งนี้ขึ้นอยู่กับเบราว์เซอร์ที่ใช้ โหมดโฟกัสอาจปรากฏขึ้นแตกต่างกัน
 
 ![โฟกัสสำหรับการนำทางการช่วยสำหรับการเข้าถึง](media/desktop-accessibility/accessibility-creating-reports-01.png)
 
-<span data-ttu-id="9a69f-137">หากต้องการเข้าถึงแป้นพิมพ์ลัดที่ใช้บ่อยที่สุด คุณสามารถกด *?*</span><span class="sxs-lookup"><span data-stu-id="9a69f-137">To access the most frequently used keyboard shortcuts, you can press *?*</span></span> <span data-ttu-id="9a69f-138">เมื่อต้องการแสดงกล่องโต้ตอบแป้นพิมพ์ลัด</span><span class="sxs-lookup"><span data-stu-id="9a69f-138">to display a keyboard shortcut dialog.</span></span> <span data-ttu-id="9a69f-139">หากต้องการเรียนรู้เพิ่มเติม ดูบทความเหล่านี้เกี่ยวกับประสบการณ์การใช้งานและแป้นพิมพ์ลัดใน [ขั้นตอนถัดไป](#next-steps) ที่ส่วนท้ายของบทความนี้</span><span class="sxs-lookup"><span data-stu-id="9a69f-139">To learn more, see these articles on accessible consumption experiences and keyboard shortcuts in the [Next steps](#next-steps) section at the end of this article.</span></span>
+หากต้องการเข้าถึงแป้นพิมพ์ลัดที่ใช้บ่อยที่สุด คุณสามารถกด *?* เมื่อต้องการแสดงกล่องโต้ตอบแป้นพิมพ์ลัด หากต้องการเรียนรู้เพิ่มเติม ดูบทความเหล่านี้เกี่ยวกับประสบการณ์การใช้งานและแป้นพิมพ์ลัดใน [ขั้นตอนถัดไป](#next-steps) ที่ส่วนท้ายของบทความนี้
 
 
-### <a name="screen-reader-compatibility"></a><span data-ttu-id="9a69f-140">ความเข้ากันได้ของโปรแกรมอ่านหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="9a69f-140">Screen reader compatibility</span></span>
+### <a name="screen-reader-compatibility"></a>ความเข้ากันได้ของโปรแกรมอ่านหน้าจอ
 
-<span data-ttu-id="9a69f-141">โดยทั่วไป ทุกออบเจ็กต์ใน Power BI มีการนำทางของแป้นพิมพ์ที่เข้ากันได้สำหรับโปรแกรมอ่านหน้าจอด้วย</span><span class="sxs-lookup"><span data-stu-id="9a69f-141">In general, every object in Power BI that has keyboard navigation is also compatible for screen readers.</span></span> <span data-ttu-id="9a69f-142">เมื่อผู้ใช้รายงานนำทางไปยังวิชวล โปรแกรมอ่านหน้าจอจะอ่านชื่อเรื่อง ชนิดวิชวล และข้อความ alt ใด ๆ ถ้ามีการตั้งค่าไว้</span><span class="sxs-lookup"><span data-stu-id="9a69f-142">When a report consumer navigates to a visual, the screen reader will read out the title, visual type, and any alt text if that has been set.</span></span>
+โดยทั่วไป ทุกออบเจ็กต์ใน Power BI มีการนำทางของแป้นพิมพ์ที่เข้ากันได้สำหรับโปรแกรมอ่านหน้าจอด้วย เมื่อผู้ใช้รายงานนำทางไปยังวิชวล โปรแกรมอ่านหน้าจอจะอ่านชื่อเรื่อง ชนิดวิชวล และข้อความ alt ใด ๆ ถ้ามีการตั้งค่าไว้
 
-### <a name="high-contrast-color-view"></a><span data-ttu-id="9a69f-143">มุมมองสีความคมชัดสูง</span><span class="sxs-lookup"><span data-stu-id="9a69f-143">High contrast color view</span></span>
+### <a name="high-contrast-color-view"></a>มุมมองสีความคมชัดสูง
 
-<span data-ttu-id="9a69f-144">Power BI สนับสนุนความคมชัดสูงสำหรับรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-144">Power BI has high contrast support for reports.</span></span> <span data-ttu-id="9a69f-145">หากคุณใช้โหมดความคมชัดสูงใน Windows Power BI Desktop จะตรวจหาธีมความคมชัดสูงที่กำลังใช้ใน Windows โดยอัตโนมัติ และใช้การตั้งค่าเหล่านั้นในรายงานของคุณ</span><span class="sxs-lookup"><span data-stu-id="9a69f-145">If you're using a high contrast mode in Windows, Power BI Desktop automatically detects which high contrast theme is being used in Windows and applies those settings to your reports.</span></span> <span data-ttu-id="9a69f-146">สีความคมชัดสูงเหล่านั้นจะติดตามไปกับรายงานเมื่อเผยแพร่ไปยังบริการของ Power BI หรือที่อื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="9a69f-146">Those high contrast colors follow the report when published to the Power BI service or elsewhere.</span></span>
+Power BI สนับสนุนความคมชัดสูงสำหรับรายงาน หากคุณใช้โหมดความคมชัดสูงใน Windows Power BI Desktop จะตรวจหาธีมความคมชัดสูงที่กำลังใช้ใน Windows โดยอัตโนมัติ และใช้การตั้งค่าเหล่านั้นในรายงานของคุณ สีความคมชัดสูงเหล่านั้นจะติดตามไปกับรายงานเมื่อเผยแพร่ไปยังบริการของ Power BI หรือที่อื่น ๆ
 
 ![สกรีนช็อตแสดงรายงานในการตั้งค่าความคมชัดสูงสำหรับ Windows](media/desktop-accessibility/accessibility-05b.png)
 
-<span data-ttu-id="9a69f-148">บริการของ Power BI ยังพยายามที่จะตรวจหาการตั้งค่าความคมชัดสูงที่เลือกสำหรับ Windows แต่ประสิทธิภาพและแม่นยำของตรวจหา ขึ้นอยู่กับเบราว์เซอร์ที่ใช้สำหรับบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="9a69f-148">The Power BI service also attempts to detect the high contrast settings selected for Windows, but how effective and accurate that detection is depends on the browser being used for the Power BI service.</span></span> <span data-ttu-id="9a69f-149">ถ้าคุณต้องการตั้งค่าธีมด้วยตนเองในบริการของ Power BI ในมุมขวาบน คุณสามารถเลือก **มุมมอง > สีความคมชัดสูง** แล้วเลือกธีมที่คุณต้องการนำไปใช้กับรายงานได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-149">If you want to set the theme manually in the Power BI service, in the top-right corner you can select **V > High contrast** colors and then select the theme you would like to apply to the report.</span></span>
+บริการของ Power BI ยังพยายามที่จะตรวจหาการตั้งค่าความคมชัดสูงที่เลือกสำหรับ Windows แต่ประสิทธิภาพและแม่นยำของตรวจหา ขึ้นอยู่กับเบราว์เซอร์ที่ใช้สำหรับบริการของ Power BI ถ้าคุณต้องการตั้งค่าธีมด้วยตนเองในบริการของ Power BI ในมุมขวาบน คุณสามารถเลือก **มุมมอง > สีความคมชัดสูง** แล้วเลือกธีมที่คุณต้องการนำไปใช้กับรายงานได้
 
 ![สกรีนช็อตแสดงวิธีการเลือกธีมของสีความคมชัดสูง](media/desktop-accessibility/accessibility-creating-reports-02.png)
 
-### <a name="focus-mode"></a><span data-ttu-id="9a69f-151">โหมดโฟกัส</span><span class="sxs-lookup"><span data-stu-id="9a69f-151">Focus mode</span></span>
-<span data-ttu-id="9a69f-152">หากผู้ใช้รายงานกำลังดูวิชวลในแแดชบอร์ด พวกเขาสามารถขยายวิชวลให้เต็มหน้าจอมากขึ้นโดยไปที่เมนูบริบทของวิชวลและเลือก **เปิดในโหมดโฟกัส**</span><span class="sxs-lookup"><span data-stu-id="9a69f-152">If a report consumer is looking at a visual in a dashboard, they can expand the visual to fill up more of their screen by navigating to the context menu of the visual and selecting **Open in focus mode**.</span></span>
+### <a name="focus-mode"></a>โหมดโฟกัส
+หากผู้ใช้รายงานกำลังดูวิชวลในแแดชบอร์ด พวกเขาสามารถขยายวิชวลให้เต็มหน้าจอมากขึ้นโดยไปที่เมนูบริบทของวิชวลและเลือก **เปิดในโหมดโฟกัส**
 
 ![โหมดโฟกัส](media/desktop-accessibility/accessibility-creating-reports-03.png)
 
-### <a name="show-data-table"></a><span data-ttu-id="9a69f-154">แสดงตารางข้อมูล</span><span class="sxs-lookup"><span data-stu-id="9a69f-154">Show data table</span></span>
-<span data-ttu-id="9a69f-155">ผู้ใช้รายงานยังสามารถดูข้อมูลในวิชวลในรูปแบบตารางโดยการกด **Alt + Shift + F11**</span><span class="sxs-lookup"><span data-stu-id="9a69f-155">Report consumers can also view the data in a visual in a tabular format by pressing **Alt+Shift+F11**.</span></span> <span data-ttu-id="9a69f-156">ตารางนี้คล้ายกับการกด **แสดงข้อมูล** ในเมนูบริบทของวิชวล แต่จะแสดงตารางที่เป็นโปรแกรมอ่านหน้าจอที่ใช้งานง่าย</span><span class="sxs-lookup"><span data-stu-id="9a69f-156">This table is similar to pressing **Show Data** in the visual context menu, but it shows a table that is screen reader friendly.</span></span>
+### <a name="show-data-table"></a>แสดงตารางข้อมูล
+ผู้ใช้รายงานยังสามารถดูข้อมูลในวิชวลในรูปแบบตารางโดยการกด **Alt + Shift + F11** ตารางนี้คล้ายกับการกด **แสดงข้อมูล** ในเมนูบริบทของวิชวล แต่จะแสดงตารางที่เป็นโปรแกรมอ่านหน้าจอที่ใช้งานง่าย
 
 ![แสดงตารางข้อมูล](media/desktop-accessibility/accessibility-creating-reports-04.png)
 
-## <a name="built-in-accessibility-features-requiring-configuration"></a><span data-ttu-id="9a69f-158">คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายใน ซึ่งจำเป็นต้องกำหนดค่า</span><span class="sxs-lookup"><span data-stu-id="9a69f-158">Built-in accessibility features requiring configuration</span></span>
+## <a name="built-in-accessibility-features-requiring-configuration"></a>คุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายใน ซึ่งจำเป็นต้องกำหนดค่า
 
-<span data-ttu-id="9a69f-159">Power BI มีคุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายในผลิตภัณฑ์ และจำเป็นต้องมีการกำหนดค่าจากผู้สร้างรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-159">Power BI has accessibility features that are built into the product and require configuration from the report author.</span></span>  <span data-ttu-id="9a69f-160">คุณลักษณะเหล่านี้ประกอบด้วย:</span><span class="sxs-lookup"><span data-stu-id="9a69f-160">These features include:</span></span>
+Power BI มีคุณลักษณะการช่วยสำหรับการเข้าถึงที่มีอยู่ภายในผลิตภัณฑ์ และจำเป็นต้องมีการกำหนดค่าจากผู้สร้างรายงาน  คุณลักษณะเหล่านี้ประกอบด้วย:
 
-* <span data-ttu-id="9a69f-161">ข้อความทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="9a69f-161">Alt text</span></span>
-* <span data-ttu-id="9a69f-162">ลำดับแท็บ</span><span class="sxs-lookup"><span data-stu-id="9a69f-162">Tab order</span></span>
-* <span data-ttu-id="9a69f-163">ป้ายชื่อและชื่อเรื่อง</span><span class="sxs-lookup"><span data-stu-id="9a69f-163">Titles & labels</span></span>
-* <span data-ttu-id="9a69f-164">ตัวทำเครื่องหมาย</span><span class="sxs-lookup"><span data-stu-id="9a69f-164">Markers</span></span>
-* <span data-ttu-id="9a69f-165">ธีมรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-165">Report themes</span></span>
+* ข้อความทั้งหมด
+* ลำดับแท็บ
+* ป้ายชื่อและชื่อเรื่อง
+* ตัวทำเครื่องหมาย
+* ธีมรายงาน
 
-## <a name="alt-text"></a><span data-ttu-id="9a69f-166">ข้อความทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="9a69f-166">Alt text</span></span>
+## <a name="alt-text"></a>ข้อความทั้งหมด
 
-<span data-ttu-id="9a69f-167">ข้อความแสดงแทน (คำอธิบายข้อความทางเลือก) จะถูกนำมาใช้เพื่ออธิบายลักษณะที่ปรากฏและฟังก์ชันของวิชวลและรูปภาพบนหน้ารายงานสำหรับผู้ใช้โปรแกรมอ่านหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="9a69f-167">Alt text (alternative text descriptions) are used to describe the appearance and function of visuals and images on the report page to screen reader users.</span></span> <span data-ttu-id="9a69f-168">ผู้สร้างรายงานควรเพิ่มข้อความแสดงแทนลงในวัตถุทั้งหมดที่แสดงข้อมูลที่มีความหมายในรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-168">Report authors should add alt text to every object that conveys meaningful information on a report.</span></span> <span data-ttu-id="9a69f-169">การใช้ข้อความแสดงแทนช่วยให้ผู้ใช้รายงานของคุณมีความเข้าใจสิ่งที่คุณพยายามสื่อสารด้วยวิชวล แม้ว่าพวกเขาไม่สามารถมองเห็นวิชวล รูปภาพ รูปร่าง หรือกล่องข้อความ</span><span class="sxs-lookup"><span data-stu-id="9a69f-169">Providing alt text ensures that consumers of your report understand what you are trying to communicate with a visual, even if they cannot see the visual, image, shape, or textbox.</span></span> <span data-ttu-id="9a69f-170">คุณสามารถใส่ข้อความแสดงแทนสำหรับวัตถุใด ๆ บนรายงาน Power BI Desktop ได้โดยการเลือกวัตถุ (เช่น วิชวล รูปร่าง และอื่นๆ) และในบานหน้าต่าง **การแสดงภาพ** ให้เลือกส่วน **รูปแบบ**  ให้ขยาย **ทั่วไป** เลื่อนไปด้านล่างและกรอกข้อมูลลงในกล่องข้อความ **ข้อความแสดงแทน**</span><span class="sxs-lookup"><span data-stu-id="9a69f-170">You can provide alt text for any object on a Power BI Desktop report by selecting the object (such as a visual, shape, and so on) and in the **Visualizations** pane, select the **Format** section, expand **General**, scroll to the bottom, and fill in the **Alt Text** textbox.</span></span> <span data-ttu-id="9a69f-171">กล่องข้อความ **ข้อความแสดงแทน** มีขีดจำกัด 250 ตัวอักขระ</span><span class="sxs-lookup"><span data-stu-id="9a69f-171">The **Alt Text** textbox has a limit of 250 characters.</span></span>
+ข้อความแสดงแทน (คำอธิบายข้อความทางเลือก) จะถูกนำมาใช้เพื่ออธิบายลักษณะที่ปรากฏและฟังก์ชันของวิชวลและรูปภาพบนหน้ารายงานสำหรับผู้ใช้โปรแกรมอ่านหน้าจอ ผู้สร้างรายงานควรเพิ่มข้อความแสดงแทนลงในวัตถุทั้งหมดที่แสดงข้อมูลที่มีความหมายในรายงาน การใช้ข้อความแสดงแทนช่วยให้ผู้ใช้รายงานของคุณมีความเข้าใจสิ่งที่คุณพยายามสื่อสารด้วยวิชวล แม้ว่าพวกเขาไม่สามารถมองเห็นวิชวล รูปภาพ รูปร่าง หรือกล่องข้อความ คุณสามารถใส่ข้อความแสดงแทนสำหรับวัตถุใด ๆ บนรายงาน Power BI Desktop ได้โดยการเลือกวัตถุ (เช่น วิชวล รูปร่าง และอื่นๆ) และในบานหน้าต่าง **การแสดงภาพ** ให้เลือกส่วน **รูปแบบ**  ให้ขยาย **ทั่วไป** เลื่อนไปด้านล่างและกรอกข้อมูลลงในกล่องข้อความ **ข้อความแสดงแทน** กล่องข้อความ **ข้อความแสดงแทน** มีขีดจำกัด 250 ตัวอักขระ
 
 ![กล่องข้อความแสดงแทน](media/desktop-accessibility/accessibility-creating-reports-05.png)
 
-<span data-ttu-id="9a69f-173">ข้อความแสดงแทนควรประกอบด้วยข้อมูลเกี่ยวกับข้อมูลเชิงลึกที่คุณต้องการให้ผู้ใช้รายงานสามารถนำออกจากวิชวลได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-173">Alt text should include information about the insight that you'd like the report consumer to take away from a visual.</span></span> <span data-ttu-id="9a69f-174">เนื่องจากโปรแกรมอ่านหน้าจอจะอ่านชื่อเรื่องและชนิดของวิชวล คุณจะต้องกรอกข้อมูลในคำอธิบายเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="9a69f-174">Because a screen reader reads out the title and type of a visual, you only need to fill in a description.</span></span> <span data-ttu-id="9a69f-175">ตัวอย่างของข้อความแสดงแทนสำหรับวิชวลต่อไปนี้อาจเป็น: *ความพึงพอใจของผู้ใช้สุทธิตามสีของผลิตภัณฑ์ที่ขายและแบ่งตามประเภทผลิตภัณฑ์*</span><span class="sxs-lookup"><span data-stu-id="9a69f-175">An example of alt text for the following visual could be: *Net user satisfaction by color of product sold, further broken down by product class.*</span></span>
+ข้อความแสดงแทนควรประกอบด้วยข้อมูลเกี่ยวกับข้อมูลเชิงลึกที่คุณต้องการให้ผู้ใช้รายงานสามารถนำออกจากวิชวลได้ เนื่องจากโปรแกรมอ่านหน้าจอจะอ่านชื่อเรื่องและชนิดของวิชวล คุณจะต้องกรอกข้อมูลในคำอธิบายเท่านั้น ตัวอย่างของข้อความแสดงแทนสำหรับวิชวลต่อไปนี้อาจเป็น: *ความพึงพอใจของผู้ใช้สุทธิตามสีของผลิตภัณฑ์ที่ขายและแบ่งตามประเภทผลิตภัณฑ์*
 
 ![ใช้ข้อความแสดงแทนที่เป็นคำอธิบาย](media/desktop-accessibility/accessibility-creating-reports-06.png)
 
-<span data-ttu-id="9a69f-177">โปรดทราบว่าการเรียกใช้จุดข้อมูลเชิงลึกหรือประเด็นเฉพาะอาจไม่ใช่สิ่งที่ดีที่สุดที่จะใส่ในข้อความแสดงแทนแบบคงที่เนื่องจากข้อมูลใน Power BI เป็นแบบไดนามิก</span><span class="sxs-lookup"><span data-stu-id="9a69f-177">Keep in mind that calling out an insight or specific data points may not be the best thing to put in static alt text, because data in Power BI is dynamic.</span></span> <span data-ttu-id="9a69f-178">หากคุณต้องการใช้ข้อความแสดงแทนแบบไดนามิก ให้ดูส่วนถัดไปที่อธิบายการจัดรูปแบบตามเงื่อนไขสำหรับข้อความแสดงแทน</span><span class="sxs-lookup"><span data-stu-id="9a69f-178">If you'd like to use dynamic alt text, see the next section that describes conditional formatting for alt text.</span></span>
+โปรดทราบว่าการเรียกใช้จุดข้อมูลเชิงลึกหรือประเด็นเฉพาะอาจไม่ใช่สิ่งที่ดีที่สุดที่จะใส่ในข้อความแสดงแทนแบบคงที่เนื่องจากข้อมูลใน Power BI เป็นแบบไดนามิก หากคุณต้องการใช้ข้อความแสดงแทนแบบไดนามิก ให้ดูส่วนถัดไปที่อธิบายการจัดรูปแบบตามเงื่อนไขสำหรับข้อความแสดงแทน
 
-### <a name="conditional-formatting-for-alt-text"></a><span data-ttu-id="9a69f-179">การจัดรูปแบบตามเงื่อนไขสำหรับข้อความแสดงแทน</span><span class="sxs-lookup"><span data-stu-id="9a69f-179">Conditional formatting for alt text</span></span>
+### <a name="conditional-formatting-for-alt-text"></a>การจัดรูปแบบตามเงื่อนไขสำหรับข้อความแสดงแทน
 
-<span data-ttu-id="9a69f-180">คุณลักษณะหนึ่งที่ทำให้ Power BI น่าสนใจคือคุณลักษณะของข้อมูลดังกล่าวเป็นแบบไดนามิก</span><span class="sxs-lookup"><span data-stu-id="9a69f-180">One feature that makes Power BI so compelling is that its data is dynamic.</span></span> <span data-ttu-id="9a69f-181">คุณสามารถใช้หน่วยวัด DAX และการจัดรูปแบบตามเงื่อนไขเพื่อสร้างข้อความแสดงแทนแบบไดนามิกได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-181">You can use DAX measures and conditional formatting to create dynamic alt text.</span></span> <span data-ttu-id="9a69f-182">โปรแกรมอ่านหน้าจอจะสามารถเรียกใช้ค่าเฉพาะกับข้อมูลที่ผู้ใช้รายงานกำลังดูอยู่</span><span class="sxs-lookup"><span data-stu-id="9a69f-182">Screen readers are then able to call out values specific to the data that a report consumer is viewing.</span></span>
+คุณลักษณะหนึ่งที่ทำให้ Power BI น่าสนใจคือคุณลักษณะของข้อมูลดังกล่าวเป็นแบบไดนามิก คุณสามารถใช้หน่วยวัด DAX และการจัดรูปแบบตามเงื่อนไขเพื่อสร้างข้อความแสดงแทนแบบไดนามิกได้ โปรแกรมอ่านหน้าจอจะสามารถเรียกใช้ค่าเฉพาะกับข้อมูลที่ผู้ใช้รายงานกำลังดูอยู่
 
 ![การจัดรูปแบบตามเงื่อนไขของข้อความแสดงแทน](media/desktop-accessibility/accessibility-creating-reports-07.png)
 
-### <a name="tab-order"></a><span data-ttu-id="9a69f-184">ลำดับแท็บ</span><span class="sxs-lookup"><span data-stu-id="9a69f-184">Tab order</span></span>
-<span data-ttu-id="9a69f-185">การตั้งค่าลำดับแท็บช่วยให้ผู้ใช้แป้นพิมพ์สามารถสำรวจรายงานของคุณตามลำดับที่ตรงกับวิธีการที่ผู้ใช้ประมวลผลวิชวลรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-185">Setting the tab order helps keyboard users navigate your report in an order that matches the way users visually process the report visuals.</span></span> <span data-ttu-id="9a69f-186">ถ้าคุณมีรูปร่างตกแต่งและรูปภาพในรายงานของคุณ คุณควรลบออกรูปเหล่านั้นจากลำดับแท็บ</span><span class="sxs-lookup"><span data-stu-id="9a69f-186">If you're including decorative shapes and images in your report, you should remove those from the tab order.</span></span> 
+### <a name="tab-order"></a>ลำดับแท็บ
+การตั้งค่าลำดับแท็บช่วยให้ผู้ใช้แป้นพิมพ์สามารถสำรวจรายงานของคุณตามลำดับที่ตรงกับวิธีการที่ผู้ใช้ประมวลผลวิชวลรายงาน ถ้าคุณมีรูปร่างตกแต่งและรูปภาพในรายงานของคุณ คุณควรลบออกรูปเหล่านั้นจากลำดับแท็บ 
 
-<span data-ttu-id="9a69f-187">หากต้องการตั้งค่าลำดับแท็บ ให้เลือกแท็บ **มุมมอง** ใน Ribbon และเลือกปุ่ม **บานหน้าต่างการเลือก** เพื่อแสดงบานหน้าต่างการเลือก.</span><span class="sxs-lookup"><span data-stu-id="9a69f-187">To set the tab order, select the **View** tab in the ribbon and select the **Selection Pane** button to display the Selection pane.</span></span>
+หากต้องการตั้งค่าลำดับแท็บ ให้เลือกแท็บ **มุมมอง** ใน Ribbon และเลือกปุ่ม **บานหน้าต่างการเลือก** เพื่อแสดงบานหน้าต่างการเลือก.
 
 ![ดูเมนูเพื่อแสดงบานหน้าต่างการเลือก](media/desktop-accessibility/accessibility-creating-reports-08.png)
 
-<span data-ttu-id="9a69f-189">ใน **บานหน้าต่างการเลือก** การเลือก **ลำดับแท็บ** จะแสดงลำดับของแท็บปัจจุบันสำหรับรายงานของคุณ.</span><span class="sxs-lookup"><span data-stu-id="9a69f-189">In the **Selection pane**, selecting **Tab order** displays the current tab order for your report.</span></span> <span data-ttu-id="9a69f-190">คุณสามารถเลือกออบเจ็กต์ จากนั้นใช้ปุ่มลูกศรขึ้นและลงเพื่อย้ายออบเจ็กต์ในลำดับชั้น หรือคุณสามารถเลือกออบเจ็กต์ด้วยเมาส์และลากไปยังตำแหน่งที่คุณต้องการจัดให้เป็นรายการได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-190">You can select an object, then use the up and down arrow buttons to move the object in the hierarchy, or you can select an object with your mouse and drag it into the position you'd like it the list.</span></span> <span data-ttu-id="9a69f-191">การคลิกที่ตัวเลขถัดจากวัตถุจะซ่อนวัตถุจากลำดับแท็บ</span><span class="sxs-lookup"><span data-stu-id="9a69f-191">Clicking on the number next to an object hides the object from the tab order.</span></span>
+ใน **บานหน้าต่างการเลือก** การเลือก **ลำดับแท็บ** จะแสดงลำดับของแท็บปัจจุบันสำหรับรายงานของคุณ. คุณสามารถเลือกออบเจ็กต์ จากนั้นใช้ปุ่มลูกศรขึ้นและลงเพื่อย้ายออบเจ็กต์ในลำดับชั้น หรือคุณสามารถเลือกออบเจ็กต์ด้วยเมาส์และลากไปยังตำแหน่งที่คุณต้องการจัดให้เป็นรายการได้ การคลิกที่ตัวเลขถัดจากวัตถุจะซ่อนวัตถุจากลำดับแท็บ
 
 ![ลำดับแท็บในบานหน้าต่างการเลือก](media/desktop-accessibility/accessibility-creating-reports-09.png)
 
-### <a name="titles-and-labels"></a><span data-ttu-id="9a69f-193">ชื่อและป้ายชื่อ</span><span class="sxs-lookup"><span data-stu-id="9a69f-193">Titles and labels</span></span>
-<span data-ttu-id="9a69f-194">ชื่อวิชวลและหน้ารายงานเป็นคุณลักษณะการช่วยสำหรับการเข้าถึงที่สำคัญที่กำหนดทิศทางผู้ใช้รายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-194">Visual and report page titles are important accessibility features that orient the report consumer.</span></span> <span data-ttu-id="9a69f-195">หลีกเลี่ยงการใช้คำย่อหรือศัพท์เทคนิคเฉพาะในชื่อรายงานของคุณ หากคุณแชร์รายงานให้กับผู้ใช้ใหม่หรือบุคคลที่อยู่ภายนอกองค์กรของคุณพวกเขาอาจไม่ทราบว่าคำศัพท์หรือตัวย่อของคุณหมายถึงอะไร</span><span class="sxs-lookup"><span data-stu-id="9a69f-195">Avoid using acronyms or jargon in your report titles; if you share the report to a new user or someone who is external to your organization, they may not know what your terms or acronyms mean.</span></span> <span data-ttu-id="9a69f-196">รูปภาพต่อไปนี้แสดงวิชวลที่มีคำย่อในชื่อเรื่อง (ทางด้านซ้าย) และชื่อเรื่องที่ชัดเจนสำหรับวิชวลทางด้านขวา</span><span class="sxs-lookup"><span data-stu-id="9a69f-196">The following image shows a visual with an acronym in the title (on the left), and a clearer title for the visual on the right.</span></span>
+### <a name="titles-and-labels"></a>ชื่อและป้ายชื่อ
+ชื่อวิชวลและหน้ารายงานเป็นคุณลักษณะการช่วยสำหรับการเข้าถึงที่สำคัญที่กำหนดทิศทางผู้ใช้รายงาน หลีกเลี่ยงการใช้คำย่อหรือศัพท์เทคนิคเฉพาะในชื่อรายงานของคุณ หากคุณแชร์รายงานให้กับผู้ใช้ใหม่หรือบุคคลที่อยู่ภายนอกองค์กรของคุณพวกเขาอาจไม่ทราบว่าคำศัพท์หรือตัวย่อของคุณหมายถึงอะไร รูปภาพต่อไปนี้แสดงวิชวลที่มีคำย่อในชื่อเรื่อง (ทางด้านซ้าย) และชื่อเรื่องที่ชัดเจนสำหรับวิชวลทางด้านขวา
 
 ![หลีกเลี่ยงศัพท์เทคนิคเฉพาะในชื่อวิชวล](media/desktop-accessibility/accessibility-creating-reports-10.png)
 
-<span data-ttu-id="9a69f-198">ภายในวิชวล ตรวจสอบให้แน่ใจว่าชื่อเรื่องใดๆ ป้ายชื่อแกน ค่าคำอธิบายแผนภูมิ และป้ายชื่อข้อมูลสามารถอ่านและเข้าใจง่าย</span><span class="sxs-lookup"><span data-stu-id="9a69f-198">Within a visual, make sure that any titles, axis labels, legend values, and data labels are easy to read and understand.</span></span> <span data-ttu-id="9a69f-199">เปรียบเทียบภาพต่อไปนี้ ซึ่งภาพแรกมีตัวเลขหรือคำอธิบายข้อมูลน้อยและภาพที่สองมีจำนวนมาก</span><span class="sxs-lookup"><span data-stu-id="9a69f-199">Compare the following images, where the first image has few numbers or descriptions of the data, and the second has many.</span></span>
+ภายในวิชวล ตรวจสอบให้แน่ใจว่าชื่อเรื่องใดๆ ป้ายชื่อแกน ค่าคำอธิบายแผนภูมิ และป้ายชื่อข้อมูลสามารถอ่านและเข้าใจง่าย เปรียบเทียบภาพต่อไปนี้ ซึ่งภาพแรกมีตัวเลขหรือคำอธิบายข้อมูลน้อยและภาพที่สองมีจำนวนมาก
 
 ![มีคำอธิบาย ค่าคำอธิบายแผนภูมิ ป้ายชื่อข้อมูลที่เพียงพอ](media/desktop-accessibility/accessibility-creating-reports-11.png)
 
-<span data-ttu-id="9a69f-201">ด้วยป้ายชื่อข้อมูล คุณยังสามารถเลือกที่จะเปิดหรือปิดป้ายชื่อสำหรับแต่ละชุดข้อมูลในวิชวลของคุณ หรือวางป้ายชื่อเหล่านั้นไว้ด้านบนหรือด้านล่างของชุดข้อมูลได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-201">With data labels, you can even choose to turn on or off the labels for each series in your visual or position them above or below a series.</span></span> <span data-ttu-id="9a69f-202">แม้ว่า Power BI จะพยายามอย่างดีที่สุดในการวางป้ายชื่อข้อมูลไว้ด้านบนหรือด้านล่างเส้นบรรทัด แต่บางครั้งก็อาจไม่ชัดเจนมาก</span><span class="sxs-lookup"><span data-stu-id="9a69f-202">While Power BI does its best to place data labels above or below a line, sometimes it is not very clear.</span></span> <span data-ttu-id="9a69f-203">ในวิชวลต่อไปนี้ ป้ายชื่อข้อมูลจะถูกสลับและไม่สามารถอ่านได้ง่าย</span><span class="sxs-lookup"><span data-stu-id="9a69f-203">In the following visual, the data labels are jumbled and not easy to read.</span></span>
+ด้วยป้ายชื่อข้อมูล คุณยังสามารถเลือกที่จะเปิดหรือปิดป้ายชื่อสำหรับแต่ละชุดข้อมูลในวิชวลของคุณ หรือวางป้ายชื่อเหล่านั้นไว้ด้านบนหรือด้านล่างของชุดข้อมูลได้ แม้ว่า Power BI จะพยายามอย่างดีที่สุดในการวางป้ายชื่อข้อมูลไว้ด้านบนหรือด้านล่างเส้นบรรทัด แต่บางครั้งก็อาจไม่ชัดเจนมาก ในวิชวลต่อไปนี้ ป้ายชื่อข้อมูลจะถูกสลับและไม่สามารถอ่านได้ง่าย
 
 ![ป้ายชื่อข้อมูลด้านบนหรือด้านล่าง](media/desktop-accessibility/accessibility-creating-reports-12.png)
 
-<span data-ttu-id="9a69f-205">การจัดตำแหน่งป้ายชื่อข้อมูลของคุณที่ด้านบนหรือด้านล่างชุดของคุณสามารถช่วยได้ โดยเฉพาะอย่างยิ่งถ้าคุณกำลังใช้แผนภูมิเส้นที่มีหลายบรรทัด</span><span class="sxs-lookup"><span data-stu-id="9a69f-205">Positioning your data labels above or below your series can help, especially if you're using a line chart with multiple lines.</span></span> <span data-ttu-id="9a69f-206">ด้วยการปรับปรุงบางอย่าง ป้ายชื่อข้อมูลตอนนี้ดูดีขึ้นมาก</span><span class="sxs-lookup"><span data-stu-id="9a69f-206">With a few adjustments, the data labels now look much better.</span></span>
+การจัดตำแหน่งป้ายชื่อข้อมูลของคุณที่ด้านบนหรือด้านล่างชุดของคุณสามารถช่วยได้ โดยเฉพาะอย่างยิ่งถ้าคุณกำลังใช้แผนภูมิเส้นที่มีหลายบรรทัด ด้วยการปรับปรุงบางอย่าง ป้ายชื่อข้อมูลตอนนี้ดูดีขึ้นมาก
 
 ![ปรับแต่งป้ายชื่อข้อมูลให้ชัดเจนมากขึ้นในขณะนี้](media/desktop-accessibility/accessibility-creating-reports-13.png)
 
-### <a name="markers"></a><span data-ttu-id="9a69f-208">ตัวทำเครื่องหมาย</span><span class="sxs-lookup"><span data-stu-id="9a69f-208">Markers</span></span>
+### <a name="markers"></a>ตัวทำเครื่องหมาย
 
-<span data-ttu-id="9a69f-209">วิธีการนี้เป็นวิธีปฏิบัติที่ดีที่สุดในการหลีกเลี่ยงการใช้สี (รวมถึงคุณลักษณะการจัดรูปแบบตามเงื่อนไข) เป็นวิธีเดียวในการสื่อข้อมูล</span><span class="sxs-lookup"><span data-stu-id="9a69f-209">It's a best practice to avoid using color (including features conditional formatting) as the only way of conveying information.</span></span> <span data-ttu-id="9a69f-210">แต่คุณสามารถใช้ตัวทำเครื่องหมายในการสื่อชุดข้อมูลที่แตกต่างกันได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-210">Instead, you can use markers to convey different series.</span></span>
+วิธีการนี้เป็นวิธีปฏิบัติที่ดีที่สุดในการหลีกเลี่ยงการใช้สี (รวมถึงคุณลักษณะการจัดรูปแบบตามเงื่อนไข) เป็นวิธีเดียวในการสื่อข้อมูล แต่คุณสามารถใช้ตัวทำเครื่องหมายในการสื่อชุดข้อมูลที่แตกต่างกันได้
 
-<span data-ttu-id="9a69f-211">สำหรับแผนภูมิเส้น, แผนภูมิพื้นที่ และแผนภูมิผสม เช่นเดียวกับแผนภูมิกระจายและแผนภูมิฟอง คุณสามารถเปิดใช้ตัวทำเครื่องหมาย และใช้รูปร่างเครื่องหมายที่แตกต่างกันสำหรับแต่ละเส้นบรรทัด</span><span class="sxs-lookup"><span data-stu-id="9a69f-211">For Line, Area, and Combo visuals, as well as for Scatter and Bubble visuals, you can turn markers on, and use a different Marker shape for each line.</span></span>
+สำหรับแผนภูมิเส้น, แผนภูมิพื้นที่ และแผนภูมิผสม เช่นเดียวกับแผนภูมิกระจายและแผนภูมิฟอง คุณสามารถเปิดใช้ตัวทำเครื่องหมาย และใช้รูปร่างเครื่องหมายที่แตกต่างกันสำหรับแต่ละเส้นบรรทัด
 
 ![ใช้ตัวทำเครื่องหมายเพื่อสื่อข้อมูล](media/desktop-accessibility/accessibility-creating-reports-14.png)
 
-<span data-ttu-id="9a69f-213">เมื่อต้องการเปิดใช้งานตัวเครื่องหมาย เลือกส่วนรูปแบบในบานหน้าต่างการแสดงภาพ ขยายส่วน **รูปร่าง** จากนั้นเลื่อนลงเพื่อค้นหาการสลับ **แสดงตัวทำเครื่องหมาย** และ **เปิด** ตัวทำเครื่องหมาย ดังที่แสดงในรูปต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="9a69f-213">To turn Markers on, select the Format section in the Visualizations pane, expand the **Shapes** section, then scroll down to find the **Show Markers** toggle and turn it to **On**, as shown in the following image.</span></span> 
+เมื่อต้องการเปิดใช้งานตัวเครื่องหมาย เลือกส่วนรูปแบบในบานหน้าต่างการแสดงภาพ ขยายส่วน **รูปร่าง** จากนั้นเลื่อนลงเพื่อค้นหาการสลับ **แสดงตัวทำเครื่องหมาย** และ **เปิด** ตัวทำเครื่องหมาย ดังที่แสดงในรูปต่อไปนี้ 
 
 ![เปิดตัวทำเครื่องหมาย](media/desktop-accessibility/accessibility-creating-reports-15.png)
 
-<span data-ttu-id="9a69f-215">คุณยังสามารถใช้ **กำหนดชุดข้อมูล** เพื่อเลือกชื่อของแต่ละเส้นบรรทัด (หรือพื้นที่ถ้าใช้แผนภูมิพื้นที่) จากกล่องดรอปดาวน์ในส่วนรูปร่างนั้น</span><span class="sxs-lookup"><span data-stu-id="9a69f-215">You can also use **Customize Series** to select the name of each line (or area, if using an Area chart) from the drop-down box in that Shapes section.</span></span> <span data-ttu-id="9a69f-216">ด้านล่างเมนูดรอปดาวน์ คุณสามารถปรับเปลี่ยนลักษณะต่าง ๆ ของเครื่องหมายที่ใช้สำหรับเส้นที่เลือก รวมไปถึงรูปร่าง สี และขนาด</span><span class="sxs-lookup"><span data-stu-id="9a69f-216">Below the drop-down, you can then adjust many aspects of the marker used for the selected line, including its shape, color, and size.</span></span>
+คุณยังสามารถใช้ **กำหนดชุดข้อมูล** เพื่อเลือกชื่อของแต่ละเส้นบรรทัด (หรือพื้นที่ถ้าใช้แผนภูมิพื้นที่) จากกล่องดรอปดาวน์ในส่วนรูปร่างนั้น ด้านล่างเมนูดรอปดาวน์ คุณสามารถปรับเปลี่ยนลักษณะต่าง ๆ ของเครื่องหมายที่ใช้สำหรับเส้นที่เลือก รวมไปถึงรูปร่าง สี และขนาด
 
-<span data-ttu-id="9a69f-217">แม้ว่าเราแนะนำผู้สร้างรายงานเพื่อเปิดใช้งานป้ายชื่อข้อมูลและตัวทำเครื่องหมาย แต่การเปิดใช้งานป้ายชื่อและตัวทำเครื่องหมายทั้งหมดสำหรับทุกวิชวลอาจเกิดการรบกวนและทำให้รายงานของคุณสามารถเข้าถึงได้น้อยลง</span><span class="sxs-lookup"><span data-stu-id="9a69f-217">While we suggest report authors to turn on data labels and markers, turning them all on for every visual may be distracting and make your report less accessible.</span></span> <span data-ttu-id="9a69f-218">ในรูปต่อไปนี้ คุณสามารถเปรียบเทียบวิชวลที่มีป้ายชื่อข้อมูลและตัวทำเครื่องหมายทั้งคู่ แล้วทำให้กลายเป็นเวอร์ชันที่เข้าใจได้มากขึ้นโดยปิดป้ายชื่อข้อมูล</span><span class="sxs-lookup"><span data-stu-id="9a69f-218">In the following image, you can compare a visual that has data labels and markers both on, and then a more understandable version with data labels off.</span></span>
+แม้ว่าเราแนะนำผู้สร้างรายงานเพื่อเปิดใช้งานป้ายชื่อข้อมูลและตัวทำเครื่องหมาย แต่การเปิดใช้งานป้ายชื่อและตัวทำเครื่องหมายทั้งหมดสำหรับทุกวิชวลอาจเกิดการรบกวนและทำให้รายงานของคุณสามารถเข้าถึงได้น้อยลง ในรูปต่อไปนี้ คุณสามารถเปรียบเทียบวิชวลที่มีป้ายชื่อข้อมูลและตัวทำเครื่องหมายทั้งคู่ แล้วทำให้กลายเป็นเวอร์ชันที่เข้าใจได้มากขึ้นโดยปิดป้ายชื่อข้อมูล
 
 ![โปรดใช้ความระมัดระวังในการใช้ป้ายชื่อข้อมูล](media/desktop-accessibility/accessibility-creating-reports-16.png)
 
-<span data-ttu-id="9a69f-220">หากคุณไม่แน่ใจว่าวิชวลหรือรายงานของคุณซับซ้อนมากเกินไปหรือไม่ ให้ทดสอบโดยการทำ[การทดสอบด้วยการหรี่ตา](https://chrome.google.com/webstore/detail/the-squint-test/gppnipfbappicilfniaimcnagbpfflpg)</span><span class="sxs-lookup"><span data-stu-id="9a69f-220">If you're not sure whether your visual or report is too busy, test that by doing a [squint test](https://chrome.google.com/webstore/detail/the-squint-test/gppnipfbappicilfniaimcnagbpfflpg).</span></span>  <span data-ttu-id="9a69f-221">ถ้าคุณต้องเปิดตามองป้ายชื่อข้อมูลมากกว่าจุดข้อมูล ให้ปิดป้ายชื่อข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="9a69f-221">If your eyes are drawn more to the data labels than the data points, turn off your data labels.</span></span>
+หากคุณไม่แน่ใจว่าวิชวลหรือรายงานของคุณซับซ้อนมากเกินไปหรือไม่ ให้ทดสอบโดยการทำ[การทดสอบด้วยการหรี่ตา](https://chrome.google.com/webstore/detail/the-squint-test/gppnipfbappicilfniaimcnagbpfflpg)  ถ้าคุณต้องเปิดตามองป้ายชื่อข้อมูลมากกว่าจุดข้อมูล ให้ปิดป้ายชื่อข้อมูลของคุณ
 
 
-### <a name="themes-contrast-and-colorblind-friendly-colors"></a><span data-ttu-id="9a69f-222">ธีม ความคมชัด และสีที่เป็นมิตรกับผู้ที่ตาบอดสี</span><span class="sxs-lookup"><span data-stu-id="9a69f-222">Themes, contrast and colorblind-friendly colors</span></span>
+### <a name="themes-contrast-and-colorblind-friendly-colors"></a>ธีม ความคมชัด และสีที่เป็นมิตรกับผู้ที่ตาบอดสี
 
-<span data-ttu-id="9a69f-223">คุณควรตรวจสอบให้แน่ใจว่ารายงานของคุณมีความคมชัดเพียงพอ ระหว่างข้อความและสีพื้นหลัง</span><span class="sxs-lookup"><span data-stu-id="9a69f-223">You should ensure that your reports have enough contrast between text and any background colors.</span></span> <span data-ttu-id="9a69f-224">เกณฑ์ความสำเร็จ 1.4.3 ของ WCAG 2.1 ระบุว่าข้อความและสีพื้นหลังควรมีอัตราส่วนความคมชัดอย่างน้อย 4.5: 1</span><span class="sxs-lookup"><span data-stu-id="9a69f-224">WCAG 2.1 success criterion 1.4.3 delineates that text and background color should have a contrast ratio of at least 4.5:1.</span></span> <span data-ttu-id="9a69f-225">มีเครื่องมือหลายอย่างเช่น [ตัววิเคราะห์ความคมชัดของสี](https://developer.paciellogroup.com/resources/contrastanalyser/)[WebAIM](https://webaim.org/resources/contrastchecker/)และ [สีที่สามารถเข้าถึงได้](https://accessible-colors.com/) คุณสามารถใช้เพื่อตรวจสอบสีรายงานของคุณได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-225">There are several tools such as [Color Contrast Analyzer](https://developer.paciellogroup.com/resources/contrastanalyser/), [WebAIM](https://webaim.org/resources/contrastchecker/), and [Accessible Colors](https://accessible-colors.com/) you can use to check your report colors.</span></span>
+คุณควรตรวจสอบให้แน่ใจว่ารายงานของคุณมีความคมชัดเพียงพอ ระหว่างข้อความและสีพื้นหลัง เกณฑ์ความสำเร็จ 1.4.3 ของ WCAG 2.1 ระบุว่าข้อความและสีพื้นหลังควรมีอัตราส่วนความคมชัดอย่างน้อย 4.5: 1 มีเครื่องมือหลายอย่างเช่น [ตัววิเคราะห์ความคมชัดของสี](https://developer.paciellogroup.com/resources/contrastanalyser/)[WebAIM](https://webaim.org/resources/contrastchecker/)และ [สีที่สามารถเข้าถึงได้](https://accessible-colors.com/) คุณสามารถใช้เพื่อตรวจสอบสีรายงานของคุณได้
 
-<span data-ttu-id="9a69f-226">นอกจากนี้ คุณยังควรพิจารณาว่าผู้ดูรายงานบางรายอาจมีข้อบกพร่องด้านการมองเห็นสี</span><span class="sxs-lookup"><span data-stu-id="9a69f-226">You should also consider that some report viewers may have color vision deficiencies.</span></span> <span data-ttu-id="9a69f-227">เครื่องมือเช่น [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) และ [Vischeck](https://www.vischeck.com/vischeck/vischeckImage.php) จะจำลองว่าผู้ดูรายงานมีความบกพร่องของสีที่แตกต่างกันอย่างไรบ้าง</span><span class="sxs-lookup"><span data-stu-id="9a69f-227">Tools like [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) and [Vischeck](https://www.vischeck.com/vischeck/vischeckImage.php) simulate what report viewers with different color deficiencies see.</span></span>  <span data-ttu-id="9a69f-228">การใช้สีน้อยลงหรือสีขาวดำในรายงานสามารถช่วยแก้ไขปัญหาการสร้างรายงานที่ไม่สามารถเข้าถึงได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-228">Using fewer colors or a monochrome palette in your report can help mitigate creating reports that are inaccessible.</span></span>
+นอกจากนี้ คุณยังควรพิจารณาว่าผู้ดูรายงานบางรายอาจมีข้อบกพร่องด้านการมองเห็นสี เครื่องมือเช่น [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) และ [Vischeck](https://www.vischeck.com/vischeck/vischeckImage.php) จะจำลองว่าผู้ดูรายงานมีความบกพร่องของสีที่แตกต่างกันอย่างไรบ้าง  การใช้สีน้อยลงหรือสีขาวดำในรายงานสามารถช่วยแก้ไขปัญหาการสร้างรายงานที่ไม่สามารถเข้าถึงได้
 
-<span data-ttu-id="9a69f-229">การผสมสีบางอย่างเป็นเรื่องยากสำหรับผู้ใช้ที่มีข้อบกพร่องด้านการมองเห็นสีในการแยกความแตกต่าง</span><span class="sxs-lookup"><span data-stu-id="9a69f-229">Certain color combinations are particularly difficult for users with color vision deficiencies to distinguish.</span></span> <span data-ttu-id="9a69f-230">ซึ่งรวมถึงการผสมสีต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="9a69f-230">These include the following combinations:</span></span> 
+การผสมสีบางอย่างเป็นเรื่องยากสำหรับผู้ใช้ที่มีข้อบกพร่องด้านการมองเห็นสีในการแยกความแตกต่าง ซึ่งรวมถึงการผสมสีต่อไปนี้: 
 
-* <span data-ttu-id="9a69f-231">สีเขียวและสีแดง</span><span class="sxs-lookup"><span data-stu-id="9a69f-231">green and red</span></span>
-* <span data-ttu-id="9a69f-232">สีเขียวและสีน้ำตาล</span><span class="sxs-lookup"><span data-stu-id="9a69f-232">green and brown</span></span>
-* <span data-ttu-id="9a69f-233">สีน้ำเงินและสีม่วง</span><span class="sxs-lookup"><span data-stu-id="9a69f-233">blue and purple</span></span>
-* <span data-ttu-id="9a69f-234">สีเขียวและสีน้ำเงิน</span><span class="sxs-lookup"><span data-stu-id="9a69f-234">green and blue</span></span>
-* <span data-ttu-id="9a69f-235">สีเขียวอ่อนและสีเหลือง</span><span class="sxs-lookup"><span data-stu-id="9a69f-235">light green and yellow</span></span>
-* <span data-ttu-id="9a69f-236">สีน้ำเงินและสีเทา</span><span class="sxs-lookup"><span data-stu-id="9a69f-236">blue and grey</span></span>
-* <span data-ttu-id="9a69f-237">สีเขียวและสีเทา</span><span class="sxs-lookup"><span data-stu-id="9a69f-237">green and grey</span></span>
-* <span data-ttu-id="9a69f-238">สีเขียวและสีดำ</span><span class="sxs-lookup"><span data-stu-id="9a69f-238">green and black</span></span>
+* สีเขียวและสีแดง
+* สีเขียวและสีน้ำตาล
+* สีน้ำเงินและสีม่วง
+* สีเขียวและสีน้ำเงิน
+* สีเขียวอ่อนและสีเหลือง
+* สีน้ำเงินและสีเทา
+* สีเขียวและสีเทา
+* สีเขียวและสีดำ
 
-<span data-ttu-id="9a69f-239">หลีกเลี่ยงการใช้สีเหล่านี้ร่วมกันในแผนภูมิหรือบนหน้ารายงานเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="9a69f-239">Avoid using these colors together in a chart, or on the same report page.</span></span> <span data-ttu-id="9a69f-240">Power BI มีธีมในตัวเพื่อช่วยให้รายงานของคุณสามารถเข้าถึงได้มากขึ้น แต่ควรตรวจสอบรายงานของคุณด้วยเครื่องมือเพิ่มเติมที่แนะนำในบทความนี้</span><span class="sxs-lookup"><span data-stu-id="9a69f-240">Power BI has some built-in themes to help make your report more accessible, but it's best practice to check your report with some of the additional tools suggested in this article.</span></span>
+หลีกเลี่ยงการใช้สีเหล่านี้ร่วมกันในแผนภูมิหรือบนหน้ารายงานเดียวกัน Power BI มีธีมในตัวเพื่อช่วยให้รายงานของคุณสามารถเข้าถึงได้มากขึ้น แต่ควรตรวจสอบรายงานของคุณด้วยเครื่องมือเพิ่มเติมที่แนะนำในบทความนี้
 
 ![ธีมในตัว](media/desktop-accessibility/accessibility-creating-reports-17.png)
 
-## <a name="tips-and-considerations"></a><span data-ttu-id="9a69f-242">คำแนะนำและข้อควรพิจารณา</span><span class="sxs-lookup"><span data-stu-id="9a69f-242">Tips and considerations</span></span>
-<span data-ttu-id="9a69f-243">ส่วนนี้มีคำแนะนำ เคล็ดลับ และข้อควรพิจารณาเมื่อสร้างรายงานโดยคำนึงถึงการช่วยสำหรับการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="9a69f-243">This section provides some guidance, tips, and considerations to keep in mind when creating reports with accessibility in mind.</span></span>
+## <a name="tips-and-considerations"></a>คำแนะนำและข้อควรพิจารณา
+ส่วนนี้มีคำแนะนำ เคล็ดลับ และข้อควรพิจารณาเมื่อสร้างรายงานโดยคำนึงถึงการช่วยสำหรับการเข้าถึง
 
-### <a name="understand-what-your-audience-wants"></a><span data-ttu-id="9a69f-244">ทำความเข้าใจสิ่งที่ผู้ดูรายงานของคุณต้องการ</span><span class="sxs-lookup"><span data-stu-id="9a69f-244">Understand what your audience wants</span></span>
+### <a name="understand-what-your-audience-wants"></a>ทำความเข้าใจสิ่งที่ผู้ดูรายงานของคุณต้องการ
 
-<span data-ttu-id="9a69f-245">การสร้างรายงานเป็นกระบวนการแบบทำซ้ำ</span><span class="sxs-lookup"><span data-stu-id="9a69f-245">Creating a report is an iterative process.</span></span> <span data-ttu-id="9a69f-246">ก่อนที่คุณจะเริ่มการวางวิชวลบนหน้า ให้พูดคุยกับผู้ใช้รายงานเพื่อทำความเข้าใจว่าข้อมูลใดที่พวกเขาต้องการได้รับจากรายงาน และวิธีการที่พวกเขาต้องการดู</span><span class="sxs-lookup"><span data-stu-id="9a69f-246">Before you begin placing visuals on the page, speak to some of your report consumers to have a better understanding of what information they want to get from your report and how they want to see it.</span></span>  
+การสร้างรายงานเป็นกระบวนการแบบทำซ้ำ ก่อนที่คุณจะเริ่มการวางวิชวลบนหน้า ให้พูดคุยกับผู้ใช้รายงานเพื่อทำความเข้าใจว่าข้อมูลใดที่พวกเขาต้องการได้รับจากรายงาน และวิธีการที่พวกเขาต้องการดู  
 
-<span data-ttu-id="9a69f-247">การสร้างในการช่วยสำหรับการเข้าถึงควรเป็นส่วนหนึ่งของกระบวนการนี้</span><span class="sxs-lookup"><span data-stu-id="9a69f-247">Building in accessibility should be part of this process.</span></span> <span data-ttu-id="9a69f-248">คุณอาจพบว่าวิสัยทัศน์ของคุณไม่ใช่สิ่งที่ผู้ใช้รายงานของคุณจำเป็นต้องทราบ</span><span class="sxs-lookup"><span data-stu-id="9a69f-248">You might find out that your vision is not what your report consumers have in mind.</span></span> <span data-ttu-id="9a69f-249">หลังจากที่คุณได้จัดเตรียมแบบร่างเริ่มต้นของรายงานแล้ว ให้แสดงแบบร่างนั้นไปยังผู้ใช้รายงานและรวบรวมคำติชมเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="9a69f-249">Once you have prepared an initial draft of your report, show it to a report consumer and gather more feedback.</span></span> <span data-ttu-id="9a69f-250">ในฐานะผู้สร้างรายงาน การรวบรวมคำติชมสามารถช่วยลดการร้องขอการเปลี่ยนแปลงจากผู้ใช้รายงานที่ไม่พึงพอใจในอนาคต</span><span class="sxs-lookup"><span data-stu-id="9a69f-250">As a report author, gathering feedback can help mitigate a future deluge of requests for changes from unhappy report consumers.</span></span>
+การสร้างในการช่วยสำหรับการเข้าถึงควรเป็นส่วนหนึ่งของกระบวนการนี้ คุณอาจพบว่าวิสัยทัศน์ของคุณไม่ใช่สิ่งที่ผู้ใช้รายงานของคุณจำเป็นต้องทราบ หลังจากที่คุณได้จัดเตรียมแบบร่างเริ่มต้นของรายงานแล้ว ให้แสดงแบบร่างนั้นไปยังผู้ใช้รายงานและรวบรวมคำติชมเพิ่มเติม ในฐานะผู้สร้างรายงาน การรวบรวมคำติชมสามารถช่วยลดการร้องขอการเปลี่ยนแปลงจากผู้ใช้รายงานที่ไม่พึงพอใจในอนาคต
 
-### <a name="keep-your-report-simple-and-consistent"></a><span data-ttu-id="9a69f-251">ทำให้รายงานของคุณเรียบง่ายและสอดคล้องกัน</span><span class="sxs-lookup"><span data-stu-id="9a69f-251">Keep your report simple and consistent</span></span>
+### <a name="keep-your-report-simple-and-consistent"></a>ทำให้รายงานของคุณเรียบง่ายและสอดคล้องกัน
 
-<span data-ttu-id="9a69f-252">ทำให้รายงานของคุณเรียบมากง่ายที่สุดเท่าที่จะทำได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-252">Keep your report as simple as possible.</span></span> <span data-ttu-id="9a69f-253">ผู้คนมักจะพยายามใส่ภาพมากเกินไปในวิชวลเดียว</span><span class="sxs-lookup"><span data-stu-id="9a69f-253">People often try to put too much into a single visual.</span></span> <span data-ttu-id="9a69f-254">บ่อยครั้งที่การแบ่งออกเป็นหลาย ๆ วิชวลทำให้วิชวลดูเรียบง่ายขึ้น และเข้าใจง่าย</span><span class="sxs-lookup"><span data-stu-id="9a69f-254">Often breaking it out into multiple visuals makes it simpler and easy to understand.</span></span> <span data-ttu-id="9a69f-255">ลองใช้หลาย ๆ วิชวลหากพวกเขาแสดงแฟเช็ตของข้อมูล และใช้ตัวกรองหรือการโต้ตอบด้วยวิชวลเพื่อสร้างประสบการณ์ที่หลากหลาย</span><span class="sxs-lookup"><span data-stu-id="9a69f-255">Consider using multiple visuals if they show different facets of the data and use filters or visual interactions to create a rich experience.</span></span> <span data-ttu-id="9a69f-256">ในเวลาเดียวกัน ต้องควบคุมให้จำนวนของวิชวลบนหน้าอยู่ในระดับต่ำสุด</span><span class="sxs-lookup"><span data-stu-id="9a69f-256">At the same time, keep the number of visuals on a page to a minimum.</span></span> <span data-ttu-id="9a69f-257">พยายามหลีกเลี่ยงการซ้ำซ้อนและความไม่เป็นระเบียบของหน้า</span><span class="sxs-lookup"><span data-stu-id="9a69f-257">Try to avoid unnecessary redundancy and page clutter.</span></span> <span data-ttu-id="9a69f-258">คุณไม่จำเป็นต้องใช้สองวิชวลในการแสดงสิ่งเดียวกัน</span><span class="sxs-lookup"><span data-stu-id="9a69f-258">You don't need two visuals to show the same thing.</span></span> <span data-ttu-id="9a69f-259">ผู้ใช้รายงานอาจรู้สึกสับสนกับข้อมูลทั้งหมดที่ได้รับจากวิชวลมากเกินไป หรือพวกเขาอาจมีช่วงความสนใจที่จำกัด และเสียสมาธิ</span><span class="sxs-lookup"><span data-stu-id="9a69f-259">Report consumers may get overwhelmed from all the information being given from too many visuals, or they may have a limited attention span and get distracted.</span></span> <span data-ttu-id="9a69f-260">ไม่เพียงแต่ทำให้รายงานของคุณใช้งานได้ง่ายขึ้น แต่การแสดงวิชวลมากเกินไปในหน้าเดียวสามารถทำให้ประสิทธิภาพการทำงานของรายงานช้าลง</span><span class="sxs-lookup"><span data-stu-id="9a69f-260">Not only does this make your report easier to consume, but also having too many visuals on a page can slow down the performance of your report.</span></span>
+ทำให้รายงานของคุณเรียบมากง่ายที่สุดเท่าที่จะทำได้ ผู้คนมักจะพยายามใส่ภาพมากเกินไปในวิชวลเดียว บ่อยครั้งที่การแบ่งออกเป็นหลาย ๆ วิชวลทำให้วิชวลดูเรียบง่ายขึ้น และเข้าใจง่าย ลองใช้หลาย ๆ วิชวลหากพวกเขาแสดงแฟเช็ตของข้อมูล และใช้ตัวกรองหรือการโต้ตอบด้วยวิชวลเพื่อสร้างประสบการณ์ที่หลากหลาย ในเวลาเดียวกัน ต้องควบคุมให้จำนวนของวิชวลบนหน้าอยู่ในระดับต่ำสุด พยายามหลีกเลี่ยงการซ้ำซ้อนและความไม่เป็นระเบียบของหน้า คุณไม่จำเป็นต้องใช้สองวิชวลในการแสดงสิ่งเดียวกัน ผู้ใช้รายงานอาจรู้สึกสับสนกับข้อมูลทั้งหมดที่ได้รับจากวิชวลมากเกินไป หรือพวกเขาอาจมีช่วงความสนใจที่จำกัด และเสียสมาธิ ไม่เพียงแต่ทำให้รายงานของคุณใช้งานได้ง่ายขึ้น แต่การแสดงวิชวลมากเกินไปในหน้าเดียวสามารถทำให้ประสิทธิภาพการทำงานของรายงานช้าลง
 
-<span data-ttu-id="9a69f-261">ทำให้รายงานของคุณสอดคล้องกันโดยใช้สีแบบอักษรและรูปแบบที่เหมือนกันสำหรับองค์ประกอบของวิชวลทั้งหมดในรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-261">Keep your report consistent by using the same font color and style for the visual elements across your report.</span></span> <span data-ttu-id="9a69f-262">ใช้ขนาดตัวอักษรเดียวกันสำหรับชื่อวิชวลทั้งหมด เช่นเดียวกับที่คุณควรใช้กับป้ายชื่อข้อมูลและชื่อแกน</span><span class="sxs-lookup"><span data-stu-id="9a69f-262">Use the same font size for all visual titles, just as you should for data labels and axis titles.</span></span> <span data-ttu-id="9a69f-263">หากคุณใช้ตัวแบ่งส่วนข้อมูลในหน้ารายงานหลายหน้า ให้เก็บไว้ในตำแหน่งเดียวกันในทุก ๆ หน้าของรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-263">If you're using slicers on multiple report pages, keep them in the same location on every page of your report.</span></span>
+ทำให้รายงานของคุณสอดคล้องกันโดยใช้สีแบบอักษรและรูปแบบที่เหมือนกันสำหรับองค์ประกอบของวิชวลทั้งหมดในรายงาน ใช้ขนาดตัวอักษรเดียวกันสำหรับชื่อวิชวลทั้งหมด เช่นเดียวกับที่คุณควรใช้กับป้ายชื่อข้อมูลและชื่อแกน หากคุณใช้ตัวแบ่งส่วนข้อมูลในหน้ารายงานหลายหน้า ให้เก็บไว้ในตำแหน่งเดียวกันในทุก ๆ หน้าของรายงาน
 
-### <a name="test-for-low-vision"></a><span data-ttu-id="9a69f-264">ทดสอบสำหรับการมองเห็นต่ำ</span><span class="sxs-lookup"><span data-stu-id="9a69f-264">Test for low vision</span></span>
+### <a name="test-for-low-vision"></a>ทดสอบสำหรับการมองเห็นต่ำ
 
-<span data-ttu-id="9a69f-265">วิธีที่รวดเร็วในการทดสอบว่ารายงานจะมีลักษณะอย่างไรสำหรับผู้ใช้ที่มีการมองเห็นในระดับต่ำจะเป็นการลดความสว่างของหน้าจอหรืออุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="9a69f-265">A quick way to test what a report would look like for consumers with low vision would be to turn down the brightness of your screen or mobile device.</span></span>  <span data-ttu-id="9a69f-266">มี Add-on ของเบราว์เซอร์ที่คุณสามารถใช้เพื่อช่วยให้คุณสามารถทำการทดสอบด้วยการหรี่ตาได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-266">There are browser add-ons you can use that can help you perform a squint test.</span></span>
+วิธีที่รวดเร็วในการทดสอบว่ารายงานจะมีลักษณะอย่างไรสำหรับผู้ใช้ที่มีการมองเห็นในระดับต่ำจะเป็นการลดความสว่างของหน้าจอหรืออุปกรณ์เคลื่อนที่  มี Add-on ของเบราว์เซอร์ที่คุณสามารถใช้เพื่อช่วยให้คุณสามารถทำการทดสอบด้วยการหรี่ตาได้
 
-## <a name="report-accessibility-checklist"></a><span data-ttu-id="9a69f-267">รายการตรวจสอบการช่วยสำหรับการเข้าถึงรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-267">Report accessibility checklist</span></span>
+## <a name="report-accessibility-checklist"></a>รายการตรวจสอบการช่วยสำหรับการเข้าถึงรายงาน
 
-<span data-ttu-id="9a69f-268">นอกเหนือจากการจัดหาเครื่องมือและฟังก์ชันการช่วยสำหรับการเข้าถึงแล้ว Power BI ยังมีรายการตรวจสอบดังต่อไปนี้ที่คุณสามารถใช้ได้เมื่อสร้างรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-268">In addition to providing accessibility tools and functionality, Power BI provides the following checklist you can use when creating reports.</span></span> <span data-ttu-id="9a69f-269">รายการตรวจสอบนี้ช่วยให้มั่นใจว่ารายงานของคุณสามารถเข้าถึงได้และพร้อมให้บริการแก่ผู้ชมกลุ่มที่ใหญ่ที่สุดก่อนที่คุณจะเผยแพร่</span><span class="sxs-lookup"><span data-stu-id="9a69f-269">This checklist helps ensure your reports are accessible, and available to the largest audience, before you publish it.</span></span> 
+นอกเหนือจากการจัดหาเครื่องมือและฟังก์ชันการช่วยสำหรับการเข้าถึงแล้ว Power BI ยังมีรายการตรวจสอบดังต่อไปนี้ที่คุณสามารถใช้ได้เมื่อสร้างรายงาน รายการตรวจสอบนี้ช่วยให้มั่นใจว่ารายงานของคุณสามารถเข้าถึงได้และพร้อมให้บริการแก่ผู้ชมกลุ่มที่ใหญ่ที่สุดก่อนที่คุณจะเผยแพร่ 
 
-### <a name="all-visuals"></a><span data-ttu-id="9a69f-270">ภาพทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="9a69f-270">All visuals</span></span>
+### <a name="all-visuals"></a>ภาพทั้งหมด
 
-* <span data-ttu-id="9a69f-271">ตรวจสอบให้แน่ใจว่าสีมีความแตกต่างกันระหว่างชื่อเรื่อง ป้ายชื่อแกน และป้ายชื่อข้อมูล ข้อความและพื้นหลังอย่างน้อย 4.5:1</span><span class="sxs-lookup"><span data-stu-id="9a69f-271">Ensure color contrast between title, axis label, and data label text and the background are at least 4.5:1.</span></span>
-* <span data-ttu-id="9a69f-272">หลีกเลี่ยงการใช้สีเป็นเครื่องมือในการสื่อข้อมูลเพียงอย่างเดียว</span><span class="sxs-lookup"><span data-stu-id="9a69f-272">Avoid using color as the only means of conveying information.</span></span> <span data-ttu-id="9a69f-273">ใช้ข้อความหรือไอคอนเพื่อเสริมหรือแทนที่สี</span><span class="sxs-lookup"><span data-stu-id="9a69f-273">Use text or icons to supplement or replace the color.</span></span>
-* <span data-ttu-id="9a69f-274">แทนที่ศัพท์เทคนิคเฉพาะหรือคำย่อที่ไม่จำเป็น</span><span class="sxs-lookup"><span data-stu-id="9a69f-274">Replace unnecessary jargon or acronyms.</span></span>
-* <span data-ttu-id="9a69f-275">ตรวจสอบให้แน่ใจว่ามีการเพิ่ม **ข้อความแสดงแทน** ในวิชวลที่ไม่มีการปรับแต่งทั้งหมดบนหน้า</span><span class="sxs-lookup"><span data-stu-id="9a69f-275">Ensure **alt text** is added to all non-decorative visuals on the page.</span></span>
-* <span data-ttu-id="9a69f-276">ตรวจสอบว่าหน้ารายงานของคุณสามารถใช้งานได้กับผู้ใช้ที่มีความบกพร่องในการมองเห็นสี</span><span class="sxs-lookup"><span data-stu-id="9a69f-276">Check that your report page works for users with color vision deficiency.</span></span>
+* ตรวจสอบให้แน่ใจว่าสีมีความแตกต่างกันระหว่างชื่อเรื่อง ป้ายชื่อแกน และป้ายชื่อข้อมูล ข้อความและพื้นหลังอย่างน้อย 4.5:1
+* หลีกเลี่ยงการใช้สีเป็นเครื่องมือในการสื่อข้อมูลเพียงอย่างเดียว ใช้ข้อความหรือไอคอนเพื่อเสริมหรือแทนที่สี
+* แทนที่ศัพท์เทคนิคเฉพาะหรือคำย่อที่ไม่จำเป็น
+* ตรวจสอบให้แน่ใจว่ามีการเพิ่ม **ข้อความแสดงแทน** ในวิชวลที่ไม่มีการปรับแต่งทั้งหมดบนหน้า
+* ตรวจสอบว่าหน้ารายงานของคุณสามารถใช้งานได้กับผู้ใช้ที่มีความบกพร่องในการมองเห็นสี
 
-### <a name="slicers"></a><span data-ttu-id="9a69f-277">ตัวแบ่งส่วนข้อมูล</span><span class="sxs-lookup"><span data-stu-id="9a69f-277">Slicers</span></span>
-* <span data-ttu-id="9a69f-278">ถ้าคุณมีคอลเลกชันตัวแบ่งส่วนข้อมูลหลายรายการบนหน้ารายงานของคุณ ตรวจสอบให้แน่ใจว่าการออกแบบของคุณสอดคล้องกันในทุกหน้า</span><span class="sxs-lookup"><span data-stu-id="9a69f-278">If you have a collection of several slicers on your report pages, ensure your design is consistent across pages.</span></span> <span data-ttu-id="9a69f-279">ใช้ตัวอักษร สี และตำแหน่งเชิงพื้นที่เดียวกันมากที่สุดเท่าที่เป็นไปได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-279">Use the same font, colors, and spatial position as much as possible.</span></span>
+### <a name="slicers"></a>ตัวแบ่งส่วนข้อมูล
+* ถ้าคุณมีคอลเลกชันตัวแบ่งส่วนข้อมูลหลายรายการบนหน้ารายงานของคุณ ตรวจสอบให้แน่ใจว่าการออกแบบของคุณสอดคล้องกันในทุกหน้า ใช้ตัวอักษร สี และตำแหน่งเชิงพื้นที่เดียวกันมากที่สุดเท่าที่เป็นไปได้
 
-### <a name="textbox"></a><span data-ttu-id="9a69f-280">กล่องข้อความ</span><span class="sxs-lookup"><span data-stu-id="9a69f-280">Textbox</span></span>
-* <span data-ttu-id="9a69f-281">ตรวจสอบให้แน่ใจว่าสีมีความแตกต่างกันระหว่างแบบอักษรและพื้นหลังอย่างน้อย 4.5:1</span><span class="sxs-lookup"><span data-stu-id="9a69f-281">Ensure color contrast between font and background are at least 4.5:1.</span></span>
-* <span data-ttu-id="9a69f-282">ตรวจสอบให้แน่ใจว่าได้ใส่เนื้อหาข้อความในกล่อง **ข้อความแสดงแทน** เพื่อให้โปรแกรมอ่านหน้าจอสามารถอ่านได้</span><span class="sxs-lookup"><span data-stu-id="9a69f-282">Make sure to put text contents in the **alt text** box so screen readers can read them.</span></span>
+### <a name="textbox"></a>กล่องข้อความ
+* ตรวจสอบให้แน่ใจว่าสีมีความแตกต่างกันระหว่างแบบอักษรและพื้นหลังอย่างน้อย 4.5:1
+* ตรวจสอบให้แน่ใจว่าได้ใส่เนื้อหาข้อความในกล่อง **ข้อความแสดงแทน** เพื่อให้โปรแกรมอ่านหน้าจอสามารถอ่านได้
 
-### <a name="visual-interactions"></a><span data-ttu-id="9a69f-283">การโต้ตอบกับวิชวล</span><span class="sxs-lookup"><span data-stu-id="9a69f-283">Visual interactions</span></span>
-* <span data-ttu-id="9a69f-284">ข้อมูลสำคัญสามารถเข้าถึงได้ผ่านการโต้ตอบหรือไม่</span><span class="sxs-lookup"><span data-stu-id="9a69f-284">Is key information only accessible through an interaction?</span></span> <span data-ttu-id="9a69f-285">ถ้าเป็นเช่นนั้น จัดเรียงวิชวลของคุณเพื่อให้มีการกรองวิชวลล่วงหน้าโดยทำให้ข้อสรุปที่สำคัญชัดเจนยิ่งขึ้น</span><span class="sxs-lookup"><span data-stu-id="9a69f-285">If so, rearrange your visuals so they are pre-filtered to make the important conclusion more obvious.</span></span>
-* <span data-ttu-id="9a69f-286">คุณกำลังใช้บุ๊กมาร์กสำหรับการนำทางหรือไม่</span><span class="sxs-lookup"><span data-stu-id="9a69f-286">Are you using bookmarks for navigation?</span></span> <span data-ttu-id="9a69f-287">ลองนำทางรายงานของคุณด้วยแป้นพิมพ์เพื่อให้แน่ใจว่าประสบการณ์ดังกล่าวเป็นที่ยอมรับสำหรับผู้ใช้เฉพาะแป้นพิมพ์</span><span class="sxs-lookup"><span data-stu-id="9a69f-287">Try navigating your report with a keyboard to ensure the experience is acceptable for keyboard-only users.</span></span>
+### <a name="visual-interactions"></a>การโต้ตอบกับวิชวล
+* ข้อมูลสำคัญสามารถเข้าถึงได้ผ่านการโต้ตอบหรือไม่ ถ้าเป็นเช่นนั้น จัดเรียงวิชวลของคุณเพื่อให้มีการกรองวิชวลล่วงหน้าโดยทำให้ข้อสรุปที่สำคัญชัดเจนยิ่งขึ้น
+* คุณกำลังใช้บุ๊กมาร์กสำหรับการนำทางหรือไม่ ลองนำทางรายงานของคุณด้วยแป้นพิมพ์เพื่อให้แน่ใจว่าประสบการณ์ดังกล่าวเป็นที่ยอมรับสำหรับผู้ใช้เฉพาะแป้นพิมพ์
 
-### <a name="sort-order"></a><span data-ttu-id="9a69f-288">ลำดับการจัดเรียง</span><span class="sxs-lookup"><span data-stu-id="9a69f-288">Sort order</span></span>
-* <span data-ttu-id="9a69f-289">คุณได้ตั้งใจที่จะตั้งค่าลำดับการจัดเรียงของแต่ละวิชวลบนหน้าหรือไม่</span><span class="sxs-lookup"><span data-stu-id="9a69f-289">Have you purposefully set the sort order of each visual on the page?</span></span> <span data-ttu-id="9a69f-290">ตาราง **แสดงข้อมูล** ที่สามารถเข้าถึงได้จะแสดงข้อมูลในลำดับการจัดเรียงที่คุณได้ตั้งค่าไว้ในวิชวล</span><span class="sxs-lookup"><span data-stu-id="9a69f-290">The accessible **Show Data** table shows the data in the sort order you have set on the visual.</span></span>
+### <a name="sort-order"></a>ลำดับการจัดเรียง
+* คุณได้ตั้งใจที่จะตั้งค่าลำดับการจัดเรียงของแต่ละวิชวลบนหน้าหรือไม่ ตาราง **แสดงข้อมูล** ที่สามารถเข้าถึงได้จะแสดงข้อมูลในลำดับการจัดเรียงที่คุณได้ตั้งค่าไว้ในวิชวล
 
-### <a name="tooltips"></a><span data-ttu-id="9a69f-291">คำแนะนำเครื่องมือ</span><span class="sxs-lookup"><span data-stu-id="9a69f-291">Tooltips</span></span>
-* <span data-ttu-id="9a69f-292">อย่าใช้กล่องแสดงคำอธิบายเพื่อสื่อสารข้อมูลสำคัญ</span><span class="sxs-lookup"><span data-stu-id="9a69f-292">Don't use tooltips to convey important information.</span></span> <span data-ttu-id="9a69f-293">ผู้ใช้ที่มีปัญหาการเคลื่อนไหวและผู้ใช้ที่ไม่ได้ใช้เมาส์จะมีปัญหาในการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="9a69f-293">Users with motor issues and users who do not use a mouse will have difficulties accessing them.</span></span>
-* <span data-ttu-id="9a69f-294">เพิ่มคำแนะนำเครื่องมือลงในแผนภูมิเป็นข้อมูลเสริม</span><span class="sxs-lookup"><span data-stu-id="9a69f-294">Do add tooltips to charts as ancillary information.</span></span> <span data-ttu-id="9a69f-295">ซึ่งรวมอยู่ในตาราง **แสดงข้อมูล** ที่สามารถเข้าถึงได้สำหรับแต่ละวิชวล</span><span class="sxs-lookup"><span data-stu-id="9a69f-295">It is included in the accessible **Show Data** table for each visual.</span></span>
+### <a name="tooltips"></a>คำแนะนำเครื่องมือ
+* อย่าใช้กล่องแสดงคำอธิบายเพื่อสื่อสารข้อมูลสำคัญ ผู้ใช้ที่มีปัญหาการเคลื่อนไหวและผู้ใช้ที่ไม่ได้ใช้เมาส์จะมีปัญหาในการเข้าถึง
+* เพิ่มคำแนะนำเครื่องมือลงในแผนภูมิเป็นข้อมูลเสริม ซึ่งรวมอยู่ในตาราง **แสดงข้อมูล** ที่สามารถเข้าถึงได้สำหรับแต่ละวิชวล
 
-### <a name="video"></a><span data-ttu-id="9a69f-296">Video</span><span class="sxs-lookup"><span data-stu-id="9a69f-296">Video</span></span>
-* <span data-ttu-id="9a69f-297">หลีกเลี่ยงวิดีโอที่เริ่มต้นโดยอัตโนมัติเมื่อมีการแสดงหน้า</span><span class="sxs-lookup"><span data-stu-id="9a69f-297">Avoid video that automatically starts when the page is rendered.</span></span>
-* <span data-ttu-id="9a69f-298">ตรวจสอบให้แน่ใจว่าวิดีโอของคุณมีคำบรรยายหรือแสดงบทสนทนา</span><span class="sxs-lookup"><span data-stu-id="9a69f-298">Ensure your video has captions or provide a transcript.</span></span>
+### <a name="video"></a>Video
+* หลีกเลี่ยงวิดีโอที่เริ่มต้นโดยอัตโนมัติเมื่อมีการแสดงหน้า
+* ตรวจสอบให้แน่ใจว่าวิดีโอของคุณมีคำบรรยายหรือแสดงบทสนทนา
 
-### <a name="audio"></a><span data-ttu-id="9a69f-299">เสียง</span><span class="sxs-lookup"><span data-stu-id="9a69f-299">Audio</span></span>
-* <span data-ttu-id="9a69f-300">หลีกเลี่ยงเสียงที่เริ่มต้นโดยอัตโนมัติเมื่อมีการแสดงหน้า</span><span class="sxs-lookup"><span data-stu-id="9a69f-300">Avoid audio that automatically starts when the page is rendered.</span></span>
-* <span data-ttu-id="9a69f-301">ใส่คำบรรยายสำหรับเสียงใด ๆ</span><span class="sxs-lookup"><span data-stu-id="9a69f-301">Provide a transcript for any audio.</span></span>
+### <a name="audio"></a>เสียง
+* หลีกเลี่ยงเสียงที่เริ่มต้นโดยอัตโนมัติเมื่อมีการแสดงหน้า
+* ใส่คำบรรยายสำหรับเสียงใด ๆ
 
-### <a name="shapes"></a><span data-ttu-id="9a69f-302">รูปร่าง</span><span class="sxs-lookup"><span data-stu-id="9a69f-302">Shapes</span></span>
-* <span data-ttu-id="9a69f-303">ตรวจสอบให้แน่ใจว่ามีการทำเครื่องหมายรูปร่างการตกแต่งเป็นซ่อนอยู่ในลำดับแท็บ ดังนั้นจึงไม่ได้ประกาศโดยโปรแกรมอ่านหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="9a69f-303">Make sure any decorative shapes are marked as hidden in tab order, so they aren't announced by a screen reader.</span></span>
-* <span data-ttu-id="9a69f-304">หลีกเลี่ยงการใช้รูปร่างการตกแต่งมากเกินไปในจุดที่อาจรบกวนสมาธิ</span><span class="sxs-lookup"><span data-stu-id="9a69f-304">Avoid using too many decorative shapes to the point where they are distracting.</span></span>
-* <span data-ttu-id="9a69f-305">เมื่อใช้รูปร่างเพื่อเรียกจุดข้อมูล ให้ใช้ **ข้อความแสดงแทน** เพื่ออธิบายสิ่งที่จะถูกเรียก</span><span class="sxs-lookup"><span data-stu-id="9a69f-305">When using shapes to call out data points, use **alt text** to explain what is being called out.</span></span>
+### <a name="shapes"></a>รูปร่าง
+* ตรวจสอบให้แน่ใจว่ามีการทำเครื่องหมายรูปร่างการตกแต่งเป็นซ่อนอยู่ในลำดับแท็บ ดังนั้นจึงไม่ได้ประกาศโดยโปรแกรมอ่านหน้าจอ
+* หลีกเลี่ยงการใช้รูปร่างการตกแต่งมากเกินไปในจุดที่อาจรบกวนสมาธิ
+* เมื่อใช้รูปร่างเพื่อเรียกจุดข้อมูล ให้ใช้ **ข้อความแสดงแทน** เพื่ออธิบายสิ่งที่จะถูกเรียก
 
-### <a name="images"></a><span data-ttu-id="9a69f-306">รูปภาพ</span><span class="sxs-lookup"><span data-stu-id="9a69f-306">Images</span></span>
-* <span data-ttu-id="9a69f-307">เมื่อใช้รูปร่างเพื่อเรียกจุดข้อมูล ให้ใช้ **ข้อความแสดงแทน** เพื่ออธิบายสิ่งที่จะถูกเรียก</span><span class="sxs-lookup"><span data-stu-id="9a69f-307">When using images to call out data points, use **alt text** to explain what is being called out.</span></span>
-* <span data-ttu-id="9a69f-308">ตรวจสอบให้แน่ใจว่ามีการทำเครื่องหมายรูปภาพการตกแต่งเป็นซ่อนอยู่ในลำดับแท็บ ดังนั้นจึงไม่ได้ประกาศโดยโปรแกรมอ่านหน้าจอ</span><span class="sxs-lookup"><span data-stu-id="9a69f-308">Make sure any decorative images are marked as hidden in tab order, so they aren't announced by a screen reader.</span></span>
-* <span data-ttu-id="9a69f-309">หลีกเลี่ยงการใช้รูปภาพการตกแต่งมากเกินไปในจุดที่อาจรบกวนสมาธิ</span><span class="sxs-lookup"><span data-stu-id="9a69f-309">Avoid using too many decorative images, to the point where they are distracting.</span></span>
+### <a name="images"></a>รูปภาพ
+* เมื่อใช้รูปร่างเพื่อเรียกจุดข้อมูล ให้ใช้ **ข้อความแสดงแทน** เพื่ออธิบายสิ่งที่จะถูกเรียก
+* ตรวจสอบให้แน่ใจว่ามีการทำเครื่องหมายรูปภาพการตกแต่งเป็นซ่อนอยู่ในลำดับแท็บ ดังนั้นจึงไม่ได้ประกาศโดยโปรแกรมอ่านหน้าจอ
+* หลีกเลี่ยงการใช้รูปภาพการตกแต่งมากเกินไปในจุดที่อาจรบกวนสมาธิ
 
-### <a name="power-bi-visuals"></a><span data-ttu-id="9a69f-310">วิชวล Power BI</span><span class="sxs-lookup"><span data-stu-id="9a69f-310">Power BI visuals</span></span>
-* <span data-ttu-id="9a69f-311">ตรวจสอบตาราง **แสดงข้อมูล** ที่สามารถเข้าถึงได้สำหรับวิชวล Power BI</span><span class="sxs-lookup"><span data-stu-id="9a69f-311">Check the accessible **Show Data** table for Power BI visuals.</span></span> <span data-ttu-id="9a69f-312">ถ้าข้อมูลที่แสดงไม่เพียงพอ ให้ค้นหาวิชวลอื่น</span><span class="sxs-lookup"><span data-stu-id="9a69f-312">If the information shown is not enough, look for another visual.</span></span>
-* <span data-ttu-id="9a69f-313">ถ้าใช้วิชวลแบบกำหนดเองของ *แกนเคลื่อนไหว* ตรวจสอบให้แน่ใจว่าไม่มีการเล่นอัตโนมัติ</span><span class="sxs-lookup"><span data-stu-id="9a69f-313">If using the *Play Axis* custom visual, ensure it does not auto play.</span></span> <span data-ttu-id="9a69f-314">ทำให้เห็นได้ชัดเจนว่าผู้ใช้ต้องกดปุ่มเล่น/หยุดชั่วคราวเพื่อเริ่ม/หยุดการเปลี่ยนแปลงค่า</span><span class="sxs-lookup"><span data-stu-id="9a69f-314">Make it obvious that the user must press the play/pause button to start/stop the changing values.</span></span>
+### <a name="power-bi-visuals"></a>วิชวล Power BI
+* ตรวจสอบตาราง **แสดงข้อมูล** ที่สามารถเข้าถึงได้สำหรับวิชวล Power BI ถ้าข้อมูลที่แสดงไม่เพียงพอ ให้ค้นหาวิชวลอื่น
+* ถ้าใช้วิชวลแบบกำหนดเองของ *แกนเคลื่อนไหว* ตรวจสอบให้แน่ใจว่าไม่มีการเล่นอัตโนมัติ ทำให้เห็นได้ชัดเจนว่าผู้ใช้ต้องกดปุ่มเล่น/หยุดชั่วคราวเพื่อเริ่ม/หยุดการเปลี่ยนแปลงค่า
 
-### <a name="across-visuals-on-the-page"></a><span data-ttu-id="9a69f-315">ในทุกวิชวลบนหน้า</span><span class="sxs-lookup"><span data-stu-id="9a69f-315">Across visuals on the page</span></span>
-* <span data-ttu-id="9a69f-316">ตั้งค่าลำดับแท็บและปิดลำดับแท็บ (ทำเครื่องหมายรายการว่าซ่อนอยู่) บนรายการการตกแต่งต่าง ๆ</span><span class="sxs-lookup"><span data-stu-id="9a69f-316">Set tab order and turn off tab order (mark the item as hidden) on any decorative items.</span></span>
+### <a name="across-visuals-on-the-page"></a>ในทุกวิชวลบนหน้า
+* ตั้งค่าลำดับแท็บและปิดลำดับแท็บ (ทำเครื่องหมายรายการว่าซ่อนอยู่) บนรายการการตกแต่งต่าง ๆ
 
-## <a name="considerations-and-limitations"></a><span data-ttu-id="9a69f-317">ข้อควรพิจารณาและข้อจำกัด</span><span class="sxs-lookup"><span data-stu-id="9a69f-317">Considerations and limitations</span></span>
-<span data-ttu-id="9a69f-318">มีปัญหาที่ทราบแล้วและข้อจำกัดบางประการ ของคุณลักษณะการช่วยสำหรับการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="9a69f-318">There are a few known issues and limitations with the accessibility features.</span></span> <span data-ttu-id="9a69f-319">คำอธิบายของปัญหาและข้อจำกัดเหล่านั้นมีอยู่ในรายการต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="9a69f-319">Descriptions of those issues and limitations are in the following list:</span></span>
+## <a name="considerations-and-limitations"></a>ข้อควรพิจารณาและข้อจำกัด
+มีปัญหาที่ทราบแล้วและข้อจำกัดบางประการ ของคุณลักษณะการช่วยสำหรับการเข้าถึง คำอธิบายของปัญหาและข้อจำกัดเหล่านั้นมีอยู่ในรายการต่อไปนี้:
 
-* <span data-ttu-id="9a69f-320">เมื่อใช้โปรแกรมอ่านหน้าจอด้วย **Power BI Desktop** คุณจะมีประสบการณ์การใช้งานที่ดีที่สุดถ้าคุณเปิดโปรแกรมอ่านหน้าจอก่อนที่จะเปิดไฟล์ใดๆ ใน **Power BI Desktop**</span><span class="sxs-lookup"><span data-stu-id="9a69f-320">When using screen readers with **Power BI Desktop**, you'll have the best experience if you open your screen reader before opening any files in **Power BI Desktop**.</span></span>
+* เมื่อใช้โปรแกรมอ่านหน้าจอด้วย **Power BI Desktop** คุณจะมีประสบการณ์การใช้งานที่ดีที่สุดถ้าคุณเปิดโปรแกรมอ่านหน้าจอก่อนที่จะเปิดไฟล์ใดๆ ใน **Power BI Desktop**
 
-## <a name="next-steps"></a><span data-ttu-id="9a69f-321">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="9a69f-321">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="9a69f-322">คอลเลกชันของบทความเกี่ยวกับการช่วยสำหรับการเข้าถึง Power BI มีดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="9a69f-322">The collection of articles for Power BI accessibility are the following:</span></span>
+คอลเลกชันของบทความเกี่ยวกับการช่วยสำหรับการเข้าถึง Power BI มีดังต่อไปนี้:
 
-* [<span data-ttu-id="9a69f-323">ภาพรวมของการช่วยสำหรับการเข้าถึงใน Power BI</span><span class="sxs-lookup"><span data-stu-id="9a69f-323">Overview of accessibility in Power BI</span></span>](desktop-accessibility-overview.md) 
-* [<span data-ttu-id="9a69f-324">การใช้รายงาน Power BI ด้วยเครื่องมือการช่วยสำหรับการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="9a69f-324">Consuming Power BI reports with accessibility tools</span></span>](desktop-accessibility-consuming-tools.md)
-* [<span data-ttu-id="9a69f-325">การสร้างรายงาน Power BI ด้วยเครื่องมือการช่วยสำหรับการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="9a69f-325">Creating Power BI reports with accessibility tools</span></span>](desktop-accessibility-creating-tools.md)
-* [<span data-ttu-id="9a69f-326">แป้นพิมพ์ลัดการช่วยสำหรับการเข้าถึงรายงาน Power BI</span><span class="sxs-lookup"><span data-stu-id="9a69f-326">Accessibility keyboard shortcuts for Power BI reports</span></span>](desktop-accessibility-keyboard-shortcuts.md)
-* [<span data-ttu-id="9a69f-327">รายการตรวจสอบการช่วยสำหรับการเข้าถึงรายงาน</span><span class="sxs-lookup"><span data-stu-id="9a69f-327">Report accessibility checklist</span></span>](#report-accessibility-checklist)
+* [ภาพรวมของการช่วยสำหรับการเข้าถึงใน Power BI](desktop-accessibility-overview.md) 
+* [การใช้รายงาน Power BI ด้วยเครื่องมือการช่วยสำหรับการเข้าถึง](desktop-accessibility-consuming-tools.md)
+* [การสร้างรายงาน Power BI ด้วยเครื่องมือการช่วยสำหรับการเข้าถึง](desktop-accessibility-creating-tools.md)
+* [แป้นพิมพ์ลัดการช่วยสำหรับการเข้าถึงรายงาน Power BI](desktop-accessibility-keyboard-shortcuts.md)
+* [รายการตรวจสอบการช่วยสำหรับการเข้าถึงรายงาน](#report-accessibility-checklist)

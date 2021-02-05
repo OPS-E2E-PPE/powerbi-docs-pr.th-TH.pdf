@@ -15,24 +15,24 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97886545"
 ---
-# <a name="highlight-data-points-in-power-bi-visuals"></a><span data-ttu-id="2a265-104">ไฮไลต์จุดข้อมูลใน Power BI Visuals</span><span class="sxs-lookup"><span data-stu-id="2a265-104">Highlight data points in Power BI Visuals</span></span>
+# <a name="highlight-data-points-in-power-bi-visuals"></a>ไฮไลต์จุดข้อมูลใน Power BI Visuals
 
-<span data-ttu-id="2a265-105">โดยค่าเริ่มต้นเมื่อใดก็ตามที่มีการเลือกองค์ประกอบ อาร์เรย์ `values` ในวัตถุ `dataView` จะถูกกรองให้เป็นเพียงค่าที่เลือกเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="2a265-105">By default whenever an element is selected the `values` array in the `dataView` object will be filtered to just the selected values.</span></span> <span data-ttu-id="2a265-106">ซึ่งจะทำให้วิชวลอื่น ๆ ทั้งหมดในหน้าแสดงเป็นเพียงข้อมูลที่เลือกเท่านั้น</span><span class="sxs-lookup"><span data-stu-id="2a265-106">It will cause all other visuals on the page to display just the selected data.</span></span>
+โดยค่าเริ่มต้นเมื่อใดก็ตามที่มีการเลือกองค์ประกอบ อาร์เรย์ `values` ในวัตถุ `dataView` จะถูกกรองให้เป็นเพียงค่าที่เลือกเท่านั้น ซึ่งจะทำให้วิชวลอื่น ๆ ทั้งหมดในหน้าแสดงเป็นเพียงข้อมูลที่เลือกเท่านั้น
 
 ![ไฮไลต์ `dataview` ในลักษณะตามค่าเริ่มต้น](media/highlight/highlight-dataview.png)
 
-<span data-ttu-id="2a265-108">หากคุณตั้งค่าคุณสมบัติ `supportsHighlight` ใน `capabilities.json` เป็น `true` คุณจะได้รับอาร์เรย์ `values` แบบไม่มีการกรองเต็มรูปแบบพร้อมกับอาร์เรย์ `highlights`</span><span class="sxs-lookup"><span data-stu-id="2a265-108">If you set the `supportsHighlight` property in your `capabilities.json` to `true`, you'll receive the full unfiltered `values` array along with a `highlights` array.</span></span> <span data-ttu-id="2a265-109">อาร์เรย์ `highlights` จะมีความยาวเท่ากับอาร์เรย์ค่าและค่าที่ไม่ได้เลือกจะถูกตั้งค่าเป็น `null`</span><span class="sxs-lookup"><span data-stu-id="2a265-109">The `highlights` array will be the same length as the values array and any non-selected values will be set to `null`.</span></span> <span data-ttu-id="2a265-110">เมื่อเปิดใช้งานคุณสมบัตินี้แล้ว จึงเป็นความรับผิดชอบของวิชวลในการไฮไลต์ข้อมูลที่เหมาะสมโดยการเปรียบเทียบอาร์เรย์ `values` กับอาร์เรย์ `highlights`</span><span class="sxs-lookup"><span data-stu-id="2a265-110">With this property enabled it's the visual's responsibility to highlight the appropriate data by comparing the `values` array to the `highlights` array.</span></span>
+หากคุณตั้งค่าคุณสมบัติ `supportsHighlight` ใน `capabilities.json` เป็น `true` คุณจะได้รับอาร์เรย์ `values` แบบไม่มีการกรองเต็มรูปแบบพร้อมกับอาร์เรย์ `highlights` อาร์เรย์ `highlights` จะมีความยาวเท่ากับอาร์เรย์ค่าและค่าที่ไม่ได้เลือกจะถูกตั้งค่าเป็น `null` เมื่อเปิดใช้งานคุณสมบัตินี้แล้ว จึงเป็นความรับผิดชอบของวิชวลในการไฮไลต์ข้อมูลที่เหมาะสมโดยการเปรียบเทียบอาร์เรย์ `values` กับอาร์เรย์ `highlights`
 
 ![' dataview ' สนับสนุนการไฮไลต์](media/highlight/highlight-dataview-supports.png)
 
-<span data-ttu-id="2a265-112">ในตัวอย่าง คุณจะสังเกตเห็นว่ามี 1 แถบที่ถูกเลือก</span><span class="sxs-lookup"><span data-stu-id="2a265-112">In the example, you'll notice that 1 bar is selected.</span></span> <span data-ttu-id="2a265-113">และเป็นเฉพาะค่าในอาร์เรย์ไฮไลต์</span><span class="sxs-lookup"><span data-stu-id="2a265-113">And it's the only value in the highlights array.</span></span> <span data-ttu-id="2a265-114">นอกจากนี้ สิ่งสำคัญคือต้องทราบว่าอาจมีตัวเลือกหลายรายการและการไฮไลต์บางส่วนด้วย</span><span class="sxs-lookup"><span data-stu-id="2a265-114">It's also important to note that there could be multiple selections and partial highlights.</span></span> <span data-ttu-id="2a265-115">ค่าที่ไฮไลต์ไว้จะแสดงในมุมมองข้อมูล</span><span class="sxs-lookup"><span data-stu-id="2a265-115">The highlighted values will be presented in the data view.</span></span>
+ในตัวอย่าง คุณจะสังเกตเห็นว่ามี 1 แถบที่ถูกเลือก และเป็นเฉพาะค่าในอาร์เรย์ไฮไลต์ นอกจากนี้ สิ่งสำคัญคือต้องทราบว่าอาจมีตัวเลือกหลายรายการและการไฮไลต์บางส่วนด้วย ค่าที่ไฮไลต์ไว้จะแสดงในมุมมองข้อมูล
 
 > [!NOTE]
-> <span data-ttu-id="2a265-116">การแมปมุมมองข้อมูลแบบตารางไม่สนับสนุนคุณลักษณะการไฮไลท์</span><span class="sxs-lookup"><span data-stu-id="2a265-116">Table data view mapping doesn't support the highlights feature.</span></span>
+> การแมปมุมมองข้อมูลแบบตารางไม่สนับสนุนคุณลักษณะการไฮไลท์
 
-## <a name="highlight-data-points-with-categorical-data-view-mapping"></a><span data-ttu-id="2a265-117">ไฮไลต์จุดข้อมูลด้วยการแมปมุมมองข้อมูลตามประเภท</span><span class="sxs-lookup"><span data-stu-id="2a265-117">Highlight data points with categorical data view mapping</span></span>
+## <a name="highlight-data-points-with-categorical-data-view-mapping"></a>ไฮไลต์จุดข้อมูลด้วยการแมปมุมมองข้อมูลตามประเภท
 
-<span data-ttu-id="2a265-118">วิชวลที่มีการแมปมุมมองข้อมูลตามประเภทมี`capabilities.json`พร้อมด้วย`"supportsHighlight": true`พารามิเตอร์ </span><span class="sxs-lookup"><span data-stu-id="2a265-118">The visuals with categorical data view mapping have `capabilities.json` with `"supportsHighlight": true` parameter.</span></span> <span data-ttu-id="2a265-119">ตัวอย่างเช่น:</span><span class="sxs-lookup"><span data-stu-id="2a265-119">For example:</span></span>
+วิชวลที่มีการแมปมุมมองข้อมูลตามประเภทมี`capabilities.json`พร้อมด้วย`"supportsHighlight": true`พารามิเตอร์  ตัวอย่างเช่น:
 
 ```json
 {
@@ -68,7 +68,7 @@ ms.locfileid: "97886545"
 }
 ```
 
-<span data-ttu-id="2a265-120">รหัสแหล่งข้อมูลของวิชวลเริ่มต้นหลังจากลบรหัสที่ไม่จำเป็นจะมีลักษณะดังนี้:</span><span class="sxs-lookup"><span data-stu-id="2a265-120">The default visual source code after removing unnecessary code will look like this:</span></span>
+รหัสแหล่งข้อมูลของวิชวลเริ่มต้นหลังจากลบรหัสที่ไม่จำเป็นจะมีลักษณะดังนี้:
 
 ```typescript
 "use strict";
@@ -114,7 +114,7 @@ export class Visual implements IVisual {
 }
 ```
 
-<span data-ttu-id="2a265-121">นำเข้าอินเทอร์เฟสที่จำเป็นเพื่อประมวลผลข้อมูลจาก Power BI:</span><span class="sxs-lookup"><span data-stu-id="2a265-121">Import required interfaces to process data from Power BI:</span></span>
+นำเข้าอินเทอร์เฟสที่จำเป็นเพื่อประมวลผลข้อมูลจาก Power BI:
 
 ```typescript
 import DataViewCategorical = powerbi.DataViewCategorical;
@@ -123,7 +123,7 @@ import PrimitiveValue = powerbi.PrimitiveValue;
 import DataViewValueColumn = powerbi.DataViewValueColumn;
 ```
 
-<span data-ttu-id="2a265-122">สร้างองค์ประกอบ`div`ระดับสูงสำหรับค่าหมวดหมู่:</span><span class="sxs-lookup"><span data-stu-id="2a265-122">Create root `div` element for category values:</span></span>
+สร้างองค์ประกอบ`div`ระดับสูงสำหรับค่าหมวดหมู่:
 
 ```typescript
 export class Visual implements IVisual {
@@ -147,7 +147,7 @@ export class Visual implements IVisual {
 }
 ```
 
-<span data-ttu-id="2a265-123">ล้างเนื้อหาขององค์ประกอบ div ก่อนที่จะแสดงข้อมูลใหม่:</span><span class="sxs-lookup"><span data-stu-id="2a265-123">Clear content of div elements before rendering new data:</span></span>
+ล้างเนื้อหาขององค์ประกอบ div ก่อนที่จะแสดงข้อมูลใหม่:
 
 ```typescript
 // ...
@@ -162,7 +162,7 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-124">รับค่าหมวดหมู่และหน่วยวัดจากวัตถุ `dataView`:</span><span class="sxs-lookup"><span data-stu-id="2a265-124">Get categories and measure values from `dataView` object:</span></span>
+รับค่าหมวดหมู่และหน่วยวัดจากวัตถุ `dataView`:
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -185,13 +185,13 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-125">โดยที่ `categoryValues` คืออาร์เรย์ของค่าหมวดหมู่ `measureValues` เป็นอาร์เรย์ของหน่วยวัดและ `measureHighlights` คือส่วนที่ไฮไลต์ของค่า</span><span class="sxs-lookup"><span data-stu-id="2a265-125">Where `categoryValues` is an array of category values, `measureValues` is an array of measures, and `measureHighlights` is highlighted parts of values.</span></span>
+โดยที่ `categoryValues` คืออาร์เรย์ของค่าหมวดหมู่ `measureValues` เป็นอาร์เรย์ของหน่วยวัดและ `measureHighlights` คือส่วนที่ไฮไลต์ของค่า
 
 > [!NOTE]
-> <span data-ttu-id="2a265-126">ค่าของคุณสมบัติ `measureHighlights` อาจน้อยกว่าค่าของคุณสมบัติ `categoryValues`</span><span class="sxs-lookup"><span data-stu-id="2a265-126">Values of `measureHighlights` property can be less that values of `categoryValues` property.</span></span>
-> <span data-ttu-id="2a265-127">หมายความว่ามีการไฮไลต์ค่าบางส่วน</span><span class="sxs-lookup"><span data-stu-id="2a265-127">In means that value was higlighted partially.</span></span>
+> ค่าของคุณสมบัติ `measureHighlights` อาจน้อยกว่าค่าของคุณสมบัติ `categoryValues`
+> หมายความว่ามีการไฮไลต์ค่าบางส่วน
 
-<span data-ttu-id="2a265-128">ระบุอาร์เรย์ `categoryValues` และรับค่าและไฮไลต์ที่สอดคล้องกัน:</span><span class="sxs-lookup"><span data-stu-id="2a265-128">Enumerate `categoryValues` array and get corresponding values and highlights:</span></span>
+ระบุอาร์เรย์ `categoryValues` และรับค่าและไฮไลต์ที่สอดคล้องกัน:
 
 ```typescript
 // ...
@@ -205,7 +205,7 @@ categoryValues.forEach((category: PrimitiveValue, index: number) => {
 });
 ```
 
-<span data-ttu-id="2a265-129">สร้างองค์ประกอบ `div` และ `p` เพื่อแสดงและดูภาพค่ามุมมองข้อมูลใน DOM ของวิชวล:</span><span class="sxs-lookup"><span data-stu-id="2a265-129">Create `div` and `p` elements to display and visualize data view values in visual DOM:</span></span>
+สร้างองค์ประกอบ `div` และ `p` เพื่อแสดงและดูภาพค่ามุมมองข้อมูลใน DOM ของวิชวล:
 
 ```typescript
 categoryValues.forEach((category: PrimitiveValue, index: number) => {
@@ -246,7 +246,7 @@ categoryValues.forEach((category: PrimitiveValue, index: number) => {
 });
 ```
 
-<span data-ttu-id="2a265-130">ใช้ลักษณะที่จำเป็นสำหรับองค์ประกอบเพื่อใช้ `flex box` และกำหนดสีสำหรับองค์ประกอบ div:</span><span class="sxs-lookup"><span data-stu-id="2a265-130">Apply required styles for elements to use `flex box` and define colors for div elements:</span></span>
+ใช้ลักษณะที่จำเป็นสำหรับองค์ประกอบเพื่อใช้ `flex box` และกำหนดสีสำหรับองค์ประกอบ div:
 
 ```css
 div.vertical {
@@ -269,13 +269,13 @@ div.value {
 }
 ```
 
-<span data-ttu-id="2a265-131">ในผลลัพธ์ คุณควรมีมุมมองของวิชวลดังต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="2a265-131">In the result, you should have the following view of the visual.</span></span>
+ในผลลัพธ์ คุณควรมีมุมมองของวิชวลดังต่อไปนี้
 
 ![วิชวลที่มีการแมปมุมมองข้อมูลตามประเภทและการไฮไลต์](media/highlight/dev-categorical-visual-highlight-demo.gif)
 
-## <a name="highlight-data-points-with-matrix-data-view-mapping"></a><span data-ttu-id="2a265-133">ไฮไลต์จุดข้อมูลด้วยการแมปมุมมองข้อมูลแบบเมทริกซ์</span><span class="sxs-lookup"><span data-stu-id="2a265-133">Highlight data points with matrix data view mapping</span></span>
+## <a name="highlight-data-points-with-matrix-data-view-mapping"></a>ไฮไลต์จุดข้อมูลด้วยการแมปมุมมองข้อมูลแบบเมทริกซ์
 
-<span data-ttu-id="2a265-134">วิชวลที่มีการแมปมุมมองข้อมูลแบบเมทริกซ์มี`capabilities.json`พร้อมด้วย`"supportsHighlight": true`พารามิเตอร์ </span><span class="sxs-lookup"><span data-stu-id="2a265-134">The visuals with matrix data view mapping have `capabilities.json` with `"supportsHighlight": true` parameter.</span></span> <span data-ttu-id="2a265-135">ตัวอย่างเช่น:</span><span class="sxs-lookup"><span data-stu-id="2a265-135">For example:</span></span>
+วิชวลที่มีการแมปมุมมองข้อมูลแบบเมทริกซ์มี`capabilities.json`พร้อมด้วย`"supportsHighlight": true`พารามิเตอร์  ตัวอย่างเช่น:
 
 ```json
 {
@@ -321,32 +321,32 @@ div.value {
 }
 ```
 
-<span data-ttu-id="2a265-136">ข้อมูลตัวอย่างในการสร้างลำดับชั้นสำหรับการแมปมุมมองข้อมูลแบบเมทริกซ์:</span><span class="sxs-lookup"><span data-stu-id="2a265-136">The sample data to create hierarchy for matrix data view mapping:</span></span>
+ข้อมูลตัวอย่างในการสร้างลำดับชั้นสำหรับการแมปมุมมองข้อมูลแบบเมทริกซ์:
 
-|   <span data-ttu-id="2a265-137">Row1</span><span class="sxs-lookup"><span data-stu-id="2a265-137">Row1</span></span>   |   <span data-ttu-id="2a265-138">Row2</span><span class="sxs-lookup"><span data-stu-id="2a265-138">Row2</span></span>   |   <span data-ttu-id="2a265-139">Row3</span><span class="sxs-lookup"><span data-stu-id="2a265-139">Row3</span></span>   |   <span data-ttu-id="2a265-140">คอลัมน์ 1</span><span class="sxs-lookup"><span data-stu-id="2a265-140">Column1</span></span>   |   <span data-ttu-id="2a265-141">คอลัมน์2</span><span class="sxs-lookup"><span data-stu-id="2a265-141">Column2</span></span>   |   <span data-ttu-id="2a265-142">คอลัมน์3</span><span class="sxs-lookup"><span data-stu-id="2a265-142">Column3</span></span>   |   <span data-ttu-id="2a265-143">มูลค่า</span><span class="sxs-lookup"><span data-stu-id="2a265-143">Values</span></span>   |
+|   Row1   |   Row2   |   Row3   |   คอลัมน์ 1   |   คอลัมน์2   |   คอลัมน์3   |   มูลค่า   |
 |-----|-----|------|-------|-------|-------|-------|
-|   <span data-ttu-id="2a265-144">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-144">R1</span></span>   |   <span data-ttu-id="2a265-145">R11</span><span class="sxs-lookup"><span data-stu-id="2a265-145">R11</span></span>   |   <span data-ttu-id="2a265-146">R111</span><span class="sxs-lookup"><span data-stu-id="2a265-146">R111</span></span>   |   <span data-ttu-id="2a265-147">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-147">C1</span></span>   |   <span data-ttu-id="2a265-148">C11</span><span class="sxs-lookup"><span data-stu-id="2a265-148">C11</span></span>   |   <span data-ttu-id="2a265-149">C111</span><span class="sxs-lookup"><span data-stu-id="2a265-149">C111</span></span>   |   <span data-ttu-id="2a265-150">1</span><span class="sxs-lookup"><span data-stu-id="2a265-150">1</span></span>   |
-|   <span data-ttu-id="2a265-151">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-151">R1</span></span>   |   <span data-ttu-id="2a265-152">R11</span><span class="sxs-lookup"><span data-stu-id="2a265-152">R11</span></span>   |   <span data-ttu-id="2a265-153">R112</span><span class="sxs-lookup"><span data-stu-id="2a265-153">R112</span></span>   |   <span data-ttu-id="2a265-154">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-154">C1</span></span>   |   <span data-ttu-id="2a265-155">C11</span><span class="sxs-lookup"><span data-stu-id="2a265-155">C11</span></span>   |   <span data-ttu-id="2a265-156">C112</span><span class="sxs-lookup"><span data-stu-id="2a265-156">C112</span></span>   |   <span data-ttu-id="2a265-157">2</span><span class="sxs-lookup"><span data-stu-id="2a265-157">2</span></span>   |
-|   <span data-ttu-id="2a265-158">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-158">R1</span></span>   |   <span data-ttu-id="2a265-159">R11</span><span class="sxs-lookup"><span data-stu-id="2a265-159">R11</span></span>   |   <span data-ttu-id="2a265-160">R113</span><span class="sxs-lookup"><span data-stu-id="2a265-160">R113</span></span>   |   <span data-ttu-id="2a265-161">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-161">C1</span></span>   |   <span data-ttu-id="2a265-162">C11</span><span class="sxs-lookup"><span data-stu-id="2a265-162">C11</span></span>   |   <span data-ttu-id="2a265-163">C113</span><span class="sxs-lookup"><span data-stu-id="2a265-163">C113</span></span>   |   <span data-ttu-id="2a265-164">3</span><span class="sxs-lookup"><span data-stu-id="2a265-164">3</span></span>   |
-|   <span data-ttu-id="2a265-165">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-165">R1</span></span>   |   <span data-ttu-id="2a265-166">R12</span><span class="sxs-lookup"><span data-stu-id="2a265-166">R12</span></span>   |   <span data-ttu-id="2a265-167">R121</span><span class="sxs-lookup"><span data-stu-id="2a265-167">R121</span></span>   |   <span data-ttu-id="2a265-168">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-168">C1</span></span>   |   <span data-ttu-id="2a265-169">C12</span><span class="sxs-lookup"><span data-stu-id="2a265-169">C12</span></span>   |   <span data-ttu-id="2a265-170">C121</span><span class="sxs-lookup"><span data-stu-id="2a265-170">C121</span></span>   |   <span data-ttu-id="2a265-171">4</span><span class="sxs-lookup"><span data-stu-id="2a265-171">4</span></span>   |
-|   <span data-ttu-id="2a265-172">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-172">R1</span></span>   |   <span data-ttu-id="2a265-173">R12</span><span class="sxs-lookup"><span data-stu-id="2a265-173">R12</span></span>   |   <span data-ttu-id="2a265-174">R122</span><span class="sxs-lookup"><span data-stu-id="2a265-174">R122</span></span>   |   <span data-ttu-id="2a265-175">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-175">C1</span></span>   |   <span data-ttu-id="2a265-176">C12</span><span class="sxs-lookup"><span data-stu-id="2a265-176">C12</span></span>   |   <span data-ttu-id="2a265-177">C122</span><span class="sxs-lookup"><span data-stu-id="2a265-177">C122</span></span>   |   <span data-ttu-id="2a265-178">5</span><span class="sxs-lookup"><span data-stu-id="2a265-178">5</span></span>   |
-|   <span data-ttu-id="2a265-179">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-179">R1</span></span>   |   <span data-ttu-id="2a265-180">R12</span><span class="sxs-lookup"><span data-stu-id="2a265-180">R12</span></span>   |   <span data-ttu-id="2a265-181">R123</span><span class="sxs-lookup"><span data-stu-id="2a265-181">R123</span></span>   |   <span data-ttu-id="2a265-182">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-182">C1</span></span>   |   <span data-ttu-id="2a265-183">C12</span><span class="sxs-lookup"><span data-stu-id="2a265-183">C12</span></span>   |   <span data-ttu-id="2a265-184">C123</span><span class="sxs-lookup"><span data-stu-id="2a265-184">C123</span></span>   |   <span data-ttu-id="2a265-185">6</span><span class="sxs-lookup"><span data-stu-id="2a265-185">6</span></span>   |
-|   <span data-ttu-id="2a265-186">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-186">R1</span></span>   |   <span data-ttu-id="2a265-187">R13</span><span class="sxs-lookup"><span data-stu-id="2a265-187">R13</span></span>   |   <span data-ttu-id="2a265-188">R131</span><span class="sxs-lookup"><span data-stu-id="2a265-188">R131</span></span>   |   <span data-ttu-id="2a265-189">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-189">C1</span></span>   |   <span data-ttu-id="2a265-190">C13</span><span class="sxs-lookup"><span data-stu-id="2a265-190">C13</span></span>   |   <span data-ttu-id="2a265-191">C131</span><span class="sxs-lookup"><span data-stu-id="2a265-191">C131</span></span>   |   <span data-ttu-id="2a265-192">7</span><span class="sxs-lookup"><span data-stu-id="2a265-192">7</span></span>   |
-|   <span data-ttu-id="2a265-193">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-193">R1</span></span>   |   <span data-ttu-id="2a265-194">R13</span><span class="sxs-lookup"><span data-stu-id="2a265-194">R13</span></span>   |   <span data-ttu-id="2a265-195">R132</span><span class="sxs-lookup"><span data-stu-id="2a265-195">R132</span></span>   |   <span data-ttu-id="2a265-196">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-196">C1</span></span>   |   <span data-ttu-id="2a265-197">C13</span><span class="sxs-lookup"><span data-stu-id="2a265-197">C13</span></span>   |   <span data-ttu-id="2a265-198">C132</span><span class="sxs-lookup"><span data-stu-id="2a265-198">C132</span></span>   |   <span data-ttu-id="2a265-199">8</span><span class="sxs-lookup"><span data-stu-id="2a265-199">8</span></span>   |
-|   <span data-ttu-id="2a265-200">R1</span><span class="sxs-lookup"><span data-stu-id="2a265-200">R1</span></span>   |   <span data-ttu-id="2a265-201">R13</span><span class="sxs-lookup"><span data-stu-id="2a265-201">R13</span></span>   |   <span data-ttu-id="2a265-202">R133</span><span class="sxs-lookup"><span data-stu-id="2a265-202">R133</span></span>   |   <span data-ttu-id="2a265-203">C1</span><span class="sxs-lookup"><span data-stu-id="2a265-203">C1</span></span>   |   <span data-ttu-id="2a265-204">C13</span><span class="sxs-lookup"><span data-stu-id="2a265-204">C13</span></span>   |   <span data-ttu-id="2a265-205">C133</span><span class="sxs-lookup"><span data-stu-id="2a265-205">C133</span></span>   |   <span data-ttu-id="2a265-206">9</span><span class="sxs-lookup"><span data-stu-id="2a265-206">9</span></span>   |
-|   <span data-ttu-id="2a265-207">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-207">R2</span></span>   |   <span data-ttu-id="2a265-208">R21</span><span class="sxs-lookup"><span data-stu-id="2a265-208">R21</span></span>   |   <span data-ttu-id="2a265-209">R211</span><span class="sxs-lookup"><span data-stu-id="2a265-209">R211</span></span>   |   <span data-ttu-id="2a265-210">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-210">C2</span></span>   |   <span data-ttu-id="2a265-211">C21</span><span class="sxs-lookup"><span data-stu-id="2a265-211">C21</span></span>   |   <span data-ttu-id="2a265-212">C211</span><span class="sxs-lookup"><span data-stu-id="2a265-212">C211</span></span>   |   <span data-ttu-id="2a265-213">10</span><span class="sxs-lookup"><span data-stu-id="2a265-213">10</span></span>   |
-|   <span data-ttu-id="2a265-214">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-214">R2</span></span>   |   <span data-ttu-id="2a265-215">R21</span><span class="sxs-lookup"><span data-stu-id="2a265-215">R21</span></span>   |   <span data-ttu-id="2a265-216">R212</span><span class="sxs-lookup"><span data-stu-id="2a265-216">R212</span></span>   |   <span data-ttu-id="2a265-217">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-217">C2</span></span>   |   <span data-ttu-id="2a265-218">C21</span><span class="sxs-lookup"><span data-stu-id="2a265-218">C21</span></span>   |   <span data-ttu-id="2a265-219">C212</span><span class="sxs-lookup"><span data-stu-id="2a265-219">C212</span></span>   |   <span data-ttu-id="2a265-220">11</span><span class="sxs-lookup"><span data-stu-id="2a265-220">11</span></span>   |
-|   <span data-ttu-id="2a265-221">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-221">R2</span></span>   |   <span data-ttu-id="2a265-222">R21</span><span class="sxs-lookup"><span data-stu-id="2a265-222">R21</span></span>   |   <span data-ttu-id="2a265-223">R213</span><span class="sxs-lookup"><span data-stu-id="2a265-223">R213</span></span>   |   <span data-ttu-id="2a265-224">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-224">C2</span></span>   |   <span data-ttu-id="2a265-225">C21</span><span class="sxs-lookup"><span data-stu-id="2a265-225">C21</span></span>   |   <span data-ttu-id="2a265-226">C213</span><span class="sxs-lookup"><span data-stu-id="2a265-226">C213</span></span>   |   <span data-ttu-id="2a265-227">12</span><span class="sxs-lookup"><span data-stu-id="2a265-227">12</span></span>   |
-|   <span data-ttu-id="2a265-228">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-228">R2</span></span>   |   <span data-ttu-id="2a265-229">R22</span><span class="sxs-lookup"><span data-stu-id="2a265-229">R22</span></span>   |   <span data-ttu-id="2a265-230">R221</span><span class="sxs-lookup"><span data-stu-id="2a265-230">R221</span></span>   |   <span data-ttu-id="2a265-231">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-231">C2</span></span>   |   <span data-ttu-id="2a265-232">C22</span><span class="sxs-lookup"><span data-stu-id="2a265-232">C22</span></span>   |   <span data-ttu-id="2a265-233">C221</span><span class="sxs-lookup"><span data-stu-id="2a265-233">C221</span></span>   |   <span data-ttu-id="2a265-234">13</span><span class="sxs-lookup"><span data-stu-id="2a265-234">13</span></span>   |
-|   <span data-ttu-id="2a265-235">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-235">R2</span></span>   |   <span data-ttu-id="2a265-236">R22</span><span class="sxs-lookup"><span data-stu-id="2a265-236">R22</span></span>   |   <span data-ttu-id="2a265-237">R222</span><span class="sxs-lookup"><span data-stu-id="2a265-237">R222</span></span>   |   <span data-ttu-id="2a265-238">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-238">C2</span></span>   |   <span data-ttu-id="2a265-239">C22</span><span class="sxs-lookup"><span data-stu-id="2a265-239">C22</span></span>   |   <span data-ttu-id="2a265-240">C222</span><span class="sxs-lookup"><span data-stu-id="2a265-240">C222</span></span>   |   <span data-ttu-id="2a265-241">14</span><span class="sxs-lookup"><span data-stu-id="2a265-241">14</span></span>   |
-|   <span data-ttu-id="2a265-242">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-242">R2</span></span>   |   <span data-ttu-id="2a265-243">R22</span><span class="sxs-lookup"><span data-stu-id="2a265-243">R22</span></span>   |   <span data-ttu-id="2a265-244">R223</span><span class="sxs-lookup"><span data-stu-id="2a265-244">R223</span></span>   |   <span data-ttu-id="2a265-245">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-245">C2</span></span>   |   <span data-ttu-id="2a265-246">C22</span><span class="sxs-lookup"><span data-stu-id="2a265-246">C22</span></span>   |   <span data-ttu-id="2a265-247">C223</span><span class="sxs-lookup"><span data-stu-id="2a265-247">C223</span></span>   |   <span data-ttu-id="2a265-248">16</span><span class="sxs-lookup"><span data-stu-id="2a265-248">16</span></span>   |
-|   <span data-ttu-id="2a265-249">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-249">R2</span></span>   |   <span data-ttu-id="2a265-250">R23</span><span class="sxs-lookup"><span data-stu-id="2a265-250">R23</span></span>   |   <span data-ttu-id="2a265-251">R231</span><span class="sxs-lookup"><span data-stu-id="2a265-251">R231</span></span>   |   <span data-ttu-id="2a265-252">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-252">C2</span></span>   |   <span data-ttu-id="2a265-253">C23</span><span class="sxs-lookup"><span data-stu-id="2a265-253">C23</span></span>   |   <span data-ttu-id="2a265-254">C231</span><span class="sxs-lookup"><span data-stu-id="2a265-254">C231</span></span>   |   <span data-ttu-id="2a265-255">17</span><span class="sxs-lookup"><span data-stu-id="2a265-255">17</span></span>   |
-|   <span data-ttu-id="2a265-256">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-256">R2</span></span>   |   <span data-ttu-id="2a265-257">R23</span><span class="sxs-lookup"><span data-stu-id="2a265-257">R23</span></span>   |   <span data-ttu-id="2a265-258">R232</span><span class="sxs-lookup"><span data-stu-id="2a265-258">R232</span></span>   |   <span data-ttu-id="2a265-259">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-259">C2</span></span>   |   <span data-ttu-id="2a265-260">C23</span><span class="sxs-lookup"><span data-stu-id="2a265-260">C23</span></span>   |   <span data-ttu-id="2a265-261">C232</span><span class="sxs-lookup"><span data-stu-id="2a265-261">C232</span></span>   |   <span data-ttu-id="2a265-262">18</span><span class="sxs-lookup"><span data-stu-id="2a265-262">18</span></span>   |
-|   <span data-ttu-id="2a265-263">R2</span><span class="sxs-lookup"><span data-stu-id="2a265-263">R2</span></span>   |   <span data-ttu-id="2a265-264">R23</span><span class="sxs-lookup"><span data-stu-id="2a265-264">R23</span></span>   |   <span data-ttu-id="2a265-265">R233</span><span class="sxs-lookup"><span data-stu-id="2a265-265">R233</span></span>   |   <span data-ttu-id="2a265-266">C2</span><span class="sxs-lookup"><span data-stu-id="2a265-266">C2</span></span>   |   <span data-ttu-id="2a265-267">C23</span><span class="sxs-lookup"><span data-stu-id="2a265-267">C23</span></span>   |   <span data-ttu-id="2a265-268">C233</span><span class="sxs-lookup"><span data-stu-id="2a265-268">C233</span></span>   |   <span data-ttu-id="2a265-269">19</span><span class="sxs-lookup"><span data-stu-id="2a265-269">19</span></span>   |
+|   R1   |   R11   |   R111   |   C1   |   C11   |   C111   |   1   |
+|   R1   |   R11   |   R112   |   C1   |   C11   |   C112   |   2   |
+|   R1   |   R11   |   R113   |   C1   |   C11   |   C113   |   3   |
+|   R1   |   R12   |   R121   |   C1   |   C12   |   C121   |   4   |
+|   R1   |   R12   |   R122   |   C1   |   C12   |   C122   |   5   |
+|   R1   |   R12   |   R123   |   C1   |   C12   |   C123   |   6   |
+|   R1   |   R13   |   R131   |   C1   |   C13   |   C131   |   7   |
+|   R1   |   R13   |   R132   |   C1   |   C13   |   C132   |   8   |
+|   R1   |   R13   |   R133   |   C1   |   C13   |   C133   |   9   |
+|   R2   |   R21   |   R211   |   C2   |   C21   |   C211   |   10   |
+|   R2   |   R21   |   R212   |   C2   |   C21   |   C212   |   11   |
+|   R2   |   R21   |   R213   |   C2   |   C21   |   C213   |   12   |
+|   R2   |   R22   |   R221   |   C2   |   C22   |   C221   |   13   |
+|   R2   |   R22   |   R222   |   C2   |   C22   |   C222   |   14   |
+|   R2   |   R22   |   R223   |   C2   |   C22   |   C223   |   16   |
+|   R2   |   R23   |   R231   |   C2   |   C23   |   C231   |   17   |
+|   R2   |   R23   |   R232   |   C2   |   C23   |   C232   |   18   |
+|   R2   |   R23   |   R233   |   C2   |   C23   |   C233   |   19   |
 
-<span data-ttu-id="2a265-270">สร้างโครงการวิชวลเริ่มต้นและใช้ตัวอย่างของ `capabilities.json`</span><span class="sxs-lookup"><span data-stu-id="2a265-270">Create the default visual project and apply sample of `capabilities.json`.</span></span>
+สร้างโครงการวิชวลเริ่มต้นและใช้ตัวอย่างของ `capabilities.json`
 
-<span data-ttu-id="2a265-271">รหัสแหล่งข้อมูลของวิชวลเริ่มต้นหลังจากลบรหัสที่ไม่จำเป็นจะมีลักษณะ:</span><span class="sxs-lookup"><span data-stu-id="2a265-271">Default visual source code after removing unessesray code will look:</span></span>
+รหัสแหล่งข้อมูลของวิชวลเริ่มต้นหลังจากลบรหัสที่ไม่จำเป็นจะมีลักษณะ:
 
 ```typescript
 "use strict";
@@ -387,7 +387,7 @@ export class Visual implements IVisual {
 }
 ```
 
-<span data-ttu-id="2a265-272">นำเข้าอินเทอร์เฟสที่จำเป็นเพื่อประมวลผลข้อมูลจาก Power BI:</span><span class="sxs-lookup"><span data-stu-id="2a265-272">Import required interfaces to process data from Power BI:</span></span>
+นำเข้าอินเทอร์เฟสที่จำเป็นเพื่อประมวลผลข้อมูลจาก Power BI:
 
 ```typescript
 import DataViewMatrix = powerbi.DataViewMatrix;
@@ -395,7 +395,7 @@ import DataViewMatrixNode = powerbi.DataViewMatrixNode;
 import DataViewHierarchyLevel = powerbi.DataViewHierarchyLevel;
 ```
 
-<span data-ttu-id="2a265-273">สร้างองค์ประกอบ `div` สองแบบสำหรับเค้าโครงวิชวล:</span><span class="sxs-lookup"><span data-stu-id="2a265-273">Create two `div` elements for visual layout:</span></span>
+สร้างองค์ประกอบ `div` สองแบบสำหรับเค้าโครงวิชวล:
 
 ```typescript
 constructor(options: VisualConstructorOptions) {
@@ -409,7 +409,7 @@ constructor(options: VisualConstructorOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-274">ตรวจสอบข้อมูลในวิธีการ `update` เพื่อให้แน่ใจว่าวิชวลได้รับข้อมูล:</span><span class="sxs-lookup"><span data-stu-id="2a265-274">Check the data in `update` method, to ensure that visual gets data:</span></span>
+ตรวจสอบข้อมูลในวิธีการ `update` เพื่อให้แน่ใจว่าวิชวลได้รับข้อมูล:
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -428,7 +428,7 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-275">ล้างเนื้อหาขององค์ประกอบ `div` ก่อนที่จะแสดงข้อมูลใหม่:</span><span class="sxs-lookup"><span data-stu-id="2a265-275">Clear content of `div` elements before render new data:</span></span>
+ล้างเนื้อหาขององค์ประกอบ `div` ก่อนที่จะแสดงข้อมูลใหม่:
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -454,7 +454,7 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-276">สร้างฟังก์ชัน `treeWalker` เพื่อสำรวจโครงสร้างข้อมูลแบบเมทริกซ์:</span><span class="sxs-lookup"><span data-stu-id="2a265-276">Create `treeWalker` function to traverse matrix data structure:</span></span>
+สร้างฟังก์ชัน `treeWalker` เพื่อสำรวจโครงสร้างข้อมูลแบบเมทริกซ์:
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -466,9 +466,9 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-277">โดยที่ `matrixNode` คือโหนดปัจจุบัน `levels` คือคอลัมน์เมตาดาต้าของระดับลำดับชั้นนี้ `div` - องค์ประกอบหลักสำหรับองค์ประกอบ HTML ย่อย</span><span class="sxs-lookup"><span data-stu-id="2a265-277">Where `matrixNode` is the current node, `levels` is metadata columns of this hierarchy level, `div` - parent element for child HTML elements.</span></span>
+โดยที่ `matrixNode` คือโหนดปัจจุบัน `levels` คือคอลัมน์เมตาดาต้าของระดับลำดับชั้นนี้ `div` - องค์ประกอบหลักสำหรับองค์ประกอบ HTML ย่อย
 
-<span data-ttu-id="2a265-278">`treeWalker` คือฟังก์ชันแบบเรียกใช้ซ้ำ จำเป็นต้องสร้างองค์ประกอบ `div` และ `p` สำหรับข้อความเป็นส่วนหัว และเรียกใช้ฟังก์ชันสำหรับองค์ประกอบย่อยของโหนด:</span><span class="sxs-lookup"><span data-stu-id="2a265-278">The `treeWalker` is recursive function, need to create `div` element and `p` for text as header, and call the function for child elements of node:</span></span>
+`treeWalker` คือฟังก์ชันแบบเรียกใช้ซ้ำ จำเป็นต้องสร้างองค์ประกอบ `div` และ `p` สำหรับข้อความเป็นส่วนหัว และเรียกใช้ฟังก์ชันสำหรับองค์ประกอบย่อยของโหนด:
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -493,7 +493,7 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-279">เรียกใช้ฟังก์ชันสำหรับองค์ประกอบระดับสูงของคอลัมน์และแถวของโครงสร้างมุมมองข้อมูลแบบเมทริกซ์:</span><span class="sxs-lookup"><span data-stu-id="2a265-279">Call the function for root elements of column and row of matrix data view structure:</span></span>
+เรียกใช้ฟังก์ชันสำหรับองค์ประกอบระดับสูงของคอลัมน์และแถวของโครงสร้างมุมมองข้อมูลแบบเมทริกซ์:
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -514,7 +514,7 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-280">สร้าง selectionID สำหรับโหนดและสร้างปุ่มเพื่อแสดงโหนด:</span><span class="sxs-lookup"><span data-stu-id="2a265-280">Generate selectionID for nodes and Create buttons to display nodes:</span></span>
+สร้าง selectionID สำหรับโหนดและสร้างปุ่มเพื่อแสดงโหนด:
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -546,9 +546,9 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-281">ขั้นตอนหลักของการใช้การไฮไลต์คือการประมวลผลอาร์เรย์เพิ่มเติมของค่า</span><span class="sxs-lookup"><span data-stu-id="2a265-281">The main step of using highlighting is to process additional array of values.</span></span>
+ขั้นตอนหลักของการใช้การไฮไลต์คือการประมวลผลอาร์เรย์เพิ่มเติมของค่า
 
-<span data-ttu-id="2a265-282">หากคุณตรวจสอบวัตถุของโหนดเทอร์มินัล คุณจะเห็นว่าอาร์เรย์ค่ามีคุณสมบัติสองอย่างคือ ค่าและไฮไลต์:</span><span class="sxs-lookup"><span data-stu-id="2a265-282">If you inspect the object of terminal node, you can see that the values array has two properties - value and highlight:</span></span>
+หากคุณตรวจสอบวัตถุของโหนดเทอร์มินัล คุณจะเห็นว่าอาร์เรย์ค่ามีคุณสมบัติสองอย่างคือ ค่าและไฮไลต์:
 
 ```javascript
 JSON.stringify(options.dataViews[0].matrix.rows.root.children[0].children[0].children[0], null, " ");
@@ -580,13 +580,13 @@ JSON.stringify(options.dataViews[0].matrix.rows.root.children[0].children[0].chi
 }
 ```
 
-<span data-ttu-id="2a265-283">โดยที่คุณสมบัติ `value` แสดงค่าของโหนดโดยไม่ต้องใช้ตัวเลือกจากวิชวลอื่น ๆ และคุณสมบัติการไฮไลต์แสดงให้เห็นว่าเป็นส่วนหนึ่งของข้อมูลที่ถูกไฮไลต์</span><span class="sxs-lookup"><span data-stu-id="2a265-283">Where `value` property represents value of node without applying a selection from other visual, and highlight property indicates which part of data was highlighted.</span></span>
+โดยที่คุณสมบัติ `value` แสดงค่าของโหนดโดยไม่ต้องใช้ตัวเลือกจากวิชวลอื่น ๆ และคุณสมบัติการไฮไลต์แสดงให้เห็นว่าเป็นส่วนหนึ่งของข้อมูลที่ถูกไฮไลต์
 
 > [!NOTE]
-> <span data-ttu-id="2a265-284">ค่าของคุณสมบัติ `highlight` อาจน้อยกว่าค่าของคุณสมบัติ `value`</span><span class="sxs-lookup"><span data-stu-id="2a265-284">Value of `highlight` property can be less that value of `value` property.</span></span>
-> <span data-ttu-id="2a265-285">หมายความว่ามีการไฮไลต์ค่าบางส่วน</span><span class="sxs-lookup"><span data-stu-id="2a265-285">In means that value was higlighted partially.</span></span>
+> ค่าของคุณสมบัติ `highlight` อาจน้อยกว่าค่าของคุณสมบัติ `value`
+> หมายความว่ามีการไฮไลต์ค่าบางส่วน
 
-<span data-ttu-id="2a265-286">เพิ่มรหัสเพื่อประมวลผลอาร์เรย์ `values` ของโหนดถ้าแสดง:</span><span class="sxs-lookup"><span data-stu-id="2a265-286">Add the code to process the `values` array of node if it is presented:</span></span>
+เพิ่มรหัสเพื่อประมวลผลอาร์เรย์ `values` ของโหนดถ้าแสดง:
 
 ```typescript
 public update(options: VisualUpdateOptions) {
@@ -641,12 +641,12 @@ public update(options: VisualUpdateOptions) {
 }
 ```
 
-<span data-ttu-id="2a265-287">ด้วยเหตุนี้ คุณจะได้รับวิชวลที่มีปุ่มและค่า `highlighted value/default value`</span><span class="sxs-lookup"><span data-stu-id="2a265-287">As the result you'll get the visual with buttons and values `highlighted value/default value`</span></span>
+ด้วยเหตุนี้ คุณจะได้รับวิชวลที่มีปุ่มและค่า `highlighted value/default value`
 
 ![วิชวลที่มีการแมปและการไฮไลต์มุมมองข้อมูลแบบเมทริกซ์](media/highlight/dev-matrix-visual-highlight-demo.gif)
 
-## <a name="next-steps"></a><span data-ttu-id="2a265-289">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="2a265-289">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-* [<span data-ttu-id="2a265-290">อ่านเกี่ยวกับการแมปมุมมองข้อมูลแบบเมทริกซ์</span><span class="sxs-lookup"><span data-stu-id="2a265-290">Read about matrix data view mappings</span></span>](dataview-mappings.md#matrix-data-mapping)
+* [อ่านเกี่ยวกับการแมปมุมมองข้อมูลแบบเมทริกซ์](dataview-mappings.md#matrix-data-mapping)
 
-* [<span data-ttu-id="2a265-291">อ่านเกี่ยวกับความสามารถของวิชวล</span><span class="sxs-lookup"><span data-stu-id="2a265-291">Read about capabilities of the visual</span></span>](capabilities.md)
+* [อ่านเกี่ยวกับความสามารถของวิชวล](capabilities.md)

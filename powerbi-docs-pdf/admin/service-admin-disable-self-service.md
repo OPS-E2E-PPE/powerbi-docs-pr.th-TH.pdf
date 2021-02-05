@@ -7,126 +7,183 @@ ms.reviewer: ''
 ms.service: powerbi
 ms.subservice: powerbi-admin
 ms.topic: how-to
-ms.date: 04/08/2020
+ms.date: 01/31/2021
 ms.custom: licensing support
 LocalizationGroup: Administration
-ms.openlocfilehash: ff695d49caeab7bed88b932cec6aaec11ec4df29
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: 80e263cc6e67c28b7593fcf10aea4c81c9f4af86
+ms.sourcegitcommit: f7330dabb9cd8bce90bb2efec3e3273a11578f10
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96413690"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99494316"
 ---
-# <a name="enable-or-disable-self-service-sign-up-and-purchasing"></a><span data-ttu-id="660f7-103">เปิดหรือปิดใช้งานการลงชื่อสมัครใช้และการสั่งซื้อบริการด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-103">Enable or disable self-service sign-up and purchasing</span></span>
+# <a name="enable-or-disable-self-service-sign-up-and-purchasing"></a>เปิดหรือปิดใช้งานการลงชื่อสมัครใช้และการสั่งซื้อบริการด้วยตนเอง
 
-<span data-ttu-id="660f7-104">ในองค์กรส่วนใหญ่ จะเปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเองไว้เป็นค่าเริ่มต้นอยู่แล้ว</span><span class="sxs-lookup"><span data-stu-id="660f7-104">In most organizations, self-service sign-up is enabled by default.</span></span> <span data-ttu-id="660f7-105">ผู้ใช้แต่ละคนในองค์กรของคุณสามารถลงทะเบียน Power BI โดยใช้บัญชีของสถานที่ทำงานหรือของโรงเรียนของตนเองได้</span><span class="sxs-lookup"><span data-stu-id="660f7-105">Individual users in your organization can sign up for Power BI using their work or school account.</span></span> <span data-ttu-id="660f7-106">และผู้ใช้อาจได้รับการเสนอตัวเลือกเพื่อซื้อสิทธิการใช้งาน Power BI Pro โดยตรง ถ้าผู้ใช้พยายามใช้งานคุณลักษณะที่ต้องใช้ในระดับ Pro</span><span class="sxs-lookup"><span data-stu-id="660f7-106">Users may also be offered the option to directly purchase a Power BI Pro license if they try to use a feature that requires Pro.</span></span> <span data-ttu-id="660f7-107">ในฐานะผู้ดูแลระบบ คุณสามารถกำหนดได้ว่าจะเปิดหรือปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-107">As an administrator, you determine whether to enable or disable self-service sign-up.</span></span> <span data-ttu-id="660f7-108">และคุณยังสามารถควบคุมว่าผู้ใช้ในองค์กรของคุณสามารถทำการซื้อบริการต่าง ๆ ด้วยตนเองเพื่อรับสิทธิการใช้งานของตนเองได้หรือไม่อีกด้วย</span><span class="sxs-lookup"><span data-stu-id="660f7-108">You can also control whether users in your organization can make self-service purchases to get their own license.</span></span>
+## <a name="what-is-self-service"></a>บริการตนเองคืออะไร
+
+บริการตนเองอ้างอิงถึงความสามารถสำหรับบุคคลในองค์กร (ที่ทำงานหรือโรงเรียน) ในการลงทะเบียนเพื่อใช้บริการที่ชำระเงินโดยการสมัครสมาชิกขององค์กรของพวกเขาหรือใช้บริการฟรีโดยไม่ต้องขอให้องค์กรของพวกเขาดำเนินการในนามของพวกเขา แต่ละบุคคลไปยังเว็บไซต์ของ Microsoft ค้นหาบริการระบบคลาวด์ที่องค์กรของพวกเขาเสนอและใช้ที่อยู่อีเมลขององค์กรของพวกเขาเพื่อลงทะเบียนบริการดังกล่าว 
+
+ในหลายกรณีองค์กรได้ชำระค่าธรรมเนียมสำหรับการสมัครใช้งานไปยังบริการนั้น ในกรณีอื่นๆบุคคลเป็นผู้ใช้คนแรกและเป็นผู้ดูแลระบบสำหรับบริการ สำหรับใบอนุญาตรุ่นทดลองใช้ฟรีหรือไม่จำเป็นต้องมีการซื้อ แต่สำหรับ Power BI Pro องค์กรมีหน้าที่รับผิดชอบในการชำระค่าบริการรายเดือน 
+
+ในฐานะเป็นผู้ดูแล Microsoft 365 คุณสามารถดูว่าใครลงทะเบียนสำหรับการทดลองใช้สิทธิ์การใช้งานและการสมัครสมาชิก
 
 > [!NOTE]
-><span data-ttu-id="660f7-109">ถ้าคุณได้รับ Power BI ผ่านทางผู้ให้บริการโซลูชัน Cloud ของ Microsoft (CSP) การตั้งค่าอาจถูกปิดใช้งานไว้เพื่อไม่ให้ผู้ใช้สามารถลงทะเบียนเป็นรายบุคคลได้</span><span class="sxs-lookup"><span data-stu-id="660f7-109">If you acquired Power BI through a Microsoft Cloud Solution Provider (CSP), the setting might be disabled to block users from signing up individually.</span></span> <span data-ttu-id="660f7-110">CSP ของคุณอาจทำหน้าที่เป็นผู้ดูแลระบบส่วนกลางสำหรับองค์กรของคุณด้วย ซึ่งทำให้คุณต้องติดต่อพวกเขาเพื่อช่วยคุณเปลี่ยนการตั้งค่านี้</span><span class="sxs-lookup"><span data-stu-id="660f7-110">Your CSP may also be acting as the global admin for your organization, requiring that you contact them to help you change this setting.</span></span>
+> การลงทะเบียนแบบบริการตนเองจะใช้ได้กับลูกค้า cloud เชิงพาณิชย์เท่านั้นและไม่ได้เป็นเมฆหรือลูกค้าภาครัฐ
+
+## <a name="when-to-use-self-service-sign-up-and-purchase"></a>เมื่อต้องการใช้การลงทะเบียนและการซื้อแบบบริการตนเอง
+
+### <a name="self-service-is-a-good-idea"></a>บริการตนเองเป็นความคิดที่ดี: 
+
+- ในองค์กรที่มีขนาดใหญ่และมีการกระจายตัว (ที่ทำงานหรือโรงเรียน) ซึ่งบุคคลมักจะมีความยืดหยุ่นในการซื้อ SaaS (ซอฟต์แวร์ในฐานะเป็นบริการ) สิทธิ์การใช้งานของตนเอง 
+- สำหรับองค์กรหนึ่งคนหรือหน่วยงานขนาดเล็กที่จำเป็นต้องซื้อสิทธิ์การใช้งาน Power BI Pro เดียวเท่านั้นหรือเพียงไม่กี่ใบอนุญาต
+- สำหรับบุคคลที่สนใจในการลองใช้ Power BI ให้ความเชี่ยวชาญก่อนซื้อการสมัครใช้งานสำหรับทั้งองค์กร
+- สำหรับผู้ใช้ปัจจุบันที่มีสิทธิ์การใช้งาน Power BI ฟรีที่ตอนนี้คุณต้องการสร้างและแชร์เนื้อหาและอัปเกรดตัวเองให้เป็นรุ่นทดลองใช้ Power BI Pro 
+
+### <a name="you-may-want-to-disable-self-service-when"></a>คุณอาจต้องการปิดใช้งานบริการตนเองเมื่อ:
+
+- องค์กรของคุณมีกระบวนการจัดหาเพื่อให้ตรงตามความต้องการด้านการปฏิบัติตามข้อบังคับการรักษาความปลอดภัยและการกำกับดูแล คุณจำเป็นต้องตรวจสอบให้แน่ใจว่าสิทธิ์การใช้งาน Power BI Pro ทั้งหมดได้รับการอนุมัติและจัดการตามกระบวนการที่กำหนดไว้ 
+- องค์กรของคุณมีข้อกำหนดสำหรับผู้ใช้ Power BI Pro ใหม่เช่นการฝึกอบรมที่จำเป็นหรือการยอมรับนโยบายการป้องกันข้อมูลของผู้ใช้
+- องค์กรของคุณห้ามการใช้บริการของ Power BI เนื่องจากข้อมูลความเป็นส่วนตัวหรือข้อกังวลอื่นๆและจำเป็นต้องควบคุมการกำหนดสิทธิ์การใช้งาน Power BI ฟรีอย่างใกล้ชิด
+- เพื่อให้แน่ใจว่าสิทธิ์การใช้งาน Power BI Pro ทั้งหมดอยู่ภายใต้ข้อตกลงขององค์กรเพื่อที่จะได้รับประโยชน์จากอัตราการให้สิทธิ์อนุญาตที่เจรจา/ส่วนลด
+- สำหรับผู้ใช้ปัจจุบันที่มีสิทธิ์การใช้งาน Power BI ฟรีซึ่งได้รับการพร้อมท์ให้ลองหรือซื้อสิทธิ์การใช้งาน Power BI Pro โดยตรง องค์กรของคุณอาจไม่ต้องการให้ผู้ใช้เหล่านี้อัปเกรดเนื่องจากความปลอดภัยความเป็นส่วนตัวหรือค่าใช้จ่าย
+
+
+## <a name="enable-and-disable-self-service"></a>เปิดใช้งานและปิดใช้งานบริการตนเอง
+
+ในฐานะผู้ดูแลระบบ คุณสามารถกำหนดได้ว่าจะเปิดหรือปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเอง คุณยังกำหนดว่าผู้ใช้ในองค์กรของคุณสามารถทำการซื้อแบบบริการตนเองเพื่อรับสิทธิ์การใช้งานของตนเองได้หรือไม่ 
+
+การปิดการลงทะเบียนแบบบริการตนเองทำให้ผู้ใช้ไม่สามารถสำรวจ Power BI สำหรับการแสดงข้อมูลและการวิเคราะห์ได้ ถ้าคุณบล็อกการลงทะเบียนรายบุคคล คุณอาจต้องการรับสิทธิ์การใช้งาน Power BI (ฟรี) สำหรับองค์กรของคุณและกำหนดสิทธิ์นั้นให้กับผู้ใช้ทั้งหมด 
+
+> [!NOTE]
+>ถ้าคุณได้รับ Power BI ผ่านทางผู้ให้บริการโซลูชัน Cloud ของ Microsoft (CSP) การตั้งค่าอาจถูกปิดใช้งานเพื่อบล็อกผู้ใช้จากการลงทะเบียนเป็นรายบุคคล CSP ของคุณอาจทำหน้าที่เป็นผู้ดูแลระบบส่วนกลางสำหรับองค์กรของคุณด้วย ซึ่งทำให้คุณต้องติดต่อพวกเขาเพื่อช่วยคุณเปลี่ยนการตั้งค่านี้
 >
->
 
-<span data-ttu-id="660f7-111">คุณใช้คำสั่ง PowerShell เพื่อเปลี่ยนการตั้งค่าที่ควบคุมการลงชื่อสมัครใช้บริการและการซื้อด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-111">You use PowerShell commands to change the settings that control self-service sign-up and purchasing.</span></span> <span data-ttu-id="660f7-112">มีสองการตั้งค่าที่ควบคุมว่าผู้ใช้ในองค์กรของคุณสามารถทำการลงชื่อสมัครใช้บริการด้วยตนเองหรือทำการสั่งซื้อบริการของตนเองได้</span><span class="sxs-lookup"><span data-stu-id="660f7-112">There are two settings that control whether users in your organization can do self-service sign-up or make self-service purchases.</span></span>
 
-- <span data-ttu-id="660f7-113">หากคุณต้องการปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเองทั้งหมด ให้เปลี่ยนการตั้งค่าใน Azure Active Directory ที่ชื่อ **AllowAdHocSubscriptions** โดยใช้คำสั่ง Azure AD PowerShell</span><span class="sxs-lookup"><span data-stu-id="660f7-113">If you want to disable all self-service sign-ups, change a setting in Azure Active Directory named **AllowAdHocSubscriptions** by using Azure AD PowerShell commands.</span></span> <span data-ttu-id="660f7-114">ให้ปฏิบัติตามขั้นตอนในบทความนี้เพื่อ [เปิดหรือปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเอง](#enable-or-disable-self-service-signup)</span><span class="sxs-lookup"><span data-stu-id="660f7-114">Follow the steps in this article to [enable or disable self-service signup](#enable-or-disable-self-service-signup).</span></span> <span data-ttu-id="660f7-115">ตัวเลือกนี้จะเปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเองสำหรับแอปและบริการที่ใช้งานระบบคลาวด์ของ Microsoft *ทั้งหมด*</span><span class="sxs-lookup"><span data-stu-id="660f7-115">This option turns off self-service sign-up for *all* Microsoft cloud-based apps and services.</span></span>
+ คุณจะใช้คำสั่ง PowerShell เพื่อเปลี่ยนการตั้งค่าที่ควบคุมการลงทะเบียนแบบบริการตนเองและการซื้อ 
 
-- <span data-ttu-id="660f7-116">หากคุณต้องการป้องกันไม่ให้ผู้ใช้ซื้อสิทธิการใช้งาน Pro ของตนเอง ให้เปลี่ยนการตั้งค่า **AllowSelfServicePurchase** โดยใช้คำสั่ง MSCommerce PowerShell</span><span class="sxs-lookup"><span data-stu-id="660f7-116">If you want to prevent users from purchasing their own Pro license, change the **AllowSelfServicePurchase** setting using MSCommerce PowerShell commands.</span></span> <span data-ttu-id="660f7-117">การตั้งค่านี้ช่วยให้คุณปิดการสั่งซื้อบริการผลิตภัณฑ์ที่เฉพาะเจาะจงด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-117">This setting lets you turn off self-service purchase for specific products.</span></span> <span data-ttu-id="660f7-118">ให้ปฏิบัติตามขั้นตอนในบทความนี้เพื่อ[เปิดหรือปิดใช้งานการสั่งซื้อสิทธิการใช้งาน Power BI Pro ด้วยตนเอง](#enable-or-disable-self-service-purchase)</span><span class="sxs-lookup"><span data-stu-id="660f7-118">Follow the steps in this article to [enable or disable self-service purchase of Power BI Pro licenses](#enable-or-disable-self-service-purchase).</span></span>
+- หากคุณต้องการปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเองทั้งหมด ให้เปลี่ยนการตั้งค่าใน Azure Active Directory ที่ชื่อ **AllowAdHocSubscriptions** โดยใช้คำสั่ง Azure AD PowerShell ให้ปฏิบัติตามขั้นตอนในบทความนี้เพื่อ [เปิดหรือปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเอง](#enable-or-disable-self-service-sign-up-for-your-organization) ตัวเลือกนี้จะเปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเองสำหรับแอปและบริการที่ใช้งานระบบคลาวด์ของ Microsoft *ทั้งหมด*
 
-## <a name="enable-or-disable-self-service-signup"></a><span data-ttu-id="660f7-119">เปิดหรือปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-119">Enable or disable self-service signup</span></span>
+- หากคุณต้องการป้องกันไม่ให้ผู้ใช้ซื้อสิทธิการใช้งาน Pro ของตนเอง ให้เปลี่ยนการตั้งค่า **AllowSelfServicePurchase** โดยใช้คำสั่ง MSCommerce PowerShell การตั้งค่านี้ช่วยให้คุณปิดการสั่งซื้อบริการผลิตภัณฑ์ที่เฉพาะเจาะจงด้วยตนเอง ให้ปฏิบัติตามขั้นตอนในบทความนี้เพื่อ[เปิดหรือปิดใช้งานการสั่งซื้อสิทธิการใช้งาน Power BI Pro ด้วยตนเอง](#enable-or-disable-self-service-purchase-in-your-organization)
 
-<span data-ttu-id="660f7-120">หากมีการเปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเองไว้ ค่าของ **AllowAdHocSubscriptions** จะเป็น *จริง*</span><span class="sxs-lookup"><span data-stu-id="660f7-120">If self-service sign-up is enabled, the value of **AllowAdHocSubscriptions** is *true*.</span></span> <span data-ttu-id="660f7-121">มาดูกันว่าจะเกิดอะไรขึ้นหากคุณเปลี่ยนการตั้งค่านี้เป็น *เท็จ*:</span><span class="sxs-lookup"><span data-stu-id="660f7-121">Let's take a look at what happens when you change this setting to *false*:</span></span>
+## <a name="enable-or-disable-self-service-sign-up-for-your-organization"></a>เปิดใช้งานหรือปิดใช้งานการลงทะเบียนแบบบริการตนเองสำหรับองค์กรของคุณ
 
-- <span data-ttu-id="660f7-122">หากคุณเปลี่ยนการตั้งค่าจากจริงไปเป็นเท็จ จะเป็นการปิดกั้นไม่ให้ผู้ใช้ใหม่ในองค์กรของคุณทำการลงทะเบียนเป็นรายบุคคล</span><span class="sxs-lookup"><span data-stu-id="660f7-122">If you change the setting from true to false, new users in your organization are blocked from signing up individually.</span></span> <span data-ttu-id="660f7-123">สำหรับผู้ใช้ที่ลงทะเบียน Power BI ก่อนเปลี่ยนแปลงการตั้งค่าจะยังคงมีสิทธิ์ในสิทธิการใช้งานอยู่</span><span class="sxs-lookup"><span data-stu-id="660f7-123">Any users that signed up for Power BI before you change the setting keep their licenses.</span></span>
+หากมีการเปิดใช้งานการลงชื่อสมัครใช้บริการด้วยตนเองไว้ ค่าของ **AllowAdHocSubscriptions** จะเป็น *จริง* มาดูกันว่าจะเกิดอะไรขึ้นหากคุณเปลี่ยนการตั้งค่านี้เป็น *เท็จ*:
 
-- <span data-ttu-id="660f7-124">หากคุณเปลี่ยนการตั้งค่าเป็นเท็จ ผู้ใช้ที่มีสิทธิการใช้งาน Power BI (ฟรี) อยู่แล้วจะยังคงสามารถลงทะเบียนสำหรับ Power BI Pro รุ่นทดลองเพื่อใช้เฉพาะรายบุคคลได้</span><span class="sxs-lookup"><span data-stu-id="660f7-124">If you change the setting to false, users that already have a Power BI (free) license can still sign up for an individual Power BI Pro trial.</span></span>
+- ผู้ใช้ใหม่ในองค์กรของคุณถูกบล็อคจากการลงทะเบียนแต่ละรายการ ผู้ใช้ใดๆที่ลงทะเบียนสำหรับ Power BI ก่อนที่คุณจะเปลี่ยนการตั้งค่าให้ใบอนุญาตของพวกเขา
 
-- <span data-ttu-id="660f7-125">ผู้ดูแลระบบจำเป็นต้องกำหนดสิทธิการใช้งาน Power BI ทั้งหมดให้กับผู้ใช้ใหม่ที่ต้องการสิทธิ</span><span class="sxs-lookup"><span data-stu-id="660f7-125">An admin needs to assign all Power BI licenses to new users who need one.</span></span>
+- ผู้ใช้ที่มีสิทธิ์การใช้งาน Power BI (ฟรี) ยังคงสามารถลงทะเบียนสำหรับการทดลองใช้ Power BI Pro แต่ละครั้งได้
 
-### <a name="before-you-begin"></a><span data-ttu-id="660f7-126">ก่อนที่คุณเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="660f7-126">Before you begin</span></span>
+- ผู้ดูแลระบบจะจำเป็นต้องกำหนดสิทธิ์การใช้งาน Power BI ทั้งหมดให้กับลูกค้าใหม่ที่จำเป็นต้องมี
 
-<span data-ttu-id="660f7-127">ขั้นตอนเหล่านี้ใช้คำสั่ง PowerShell ของ Azure Active Directory เพื่อเปลี่ยนค่าของการตั้งค่า **AllowAdHocSubscriptions**</span><span class="sxs-lookup"><span data-stu-id="660f7-127">These steps use Azure Active Directory PowerShell commands to change the value of the **AllowAdHocSubscriptions** setting.</span></span> <span data-ttu-id="660f7-128">คุณต้องมีโมดูล Azure AD PowerShell ที่ติดตั้งไว้สำหรับคำสั่งเหล่านี้เพื่อให้สามารถใช้งานได้</span><span class="sxs-lookup"><span data-stu-id="660f7-128">You must have the Azure AD PowerShell module installed for these commands to be available.</span></span> <span data-ttu-id="660f7-129">คุณสามารถศึกษาข้อมูลเพิ่มเติมเกี่ยวกับการใช้ PowerShell ได้ที่ [เริ่มต้นใช้งาน Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell?view=powershell-7)</span><span class="sxs-lookup"><span data-stu-id="660f7-129">For more information about using PowerShell, see [Getting started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell?view=powershell-7).</span></span>
+### <a name="before-you-begin"></a>ก่อนที่คุณเริ่มต้น
 
-<span data-ttu-id="660f7-130">ในการติดตั้งโมดูล Azure AD ให้เริ่มใช้งาน Windows PowerShell ในฐานะผู้ดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="660f7-130">To install the Azure AD module, start Windows PowerShell as an administrator.</span></span> <span data-ttu-id="660f7-131">ตรวจสอบให้มั่นใจว่านโยบายการดำเนินการภายในเครื่องของคุณอนุญาตให้คุณเรียกใช้สคริปต์ได้</span><span class="sxs-lookup"><span data-stu-id="660f7-131">Make sure your local execution policy allows you to run scripts.</span></span> <span data-ttu-id="660f7-132">หากคุณพบปัญหา โปรอ่าน[นโยบายการดำเนินการของ PowerShell](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7#powershell-execution-policies) เพื่อเรียนรู้วิธีการเปลี่ยนแปลงนโยบายภายในเครื่องของคุณ</span><span class="sxs-lookup"><span data-stu-id="660f7-132">If you run into problems, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7#powershell-execution-policies) to learn how to change your local policy.</span></span>
+ขั้นตอนเหล่านี้ใช้คำสั่ง PowerShell ของ Azure Active Directory เพื่อเปลี่ยนค่าของการตั้งค่า **AllowAdHocSubscriptions** คุณต้องมีโมดูล Azure AD PowerShell ที่ติดตั้งไว้สำหรับคำสั่งเหล่านี้เพื่อให้สามารถใช้งานได้ คุณสามารถศึกษาข้อมูลเพิ่มเติมเกี่ยวกับการใช้ PowerShell ได้ที่ [เริ่มต้นใช้งาน Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 
-<span data-ttu-id="660f7-133">เรียกใช้คำสั่งต่อไปนี้เพื่อติดตั้งโมดูล Azure AD:</span><span class="sxs-lookup"><span data-stu-id="660f7-133">Run the following command to install the Azure AD module:</span></span>
+ในการติดตั้งโมดูล Azure AD ให้เริ่มใช้งาน Windows PowerShell ในฐานะผู้ดูแลระบบ ตรวจสอบให้มั่นใจว่านโยบายการดำเนินการภายในเครื่องของคุณอนุญาตให้คุณเรียกใช้สคริปต์ได้ หากคุณพบปัญหา โปรอ่าน[นโยบายการดำเนินการของ PowerShell](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies) เพื่อเรียนรู้วิธีการเปลี่ยนแปลงนโยบายภายในเครื่องของคุณ
+
+เรียกใช้คำสั่งต่อไปนี้เพื่อติดตั้งโมดูล Azure AD:
 
 ```powershell
 Install-Module MSOnline
 ```
 
-### <a name="change-the-self-service-signup-policy"></a><span data-ttu-id="660f7-134">เปลี่ยนนโยบายการลงชื่อสมัครใช้บริการด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-134">Change the self-service signup policy</span></span>
+### <a name="change-the-self-service-signup-policy"></a>เปลี่ยนนโยบายการลงชื่อสมัครใช้บริการด้วยตนเอง
 
-<span data-ttu-id="660f7-135">ใน PowerShell ให้เรียกใช้คำสั่งต่อไปนี้เพื่อเชื่อมต่อไปยัง Azure AD:</span><span class="sxs-lookup"><span data-stu-id="660f7-135">In PowerShell, run the following command to connect to Azure AD:</span></span>
+ใน PowerShell ให้เรียกใช้คำสั่งต่อไปนี้เพื่อเชื่อมต่อไปยัง Azure AD:
 
 ```powershell
 Connect-MsolService
 ```
 
-<span data-ttu-id="660f7-136">ป้อนข้อมูลประจำตัวผู้ดูแลระบบของคุณลงในกล่องโต้ตอบการลงชื่อเข้าใช้ จากนั้นดำเนินการรับรองความถูกต้องแบบสองปัจจัยที่อาจจำเป็นต้องทำ</span><span class="sxs-lookup"><span data-stu-id="660f7-136">Enter your admin credentials in the sign-in dialog, completing any two-factor authentication that may be needed.</span></span> <span data-ttu-id="660f7-137">หลังจากการตรวจสอบ คุณจะกลับไปยังหน้าต่าง PowerShell</span><span class="sxs-lookup"><span data-stu-id="660f7-137">After verification, you're returned to the PowerShell window.</span></span>
+ป้อนข้อมูลประจำตัวผู้ดูแลระบบของคุณลงในกล่องโต้ตอบการลงชื่อเข้าใช้ จากนั้นดำเนินการรับรองความถูกต้องแบบสองปัจจัยที่อาจจำเป็นต้องทำ หลังจากการตรวจสอบ คุณจะกลับไปยังหน้าต่าง PowerShell
 
-<span data-ttu-id="660f7-138">หากต้องการดูการตั้งค่าปัจจุบัน ให้เรียกใช้คำสั่งต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="660f7-138">To view the current setting, run the following command.</span></span> <span data-ttu-id="660f7-139">ผลลัพธ์จะถูกส่งไปยังรายการที่จัดรูปแบบไว้โดยใช้สวิตช์ "fl"</span><span class="sxs-lookup"><span data-stu-id="660f7-139">The output is piped to a formatted list by using the "fl" switch.</span></span>
+หากต้องการดูการตั้งค่าปัจจุบัน ให้เรียกใช้คำสั่งต่อไปนี้ ผลลัพธ์จะถูกส่งไปยังรายการที่จัดรูปแบบไว้โดยใช้สวิตช์ "fl"
 
 ```powershell
 Get-MsolCompanyInformation | fl AllowAdHocSubscriptions
 ```
 
-<span data-ttu-id="660f7-140">หากต้องการเปลี่ยนการตั้งค่าปัจจุบัน ให้เรียกใช้คำสั่งนี้:</span><span class="sxs-lookup"><span data-stu-id="660f7-140">To change the current setting, run this command:</span></span>
+หากต้องการเปลี่ยนการตั้งค่าปัจจุบัน ให้เรียกใช้คำสั่งนี้:
 
 ```powershell
 Set-MsolCompanySettings -AllowAdHocSubscriptions $false
 ```
 
-<span data-ttu-id="660f7-141">หลังจากเรียกใช้คำสั่งนี้ ระบบจะปิดการลงชื่อสมัครใช้บริการด้วยตนเองของผู้ใช้ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="660f7-141">After running this command, self-service signup is disabled for all users.</span></span> <span data-ttu-id="660f7-142">หากต้องการเปิดใช้งานอีกครั้ง ให้เรียกใช้คำสั่งนี้ใหม่แล้วตั้งค่าให้เป็น $true</span><span class="sxs-lookup"><span data-stu-id="660f7-142">To turn it back on, run this command again and set the value to $true.</span></span>
+หลังจากเรียกใช้คำสั่งนี้ ระบบจะปิดการลงชื่อสมัครใช้บริการด้วยตนเองของผู้ใช้ทั้งหมด หากต้องการเปิดใช้งานอีกครั้ง ให้เรียกใช้คำสั่งนี้ใหม่แล้วตั้งค่าให้เป็น $true
 
-## <a name="enable-or-disable-self-service-purchase"></a><span data-ttu-id="660f7-143">เปิดหรือปิดใช้งานการสั่งซื้อบริการด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-143">Enable or disable self-service purchase</span></span>
+## <a name="enable-or-disable-self-service-purchase-in-your-organization"></a>เปิดใช้งานหรือปิดใช้งานการซื้อแบบบริการตนเองในองค์กรของคุณ
 
-<span data-ttu-id="660f7-144">หากเปิดใช้งานการสั่งซื้อบริการด้วยตนเองไว้ ค่าของ **AllowSelfServicePurchase** จะเป็น *จริง*</span><span class="sxs-lookup"><span data-stu-id="660f7-144">If self-service purchasing is enabled, the value of **AllowSelfServicePurchase** is *true*.</span></span> <span data-ttu-id="660f7-145">มาดูกันว่าจะเกิดอะไรขึ้นหากคุณเปลี่ยนการตั้งค่านี้เป็น *เท็จ*:</span><span class="sxs-lookup"><span data-stu-id="660f7-145">Let's take a look at what happens when you change this setting to *false*:</span></span>
+หากเปิดใช้งานการสั่งซื้อบริการด้วยตนเองไว้ ค่าของ **AllowSelfServicePurchase** จะเป็น *จริง* มาดูกันว่าจะเกิดอะไรขึ้นหากคุณเปลี่ยนการตั้งค่านี้เป็น *เท็จ*:
 
-- <span data-ttu-id="660f7-146">หากคุณเปลี่ยนการตั้งค่าจากจริงไปเป็นเท็จ จะเป็นการปิดกั้นไม่ให้ผู้ใช้ในองค์กรของคุณทำการสั่งซื้อสิทธิการใช้งาน Power BI Pro ของตนเองได้</span><span class="sxs-lookup"><span data-stu-id="660f7-146">If you change the setting from true to false,  users in your organization are blocked from buying their own Power BI Pro license.</span></span> <span data-ttu-id="660f7-147">สำหรับผู้ใช้ที่ซื้อ Power BI ก่อนเปลี่ยนแปลงการตั้งค่าจะยังคงมีสิทธิ์ในสิทธิการใช้งานอยู่</span><span class="sxs-lookup"><span data-stu-id="660f7-147">Any users that bought a license before you change the setting keep their licenses.</span></span>
+- ผู้ใช้ในองค์กรของคุณถูกบล็อกจากการซื้อสิทธิ์การใช้งาน Power BI Pro ของตนเอง ผู้ใช้ใดๆที่ซื้อใบอนุญาตให้ใช้งานก่อนที่คุณจะเปลี่ยนการตั้งค่าให้ใบอนุญาตของพวกเขา
 
-- <span data-ttu-id="660f7-148">หากคุณเปลี่ยนการตั้งค่าเป็นเท็จ ผู้ใช้ที่มีสิทธิการใช้งาน Power BI (ฟรี) จะไม่สามารถสั่งซื้อ Power BI Pro ของตนเองได้</span><span class="sxs-lookup"><span data-stu-id="660f7-148">If you change the setting to false, users that have a Power BI (free) license can't get an individual Power BI Pro license.</span></span> 
+- ผู้ใช้ที่มีสิทธิ์การใช้งาน Power BI (ฟรี) ไม่สามารถรับสิทธิ์การใช้งาน Power BI Pro แต่ละรายการได้ 
 
-- <span data-ttu-id="660f7-149">ผู้ดูแลระบบจำเป็นต้องกำหนดสิทธิ์การใช้งานแบบ Pro ให้กับผู้ใช้ทั้งหมดที่ต้องการ</span><span class="sxs-lookup"><span data-stu-id="660f7-149">An admin needs to assign a Pro license to all users that need one.</span></span>
+- ผู้ดูแลระบบจำเป็นต้องกำหนดสิทธิ์การใช้งาน Pro ให้กับผู้ใช้ทั้งหมดที่จำเป็นต้องมี
 
-### <a name="before-you-begin"></a><span data-ttu-id="660f7-150">ก่อนที่คุณเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="660f7-150">Before you begin</span></span>
+### <a name="before-you-begin"></a>ก่อนที่คุณเริ่มต้น
 
-<span data-ttu-id="660f7-151">ขั้นตอนเหล่านี้ใช้คำสั่ง MSCommerce PowerShell เพื่อเปลี่ยนค่าในการตั้งค่าของ **AllowSelfServicePurchase**</span><span class="sxs-lookup"><span data-stu-id="660f7-151">These steps use MSCommerce PowerShell commands to change the value of the **AllowSelfServicePurchase** setting.</span></span> <span data-ttu-id="660f7-152">คุณต้องมีโมดูล MSCommerce PowerShell ที่ติดตั้งไว้สำหรับคำสั่งเหล่านี้เพื่อให้สามารถใช้งานได้</span><span class="sxs-lookup"><span data-stu-id="660f7-152">You must have the MSCommerce PowerShell module installed for these commands to be available.</span></span> <span data-ttu-id="660f7-153">คุณสามารถศึกษาข้อมูลเพิ่มเติมเกี่ยวกับการใช้ PowerShell ได้ที่ [เริ่มต้นใช้งาน Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell?view=powershell-7)</span><span class="sxs-lookup"><span data-stu-id="660f7-153">For more information about using PowerShell, see [Getting started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell?view=powershell-7).</span></span>
+ขั้นตอนเหล่านี้ใช้คำสั่ง MSCommerce PowerShell เพื่อเปลี่ยนค่าในการตั้งค่าของ **AllowSelfServicePurchase** คุณต้องมีโมดูล MSCommerce PowerShell ที่ติดตั้งไว้สำหรับคำสั่งเหล่านี้เพื่อให้สามารถใช้งานได้ คุณสามารถศึกษาข้อมูลเพิ่มเติมเกี่ยวกับการใช้ PowerShell ได้ที่ [เริ่มต้นใช้งาน Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 
-<span data-ttu-id="660f7-154">ในการติดตั้งโมดูล MSCommerce ให้เริ่มใช้งาน Windows PowerShell ในฐานะผู้ดูแลระบบ</span><span class="sxs-lookup"><span data-stu-id="660f7-154">To install the MSCommerce module, start Windows PowerShell as an administrator.</span></span> <span data-ttu-id="660f7-155">ตรวจสอบให้มั่นใจว่านโยบายการดำเนินการภายในเครื่องของคุณอนุญาตให้คุณเรียกใช้สคริปต์ได้</span><span class="sxs-lookup"><span data-stu-id="660f7-155">Make sure your local execution policy allows you to run scripts.</span></span> <span data-ttu-id="660f7-156">หากคุณพบปัญหา โปรอ่าน[นโยบายการดำเนินการของ PowerShell](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7#powershell-execution-policies) เพื่อเรียนรู้วิธีการเปลี่ยนแปลงนโยบายภายในเครื่องของคุณ</span><span class="sxs-lookup"><span data-stu-id="660f7-156">If you run into problems, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7#powershell-execution-policies) to learn how to change your local policy.</span></span>
+ในการติดตั้งโมดูล MSCommerce ให้เริ่มใช้งาน Windows PowerShell ในฐานะผู้ดูแลระบบ ตรวจสอบให้มั่นใจว่านโยบายการดำเนินการภายในเครื่องของคุณอนุญาตให้คุณเรียกใช้สคริปต์ได้ หากคุณพบปัญหา โปรอ่าน[นโยบายการดำเนินการของ PowerShell](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies) เพื่อเรียนรู้วิธีการเปลี่ยนแปลงนโยบายภายในเครื่องของคุณ
 
-<span data-ttu-id="660f7-157">เรียกใช้คำสั่งต่อไปนี้เพื่อติดตั้งโมดูล MSCommerce:</span><span class="sxs-lookup"><span data-stu-id="660f7-157">Run the following command to install the MSCommerce module:</span></span>
+เรียกใช้คำสั่งต่อไปนี้เพื่อติดตั้งโมดูล MSCommerce:
 
 ```powershell
 Install-Module -name MSCommerce
 ```
 
-### <a name="change-the-self-service-signup-policy"></a><span data-ttu-id="660f7-158">เปลี่ยนนโยบายการลงชื่อสมัครใช้บริการด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-158">Change the self-service signup policy</span></span>
+### <a name="change-the-self-service-signup-policy"></a>เปลี่ยนนโยบายการลงชื่อสมัครใช้บริการด้วยตนเอง
 
-<span data-ttu-id="660f7-159">ใน PowerShell ให้เรียกใช้คำสั่งต่อไปนี้เพื่อเชื่อมต่อ:</span><span class="sxs-lookup"><span data-stu-id="660f7-159">In PowerShell, run the following command to connect:</span></span>
+ใน PowerShell ให้เรียกใช้คำสั่งต่อไปนี้เพื่อเชื่อมต่อ:
 
 ```powershell
 Connect-MSCommerce
 ```
 
-<span data-ttu-id="660f7-160">ป้อนข้อมูลประจำตัวผู้ดูแลระบบของคุณลงในกล่องโต้ตอบการลงชื่อเข้าใช้ จากนั้นดำเนินการรับรองความถูกต้องแบบสองปัจจัยที่อาจจำเป็นต้องทำ</span><span class="sxs-lookup"><span data-stu-id="660f7-160">Enter your admin credentials in the sign-in dialog, completing any two-factor authentication that may be needed.</span></span> <span data-ttu-id="660f7-161">หลังจากการตรวจสอบ หน้าต่าง PowerShell จะแสดงการเชื่อมต่อที่สำเร็จ</span><span class="sxs-lookup"><span data-stu-id="660f7-161">After verification, the PowerShell window shows a successful connection.</span></span>
+ป้อนข้อมูลประจำตัวผู้ดูแลระบบของคุณลงในกล่องโต้ตอบการลงชื่อเข้าใช้ จากนั้นดำเนินการรับรองความถูกต้องแบบสองปัจจัยที่อาจจำเป็นต้องทำ หลังจากการตรวจสอบ หน้าต่าง PowerShell จะแสดงการเชื่อมต่อที่สำเร็จ
 
-<span data-ttu-id="660f7-162">หากต้องการดูการตั้งค่าปัจจุบัน ให้เรียกใช้คำสั่งต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="660f7-162">To view the current setting, run the following command.</span></span> <span data-ttu-id="660f7-163">เพื่อป้องกันการตัดทอนข้อความ ผลลัพธ์จะถูกส่งไปยังรายการที่จัดรูปแบบไว้โดยใช้สวิตช์ "fl"</span><span class="sxs-lookup"><span data-stu-id="660f7-163">To prevent text from truncating, the output is piped to a formatted list by using the "fl" switch.</span></span>
+หากต้องการดูการตั้งค่าปัจจุบัน ให้เรียกใช้คำสั่งต่อไปนี้ เพื่อป้องกันการตัดทอนข้อความ ผลลัพธ์จะถูกส่งไปยังรายการที่จัดรูปแบบไว้โดยใช้สวิตช์ "fl"
 
 ```powershell
 Get-MSCommercePolicy -PolicyId AllowSelfServicePurchase | fl
 ```
 
-<span data-ttu-id="660f7-164">คุณสามารถปิดใช้งานการตั้งค่าที่อนุญาตให้มีการสั่งซื้อบริการของตนเองสำหรับแต่ละผลิตภัณฑ์โดยการแจ้ง **ProductId**</span><span class="sxs-lookup"><span data-stu-id="660f7-164">You can disable the setting that allows self-service purchase for an individual product by providing its **ProductId**.</span></span> <span data-ttu-id="660f7-165">เมื่อต้องการเปลี่ยนการตั้งค่าปัจจุบันสำหรับบริการของ Power BI ให้เรียกใช้คำสั่งนี้:</span><span class="sxs-lookup"><span data-stu-id="660f7-165">To change the current setting for the Power BI service, run this command:</span></span>
+คุณสามารถปิดใช้งานการตั้งค่าที่อนุญาตให้มีการสั่งซื้อบริการของตนเองสำหรับแต่ละผลิตภัณฑ์โดยการแจ้ง **ProductId** เมื่อต้องการเปลี่ยนการตั้งค่าปัจจุบันสำหรับบริการของ Power BI ให้เรียกใช้คำสั่งนี้:
 
 ```powershell
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ7TTC0L3PB -Enabled $False
 ```
 
-<span data-ttu-id="660f7-166">หลังจากเรียกใช้คำสั่งนี้ ระบบจะปิดการสั่งซื้อบริการด้วยตนเองของผู้ใช้ทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="660f7-166">After running this command, self-service purchase for Power BI is disabled for all users.</span></span> <span data-ttu-id="660f7-167">หากต้องการเปิดใช้งานอีกครั้ง ให้เรียกใช้คำสั่งนี้ใหม่แล้วตั้งค่าให้เป็น $true</span><span class="sxs-lookup"><span data-stu-id="660f7-167">To turn it back on, run this command again and set the value to $true.</span></span>
+หลังจากเรียกใช้คำสั่งนี้ ระบบจะปิดการสั่งซื้อบริการด้วยตนเองของผู้ใช้ทั้งหมด หากต้องการเปิดใช้งานอีกครั้ง ให้เรียกใช้คำสั่งนี้ใหม่แล้วตั้งค่าให้เป็น $true
 
-## <a name="next-steps"></a><span data-ttu-id="660f7-168">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="660f7-168">Next steps</span></span>
+## <a name="what-to-do-if-individuals-have-already-used-self-service"></a>จะทำอย่างไรถ้าบุคคลที่มีการใช้บริการตนเองแล้ว
 
-<span data-ttu-id="660f7-169">สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการสั่งซื้อบริการด้วยตนเองใน Power BI และส่วนอื่น ๆ ของ Power Platform ใหอ่านบทความเหล่านี้:</span><span class="sxs-lookup"><span data-stu-id="660f7-169">For more information about the self-service purchase in Power BI and the rest of the Power Platform, see these articles:</span></span>
+การลงทะเบียนและการซื้อแบบบริการตนเองทั้งสองเปิดใช้งานตามค่าเริ่มต้น ซึ่งเป็นไปได้สำหรับบุคคลในองค์กรของคุณที่มีสิทธิ์การใช้งาน Power BI และการสมัครสมาชิกอยู่แล้ว ไม่ว่าคุณจะดำเนินการใดๆหรือไม่คุณจำเป็นต้องมีรูปภาพที่ชัดเจนของสิ่งที่มีอยู่แล้ว
 
-- [<span data-ttu-id="660f7-170">คำถามที่พบบ่อยเกี่ยวกับการสั่งซื้อบริการด้วยตนเอง</span><span class="sxs-lookup"><span data-stu-id="660f7-170">Self-service purchase FAQ</span></span>](/microsoft-365/commerce/subscriptions/self-service-purchase-faq?view=o365-worldwide#admin-capabilities)
-- [<span data-ttu-id="660f7-171">ใช้ AllowSelfServicePurchase สำหรับโมดูล MSCommerce PowerShell</span><span class="sxs-lookup"><span data-stu-id="660f7-171">Use AllowSelfServicePurchase for the MSCommerce PowerShell module</span></span>](/microsoft-365/commerce/subscriptions/allowselfservicepurchase-powershell?view=o365-worldwide)
+ผู้ใช้ที่เข้าร่วมกับผู้เช่าของคุณผ่านการลงชื่อสมัครใช้บริการด้วยตนเอง จะได้รับการกำหนดสิทธิ์การใช้งานเฉพาะที่คุณสามารถกรองได้ภายในบานหน้าต่างผู้ใช้ที่ใช้งานอยู่ในแดชบอร์ดผู้ดูแลระบบของคุณ หากต้องการสร้างมุมมองนี้ใหม่ ให้ปฏิบัติตามขั้นตอนเหล่านี้
+
+1. ไปที่ ศูนย์การจัดการ Microsoft 365
+
+1. ในบานหน้าต่างนำทาง เลือก **ผู้ใช้** >  **ผู้ใช้ที่ใช้งานอยู่**
+
+1. บนเมนู มุมมอง เลือก **เพิ่มมุมมองแบบกำหนดเอง**
+
+1. ตั้งชื่อมุมมองใหม่ของคุณ และใต้ สิทธิ์การใช้งานที่มอบหมาย ให้เลือก Power BI (ฟรี) หรือ Power BI Pro
+
+    คุณสามารถมีได้เพียงหนึ่งสิทธิ์การใช้งานที่เลือกต่อหนึ่งมุมมอง หากคุณมีทั้งสิทธิ์การใช้งาน Power BI (ฟรี) และ Power BI Pro ในองค์กรของคุณ คุณจะต้องสร้างสองมุมมอง
+
+1. ใส่เงื่อนไขอื่นที่คุณต้องการ จากนั้นเลือก **เพิ่ม**
+
+    หลังจากที่คุณสร้างมุมมองใหม่ มุมมองดังกล่าวจะพร้อมใช้งานจากเมนู มุมมอง
+
+
+    > [!NOTE]
+    > ถ้าองค์กรของคุณไม่มีสภาพแวดล้อม Microsoft 365 ที่เชื่อมต่อกับโดเมนอีเมลของคุณผู้ใช้แบบบริการตนเองได้รับการเพิ่มไปยังไดเรกทอรีผู้ใช้ระบบคลาวด์ใหม่ คุณอาจจำเป็นต้องค้นหาอ้างสิทธิ์และ[ใช้เวลามากกว่าผู้เช่าที่สร้างขึ้นแล้ว](https://docs.microsoft.com/azure/active-directory/users-groups-roles/domains-admin-takeover) 
+
+## <a name="next-steps"></a>ขั้นตอนถัดไป
+
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการสั่งซื้อบริการด้วยตนเองใน Power BI และส่วนอื่น ๆ ของ Power Platform ใหอ่านบทความเหล่านี้:
+
+- [คำถามที่พบบ่อยเกี่ยวกับการสั่งซื้อบริการด้วยตนเอง](/microsoft-365/commerce/subscriptions/self-service-purchase-faq#admin-capabilities)
+- [ใช้ AllowSelfServicePurchase สำหรับโมดูล MSCommerce PowerShell](/microsoft-365/commerce/subscriptions/allowselfservicepurchase-powershell)

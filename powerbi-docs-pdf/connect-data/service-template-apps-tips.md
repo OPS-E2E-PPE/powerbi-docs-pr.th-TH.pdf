@@ -15,140 +15,140 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 12/15/2020
 ms.locfileid: "97491724"
 ---
-# <a name="tips-for-authoring-template-apps-in-power-bi"></a><span data-ttu-id="acca5-103">เคล็ดลับสำหรับการเขียนแอปเทมเพลตใน Power BI</span><span class="sxs-lookup"><span data-stu-id="acca5-103">Tips for authoring template apps in Power BI</span></span>
+# <a name="tips-for-authoring-template-apps-in-power-bi"></a>เคล็ดลับสำหรับการเขียนแอปเทมเพลตใน Power BI
 
-<span data-ttu-id="acca5-104">เมื่อคุณกำลัง[สร้างแอปแม่แบบของคุณ](service-template-apps-create.md)ใน Power BI ส่วนหนึ่งของคือ ลอจิสติกส์การสร้างพื้นที่ทำงาน ทดสอบ และผลิต</span><span class="sxs-lookup"><span data-stu-id="acca5-104">When you're [authoring your template app](service-template-apps-create.md) in Power BI, part of it is the logistics of creating the workspace, testing it, and production.</span></span> <span data-ttu-id="acca5-105">แต่ส่วนที่สำคัญอื่น ๆ อย่างชัดเจนคือเขียนรายงานและแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="acca5-105">But the other important part is obviously authoring the report and the dashboard.</span></span> <span data-ttu-id="acca5-106">เราสามารถแบ่งกระบวนการเขียนลงในสี่คอมโพเนนต์หลัก</span><span class="sxs-lookup"><span data-stu-id="acca5-106">We can break down the authoring process into four main components.</span></span> <span data-ttu-id="acca5-107">ทำงานกับคอมโพเนนต์เหล่านี้ช่วยให้คุณสร้างแอแม่แบบที่เป็นไปได้ที่ดีที่สุด:</span><span class="sxs-lookup"><span data-stu-id="acca5-107">Working on these components helps you create the best possible template app:</span></span>
+เมื่อคุณกำลัง[สร้างแอปแม่แบบของคุณ](service-template-apps-create.md)ใน Power BI ส่วนหนึ่งของคือ ลอจิสติกส์การสร้างพื้นที่ทำงาน ทดสอบ และผลิต แต่ส่วนที่สำคัญอื่น ๆ อย่างชัดเจนคือเขียนรายงานและแดชบอร์ด เราสามารถแบ่งกระบวนการเขียนลงในสี่คอมโพเนนต์หลัก ทำงานกับคอมโพเนนต์เหล่านี้ช่วยให้คุณสร้างแอแม่แบบที่เป็นไปได้ที่ดีที่สุด:
 
-* <span data-ttu-id="acca5-108">ด้วย **คิวรี** คุณ [เชื่อมต่อ](desktop-connect-to-data.md)และ [แปลง](../transform-model/desktop-query-overview.md)ข้อมูล และกำหนด [พารามิเตอร์](https://powerbi.microsoft.com/blog/deep-dive-into-query-parameters-and-power-bi-templates/)</span><span class="sxs-lookup"><span data-stu-id="acca5-108">With **queries**, you [connect](desktop-connect-to-data.md) and [transform](../transform-model/desktop-query-overview.md) the data, and define [parameters](https://powerbi.microsoft.com/blog/deep-dive-into-query-parameters-and-power-bi-templates/).</span></span> 
-* <span data-ttu-id="acca5-109">ในการ **แบบจำลองข้อมูล** คุณสร้าง [ความสัมพันธ์](../transform-model/desktop-create-and-manage-relationships.md), [หน่วยวัด](../transform-model/desktop-measures.md)และการปรับปรุงถามตอบ</span><span class="sxs-lookup"><span data-stu-id="acca5-109">In the **data model**, you create [relationships](../transform-model/desktop-create-and-manage-relationships.md), [measures](../transform-model/desktop-measures.md), and Q&A improvements.</span></span>  
-* <span data-ttu-id="acca5-110">**[หน้ารายงาน](../create-reports/desktop-report-view.md)** รวมภาพและตัวกรองเพื่อให้ข้อมูลเชิงลึกข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-110">**[Report pages](../create-reports/desktop-report-view.md)** include visuals and filters to provide insights into your data.</span></span>  
-* <span data-ttu-id="acca5-111">**[แดชบอร์ด](../consumer/end-user-dashboards.md)** และ [ไทล์](../create-reports/service-dashboard-create.md)มีภาพรวมของข้อมูลเชิงลึกรวมอยู่</span><span class="sxs-lookup"><span data-stu-id="acca5-111">**[Dashboards](../consumer/end-user-dashboards.md)** and [tiles](../create-reports/service-dashboard-create.md) offer an overview of the insights included.</span></span>
-* <span data-ttu-id="acca5-112">ข้อมูลตัวอย่างทำให้แอปของคุณสามารถมองเห็นได้ทันทีหลังการติดตั้ง</span><span class="sxs-lookup"><span data-stu-id="acca5-112">Sample data makes your app discoverable immediately after installation.</span></span>
+* ด้วย **คิวรี** คุณ [เชื่อมต่อ](desktop-connect-to-data.md)และ [แปลง](../transform-model/desktop-query-overview.md)ข้อมูล และกำหนด [พารามิเตอร์](https://powerbi.microsoft.com/blog/deep-dive-into-query-parameters-and-power-bi-templates/) 
+* ในการ **แบบจำลองข้อมูล** คุณสร้าง [ความสัมพันธ์](../transform-model/desktop-create-and-manage-relationships.md), [หน่วยวัด](../transform-model/desktop-measures.md)และการปรับปรุงถามตอบ  
+* **[หน้ารายงาน](../create-reports/desktop-report-view.md)** รวมภาพและตัวกรองเพื่อให้ข้อมูลเชิงลึกข้อมูลของคุณ  
+* **[แดชบอร์ด](../consumer/end-user-dashboards.md)** และ [ไทล์](../create-reports/service-dashboard-create.md)มีภาพรวมของข้อมูลเชิงลึกรวมอยู่
+* ข้อมูลตัวอย่างทำให้แอปของคุณสามารถมองเห็นได้ทันทีหลังการติดตั้ง
 
-<span data-ttu-id="acca5-113">คุณอาจคุ้นเคยกับแต่ละชิ้นที่เป็นคุณลักษณะ Power BI ที่มีอยู่</span><span class="sxs-lookup"><span data-stu-id="acca5-113">You may be familiar with each piece as existing Power BI features.</span></span> <span data-ttu-id="acca5-114">เมื่อสร้างแอปแม่แบบ มีเพิ่มเติมสิ่งที่ต้องพิจารณาสำหรับแต่ละส่วน</span><span class="sxs-lookup"><span data-stu-id="acca5-114">When building a template app, there are additional things to consider for each piece.</span></span> <span data-ttu-id="acca5-115">ดูแต่ละส่วนด้านล่างสำหรับรายละเอียดเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="acca5-115">See each section below for more details.</span></span>
+คุณอาจคุ้นเคยกับแต่ละชิ้นที่เป็นคุณลักษณะ Power BI ที่มีอยู่ เมื่อสร้างแอปแม่แบบ มีเพิ่มเติมสิ่งที่ต้องพิจารณาสำหรับแต่ละส่วน ดูแต่ละส่วนด้านล่างสำหรับรายละเอียดเพิ่มเติม
 
 <a name="queries"></a>
 
-## <a name="queries"></a><span data-ttu-id="acca5-116">คิวรี</span><span class="sxs-lookup"><span data-stu-id="acca5-116">Queries</span></span>
-<span data-ttu-id="acca5-117">สำหรับแอปแม่แบบ คิวรี่ที่พัฒนาขึ้นใน Power BI Desktop ถูกใช้เพื่อเชื่อมต่อกับแหล่งข้อมูลและนำเข้าข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-117">For template apps, queries developed in Power BI Desktop are used to connect to your data source and import data.</span></span> <span data-ttu-id="acca5-118">คิวรี่เหล่านี้จำเป็นต้องส่งกลับเค้าร่างที่สอดคล้องและสนับสนุนโดยการรีเฟรชข้อมูลที่กำหนดไว้แล้ว</span><span class="sxs-lookup"><span data-stu-id="acca5-118">These queries are required to return a consistent schema and are supported for Scheduled Data refresh.</span></span>
+## <a name="queries"></a>คิวรี
+สำหรับแอปแม่แบบ คิวรี่ที่พัฒนาขึ้นใน Power BI Desktop ถูกใช้เพื่อเชื่อมต่อกับแหล่งข้อมูลและนำเข้าข้อมูลของคุณ คิวรี่เหล่านี้จำเป็นต้องส่งกลับเค้าร่างที่สอดคล้องและสนับสนุนโดยการรีเฟรชข้อมูลที่กำหนดไว้แล้ว
 
-### <a name="connect-to-your-api"></a><span data-ttu-id="acca5-119">เชื่อมต่อกับ API ของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-119">Connect to your API</span></span>
-<span data-ttu-id="acca5-120">เมื่อต้องเริ่มต้นใช้งาน คุณจะต้องเชื่อมต่อกับ API ของคุณจาก Power BI Desktop เพื่อเริ่มสร้างคิวรี่ของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-120">To get started, you need to connect to your API from Power BI Desktop to start building your queries.</span></span>
+### <a name="connect-to-your-api"></a>เชื่อมต่อกับ API ของคุณ
+เมื่อต้องเริ่มต้นใช้งาน คุณจะต้องเชื่อมต่อกับ API ของคุณจาก Power BI Desktop เพื่อเริ่มสร้างคิวรี่ของคุณ
 
-<span data-ttu-id="acca5-121">คุณสามารถใช้ตัวเชื่อมต่อข้อมูลที่พร้อมใช้งานใน Power BI Desktop เพื่อเชื่อมต่อกับ API ของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-121">You can use the Data Connectors that are available in Power BI Desktop to connect to your API.</span></span> <span data-ttu-id="acca5-122">คุณสามารถใช้ตัวเชื่อมต่อข้อมูลเว็บ (รับข้อมูล -> เว็บ) เพื่อเชื่อมต่อกับ Rest API ของคุณหรือตัวเชื่อมต่อ OData (รับข้อมูล -> ตัวดึงข้อมูล OData) เพื่อเชื่อมต่อกับตัวดึงข้อมูล OData ของคุณได้</span><span class="sxs-lookup"><span data-stu-id="acca5-122">You can use the Web Data Connector (Get Data -> Web) to connect to your Rest API or the OData connector (Get Data -> OData feed) to connect to your OData feed.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="acca5-123">ในขณะนี้แอปเทมเพลทไม่สนับสนุนตัวเชื่อมต่อแบบกำหนดเอง แนะนำให้ศึกษาการใช้ Odatafeed Auth 2.0 เพื่อลดความเสี่ยงสำหรับกรณีการใช้งานที่มีการเชื่อมต่อ หรือส่งตัวเชื่อมต่อของคุณเพื่อการรับรอง</span><span class="sxs-lookup"><span data-stu-id="acca5-123">Currently template apps do not support custom connectors, it is recommended to explore using Odatafeed Auth 2.0 as a mitigation for some of the connection use-cases or to submit your connector for certification.</span></span> <span data-ttu-id="acca5-124">สำหรับรายละเอียดเกี่ยวกับวิธีการพัฒนาและการรับรองตัวเชื่อมต่อ ตรวจสอบ [เอกสารประกอบตัวเชื่อมต่อข้อมูล](https://aka.ms/DataConnectors)</span><span class="sxs-lookup"><span data-stu-id="acca5-124">For details on how to develop a connector and certify it check the [Data Connectors documentation](https://aka.ms/DataConnectors).</span></span>
-
-### <a name="consider-the-source"></a><span data-ttu-id="acca5-125">พิจารณาแหล่งที่มา</span><span class="sxs-lookup"><span data-stu-id="acca5-125">Consider the source</span></span>
-<span data-ttu-id="acca5-126">คิวรี่ที่กำหนดข้อมูลที่จะรวมไว้ในตัวแบบข้อมูล</span><span class="sxs-lookup"><span data-stu-id="acca5-126">The queries define the data that's included in the data model.</span></span> <span data-ttu-id="acca5-127">ขึ้นอยู่กับขนาดของระบบของคุณ แบบสอบถามเหล่านี้ควรรวมตัวกรองด้วย เพื่อให้แน่ใจว่าลูกค้าของคุณทำงานกับขนาดที่จัดการได้และเหมาะสมกับสถานการณ์สมมติทางธุรกิจของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-127">Depending on the size of your system, these queries should also include filters to ensure your customers are dealing with a manageable size that fits your business scenario.</span></span>
-
-<span data-ttu-id="acca5-128">แอปแม่แบบ Power BI สามารถดำเนินการคิวรี่แบบหลายรายการพร้อมกันและสำหรับผู้ใช้หลายคนพร้อมกัน</span><span class="sxs-lookup"><span data-stu-id="acca5-128">Power BI template apps can execute multiple queries in parallel and for multiple users concurrently.</span></span>  <span data-ttu-id="acca5-129">วางแผนกลยุทธ์การควบคุมและภาวะที่เกิดพร้อมกันของคุณล่วงหน้า และสอบถามเราถึงวิธีการทำให้ข้อบกพร่องแอปแม่แบบของคุณทนได้</span><span class="sxs-lookup"><span data-stu-id="acca5-129">Plan ahead your throttling and concurrency strategy and ask us how to make your template app fault tolerant.</span></span>
-
-### <a name="schema-enforcement"></a><span data-ttu-id="acca5-130">บังคับใช้เค้าร่าง</span><span class="sxs-lookup"><span data-stu-id="acca5-130">Schema enforcement</span></span>
-<span data-ttu-id="acca5-131">ให้แน่ใจว่าแบบสอบถามของคุณทนต่อการเปลี่ยนแปลงในระบบของคุณ การเปลี่ยนแปลงในเค้าร่างเมื่อรีเฟรชสามารถทำลายแบบจำลองได้</span><span class="sxs-lookup"><span data-stu-id="acca5-131">Ensure your queries are resilient to changes in your system, changes in schema on refresh can break the model.</span></span> <span data-ttu-id="acca5-132">ถ้าแหล่งข้อมูลสามารถส่งกลับผลลัพธ์เค้าร่างไม่มีค่าหรือสูญหายสำหรับบางคิวรี่ พิจารณาการส่งคืนตารางเปล่าหรือแสดงข้อความข้อผิดพลาดที่มีความหมายต่อผู้ใช้งานของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-132">If the source could return null or missing schema result for some queries, consider returning an empty table or a meaningful custom error message.</span></span>
-
-### <a name="parameters"></a><span data-ttu-id="acca5-133">พารามิเตอร์</span><span class="sxs-lookup"><span data-stu-id="acca5-133">Parameters</span></span>
-<span data-ttu-id="acca5-134">[พารามิเตอร์](https://powerbi.microsoft.com/blog/deep-dive-into-query-parameters-and-power-bi-templates/)ใน Power BI Desktop อนุญาตให้ผู้ใช้ของคุณใส่ค่าที่กำหนดค่าข้อมูลที่เรียกคืนโดยผู้ใช้ดังกล่าว</span><span class="sxs-lookup"><span data-stu-id="acca5-134">[Parameters](https://powerbi.microsoft.com/blog/deep-dive-into-query-parameters-and-power-bi-templates/) in Power BI Desktop allow your users to provide input values that customize the data retrieved by the user.</span></span> <span data-ttu-id="acca5-135">ให้นึกถึงพารามิเตอร์เป็นอันดับแรกเพื่อหลีกเลี่ยงการทำใหม่หลังจากใช้เวลาสร้างคิวรี่หรือรายงานที่ลงในรายละเอียด</span><span class="sxs-lookup"><span data-stu-id="acca5-135">Think of the parameters up front to avoid rework after investing time to build detailed queries or reports.</span></span>
+คุณสามารถใช้ตัวเชื่อมต่อข้อมูลที่พร้อมใช้งานใน Power BI Desktop เพื่อเชื่อมต่อกับ API ของคุณ คุณสามารถใช้ตัวเชื่อมต่อข้อมูลเว็บ (รับข้อมูล -> เว็บ) เพื่อเชื่อมต่อกับ Rest API ของคุณหรือตัวเชื่อมต่อ OData (รับข้อมูล -> ตัวดึงข้อมูล OData) เพื่อเชื่อมต่อกับตัวดึงข้อมูล OData ของคุณได้
 
 > [!NOTE]
-> <span data-ttu-id="acca5-136">แอปแม่แบบสนับสนุนพารามิเตอร์ยกเว้นใด ๆ และไบนารีทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="acca5-136">Template apps support all parameters except Any and Binary.</span></span>
+> ในขณะนี้แอปเทมเพลทไม่สนับสนุนตัวเชื่อมต่อแบบกำหนดเอง แนะนำให้ศึกษาการใช้ Odatafeed Auth 2.0 เพื่อลดความเสี่ยงสำหรับกรณีการใช้งานที่มีการเชื่อมต่อ หรือส่งตัวเชื่อมต่อของคุณเพื่อการรับรอง สำหรับรายละเอียดเกี่ยวกับวิธีการพัฒนาและการรับรองตัวเชื่อมต่อ ตรวจสอบ [เอกสารประกอบตัวเชื่อมต่อข้อมูล](https://aka.ms/DataConnectors)
+
+### <a name="consider-the-source"></a>พิจารณาแหล่งที่มา
+คิวรี่ที่กำหนดข้อมูลที่จะรวมไว้ในตัวแบบข้อมูล ขึ้นอยู่กับขนาดของระบบของคุณ แบบสอบถามเหล่านี้ควรรวมตัวกรองด้วย เพื่อให้แน่ใจว่าลูกค้าของคุณทำงานกับขนาดที่จัดการได้และเหมาะสมกับสถานการณ์สมมติทางธุรกิจของคุณ
+
+แอปแม่แบบ Power BI สามารถดำเนินการคิวรี่แบบหลายรายการพร้อมกันและสำหรับผู้ใช้หลายคนพร้อมกัน  วางแผนกลยุทธ์การควบคุมและภาวะที่เกิดพร้อมกันของคุณล่วงหน้า และสอบถามเราถึงวิธีการทำให้ข้อบกพร่องแอปแม่แบบของคุณทนได้
+
+### <a name="schema-enforcement"></a>บังคับใช้เค้าร่าง
+ให้แน่ใจว่าแบบสอบถามของคุณทนต่อการเปลี่ยนแปลงในระบบของคุณ การเปลี่ยนแปลงในเค้าร่างเมื่อรีเฟรชสามารถทำลายแบบจำลองได้ ถ้าแหล่งข้อมูลสามารถส่งกลับผลลัพธ์เค้าร่างไม่มีค่าหรือสูญหายสำหรับบางคิวรี่ พิจารณาการส่งคืนตารางเปล่าหรือแสดงข้อความข้อผิดพลาดที่มีความหมายต่อผู้ใช้งานของคุณ
+
+### <a name="parameters"></a>พารามิเตอร์
+[พารามิเตอร์](https://powerbi.microsoft.com/blog/deep-dive-into-query-parameters-and-power-bi-templates/)ใน Power BI Desktop อนุญาตให้ผู้ใช้ของคุณใส่ค่าที่กำหนดค่าข้อมูลที่เรียกคืนโดยผู้ใช้ดังกล่าว ให้นึกถึงพารามิเตอร์เป็นอันดับแรกเพื่อหลีกเลี่ยงการทำใหม่หลังจากใช้เวลาสร้างคิวรี่หรือรายงานที่ลงในรายละเอียด
+
+> [!NOTE]
+> แอปแม่แบบสนับสนุนพารามิเตอร์ยกเว้นใด ๆ และไบนารีทั้งหมด
 >
 
-### <a name="additional-query-tips"></a><span data-ttu-id="acca5-137">เคล็ดลับต่าง ๆ เพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="acca5-137">Additional query tips</span></span>
+### <a name="additional-query-tips"></a>เคล็ดลับต่าง ๆ เพิ่มเติม
 
-* <span data-ttu-id="acca5-138">ตรวจสอบให้แน่ใจว่าพิมพ์คอลัมน์ทั้งหมดอย่างเหมาะสม</span><span class="sxs-lookup"><span data-stu-id="acca5-138">Ensure all columns are typed appropriately.</span></span>
-* <span data-ttu-id="acca5-139">คอลัมน์ที่มีชื่อที่มีข้อมูลครบครัน (ดู[ถามตอบ](#qa))</span><span class="sxs-lookup"><span data-stu-id="acca5-139">Columns have informative names (see [Q&A](#qa)).</span></span>  
-* <span data-ttu-id="acca5-140">สำหรับตรรกะที่ใช้ร่วมกัน พิจารณาใช้ฟังก์ชันหรือคิวรี่</span><span class="sxs-lookup"><span data-stu-id="acca5-140">For shared logic, consider using functions or queries.</span></span>  
-* <span data-ttu-id="acca5-141">ระดับความเป็นส่วนตัวในขณะนี้ไม่สนับสนุนในบริการ</span><span class="sxs-lookup"><span data-stu-id="acca5-141">Privacy levels are currently not supported in the service.</span></span> <span data-ttu-id="acca5-142">ถ้าคุณได้รับพร้อมท์เกี่ยวกับระดับความเป็นส่วนตัว คุณอาจจำเป็นต้องเขียนคิวรี่การใช้เส้นทางสัมพัทธ์</span><span class="sxs-lookup"><span data-stu-id="acca5-142">If you get a prompt about privacy levels, you may need to rewrite the query to use relative paths.</span></span>  
+* ตรวจสอบให้แน่ใจว่าพิมพ์คอลัมน์ทั้งหมดอย่างเหมาะสม
+* คอลัมน์ที่มีชื่อที่มีข้อมูลครบครัน (ดู[ถามตอบ](#qa))  
+* สำหรับตรรกะที่ใช้ร่วมกัน พิจารณาใช้ฟังก์ชันหรือคิวรี่  
+* ระดับความเป็นส่วนตัวในขณะนี้ไม่สนับสนุนในบริการ ถ้าคุณได้รับพร้อมท์เกี่ยวกับระดับความเป็นส่วนตัว คุณอาจจำเป็นต้องเขียนคิวรี่การใช้เส้นทางสัมพัทธ์  
 
-## <a name="data-models"></a><span data-ttu-id="acca5-143">แบบจำลองข้อมูล</span><span class="sxs-lookup"><span data-stu-id="acca5-143">Data models</span></span>
+## <a name="data-models"></a>แบบจำลองข้อมูล
 
-<span data-ttu-id="acca5-144">แบบจำลองข้อมูลที่กำหนดไว้อย่างดีจะช่วยให้แน่ใจว่าลูกค้าของคุณสามารถโต้ตอบกับแอปแม่แบบได้อย่างง่ายดายและได้อย่างเป็นธรรมชาติ</span><span class="sxs-lookup"><span data-stu-id="acca5-144">A well-defined data model ensures your customers can easily and intuitively interact with the template app.</span></span> <span data-ttu-id="acca5-145">สร้างแบบจำลองข้อมูลใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="acca5-145">Create the data model in Power BI Desktop.</span></span>
+แบบจำลองข้อมูลที่กำหนดไว้อย่างดีจะช่วยให้แน่ใจว่าลูกค้าของคุณสามารถโต้ตอบกับแอปแม่แบบได้อย่างง่ายดายและได้อย่างเป็นธรรมชาติ สร้างแบบจำลองข้อมูลใน Power BI Desktop
 
 > [!NOTE]
-> <span data-ttu-id="acca5-146">การสร้างแบบจำลองพื้นฐานจำนวนมาก (การพิมพ์ ชื่อคอลัมน์) ควรทำใน [คิวรี่](#queries)</span><span class="sxs-lookup"><span data-stu-id="acca5-146">You should do much of the basic modeling (typing, column names) in the [queries](#queries).</span></span>
+> การสร้างแบบจำลองพื้นฐานจำนวนมาก (การพิมพ์ ชื่อคอลัมน์) ควรทำใน [คิวรี่](#queries)
 
-### <a name="qa"></a><span data-ttu-id="acca5-147">ถามตอบ</span><span class="sxs-lookup"><span data-stu-id="acca5-147">Q&A</span></span>
-<span data-ttu-id="acca5-148">นอกจากนี้ การสร้างแบบจำลองจะมีผลต่อความสามารถในการถามตอบของคุณที่ให้ผลลัพธ์กับลูกค้าของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-148">The modeling also affects how well Q&A can provide results for your customers.</span></span> <span data-ttu-id="acca5-149">ตรวจสอบให้แน่ใจว่าคุณได้เพิ่มคำเหมือนลงในคอลัมน์ที่ใช้กันทั่วไป และคอลัมน์ของคุณตั้งชื่ออย่างถูกต้องในการ[คิวรี่](#queries)</span><span class="sxs-lookup"><span data-stu-id="acca5-149">Ensure you add synonyms to commonly used columns and you've properly named your columns in the [queries](#queries).</span></span>
+### <a name="qa"></a>ถามตอบ
+นอกจากนี้ การสร้างแบบจำลองจะมีผลต่อความสามารถในการถามตอบของคุณที่ให้ผลลัพธ์กับลูกค้าของคุณ ตรวจสอบให้แน่ใจว่าคุณได้เพิ่มคำเหมือนลงในคอลัมน์ที่ใช้กันทั่วไป และคอลัมน์ของคุณตั้งชื่ออย่างถูกต้องในการ[คิวรี่](#queries)
 
-### <a name="additional-data-model-tips"></a><span data-ttu-id="acca5-150">เคล็ดลับแบบจำลองข้อมูลเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="acca5-150">Additional data model tips</span></span>
+### <a name="additional-data-model-tips"></a>เคล็ดลับแบบจำลองข้อมูลเพิ่มเติม
 
-<span data-ttu-id="acca5-151">ตรวจสอบให้แน่ใจว่า คุณได้:</span><span class="sxs-lookup"><span data-stu-id="acca5-151">Make sure you've:</span></span>
+ตรวจสอบให้แน่ใจว่า คุณได้:
 
-* <span data-ttu-id="acca5-152">ใช้การจัดรูปแบบไปใช้กับคอลัมน์ค่าทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="acca5-152">Applied formatting to all value columns.</span></span> <span data-ttu-id="acca5-153">ใช้ชนิดในคิวรี่</span><span class="sxs-lookup"><span data-stu-id="acca5-153">Apply types in the query.</span></span>  
-* <span data-ttu-id="acca5-154">นำไปใช้กับหน่วยวัดทั้งหมดการจัดรูปแบบ</span><span class="sxs-lookup"><span data-stu-id="acca5-154">Applied formatting to all measures.</span></span>
-* <span data-ttu-id="acca5-155">กำหนดข้อสรุปตามค่าเริ่มต้น:</span><span class="sxs-lookup"><span data-stu-id="acca5-155">Set default summarization.</span></span> <span data-ttu-id="acca5-156">โดยเฉพาะอย่างยิ่ง "ไม่สรุป" เมื่อใช้ได้ (สำหรับค่าเฉพาะสำหรับตัวอย่าง)</span><span class="sxs-lookup"><span data-stu-id="acca5-156">Especially "Do Not Summarize", when applicable (for unique values, for example).</span></span>  
-* <span data-ttu-id="acca5-157">ตั้งค่าประเภทข้อมูล เมื่อเป็นไปได้</span><span class="sxs-lookup"><span data-stu-id="acca5-157">Set data category, when applicable.</span></span>  
-* <span data-ttu-id="acca5-158">ตั้งค่าความสัมพันธ์ตามความจำเป็น</span><span class="sxs-lookup"><span data-stu-id="acca5-158">Set relationships, as necessary.</span></span>  
+* ใช้การจัดรูปแบบไปใช้กับคอลัมน์ค่าทั้งหมด ใช้ชนิดในคิวรี่  
+* นำไปใช้กับหน่วยวัดทั้งหมดการจัดรูปแบบ
+* กำหนดข้อสรุปตามค่าเริ่มต้น: โดยเฉพาะอย่างยิ่ง "ไม่สรุป" เมื่อใช้ได้ (สำหรับค่าเฉพาะสำหรับตัวอย่าง)  
+* ตั้งค่าประเภทข้อมูล เมื่อเป็นไปได้  
+* ตั้งค่าความสัมพันธ์ตามความจำเป็น  
 
-## <a name="reports"></a><span data-ttu-id="acca5-159">รายงาน</span><span class="sxs-lookup"><span data-stu-id="acca5-159">Reports</span></span>
-<span data-ttu-id="acca5-160">หน้ารายงานมีข้อมูลเชิงลึกเพิ่มเติมลงในข้อมูลรวมอยู่ในแอปแม่แบบของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-160">The report pages offer additional insight into the data included in your template app.</span></span> <span data-ttu-id="acca5-161">ใช้หน้าของรายงานเพื่อตอบคำถามทางธุรกิจที่สำคัญทซึ่งแอปแม่แบบของคุณกำลังพยายามแก้ปัญหา</span><span class="sxs-lookup"><span data-stu-id="acca5-161">Use the pages of the reports to answer the key business questions your template app is trying to address.</span></span> <span data-ttu-id="acca5-162">สร้างรายงานโดยใช้ Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="acca5-162">Create the report using Power BI Desktop.</span></span>
+## <a name="reports"></a>รายงาน
+หน้ารายงานมีข้อมูลเชิงลึกเพิ่มเติมลงในข้อมูลรวมอยู่ในแอปแม่แบบของคุณ ใช้หน้าของรายงานเพื่อตอบคำถามทางธุรกิจที่สำคัญทซึ่งแอปแม่แบบของคุณกำลังพยายามแก้ปัญหา สร้างรายงานโดยใช้ Power BI Desktop
 
 
-### <a name="additional-report-tips"></a><span data-ttu-id="acca5-163">เคล็ดลับรายงานเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="acca5-163">Additional report tips</span></span>
+### <a name="additional-report-tips"></a>เคล็ดลับรายงานเพิ่มเติม
 
-* <span data-ttu-id="acca5-164">ใช้มากกว่าหนึ่งภาพต่อหนึ่งหน้าสำหรับการกรองแบบไขว้</span><span class="sxs-lookup"><span data-stu-id="acca5-164">Use more than one visual per page for cross-filtering.</span></span>  
-* <span data-ttu-id="acca5-165">จัดแนวภาพอย่างระมัดระวัง (ไม่มีการซ้อนกัน)</span><span class="sxs-lookup"><span data-stu-id="acca5-165">Align the visuals carefully (no overlapping).</span></span>  
-* <span data-ttu-id="acca5-166">หน้าถูกตั้งค่าเป็นโหมด "4:3"หรือ "16:9" สำหรับเค้าโครง</span><span class="sxs-lookup"><span data-stu-id="acca5-166">Page is set to "4:3" or "16:9" mode for layout.</span></span>  
-* <span data-ttu-id="acca5-167">ผลรวมทั้งหมดที่ปรากฏทำให้เข้าใจถึงตัวเลข (ค่าเฉลี่ย ค่าที่ไม่ซ้ำ)</span><span class="sxs-lookup"><span data-stu-id="acca5-167">All of the aggregations presented make numeric sense (averages, unique values).</span></span>  
-* <span data-ttu-id="acca5-168">การแบ่งส่วนสร้างผลลัพธ์ที่สมเหตุสมผล</span><span class="sxs-lookup"><span data-stu-id="acca5-168">Slicing produces rational results.</span></span>  
-* <span data-ttu-id="acca5-169">โลโก้ปรากฏอยู่บนอย่างน้อยที่รายงานด้านบนสุด</span><span class="sxs-lookup"><span data-stu-id="acca5-169">Logo is present on at least the top report.</span></span>  
-* <span data-ttu-id="acca5-170">องค์ประกอบที่มีในแบบแผนชุดสีของลูกค้าในกรณีเป็นไปได้</span><span class="sxs-lookup"><span data-stu-id="acca5-170">Elements are in the client's color scheme to the extent possible.</span></span>  
+* ใช้มากกว่าหนึ่งภาพต่อหนึ่งหน้าสำหรับการกรองแบบไขว้  
+* จัดแนวภาพอย่างระมัดระวัง (ไม่มีการซ้อนกัน)  
+* หน้าถูกตั้งค่าเป็นโหมด "4:3"หรือ "16:9" สำหรับเค้าโครง  
+* ผลรวมทั้งหมดที่ปรากฏทำให้เข้าใจถึงตัวเลข (ค่าเฉลี่ย ค่าที่ไม่ซ้ำ)  
+* การแบ่งส่วนสร้างผลลัพธ์ที่สมเหตุสมผล  
+* โลโก้ปรากฏอยู่บนอย่างน้อยที่รายงานด้านบนสุด  
+* องค์ประกอบที่มีในแบบแผนชุดสีของลูกค้าในกรณีเป็นไปได้  
 
 <a name="dashboard"></a>
 
-## <a name="dashboards"></a><span data-ttu-id="acca5-171">แดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="acca5-171">Dashboards</span></span>
-<span data-ttu-id="acca5-172">แดชบอร์ดเป็นจุดหลักของการโต้ตอบกับแอปแม่แบบของคุณสำหรับลูกค้าของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-172">The dashboard is the main point of interaction with your template app for your customers.</span></span> <span data-ttu-id="acca5-173">ซึ่งควรมีภาพรวมของเนื้อหาที่รวมอยู่ด้วย โดยเฉพาะอย่างยิ่งเมทริกซ์ที่สำคัญสำหรับสถานการณ์สมมติทางธุรกิจของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-173">It should include an overview of the content included, especially the important metrics for your business scenario.</span></span>
+## <a name="dashboards"></a>แดชบอร์ด
+แดชบอร์ดเป็นจุดหลักของการโต้ตอบกับแอปแม่แบบของคุณสำหรับลูกค้าของคุณ ซึ่งควรมีภาพรวมของเนื้อหาที่รวมอยู่ด้วย โดยเฉพาะอย่างยิ่งเมทริกซ์ที่สำคัญสำหรับสถานการณ์สมมติทางธุรกิจของคุณ
 
-<span data-ttu-id="acca5-174">เมื่อต้องสร้างแดชบอร์ดสำหรับแอปแม่แบบของคุณ เพียงแค่อัปโหลด PBIX ของคุณผ่านการรับข้อมูล > ไฟล์ หรือเผยแพร่ได้โดยตรงจาก Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="acca5-174">To create a dashboard for your template app, just upload your PBIX through Get Data > Files or publish directly from Power BI Desktop.</span></span>
+เมื่อต้องสร้างแดชบอร์ดสำหรับแอปแม่แบบของคุณ เพียงแค่อัปโหลด PBIX ของคุณผ่านการรับข้อมูล > ไฟล์ หรือเผยแพร่ได้โดยตรงจาก Power BI Desktop
 
 
-### <a name="additional-dashboard-tips"></a><span data-ttu-id="acca5-175">เคล็ดลับแดชบอร์ดเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="acca5-175">Additional dashboard tips</span></span>
+### <a name="additional-dashboard-tips"></a>เคล็ดลับแดชบอร์ดเพิ่มเติม
 
-* <span data-ttu-id="acca5-176">ใช้ธีมเดียวกันนี้เมื่อปักหมุด เพื่อให้สอดคล้องกันไทล์บนแดชบอร์ดของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-176">Maintain the same theme when pinning so that the tiles on your dashboard are consistent.</span></span>  
-* <span data-ttu-id="acca5-177">ปักหมุดโลโก้ไปยังธีมเพื่อให้ลูกค้าทราบว่าชุดข้อมูลมาจากที่ใด</span><span class="sxs-lookup"><span data-stu-id="acca5-177">Pin a logo to the theme so consumers know where the pack is from.</span></span>  
-* <span data-ttu-id="acca5-178">เค้าโครงที่แนะนำให้ทำงานที่มีความละเอียดหน้าจอส่วนใหญ่คือขนาดกว้าง 5-6 ไทล์ขนาดเล็ก</span><span class="sxs-lookup"><span data-stu-id="acca5-178">Suggested layout to work with most screen resolutions is 5-6 small tiles wide.</span></span>  
-* <span data-ttu-id="acca5-179">ไทล์แดชบอร์ดทั้งหมดควรมีชื่อเรื่อง/คำบรรยายที่เหมาะสม</span><span class="sxs-lookup"><span data-stu-id="acca5-179">All dashboard tiles should have appropriate titles/subtitles.</span></span>  
-* <span data-ttu-id="acca5-180">พิจารณาการจัดกลุ่มในแดชบอร์ดสำหรับสถานการณ์สมมติที่หลากหลาย ทั้งการจัดกลุ่มตามแนวตั้งหรือแนวนอน</span><span class="sxs-lookup"><span data-stu-id="acca5-180">Consider groupings in the dashboard for different scenarios, either vertically or horizontally.</span></span>  
+* ใช้ธีมเดียวกันนี้เมื่อปักหมุด เพื่อให้สอดคล้องกันไทล์บนแดชบอร์ดของคุณ  
+* ปักหมุดโลโก้ไปยังธีมเพื่อให้ลูกค้าทราบว่าชุดข้อมูลมาจากที่ใด  
+* เค้าโครงที่แนะนำให้ทำงานที่มีความละเอียดหน้าจอส่วนใหญ่คือขนาดกว้าง 5-6 ไทล์ขนาดเล็ก  
+* ไทล์แดชบอร์ดทั้งหมดควรมีชื่อเรื่อง/คำบรรยายที่เหมาะสม  
+* พิจารณาการจัดกลุ่มในแดชบอร์ดสำหรับสถานการณ์สมมติที่หลากหลาย ทั้งการจัดกลุ่มตามแนวตั้งหรือแนวนอน  
 
-## <a name="sample-data"></a><span data-ttu-id="acca5-181">ข้อมูลตัวอย่าง</span><span class="sxs-lookup"><span data-stu-id="acca5-181">Sample data</span></span>
-<span data-ttu-id="acca5-182">แอปเทมเพลตซึ่งเป็นส่วนหนึ่งของของขั้นตอนการสร้างแอป จะตัดข้อมูลแคชในพื้นที่ทำงานที่เป็นส่วนหนึ่งของแอป</span><span class="sxs-lookup"><span data-stu-id="acca5-182">Template apps, as part of the app creation stage, wraps the cache data in the workspace as part of the app:</span></span>
+## <a name="sample-data"></a>ข้อมูลตัวอย่าง
+แอปเทมเพลตซึ่งเป็นส่วนหนึ่งของของขั้นตอนการสร้างแอป จะตัดข้อมูลแคชในพื้นที่ทำงานที่เป็นส่วนหนึ่งของแอป
 
-* <span data-ttu-id="acca5-183">ช่วยให้ตัวติดตั้งเข้าใจการทำงานและวัตถุประสงค์ของแอปก่อนเชื่อมต่อข้อมูล</span><span class="sxs-lookup"><span data-stu-id="acca5-183">Allows the installer to understand the functionality and purpose of the app before connecting data.</span></span>
-* <span data-ttu-id="acca5-184">สร้างประสบการณ์ที่สนับสนุนให้ตัวติดตั้งศึกษาความสามารถของแอปเพิ่มเติม ซึ่งนำไปสู่การเชื่อมต่อชุดข้อมูลแอป</span><span class="sxs-lookup"><span data-stu-id="acca5-184">Creates an experience that drives the installer to further explore app capabilities, which leads to connecting the app dataset.</span></span>
+* ช่วยให้ตัวติดตั้งเข้าใจการทำงานและวัตถุประสงค์ของแอปก่อนเชื่อมต่อข้อมูล
+* สร้างประสบการณ์ที่สนับสนุนให้ตัวติดตั้งศึกษาความสามารถของแอปเพิ่มเติม ซึ่งนำไปสู่การเชื่อมต่อชุดข้อมูลแอป
 
-<span data-ttu-id="acca5-185">เราขอแนะนำให้เตรียมข้อมูลตัวอย่างที่มีคุณภาพก่อนที่จะสร้างแอป</span><span class="sxs-lookup"><span data-stu-id="acca5-185">We recommend having quality sample data before creating the app.</span></span> <span data-ttu-id="acca5-186">ตรวจสอบให้แน่ใจว่ามีการสร้างรายงานแอปและแดชบอร์ดพร้อมข้อมูล</span><span class="sxs-lookup"><span data-stu-id="acca5-186">ensure the app report and dashboards are populated with data.</span></span>
+เราขอแนะนำให้เตรียมข้อมูลตัวอย่างที่มีคุณภาพก่อนที่จะสร้างแอป ตรวจสอบให้แน่ใจว่ามีการสร้างรายงานแอปและแดชบอร์ดพร้อมข้อมูล
 
-## <a name="publishing-on-appsource"></a><span data-ttu-id="acca5-187">การเผยแพร่ไปยัง AppSource</span><span class="sxs-lookup"><span data-stu-id="acca5-187">Publishing on AppSource</span></span>
-<span data-ttu-id="acca5-188">สามารถเผยแพร่แอปเทมเพลตบน AppSource ปฏิบัติตามแนวทางเหล่านี้ก่อนส่งแอปของคุณไปยัง AppSource</span><span class="sxs-lookup"><span data-stu-id="acca5-188">Template apps can be published on AppSource, follow these guidelines before submitting your app to AppSource:</span></span>
+## <a name="publishing-on-appsource"></a>การเผยแพร่ไปยัง AppSource
+สามารถเผยแพร่แอปเทมเพลตบน AppSource ปฏิบัติตามแนวทางเหล่านี้ก่อนส่งแอปของคุณไปยัง AppSource
 
-* <span data-ttu-id="acca5-189">ต้องสร้างแอปเทมเพลตที่มีข้อมูลตัวอย่างที่เกี่ยวข้อง ที่ช่วยให้ตัวติดตั้งเข้าใจถึงสิ่งที่แอปทำได้ (ไม่อนุญาตให้รายงานและแดชบอร์ดว่างเปล่า)</span><span class="sxs-lookup"><span data-stu-id="acca5-189">Make sure you create a template app with engaging sample data that can help the installer understand what the app can do (empty report & dashboard aren't approved).</span></span>
-<span data-ttu-id="acca5-190">แอปเทมเพลตสนับสนุนข้อมูลตัวอย่างเฉพาะแอป ตรวจสอบให้แน่ใจว่าทำเครื่องหมายในกล่องกาเครื่องหมายแบบคงที่</span><span class="sxs-lookup"><span data-stu-id="acca5-190">Template apps support sample data only apps, make sure to check the static app checkbox.</span></span> [<span data-ttu-id="acca5-191">ศึกษาเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="acca5-191">Learn more</span></span>](./service-template-apps-create.md#define-the-properties-of-the-template-app)
-* <span data-ttu-id="acca5-192">มีคำแนะนำเพื่อให้ทีมตรวจสอบสามารถติดตามได้ ซึ่งรวมถึงข้อมูลประจำตัวและพารามิเตอร์ที่จำเป็นสำหรับการเชื่อมต่อข้อมูล</span><span class="sxs-lookup"><span data-stu-id="acca5-192">Have instruction for the validation team to follow which includes credentials and parameters that are required to connect to data.</span></span>
-* <span data-ttu-id="acca5-193">แอปพลิเคชันต้องมีไอคอนแอป ใน Power BI และในข้อเสนอ CPP ของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-193">Application must include an App icon in Power BI and on your CPP offer.</span></span> [<span data-ttu-id="acca5-194">ศึกษาเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="acca5-194">Learn more</span></span>](./service-template-apps-create.md#define-the-properties-of-the-template-app)
-* <span data-ttu-id="acca5-195">กำหนดค่าเพจเริ่มต้นแล้ว</span><span class="sxs-lookup"><span data-stu-id="acca5-195">Landing page configured.</span></span> [<span data-ttu-id="acca5-196">ศึกษาเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="acca5-196">Learn more</span></span>](./service-template-apps-create.md#define-the-properties-of-the-template-app)
-* <span data-ttu-id="acca5-197">ตรวจสอบให้มั่นใจว่าได้ปฏิบัติตามเอกสารใน [Partner Center -> ข้อเสนอแอป Power BI](/azure/marketplace/partner-center-portal/create-power-bi-app-offer)</span><span class="sxs-lookup"><span data-stu-id="acca5-197">Make sure to follow the documentation on [Partner center -> Power BI App offer](/azure/marketplace/partner-center-portal/create-power-bi-app-offer).</span></span>
-* <span data-ttu-id="acca5-198">ในกรณีที่แดชบอร์ดเป็นส่วนหนึ่งในแอปของคุณ ตรวจสอบให้แน่ใจว่าแดชบอร์ดไม่ว่างเปล่า</span><span class="sxs-lookup"><span data-stu-id="acca5-198">In case a dashboard is part of your app, make sure it's not empty.</span></span>
-* <span data-ttu-id="acca5-199">ติดตั้งแอปโดยใช้ลิงก์แอปก่อนส่ง ตรวจสอบให้แน่ใจว่าคุณสามารถเชื่อมต่อชุดข้อมูลและประสบการณ์แอปเป็นไปตามที่คุณวางแผนไว้</span><span class="sxs-lookup"><span data-stu-id="acca5-199">Install the app using the app link before submitting it, make sure you can connect the dataset and the app experience is as you planned.</span></span>
-* <span data-ttu-id="acca5-200">ก่อนอัปโหลด bpix ลงในพื้นที่ทำงานของเทมเพลต ตรวจสอบให้แน่ใจว่าได้ทำการตัดการเชื่อมต่อที่ไม่จำเป็นออกแล้ว</span><span class="sxs-lookup"><span data-stu-id="acca5-200">Before uploading pbix into the template workspace, make sure to unload any unnecessary connections.</span></span>
-* <span data-ttu-id="acca5-201">ปฏิบัติตาม [แนวทางปฏิบัติที่ดีที่สุดของ Power BI สำหรับรายงานและการแสดงผลด้วยภาพ](../visuals/power-bi-report-visualizations.md) เพื่อให้ได้ผลลัพธ์ที่ดีที่สุดสำหรับผู้ใช้ของคุณ และได้รับอนุญาตให้แจกจ่าย</span><span class="sxs-lookup"><span data-stu-id="acca5-201">Follow Power BI [Best design practices for reports and visuals](../visuals/power-bi-report-visualizations.md) to achieve maximum impact on your users and getting approved for distribution.</span></span>
+* ต้องสร้างแอปเทมเพลตที่มีข้อมูลตัวอย่างที่เกี่ยวข้อง ที่ช่วยให้ตัวติดตั้งเข้าใจถึงสิ่งที่แอปทำได้ (ไม่อนุญาตให้รายงานและแดชบอร์ดว่างเปล่า)
+แอปเทมเพลตสนับสนุนข้อมูลตัวอย่างเฉพาะแอป ตรวจสอบให้แน่ใจว่าทำเครื่องหมายในกล่องกาเครื่องหมายแบบคงที่ [ศึกษาเพิ่มเติม](./service-template-apps-create.md#define-the-properties-of-the-template-app)
+* มีคำแนะนำเพื่อให้ทีมตรวจสอบสามารถติดตามได้ ซึ่งรวมถึงข้อมูลประจำตัวและพารามิเตอร์ที่จำเป็นสำหรับการเชื่อมต่อข้อมูล
+* แอปพลิเคชันต้องมีไอคอนแอป ใน Power BI และในข้อเสนอ CPP ของคุณ [ศึกษาเพิ่มเติม](./service-template-apps-create.md#define-the-properties-of-the-template-app)
+* กำหนดค่าเพจเริ่มต้นแล้ว [ศึกษาเพิ่มเติม](./service-template-apps-create.md#define-the-properties-of-the-template-app)
+* ตรวจสอบให้มั่นใจว่าได้ปฏิบัติตามเอกสารใน [Partner Center -> ข้อเสนอแอป Power BI](/azure/marketplace/partner-center-portal/create-power-bi-app-offer)
+* ในกรณีที่แดชบอร์ดเป็นส่วนหนึ่งในแอปของคุณ ตรวจสอบให้แน่ใจว่าแดชบอร์ดไม่ว่างเปล่า
+* ติดตั้งแอปโดยใช้ลิงก์แอปก่อนส่ง ตรวจสอบให้แน่ใจว่าคุณสามารถเชื่อมต่อชุดข้อมูลและประสบการณ์แอปเป็นไปตามที่คุณวางแผนไว้
+* ก่อนอัปโหลด bpix ลงในพื้นที่ทำงานของเทมเพลต ตรวจสอบให้แน่ใจว่าได้ทำการตัดการเชื่อมต่อที่ไม่จำเป็นออกแล้ว
+* ปฏิบัติตาม [แนวทางปฏิบัติที่ดีที่สุดของ Power BI สำหรับรายงานและการแสดงผลด้วยภาพ](../visuals/power-bi-report-visualizations.md) เพื่อให้ได้ผลลัพธ์ที่ดีที่สุดสำหรับผู้ใช้ของคุณ และได้รับอนุญาตให้แจกจ่าย
 <!--- * In general, only application with valuable functionality can be approved for general use on AppSource. Application with sample data content only must have either a guidance or statistical value.) -->
 
-## <a name="create-a-download-link-for-the-app"></a><span data-ttu-id="acca5-202">สร้างลิงก์ดาวน์โหลดสำหรับแอป</span><span class="sxs-lookup"><span data-stu-id="acca5-202">Create a download link for the app</span></span>
+## <a name="create-a-download-link-for-the-app"></a>สร้างลิงก์ดาวน์โหลดสำหรับแอป
 
-<span data-ttu-id="acca5-203">หลังจากเผยแพร่แอปแม่แบบบน AppSource ให้ลองสร้างลิงก์ดาวน์โหลดจากเว็บไซต์ของคุณไปยัง:</span><span class="sxs-lookup"><span data-stu-id="acca5-203">After publishing the template app on AppSource, consider creating a download link from your website to either:</span></span>
-* <span data-ttu-id="acca5-204">หน้าดาวน์โหลด AppSource - สาธารณะสามารถดูได้ รับลิงก์จากหน้า AppSource ของคุณ</span><span class="sxs-lookup"><span data-stu-id="acca5-204">AppSource download page - can be viewed by publicly, get the link from your AppSource page.</span></span>
-* <span data-ttu-id="acca5-205">Power B - ผู้ใช้ Power BI สามารถดูได้</span><span class="sxs-lookup"><span data-stu-id="acca5-205">Power BI - Can be viewed by a Power BI user.</span></span>
+หลังจากเผยแพร่แอปแม่แบบบน AppSource ให้ลองสร้างลิงก์ดาวน์โหลดจากเว็บไซต์ของคุณไปยัง:
+* หน้าดาวน์โหลด AppSource - สาธารณะสามารถดูได้ รับลิงก์จากหน้า AppSource ของคุณ
+* Power B - ผู้ใช้ Power BI สามารถดูได้
 
-<span data-ttu-id="acca5-206">เพื่อเปลี่ยนเส้นทางผู้ใช้ไปยังลิงก์ดาวน์โหลดของแอปใน Power BI โปรดดูตัวอย่างโค้ดต่อไปนี้: [ที่เก็บ GitHub](https://github.com/microsoft/Template-apps-examples)</span><span class="sxs-lookup"><span data-stu-id="acca5-206">In order to redirect a user to the app's download link in Power BI see the following code example: [GitHub repo](https://github.com/microsoft/Template-apps-examples).</span></span>
+เพื่อเปลี่ยนเส้นทางผู้ใช้ไปยังลิงก์ดาวน์โหลดของแอปใน Power BI โปรดดูตัวอย่างโค้ดต่อไปนี้: [ที่เก็บ GitHub](https://github.com/microsoft/Template-apps-examples)
 
-<span data-ttu-id="acca5-207">[![ลิงก์ดาวน์โหลดของแอป](media/service-template-apps-tips/service-template-apps-tips-download.png)](https://app.powerbi.com/groups/me/getapps/services/pbi-contentpacks.pbiapps-github)</span><span class="sxs-lookup"><span data-stu-id="acca5-207">[![App Download link](media/service-template-apps-tips/service-template-apps-tips-download.png)](https://app.powerbi.com/groups/me/getapps/services/pbi-contentpacks.pbiapps-github)</span></span>
+[![ลิงก์ดาวน์โหลดของแอป](media/service-template-apps-tips/service-template-apps-tips-download.png)](https://app.powerbi.com/groups/me/getapps/services/pbi-contentpacks.pbiapps-github)
 
-## <a name="automate-parameter-configuration-during-installation"></a><span data-ttu-id="acca5-208">การกําหนดค่าพารามิเตอร์โดยอัตโนมัติระหว่างการติดตั้ง</span><span class="sxs-lookup"><span data-stu-id="acca5-208">Automate parameter configuration during installation</span></span>
+## <a name="automate-parameter-configuration-during-installation"></a>การกําหนดค่าพารามิเตอร์โดยอัตโนมัติระหว่างการติดตั้ง
 
-<span data-ttu-id="acca5-209">หากคุณเป็น ISV และกําลังแจกจ่ายแอปเทมเพลตของคุณผ่านบริการเว็บของคุณ คุณสามารถสร้างการทํางานอัตโนมัติที่กําหนดค่าพารามิเตอร์แอปเทมเพลตโดยอัตโนมัติเมื่อลูกค้าของคุณติดตั้งแอปในบัญชี Power BI ของพวกเขา</span><span class="sxs-lookup"><span data-stu-id="acca5-209">If you are an ISV and are distributing your template app via your web service, you can create automation that configures template app parameters automatically when your customers install the app in their Power BI account.</span></span> <span data-ttu-id="acca5-210">ซึ่งจะช่วยให้ลูกค้าของคุณดำเนินการได้ง่ายขึ้นและเพิ่มความเป็นไปได้ในการติดตั้งสำเร็จ เนื่องจากพวกเขาไม่จำเป็นต้องให้รายละเอียดที่พวกเขาอาจไม่ทราบ</span><span class="sxs-lookup"><span data-stu-id="acca5-210">This makes things easier for your customers and increases the likelihood of a successful installation because they don't have to supply details that they might not know.</span></span> <span data-ttu-id="acca5-211">ดูรายละเอียดที่[การกำหนดค่าอัตโนมัติของการติดตั้งแอปเทมเพลต](../developer/template-apps/template-apps-auto-install.md)</span><span class="sxs-lookup"><span data-stu-id="acca5-211">See [Automated configuration of a template app installation](../developer/template-apps/template-apps-auto-install.md) for details.</span></span>
+หากคุณเป็น ISV และกําลังแจกจ่ายแอปเทมเพลตของคุณผ่านบริการเว็บของคุณ คุณสามารถสร้างการทํางานอัตโนมัติที่กําหนดค่าพารามิเตอร์แอปเทมเพลตโดยอัตโนมัติเมื่อลูกค้าของคุณติดตั้งแอปในบัญชี Power BI ของพวกเขา ซึ่งจะช่วยให้ลูกค้าของคุณดำเนินการได้ง่ายขึ้นและเพิ่มความเป็นไปได้ในการติดตั้งสำเร็จ เนื่องจากพวกเขาไม่จำเป็นต้องให้รายละเอียดที่พวกเขาอาจไม่ทราบ ดูรายละเอียดที่[การกำหนดค่าอัตโนมัติของการติดตั้งแอปเทมเพลต](../developer/template-apps/template-apps-auto-install.md)
 
-## <a name="next-steps"></a><span data-ttu-id="acca5-212">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="acca5-212">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-[<span data-ttu-id="acca5-213">แอปเทมเพลต Power BI คืออะไร</span><span class="sxs-lookup"><span data-stu-id="acca5-213">What are Power BI template apps?</span></span>](service-template-apps-overview.md)
+[แอปเทมเพลต Power BI คืออะไร](service-template-apps-overview.md)

@@ -2,168 +2,168 @@
 title: สร้างเนื้อหาเพื่อโยกย้ายข้อมูลไปยัง Power BI
 description: คำแนะนำในการสร้างและตรวจสอบเนื้อหาเมื่อโยกย้ายข้อมูลไปยัง Power BI
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: asaxton
 ms.service: powerbi
 ms.subservice: powerbi
 ms.topic: conceptual
 ms.date: 08/20/2020
-ms.openlocfilehash: 03a55f2f414ca8af7ca86f51dcafb0258efc88b7
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: f74b2ea56dd4399dd87c7d21b461b3e6bd23bbd9
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96418612"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99088085"
 ---
-# <a name="create-content-to-migrate-to-power-bi"></a><span data-ttu-id="a5165-103">สร้างเนื้อหาเพื่อโยกย้ายข้อมูลไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="a5165-103">Create content to migrate to Power BI</span></span>
+# <a name="create-content-to-migrate-to-power-bi"></a>สร้างเนื้อหาเพื่อโยกย้ายข้อมูลไปยัง Power BI
 
-<span data-ttu-id="a5165-104">บทความนี้จะอธิบายถึง **ขั้นตอนที่ 4** ซึ่งเกี่ยวข้องกับการสร้างและตรวจสอบความถูกต้องของเนื้อหาเมื่อโยกย้ายข้อมูลไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="a5165-104">This article describes **Stage 4**, which is concerned with creating and validating content when migrating to Power BI.</span></span>
+บทความนี้จะอธิบายถึง **ขั้นตอนที่ 4** ซึ่งเกี่ยวข้องกับการสร้างและตรวจสอบความถูกต้องของเนื้อหาเมื่อโยกย้ายข้อมูลไปยัง Power BI
 
 :::image type="content" source="media/powerbi-migration-create-validate-content/migrate-to-powerbi-stage-4.png" alt-text="รูปภาพถึงแสดงขั้นตอนของการโยกย้ายข้อมูล Power BI ขั้นตอนที่ 4 จะถูกเน้นสำหรับบทความนี้":::
 
 > [!NOTE]
-> <span data-ttu-id="a5165-106">สำหรับคำอธิบายที่สมบูรณ์ของกราฟิกด้านบน โปรดดูที่[ภาพรวมการโยกย้ายข้อมูล Power BI](powerbi-migration-overview.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-106">For a complete explanation of the above graphic, see [Power BI migration overview](powerbi-migration-overview.md).</span></span>
+> สำหรับคำอธิบายที่สมบูรณ์ของกราฟิกด้านบน โปรดดูที่[ภาพรวมการโยกย้ายข้อมูล Power BI](powerbi-migration-overview.md)
 
-<span data-ttu-id="a5165-107">จุดสำคัญของขั้นตอนที่ 4 คือการปฏิบัติงานจริงเพื่อแปลงการพิสูจน์แนวคิด (POC) เป็นโซลูชันที่พร้อมสำหรับการผลิต</span><span class="sxs-lookup"><span data-stu-id="a5165-107">The focus of Stage 4 is performing the actual work to convert the proof of concept (POC) to a production-ready solution.</span></span>
+จุดสำคัญของขั้นตอนที่ 4 คือการปฏิบัติงานจริงเพื่อแปลงการพิสูจน์แนวคิด (POC) เป็นโซลูชันที่พร้อมสำหรับการผลิต
 
-<span data-ttu-id="a5165-108">ผลลัพธ์จากขั้นตอนนี้คือโซลูชัน Power BI ที่ได้รับการตรวจสอบความถูกต้องในพื้นที่ทำงานสำหรับการพัฒนาและพร้อมสำหรับการนำไปใช้งานจริง</span><span class="sxs-lookup"><span data-stu-id="a5165-108">The output from this stage is a Power BI solution that has been validated in a development workspace and is ready for deployment to production.</span></span>
+ผลลัพธ์จากขั้นตอนนี้คือโซลูชัน Power BI ที่ได้รับการตรวจสอบความถูกต้องในพื้นที่ทำงานสำหรับการพัฒนาและพร้อมสำหรับการนำไปใช้งานจริง
 
 > [!TIP]
-> <span data-ttu-id="a5165-109">หัวข้อส่วนใหญ่ที่กล่าวถึงในบทความนี้ยังใช้กับโครงการการใช้งาน Power BI แบบมาตรฐาน</span><span class="sxs-lookup"><span data-stu-id="a5165-109">Most of the topics discussed in this article also apply to a standard Power BI implementation project.</span></span>
+> หัวข้อส่วนใหญ่ที่กล่าวถึงในบทความนี้ยังใช้กับโครงการการใช้งาน Power BI แบบมาตรฐาน
 
-## <a name="create-the-production-solution"></a><span data-ttu-id="a5165-110">สร้างโซลูชันการผลิต</span><span class="sxs-lookup"><span data-stu-id="a5165-110">Create the production solution</span></span>
+## <a name="create-the-production-solution"></a>สร้างโซลูชันการผลิต
 
-<span data-ttu-id="a5165-111">ในช่วงหัวเลี้ยวหัวต่อนี้ บุคคลเดียวกับที่ดำเนินการ POC อาจดำเนินการผลิตโซลูชัน Power BI ที่พร้อมใช้งานสำหรับการผลิต</span><span class="sxs-lookup"><span data-stu-id="a5165-111">At this juncture, the same person who performed the POC may carry on with producing the production-ready Power BI solution.</span></span> <span data-ttu-id="a5165-112">หรืออาจมีคนอื่นที่เกี่ยวข้องด้วย</span><span class="sxs-lookup"><span data-stu-id="a5165-112">Or, someone different may be involved.</span></span> <span data-ttu-id="a5165-113">หากไทม์ไลน์ไม่ตกอยู่ในอันตราย จะเป็นการดีที่จะให้กับบุคคลที่เกี่ยวข้องซึ่งจะรับผิดชอบการพัฒนา Power BI ในอนาคต</span><span class="sxs-lookup"><span data-stu-id="a5165-113">If timelines are not jeopardized, it's great to get people involved who will be responsible for Power BI development in the future.</span></span> <span data-ttu-id="a5165-114">ด้วยวิธีนี้พวกเขาสามารถเรียนรู้ได้อย่างว่องไว</span><span class="sxs-lookup"><span data-stu-id="a5165-114">This way, they can actively learn.</span></span>
+ในช่วงหัวเลี้ยวหัวต่อนี้ บุคคลเดียวกับที่ดำเนินการ POC อาจดำเนินการผลิตโซลูชัน Power BI ที่พร้อมใช้งานสำหรับการผลิต หรืออาจมีคนอื่นที่เกี่ยวข้องด้วย หากไทม์ไลน์ไม่ตกอยู่ในอันตราย จะเป็นการดีที่จะให้กับบุคคลที่เกี่ยวข้องซึ่งจะรับผิดชอบการพัฒนา Power BI ในอนาคต ด้วยวิธีนี้พวกเขาสามารถเรียนรู้ได้อย่างว่องไว
 
 > [!IMPORTANT]
-> <span data-ttu-id="a5165-115">นำงานจาก POC กลับมาใช้ใหม่ให้มากที่สุด</span><span class="sxs-lookup"><span data-stu-id="a5165-115">Reuse as much of the work from the POC as possible.</span></span>
+> นำงานจาก POC กลับมาใช้ใหม่ให้มากที่สุด
 
-### <a name="develop-new-import-dataset"></a><span data-ttu-id="a5165-116">พัฒนาชุดข้อมูลนำเข้าใหม่</span><span class="sxs-lookup"><span data-stu-id="a5165-116">Develop new import dataset</span></span>
+### <a name="develop-new-import-dataset"></a>พัฒนาชุดข้อมูลนำเข้าใหม่
 
-<span data-ttu-id="a5165-117">คุณสามารถเลือกที่จะสร้างชุดข้อมูลนำเข้าใหม่เมื่อไม่มีชุดข้อมูล Power BI ที่มีอยู่เพื่อตอบสนองความต้องการของคุณหรือหากไม่สามารถปรับปรุงให้ตรงกับความต้องการของคุณได้</span><span class="sxs-lookup"><span data-stu-id="a5165-117">You may choose to create a new Import dataset when an existing Power BI dataset doesn't already exist to meet your needs, or if it can't be enhanced to meet your needs.</span></span>
+คุณสามารถเลือกที่จะสร้างชุดข้อมูลนำเข้าใหม่เมื่อไม่มีชุดข้อมูล Power BI ที่มีอยู่เพื่อตอบสนองความต้องการของคุณหรือหากไม่สามารถปรับปรุงให้ตรงกับความต้องการของคุณได้
 
-<span data-ttu-id="a5165-118">ตามหลักการแล้วตั้งแต่เริ่มต้นให้พิจารณาแยกส่วนงานพัฒนาสำหรับข้อมูลและรายงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-118">Ideally, from the very beginning, consider decoupling the development work for data and reports.</span></span> <span data-ttu-id="a5165-119">[การแยกข้อมูลและรายงาน](report-separate-from-model.md)จะอำนวยความสะดวกในการแยกงานและการอนุญาตเมื่อต่างคนต่างรับผิดชอบในการสร้างแบบจำลองข้อมูลและรายงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-119">[Decoupling data and reports](report-separate-from-model.md) will facilitate the separation of work, and permissions, when different people are responsible for data modeling and reports.</span></span> <span data-ttu-id="a5165-120">ทำให้เป็นแนวทางที่ปรับขนาดได้มากขึ้นและสนับสนุนการใช้ข้อมูลซ้ำ</span><span class="sxs-lookup"><span data-stu-id="a5165-120">It makes for a more scalable approach and encourages data reusability.</span></span>
+ตามหลักการแล้วตั้งแต่เริ่มต้นให้พิจารณาแยกส่วนงานพัฒนาสำหรับข้อมูลและรายงาน [การแยกข้อมูลและรายงาน](report-separate-from-model.md)จะอำนวยความสะดวกในการแยกงานและการอนุญาตเมื่อต่างคนต่างรับผิดชอบในการสร้างแบบจำลองข้อมูลและรายงาน ทำให้เป็นแนวทางที่ปรับขนาดได้มากขึ้นและสนับสนุนการใช้ข้อมูลซ้ำ
 
-<span data-ttu-id="a5165-121">กิจกรรมสำคัญที่เกี่ยวข้องกับการพัฒนาชุดข้อมูลนำเข้าได้แก่:</span><span class="sxs-lookup"><span data-stu-id="a5165-121">The essential activities related to development of an Import dataset include:</span></span>
+กิจกรรมสำคัญที่เกี่ยวข้องกับการพัฒนาชุดข้อมูลนำเข้าได้แก่:
 
-- <span data-ttu-id="a5165-122">[รับข้อมูล](../connect-data/desktop-quickstart-connect-to-data.md)จากแหล่งข้อมูลอย่างน้อยหนึ่งแหล่ง (ซึ่งอาจเป็นกระแสข้อมูล Power BI)</span><span class="sxs-lookup"><span data-stu-id="a5165-122">[Acquire data](../connect-data/desktop-quickstart-connect-to-data.md) from one or more data sources (which may be a Power BI dataflow).</span></span>
-- <span data-ttu-id="a5165-123">[รูปร่าง ประกอบกัน และเตรียม](../connect-data/desktop-shape-and-combine-data.md)ข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-123">[Shape, combine, and prepare](../connect-data/desktop-shape-and-combine-data.md) data.</span></span>
-- <span data-ttu-id="a5165-124">สร้าง[แบบจำลองชุดข้อมูล](../transform-model/desktop-modeling-view.md) รวมถึง[ตารางข้อมูล](../transform-model/desktop-date-tables.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-124">Create the [dataset model](../transform-model/desktop-modeling-view.md), including [date tables](../transform-model/desktop-date-tables.md).</span></span>
-- <span data-ttu-id="a5165-125">สร้างและตรวจสอบ[แบบจำลองความสัมพันธ์](../transform-model/desktop-create-and-manage-relationships.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-125">Create and verify [model relationships](../transform-model/desktop-create-and-manage-relationships.md).</span></span>
-- <span data-ttu-id="a5165-126">กำหนด[การวัดผล](../transform-model/desktop-measures.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-126">Define [measures](../transform-model/desktop-measures.md).</span></span>
-- <span data-ttu-id="a5165-127">ตั้งค่า[ความปลอดภัยระดับแถว](../admin/service-admin-rls.md)ถ้าหากจำเป็น</span><span class="sxs-lookup"><span data-stu-id="a5165-127">Set up [row-level security](../admin/service-admin-rls.md), if necessary.</span></span>
-- <span data-ttu-id="a5165-128">กำหนดค่าคำพ้องความหมายและ[เพิ่มประสิทธิภาพการถามตอบ](../natural-language/q-and-a-best-practices.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-128">Configure synonyms and [optimize Q&A](../natural-language/q-and-a-best-practices.md).</span></span>
-- <span data-ttu-id="a5165-129">วางแผนสำหรับความสามารถในการปรับขนาดประสิทธิภาพและการทำงานพร้อมกัน ซึ่งอาจมีผลต่อการตัดสินใจของคุณเกี่ยวกับโหมดการจัดเก็บข้อมูล เช่นการใช้[แบบจำลองที่ประกอบด้วยส่วนต่าง ๆ](../transform-model/desktop-composite-models.md) หรือ [การรวมตัว](../transform-model/desktop-aggregations.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-129">Plan for scalability, performance, and concurrency, which may influence your decisions about data storage modes, such as using a [Composite model](../transform-model/desktop-composite-models.md) or [aggregations](../transform-model/desktop-aggregations.md).</span></span>
+- [รับข้อมูล](../connect-data/desktop-quickstart-connect-to-data.md)จากแหล่งข้อมูลอย่างน้อยหนึ่งแหล่ง (ซึ่งอาจเป็นกระแสข้อมูล Power BI)
+- [รูปร่าง ประกอบกัน และเตรียม](../connect-data/desktop-shape-and-combine-data.md)ข้อมูล
+- สร้าง[แบบจำลองชุดข้อมูล](../transform-model/desktop-modeling-view.md) รวมถึง[ตารางข้อมูล](../transform-model/desktop-date-tables.md)
+- สร้างและตรวจสอบ[แบบจำลองความสัมพันธ์](../transform-model/desktop-create-and-manage-relationships.md)
+- กำหนด[การวัดผล](../transform-model/desktop-measures.md)
+- ตั้งค่า[ความปลอดภัยระดับแถว](../admin/service-admin-rls.md)ถ้าหากจำเป็น
+- กำหนดค่าคำพ้องความหมายและ[เพิ่มประสิทธิภาพการถามตอบ](../natural-language/q-and-a-best-practices.md)
+- วางแผนสำหรับความสามารถในการปรับขนาดประสิทธิภาพและการทำงานพร้อมกัน ซึ่งอาจมีผลต่อการตัดสินใจของคุณเกี่ยวกับโหมดการจัดเก็บข้อมูล เช่นการใช้[แบบจำลองที่ประกอบด้วยส่วนต่าง ๆ](../transform-model/desktop-composite-models.md) หรือ [การรวมตัว](../transform-model/desktop-aggregations.md)
 
 > [!TIP]
-> <span data-ttu-id="a5165-130">หากคุณมีสภาพแวดล้อมการพัฒนา/การทดสอบ/การผลิตที่แตกต่างกัน ให้พิจารณาแหล่งข้อมูล[การกำหนดพารามิเตอร์](/power-query/power-query-query-parameters)</span><span class="sxs-lookup"><span data-stu-id="a5165-130">If you have different development/test/production environments, consider [parameterizing](/power-query/power-query-query-parameters) data sources.</span></span> <span data-ttu-id="a5165-131">ซึ่งจะทำให้ปรับใช้ได้ มีอธิบายไว้ใน[ขั้นตอนที่ 5](powerbi-migration-deploy-support-monitor.md)ง่ายกว่ามาก</span><span class="sxs-lookup"><span data-stu-id="a5165-131">It will make deployment, described in [Stage 5](powerbi-migration-deploy-support-monitor.md), significantly easier.</span></span>
+> หากคุณมีสภาพแวดล้อมการพัฒนา/การทดสอบ/การผลิตที่แตกต่างกัน ให้พิจารณาแหล่งข้อมูล[การกำหนดพารามิเตอร์](/power-query/power-query-query-parameters) ซึ่งจะทำให้ปรับใช้ได้ มีอธิบายไว้ใน[ขั้นตอนที่ 5](powerbi-migration-deploy-support-monitor.md)ง่ายกว่ามาก
 
-### <a name="develop-new-reports-and-dashboards"></a><span data-ttu-id="a5165-132">พัฒนารายงานใหม่และแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="a5165-132">Develop new reports and dashboards</span></span>
+### <a name="develop-new-reports-and-dashboards"></a>พัฒนารายงานใหม่และแดชบอร์ด
 
-<span data-ttu-id="a5165-133">กิจกรรมสำคัญที่เกี่ยวข้องกับการพัฒนารายงานหรือแดชบอร์ด Power BI ได้แก่:</span><span class="sxs-lookup"><span data-stu-id="a5165-133">The essential activities related to development of a Power BI report or dashboard include:</span></span>
+กิจกรรมสำคัญที่เกี่ยวข้องกับการพัฒนารายงานหรือแดชบอร์ด Power BI ได้แก่:
 
-- <span data-ttu-id="a5165-134">ตัดสินใจว่าจะใช้การเชื่อมต่อแบบสดกับแบบจำลองข้อมูลที่มีอยู่หรือสร้างแบบจำลองข้อมูลใหม่ขึ้นมา</span><span class="sxs-lookup"><span data-stu-id="a5165-134">Decide on using a Live Connection to an existing data model, or creating a new data model</span></span>
-- <span data-ttu-id="a5165-135">เมื่อกำลังสร้างแบบจำลองข้อมูลใหม่ ให้ตัดสินใจเลือก[โหมดเก็บข้อมูล](../transform-model/desktop-storage-mode.md)สำหรับตารางแบบจำลอง (การนำเข้า DirectQuery หรือส่วนประกอบ)</span><span class="sxs-lookup"><span data-stu-id="a5165-135">When creating a new data model, decide on the [data storage mode](../transform-model/desktop-storage-mode.md) for model tables (Import, DirectQuery, or Composite).</span></span>
-- <span data-ttu-id="a5165-136">ตัดสินใจเลือกเครื่องมือแสดงข้อมูลที่ดีที่สุดเพื่อให้เป็นไปตามข้อกำหนด: Power BI Desktop ตัวสร้างรายงานที่มีเลขหน้า หรือ Excel</span><span class="sxs-lookup"><span data-stu-id="a5165-136">Decide on the best data visualization tool to meet requirements: Power BI Desktop, Paginated Report Builder, or Excel.</span></span>
-- <span data-ttu-id="a5165-137">ตัดสินใจเลือก[ภาพที่ดีที่สุด](../consumer/end-user-visual-type.md)เพื่อบอกเล่าเรื่องราวที่รายงานจำเป็นต้องบอกและตอบคำถามที่รายงานต้องตอบ</span><span class="sxs-lookup"><span data-stu-id="a5165-137">Decide on the [best visuals](../consumer/end-user-visual-type.md) to tell the story the report needs to tell, and to address the questions the report needs to answer.</span></span>
-- <span data-ttu-id="a5165-138">ตรวจสอบให้แน่ใจว่าภาพทั้งหมดนำเสนอคำศัพท์ที่ชัดเจน รวบรัด และเป็นมิตรกับธุรกิจ</span><span class="sxs-lookup"><span data-stu-id="a5165-138">Ensure all visuals present clear, concise, and business-friendly terminology.</span></span>
-- <span data-ttu-id="a5165-139">ข้อกำหนดการโต้ตอบที่อยู่</span><span class="sxs-lookup"><span data-stu-id="a5165-139">Address interactivity requirements.</span></span>
-- <span data-ttu-id="a5165-140">เมื่อกำลังใช้การเชื่อมต่อสด ให้เพิ่ม[การวัดผลระดับรายงาน](../transform-model/desktop-tutorial-create-measures.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-140">When using Live Connection, add [report-level measures](../transform-model/desktop-tutorial-create-measures.md).</span></span>
-- <span data-ttu-id="a5165-141">สร้าง[แดชบอร์ด](../create-reports/service-dashboards.md)ในบริการ Power BI โดยเฉพาะอย่างยิ่งเมื่อผู้บริโภคต้องการวิธีง่าย ๆ ในการตรวจสอบเมตริกหลัก</span><span class="sxs-lookup"><span data-stu-id="a5165-141">Create a [dashboard](../create-reports/service-dashboards.md) in the Power BI service, especially when consumers want an easy way to monitor key metrics.</span></span>
+- ตัดสินใจว่าจะใช้การเชื่อมต่อแบบสดกับแบบจำลองข้อมูลที่มีอยู่หรือสร้างแบบจำลองข้อมูลใหม่ขึ้นมา
+- เมื่อกำลังสร้างแบบจำลองข้อมูลใหม่ ให้ตัดสินใจเลือก[โหมดเก็บข้อมูล](../transform-model/desktop-storage-mode.md)สำหรับตารางแบบจำลอง (การนำเข้า DirectQuery หรือส่วนประกอบ)
+- ตัดสินใจเลือกเครื่องมือแสดงข้อมูลที่ดีที่สุดเพื่อให้เป็นไปตามข้อกำหนด: Power BI Desktop ตัวสร้างรายงานที่มีเลขหน้า หรือ Excel
+- ตัดสินใจเลือก[ภาพที่ดีที่สุด](../consumer/end-user-visual-type.md)เพื่อบอกเล่าเรื่องราวที่รายงานจำเป็นต้องบอกและตอบคำถามที่รายงานต้องตอบ
+- ตรวจสอบให้แน่ใจว่าภาพทั้งหมดนำเสนอคำศัพท์ที่ชัดเจน รวบรัด และเป็นมิตรกับธุรกิจ
+- ข้อกำหนดการโต้ตอบที่อยู่
+- เมื่อกำลังใช้การเชื่อมต่อสด ให้เพิ่ม[การวัดผลระดับรายงาน](../transform-model/desktop-tutorial-create-measures.md)
+- สร้าง[แดชบอร์ด](../create-reports/service-dashboards.md)ในบริการ Power BI โดยเฉพาะอย่างยิ่งเมื่อผู้บริโภคต้องการวิธีง่าย ๆ ในการตรวจสอบเมตริกหลัก
 
 > [!NOTE]
-> <span data-ttu-id="a5165-142">การตัดสินใจหลายอย่างเหล่านี้จะเกิดขึ้นในขั้นตอนก่อนหน้าของการวางแผนหรือใน POC ทางเทคนิค</span><span class="sxs-lookup"><span data-stu-id="a5165-142">Many of these decisions will have been made in earlier stages of planning or in the technical POC.</span></span>
+> การตัดสินใจหลายอย่างเหล่านี้จะเกิดขึ้นในขั้นตอนก่อนหน้าของการวางแผนหรือใน POC ทางเทคนิค
 
-## <a name="validate-the-solution"></a><span data-ttu-id="a5165-143">ตรวจสอบความถูกต้องของโซลูชัน</span><span class="sxs-lookup"><span data-stu-id="a5165-143">Validate the solution</span></span>
+## <a name="validate-the-solution"></a>ตรวจสอบความถูกต้องของโซลูชัน
 
-<span data-ttu-id="a5165-144">มีอยู่สี่ประเด็นหลักในการตรวจสอบความถูกต้องของโซลูชัน Power BI:</span><span class="sxs-lookup"><span data-stu-id="a5165-144">There are four main aspects to validation of a Power BI solution:</span></span>
+มีอยู่สี่ประเด็นหลักในการตรวจสอบความถูกต้องของโซลูชัน Power BI:
 
-1. <span data-ttu-id="a5165-145">ความถูกต้องของข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-145">Data accuracy</span></span>
-2. <span data-ttu-id="a5165-146">ความปลอดภัย</span><span class="sxs-lookup"><span data-stu-id="a5165-146">Security</span></span>
-3. <span data-ttu-id="a5165-147">การทำงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-147">Functionality</span></span>
-4. <span data-ttu-id="a5165-148">ประสิทธิภาพการทำงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-148">Performance</span></span>
+1. ความถูกต้องของข้อมูล
+2. ความปลอดภัย
+3. การทำงาน
+4. ประสิทธิภาพการทำงาน
 
-### <a name="validate-data-accuracy"></a><span data-ttu-id="a5165-149">ตรวจสอบความถูกต้องของข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-149">Validate data accuracy</span></span>
+### <a name="validate-data-accuracy"></a>ตรวจสอบความถูกต้องของข้อมูล
 
-<span data-ttu-id="a5165-150">ในระหว่างการโยกย้ายข้อมูล คุณจะต้องตรวจสอบให้แน่ใจว่าข้อมูลในรายงานใหม่ตรงกับที่แสดงในรายงานเดิม</span><span class="sxs-lookup"><span data-stu-id="a5165-150">As a one-time effort during the migration, you'll need to ensure the data in the new report matches what's displayed in the legacy report.</span></span> <span data-ttu-id="a5165-151">หรือ—ถ้ามีความต่างกัน—สามารถอธิบายได้ว่าทำไม</span><span class="sxs-lookup"><span data-stu-id="a5165-151">Or—if there's a difference—be able to explain why.</span></span> <span data-ttu-id="a5165-152">ซึ่งเป็นเรื่องปกติมากกว่าที่คุณคิดว่าจะพบข้อผิดพลาดในโซลูชันเดิมที่ได้รับการแก้ไขในโซลูชันใหม่</span><span class="sxs-lookup"><span data-stu-id="a5165-152">It's more common than you might think to find an error in the legacy solution that gets resolved in the new solution.</span></span>
+ในระหว่างการโยกย้ายข้อมูล คุณจะต้องตรวจสอบให้แน่ใจว่าข้อมูลในรายงานใหม่ตรงกับที่แสดงในรายงานเดิม หรือ—ถ้ามีความต่างกัน—สามารถอธิบายได้ว่าทำไม ซึ่งเป็นเรื่องปกติมากกว่าที่คุณคิดว่าจะพบข้อผิดพลาดในโซลูชันเดิมที่ได้รับการแก้ไขในโซลูชันใหม่
 
-<span data-ttu-id="a5165-153">เนื่องจากเป็นส่วนหนึ่งของความพยายามในการตรวจสอบข้อมูลอย่างต่อเนื่องโดยทั่วไปรายงานใหม่จะต้องได้รับการตรวจสอบข้ามกับระบบต้นทางเดิม</span><span class="sxs-lookup"><span data-stu-id="a5165-153">As part of ongoing data validation efforts, the new report will typically need to be cross-checked with the original source system.</span></span> <span data-ttu-id="a5165-154">ตามหลักการแล้ว การตรวจสอบนี้เกิดขึ้นในลักษณะที่ทำซ้ำได้ทุกครั้งที่คุณเผยแพร่การเปลี่ยนแปลงของรายงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-154">Ideally, this validation occurs in a repeatable way every time you publish a report change.</span></span>
+เนื่องจากเป็นส่วนหนึ่งของความพยายามในการตรวจสอบข้อมูลอย่างต่อเนื่องโดยทั่วไปรายงานใหม่จะต้องได้รับการตรวจสอบข้ามกับระบบต้นทางเดิม ตามหลักการแล้ว การตรวจสอบนี้เกิดขึ้นในลักษณะที่ทำซ้ำได้ทุกครั้งที่คุณเผยแพร่การเปลี่ยนแปลงของรายงาน
 
-### <a name="validate-security"></a><span data-ttu-id="a5165-155">ตรวจสอบความปลอดภัย</span><span class="sxs-lookup"><span data-stu-id="a5165-155">Validate security</span></span>
+### <a name="validate-security"></a>ตรวจสอบความปลอดภัย
 
-<span data-ttu-id="a5165-156">เมื่อตรวจสอบความปลอดภัยจะมีอยู่สองประเด็นหลักที่ต้องพิจารณา:</span><span class="sxs-lookup"><span data-stu-id="a5165-156">When validating security, there are two primary aspects to consider:</span></span>
+เมื่อตรวจสอบความปลอดภัยจะมีอยู่สองประเด็นหลักที่ต้องพิจารณา:
 
-- <span data-ttu-id="a5165-157">สิทธิ์การเข้าถึงข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-157">Data permissions</span></span>
-- <span data-ttu-id="a5165-158">การเข้าถึงชุดข้อมูล รายงาน และแดชบอร์ด</span><span class="sxs-lookup"><span data-stu-id="a5165-158">Access to datasets, reports, and dashboards</span></span>
+- สิทธิ์การเข้าถึงข้อมูล
+- การเข้าถึงชุดข้อมูล รายงาน และแดชบอร์ด
 
-<span data-ttu-id="a5165-159">ในชุดข้อมูลนำเข้า จะมีการใช้สิทธิ์ข้อมูลโดยการกำหนด[ความปลอดภัยระดับแถว](../admin/service-admin-rls.md) (RLS)</span><span class="sxs-lookup"><span data-stu-id="a5165-159">In an Import dataset, data permissions are applied by defining [row-level security](../admin/service-admin-rls.md) (RLS).</span></span> <span data-ttu-id="a5165-160">อาจเป็นไปได้ว่าสิทธิ์การเข้าถึงข้อมูลจะถูกบังคับใช้โดยระบบต้นทางเมื่อใช้โหมดการจัดเก็บ DirectQuery (อาจมี[การลงชื่อเข้าสู่ระบบเพียงครั้งเดียว](../connect-data/service-gateway-sso-overview.md))</span><span class="sxs-lookup"><span data-stu-id="a5165-160">It's also possible that data permissions are enforced by the source system when using DirectQuery storage mode (possibly with [single sign-on](../connect-data/service-gateway-sso-overview.md)).</span></span>
+ในชุดข้อมูลนำเข้า จะมีการใช้สิทธิ์ข้อมูลโดยการกำหนด[ความปลอดภัยระดับแถว](../admin/service-admin-rls.md) (RLS) อาจเป็นไปได้ว่าสิทธิ์การเข้าถึงข้อมูลจะถูกบังคับใช้โดยระบบต้นทางเมื่อใช้โหมดการจัดเก็บ DirectQuery (อาจมี[การลงชื่อเข้าสู่ระบบเพียงครั้งเดียว](../connect-data/service-gateway-sso-overview.md))
 
-<span data-ttu-id="a5165-161">วิธีหลักในการให้สิทธิ์เข้าถึงเนื้อหา Power BI ได้แก่:</span><span class="sxs-lookup"><span data-stu-id="a5165-161">The main ways to grant access to Power BI content are:</span></span>
+วิธีหลักในการให้สิทธิ์เข้าถึงเนื้อหา Power BI ได้แก่:
 
-- <span data-ttu-id="a5165-162">[บทบาทพื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces) (สำหรับผู้แก้ไขเนื้อหาและผู้ชม)</span><span class="sxs-lookup"><span data-stu-id="a5165-162">[Workspace roles](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces) (for content editors and viewers).</span></span>
-- <span data-ttu-id="a5165-163">[สิทธิ์การเข้าถึงของแอป](../collaborate-share/service-create-distribute-apps.md#publish-your-app)ใช้กับชุดเนื้อหาพื้นที่ทำงานแบบแพ็กเกจ (สำหรับผู้ชม)</span><span class="sxs-lookup"><span data-stu-id="a5165-163">[App permissions](../collaborate-share/service-create-distribute-apps.md#publish-your-app) applied to a packaged set of workspace content (for viewers).</span></span>
-- <span data-ttu-id="a5165-164">[การแชร์](../collaborate-share/service-share-dashboards.md)รายงานหรือแดชบอร์ดแต่ละรายการ (สำหรับผู้ชม)</span><span class="sxs-lookup"><span data-stu-id="a5165-164">[Sharing](../collaborate-share/service-share-dashboards.md) an individual report or dashboard (for viewers).</span></span>
-
-> [!TIP]
-> <span data-ttu-id="a5165-165">ทางเราขอแนะนำผู้เขียนเนื้อหาการฝึกอบรมเกี่ยวกับวิธีจัดการความปลอดภัยอย่างมีประสิทธิภาพ</span><span class="sxs-lookup"><span data-stu-id="a5165-165">We recommend training content authors on how to manage security effectively.</span></span> <span data-ttu-id="a5165-166">สิ่งสำคัญคือต้องมีการทดสอบตรวจสอบและติดตามอย่างมีประสิทธิภาพ</span><span class="sxs-lookup"><span data-stu-id="a5165-166">It's also important to have robust testing, auditing and monitoring in place.</span></span>
-
-### <a name="validate-functionality"></a><span data-ttu-id="a5165-167">ตรวจสอบความถูกต้องของฟังก์ชันการทำงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-167">Validate functionality</span></span>
-
-<span data-ttu-id="a5165-168">ถึงเวลาที่จะต้องตรวจสอบรายละเอียดชุดข้อมูลอีกครั้ง เช่น ชื่อฟิลด์ การจัดรูปแบบ การเรียงลำดับ และพฤติกรรมการสรุปเริ่มต้น</span><span class="sxs-lookup"><span data-stu-id="a5165-168">It's the time to double-check dataset details like field names, formatting, sorting, and default summarization behavior.</span></span> <span data-ttu-id="a5165-169">คุณลักษณะรายงานเชิงโต้ตอบ เช่น [การแบ่งส่วนข้อมูล](../visuals/power-bi-visualization-slicers.md) [การดูรายละเอียดแนวลึก](../consumer/end-user-drill.md) [การลงรายละเอียดข้อมูล](../create-reports/desktop-drillthrough.md) [นิพจน์](../create-reports/desktop-conditional-format-visual-titles.md) [ปุ่ม](../create-reports/desktop-buttons.md)หรือ [บุ๊กมาร์ก](../create-reports/desktop-bookmarks.md)ทั้งหมดนี้ควรได้รับการตรวจสอบเช่นกัน</span><span class="sxs-lookup"><span data-stu-id="a5165-169">Interactive report features, such as [slicers](../visuals/power-bi-visualization-slicers.md), [drill down](../consumer/end-user-drill.md), [drillthrough](../create-reports/desktop-drillthrough.md), [expressions](../create-reports/desktop-conditional-format-visual-titles.md), [buttons](../create-reports/desktop-buttons.md), or [bookmarks](../create-reports/desktop-bookmarks.md), should all be verified, too.</span></span>
-
-<span data-ttu-id="a5165-170">ในระหว่างขั้นตอนการพัฒนาโซลูชัน Power BI ควรได้รับการเผยแพร่ไปยังพื้นที่ทำงานสำหรับการพัฒนาในบริการ Power BI เป็นประจำ</span><span class="sxs-lookup"><span data-stu-id="a5165-170">During the development process, the Power BI solution should be published to a development workspace in the Power BI service on a regular basis.</span></span> <span data-ttu-id="a5165-171">ตรวจสอบว่าฟังก์ชันทั้งหมดทำงานตามที่คาดไว้ในบริการ เช่น การแสดงผลของภาพแบบกำหนดเอง</span><span class="sxs-lookup"><span data-stu-id="a5165-171">Verify all functionality works as expected in the service, such as the rendering of custom visuals.</span></span> <span data-ttu-id="a5165-172">อีกทั้งยังเป็นเวลาที่ดีที่จะทำการทดสอบเพิ่มเติมด้วยเช่นกัน</span><span class="sxs-lookup"><span data-stu-id="a5165-172">It's also a good time to do further testing.</span></span> <span data-ttu-id="a5165-173">ทดสอบ [การรีเฟรชตามกำหนดการ](../connect-data/refresh-scheduled-refresh.md) [การถามตอบ](../consumer/end-user-q-and-a.md) และวิธีการรายงานและแดชบอร์ด ให้ดูที่[อุปกรณ์โทรศัพท์เคลื่อนที่](../consumer/mobile/mobile-apps-for-mobile-devices.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-173">Test [scheduled refresh](../connect-data/refresh-scheduled-refresh.md), [Q&A](../consumer/end-user-q-and-a.md), and how reports and dashboards look on a [mobile device](../consumer/mobile/mobile-apps-for-mobile-devices.md).</span></span>
-
-### <a name="validate-performance"></a><span data-ttu-id="a5165-174">ตรวจสอบความถูกต้องของประสิทธิภาพการทำงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-174">Validate performance</span></span>
-
-<span data-ttu-id="a5165-175">ประสิทธิภาพของโซลูชัน Power BI มีความสำคัญต่อประสบการณ์ของผู้บริโภค</span><span class="sxs-lookup"><span data-stu-id="a5165-175">Performance of the Power BI solution is important for consumer experience.</span></span> <span data-ttu-id="a5165-176">การรายงานส่วนมากควรแสดงภาพภายในเวลาไม่เกิน 10 วินาที</span><span class="sxs-lookup"><span data-stu-id="a5165-176">Most reports should present visuals in under 10 seconds.</span></span> <span data-ttu-id="a5165-177">หากคุณมีรายงานที่ใช้เวลาโหลดนานขึ้นให้หยุดชั่วคราวและพิจารณาสิ่งที่อาจทำให้เกิดความล่าช้าขึ้น</span><span class="sxs-lookup"><span data-stu-id="a5165-177">If you have reports that take longer to load, pause and reconsider what may be contributing to delays.</span></span> <span data-ttu-id="a5165-178">รายงานประสิทธิภาพควรได้รับการประเมินอย่างสม่ำเสมอในบริการ Power BI นอกเหนือจาก Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="a5165-178">Report performance should be assessed regularly in the Power BI service, in addition to Power BI Desktop.</span></span>
-
-<span data-ttu-id="a5165-179">ปัญหาด้านประสิทธิภาพหลายประการเกิดจากการต่ำกว่ามาตรฐาน [DAX (นิพจน์การวิเคราะห์ข้อมูล)](../transform-model/desktop-quickstart-learn-dax-basics.md)การออกแบบชุดข้อมูลที่ไม่ดี หรือการออกแบบรายงานที่ไม่เหมาะสม (เช่น พยายามแสดงผลของภาพมากเกินไปในหน้าเดียว)</span><span class="sxs-lookup"><span data-stu-id="a5165-179">Many performance issues arise from substandard [DAX (Data Analysis eXpressions)](../transform-model/desktop-quickstart-learn-dax-basics.md), poor dataset design, or suboptimal report design (for instance, trying to render too many visuals on a single page).</span></span> <span data-ttu-id="a5165-180">ปัญหาเกี่ยวกับสภาพแวดล้อมทางเทคนิค เช่น เครือข่าย เกตเวย์ข้อมูลที่มากเกินไป หรือวิธีกำหนดค่าความจุพรีเมียมที่ยังสามารถนำไปสู่ปัญหาด้านประสิทธิภาพได้</span><span class="sxs-lookup"><span data-stu-id="a5165-180">Technical environment issues, such as the network, an overloaded data gateway, or how a Premium capacity is configured can also contribute to performance issues.</span></span> <span data-ttu-id="a5165-181">สำหรับข้อมูลเพิ่มเติม โปรดดูที่[คู่มือการเพิ่มประสิทธิภาพสำหรับ Power BI](power-bi-optimization.md) และ [แก้ไขปัญหาประสิทธิภาพของรายงานใน Power BI](report-performance-troubleshoot.md)</span><span class="sxs-lookup"><span data-stu-id="a5165-181">For more information, see the [Optimization guide for Power BI](power-bi-optimization.md) and [Troubleshoot report performance in Power BI](report-performance-troubleshoot.md).</span></span>
-
-## <a name="document-the-solution"></a><span data-ttu-id="a5165-182">จัดทำเอกสารโซลูชัน</span><span class="sxs-lookup"><span data-stu-id="a5165-182">Document the solution</span></span>
-
-<span data-ttu-id="a5165-183">มีเอกสารสองประเภทหลักที่มีประโยชน์สำหรับโซลูชัน Power BI ได้แก่:</span><span class="sxs-lookup"><span data-stu-id="a5165-183">There are two main types of documentation that are useful for a Power BI solution:</span></span>
-
-- <span data-ttu-id="a5165-184">เอกสารชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-184">Dataset documentation</span></span>
-- <span data-ttu-id="a5165-185">เอกสารการรายงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-185">Report documentation</span></span>
-
-<span data-ttu-id="a5165-186">เอกสารสามารถจัดเก็บได้ทุกที่ที่เข้าถึงได้ง่ายที่สุดโดยกลุ่มเป้าหมาย</span><span class="sxs-lookup"><span data-stu-id="a5165-186">Documentation can be stored wherever it's most easily accessed by the target audience.</span></span> <span data-ttu-id="a5165-187">ตัวเลือกทั่วไปได้แก่ :</span><span class="sxs-lookup"><span data-stu-id="a5165-187">Common options include:</span></span>
-
-- <span data-ttu-id="a5165-188">**ภายในไซต์ SharePoint:** ไซต์ SharePoint อาจมีไว้สำหรับ Center of Excellence ของคุณหรือไซต์ชุมชนภายใน Power BI</span><span class="sxs-lookup"><span data-stu-id="a5165-188">**Within a SharePoint site:** A SharePoint site may exist for your Center of Excellence or an internal Power BI community site.</span></span>
-- <span data-ttu-id="a5165-189">**ภายในแอป:** URL อาจได้รับการกำหนดค่าเมื่อเผยแพร่แอป Power BI เพื่อนำผู้บริโภคไปยังข้อมูลเพิ่มเติม</span><span class="sxs-lookup"><span data-stu-id="a5165-189">**Within an app:** URLs may be configured when publishing a Power BI app to direct the consumer to more information.</span></span>
-- <span data-ttu-id="a5165-190">**ภายในไฟล์ Power BI Desktop แต่ละไฟล์:** องค์ประกอบแบบจำลอง เช่น ตาราง และคอลัมน์ สามารถกำหนดคำอธิบายได้</span><span class="sxs-lookup"><span data-stu-id="a5165-190">**Within individual Power BI Desktop files:** Model elements, like tables and columns, can define a description.</span></span> <span data-ttu-id="a5165-191">คำอธิบายเหล่านี้ปรากฏเป็นคำแนะนำเครื่องมือในหน้าต่าง **เขตข้อมูล** เมื่อสร้างรายงานขึ้นมา</span><span class="sxs-lookup"><span data-stu-id="a5165-191">These descriptions appear as tooltips in the **Fields** pane when authoring reports.</span></span>
+- [บทบาทพื้นที่ทำงาน](../collaborate-share/service-new-workspaces.md#roles-in-the-new-workspaces) (สำหรับผู้แก้ไขเนื้อหาและผู้ชม)
+- [สิทธิ์การเข้าถึงของแอป](../collaborate-share/service-create-distribute-apps.md#publish-your-app)ใช้กับชุดเนื้อหาพื้นที่ทำงานแบบแพ็กเกจ (สำหรับผู้ชม)
+- [การแชร์](../collaborate-share/service-share-dashboards.md)รายงานหรือแดชบอร์ดแต่ละรายการ (สำหรับผู้ชม)
 
 > [!TIP]
-> <span data-ttu-id="a5165-192">ถ้าคุณสร้างไซต์เพื่อใช้เป็นฮับสำหรับเอกสารเกี่ยวกับ Power BI ให้พิจารณาจาก[การปรับแต่งเมนูขอความช่วยเหลือ](../admin/service-admin-portal.md#publish-get-help-information)กับตำแหน่งที่ตั้งของ URL</span><span class="sxs-lookup"><span data-stu-id="a5165-192">If you create a site to serve as a hub for Power BI-related documentation, consider [customizing the Get Help menu](../admin/service-admin-portal.md#publish-get-help-information) with its URL location.</span></span>
+> ทางเราขอแนะนำผู้เขียนเนื้อหาการฝึกอบรมเกี่ยวกับวิธีจัดการความปลอดภัยอย่างมีประสิทธิภาพ สิ่งสำคัญคือต้องมีการทดสอบตรวจสอบและติดตามอย่างมีประสิทธิภาพ
 
-### <a name="create-dataset-documentation"></a><span data-ttu-id="a5165-193">สร้างเอกสารชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-193">Create dataset documentation</span></span>
+### <a name="validate-functionality"></a>ตรวจสอบความถูกต้องของฟังก์ชันการทำงาน
 
-<span data-ttu-id="a5165-194">เอกสารชุดข้อมูลจะกำหนดเป้าหมายไปที่ผู้ใช้ที่จะจัดการชุดข้อมูลในอนาคต</span><span class="sxs-lookup"><span data-stu-id="a5165-194">Dataset documentation is targeted at users who will be managing the dataset in the future.</span></span> <span data-ttu-id="a5165-195">มีประโยชน์ร่วมกับ:</span><span class="sxs-lookup"><span data-stu-id="a5165-195">It's useful to include:</span></span>
+ถึงเวลาที่จะต้องตรวจสอบรายละเอียดชุดข้อมูลอีกครั้ง เช่น ชื่อฟิลด์ การจัดรูปแบบ การเรียงลำดับ และพฤติกรรมการสรุปเริ่มต้น คุณลักษณะรายงานเชิงโต้ตอบ เช่น [การแบ่งส่วนข้อมูล](../visuals/power-bi-visualization-slicers.md) [การดูรายละเอียดแนวลึก](../consumer/end-user-drill.md) [การลงรายละเอียดข้อมูล](../create-reports/desktop-drillthrough.md) [นิพจน์](../create-reports/desktop-conditional-format-visual-titles.md) [ปุ่ม](../create-reports/desktop-buttons.md)หรือ [บุ๊กมาร์ก](../create-reports/desktop-bookmarks.md)ทั้งหมดนี้ควรได้รับการตรวจสอบเช่นกัน
 
-- <span data-ttu-id="a5165-196">การตัดสินใจออกแบบและเหตุผลว่าทำไม</span><span class="sxs-lookup"><span data-stu-id="a5165-196">Design decisions made and reasons why.</span></span>
-- <span data-ttu-id="a5165-197">ใครคือเจ้าของ ผู้ดูแลรักษา และใครคือผู้รับรองชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-197">Who owns, maintains, and certifies datasets.</span></span>
-- <span data-ttu-id="a5165-198">ข้อกำหนดการรีเฟรชข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-198">Data refresh requirements.</span></span>
-- <span data-ttu-id="a5165-199">กฎทางธุรกิจที่กำหนดเองที่กำหนดไว้ในชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-199">Custom business rules defined in datasets.</span></span>
-- <span data-ttu-id="a5165-200">ความปลอดภัยของชุดข้อมูลเฉพาะหรือข้อกำหนดด้านความเป็นส่วนตัวของข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-200">Specific dataset security or data privacy requirements.</span></span>
-- <span data-ttu-id="a5165-201">ความจำเป็นต้องบำรุงรักษาในอนาคต</span><span class="sxs-lookup"><span data-stu-id="a5165-201">Future maintenance needs.</span></span>
-- <span data-ttu-id="a5165-202">ทราบถึงปัญหาที่มีอยู่หรือรายการตกค้างรอการตัดบัญชี</span><span class="sxs-lookup"><span data-stu-id="a5165-202">Known open issues or deferred backlog items.</span></span>
+ในระหว่างขั้นตอนการพัฒนาโซลูชัน Power BI ควรได้รับการเผยแพร่ไปยังพื้นที่ทำงานสำหรับการพัฒนาในบริการ Power BI เป็นประจำ ตรวจสอบว่าฟังก์ชันทั้งหมดทำงานตามที่คาดไว้ในบริการ เช่น การแสดงผลของภาพแบบกำหนดเอง อีกทั้งยังเป็นเวลาที่ดีที่จะทำการทดสอบเพิ่มเติมด้วยเช่นกัน ทดสอบ [การรีเฟรชตามกำหนดการ](../connect-data/refresh-scheduled-refresh.md) [การถามตอบ](../consumer/end-user-q-and-a.md) และวิธีการรายงานและแดชบอร์ด ให้ดูที่[อุปกรณ์โทรศัพท์เคลื่อนที่](../consumer/mobile/mobile-apps-for-mobile-devices.md)
 
-<span data-ttu-id="a5165-203">อีกทั้งคุณอาจเลือกที่จะสร้างบันทึกการเปลี่ยนแปลงที่สรุปการเปลี่ยนแปลงที่สำคัญที่สุดที่เกิดขึ้นกับชุดข้อมูลเมื่อเวลาผ่านไปอีกด้วย</span><span class="sxs-lookup"><span data-stu-id="a5165-203">You may also elect to create a change log that summarizes the most important changes that have happened to the dataset over time.</span></span>
+### <a name="validate-performance"></a>ตรวจสอบความถูกต้องของประสิทธิภาพการทำงาน
 
-### <a name="create-report-documentation"></a><span data-ttu-id="a5165-204">สร้างเอกสารการรายงาน</span><span class="sxs-lookup"><span data-stu-id="a5165-204">Create report documentation</span></span>
+ประสิทธิภาพของโซลูชัน Power BI มีความสำคัญต่อประสบการณ์ของผู้บริโภค การรายงานส่วนมากควรแสดงภาพภายในเวลาไม่เกิน 10 วินาที หากคุณมีรายงานที่ใช้เวลาโหลดนานขึ้นให้หยุดชั่วคราวและพิจารณาสิ่งที่อาจทำให้เกิดความล่าช้าขึ้น รายงานประสิทธิภาพควรได้รับการประเมินอย่างสม่ำเสมอในบริการ Power BI นอกเหนือจาก Power BI Desktop
 
-<span data-ttu-id="a5165-205">เอกสารการรายงาน ซึ่งโดยทั่วไปจะมีโครงสร้างเป็นทางเดินผ่านที่กำหนดเป้าหมายไปที่ผู้บริโภครายงานสามารถช่วยให้ผู้บริโภคได้รับค่าที่มากขึ้นจากรายงานและแดชบอร์ดของคุณ</span><span class="sxs-lookup"><span data-stu-id="a5165-205">Report documentation, which is typically structured as a walk-through targeted at report consumers, can help consumers get more value from your reports and dashboards.</span></span> <span data-ttu-id="a5165-206">วิดีโอแนะนำสั้น ๆ มักทำงานได้ดี</span><span class="sxs-lookup"><span data-stu-id="a5165-206">A short video tutorial often works well.</span></span>
+ปัญหาด้านประสิทธิภาพหลายประการเกิดจากการต่ำกว่ามาตรฐาน [DAX (นิพจน์การวิเคราะห์ข้อมูล)](../transform-model/desktop-quickstart-learn-dax-basics.md)การออกแบบชุดข้อมูลที่ไม่ดี หรือการออกแบบรายงานที่ไม่เหมาะสม (เช่น พยายามแสดงผลของภาพมากเกินไปในหน้าเดียว) ปัญหาเกี่ยวกับสภาพแวดล้อมทางเทคนิค เช่น เครือข่าย เกตเวย์ข้อมูลที่มากเกินไป หรือวิธีกำหนดค่าความจุพรีเมียมที่ยังสามารถนำไปสู่ปัญหาด้านประสิทธิภาพได้ สำหรับข้อมูลเพิ่มเติม โปรดดูที่[คู่มือการเพิ่มประสิทธิภาพสำหรับ Power BI](power-bi-optimization.md) และ [แก้ไขปัญหาประสิทธิภาพของรายงานใน Power BI](report-performance-troubleshoot.md)
 
-<span data-ttu-id="a5165-207">อีกทั้งคุณยังสามารถเลือกที่จะรวมเอกสารรายงานเพิ่มเติมในหน้าที่ซ่อนของรายงานของคุณได้อีกด้วย</span><span class="sxs-lookup"><span data-stu-id="a5165-207">You may also choose to include additional report documentation on a hidden page of your report.</span></span> <span data-ttu-id="a5165-208">ซึ่งอาจรวมถึงการตัดสินใจในการออกแบบและการบันทึกการเปลี่ยนแปลง</span><span class="sxs-lookup"><span data-stu-id="a5165-208">It could include design decisions and a change log.</span></span>
+## <a name="document-the-solution"></a>จัดทำเอกสารโซลูชัน
 
-## <a name="next-steps"></a><span data-ttu-id="a5165-209">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="a5165-209">Next steps</span></span>
+มีเอกสารสองประเภทหลักที่มีประโยชน์สำหรับโซลูชัน Power BI ได้แก่:
 
-<span data-ttu-id="a5165-210">ใน[บทความถัดไปในชุดการโยกย้ายข้อมูล Power BI นี้](powerbi-migration-deploy-support-monitor.md)จะเป็นการเรียนรู้เกี่ยวกับขั้นตอนที่ 5 ซึ่งเกี่ยวข้องกับการปรับใช้การสนับสนุนและการตรวจสอบเนื้อหาเมื่อโยกย้ายข้อมูลไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="a5165-210">In the [next article in this Power BI migration series](powerbi-migration-deploy-support-monitor.md), learn about stage 5, which is concerned with deploying, supporting, and monitoring content when migrating to Power BI.</span></span>
+- เอกสารชุดข้อมูล
+- เอกสารการรายงาน
 
-<span data-ttu-id="a5165-211">แหล่งข้อมูลที่เป็นประโยชน์อื่น ๆ:</span><span class="sxs-lookup"><span data-stu-id="a5165-211">Other helpful resources include:</span></span>
+เอกสารสามารถจัดเก็บได้ทุกที่ที่เข้าถึงได้ง่ายที่สุดโดยกลุ่มเป้าหมาย ตัวเลือกทั่วไปได้แก่ :
 
-- [<span data-ttu-id="a5165-212">การแปลง BI ของ Microsoft</span><span class="sxs-lookup"><span data-stu-id="a5165-212">Microsoft's BI transformation</span></span>](center-of-excellence-microsoft-business-intelligence-transformation.md)
-- [<span data-ttu-id="a5165-213">การวางแผนเอกสารรายงานการปรับใช้ Power BI สำหรับองค์กร</span><span class="sxs-lookup"><span data-stu-id="a5165-213">Planning a Power BI enterprise deployment whitepaper</span></span>](https://aka.ms/PBIEnterpriseDeploymentWP)
-- <span data-ttu-id="a5165-214">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="a5165-214">Questions?</span></span> [<span data-ttu-id="a5165-215">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="a5165-215">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="a5165-216">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="a5165-216">Suggestions?</span></span> [<span data-ttu-id="a5165-217">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="a5165-217">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+- **ภายในไซต์ SharePoint:** ไซต์ SharePoint อาจมีไว้สำหรับ Center of Excellence ของคุณหรือไซต์ชุมชนภายใน Power BI
+- **ภายในแอป:** URL อาจได้รับการกำหนดค่าเมื่อเผยแพร่แอป Power BI เพื่อนำผู้บริโภคไปยังข้อมูลเพิ่มเติม
+- **ภายในไฟล์ Power BI Desktop แต่ละไฟล์:** องค์ประกอบแบบจำลอง เช่น ตาราง และคอลัมน์ สามารถกำหนดคำอธิบายได้ คำอธิบายเหล่านี้ปรากฏเป็นคำแนะนำเครื่องมือในหน้าต่าง **เขตข้อมูล** เมื่อสร้างรายงานขึ้นมา
 
-<span data-ttu-id="a5165-218">คู่ค้า Power BI ที่มีประสบการณ์พร้อมที่จะช่วยให้องค์กรของคุณประสบความสำเร็จด้วยกระบวนการโยกย้ายข้อมูล</span><span class="sxs-lookup"><span data-stu-id="a5165-218">Experienced Power BI partners are available to help your organization succeed with the migration process.</span></span> <span data-ttu-id="a5165-219">หากต้องการตรวจสอบรายชื่อของพันธมิตรของ Power BI ไปที่[พอร์ทัลของพันธมิตรของ Power BI](https://powerbi.microsoft.com/partners/)</span><span class="sxs-lookup"><span data-stu-id="a5165-219">To engage a Power BI partner, visit the [Power BI partner portal](https://powerbi.microsoft.com/partners/).</span></span>
+> [!TIP]
+> ถ้าคุณสร้างไซต์เพื่อใช้เป็นฮับสำหรับเอกสารเกี่ยวกับ Power BI ให้พิจารณาจาก[การปรับแต่งเมนูขอความช่วยเหลือ](../admin/service-admin-portal.md#publish-get-help-information)กับตำแหน่งที่ตั้งของ URL
+
+### <a name="create-dataset-documentation"></a>สร้างเอกสารชุดข้อมูล
+
+เอกสารชุดข้อมูลจะกำหนดเป้าหมายไปที่ผู้ใช้ที่จะจัดการชุดข้อมูลในอนาคต มีประโยชน์ร่วมกับ:
+
+- การตัดสินใจออกแบบและเหตุผลว่าทำไม
+- ใครคือเจ้าของ ผู้ดูแลรักษา และใครคือผู้รับรองชุดข้อมูล
+- ข้อกำหนดการรีเฟรชข้อมูล
+- กฎทางธุรกิจที่กำหนดเองที่กำหนดไว้ในชุดข้อมูล
+- ความปลอดภัยของชุดข้อมูลเฉพาะหรือข้อกำหนดด้านความเป็นส่วนตัวของข้อมูล
+- ความจำเป็นต้องบำรุงรักษาในอนาคต
+- ทราบถึงปัญหาที่มีอยู่หรือรายการตกค้างรอการตัดบัญชี
+
+อีกทั้งคุณอาจเลือกที่จะสร้างบันทึกการเปลี่ยนแปลงที่สรุปการเปลี่ยนแปลงที่สำคัญที่สุดที่เกิดขึ้นกับชุดข้อมูลเมื่อเวลาผ่านไปอีกด้วย
+
+### <a name="create-report-documentation"></a>สร้างเอกสารการรายงาน
+
+เอกสารการรายงาน ซึ่งโดยทั่วไปจะมีโครงสร้างเป็นทางเดินผ่านที่กำหนดเป้าหมายไปที่ผู้บริโภครายงานสามารถช่วยให้ผู้บริโภคได้รับค่าที่มากขึ้นจากรายงานและแดชบอร์ดของคุณ วิดีโอแนะนำสั้น ๆ มักทำงานได้ดี
+
+อีกทั้งคุณยังสามารถเลือกที่จะรวมเอกสารรายงานเพิ่มเติมในหน้าที่ซ่อนของรายงานของคุณได้อีกด้วย ซึ่งอาจรวมถึงการตัดสินใจในการออกแบบและการบันทึกการเปลี่ยนแปลง
+
+## <a name="next-steps"></a>ขั้นตอนถัดไป
+
+ใน[บทความถัดไปในชุดการโยกย้ายข้อมูล Power BI นี้](powerbi-migration-deploy-support-monitor.md)จะเป็นการเรียนรู้เกี่ยวกับขั้นตอนที่ 5 ซึ่งเกี่ยวข้องกับการปรับใช้การสนับสนุนและการตรวจสอบเนื้อหาเมื่อโยกย้ายข้อมูลไปยัง Power BI
+
+แหล่งข้อมูลที่เป็นประโยชน์อื่น ๆ:
+
+- [การแปลง BI ของ Microsoft](center-of-excellence-microsoft-business-intelligence-transformation.md)
+- [การวางแผนเอกสารรายงานการปรับใช้ Power BI สำหรับองค์กร](https://aka.ms/PBIEnterpriseDeploymentWP)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)
+
+คู่ค้า Power BI ที่มีประสบการณ์พร้อมที่จะช่วยให้องค์กรของคุณประสบความสำเร็จด้วยกระบวนการโยกย้ายข้อมูล หากต้องการตรวจสอบรายชื่อของพันธมิตรของ Power BI ไปที่[พอร์ทัลของพันธมิตรของ Power BI](https://powerbi.microsoft.com/partners/)

@@ -15,31 +15,31 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 01/05/2021
 ms.locfileid: "97887557"
 ---
-# <a name="step-5-add-rows-to-a-power-bi-table"></a><span data-ttu-id="79d5c-104">ขั้นตอนที่ 5: เพิ่มแถวในตาราง Power BI</span><span class="sxs-lookup"><span data-stu-id="79d5c-104">Step 5: Add rows to a Power BI table</span></span>
+# <a name="step-5-add-rows-to-a-power-bi-table"></a>ขั้นตอนที่ 5: เพิ่มแถวในตาราง Power BI
 
-<span data-ttu-id="79d5c-105">บทความนี้เป็นส่วนหนึ่งของคำแนะนำทีละขั้นตอนเพื่อ[ส่งข้อมูลไปยังชุดข้อมูล](walkthrough-push-data.md)</span><span class="sxs-lookup"><span data-stu-id="79d5c-105">This article is part of a step-by-step walkthrough to [push data into a dataset](walkthrough-push-data.md).</span></span>
+บทความนี้เป็นส่วนหนึ่งของคำแนะนำทีละขั้นตอนเพื่อ[ส่งข้อมูลไปยังชุดข้อมูล](walkthrough-push-data.md)
 
-<span data-ttu-id="79d5c-106">ใน **ขั้นตอนที่ 4** เป็นการส่งข้อมูลไปยังชุดข้อมูล [รับชุดข้อมูลเพื่อเพิ่มแถวลงในตาราง Power BI](walkthrough-push-data-get-datasets.md)คุณใช้การดำนเนินการ [รับชุดข้อมูล](/rest/api/power-bi/datasets/getdatasets)และ Newtonsoft.Json เพื่อรับรหัสชุดข้อมูล ในขั้นตอนนี้ คุณใช้รหัสชุดข้อมูลกับการดำเนินการ [โพสต์แถว](/rest/api/power-bi/pushdatasets/datasets_postrows) เพื่อเพิ่มแถวไปยัง **ชุดข้อมูล** Power BI</span><span class="sxs-lookup"><span data-stu-id="79d5c-106">In **step 4** of Push data into a dataset, [Get a dataset to add rows into a Power BI table](walkthrough-push-data-get-datasets.md), you used the [Get Datasets](/rest/api/power-bi/datasets/getdatasets) operation and Newtonsoft.Json to get a dataset id. In this step, you use the dataset id with the [PostRows](/rest/api/power-bi/pushdatasets/datasets_postrows) operation to add rows to a **Power BI** dataset.</span></span> 
+ใน **ขั้นตอนที่ 4** เป็นการส่งข้อมูลไปยังชุดข้อมูล [รับชุดข้อมูลเพื่อเพิ่มแถวลงในตาราง Power BI](walkthrough-push-data-get-datasets.md)คุณใช้การดำนเนินการ [รับชุดข้อมูล](/rest/api/power-bi/datasets/getdatasets)และ Newtonsoft.Json เพื่อรับรหัสชุดข้อมูล ในขั้นตอนนี้ คุณใช้รหัสชุดข้อมูลกับการดำเนินการ [โพสต์แถว](/rest/api/power-bi/pushdatasets/datasets_postrows) เพื่อเพิ่มแถวไปยัง **ชุดข้อมูล** Power BI 
 
-<span data-ttu-id="79d5c-107">เมื่อคุณเรียกใช้การดำเนินการ[โพสต์แถว](/rest/api/power-bi/pushdatasets/datasets_postrows) คุณเพิ่มแถวไปยังชุดข้อมูล</span><span class="sxs-lookup"><span data-stu-id="79d5c-107">When you call the [PostRows](/rest/api/power-bi/pushdatasets/datasets_postrows) operation, you add rows to a dataset.</span></span>
+เมื่อคุณเรียกใช้การดำเนินการ[โพสต์แถว](/rest/api/power-bi/pushdatasets/datasets_postrows) คุณเพิ่มแถวไปยังชุดข้อมูล
 
 ![เพิ่มแถว](media/walkthrough-push-data-add-rows/powerbi-developer-add-rows.png)
 
-<span data-ttu-id="79d5c-109">นี่คือวิธีการเพิ่มแถวไปยังชุดข้อมูลโดยใช้ Power BI API</span><span class="sxs-lookup"><span data-stu-id="79d5c-109">Here's how to add rows to a dataset using the Power BI API.</span></span>
+นี่คือวิธีการเพิ่มแถวไปยังชุดข้อมูลโดยใช้ Power BI API
 
-## <a name="add-rows-to-a-power-bi-table"></a><span data-ttu-id="79d5c-110">เพิ่มแถวในตาราง Power BI</span><span class="sxs-lookup"><span data-stu-id="79d5c-110">Add rows to a Power BI table</span></span>
+## <a name="add-rows-to-a-power-bi-table"></a>เพิ่มแถวในตาราง Power BI
 
 > [!NOTE]
-> <span data-ttu-id="79d5c-111">ก่อนที่คุณจะเริ่มต้น ตรวจสอบให้แน่ใจว่า คุณดำเนินตามขั้นตอนก่อนหน้านี้ในการฝึกปฏิบัติ[พุชข้อมูลลงในชุดข้อมูล](walkthrough-push-data.md)แล้ว</span><span class="sxs-lookup"><span data-stu-id="79d5c-111">Before you get started, make sure you have followed the previous steps in the [push data into a dataset](walkthrough-push-data.md) walkthrough.</span></span>
+> ก่อนที่คุณจะเริ่มต้น ตรวจสอบให้แน่ใจว่า คุณดำเนินตามขั้นตอนก่อนหน้านี้ในการฝึกปฏิบัติ[พุชข้อมูลลงในชุดข้อมูล](walkthrough-push-data.md)แล้ว
 
-1. <span data-ttu-id="79d5c-112">ในแอปพลิเคชันคอนโซลคุณสร้างในขั้นตอนที่ 2: [รับโทเค็นการเข้าถึงการรับรองความถูกต้อง](walkthrough-push-data-get-token.md) เพิ่มโค้ดที่ด้านล่าง</span><span class="sxs-lookup"><span data-stu-id="79d5c-112">In the Console Application project you created in Step 2: Walkthrough to push data, [Get an authentication access token](walkthrough-push-data-get-token.md), add the code below.</span></span>
-2. <span data-ttu-id="79d5c-113">เรียกใช้แอปคอนโซล และเข้าสู่บัญชี Power BI ของคุณ</span><span class="sxs-lookup"><span data-stu-id="79d5c-113">Run the Console App, and login to your Power BI account.</span></span> <span data-ttu-id="79d5c-114">คุณจะเห็น **แถวที่เพิ่ม** ในหน้าต่างคอนโซล</span><span class="sxs-lookup"><span data-stu-id="79d5c-114">You should see **Rows Added** in the Console Window.</span></span> <span data-ttu-id="79d5c-115">คุณยังสามารถลงชื่อเข้าใช้ Power BI เพื่อดูแถวที่เพิ่มลงในชุดข้อมูลได้</span><span class="sxs-lookup"><span data-stu-id="79d5c-115">You can also login to Power BI to see the rows added to the dataset.</span></span>
+1. ในแอปพลิเคชันคอนโซลคุณสร้างในขั้นตอนที่ 2: [รับโทเค็นการเข้าถึงการรับรองความถูกต้อง](walkthrough-push-data-get-token.md) เพิ่มโค้ดที่ด้านล่าง
+2. เรียกใช้แอปคอนโซล และเข้าสู่บัญชี Power BI ของคุณ คุณจะเห็น **แถวที่เพิ่ม** ในหน้าต่างคอนโซล คุณยังสามารถลงชื่อเข้าใช้ Power BI เพื่อดูแถวที่เพิ่มลงในชุดข้อมูลได้
 
-<span data-ttu-id="79d5c-116">**ตัวอย่างการส่งข้อมูลไปยังชุดข้อมูล**</span><span class="sxs-lookup"><span data-stu-id="79d5c-116">**Sample push data into a dataset**</span></span>
+**ตัวอย่างการส่งข้อมูลไปยังชุดข้อมูล**
 
-<span data-ttu-id="79d5c-117">เพิ่มรหัสนี้ลงใน Program.cs</span><span class="sxs-lookup"><span data-stu-id="79d5c-117">Add this code into Program.cs.</span></span>
+เพิ่มรหัสนี้ลงใน Program.cs
 
-* <span data-ttu-id="79d5c-118">ค่าคงที่เพื่อยกเลิก Main(string[] args):</span><span class="sxs-lookup"><span data-stu-id="79d5c-118">In static void Main(string[] args):</span></span>
+* ค่าคงที่เพื่อยกเลิก Main(string[] args):
   
   ```csharp
    static void Main(string[] args)
@@ -59,7 +59,7 @@ ms.locfileid: "97887557"
    }
 
   ```
-* <span data-ttu-id="79d5c-119">เพิ่มวิธีการ AddRows():</span><span class="sxs-lookup"><span data-stu-id="79d5c-119">Add an AddRows() method:</span></span>
+* เพิ่มวิธีการ AddRows():
 
 ```csharp
     #region Add rows to a Power BI table
@@ -105,9 +105,9 @@ ms.locfileid: "97887557"
     #endregion
 ```
 
-<span data-ttu-id="79d5c-120">ด้านล่างนี้คือรายการรหัสที่เสร็จสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="79d5c-120">Below is the complete code listing.</span></span>
+ด้านล่างนี้คือรายการรหัสที่เสร็จสมบูรณ์
 
-## <a name="complete-code-listing"></a><span data-ttu-id="79d5c-121">รายการรหัสเสร็จสมบูรณ์</span><span class="sxs-lookup"><span data-stu-id="79d5c-121">Complete code listing</span></span>
+## <a name="complete-code-listing"></a>รายการรหัสเสร็จสมบูรณ์
 
 ```csharp
     using System;
@@ -308,10 +308,10 @@ ms.locfileid: "97887557"
     }
 ```
 
-<span data-ttu-id="79d5c-122">แม้ว่า เราระบุว่าเรา **_//รับ id แรก_** ในรหัสข้างต้น สิ่งที่ต้องทำคือค้นหาชุดข้อมูลตามชื่อ</span><span class="sxs-lookup"><span data-stu-id="79d5c-122">Although, we specify that we **_//Get the first id_** in the code above, the correct thing to do is search the dataset by name.</span></span>
+แม้ว่า เราระบุว่าเรา **_//รับ id แรก_** ในรหัสข้างต้น สิ่งที่ต้องทำคือค้นหาชุดข้อมูลตามชื่อ
 
-## <a name="next-steps"></a><span data-ttu-id="79d5c-123">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="79d5c-123">Next steps</span></span>
-[<span data-ttu-id="79d5c-124">พุชข้อมูลลงในแดชบอร์ด Power BI</span><span class="sxs-lookup"><span data-stu-id="79d5c-124">Push data into a Power BI Dashboard</span></span>](walkthrough-push-data.md)  
-[<span data-ttu-id="79d5c-125">ภาพรวมของ Power BI REST API</span><span class="sxs-lookup"><span data-stu-id="79d5c-125">Overview of Power BI REST API</span></span>](overview-of-power-bi-rest-api.md)  
-[<span data-ttu-id="79d5c-126">การอ้างอิง Power BI REST API</span><span class="sxs-lookup"><span data-stu-id="79d5c-126">Power BI REST API reference</span></span>](/rest/api/power-bi/)  
-<span data-ttu-id="79d5c-127">คุณมีคำถามเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="79d5c-127">More questions?</span></span> [<span data-ttu-id="79d5c-128">ลองไปที่ชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="79d5c-128">Try the Power BI Community</span></span>](https://community.powerbi.com/)
+## <a name="next-steps"></a>ขั้นตอนถัดไป
+[พุชข้อมูลลงในแดชบอร์ด Power BI](walkthrough-push-data.md)  
+[ภาพรวมของ Power BI REST API](overview-of-power-bi-rest-api.md)  
+[การอ้างอิง Power BI REST API](/rest/api/power-bi/)  
+คุณมีคำถามเพิ่มเติมหรือไม่ [ลองไปที่ชุมชน Power BI](https://community.powerbi.com/)

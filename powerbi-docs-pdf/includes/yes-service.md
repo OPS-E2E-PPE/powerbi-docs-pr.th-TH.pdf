@@ -15,4 +15,4 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 11/25/2020
 ms.locfileid: "96119938"
 ---
-<span data-ttu-id="d3dac-103">✔️&nbsp;บริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="d3dac-103">✔️&nbsp;Power BI service</span></span>
+✔️&nbsp;บริการของ Power BI

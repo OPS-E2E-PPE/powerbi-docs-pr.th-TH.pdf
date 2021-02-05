@@ -15,4 +15,4 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 11/25/2020
 ms.locfileid: "96120628"
 ---
-<span data-ttu-id="3d1e4-103">✔️&nbsp;Power BI Premium</span><span class="sxs-lookup"><span data-stu-id="3d1e4-103">✔️&nbsp;Power BI Premium</span></span>
+✔️&nbsp;Power BI Premium

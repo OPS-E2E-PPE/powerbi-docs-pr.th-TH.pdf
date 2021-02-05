@@ -2,43 +2,43 @@
 title: เคล็ดลับในการปรับปรุงการวิเคราะห์ด้วยรูปร่าง รูปภาพ และไอคอนในรายงาน Power BI
 description: เคล็ดลับสี่ข้อในการปรับปรุงการวิเคราะห์ด้วยรูปร่าง รูปภาพ และไอคอนวิชวลรายงาน Power BI ใน Power BI Desktop หรือบริการของ Power BI
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: asaxton
 featuredvideoid: -gLwXonWNsI
 ms.service: powerbi
 ms.subservice: powerbi
 ms.topic: conceptual
 ms.date: 03/25/2020
-ms.openlocfilehash: c9587fdbf7154bf61f174d1d193b93ca7f991ae0
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: 1c9b56dd48c7c1ca57e34bcafeba92f498023b7c
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96386028"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99088821"
 ---
-# <a name="tips-to-improve-analysis-with-shapes-images-and-icons-in-power-bi-reports"></a><span data-ttu-id="8cb4e-103">เคล็ดลับในการปรับปรุงการวิเคราะห์ด้วยรูปร่าง รูปภาพ และไอคอนในรายงาน Power BI</span><span class="sxs-lookup"><span data-stu-id="8cb4e-103">Tips to improve analysis with shapes, images, and icons in Power BI reports</span></span>
+# <a name="tips-to-improve-analysis-with-shapes-images-and-icons-in-power-bi-reports"></a>เคล็ดลับในการปรับปรุงการวิเคราะห์ด้วยรูปร่าง รูปภาพ และไอคอนในรายงาน Power BI
 
-<span data-ttu-id="8cb4e-104">บทความนี้จะกำหนดเป้าหมายให้คุณในฐานะผู้สร้างรายงานการออกแบบรายงาน Power BI ยกระดับวิชวลด้วยรูปร่าง ภาพ หรือไอคอน</span><span class="sxs-lookup"><span data-stu-id="8cb4e-104">This article targets you as a report author designing Power BI reports, enhancing visuals with shapes, images, or icons.</span></span>
+บทความนี้จะกำหนดเป้าหมายให้คุณในฐานะผู้สร้างรายงานการออกแบบรายงาน Power BI ยกระดับวิชวลด้วยรูปร่าง ภาพ หรือไอคอน
 
-<span data-ttu-id="8cb4e-105">ดูวิดีโอสาธิตสุดยอดเคล็ดลับสี่ข้อในการปรับปรุงการวิเคราะห์ด้วยรูปร่าง รูปภาพ และไอคอนในรายงาน Power BI</span><span class="sxs-lookup"><span data-stu-id="8cb4e-105">Watch the video demonstrating the top four tips to improve analysis with shapes, images, and icons in Power BI reports.</span></span>
+ดูวิดีโอสาธิตสุดยอดเคล็ดลับสี่ข้อในการปรับปรุงการวิเคราะห์ด้วยรูปร่าง รูปภาพ และไอคอนในรายงาน Power BI
 
 > [!VIDEO https://www.youtube.com/embed/-gLwXonWNsI]
 
-## <a name="tips"></a><span data-ttu-id="8cb4e-106">เคล็ดลับ</span><span class="sxs-lookup"><span data-stu-id="8cb4e-106">Tips</span></span>
+## <a name="tips"></a>เคล็ดลับ
 
-<span data-ttu-id="8cb4e-107">โดยสรุป เคล็ดลับสี่ข้อในการปรับปรุงการวิเคราะห์ด้วยรูปร่าง รูปภาพ และไอคอนในรายงาน Power BI ประกอบด้วย:</span><span class="sxs-lookup"><span data-stu-id="8cb4e-107">In summary, the top four tips to improve analysis with shapes, images, and icons in Power BI reports include:</span></span>
+โดยสรุป เคล็ดลับสี่ข้อในการปรับปรุงการวิเคราะห์ด้วยรูปร่าง รูปภาพ และไอคอนในรายงาน Power BI ประกอบด้วย:
 
-1. <span data-ttu-id="8cb4e-108">ออกแบบรายงานสำหรับความสามารถในการเข้าถึง</span><span class="sxs-lookup"><span data-stu-id="8cb4e-108">Design reports for accessibility</span></span>
-1. <span data-ttu-id="8cb4e-109">ใช้รูปภาพพื้นที่ลงจุดสำหรับบริบท</span><span class="sxs-lookup"><span data-stu-id="8cb4e-109">Use plot area images for context</span></span>
-1. <span data-ttu-id="8cb4e-110">ใช้รูปภาพเพื่อสื่อข้อมูล</span><span class="sxs-lookup"><span data-stu-id="8cb4e-110">Use images to convey information</span></span>
-1. <span data-ttu-id="8cb4e-111">เพิ่มไอคอนเพื่อทำให้การออกแบบรายงานดีขึ้น</span><span class="sxs-lookup"><span data-stu-id="8cb4e-111">Add icons to enrich report designs</span></span>
+1. ออกแบบรายงานสำหรับความสามารถในการเข้าถึง
+1. ใช้รูปภาพพื้นที่ลงจุดสำหรับบริบท
+1. ใช้รูปภาพเพื่อสื่อข้อมูล
+1. เพิ่มไอคอนเพื่อทำให้การออกแบบรายงานดีขึ้น
 
-## <a name="next-steps"></a><span data-ttu-id="8cb4e-112">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="8cb4e-112">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="8cb4e-113">สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="8cb4e-113">For more information related to this article, check out the following resources:</span></span>
+สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:
 
-- [<span data-ttu-id="8cb4e-114">เคล็ดลับในการสร้างรายงานที่น่าทึ่ง</span><span class="sxs-lookup"><span data-stu-id="8cb4e-114">Tips for creating stunning reports</span></span>](../create-reports/desktop-tips-and-tricks-for-creating-reports.md)
-- <span data-ttu-id="8cb4e-115">วิดีโอ biDezine: [สุดยอดเคล็ดลับ 4 ข้อในการปรับปรุงการวิเคราะห์ด้วยตัวหนังสือภาพใน Power BI](https://www.youtube.com/watch?v=-gLwXonWNsI)</span><span class="sxs-lookup"><span data-stu-id="8cb4e-115">biDezine video: [Top 4 Tips to Improve Analysis with Pictograms in Power BI](https://www.youtube.com/watch?v=-gLwXonWNsI)</span></span>
-- <span data-ttu-id="8cb4e-116">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="8cb4e-116">Questions?</span></span> [<span data-ttu-id="8cb4e-117">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="8cb4e-117">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="8cb4e-118">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="8cb4e-118">Suggestions?</span></span> [<span data-ttu-id="8cb4e-119">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="8cb4e-119">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+- [เคล็ดลับในการสร้างรายงานที่น่าทึ่ง](../create-reports/desktop-tips-and-tricks-for-creating-reports.md)
+- วิดีโอ biDezine: [สุดยอดเคล็ดลับ 4 ข้อในการปรับปรุงการวิเคราะห์ด้วยตัวหนังสือภาพใน Power BI](https://www.youtube.com/watch?v=-gLwXonWNsI)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)
 

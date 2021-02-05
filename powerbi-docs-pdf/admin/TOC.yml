@@ -142,7 +142,7 @@
           href: /powershell/power-bi/
           maintainContext: true
         - name: การอ้างอิง URL บริการ
-          href: power-bi-whitelist-urls.md
+          href: power-bi-allow-list-urls.md
     - name: ทรัพยากร
       items:
         - name: แนวทางการกำกับดูแลและการปรับใช้ Power BI
@@ -161,7 +161,7 @@
           href: service-interruption-notifications.md
         - name: ลืมรหัสผ่านของคุณสำหรับ Power BI ใช่หรือไม่
           href: service-admin-forgot-your-password.md
-        - name: กำลังจับข้อมูลการวินิจฉัยเพิ่มเติมสำหรับ Power BI
+        - name: จับข้อมูลการวินิจฉัยจากบริการของ Power BI
           href: service-admin-capturing-additional-diagnostic-information-for-power-bi.md
         - name: ที่อยู่อีเมลสำรองสำหรับ Power BI
           href: service-admin-alternate-email-address-for-power-bi.md

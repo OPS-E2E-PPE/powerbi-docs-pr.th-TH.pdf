@@ -2,220 +2,220 @@
 title: คำแนะนำความสัมพันธ์แบบกลุ่มต่อกลุ่ม
 description: คำแนะนำสำหรับการพัฒนาความสัมพันธ์ของแบบจำลองแบบกลุ่มต่อกลุ่ม
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: asaxton
 ms.service: powerbi
 ms.subservice: powerbi
 ms.topic: conceptual
 ms.date: 03/02/2020
-ms.openlocfilehash: 95383581a258374f2757581e82fa0f2044dcae84
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: 654c5ad71d7629fba1bf17b28e9e21370ebee0c3
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96418635"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99087970"
 ---
-# <a name="many-to-many-relationship-guidance"></a><span data-ttu-id="2dfe7-103">คำแนะนำความสัมพันธ์แบบกลุ่มต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-103">Many-to-many relationship guidance</span></span>
+# <a name="many-to-many-relationship-guidance"></a>คำแนะนำความสัมพันธ์แบบกลุ่มต่อกลุ่ม
 
-<span data-ttu-id="2dfe7-104">บทความนี้มุ่งเป้าหมายไปที่เรื่อง ตัวสร้างแบบจำลองข้อมูลนำเข้าที่ทำงานกับ Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="2dfe7-104">This article targets you as a data modeler working with Power BI Desktop.</span></span> <span data-ttu-id="2dfe7-105">ซึ่งอธิบายสถานการณ์แบบจำลองแบบกลุ่มต่อกลุ่มสามแบบ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-105">It describes three different many-to-many modeling scenarios.</span></span> <span data-ttu-id="2dfe7-106">นอนกจากนั้นยังมีคำแนะนำเกี่ยวกับวิธีการออกแบบในแบบจำลองของคุณได้อย่างประสบความสำเร็จ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-106">It also provides you with guidance on how to successfully design for them in your models.</span></span>
+บทความนี้มุ่งเป้าหมายไปที่เรื่อง ตัวสร้างแบบจำลองข้อมูลนำเข้าที่ทำงานกับ Power BI Desktop ซึ่งอธิบายสถานการณ์แบบจำลองแบบกลุ่มต่อกลุ่มสามแบบ นอนกจากนั้นยังมีคำแนะนำเกี่ยวกับวิธีการออกแบบในแบบจำลองของคุณได้อย่างประสบความสำเร็จ
 
 [!INCLUDE [relationships-prerequisite-reading](includes/relationships-prerequisite-reading.md)]
 
-<span data-ttu-id="2dfe7-107">ความเป็นจริงแล้วมีสถานการณ์แบบกลุ่มต่อกลุ่มสามแบบ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-107">There are, in fact, three many-to-many scenarios.</span></span> <span data-ttu-id="2dfe7-108">ซึ่งจะเกิดขึ้นเมื่อคุณจำเป็นต้อง:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-108">They can occur when you're required to:</span></span>
+ความเป็นจริงแล้วมีสถานการณ์แบบกลุ่มต่อกลุ่มสามแบบ ซึ่งจะเกิดขึ้นเมื่อคุณจำเป็นต้อง:
 
-- [<span data-ttu-id="2dfe7-109">เชื่อมโยงตารางชนิดสองมิติ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-109">Relate two dimension-type tables</span></span>](#relate-many-to-many-dimensions)
-- [<span data-ttu-id="2dfe7-110">เชื่อมโยงตารางความจริงสองชนิด</span><span class="sxs-lookup"><span data-stu-id="2dfe7-110">Relate two fact-type tables</span></span>](#relate-many-to-many-facts)
-- <span data-ttu-id="2dfe7-111">[เชื่อมโยงตารางความจริงเกรนสูงขึ้น](#relate-higher-grain-facts) เมื่อตารางความจริงเก็บแถวที่มีเกรนสูงกว่าแถวตารางแบบมิติ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-111">[Relate higher grain fact-type tables](#relate-higher-grain-facts), when the fact-type table stores rows at a higher grain than the dimension-type table rows</span></span>
+- [เชื่อมโยงตารางชนิดสองมิติ](#relate-many-to-many-dimensions)
+- [เชื่อมโยงตารางความจริงสองชนิด](#relate-many-to-many-facts)
+- [เชื่อมโยงตารางความจริงเกรนสูงขึ้น](#relate-higher-grain-facts) เมื่อตารางความจริงเก็บแถวที่มีเกรนสูงกว่าแถวตารางแบบมิติ
 
-## <a name="relate-many-to-many-dimensions"></a><span data-ttu-id="2dfe7-112">เชื่อมโยงมิติแบบกลุ่มต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-112">Relate many-to-many dimensions</span></span>
+## <a name="relate-many-to-many-dimensions"></a>เชื่อมโยงมิติแบบกลุ่มต่อกลุ่ม
 
-<span data-ttu-id="2dfe7-113">มาพิจารณาชนิดสถานการณ์แบบกลุ่มต่อกลุ่มพร้อมกับตัวอย่าง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-113">Let's consider the first many-to-many scenario type with an example.</span></span> <span data-ttu-id="2dfe7-114">สถานการณ์คลาสสิคสถานการณ์คลาสสิกเชื่อมโยงสองเอนทิตี: ลูกค้าธนาคารและบัญชีธนาคาร</span><span class="sxs-lookup"><span data-stu-id="2dfe7-114">The classic scenario relates two entities: bank customers and bank accounts.</span></span> <span data-ttu-id="2dfe7-115">พิจารณาว่าลูกค้าสามารถมีหลายบัญชี และบัญชีสามารถมีลูกค้าได้หลายราย</span><span class="sxs-lookup"><span data-stu-id="2dfe7-115">Consider that customers can have multiple accounts, and accounts can have multiple customers.</span></span> <span data-ttu-id="2dfe7-116">เมื่อบัญชีผู้ใช้มีลูกค้าหลายคน มักจะเรียกว่า _ผู้ถือบัญชีร่วม_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-116">When an account has multiple customers, they're commonly called _joint account holders_.</span></span>
+มาพิจารณาชนิดสถานการณ์แบบกลุ่มต่อกลุ่มพร้อมกับตัวอย่าง สถานการณ์คลาสสิคสถานการณ์คลาสสิกเชื่อมโยงสองเอนทิตี: ลูกค้าธนาคารและบัญชีธนาคาร พิจารณาว่าลูกค้าสามารถมีหลายบัญชี และบัญชีสามารถมีลูกค้าได้หลายราย เมื่อบัญชีผู้ใช้มีลูกค้าหลายคน มักจะเรียกว่า _ผู้ถือบัญชีร่วม_
 
-<span data-ttu-id="2dfe7-117">การสร้างแบบจำลองเอนทิตีเหล่านี้จะตรงไปตรงมา</span><span class="sxs-lookup"><span data-stu-id="2dfe7-117">Modeling these entities is straight forward.</span></span> <span data-ttu-id="2dfe7-118">ตารางแบบหนึ่งมิติเก็บบัญชี และตารางอีกมิติหนึ่งเก็บลูกค้า</span><span class="sxs-lookup"><span data-stu-id="2dfe7-118">One dimension-type table stores accounts, and another dimension-type table stores customers.</span></span> <span data-ttu-id="2dfe7-119">เช่นเดียวกับลักษณะของตารางชนิดมิติมีคอลัมน์ ID ในแต่ละตาราง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-119">As is characteristic of dimension-type tables, there's an ID column in each table.</span></span> <span data-ttu-id="2dfe7-120">เมื่อต้องการสร้างความสัมพันธ์ระหว่างสองตาราง จะต้องมีตารางที่สาม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-120">To model the relationship between the two tables, a third table is required.</span></span> <span data-ttu-id="2dfe7-121">ตารางนี้มักจะเรียกว่า _ตารางเชื่อมโยง_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-121">This table is commonly referred to as a _bridging table_.</span></span> <span data-ttu-id="2dfe7-122">ในตัวอย่างนี้ ในตัวอย่างนี้วัตถุประสงค์คือการจัดเก็บหนึ่งแถวสำหรับแต่ละการเชื่อมโยงบัญชีลูกค้า</span><span class="sxs-lookup"><span data-stu-id="2dfe7-122">In this example, it's purpose is to store one row for each customer-account association.</span></span> <span data-ttu-id="2dfe7-123">ที่น่าสนใจที่ตารางนี้ประกอบด้วยคอลัมน์ ID เท่านั้น ซึ่งเรียกว่า [_ตารางข้อเท็จจริงที่ไร้ความจริง_](star-schema.md#factless-fact-tables)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-123">Interestingly, when this table only contains ID columns, it's called a [_factless fact table_](star-schema.md#factless-fact-tables).</span></span>
+การสร้างแบบจำลองเอนทิตีเหล่านี้จะตรงไปตรงมา ตารางแบบหนึ่งมิติเก็บบัญชี และตารางอีกมิติหนึ่งเก็บลูกค้า เช่นเดียวกับลักษณะของตารางชนิดมิติมีคอลัมน์ ID ในแต่ละตาราง เมื่อต้องการสร้างความสัมพันธ์ระหว่างสองตาราง จะต้องมีตารางที่สาม ตารางนี้มักจะเรียกว่า _ตารางเชื่อมโยง_ ในตัวอย่างนี้ ในตัวอย่างนี้วัตถุประสงค์คือการจัดเก็บหนึ่งแถวสำหรับแต่ละการเชื่อมโยงบัญชีลูกค้า ที่น่าสนใจที่ตารางนี้ประกอบด้วยคอลัมน์ ID เท่านั้น ซึ่งเรียกว่า [_ตารางข้อเท็จจริงที่ไร้ความจริง_](star-schema.md#factless-fact-tables)
 
-<span data-ttu-id="2dfe7-124">นี่คือไดอะแกรมแบบจำลองที่เรียบง่ายของตารางทั้งสาม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-124">Here's a simplistic model diagram of the three tables.</span></span>
+นี่คือไดอะแกรมแบบจำลองที่เรียบง่ายของตารางทั้งสาม
 
-![แผนภาพที่แสดงแบบจำลองที่มีสามตาราง:](media/relationships-many-to-many/bank-account-customer-model-example.png)
+![แผนภาพที่แสดงแบบจำลองที่มีสามตาราง: การออกแบบจะได้รับการอธิบายในย่อหน้าถัดไป](media/relationships-many-to-many/bank-account-customer-model-example.png)
 
-<span data-ttu-id="2dfe7-127">ตารางแรกชื่อว่า **Account** ซึ่งมีสองคอลัมน์ **AccountID** และ **Account**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-127">The first table is named **Account**, and it contains two columns: **AccountID** and **Account**.</span></span> <span data-ttu-id="2dfe7-128">ตารางที่สองชื่อว่า **AccountCustomer** ซึ่งมีสองคอลัมน์ **AccountID** และ **CustomerID**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-128">The second table is named **AccountCustomer**, and it contains two columns: **AccountID** and **CustomerID**.</span></span> <span data-ttu-id="2dfe7-129">ตารางที่สามชื่อว่า **Customer** ซึ่งมีสองคอลัมน์ **CustomerID** และ **Customer**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-129">The third table is named **Customer**, and it contains two columns: **CustomerID** and **Customer**.</span></span> <span data-ttu-id="2dfe7-130">ไม่มีความสัมพันธ์ระหว่างตารางใด ๆ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-130">Relationships don't exist between any of the tables.</span></span>
+ตารางแรกชื่อว่า **Account** ซึ่งมีสองคอลัมน์ **AccountID** และ **Account** ตารางที่สองชื่อว่า **AccountCustomer** ซึ่งมีสองคอลัมน์ **AccountID** และ **CustomerID** ตารางที่สามชื่อว่า **Customer** ซึ่งมีสองคอลัมน์ **CustomerID** และ **Customer** ไม่มีความสัมพันธ์ระหว่างตารางใด ๆ
 
-<span data-ttu-id="2dfe7-131">เพิ่มความสัมพันธ์หนึ่งต่อกลุ่มให้แก่ตาราง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-131">Two one-to-many relationships are added to relate the tables.</span></span> <span data-ttu-id="2dfe7-132">นี่คือไดอะแกรมแบบจำลองของตารางที่เกี่ยวข้องกันที่อัปเดตแล้ว</span><span class="sxs-lookup"><span data-stu-id="2dfe7-132">Here's an updated model diagram of the related tables.</span></span> <span data-ttu-id="2dfe7-133">มีการเพิ่มตารางชนิดข้อเท็จจริงที่ชื่อ **Transaction**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-133">A fact-type table named **Transaction** has been added.</span></span> <span data-ttu-id="2dfe7-134">ซึ่งบันทึกการทำธุรกรรมของบัญชี</span><span class="sxs-lookup"><span data-stu-id="2dfe7-134">It records account transactions.</span></span> <span data-ttu-id="2dfe7-135">ตารางการเชื่อมโยงและคอลัมน์ ID ทั้งหมดถูกซ่อนไว้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-135">The bridging table and all ID columns have been hidden.</span></span>
+เพิ่มความสัมพันธ์หนึ่งต่อกลุ่มให้แก่ตาราง นี่คือไดอะแกรมแบบจำลองของตารางที่เกี่ยวข้องกันที่อัปเดตแล้ว มีการเพิ่มตารางชนิดข้อเท็จจริงที่ชื่อ **Transaction** ซึ่งบันทึกการทำธุรกรรมของบัญชี ตารางการเชื่อมโยงและคอลัมน์ ID ทั้งหมดถูกซ่อนไว้
 
-![แผนภาพที่แสดงว่าแบบจำลองมีสี่ตารางในขณะนี้](media/relationships-many-to-many/bank-account-customer-model-related-tables-1.png)
+![แผนภาพที่แสดงว่าแบบจำลองมีสี่ตารางในขณะนี้ เพิ่มความสัมพันธ์หนึ่งต่อกลุ่มในตารางทุกตาราง](media/relationships-many-to-many/bank-account-customer-model-related-tables-1.png)
 
-<span data-ttu-id="2dfe7-138">เพื่อช่วยในการอธิบายวิธีการทำงานของการถ่ายถอดตัวกรองความสัมพันธ์ ไดอะแกรมแบบจำลองได้รับการแก้ไขเพื่อแสดงแถวตาราง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-138">To help describe how the relationship filter propagation works, the model diagram has been modified to reveal the table rows.</span></span>
+เพื่อช่วยในการอธิบายวิธีการทำงานของการถ่ายถอดตัวกรองความสัมพันธ์ ไดอะแกรมแบบจำลองได้รับการแก้ไขเพื่อแสดงแถวตาราง
 
 > [!NOTE]
-> <span data-ttu-id="2dfe7-139">ไม่สามารถแสดงแถวตารางในไดอะแกรมแบบจำลอง Power BI Desktop ได้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-139">It's not possible to display table rows in the Power BI Desktop model diagram.</span></span> <span data-ttu-id="2dfe7-140">การดำเนินการนี้จะทำในบทความนี้เพื่อสนับสนุนการสนทนาด้วยตัวอย่างที่ชัดเจน</span><span class="sxs-lookup"><span data-stu-id="2dfe7-140">It's done in this article to support the discussion with clear examples.</span></span>
+> ไม่สามารถแสดงแถวตารางในไดอะแกรมแบบจำลอง Power BI Desktop ได้ การดำเนินการนี้จะทำในบทความนี้เพื่อสนับสนุนการสนทนาด้วยตัวอย่างที่ชัดเจน
 
-![แผนภาพที่แสดงว่าแบบจำลองแสดงแถวของตารางอยู่ในขณะนี้](media/relationships-many-to-many/bank-account-customer-model-related-tables-2.png)
+![แผนภาพที่แสดงว่าแบบจำลองแสดงแถวของตารางอยู่ในขณะนี้ รายละเอียดแถวสำหรับสี่ตารางอธิบายไว้ในย่อหน้าต่อไปนี้](media/relationships-many-to-many/bank-account-customer-model-related-tables-2.png)
 
-<span data-ttu-id="2dfe7-143">รายละเอียดแถวสำหรับสี่ตารางอธิบายในหัวข้อย่อยต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-143">The row details for the four tables are described in the following bulleted list:</span></span>
+รายละเอียดแถวสำหรับสี่ตารางอธิบายในหัวข้อย่อยต่อไปนี้:
 
-- <span data-ttu-id="2dfe7-144">ตาราง **Account** มีสองแถว:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-144">The **Account** table has two rows:</span></span>
-  - <span data-ttu-id="2dfe7-145">**AccountID** 1 คือ Account-01</span><span class="sxs-lookup"><span data-stu-id="2dfe7-145">**AccountID** 1 is for Account-01</span></span>
-  - <span data-ttu-id="2dfe7-146">**AccountID** 2 คือ Account-02</span><span class="sxs-lookup"><span data-stu-id="2dfe7-146">**AccountID** 2 is for Account-02</span></span>
-- <span data-ttu-id="2dfe7-147">ตาราง **Customer** มีสองแถว:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-147">The **Customer** table has two rows:</span></span>
-  - <span data-ttu-id="2dfe7-148">**CustomerID** 91 คือ Customer-91</span><span class="sxs-lookup"><span data-stu-id="2dfe7-148">**CustomerID** 91 is for Customer-91</span></span>
-  - <span data-ttu-id="2dfe7-149">**CustomerID** 92 คือ Customer-92</span><span class="sxs-lookup"><span data-stu-id="2dfe7-149">**CustomerID** 92 is for Customer-92</span></span>
-- <span data-ttu-id="2dfe7-150">ตาราง **AccountCustomer** มีสามแถว:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-150">The **AccountCustomer** table has three rows:</span></span>
-  - <span data-ttu-id="2dfe7-151">**AccountID** 1 เชื่อมโยงกับ **CustomerID** 91</span><span class="sxs-lookup"><span data-stu-id="2dfe7-151">**AccountID** 1 is associated with **CustomerID** 91</span></span>
-  - <span data-ttu-id="2dfe7-152">**AccountID** 1 เชื่อมโยงกับ **CustomerID** 92</span><span class="sxs-lookup"><span data-stu-id="2dfe7-152">**AccountID** 1 is associated with **CustomerID** 92</span></span>
-  - <span data-ttu-id="2dfe7-153">**AccountID** 2 เชื่อมโยงกับ **CustomerID** 92</span><span class="sxs-lookup"><span data-stu-id="2dfe7-153">**AccountID** 2 is associated with **CustomerID** 92</span></span>
-- <span data-ttu-id="2dfe7-154">ตาราง **Transaction** มีสามแถว:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-154">The **Transaction** table has three rows:</span></span>
-  - <span data-ttu-id="2dfe7-155">**วันที่** 1 มกราคม 2019, **AccountID** 1, **จำนวน** 100</span><span class="sxs-lookup"><span data-stu-id="2dfe7-155">**Date** January 1 2019, **AccountID** 1, **Amount** 100</span></span>
-  - <span data-ttu-id="2dfe7-156">**วันที่** 2 กุมภาพันธ์ 2019, **AccountID** 2, **จำนวน** 200</span><span class="sxs-lookup"><span data-stu-id="2dfe7-156">**Date** February 2 2019, **AccountID** 2, **Amount** 200</span></span>
-  - <span data-ttu-id="2dfe7-157">**วันที่** 3 มีนาคม 2019, **AccountID** 1, **จำนวน** -25</span><span class="sxs-lookup"><span data-stu-id="2dfe7-157">**Date** March 3 2019, **AccountID** 1, **Amount** -25</span></span>
+- ตาราง **Account** มีสองแถว:
+  - **AccountID** 1 คือ Account-01
+  - **AccountID** 2 คือ Account-02
+- ตาราง **Customer** มีสองแถว:
+  - **CustomerID** 91 คือ Customer-91
+  - **CustomerID** 92 คือ Customer-92
+- ตาราง **AccountCustomer** มีสามแถว:
+  - **AccountID** 1 เชื่อมโยงกับ **CustomerID** 91
+  - **AccountID** 1 เชื่อมโยงกับ **CustomerID** 92
+  - **AccountID** 2 เชื่อมโยงกับ **CustomerID** 92
+- ตาราง **Transaction** มีสามแถว:
+  - **วันที่** 1 มกราคม 2019, **AccountID** 1, **จำนวน** 100
+  - **วันที่** 2 กุมภาพันธ์ 2019, **AccountID** 2, **จำนวน** 200
+  - **วันที่** 3 มีนาคม 2019, **AccountID** 1, **จำนวน** -25
 
-<span data-ttu-id="2dfe7-158">มาดูกันว่าจะเกิดอะไรขึ้นเมื่อมีการสอบถามแบบจำลอง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-158">Let's see what happens when the model is queried.</span></span>
+มาดูกันว่าจะเกิดอะไรขึ้นเมื่อมีการสอบถามแบบจำลอง
 
-<span data-ttu-id="2dfe7-159">ด้านล่างคือรูปภาพสองรูปที่สรุปคอลัมน์ **จำนวน** จากตาราง **Transaction**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-159">Below are two visuals that summarize the **Amount** column from the **Transaction** table.</span></span> <span data-ttu-id="2dfe7-160">กลุ่มวิชวลแรกตามบัญชี ดังนั้นผลรวมของ คอลัมน์ **จำนวน** แสดง _ยอดคงเหลือบัญชี_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-160">The first visual groups by account, and so the sum of the **Amount** columns represents the _account balance_.</span></span> <span data-ttu-id="2dfe7-161">กลุ่มวิชวลที่สองตามบัญชี ดังนั้นผลรวมของคอลัมน์ **จำนวน** แสดง _ยอดคงเหลือลูกค้า_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-161">The second visual groups by customer, and so the sum of the **Amount** columns represents the _customer balance_.</span></span>
+ด้านล่างคือรูปภาพสองรูปที่สรุปคอลัมน์ **จำนวน** จากตาราง **Transaction** กลุ่มวิชวลแรกตามบัญชี ดังนั้นผลรวมของ คอลัมน์ **จำนวน** แสดง _ยอดคงเหลือบัญชี_ กลุ่มวิชวลที่สองตามบัญชี ดังนั้นผลรวมของคอลัมน์ **จำนวน** แสดง _ยอดคงเหลือลูกค้า_
 
-![แผนภาพที่แสดงวิชวลรายงานสองภาพที่วางอยู่ข้าง ๆ กัน](media/relationships-many-to-many/bank-account-customer-model-queried-1.png)
+![แผนภาพที่แสดงวิชวลรายงานสองภาพที่วางอยู่ข้าง ๆ กัน การอธิบายรายละเอียดเกี่ยวกับวิชวลในย่อหน้าต่อไปนี้](media/relationships-many-to-many/bank-account-customer-model-queried-1.png)
 
-<span data-ttu-id="2dfe7-164">วิชวลแรกชื่อว่า **Account Balance** ซึ่งมีสองคอลัมน์: **Account** และ **จำนวน**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-164">The first visual is titled **Account Balance**, and it has two columns: **Account** and **Amount**.</span></span> <span data-ttu-id="2dfe7-165">ซึ่งแสดงผลต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-165">It displays the following result:</span></span>
+วิชวลแรกชื่อว่า **Account Balance** ซึ่งมีสองคอลัมน์: **Account** และ **จำนวน** ซึ่งแสดงผลต่อไปนี้
 
-- <span data-ttu-id="2dfe7-166">Account-01 ยอดเงินคงเหลือ 75</span><span class="sxs-lookup"><span data-stu-id="2dfe7-166">Account-01 balance amount is 75</span></span>
-- <span data-ttu-id="2dfe7-167">Account-02 ยอดเงินคงเหลือ 200</span><span class="sxs-lookup"><span data-stu-id="2dfe7-167">Account-02 balance amount is 200</span></span>
-- <span data-ttu-id="2dfe7-168">รวม 275</span><span class="sxs-lookup"><span data-stu-id="2dfe7-168">The total is 275</span></span>
+- Account-01 ยอดเงินคงเหลือ 75
+- Account-02 ยอดเงินคงเหลือ 200
+- รวม 275
 
-<span data-ttu-id="2dfe7-169">วิชวลที่สองชื่อว่า **Customer Balance** ซึ่งมีสองคอลัมน์: **Customer** และ **จำนวน**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-169">The second visual is titled **Customer Balance**, and it has two columns: **Customer** and **Amount**.</span></span> <span data-ttu-id="2dfe7-170">ซึ่งแสดงผลต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-170">It displays the following result:</span></span>
+วิชวลที่สองชื่อว่า **Customer Balance** ซึ่งมีสองคอลัมน์: **Customer** และ **จำนวน** ซึ่งแสดงผลต่อไปนี้
 
-- <span data-ttu-id="2dfe7-171">Customer-91 ยอดเงินคงเหลือ 275</span><span class="sxs-lookup"><span data-stu-id="2dfe7-171">Customer-91 balance amount is 275</span></span>
-- <span data-ttu-id="2dfe7-172">Customer-92 ยอดเงินคงเหลือ 275</span><span class="sxs-lookup"><span data-stu-id="2dfe7-172">Customer-92 balance amount is 275</span></span>
-- <span data-ttu-id="2dfe7-173">รวม 275</span><span class="sxs-lookup"><span data-stu-id="2dfe7-173">The total is 275</span></span>
+- Customer-91 ยอดเงินคงเหลือ 275
+- Customer-92 ยอดเงินคงเหลือ 275
+- รวม 275
 
-<span data-ttu-id="2dfe7-174">ลองมองแถวตารางและวิชวล **Account Balance** แสดงให้เห็นว่าผลลัพธ์ถูกต้อง สำหรับแต่ละบัญชีและจำนวนรวม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-174">A quick glance at the table rows and the **Account Balance** visual reveals that the result is correct, for each account and the total amount.</span></span> <span data-ttu-id="2dfe7-175">เนื่องจากผการจัดกลุ่มแต่ละบัญชีในการถ่ายทอดตัวกรองไปยังตาราง **Transaction** สำหรับตารางนั้น</span><span class="sxs-lookup"><span data-stu-id="2dfe7-175">It's because each account grouping results in a filter propagation to the **Transaction** table for that account.</span></span>
+ลองมองแถวตารางและวิชวล **Account Balance** แสดงให้เห็นว่าผลลัพธ์ถูกต้อง สำหรับแต่ละบัญชีและจำนวนรวม เนื่องจากผการจัดกลุ่มแต่ละบัญชีในการถ่ายทอดตัวกรองไปยังตาราง **Transaction** สำหรับตารางนั้น
 
-<span data-ttu-id="2dfe7-176">อย่างไรก็ตามบางอย่างไม่ถูกต้องนักตามวิชวล **Customer Balance**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-176">However, something doesn't appear correct with the **Customer Balance** visual.</span></span> <span data-ttu-id="2dfe7-177">ลูกค้าแต่ละคนในวิชวล **Customer Balance** มียอดเงินเหมือนกันยอดรวม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-177">Each customer in the **Customer Balance** visual has the same balance as the total balance.</span></span> <span data-ttu-id="2dfe7-178">ผบลัพธ์นี้อาจถูกต้องหากลูกค้าทุกรายเป็นเจ้าของบัญชีร่วมกันใยทุกบัญชี</span><span class="sxs-lookup"><span data-stu-id="2dfe7-178">This result could only be correct if every customer was a joint account holder of every account.</span></span> <span data-ttu-id="2dfe7-179">ซึ่งไม่ใช่กรณีในตัวอย่างนี้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-179">That's not the case in this example.</span></span> <span data-ttu-id="2dfe7-180">ปัญหาเกี่ยวข้องกับการถ่ายทอดตัวกรอง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-180">The issue is related to filter propagation.</span></span> <span data-ttu-id="2dfe7-181">ซึ่งไม่ได้เป็นไปตามตาราง **Transaction**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-181">It's not flowing all the way to the **Transaction** table.</span></span>
+อย่างไรก็ตามบางอย่างไม่ถูกต้องนักตามวิชวล **Customer Balance** ลูกค้าแต่ละคนในวิชวล **Customer Balance** มียอดเงินเหมือนกันยอดรวม ผบลัพธ์นี้อาจถูกต้องหากลูกค้าทุกรายเป็นเจ้าของบัญชีร่วมกันใยทุกบัญชี ซึ่งไม่ใช่กรณีในตัวอย่างนี้ ปัญหาเกี่ยวข้องกับการถ่ายทอดตัวกรอง ซึ่งไม่ได้เป็นไปตามตาราง **Transaction**
 
-<span data-ttu-id="2dfe7-182">ทำตามทิศทางของตัวกรองความสัมพันธ์จากตาราง **Customer** ไปยังตาราง **Transaction**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-182">Follow the relationship filter directions from the **Customer** table to the **Transaction** table.</span></span> <span data-ttu-id="2dfe7-183">ซึ่งชัดเจนว่าความสัมพันธ์ระหว่างตาราง **Account** และตาราง **AccountCustomer** นั้นถ่ายทอดในทิศทางที่ไม่ถูกกต้อง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-183">It should be apparent that the relationship between the **Account** and **AccountCustomer** table is propagating in the wrong direction.</span></span> <span data-ttu-id="2dfe7-184">ทิศทางของตัวกรองของความสัมพันธ์นี้จะต้องตั้งเป็น **ทั้งคู่**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-184">The filter direction for this relationship must be set to **Both**.</span></span>
+ทำตามทิศทางของตัวกรองความสัมพันธ์จากตาราง **Customer** ไปยังตาราง **Transaction** ซึ่งชัดเจนว่าความสัมพันธ์ระหว่างตาราง **Account** และตาราง **AccountCustomer** นั้นถ่ายทอดในทิศทางที่ไม่ถูกกต้อง ทิศทางของตัวกรองของความสัมพันธ์นี้จะต้องตั้งเป็น **ทั้งคู่**
 
-![แผนภาพที่แสดงว่าแบบจำลองได้รับการอัปเดตแล้ว](media/relationships-many-to-many/bank-account-customer-model-related-tables-3.png)
+![แผนภาพที่แสดงว่าแบบจำลองได้รับการอัปเดตแล้ว ตอนนี้ตัวกรองเป็นแบบสองทิศทาง](media/relationships-many-to-many/bank-account-customer-model-related-tables-3.png)
 
-![แผนภาพที่แสดงวิชวลรายงานสองภาพที่เหมือนกันซึ่งวางอยู่ข้าง ๆ กัน](media/relationships-many-to-many/bank-account-customer-model-queried-2.png)
+![แผนภาพที่แสดงวิชวลรายงานสองภาพที่เหมือนกันซึ่งวางอยู่ข้าง ๆ กัน วิชวลแรกไม่มีการเปลี่ยนแปลง ในขณะที่วิชวลที่สองมีการเปลี่ยนแปลง](media/relationships-many-to-many/bank-account-customer-model-queried-2.png)
 
-<span data-ttu-id="2dfe7-189">ตามที่คาดไว้ไม่มีการเปลี่ยนแปลงในวิชวล **Account Balance**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-189">As expected, there has been no change to the **Account Balance** visual.</span></span>
+ตามที่คาดไว้ไม่มีการเปลี่ยนแปลงในวิชวล **Account Balance**
 
-<span data-ttu-id="2dfe7-190">อย่างไรก็ตามวิชวล **Customer Balance** แสดงผลต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-190">The **Customer Balance** visuals, however, now displays the following result:</span></span>
+อย่างไรก็ตามวิชวล **Customer Balance** แสดงผลต่อไปนี้:
 
-- <span data-ttu-id="2dfe7-191">Customer-91 ยอดเงินคงเหลือ 75</span><span class="sxs-lookup"><span data-stu-id="2dfe7-191">Customer-91 balance amount is 75</span></span>
-- <span data-ttu-id="2dfe7-192">Customer-92 ยอดเงินคงเหลือ 275</span><span class="sxs-lookup"><span data-stu-id="2dfe7-192">Customer-92 balance amount is 275</span></span>
-- <span data-ttu-id="2dfe7-193">รวม 275</span><span class="sxs-lookup"><span data-stu-id="2dfe7-193">The total is 275</span></span>
+- Customer-91 ยอดเงินคงเหลือ 75
+- Customer-92 ยอดเงินคงเหลือ 275
+- รวม 275
 
-<span data-ttu-id="2dfe7-194">ขณะนี้วิชวล **Customer Balance** ได้แสดงผลถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-194">The **Customer Balance** visual now displays a correct result.</span></span> <span data-ttu-id="2dfe7-195">ปฏิบัติตามทิศทางตัวกรองของคุณ และศึกษาวิธีคำนวนยอดคงเหลือของลูกค้า</span><span class="sxs-lookup"><span data-stu-id="2dfe7-195">Follow the filter directions for yourself, and see how the customer balances were calculated.</span></span> <span data-ttu-id="2dfe7-196">ยังต้องทำความเข้าใจว่าผลรวมวิชวลหมายถึง _ลูกค้าทุกราย_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-196">Also, understand that the visual total means _all customers_.</span></span>
+ขณะนี้วิชวล **Customer Balance** ได้แสดงผลถูกต้อง ปฏิบัติตามทิศทางตัวกรองของคุณ และศึกษาวิธีคำนวนยอดคงเหลือของลูกค้า ยังต้องทำความเข้าใจว่าผลรวมวิชวลหมายถึง _ลูกค้าทุกราย_
 
-<span data-ttu-id="2dfe7-197">บางคนอาจจะไม่คุ้นเคยกับความสัมพันธ์แบบจำลองที่อาจรวมผลลัพธ์ที่ไม่ถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-197">Someone unfamiliar with the model relationships could conclude that the result is incorrect.</span></span> <span data-ttu-id="2dfe7-198">อาจมีคำถามว่า: _เพราะเหตุใดยอดรวมของ **Customer-91** และ **Customer-92** จึงไม่เท่ากับ 350 (75 + 275)_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-198">They might ask: _Why isn't the total balance for **Customer-91** and **Customer-92** equal to 350 (75 + 275)?_</span></span>
+บางคนอาจจะไม่คุ้นเคยกับความสัมพันธ์แบบจำลองที่อาจรวมผลลัพธ์ที่ไม่ถูกต้อง อาจมีคำถามว่า: _เพราะเหตุใดยอดรวมของ **Customer-91** และ **Customer-92** จึงไม่เท่ากับ 350 (75 + 275)_
 
-<span data-ttu-id="2dfe7-199">คำตอบสำหรับคำถามของพวกเขาอยู่ในการทำความเข้าใจเกี่ยวกับการใช้งานแบบกลุ่มต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-199">The answer to their question lies in understanding the many-to-many relationship.</span></span> <span data-ttu-id="2dfe7-200">ยอดคงเหลือของลูกค้าแต่ละรายสามารถเป็นตัวแทนของยอดคงเหลือหลายบัญชีและดังนั้นยอดดุลของลูกค้าจะ _ไม่ได้รับการเติมข้อมูล_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-200">Each customer balance can represent the addition of multiple account balances, and so the customer balances are _non-additive_.</span></span>
+คำตอบสำหรับคำถามของพวกเขาอยู่ในการทำความเข้าใจเกี่ยวกับการใช้งานแบบกลุ่มต่อกลุ่ม ยอดคงเหลือของลูกค้าแต่ละรายสามารถเป็นตัวแทนของยอดคงเหลือหลายบัญชีและดังนั้นยอดดุลของลูกค้าจะ _ไม่ได้รับการเติมข้อมูล_
 
-### <a name="relate-many-to-many-dimensions-guidance"></a><span data-ttu-id="2dfe7-201">คำแนะนำเชื่อมโยงมิติแบบกลุ่มต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-201">Relate many-to-many dimensions guidance</span></span>
+### <a name="relate-many-to-many-dimensions-guidance"></a>คำแนะนำเชื่อมโยงมิติแบบกลุ่มต่อกลุ่ม
 
-<span data-ttu-id="2dfe7-202">เมื่อคุณมีความสัมพันธ์แบบกลุ่มต่อกลุ่มระหว่างตารางชนิดมิติเรามีคำแนะนำต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-202">When you have a many-to-many relationship between dimension-type tables, we provide the following guidance:</span></span>
+เมื่อคุณมีความสัมพันธ์แบบกลุ่มต่อกลุ่มระหว่างตารางชนิดมิติเรามีคำแนะนำต่อไปนี้:
 
-- <span data-ttu-id="2dfe7-203">เพิ่มแต่ละเอนทิตีที่เกี่ยวข้องกับหลายกลุ่มเป็นตารางแบบจำลอง ตรวจสอบให้แน่ใจว่ามีคอลัมน์ตัวระบุที่ไม่ซ้ำกัน (ID)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-203">Add each many-to-many related entity as a model table, ensuring it has a unique identifier (ID) column</span></span>
-- <span data-ttu-id="2dfe7-204">เพิ่มตารางเชื่อมโยงเพื่อจัดเก็บเอนทิตีที่เกี่ยวข้อง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-204">Add a bridging table to store associated entities</span></span>
-- <span data-ttu-id="2dfe7-205">สร้างความสัมพันธ์ระหว่างหนึ่งต่อกลุ่มระหว่างสามตาราง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-205">Create one-to-many relationships between the three tables</span></span>
-- <span data-ttu-id="2dfe7-206">กำหนดค่า ความสัมพันธ์แบบสองทิศทาง **หนึ่ง** แบบ เพื่ออนุญาตให้มีการเผยแพร่ตัวกรองเพื่อดำเนินการต่อไปยังตารางชนิดข้อเท็จจริง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-206">Configure **one** bi-directional relationship to allow filter propagation to continue to the fact-type tables</span></span>
-- <span data-ttu-id="2dfe7-207">เมื่อไม่เหมาะสมที่จะมีค่า ID ที่ขาดหายไป ให้ตั้งค่าคุณสมบัติ **เป็น Nullable** ของแถว ID ให้เป็น FALSE—การรีเฟรชข้อมูลจะล้มเหลวถ้าค่าที่ขาดหายไปถูกบันทึกต้นแบบ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-207">When it isn't appropriate to have missing ID values, set the **Is Nullable** property of ID columns to FALSE—data refresh will then fail if missing values are sourced</span></span>
-- <span data-ttu-id="2dfe7-208">ซ่อนตารางการเชื่อมโยง (เว้นแต่จะมีคอลัมน์หรือหน่วยวัดเพิ่มเติมที่จำเป็นสำหรับการรายงาน)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-208">Hide the bridging table (unless it contains additional columns or measures required for reporting)</span></span>
-- <span data-ttu-id="2dfe7-209">ซ่อนคอลัมน์ ID ใดๆที่ไม่เหมาะสมสำหรับการรายงาน (ตัวอย่างเช่นเมื่อ ID เป็นคีย์ตัวแทน)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-209">Hide any ID columns that aren't suitable for reporting (for example, when IDs are surrogate keys)</span></span>
-- <span data-ttu-id="2dfe7-210">ถ้ารู้สึกสมเหตุสมผลที่จะละให้คอลัมน์ ID มองเห็นได้ ให้ตรวจสอบให้แน่ใจว่าอยู่ในสไลด์ "หนึ่ง" ของความสัมพันธ์—ซ่อนคอลัมน์ด้าน "กลุ่ม" อยู่เสมอ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-210">If it makes sense to leave an ID column visible, ensure that it's on the "one" slide of the relationship—always hide the "many" side column.</span></span> <span data-ttu-id="2dfe7-211">ซึ่งส่งผลให้ประสิทธิภาพการทำงานของตัวกรองดีที่สุด</span><span class="sxs-lookup"><span data-stu-id="2dfe7-211">It results in the best filter performance.</span></span>
-- <span data-ttu-id="2dfe7-212">หากต้องการหลีกเลี่ยงความสับสนหรือความเข้าใจผิด ให้สื่อสารคำอธิบายไปยังผู้ใช้รายงานของคุณ คุณสามารถเพิ่มรายละเอียดที่มีกล่องข้อความหรือ [เคล็ดลับการแสดงผลด้วยภาพ](report-page-tooltips.md)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-212">To avoid confusion or misinterpretation, communicate explanations to your report users—you can add descriptions with text boxes or [visual header tooltips](report-page-tooltips.md)</span></span>
+- เพิ่มแต่ละเอนทิตีที่เกี่ยวข้องกับหลายกลุ่มเป็นตารางแบบจำลอง ตรวจสอบให้แน่ใจว่ามีคอลัมน์ตัวระบุที่ไม่ซ้ำกัน (ID)
+- เพิ่มตารางเชื่อมโยงเพื่อจัดเก็บเอนทิตีที่เกี่ยวข้อง
+- สร้างความสัมพันธ์ระหว่างหนึ่งต่อกลุ่มระหว่างสามตาราง
+- กำหนดค่า ความสัมพันธ์แบบสองทิศทาง **หนึ่ง** แบบ เพื่ออนุญาตให้มีการเผยแพร่ตัวกรองเพื่อดำเนินการต่อไปยังตารางชนิดข้อเท็จจริง
+- เมื่อไม่เหมาะสมที่จะมีค่า ID ที่ขาดหายไป ให้ตั้งค่าคุณสมบัติ **เป็น Nullable** ของแถว ID ให้เป็น FALSE—การรีเฟรชข้อมูลจะล้มเหลวถ้าค่าที่ขาดหายไปถูกบันทึกต้นแบบ
+- ซ่อนตารางการเชื่อมโยง (เว้นแต่จะมีคอลัมน์หรือหน่วยวัดเพิ่มเติมที่จำเป็นสำหรับการรายงาน)
+- ซ่อนคอลัมน์ ID ใดๆที่ไม่เหมาะสมสำหรับการรายงาน (ตัวอย่างเช่นเมื่อ ID เป็นคีย์ตัวแทน)
+- ถ้ารู้สึกสมเหตุสมผลที่จะละให้คอลัมน์ ID มองเห็นได้ ให้ตรวจสอบให้แน่ใจว่าอยู่ในสไลด์ "หนึ่ง" ของความสัมพันธ์—ซ่อนคอลัมน์ด้าน "กลุ่ม" อยู่เสมอ ซึ่งส่งผลให้ประสิทธิภาพการทำงานของตัวกรองดีที่สุด
+- หากต้องการหลีกเลี่ยงความสับสนหรือความเข้าใจผิด ให้สื่อสารคำอธิบายไปยังผู้ใช้รายงานของคุณ คุณสามารถเพิ่มรายละเอียดที่มีกล่องข้อความหรือ [เคล็ดลับการแสดงผลด้วยภาพ](report-page-tooltips.md)
 
-<span data-ttu-id="2dfe7-213">เราไม่แนะนำให้คุณเกี่ยวข้องกับตารางชนิดของมิติแบบกลุ่มต่อกลุ่มโดยตรง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-213">We don't recommend you relate many-to-many dimension-type tables directly.</span></span> <span data-ttu-id="2dfe7-214">วิธีการออกแบบนี้จำเป็นต้องมีการกำหนดค่าความสัมพันธ์กับคาร์ดินาลลิตี้หลายรายการ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-214">This design approach requires configuring a relationship with a many-to-many cardinality.</span></span> <span data-ttu-id="2dfe7-215">ตามหลัดแล้วสามารถทำได้ แต่ก็หมายความว่าคอลัมน์ที่เกี่ยวข้องจะมีค่าซ้ำ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-215">Conceptually it can be achieved, yet it implies that the related columns will contain duplicate values.</span></span> <span data-ttu-id="2dfe7-216">ซึ่งก็เป็นวิธีการออกแบบที่ยอมรับได้อย่างไรก็ตามตารางชนิดมิตินั้นมีคอลัมน์ ID</span><span class="sxs-lookup"><span data-stu-id="2dfe7-216">It's a well-accepted design practice, however, that dimension-type tables have an ID column.</span></span> <span data-ttu-id="2dfe7-217">ตารางชนิดมิติควรใช้คอลัมน์ ID เป็นด้าน "หนึ่ง" ของความสัมพันธ์เสมอ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-217">Dimension-type tables should always use the ID column as the "one" side of a relationship.</span></span>
+เราไม่แนะนำให้คุณเกี่ยวข้องกับตารางชนิดของมิติแบบกลุ่มต่อกลุ่มโดยตรง วิธีการออกแบบนี้จำเป็นต้องมีการกำหนดค่าความสัมพันธ์กับคาร์ดินาลลิตี้หลายรายการ ตามหลัดแล้วสามารถทำได้ แต่ก็หมายความว่าคอลัมน์ที่เกี่ยวข้องจะมีค่าซ้ำ ซึ่งก็เป็นวิธีการออกแบบที่ยอมรับได้อย่างไรก็ตามตารางชนิดมิตินั้นมีคอลัมน์ ID ตารางชนิดมิติควรใช้คอลัมน์ ID เป็นด้าน "หนึ่ง" ของความสัมพันธ์เสมอ
 
-## <a name="relate-many-to-many-facts"></a><span data-ttu-id="2dfe7-218">เชื่อมโยงข้อเท็จจริงแบบกลุ่มต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-218">Relate many-to-many facts</span></span>
+## <a name="relate-many-to-many-facts"></a>เชื่อมโยงข้อเท็จจริงแบบกลุ่มต่อกลุ่ม
 
-<span data-ttu-id="2dfe7-219">ชนิดของสถานการณ์สมมติแบบกลุ่มต่อกลุ่มที่สองจะเกี่ยวข้องกับการเชื่อมโยงตารางความจริงสองชนิด</span><span class="sxs-lookup"><span data-stu-id="2dfe7-219">The second many-to-many scenario type involves relating two fact-type tables.</span></span> <span data-ttu-id="2dfe7-220">ตารางความจริงสองชนิดอาจเกี่ยวข้องกันโดยตรง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-220">Two fact-type tables can be related directly.</span></span> <span data-ttu-id="2dfe7-221">เทคนิคการออกแบบนี้จะเป็นประโยชน์สำหรับการสำรวจข้อมูลอย่างรวดเร็วและง่ายดาย</span><span class="sxs-lookup"><span data-stu-id="2dfe7-221">This design technique can be useful for quick and simple data exploration.</span></span> <span data-ttu-id="2dfe7-222">อย่างไรก็ตามเราจะไม่แนะนำวิธีการออกแบบนี้โดยทั่วไป</span><span class="sxs-lookup"><span data-stu-id="2dfe7-222">However, and to be clear, we generally don't recommend this design approach.</span></span> <span data-ttu-id="2dfe7-223">เราจะอธิบายในส่วนตอนท้ายของส่วนนี้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-223">We'll explain why later in this section.</span></span>
+ชนิดของสถานการณ์สมมติแบบกลุ่มต่อกลุ่มที่สองจะเกี่ยวข้องกับการเชื่อมโยงตารางความจริงสองชนิด ตารางความจริงสองชนิดอาจเกี่ยวข้องกันโดยตรง เทคนิคการออกแบบนี้จะเป็นประโยชน์สำหรับการสำรวจข้อมูลอย่างรวดเร็วและง่ายดาย อย่างไรก็ตามเราจะไม่แนะนำวิธีการออกแบบนี้โดยทั่วไป เราจะอธิบายในส่วนตอนท้ายของส่วนนี้
 
-<span data-ttu-id="2dfe7-224">ลองพิจารณาตัวอย่างที่เกี่ยวข้องกับตารางความจริงสองชนิด: **คำสั่ง** และ **การเติมสินค้า**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-224">Let's consider an example that involves two fact-type tables: **Order** and **Fulfillment**.</span></span> <span data-ttu-id="2dfe7-225">ตาราง **คำสั่ง** มีมีข้อมูลหนึุ่งแถวต่อหนึ่งคำสั่ง และตาราง **การเติมสินค้า** อาจไม่มีข้อมูลหรือมีมากกว่าหนึ่งแถวต่อหนึ่งคำสั่ง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-225">The **Order** table contains one row per order line, and the **Fulfillment** table can contains zero or more rows per order line.</span></span> <span data-ttu-id="2dfe7-226">แถวในตาราง **คำสั่ง** แสดงคำสั่งขาย</span><span class="sxs-lookup"><span data-stu-id="2dfe7-226">Rows in the **Order** table represent sales orders.</span></span> <span data-ttu-id="2dfe7-227">แถวในตาราง **การเติมสินค้า** แสดงรายการคำสั่งที่ถูกจัดส่งแล้ว</span><span class="sxs-lookup"><span data-stu-id="2dfe7-227">Rows in the **Fulfillment** table represent order items that have been shipped.</span></span> <span data-ttu-id="2dfe7-228">ความสัมพันธ์แบบกลุ่มต่อกลุ่มเชิ่มโยงคอลัมน์ **OrderID** สองคอลัมน์ โดยมีการถ่ายทอดตัวกรองจากตาราง **คำสั่ง** เท่านั้น (**คำสั่ง** กรอง **การเติมสินค้า**)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-228">A many-to-many relationship relates the two **OrderID** columns, with filter propagation only from the **Order** table (**Order** filters **Fulfillment**).</span></span>
+ลองพิจารณาตัวอย่างที่เกี่ยวข้องกับตารางความจริงสองชนิด: **คำสั่ง** และ **การเติมสินค้า** ตาราง **คำสั่ง** มีมีข้อมูลหนึุ่งแถวต่อหนึ่งคำสั่ง และตาราง **การเติมสินค้า** อาจไม่มีข้อมูลหรือมีมากกว่าหนึ่งแถวต่อหนึ่งคำสั่ง แถวในตาราง **คำสั่ง** แสดงคำสั่งขาย แถวในตาราง **การเติมสินค้า** แสดงรายการคำสั่งที่ถูกจัดส่งแล้ว ความสัมพันธ์แบบกลุ่มต่อกลุ่มเชิ่มโยงคอลัมน์ **OrderID** สองคอลัมน์ โดยมีการถ่ายทอดตัวกรองจากตาราง **คำสั่ง** เท่านั้น (**คำสั่ง** กรอง **การเติมสินค้า**)
 
 ![แผนภาพที่แสดงแบบจำลองที่มีสองตาราง: คำสั่งและการเติมสินค้า](media/relationships-many-to-many/order-fulfillment-model-example.png)
 
-<span data-ttu-id="2dfe7-230">มีการตั้งค่าคาร์ดินาลลิตี้ความสัมพันธ์เป็นกลุ่มต่อกลุ่มเพื่อสนับสนุนการจัดเก็บค่าที่ซ้ำกันของ **OrderID** ในทั้งสองตาราง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-230">The relationship cardinality is set to many-to-many to support storing duplicate **OrderID** values in both tables.</span></span> <span data-ttu-id="2dfe7-231">ในตาราง **คำสั่ง** อาจมีค่า **OrderID** ซ้ำ เนื่องจากคำสั่งอาจมีหลายบรรทัด</span><span class="sxs-lookup"><span data-stu-id="2dfe7-231">In the **Order** table, duplicate **OrderID** values can exist because an order can have multiple lines.</span></span> <span data-ttu-id="2dfe7-232">ในตาราง **เติมสินค้า** อาจมีค่า **OrderID** ซ้ำ เนื่องจากคำสั่งอาจมีหลายบรรทัด และคำสั่งอาจมีหลายการจัดส่ง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-232">In the **Fulfillment** table, duplicate **OrderID** values can exist because orders may have multiple lines, and order lines can be fulfilled by many shipments.</span></span>
+มีการตั้งค่าคาร์ดินาลลิตี้ความสัมพันธ์เป็นกลุ่มต่อกลุ่มเพื่อสนับสนุนการจัดเก็บค่าที่ซ้ำกันของ **OrderID** ในทั้งสองตาราง ในตาราง **คำสั่ง** อาจมีค่า **OrderID** ซ้ำ เนื่องจากคำสั่งอาจมีหลายบรรทัด ในตาราง **เติมสินค้า** อาจมีค่า **OrderID** ซ้ำ เนื่องจากคำสั่งอาจมีหลายบรรทัด และคำสั่งอาจมีหลายการจัดส่ง
 
-<span data-ttu-id="2dfe7-233">ตอนนี้เรามาดูแถวตารางกัน</span><span class="sxs-lookup"><span data-stu-id="2dfe7-233">Let's now take a look at the table rows.</span></span> <span data-ttu-id="2dfe7-234">ในตาราง **เติมสินค้า** สังเกตเห็นว่าคำสั่งอาจมีหลายการจัดส่ง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-234">In the **Fulfillment** table, notice that order lines can be fulfilled by multiple shipments.</span></span> <span data-ttu-id="2dfe7-235">(การไม่มีคำสั่งหมายถึงคำสั่งยังไม่ได้กรอก)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-235">(The absence of an order line means the order is yet to be fulfilled.)</span></span>
+ตอนนี้เรามาดูแถวตารางกัน ในตาราง **เติมสินค้า** สังเกตเห็นว่าคำสั่งอาจมีหลายการจัดส่ง (การไม่มีคำสั่งหมายถึงคำสั่งยังไม่ได้กรอก)
 
-![แผนภาพที่แสดงว่าแบบจำลองแสดงแถวของตารางอยู่ในขณะนี้](media/relationships-many-to-many/order-fulfillment-model-related-tables.png)
+![แผนภาพที่แสดงว่าแบบจำลองแสดงแถวของตารางอยู่ในขณะนี้ รายละเอียดแถวสำหรับสองตารางอธิบายไว้ในย่อหน้าต่อไปนี้](media/relationships-many-to-many/order-fulfillment-model-related-tables.png)
 
-<span data-ttu-id="2dfe7-238">รายละเอียดแถวสำหรับสองตารางอธิบายในหัวข้อย่อยต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-238">The row details for the two tables are described in the following bulleted list:</span></span>
+รายละเอียดแถวสำหรับสองตารางอธิบายในหัวข้อย่อยต่อไปนี้:
 
-- <span data-ttu-id="2dfe7-239">ตาราง **คำสั่ง** มีห้าแถว:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-239">The **Order** table has five rows:</span></span>
-  - <span data-ttu-id="2dfe7-240">**OrderDate** 1 มกราคม 2019, **OrderID** 1, **OrderLine** 1, **ProductID** Prod-A, **OrderQuantity** 5, **Sales** 50</span><span class="sxs-lookup"><span data-stu-id="2dfe7-240">**OrderDate** January 1 2019, **OrderID** 1, **OrderLine** 1, **ProductID** Prod-A, **OrderQuantity** 5, **Sales** 50</span></span>
-  - <span data-ttu-id="2dfe7-241">**OrderDate** 1 มกราคม 2019, **OrderID** 1, **OrderLine** 2, **ProductID** Prod-B, **OrderQuantity** 10, **Sales** 80</span><span class="sxs-lookup"><span data-stu-id="2dfe7-241">**OrderDate** January 1 2019, **OrderID** 1, **OrderLine** 2, **ProductID** Prod-B, **OrderQuantity** 10, **Sales** 80</span></span>
-  - <span data-ttu-id="2dfe7-242">**OrderDate** 2 กุมภาพันธ์ 2019, **OrderID** 2, **OrderLine** 1, **ProductID** Prod-B, **OrderQuantity** 5, **Sales** 40</span><span class="sxs-lookup"><span data-stu-id="2dfe7-242">**OrderDate** February 2 2019, **OrderID** 2, **OrderLine** 1, **ProductID** Prod-B, **OrderQuantity** 5, **Sales** 40</span></span>
-  - <span data-ttu-id="2dfe7-243">**OrderDate** 2 กุมภาพันธ์ 2019, **OrderID** 2, **OrderLine** 2, **ProductID** Prod-C, **OrderQuantity** 1, **Sales** 20</span><span class="sxs-lookup"><span data-stu-id="2dfe7-243">**OrderDate** February 2 2019, **OrderID** 2, **OrderLine** 2, **ProductID** Prod-C, **OrderQuantity** 1, **Sales** 20</span></span>
-  - <span data-ttu-id="2dfe7-244">**OrderDate** 3 มีนาคม 2019, **OrderID** 3, **OrderLine** 1, **ProductID** Prod-C, **OrderQuantity** 5, **Sales** 100</span><span class="sxs-lookup"><span data-stu-id="2dfe7-244">**OrderDate** March 3 2019, **OrderID** 3, **OrderLine** 1, **ProductID** Prod-C, **OrderQuantity** 5, **Sales** 100</span></span>
-- <span data-ttu-id="2dfe7-245">ตาราง **เติมสินค้า** มีสี่แถว:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-245">The **Fulfillment** table has four rows:</span></span>
-  - <span data-ttu-id="2dfe7-246">**FulfillmentDate** 1 มกราคม 2019, **FulfillmentID** 50, **OrderID** 1, **OrderLine** 1, **FulfillmentQuantity** 2</span><span class="sxs-lookup"><span data-stu-id="2dfe7-246">**FulfillmentDate** January 1 2019, **FulfillmentID** 50, **OrderID** 1, **OrderLine** 1, **FulfillmentQuantity** 2</span></span>
-  - <span data-ttu-id="2dfe7-247">**FulfillmentDate** 2 กุมภาพันธ์ 2019, **FulfillmentID** 51, **OrderID** 2, **OrderLine** 1, **FulfillmentQuantity** 5</span><span class="sxs-lookup"><span data-stu-id="2dfe7-247">**FulfillmentDate** February 2 2019, **FulfillmentID** 51, **OrderID** 2, **OrderLine** 1, **FulfillmentQuantity** 5</span></span>
-  - <span data-ttu-id="2dfe7-248">**FulfillmentDate** 2 กุมภาพันธ์ 2019, **FulfillmentID** 52, **OrderID** 1, **OrderLine** 1, **FulfillmentQuantity** 3</span><span class="sxs-lookup"><span data-stu-id="2dfe7-248">**FulfillmentDate** February 2 2019, **FulfillmentID** 52, **OrderID** 1, **OrderLine** 1, **FulfillmentQuantity** 3</span></span>
-  - <span data-ttu-id="2dfe7-249">**FulfillmentDate** 1 มกราคม 2019, **FulfillmentID** 53, **OrderID** 1, **OrderLine** 2, **FulfillmentQuantity** 10</span><span class="sxs-lookup"><span data-stu-id="2dfe7-249">**FulfillmentDate** January 1 2019, **FulfillmentID** 53, **OrderID** 1, **OrderLine** 2, **FulfillmentQuantity** 10</span></span>
+- ตาราง **คำสั่ง** มีห้าแถว:
+  - **OrderDate** 1 มกราคม 2019, **OrderID** 1, **OrderLine** 1, **ProductID** Prod-A, **OrderQuantity** 5, **Sales** 50
+  - **OrderDate** 1 มกราคม 2019, **OrderID** 1, **OrderLine** 2, **ProductID** Prod-B, **OrderQuantity** 10, **Sales** 80
+  - **OrderDate** 2 กุมภาพันธ์ 2019, **OrderID** 2, **OrderLine** 1, **ProductID** Prod-B, **OrderQuantity** 5, **Sales** 40
+  - **OrderDate** 2 กุมภาพันธ์ 2019, **OrderID** 2, **OrderLine** 2, **ProductID** Prod-C, **OrderQuantity** 1, **Sales** 20
+  - **OrderDate** 3 มีนาคม 2019, **OrderID** 3, **OrderLine** 1, **ProductID** Prod-C, **OrderQuantity** 5, **Sales** 100
+- ตาราง **เติมสินค้า** มีสี่แถว:
+  - **FulfillmentDate** 1 มกราคม 2019, **FulfillmentID** 50, **OrderID** 1, **OrderLine** 1, **FulfillmentQuantity** 2
+  - **FulfillmentDate** 2 กุมภาพันธ์ 2019, **FulfillmentID** 51, **OrderID** 2, **OrderLine** 1, **FulfillmentQuantity** 5
+  - **FulfillmentDate** 2 กุมภาพันธ์ 2019, **FulfillmentID** 52, **OrderID** 1, **OrderLine** 1, **FulfillmentQuantity** 3
+  - **FulfillmentDate** 1 มกราคม 2019, **FulfillmentID** 53, **OrderID** 1, **OrderLine** 2, **FulfillmentQuantity** 10
 
-<span data-ttu-id="2dfe7-250">มาดูกันว่าจะเกิดอะไรขึ้นเมื่อมีการสอบถามแบบจำลอง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-250">Let's see what happens when the model is queried.</span></span> <span data-ttu-id="2dfe7-251">นี่คือการแสดงผลด้วยตารางการเปรียบเทียบปริมาณการสั่งซื้อและการเติมสินค้าตามตาราง **คำสั่ง** คอลัมน์ **OrderID**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-251">Here's a table visual comparing order and fulfillment quantities by the **Order** table **OrderID** column.</span></span>
+มาดูกันว่าจะเกิดอะไรขึ้นเมื่อมีการสอบถามแบบจำลอง นี่คือการแสดงผลด้วยตารางการเปรียบเทียบปริมาณการสั่งซื้อและการเติมสินค้าตามตาราง **คำสั่ง** คอลัมน์ **OrderID**
 
 ![แผนภาพที่แสดงวิชวลตารางที่มีสามคอลัมน์: OrderID, OrderQuantity และ FulfillmentQuantity](media/relationships-many-to-many/order-fulfillment-model-queried.png)
 
-<span data-ttu-id="2dfe7-253">วิชวลแสดงผลลัพธ์ที่ถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-253">The visual presents an accurate result.</span></span> <span data-ttu-id="2dfe7-254">อย่างไรก็ตาม อย่างไรก็ตามประโยชน์ของแบบจำลองจะถูกจำกัด–คุณสามารถกรองหรือจัดกลุ่มตามตาราง **Order** คอลัมน์ **OrderID**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-254">However, the usefulness of the model is limited—you can only filter or group by the **Order** table **OrderID** column.</span></span>
+วิชวลแสดงผลลัพธ์ที่ถูกต้อง อย่างไรก็ตาม อย่างไรก็ตามประโยชน์ของแบบจำลองจะถูกจำกัด–คุณสามารถกรองหรือจัดกลุ่มตามตาราง **Order** คอลัมน์ **OrderID**
 
-### <a name="relate-many-to-many-facts-guidance"></a><span data-ttu-id="2dfe7-255">คำแนะนำเชื่อมโยงข้อเท็จจริงแบบกลุ่มต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-255">Relate many-to-many facts guidance</span></span>
+### <a name="relate-many-to-many-facts-guidance"></a>คำแนะนำเชื่อมโยงข้อเท็จจริงแบบกลุ่มต่อกลุ่ม
 
-<span data-ttu-id="2dfe7-256">โดยทั่วไป เราไม่แนะนำจัดอันดับสองตารางชนิดความจริงสองตารางโดยตรงโดยใช้คาร์ดินัลลิตี้แบบกลุ่มต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-256">Generally, we don't recommend relating two fact-type tables directly using many-to-many cardinality.</span></span> <span data-ttu-id="2dfe7-257">เหตุผลหลักคือเหตุผลหลักคือเนื่องจากแบบจำลองจะไม่มีความยืดหยุ่นในลักษณะที่คุณรายงานตัวกรองหรือกลุ่มของวิชวล</span><span class="sxs-lookup"><span data-stu-id="2dfe7-257">The main reason is because the model won't provide flexibility in the ways you report visuals filter or group.</span></span> <span data-ttu-id="2dfe7-258">ตัวอย่าง อาจเป็นสำหรับวิชวลในตัวกรองหรือกลุ่มโดยตารางตาราง **Order** คอลัมน์ **OrderID**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-258">In the example, it's only possible for visuals to filter or group by the **Order** table **OrderID** column.</span></span> <span data-ttu-id="2dfe7-259">ตัวอย่างเพิ่มเติมเกี่ยวข้องกับคุณภาพของข้อมูลของคุณ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-259">An additional reason relates to the quality of your data.</span></span> <span data-ttu-id="2dfe7-260">หากข้อมูลของคุณมีปัญหาด้านการทำงาน อาจเป็นไปได้ว่าบางแถวอาจถูกละเว้นในระหว่างการสืบค้นเนื่องจากลักษณะของ _ความสัมพันธ์ที่จำกัด_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-260">If your data has integrity issues, it's possible some rows may be omitted during querying due to the nature of the _limited relationship_.</span></span> <span data-ttu-id="2dfe7-261">เมื่อต้องการเรียนรู้เพิ่มเติมเกี่ยวกับความสัมพันธ์ โปรดดู[ความสัมพันธ์แบบจำลองใน Power BI Desktop (การประเมินผลความสัมพันธ์)](../transform-model/desktop-relationships-understand.md#relationship-evaluation)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-261">For more information, see [Model relationships in Power BI Desktop (Relationship evaluation)](../transform-model/desktop-relationships-understand.md#relationship-evaluation).</span></span>
+โดยทั่วไป เราไม่แนะนำจัดอันดับสองตารางชนิดความจริงสองตารางโดยตรงโดยใช้คาร์ดินัลลิตี้แบบกลุ่มต่อกลุ่ม เหตุผลหลักคือเหตุผลหลักคือเนื่องจากแบบจำลองจะไม่มีความยืดหยุ่นในลักษณะที่คุณรายงานตัวกรองหรือกลุ่มของวิชวล ตัวอย่าง อาจเป็นสำหรับวิชวลในตัวกรองหรือกลุ่มโดยตารางตาราง **Order** คอลัมน์ **OrderID** ตัวอย่างเพิ่มเติมเกี่ยวข้องกับคุณภาพของข้อมูลของคุณ หากข้อมูลของคุณมีปัญหาด้านการทำงาน อาจเป็นไปได้ว่าบางแถวอาจถูกละเว้นในระหว่างการสืบค้นเนื่องจากลักษณะของ _ความสัมพันธ์ที่จำกัด_ เมื่อต้องการเรียนรู้เพิ่มเติมเกี่ยวกับความสัมพันธ์ โปรดดู[ความสัมพันธ์แบบจำลองใน Power BI Desktop (การประเมินผลความสัมพันธ์)](../transform-model/desktop-relationships-understand.md#relationship-evaluation)
 
-<span data-ttu-id="2dfe7-262">แทนที่จะเป็นตารางความจริงที่เกี่ยวข้องโดยตรงเราขอแนะนำให้คุณใช้หลักการออกแบบ[โครงร่างรูปดาว](star-schema.md)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-262">Instead of relating fact-type tables directly, we recommend you adopt [Star Schema](star-schema.md) design principles.</span></span> <span data-ttu-id="2dfe7-263">คุณทำโดยการเพิ่มตารางชนิดมิติ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-263">You do it by adding dimension-type tables.</span></span> <span data-ttu-id="2dfe7-264">ตารางชนิดมิติจะเกี่ยวข้องกับตารางชนิดข้อเท็จจริงโดยใช้ความสัมพันธ์แบบหนึ่งต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-264">The dimension-type tables then relate to the fact-type tables by using one-to-many relationships.</span></span> <span data-ttu-id="2dfe7-265">วิธีการออกแบบนี้มีความคงทน เนื่องจากมีตัวเลือกการรายงานที่ยืดหยุ่น</span><span class="sxs-lookup"><span data-stu-id="2dfe7-265">This design approach is robust as it delivers flexible reporting options.</span></span> <span data-ttu-id="2dfe7-266">ซึ่งช่วยให้คุณกรองหรือจัดกลุ่มโดยใช้คอลัมน์ชนิดมิติ และสรุปตารางชนิดข้อเท็จจริงใด ๆ ที่เกี่ยวข้อง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-266">It lets you filter or group using any of the dimension-type columns, and summarize any related fact-type table.</span></span>
+แทนที่จะเป็นตารางความจริงที่เกี่ยวข้องโดยตรงเราขอแนะนำให้คุณใช้หลักการออกแบบ[โครงร่างรูปดาว](star-schema.md) คุณทำโดยการเพิ่มตารางชนิดมิติ ตารางชนิดมิติจะเกี่ยวข้องกับตารางชนิดข้อเท็จจริงโดยใช้ความสัมพันธ์แบบหนึ่งต่อกลุ่ม วิธีการออกแบบนี้มีความคงทน เนื่องจากมีตัวเลือกการรายงานที่ยืดหยุ่น ซึ่งช่วยให้คุณกรองหรือจัดกลุ่มโดยใช้คอลัมน์ชนิดมิติ และสรุปตารางชนิดข้อเท็จจริงใด ๆ ที่เกี่ยวข้อง
 
-<span data-ttu-id="2dfe7-267">มาพิจารณาวิธีการที่ดีกว่ากัน</span><span class="sxs-lookup"><span data-stu-id="2dfe7-267">Let's consider a better solution.</span></span>
+มาพิจารณาวิธีการที่ดีกว่ากัน
 
 ![แผนภาพที่แสดงแบบจำลองที่มีหกตาราง: OrderLine, OrderDate, Order, Fulfillment, Product, และ FulfillmentDate.](media/relationships-many-to-many/order-fulfillment-model-improved.png)
 
-<span data-ttu-id="2dfe7-269">โปรดสังเกตการเปลี่ยนแปลงแบบดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-269">Notice the following design changes:</span></span>
+โปรดสังเกตการเปลี่ยนแปลงแบบดังต่อไปนี้:
 
-- <span data-ttu-id="2dfe7-270">ขณะนี้โมเดลมีตารางเพิ่มเติมสี่ตาราง: **OrderLine**, **OrderDate**, **Product**, และ **FulfillmentDate**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-270">The model now has four additional tables: **OrderLine**, **OrderDate**, **Product**, and **FulfillmentDate**</span></span>
-- <span data-ttu-id="2dfe7-271">ตารางเพิ่มเติมสี่ตารางเป็นตารางชนิดมิติ และมีความสัมพันธ์แบบหนึ่งต่อกลุ่มระหว่างตารางเหล่านี้กับตารางชนิดความจริง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-271">The four additional tables are all dimension-type tables, and one-to-many relationships relate these tables to the fact-type tables</span></span>
-- <span data-ttu-id="2dfe7-272">ตาราง **OrderLine** มีคอลัมน์ **OrderLineID** ซึ่งแสดงค่า **OrderID** คุณ 100 บวกกับค่า **OrderLine** ซึ่งเป็นค่าตัวบ่งชี้ที่ไม่ซ้ำกันสำหรับคำสั่งแต่ละบรรทัด</span><span class="sxs-lookup"><span data-stu-id="2dfe7-272">The **OrderLine** table contains an **OrderLineID** column, which represents the **OrderID** value multiplied by 100, plus the **OrderLine** value—a unique identifier for each order line</span></span>
-- <span data-ttu-id="2dfe7-273">ตาราง **คำสั่ง** และ **เติมสินค้า** มีคอลัมน์ **OrderLineID** และไม่มีคอลัมน์ **OrderID** และ **OrderLine** แล้ว</span><span class="sxs-lookup"><span data-stu-id="2dfe7-273">The **Order** and **Fulfillment** tables now contain an **OrderLineID** column, and they no longer contain the **OrderID** and **OrderLine** columns</span></span>
-- <span data-ttu-id="2dfe7-274">ขณะนี้ตาราง **Fulfillment** มีคอลัมน์ **OrderDate** และ **ProductID**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-274">The **Fulfillment** table now contains **OrderDate** and **ProductID** columns</span></span>
-- <span data-ttu-id="2dfe7-275">ตาราง **FulfillmentDate** สัมพันธ์กับตาราง **การเติมสินค้า** เท่านั้น</span><span class="sxs-lookup"><span data-stu-id="2dfe7-275">The **FulfillmentDate** table relates only to the **Fulfillment** table</span></span>
-- <span data-ttu-id="2dfe7-276">คอลัมน์ตัวระบุที่ไม่ซ้ำกันทั้งหมดถูกซ่อนไว้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-276">All unique identifier columns are hidden</span></span>
+- ขณะนี้โมเดลมีตารางเพิ่มเติมสี่ตาราง: **OrderLine**, **OrderDate**, **Product**, และ **FulfillmentDate**
+- ตารางเพิ่มเติมสี่ตารางเป็นตารางชนิดมิติ และมีความสัมพันธ์แบบหนึ่งต่อกลุ่มระหว่างตารางเหล่านี้กับตารางชนิดความจริง
+- ตาราง **OrderLine** มีคอลัมน์ **OrderLineID** ซึ่งแสดงค่า **OrderID** คุณ 100 บวกกับค่า **OrderLine** ซึ่งเป็นค่าตัวบ่งชี้ที่ไม่ซ้ำกันสำหรับคำสั่งแต่ละบรรทัด
+- ตาราง **คำสั่ง** และ **เติมสินค้า** มีคอลัมน์ **OrderLineID** และไม่มีคอลัมน์ **OrderID** และ **OrderLine** แล้ว
+- ขณะนี้ตาราง **Fulfillment** มีคอลัมน์ **OrderDate** และ **ProductID**
+- ตาราง **FulfillmentDate** สัมพันธ์กับตาราง **การเติมสินค้า** เท่านั้น
+- คอลัมน์ตัวระบุที่ไม่ซ้ำกันทั้งหมดถูกซ่อนไว้
 
-<span data-ttu-id="2dfe7-277">สละเวลาในการใช้หลักการออกแบบ โครงร่างรูปดาว ให้สิทธิประโยชน์ดังต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-277">Taking the time to apply star schema design principles delivers the following benefits:</span></span>
+สละเวลาในการใช้หลักการออกแบบ โครงร่างรูปดาว ให้สิทธิประโยชน์ดังต่อไปนี้:
 
-- <span data-ttu-id="2dfe7-278">การแสดงผลรายงานของคุณสามารถ _กรองหรือจัดกลุ่ม_ ตามคอลัมน์ที่มองเห็นได้จากตารางชนิดมิติ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-278">Your report visuals can _filter or group_ by any visible column from the dimension-type tables</span></span>
-- <span data-ttu-id="2dfe7-279">การแสดงผลรายงานของคุณสามารถ _สรุป_ คอลัมน์ใด ๆ ที่มองเห็นได้จากตารางชนิดข้อเท็จจริง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-279">Your report visuals can _summarize_ any visible column from the fact-type tables</span></span>
-- <span data-ttu-id="2dfe7-280">ตัวกรองที่นำไปใช้กับตาราง **OrderLine**, **OrderDate** หรือ **Product** จะถ่ายทอดไปยังตารางชนิดข้อเท็จจริง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-280">Filters applied to the **OrderLine**, **OrderDate**, or **Product** tables will propagate to both fact-type tables</span></span>
-- <span data-ttu-id="2dfe7-281">ความสัมพันธ์ทั้งหมดเป็นแบบหนึ่งต่อกลุ่มและแต่ละความสัมพันธ์เป็น _ความสัมพันธ์ปกติ_</span><span class="sxs-lookup"><span data-stu-id="2dfe7-281">All relationships are one-to-many, and each relationship is a _regular relationship_.</span></span> <span data-ttu-id="2dfe7-282">ปัญหาความสมบูรณ์ของข้อมูลจะไม่ได้รับการมาสก์</span><span class="sxs-lookup"><span data-stu-id="2dfe7-282">Data integrity issues won't be masked.</span></span> <span data-ttu-id="2dfe7-283">เมื่อต้องการเรียนรู้เพิ่มเติมเกี่ยวกับความสัมพันธ์ โปรดดู[ความสัมพันธ์แบบจำลองใน Power BI Desktop (การประเมินผลความสัมพันธ์)](../transform-model/desktop-relationships-understand.md#relationship-evaluation)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-283">For more information, see [Model relationships in Power BI Desktop (Relationship evaluation)](../transform-model/desktop-relationships-understand.md#relationship-evaluation).</span></span>
+- การแสดงผลรายงานของคุณสามารถ _กรองหรือจัดกลุ่ม_ ตามคอลัมน์ที่มองเห็นได้จากตารางชนิดมิติ
+- การแสดงผลรายงานของคุณสามารถ _สรุป_ คอลัมน์ใด ๆ ที่มองเห็นได้จากตารางชนิดข้อเท็จจริง
+- ตัวกรองที่นำไปใช้กับตาราง **OrderLine**, **OrderDate** หรือ **Product** จะถ่ายทอดไปยังตารางชนิดข้อเท็จจริง
+- ความสัมพันธ์ทั้งหมดเป็นแบบหนึ่งต่อกลุ่มและแต่ละความสัมพันธ์เป็น _ความสัมพันธ์ปกติ_ ปัญหาความสมบูรณ์ของข้อมูลจะไม่ได้รับการมาสก์ เมื่อต้องการเรียนรู้เพิ่มเติมเกี่ยวกับความสัมพันธ์ โปรดดู[ความสัมพันธ์แบบจำลองใน Power BI Desktop (การประเมินผลความสัมพันธ์)](../transform-model/desktop-relationships-understand.md#relationship-evaluation)
 
-## <a name="relate-higher-grain-facts"></a><span data-ttu-id="2dfe7-284">เชื่อมโยงความจริงเกรนที่สูงกว่า</span><span class="sxs-lookup"><span data-stu-id="2dfe7-284">Relate higher grain facts</span></span>
+## <a name="relate-higher-grain-facts"></a>เชื่อมโยงความจริงเกรนที่สูงกว่า
 
-<span data-ttu-id="2dfe7-285">สถานการณ์กลุ่มต่อกลุ่มนี้แตกต่างจากสถานการณ์ที่ได้อธิบายก่อนหน้านี้ไว้ในบทความ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-285">This many-to-many scenario is very different from the other two already described in this article.</span></span>
+สถานการณ์กลุ่มต่อกลุ่มนี้แตกต่างจากสถานการณ์ที่ได้อธิบายก่อนหน้านี้ไว้ในบทความ
 
-<span data-ttu-id="2dfe7-286">มาพิจารณาตัวอย่างที่เกี่ยวข้องกับตารางทั้งสี่: **วันที่**, **ยอดขาย**, **ผลิตภัณฑ์**, และ **เป้าหมาย**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-286">Let's consider an example involving four tables: **Date**, **Sales**, **Product**, and **Target**.</span></span> <span data-ttu-id="2dfe7-287">**ข้อมูล** และ **ผลิตภัณฑ์** เป็นข้อมูลชนิดมิติ และความสัมพันธ์หนึ่งต่อกลุ่มสัมพันธ์กับตาราง **ยอดขาย** ชนิดความจริง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-287">The **Date** and **Product** are dimension-type tables, and one-to-many relationships relate each to the **Sales** fact-type table.</span></span> <span data-ttu-id="2dfe7-288">ซึ่งแสดงการออกแบบโครงร่างรูปดาวที่ดี</span><span class="sxs-lookup"><span data-stu-id="2dfe7-288">So far, it represents a good star schema design.</span></span> <span data-ttu-id="2dfe7-289">อย่างไรก็ตาม ตาราง **เป้าหมาย** สัมพันธ์กับตารางอื่น ๆ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-289">The **Target** table, however, is yet to be related to the other tables.</span></span>
+มาพิจารณาตัวอย่างที่เกี่ยวข้องกับตารางทั้งสี่: **วันที่**, **ยอดขาย**, **ผลิตภัณฑ์**, และ **เป้าหมาย** **ข้อมูล** และ **ผลิตภัณฑ์** เป็นข้อมูลชนิดมิติ และความสัมพันธ์หนึ่งต่อกลุ่มสัมพันธ์กับตาราง **ยอดขาย** ชนิดความจริง ซึ่งแสดงการออกแบบโครงร่างรูปดาวที่ดี อย่างไรก็ตาม ตาราง **เป้าหมาย** สัมพันธ์กับตารางอื่น ๆ
 
 ![แผนภาพที่แสดงแบบจำลองซึ่งมีสี่ตาราง: วันที่, ยอดขาย, ผลิตภัณฑ์ และเป้าหมาย](media/relationships-many-to-many/sales-targets-model-example.png)
 
-<span data-ttu-id="2dfe7-291">ตาราง **เป้าหมาย** มีสามตาราง: **Category**, **TargetQuantity**, และ **TargetYear**.</span><span class="sxs-lookup"><span data-stu-id="2dfe7-291">The **Target** table contains three columns: **Category**, **TargetQuantity**, and **TargetYear**.</span></span> <span data-ttu-id="2dfe7-292">แถวตารางเผยถึงส่วนประกอบของประเภทปีและผลิตภัณฆ์</span><span class="sxs-lookup"><span data-stu-id="2dfe7-292">The table rows reveal a granularity of year and product category.</span></span> <span data-ttu-id="2dfe7-293">อีกนัยหนึ่ง เป้าหมายที่ใช้ประเมินประสิทธิภาพการขายนั้นถูกกำหนดในแต่ละปีสำหรับผลิตภัณฑ์แต่ละประเภท</span><span class="sxs-lookup"><span data-stu-id="2dfe7-293">In other words, targets—used to measure sales performance—are set each year for each product category.</span></span>
+ตาราง **เป้าหมาย** มีสามตาราง: **Category**, **TargetQuantity**, และ **TargetYear**. แถวตารางเผยถึงส่วนประกอบของประเภทปีและผลิตภัณฆ์ อีกนัยหนึ่ง เป้าหมายที่ใช้ประเมินประสิทธิภาพการขายนั้นถูกกำหนดในแต่ละปีสำหรับผลิตภัณฑ์แต่ละประเภท
 
 ![แผนภาพที่แสดงตารางเป้าหมายที่มีสามคอลัมน์: TargetYear, Category, และ TargetQuantity.](media/relationships-many-to-many/sales-targets-model-target-rows.png)
 
-<span data-ttu-id="2dfe7-295">เนื่องจากตาราง **เป้าหมาย** จัดเก็บข้อมูลในระดับที่สูงกว่าตารางชนิดมิติซึ่งไม่สามารถสร้างความสัมพันธ์แบบหนึ่งต่อกลุ่มได้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-295">Because the **Target** table stores data at a higher level than the dimension-type tables, a one-to-many relationship cannot be created.</span></span> <span data-ttu-id="2dfe7-296">เป็นจริงสำหรับความสัมพันธ์แต่ละประเภท</span><span class="sxs-lookup"><span data-stu-id="2dfe7-296">Well, it's true for just one of the relationships.</span></span> <span data-ttu-id="2dfe7-297">ลองสำรวจว่าตาราง **เป้าหมาย** สามารถสัมพันธ์กับตารางชนิดมิติได้อย่างไร</span><span class="sxs-lookup"><span data-stu-id="2dfe7-297">Let's explore how the **Target** table can be related to the dimension-type tables.</span></span>
+เนื่องจากตาราง **เป้าหมาย** จัดเก็บข้อมูลในระดับที่สูงกว่าตารางชนิดมิติซึ่งไม่สามารถสร้างความสัมพันธ์แบบหนึ่งต่อกลุ่มได้ เป็นจริงสำหรับความสัมพันธ์แต่ละประเภท ลองสำรวจว่าตาราง **เป้าหมาย** สามารถสัมพันธ์กับตารางชนิดมิติได้อย่างไร
 
-### <a name="relate-higher-grain-time-periods"></a><span data-ttu-id="2dfe7-298">ความสัมพันธ์ของช่วงเวลาเกรนที่สูงขึ้น</span><span class="sxs-lookup"><span data-stu-id="2dfe7-298">Relate higher grain time periods</span></span>
+### <a name="relate-higher-grain-time-periods"></a>ความสัมพันธ์ของช่วงเวลาเกรนที่สูงขึ้น
 
-<span data-ttu-id="2dfe7-299">ความสัมพันธ์ระหว่างตาราง **วันที่** และ **เป้าหมาย**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-299">A relationship between the **Date** and **Target** tables should be a one-to-many relationship.</span></span> <span data-ttu-id="2dfe7-300">เนื่องจากค่าของคอลัมน์ **TargetYear** เป็นวันที่</span><span class="sxs-lookup"><span data-stu-id="2dfe7-300">It's because the **TargetYear** column values are dates.</span></span> <span data-ttu-id="2dfe7-301">ในตัวอย่างนี้ แต่ละค่าในคอลัมน์ **TargetYear** เป็นวันแรกของปีเป้าหมาย</span><span class="sxs-lookup"><span data-stu-id="2dfe7-301">In this example, each **TargetYear** column value is the first date of the target year.</span></span>
+ความสัมพันธ์ระหว่างตาราง **วันที่** และ **เป้าหมาย** เนื่องจากค่าของคอลัมน์ **TargetYear** เป็นวันที่ ในตัวอย่างนี้ แต่ละค่าในคอลัมน์ **TargetYear** เป็นวันแรกของปีเป้าหมาย
 
 > [!TIP]
-> <span data-ttu-id="2dfe7-302">เมื่อจัดเก็บข้อเท็จจริงในช่วงเวลาที่สูงขึ้นกว่าวันที่ตั้งค่าชนิดข้อมูลคอลัมน์เป็น **วันที่** (หรือ **จำนวนเต็ม** หากคุณกำลังใช้คีย์วันที่)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-302">When storing facts at a higher time granularity than day, set the column data type to **Date** (or **Whole number** if you're using date keys).</span></span> <span data-ttu-id="2dfe7-303">ในคอลัมน์ ให้ในคอลัมน์ให้จัดเก็บค่าที่แสดงวันแรกของระยะเวลา</span><span class="sxs-lookup"><span data-stu-id="2dfe7-303">In the column, store a value representing the first day of the time period.</span></span> <span data-ttu-id="2dfe7-304">ตัวอย่างเช่นมีการบันทึกช่วงปีเป็นวันที่ 1 มกราคมของป ีและระยะเวลาเดือนจะถูกบันทึกเป็นวันแรกของเดือนนั้น</span><span class="sxs-lookup"><span data-stu-id="2dfe7-304">For example, a year period is recorded as January 1 of the year, and a month period is recorded as the first day of that month.</span></span>
+> เมื่อจัดเก็บข้อเท็จจริงในช่วงเวลาที่สูงขึ้นกว่าวันที่ตั้งค่าชนิดข้อมูลคอลัมน์เป็น **วันที่** (หรือ **จำนวนเต็ม** หากคุณกำลังใช้คีย์วันที่) ในคอลัมน์ ให้ในคอลัมน์ให้จัดเก็บค่าที่แสดงวันแรกของระยะเวลา ตัวอย่างเช่นมีการบันทึกช่วงปีเป็นวันที่ 1 มกราคมของป ีและระยะเวลาเดือนจะถูกบันทึกเป็นวันแรกของเดือนนั้น
 
-<span data-ttu-id="2dfe7-305">อย่างไรก็ต้องระมัดระวังเพื่อให้แน่ใจว่าตัวกรองระดับเดือนหรือวันที่สร้างผลลัพธ์ที่มีนัยสำคัญ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-305">Care must be taken, however, to ensure that month or date level filters produce a meaningful result.</span></span> <span data-ttu-id="2dfe7-306">หากไม่มีตรรกะการคำนวณพิเศษ ภาพรายงานอาจรายงานว่าวันที่เป้าหมายเป็นวันแรกของแต่ละปี</span><span class="sxs-lookup"><span data-stu-id="2dfe7-306">Without any special calculation logic, report visuals may report that target dates are literally the first day of each year.</span></span> <span data-ttu-id="2dfe7-307">วันอื่น ๆ ทั้งหมดและเดือนทั้งหมดยกเว้นมกราคมจะสรุปปริมาณเป้าหมายเป็นว่างเปล่า</span><span class="sxs-lookup"><span data-stu-id="2dfe7-307">All other days—and all months except January—will summarize the target quantity as BLANK.</span></span>
+อย่างไรก็ต้องระมัดระวังเพื่อให้แน่ใจว่าตัวกรองระดับเดือนหรือวันที่สร้างผลลัพธ์ที่มีนัยสำคัญ หากไม่มีตรรกะการคำนวณพิเศษ ภาพรายงานอาจรายงานว่าวันที่เป้าหมายเป็นวันแรกของแต่ละปี วันอื่น ๆ ทั้งหมดและเดือนทั้งหมดยกเว้นมกราคมจะสรุปปริมาณเป้าหมายเป็นว่างเปล่า
 
-<span data-ttu-id="2dfe7-308">วิชวลเมทริกซ์ต่อไปนี้แสดงสิ่งที่จะเกิดขึ้นเมื่อผู้ใช้รายงานฝึกฝนจากปีเป็นเดือน</span><span class="sxs-lookup"><span data-stu-id="2dfe7-308">The following matrix visual shows what happens when the report user drills from a year into its months.</span></span> <span data-ttu-id="2dfe7-309">การแสดงผลสรุปคอลัมน์ **TargetQuantity**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-309">The visual is summarizing the **TargetQuantity** column.</span></span> <span data-ttu-id="2dfe7-310">(เปิดใช้งานตัวเลือก [แสดงรายการที่ไม่มีข้อมูล](../create-reports/desktop-show-items-no-data.md) สำหรับแถวเมทริกซ์)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-310">(The [Show items with no data](../create-reports/desktop-show-items-no-data.md) option has been enabled for the matrix rows.)</span></span>
+วิชวลเมทริกซ์ต่อไปนี้แสดงสิ่งที่จะเกิดขึ้นเมื่อผู้ใช้รายงานฝึกฝนจากปีเป็นเดือน การแสดงผลสรุปคอลัมน์ **TargetQuantity** (เปิดใช้งานตัวเลือก [แสดงรายการที่ไม่มีข้อมูล](../create-reports/desktop-show-items-no-data.md) สำหรับแถวเมทริกซ์)
 
 ![แผนภาพที่แสดงวิชวลเมทริกซ์ซึ่งเปิดเผยจำนวนเป้าหมายในปี 2020 เป็น 270 รายการ](media/relationships-many-to-many/sales-targets-model-matrix-blank-months-bad.png)
 
-<span data-ttu-id="2dfe7-312">เพื่อหลีกเลี่ยงปัญหานี้เราขอแนะนำให้คุณควบคุมสรุปของข้อมูลข้อเท็จจริงของคุณโดยใช้หน่วยวัด</span><span class="sxs-lookup"><span data-stu-id="2dfe7-312">To avoid this behavior, we recommend you control the summarization of your fact data by using measures.</span></span> <span data-ttu-id="2dfe7-313">วิธีหนึ่งในการควบคุมสรุปคือการส่งกลับค่า BLANK เมื่อมีการสอบถามช่วงเวลาที่ต่ำกว่า</span><span class="sxs-lookup"><span data-stu-id="2dfe7-313">One way to control the summarization is to return BLANK when lower-level time periods are queried.</span></span> <span data-ttu-id="2dfe7-314">อีกวิธีหนึ่งคือการกำหนดด้วย DAX ที่มีความซับซ้อนบางอย่างคือการจัดสรรค่าในช่วงเวลาที่ต่ำกว่า</span><span class="sxs-lookup"><span data-stu-id="2dfe7-314">Another way—defined with some sophisticated DAX—is to apportion values across lower-level time periods.</span></span>
+เพื่อหลีกเลี่ยงปัญหานี้เราขอแนะนำให้คุณควบคุมสรุปของข้อมูลข้อเท็จจริงของคุณโดยใช้หน่วยวัด วิธีหนึ่งในการควบคุมสรุปคือการส่งกลับค่า BLANK เมื่อมีการสอบถามช่วงเวลาที่ต่ำกว่า อีกวิธีหนึ่งคือการกำหนดด้วย DAX ที่มีความซับซ้อนบางอย่างคือการจัดสรรค่าในช่วงเวลาที่ต่ำกว่า
 
-<span data-ttu-id="2dfe7-315">พิจารณาข้อกำหนดหน่วยวัดต่อไปนี้ที่ใช้ฟังก์ชัน DAX [ISFILTERED](/dax/isfiltered-function-dax)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-315">Consider the following measure definition that uses the [ISFILTERED](/dax/isfiltered-function-dax) DAX function.</span></span> <span data-ttu-id="2dfe7-316">จะส่งกลับค่าเฉพาะเมื่อคอลัมน์ **วันที่** หรือ **เดือน** ไม่ถูกกรอง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-316">It only returns a value when the **Date** or **Month** columns aren't filtered.</span></span>
+พิจารณาข้อกำหนดหน่วยวัดต่อไปนี้ที่ใช้ฟังก์ชัน DAX [ISFILTERED](/dax/isfiltered-function-dax) จะส่งกลับค่าเฉพาะเมื่อคอลัมน์ **วันที่** หรือ **เดือน** ไม่ถูกกรอง
 
 ```dax
 Target Quantity =
@@ -226,39 +226,39 @@ IF(
 )
 ```
 
-<span data-ttu-id="2dfe7-317">ขณะนี้วิชวลเมทริกซ์ต่อไปนี้ใช้หน่วยวัด **ปริมาณเป้าหมาย**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-317">The following matrix visual now uses the **Target Quantity** measure.</span></span> <span data-ttu-id="2dfe7-318">ซึ่งแสดงให้เห็นว่าปริมาณเป้าหมายรายเดือนทั้งหมดเป็นค่า BLANK</span><span class="sxs-lookup"><span data-stu-id="2dfe7-318">It shows that all monthly target quantities are BLANK.</span></span>
+ขณะนี้วิชวลเมทริกซ์ต่อไปนี้ใช้หน่วยวัด **ปริมาณเป้าหมาย** ซึ่งแสดงให้เห็นว่าปริมาณเป้าหมายรายเดือนทั้งหมดเป็นค่า BLANK
 
 ![แผนภาพแสดงวิชวลเมทริกซ์ที่เผยปริมาณเป้าหมายปี 2020 เป็น 270 พร้อมค่ารายเดือนที่ว่างเปล่า](media/relationships-many-to-many/sales-targets-model-matrix-blank-months-good.png)
 
-### <a name="relate-higher-grain-non-date"></a><span data-ttu-id="2dfe7-320">เชื่อมโยงเกรนที่สูงกว่า (ไม่ใช่วันที่)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-320">Relate higher grain (non-date)</span></span>
+### <a name="relate-higher-grain-non-date"></a>เชื่อมโยงเกรนที่สูงกว่า (ไม่ใช่วันที่)
 
-<span data-ttu-id="2dfe7-321">จำเป็นต้องมีวิธีการออกแบบที่แตกต่างกันเมื่อเกี่ยวข้องกับคอลัมน์ที่ไม่ใช่วันที่จากตารางชนิดมิติเป็นตารางชนิดความจริง (และอยู่ในระดับที่สูงกว่าตารางชนิดมิติ)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-321">A different design approach is required when relating a non-date column from a dimension-type table to a fact-type table (and it's at a higher grain than the dimension-type table).</span></span>
+จำเป็นต้องมีวิธีการออกแบบที่แตกต่างกันเมื่อเกี่ยวข้องกับคอลัมน์ที่ไม่ใช่วันที่จากตารางชนิดมิติเป็นตารางชนิดความจริง (และอยู่ในระดับที่สูงกว่าตารางชนิดมิติ)
 
-<span data-ttu-id="2dfe7-322">คอลัมน์ **ประเภท** (จากตาราง **ผลิตภัณฑ์** และ **เป้าหมาย**) มีค่าซ้ำ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-322">The **Category** columns (from both the **Product** and **Target** tables) contains duplicate values.</span></span> <span data-ttu-id="2dfe7-323">ดังนั้นจึงไม่มี "หนึ่ง" สำหรับความสัมพันธ์แบบหนึ่งต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-323">So, there's no "one" for a one-to-many relationship.</span></span> <span data-ttu-id="2dfe7-324">ในกรณีนี้คุณจะต้องสร้างความสัมพันธ์แบบกลุ่มต่อกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-324">In this case, you'll need to create a many-to-many relationship.</span></span> <span data-ttu-id="2dfe7-325">ความสัมพันธ์ควรถ่ายทอดตัวกรองในทิศทางเดียวจากตารางชนิดมิติไปยังตารางชนิดข้อเท็จจริง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-325">The relationship should propagate filters in a single direction, from the dimension-type table to the fact-type table.</span></span>
+คอลัมน์ **ประเภท** (จากตาราง **ผลิตภัณฑ์** และ **เป้าหมาย**) มีค่าซ้ำ ดังนั้นจึงไม่มี "หนึ่ง" สำหรับความสัมพันธ์แบบหนึ่งต่อกลุ่ม ในกรณีนี้คุณจะต้องสร้างความสัมพันธ์แบบกลุ่มต่อกลุ่ม ความสัมพันธ์ควรถ่ายทอดตัวกรองในทิศทางเดียวจากตารางชนิดมิติไปยังตารางชนิดข้อเท็จจริง
 
-![แผนภาพที่แสดงแบบจำลองของตารางเป้าหมายและผลิตภัณฑ์](media/relationships-many-to-many/sales-targets-model-relate-non-date.png)
+![แผนภาพที่แสดงแบบจำลองของตารางเป้าหมายและผลิตภัณฑ์ ความสัมพันธ์แบบกลุ่มต่อกลุ่มเกี่ยวข้องกับสองตาราง](media/relationships-many-to-many/sales-targets-model-relate-non-date.png)
 
-<span data-ttu-id="2dfe7-328">ตอนนี้เรามาดูแถวตารางกัน</span><span class="sxs-lookup"><span data-stu-id="2dfe7-328">Let's now take a look at the table rows.</span></span>
+ตอนนี้เรามาดูแถวตารางกัน
 
-![แผนภาพที่แสดงแบบจำลองที่มีสองตาราง: เป้าหมายและผลิตภัณฑ์](media/relationships-many-to-many/sales-targets-model-relate-non-date-tables.png)
+![แผนภาพที่แสดงแบบจำลองที่มีสองตาราง: เป้าหมายและผลิตภัณฑ์ ความสัมพันธ์แบบกลุ่มต่อกลุ่มเกี่ยวข้องกับสองตาราง](media/relationships-many-to-many/sales-targets-model-relate-non-date-tables.png)
 
-<span data-ttu-id="2dfe7-331">ในตาราง **เป้าหมาย** มีสี่แถว: สองแถวสำหรับปีเป้าหมาย (2019 และ 2020) และสองประเภท (เสื้อผ้าและเครื่องประดับ)</span><span class="sxs-lookup"><span data-stu-id="2dfe7-331">In the **Target** table, there are four rows: two rows for each target year (2019 and 2020), and two categories (Clothing and Accessories).</span></span> <span data-ttu-id="2dfe7-332">ตาราง **ผลิตภัณฑ์** มีสามตาราง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-332">In the **Product** table, there are three products.</span></span> <span data-ttu-id="2dfe7-333">สองคารางเป็นประเภทเสื้อผ้าและหนึ่งตารางเป็นประเภทอุปกรณ์เสริม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-333">Two belong to the clothing category, and one belongs to the accessories category.</span></span> <span data-ttu-id="2dfe7-334">หนึ่งในเสื้อผ้ามีสีเขียว และที่เหลืออีกสองนั้นมีสีน้ำเงิน</span><span class="sxs-lookup"><span data-stu-id="2dfe7-334">One of the clothing colors is green, and the remaining two are blue.</span></span>
+ในตาราง **เป้าหมาย** มีสี่แถว: สองแถวสำหรับปีเป้าหมาย (2019 และ 2020) และสองประเภท (เสื้อผ้าและเครื่องประดับ) ตาราง **ผลิตภัณฑ์** มีสามตาราง สองคารางเป็นประเภทเสื้อผ้าและหนึ่งตารางเป็นประเภทอุปกรณ์เสริม หนึ่งในเสื้อผ้ามีสีเขียว และที่เหลืออีกสองนั้นมีสีน้ำเงิน
 
-<span data-ttu-id="2dfe7-335">การจัดกลุ่มวิชวลของตารางโดยคอลัมน์ **ประเภท** จากตาราง **ผลิตภัณฑ์** สร้างผลลัพธ์ดังต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-335">A table visual grouping by the **Category** column from the **Product** table produces the following result.</span></span>
+การจัดกลุ่มวิชวลของตารางโดยคอลัมน์ **ประเภท** จากตาราง **ผลิตภัณฑ์** สร้างผลลัพธ์ดังต่อไปนี้
 
-![แผนภาพที่แสดงวิชวลตารางที่มีสองคอลัมน์: ประเภทและ TargetQuantity](media/relationships-many-to-many/sales-targets-model-visual-category-targets.png)
+![แผนภาพที่แสดงวิชวลตารางที่มีสองคอลัมน์: ประเภทและ TargetQuantity เครื่องประดับเท่ากับ 60 เสื้อผ้าเท่ากับ 40 และทั้งหมดเท่ากับ 100](media/relationships-many-to-many/sales-targets-model-visual-category-targets.png)
 
-<span data-ttu-id="2dfe7-338">การแสดงผลแสดงผลลัพธ์ที่ถูกต้อง:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-338">This visual produces the correct result.</span></span> <span data-ttu-id="2dfe7-339">ตอนนี้เราจะพิจารณาว่าจะเกิดอะไรขึ้นเมื่อคอลัมน์ **สี** จากตาราง **ผลิตภัณฑ์** ใช้ในการจัดกลุ่มจำนวนเป้าหมาย</span><span class="sxs-lookup"><span data-stu-id="2dfe7-339">Let's now consider what happens when the **Color** column from the **Product** table is used to group target quantity.</span></span>
+การแสดงผลแสดงผลลัพธ์ที่ถูกต้อง: ตอนนี้เราจะพิจารณาว่าจะเกิดอะไรขึ้นเมื่อคอลัมน์ **สี** จากตาราง **ผลิตภัณฑ์** ใช้ในการจัดกลุ่มจำนวนเป้าหมาย
 
-![แผนภาพที่แสดงวิชวลตารางที่มีสองคอลัมน์: สีและ TargetQuantity](media/relationships-many-to-many/sales-targets-model-visual-color-targets-bad.png)
+![แผนภาพที่แสดงวิชวลตารางที่มีสองคอลัมน์: สีและ TargetQuantity สีน้ำเงินเท่ากับ 100 สีเขียวเท่ากับ 40 และรวมเท่ากับ 100](media/relationships-many-to-many/sales-targets-model-visual-color-targets-bad.png)
 
-<span data-ttu-id="2dfe7-342">การแสดงผลทำให้เกิดบิดเบือนข้อมูล</span><span class="sxs-lookup"><span data-stu-id="2dfe7-342">The visual produces a misrepresentation of the data.</span></span> <span data-ttu-id="2dfe7-343">เกิดอะไรขึ้นที่นี่</span><span class="sxs-lookup"><span data-stu-id="2dfe7-343">What is happening here?</span></span>
+การแสดงผลทำให้เกิดบิดเบือนข้อมูล เกิดอะไรขึ้นที่นี่
 
-<span data-ttu-id="2dfe7-344">กรองคอลัมน์ **สี** จากตาราง **ผลิตภัณฑ์** แสดงในสองแถว</span><span class="sxs-lookup"><span data-stu-id="2dfe7-344">A filter on the **Color** column from the **Product** table results in two rows.</span></span> <span data-ttu-id="2dfe7-345">แถวหนึ่งเป็นประเภทของสี และอีกแถวหนึ่งเป็นประเภทเครื่องประดับ</span><span class="sxs-lookup"><span data-stu-id="2dfe7-345">One of the rows is for the Clothing category, and the other is for the Accessories category.</span></span> <span data-ttu-id="2dfe7-346">มีการเผยแพร่ค่าประเภทที่สองเหล่านี้เป็นตัวกรองไปยังตาราง **เป้าหมาย**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-346">These two category values are propagated as filters to the **Target** table.</span></span> <span data-ttu-id="2dfe7-347">อีกนัยหนึ่ง เนื่องจากสีน้ำเงินถูกใช้โดยผลิตภัณฑ์จากสองประเภท ใช้ _ประเภทเหล่านั้น_ ในการกรองเป้าหมาย</span><span class="sxs-lookup"><span data-stu-id="2dfe7-347">In other words, because the color blue is used by products from two categories, _those categories_ are used to filter the targets.</span></span>
+กรองคอลัมน์ **สี** จากตาราง **ผลิตภัณฑ์** แสดงในสองแถว แถวหนึ่งเป็นประเภทของสี และอีกแถวหนึ่งเป็นประเภทเครื่องประดับ มีการเผยแพร่ค่าประเภทที่สองเหล่านี้เป็นตัวกรองไปยังตาราง **เป้าหมาย** อีกนัยหนึ่ง เนื่องจากสีน้ำเงินถูกใช้โดยผลิตภัณฑ์จากสองประเภท ใช้ _ประเภทเหล่านั้น_ ในการกรองเป้าหมาย
 
-<span data-ttu-id="2dfe7-348">เพื่อหลีกเลี่ยงปัญหานี้เรา ดังที่กล่าวไว้ เราขอแนะนำให้คุณควบคุมสรุปของข้อมูลข้อเท็จจริงของคุณโดยใช้หน่วยวัด</span><span class="sxs-lookup"><span data-stu-id="2dfe7-348">To avoid this behavior, as described earlier, we recommend you control the summarization of your fact data by using measures.</span></span>
+เพื่อหลีกเลี่ยงปัญหานี้เรา ดังที่กล่าวไว้ เราขอแนะนำให้คุณควบคุมสรุปของข้อมูลข้อเท็จจริงของคุณโดยใช้หน่วยวัด
 
-<span data-ttu-id="2dfe7-349">มาเริ่มต้นจากกำจัดกัดความหน่วยวัดต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-349">Consider the following measure definition.</span></span> <span data-ttu-id="2dfe7-350">โปรดสังเกตว่าคอลัมน์ตารางทั้งหมดของ **ผลิตภัณฑ์** ที่อยู่ใต้ระดับประเภทจะได้รับการทดสอบสำหรับตัวกรอง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-350">Notice that all **Product** table columns that are beneath the category level are tested for filters.</span></span>
+มาเริ่มต้นจากกำจัดกัดความหน่วยวัดต่อไปนี้ โปรดสังเกตว่าคอลัมน์ตารางทั้งหมดของ **ผลิตภัณฑ์** ที่อยู่ใต้ระดับประเภทจะได้รับการทดสอบสำหรับตัวกรอง
 
 ```dax
 Target Quantity =
@@ -270,33 +270,33 @@ IF(
 )
 ```
 
-<span data-ttu-id="2dfe7-351">ขณะนี้การแสดงผลเมทริกซ์ต่อไปนี้ใช้หน่วยวัด **ปริมาณเป้าหมาย**</span><span class="sxs-lookup"><span data-stu-id="2dfe7-351">The following table visual now uses the **Target Quantity** measure.</span></span> <span data-ttu-id="2dfe7-352">ซึ่งแสดงให้เห็นว่าปริมาณเป้าหมายของทุกสีทั้งหมดเป็นค่า BLANK</span><span class="sxs-lookup"><span data-stu-id="2dfe7-352">It shows that all color target quantities are BLANK.</span></span>
+ขณะนี้การแสดงผลเมทริกซ์ต่อไปนี้ใช้หน่วยวัด **ปริมาณเป้าหมาย** ซึ่งแสดงให้เห็นว่าปริมาณเป้าหมายของทุกสีทั้งหมดเป็นค่า BLANK
 
-![แผนภาพที่แสดงวิชวลตารางที่มีสองคอลัมน์: สีและ TargetQuantity](media/relationships-many-to-many/sales-targets-model-visual-color-targets-good.png)
+![แผนภาพที่แสดงวิชวลตารางที่มีสองคอลัมน์: สีและ TargetQuantity สีน้ำเงินเป็นค่า BLANK สีเขียวเป็นค่า BLANK และผลรวมเท่ากับ 100](media/relationships-many-to-many/sales-targets-model-visual-color-targets-good.png)
 
-<span data-ttu-id="2dfe7-355">การออกแบบแบบจำลองขั้นสุดท้ายมีลักษณะดังต่อไปนี้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-355">The final model design looks like the following.</span></span>
+การออกแบบแบบจำลองขั้นสุดท้ายมีลักษณะดังต่อไปนี้
 
 ![แผนภาพที่แสดงแบบจำลองที่มีตารางวันที่และเป้าหมายซึ่งเกี่ยวข้องกับความสัมพันธ์แบบหนึ่งต่อกลุ่ม](media/relationships-many-to-many/sales-targets-model-example-final.png)
 
-### <a name="relate-higher-grain-facts-guidance"></a><span data-ttu-id="2dfe7-357">คำแนะนำเชื่อมโยงความจริงเกรนที่สูงกว่า</span><span class="sxs-lookup"><span data-stu-id="2dfe7-357">Relate higher grain facts guidance</span></span>
+### <a name="relate-higher-grain-facts-guidance"></a>คำแนะนำเชื่อมโยงความจริงเกรนที่สูงกว่า
 
-<span data-ttu-id="2dfe7-358">เมื่อคุณต้องการเชื่อมโยงตารางชนิดมิติกับตารางชนิดข้อเท็จจริงและตารางชนิดข้อเท็จจริงจะจัดเก็บแถวในระดับที่สูงกว่าแถวตารางชนิดมิติเรามีคำแนะนำต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-358">When you need to relate a dimension-type table to a fact-type table, and the fact-type table stores rows at a higher grain than the dimension-type table rows, we provide the following guidance:</span></span>
+เมื่อคุณต้องการเชื่อมโยงตารางชนิดมิติกับตารางชนิดข้อเท็จจริงและตารางชนิดข้อเท็จจริงจะจัดเก็บแถวในระดับที่สูงกว่าแถวตารางชนิดมิติเรามีคำแนะนำต่อไปนี้:
 
-- <span data-ttu-id="2dfe7-359">สำหรับวันที่ความจริงเกรนที่สูงกว่า:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-359">For higher grain fact dates:</span></span>
-  - <span data-ttu-id="2dfe7-360">ในตารางชนิดข้อเท็จจริง เก็บวันที่แรกของช่วงเวลา</span><span class="sxs-lookup"><span data-stu-id="2dfe7-360">In the fact-type table, store the first date of the time period</span></span>
-  - <span data-ttu-id="2dfe7-361">สร้างความสัมพันธ์แบบหนึ่งต่อกลุ่มระหว่างตารางวันที่และตารางชนิดข้อเท็จจริง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-361">Create a one-to-many relationship between the date table and the fact-type table</span></span>
-- <span data-ttu-id="2dfe7-362">สำหรับความจริงเกรนที่สูงกว่า:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-362">For other higher grain facts:</span></span>
-  - <span data-ttu-id="2dfe7-363">สร้างความสัมพันธ์แบบกลุ่ม-ต่อ-กลุ่มระหว่างตารางชนิดมิติและตารางชนิดข้อเท็จจริง</span><span class="sxs-lookup"><span data-stu-id="2dfe7-363">Create a many-to-many relationship between the dimension-type table and the fact-type table</span></span>
-- <span data-ttu-id="2dfe7-364">สำหรับทั้งสองชนิด:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-364">For both types:</span></span>
-  - <span data-ttu-id="2dfe7-365">ควบคุมสรุปด้วยตรรกะหน่วยวัด ส่งกลับค่า BLANK เมื่อมีการใช้คอลัมน์ชนิดมิติระดับล่างในการกรองหรือจัดกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-365">Control summarization with measure logic—return BLANK when lower-level dimension-type columns are used to filter or group</span></span>
-  - <span data-ttu-id="2dfe7-366">ซ่อนคอลัมน์ตารางชนิดข้อเท็จจริงที่สามารถสรุปได้ ซึ่งเป็นวิธีนี้เท่านั้นที่สามารถใช้เพื่อสรุปตารางชนิดข้อเท็จจริงได้</span><span class="sxs-lookup"><span data-stu-id="2dfe7-366">Hide summarizable fact-type table columns—this way, only measures can be used to summarize the fact-type table</span></span>
+- สำหรับวันที่ความจริงเกรนที่สูงกว่า:
+  - ในตารางชนิดข้อเท็จจริง เก็บวันที่แรกของช่วงเวลา
+  - สร้างความสัมพันธ์แบบหนึ่งต่อกลุ่มระหว่างตารางวันที่และตารางชนิดข้อเท็จจริง
+- สำหรับความจริงเกรนที่สูงกว่า:
+  - สร้างความสัมพันธ์แบบกลุ่ม-ต่อ-กลุ่มระหว่างตารางชนิดมิติและตารางชนิดข้อเท็จจริง
+- สำหรับทั้งสองชนิด:
+  - ควบคุมสรุปด้วยตรรกะหน่วยวัด ส่งกลับค่า BLANK เมื่อมีการใช้คอลัมน์ชนิดมิติระดับล่างในการกรองหรือจัดกลุ่ม
+  - ซ่อนคอลัมน์ตารางชนิดข้อเท็จจริงที่สามารถสรุปได้ ซึ่งเป็นวิธีนี้เท่านั้นที่สามารถใช้เพื่อสรุปตารางชนิดข้อเท็จจริงได้
 
-## <a name="next-steps"></a><span data-ttu-id="2dfe7-367">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="2dfe7-367">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="2dfe7-368">สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="2dfe7-368">For more information related to this article, check out the following resources:</span></span>
+สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:
 
-- [<span data-ttu-id="2dfe7-369">ความสัมพันธ์ของแบบจำลองใน Power BI Desktop</span><span class="sxs-lookup"><span data-stu-id="2dfe7-369">Model relationships in Power BI Desktop</span></span>](../transform-model/desktop-relationships-understand.md)
-- [<span data-ttu-id="2dfe7-370">ทำความเข้าใจแบบจำลองมิติที่มีลักษณะคล้ายดาวและความสำคัญที่มีต่อ Power BI</span><span class="sxs-lookup"><span data-stu-id="2dfe7-370">Understand star schema and the importance for Power BI</span></span>](star-schema.md)
-- [<span data-ttu-id="2dfe7-371">คำแนะนำการแก้ไขปัญหาความสัมพันธ์</span><span class="sxs-lookup"><span data-stu-id="2dfe7-371">Relationship troubleshooting guidance</span></span>](relationships-troubleshoot.md)
-- <span data-ttu-id="2dfe7-372">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="2dfe7-372">Questions?</span></span> [<span data-ttu-id="2dfe7-373">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="2dfe7-373">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="2dfe7-374">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="2dfe7-374">Suggestions?</span></span> [<span data-ttu-id="2dfe7-375">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="2dfe7-375">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com/)
+- [ความสัมพันธ์ของแบบจำลองใน Power BI Desktop](../transform-model/desktop-relationships-understand.md)
+- [ทำความเข้าใจแบบจำลองมิติที่มีลักษณะคล้ายดาวและความสำคัญที่มีต่อ Power BI](star-schema.md)
+- [คำแนะนำการแก้ไขปัญหาความสัมพันธ์](relationships-troubleshoot.md)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com/)

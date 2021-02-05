@@ -15,190 +15,190 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 01/19/2021
 ms.locfileid: "98565658"
 ---
-# <a name="create-a-link-to-a-specific-location-in-the-power-bi-mobile-apps"></a><span data-ttu-id="c2717-103">สร้างการเชื่อมโยงไปยังตำแหน่งที่ตั้งเฉพาะในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="c2717-103">Create a link to a specific location in the Power BI mobile apps</span></span>
-<span data-ttu-id="c2717-104">คุณสามารถใช้ลิงก์เพื่อเข้าถึงเนื้อหา Power BI ที่เจาะจงได้โดยตรง เช่น รายงาน หน้ารายงาน แดชบอร์ด ไทล์ที่เจาะจง เป็นต้น</span><span class="sxs-lookup"><span data-stu-id="c2717-104">You can use links to directly access specific Power BI content, such as a specific report, report page, dashboard, tile, etc.</span></span>
+# <a name="create-a-link-to-a-specific-location-in-the-power-bi-mobile-apps"></a>สร้างการเชื่อมโยงไปยังตำแหน่งที่ตั้งเฉพาะในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่
+คุณสามารถใช้ลิงก์เพื่อเข้าถึงเนื้อหา Power BI ที่เจาะจงได้โดยตรง เช่น รายงาน หน้ารายงาน แดชบอร์ด ไทล์ที่เจาะจง เป็นต้น
 
-<span data-ttu-id="c2717-105">การใช้ลิงก์เพื่อเข้าถึงเนื้อหาในแอป Power BI บนอุปกรณ์เคลื่อนที่ โดยหลักใหญ่แล้วมีอยู่ด้วยกันสองสถานการณ์:</span><span class="sxs-lookup"><span data-stu-id="c2717-105">There are mainly two scenarios for using links to access content in the Power BI mobile apps:</span></span> 
+การใช้ลิงก์เพื่อเข้าถึงเนื้อหาในแอป Power BI บนอุปกรณ์เคลื่อนที่ โดยหลักใหญ่แล้วมีอยู่ด้วยกันสองสถานการณ์: 
 
-* <span data-ttu-id="c2717-106">เพื่อเปิด Power BI จาก **ภายนอกแอปสำหรับอุปกรณ์เคลื่อนที่** และเข้าสู่เนื้อหาเฉพาะ</span><span class="sxs-lookup"><span data-stu-id="c2717-106">To open Power BI from **outside of the mobile app**, and land on specific content.</span></span> <span data-ttu-id="c2717-107">โดยปกติจะเป็นสถานการณ์การรวมที่คุณกำลังเปิดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่จากแอปอื่น</span><span class="sxs-lookup"><span data-stu-id="c2717-107">This is usually an integration scenario, where you are opening the Power BI mobile app from another app.</span></span> 
-* <span data-ttu-id="c2717-108">เพื่อใช้ **สำรวจ** ภายใน Power BI</span><span class="sxs-lookup"><span data-stu-id="c2717-108">To **navigate** inside Power BI.</span></span> <span data-ttu-id="c2717-109">โดยทั่วไปจะทำเมื่อคุณต้องการสร้างการนำทางแบบกำหนดเองใน Power BI</span><span class="sxs-lookup"><span data-stu-id="c2717-109">This is typically done when you want to create custom navigation in Power BI.</span></span>
+* เพื่อเปิด Power BI จาก **ภายนอกแอปสำหรับอุปกรณ์เคลื่อนที่** และเข้าสู่เนื้อหาเฉพาะ โดยปกติจะเป็นสถานการณ์การรวมที่คุณกำลังเปิดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่จากแอปอื่น 
+* เพื่อใช้ **สำรวจ** ภายใน Power BI โดยทั่วไปจะทำเมื่อคุณต้องการสร้างการนำทางแบบกำหนดเองใน Power BI
 
-<span data-ttu-id="c2717-110">บทความนี้ครอบคลุมกรณีต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="c2717-110">This article covers the following cases:</span></span>
-* <span data-ttu-id="c2717-111">การใช้ลิงก์เพื่อเปิดเนื้อหา Power BI เฉพาะจากภายนอกแอปสำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="c2717-111">Using links to open specific Power BI content from outside the mobile app.</span></span> <span data-ttu-id="c2717-112">มีการอธิบายรูปแบบลิงก์สองรูปแบบ</span><span class="sxs-lookup"><span data-stu-id="c2717-112">Two link formats are described.</span></span> <span data-ttu-id="c2717-113">แบบหนึ่งใช้วิธีการเปลี่ยนเส้นทางและสามารถใช้ได้ไม่ว่าจะเปิด Power BI อยู่ที่ไหนก็ตาม</span><span class="sxs-lookup"><span data-stu-id="c2717-113">One uses a redirect method and can be used no matter where Power BI will open.</span></span> <span data-ttu-id="c2717-114">อีกแบบจะเปิดขึ้นโดยตรงในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ และจะทำงานบนอุปกรณ์เคลื่อนที่ที่ติดตั้งแอปสำหรับอุปกรณ์เคลื่อนที่เท่านั้น</span><span class="sxs-lookup"><span data-stu-id="c2717-114">The other opens directly in the Power BI mobile app and will work only on mobile devices that have the mobile app installed.</span></span>
-* <span data-ttu-id="c2717-115">การใช้ลิงก์ภายใน Power BI เพื่อนำทางไปยังเนื้อหา Power BI เฉพาะ</span><span class="sxs-lookup"><span data-stu-id="c2717-115">Using links inside Power BI to navigate to specific Power BI content.</span></span>
+บทความนี้ครอบคลุมกรณีต่อไปนี้:
+* การใช้ลิงก์เพื่อเปิดเนื้อหา Power BI เฉพาะจากภายนอกแอปสำหรับอุปกรณ์เคลื่อนที่ มีการอธิบายรูปแบบลิงก์สองรูปแบบ แบบหนึ่งใช้วิธีการเปลี่ยนเส้นทางและสามารถใช้ได้ไม่ว่าจะเปิด Power BI อยู่ที่ไหนก็ตาม อีกแบบจะเปิดขึ้นโดยตรงในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ และจะทำงานบนอุปกรณ์เคลื่อนที่ที่ติดตั้งแอปสำหรับอุปกรณ์เคลื่อนที่เท่านั้น
+* การใช้ลิงก์ภายใน Power BI เพื่อนำทางไปยังเนื้อหา Power BI เฉพาะ
 
-## <a name="use-links-from-outside-the-mobile-app"></a><span data-ttu-id="c2717-116">ใช้ลิงก์จากภายนอกแอปสำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="c2717-116">Use links from outside the mobile app</span></span>
-<span data-ttu-id="c2717-117">เมื่อคุณต้องการเชื่อมโยงไปยังรายการใดรายการหนึ่งใน Power BI จากภายนอกแอปสำหรับอุปกรณ์เคลื่อนที่ มีสองตัวเลือก ทั้งนี้ขึ้นอยู่กับตำแหน่งที่จะเปิดลิงก์:</span><span class="sxs-lookup"><span data-stu-id="c2717-117">When you want to link to a specific item in Power BI from outside the mobile app, there are two options, depending on where the link is going to be opened:</span></span>
+## <a name="use-links-from-outside-the-mobile-app"></a>ใช้ลิงก์จากภายนอกแอปสำหรับอุปกรณ์เคลื่อนที่
+เมื่อคุณต้องการเชื่อมโยงไปยังรายการใดรายการหนึ่งใน Power BI จากภายนอกแอปสำหรับอุปกรณ์เคลื่อนที่ มีสองตัวเลือก ทั้งนี้ขึ้นอยู่กับตำแหน่งที่จะเปิดลิงก์:
 
-* <span data-ttu-id="c2717-118">หากคุณต้องการให้ลิงก์เปิดอย่างถูกต้องไม่ว่าจะคลิกในเบราว์เซอร์คอมพิวเตอร์หรือบนอุปกรณ์เคลื่อนที่ คุณสามารถสร้างลิงก์เพื่อให้แน่ใจว่าจะเปิดได้อย่างถูกต้องไม่ว่าจะคลิกที่ใดก็ตาม</span><span class="sxs-lookup"><span data-stu-id="c2717-118">If you want the link to open correctly regardless of whether it is clicked in a computer browser or on a mobile device, you can create a link that ensures it will open correctly no matter where it is clicked.</span></span> <span data-ttu-id="c2717-119">ลิงก์นี้มีไวยากรณ์การเปลี่ยนเส้นทางพิเศษเพื่อเปิดใช้งานลักษณะการทำงานที่ชาญฉลาดนี้</span><span class="sxs-lookup"><span data-stu-id="c2717-119">This link has a special redirect syntax to enable this smart behavior.</span></span>
+* หากคุณต้องการให้ลิงก์เปิดอย่างถูกต้องไม่ว่าจะคลิกในเบราว์เซอร์คอมพิวเตอร์หรือบนอุปกรณ์เคลื่อนที่ คุณสามารถสร้างลิงก์เพื่อให้แน่ใจว่าจะเปิดได้อย่างถูกต้องไม่ว่าจะคลิกที่ใดก็ตาม ลิงก์นี้มีไวยากรณ์การเปลี่ยนเส้นทางพิเศษเพื่อเปิดใช้งานลักษณะการทำงานที่ชาญฉลาดนี้
 
-* <span data-ttu-id="c2717-120">ถ้าคุณรู้ว่าลิงก์จะถูกเปิดบนอุปกรณ์เคลื่อนที่ที่ติดตั้งแอป Power BI สำหรับอุปกรณ์เคลื่อนที่เท่านั้น คุณสามารถหลีกเลี่ยงค่าใช้จ่ายในการเปลี่ยนเส้นทางของวิธีการข้างต้นและใช้ไวยากรณ์ลิงก์อื่นที่เปิดลิงก์โดยตรงในแอปมือถือ Power BI บนอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="c2717-120">If you know the link is only going to be opened on a mobile device that has the Power BI mobile app installed, you can avoid the redirect overhead of the above method and use another link syntax that opens the link directly in the Power BI mobile app on the mobile device.</span></span> <span data-ttu-id="c2717-121">สิ่งสำคัญคือต้องทราบว่าแม้ว่าลิงก์นี้จะหลีกเลี่ยงค่าใช้จ่ายในการเปลี่ยนเส้นทางของวิธีแรก แต่จะไม่ทำงานหากเปิดที่ใดก็ตามนอกเหนือจากบนอุปกรณ์เคลื่อนที่ที่ติดตั้งแอป Power BI สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="c2717-121">It is important to note however that while this link avoids the redirect overhead of the first method, it will not work if opened anywhere other than on a mobile device that has the Power BI mobile app installed.</span></span>
+* ถ้าคุณรู้ว่าลิงก์จะถูกเปิดบนอุปกรณ์เคลื่อนที่ที่ติดตั้งแอป Power BI สำหรับอุปกรณ์เคลื่อนที่เท่านั้น คุณสามารถหลีกเลี่ยงค่าใช้จ่ายในการเปลี่ยนเส้นทางของวิธีการข้างต้นและใช้ไวยากรณ์ลิงก์อื่นที่เปิดลิงก์โดยตรงในแอปมือถือ Power BI บนอุปกรณ์เคลื่อนที่ สิ่งสำคัญคือต้องทราบว่าแม้ว่าลิงก์นี้จะหลีกเลี่ยงค่าใช้จ่ายในการเปลี่ยนเส้นทางของวิธีแรก แต่จะไม่ทำงานหากเปิดที่ใดก็ตามนอกเหนือจากบนอุปกรณ์เคลื่อนที่ที่ติดตั้งแอป Power BI สำหรับอุปกรณ์เคลื่อนที่
 
-### <a name="create-a-link-that-works-anywhere"></a><span data-ttu-id="c2717-122">สร้างลิงก์ที่ทำงานได้จากทุกที่</span><span class="sxs-lookup"><span data-stu-id="c2717-122">Create a link that works anywhere</span></span>
-<span data-ttu-id="c2717-123">รูปแบบลิงก์ที่อธิบายในส่วนนี้ใช้การเปลี่ยนเส้นทางเพื่อให้แน่ใจว่าลิงก์ใช้งานได้ไม่ว่าจะคลิกที่ใดก็ตาม</span><span class="sxs-lookup"><span data-stu-id="c2717-123">The link format described in this section uses redirection to make sure the link works no matter where it is clicked.</span></span>
-* <span data-ttu-id="c2717-124">ถ้ามีการคลิกลิงก์บนอุปกรณ์เคลื่อนที่ จะทำให้แน่ใจว่าอุปกรณ์นั้นใช้แอป Power BI สำหรับอุปกรณ์เคลื่อนที่เพื่อเปิดลิงก์</span><span class="sxs-lookup"><span data-stu-id="c2717-124">If the link is clicked on a mobile device, it makes sure that the device uses the Power BI mobile app to open the link.</span></span> <span data-ttu-id="c2717-125">หากไม่ได้ติดตั้งแอปสำหรับอุปกรณ์เคลื่อนที่บนอุปกรณ์ ขอแนะนำให้ผู้ใช้ไปยังร้านค้าเพื่อรับแอปดังกล่าว</span><span class="sxs-lookup"><span data-stu-id="c2717-125">If the mobile app is not installed on the device, it suggests to the user to go to the store to get it.</span></span>
-* <span data-ttu-id="c2717-126">ถ้ามีการคลิกลิงก์บนพีซี ระบบจะเปิดรายการที่เกี่ยวข้องในเว็บพอร์ทัล Power BI</span><span class="sxs-lookup"><span data-stu-id="c2717-126">If the link is clicked on a PC, it will open the relevant item in the Power BI web portal.</span></span>
+### <a name="create-a-link-that-works-anywhere"></a>สร้างลิงก์ที่ทำงานได้จากทุกที่
+รูปแบบลิงก์ที่อธิบายในส่วนนี้ใช้การเปลี่ยนเส้นทางเพื่อให้แน่ใจว่าลิงก์ใช้งานได้ไม่ว่าจะคลิกที่ใดก็ตาม
+* ถ้ามีการคลิกลิงก์บนอุปกรณ์เคลื่อนที่ จะทำให้แน่ใจว่าอุปกรณ์นั้นใช้แอป Power BI สำหรับอุปกรณ์เคลื่อนที่เพื่อเปิดลิงก์ หากไม่ได้ติดตั้งแอปสำหรับอุปกรณ์เคลื่อนที่บนอุปกรณ์ ขอแนะนำให้ผู้ใช้ไปยังร้านค้าเพื่อรับแอปดังกล่าว
+* ถ้ามีการคลิกลิงก์บนพีซี ระบบจะเปิดรายการที่เกี่ยวข้องในเว็บพอร์ทัล Power BI
 
-<span data-ttu-id="c2717-127">ลิงก์ต้องขึ้นต้นด้วยคำนำหน้าพิเศษ ตามด้วยพารามิเตอร์คิวรี:</span><span class="sxs-lookup"><span data-stu-id="c2717-127">The link must start with a special prefix, followed by query parameters:</span></span>
+ลิงก์ต้องขึ้นต้นด้วยคำนำหน้าพิเศษ ตามด้วยพารามิเตอร์คิวรี:
 
-<span data-ttu-id="c2717-128">https<nolink>://app.powerbi.com/Redirect? **[QUERYPARAMETERS]** </code></span><span class="sxs-lookup"><span data-stu-id="c2717-128">https<nolink>://app.powerbi.com/Redirect?**[QUERYPARAMETERS]**</code></span></span>
+https<nolink>://app.powerbi.com/Redirect? **[QUERYPARAMETERS]** </code>
 
 > [!IMPORTANT]
-> <span data-ttu-id="c2717-129">ถ้าเนื้อหาของคุณโฮสต์อยู่ในศูนย์ข้อมูลพิเศษ เช่น ภาครัฐของประเทศจีน เป็นต้น ลิงก์ควรเริ่มต้นด้วยที่อยู่ Power BI ที่เหมาะสมเช่น **app.powerbigov.us** หรือ **app.powerbi.cn**</span><span class="sxs-lookup"><span data-stu-id="c2717-129">If your content is hosted in special datacenter such as Government, China, etc., the link should start with the appropriate Power BI address, such as **app.powerbigov.us** or **app.powerbi.cn**.</span></span>
+> ถ้าเนื้อหาของคุณโฮสต์อยู่ในศูนย์ข้อมูลพิเศษ เช่น ภาครัฐของประเทศจีน เป็นต้น ลิงก์ควรเริ่มต้นด้วยที่อยู่ Power BI ที่เหมาะสมเช่น **app.powerbigov.us** หรือ **app.powerbi.cn**
 
-<span data-ttu-id="c2717-130">พารามิเตอรคิวรีคือ:</span><span class="sxs-lookup"><span data-stu-id="c2717-130">The query parameters are:</span></span>
+พารามิเตอรคิวรีคือ:
 
-|<span data-ttu-id="c2717-131">พารามิเตอร์</span><span class="sxs-lookup"><span data-stu-id="c2717-131">Parameter</span></span>  | <span data-ttu-id="c2717-132">ค่า</span><span class="sxs-lookup"><span data-stu-id="c2717-132">Value</span></span>  | <span data-ttu-id="c2717-133">คำอธิบาย</span><span class="sxs-lookup"><span data-stu-id="c2717-133">Description</span></span> |
+|พารามิเตอร์  | ค่า  | คำอธิบาย |
 |---------|---------|---------|
-|<span data-ttu-id="c2717-134">**การดำเนินการ** (บังคับ)</span><span class="sxs-lookup"><span data-stu-id="c2717-134">**action** (mandatory)</span></span>    | <span data-ttu-id="c2717-135">OpenApp</span><span class="sxs-lookup"><span data-stu-id="c2717-135">OpenApp</span></span><br><span data-ttu-id="c2717-136">OpenReport</span><span class="sxs-lookup"><span data-stu-id="c2717-136">OpenReport</span></span><br><span data-ttu-id="c2717-137">OpenDashboard</span><span class="sxs-lookup"><span data-stu-id="c2717-137">OpenDashboard</span></span><br><span data-ttu-id="c2717-138">OpenTile</span><span class="sxs-lookup"><span data-stu-id="c2717-138">OpenTile</span></span> | |
-|<span data-ttu-id="c2717-139">**appId**</span><span class="sxs-lookup"><span data-stu-id="c2717-139">**appId**</span></span>| <span data-ttu-id="c2717-140">GUID อักขระ 36</span><span class="sxs-lookup"><span data-stu-id="c2717-140">36 character guid</span></span> | <span data-ttu-id="c2717-141">ต้องระบุหากคุณต้องการเปิดรายงานหรือแดชบอร์ดที่เป็นส่วนหนึ่งของแอป</span><span class="sxs-lookup"><span data-stu-id="c2717-141">Must be specified if you want to open a report or dashboard that is part of an app.</span></span><br><span data-ttu-id="c2717-142">ตัวอย่าง: **appId=baf4b16d-b5bd-4360-8a3a-51d11242c09b**</span><span class="sxs-lookup"><span data-stu-id="c2717-142">Example: **appId=baf4b16d-b5bd-4360-8a3a-51d11242c09b**</span></span> |
-|<span data-ttu-id="c2717-143">**groupObjectId**</span><span class="sxs-lookup"><span data-stu-id="c2717-143">**groupObjectId**</span></span>| <span data-ttu-id="c2717-144">GUID อักขระ 36</span><span class="sxs-lookup"><span data-stu-id="c2717-144">36 character guid</span></span> | <span data-ttu-id="c2717-145">ระบุพื้นที่ทำงานเมื่อคุณต้องการเปิดรายงานหรือแดชบอร์ดที่ไม่ได้เป็นส่วนหนึ่งของพื้นที่ทำงานของฉัน</span><span class="sxs-lookup"><span data-stu-id="c2717-145">Specifies the workspace when you want to open a report or dashboard that is not part of My Workspace.</span></span><br><span data-ttu-id="c2717-146">ตัวอย่าง: **groupObjectId=9a3841c6-74b3-46f1-85fd-bdd78f27b30e**</span><span class="sxs-lookup"><span data-stu-id="c2717-146">Example: **groupObjectId=9a3841c6-74b3-46f1-85fd-bdd78f27b30e**</span></span> |
-| <span data-ttu-id="c2717-147">**dashboardObjectId**</span><span class="sxs-lookup"><span data-stu-id="c2717-147">**dashboardObjectId**</span></span> | <span data-ttu-id="c2717-148">GUID อักขระ 36</span><span class="sxs-lookup"><span data-stu-id="c2717-148">36 character guid</span></span> | <span data-ttu-id="c2717-149">ID ออปเจ็กต์ของแดชบอร์ด (หากการดำเนินการคือ OpenDashboard หรือ OpenTile)</span><span class="sxs-lookup"><span data-stu-id="c2717-149">Dashboard object ID (if action is OpenDashboard or OpenTile)</span></span><br><span data-ttu-id="c2717-150">ตัวอย่าง: **dashboardObjectId=033bb049-5b68-4392-b3ef-ae9a43738a4a**</span><span class="sxs-lookup"><span data-stu-id="c2717-150">Example: **dashboardObjectId=033bb049-5b68-4392-b3ef-ae9a43738a4a**</span></span> |
-| <span data-ttu-id="c2717-151">**reportObjectId**</span><span class="sxs-lookup"><span data-stu-id="c2717-151">**reportObjectId**</span></span> | <span data-ttu-id="c2717-152">GUID อักขระ 36</span><span class="sxs-lookup"><span data-stu-id="c2717-152">36 character guid</span></span> | <span data-ttu-id="c2717-153">ID ออปเจ็กต์ของรายงาน (หากการดำเนินการคือ OpenReport)</span><span class="sxs-lookup"><span data-stu-id="c2717-153">Report object ID (if action is OpenReport)</span></span><br><span data-ttu-id="c2717-154">ตัวอย่าง: **reportObjectId=6114cec7-78e1-4926-88ff-0bc5338452cf**</span><span class="sxs-lookup"><span data-stu-id="c2717-154">Example: **reportObjectId=6114cec7-78e1-4926-88ff-0bc5338452cf**</span></span> |
-| <span data-ttu-id="c2717-155">**tileObjectId**</span><span class="sxs-lookup"><span data-stu-id="c2717-155">**tileObjectId**</span></span> | <span data-ttu-id="c2717-156">GUID อักขระ 36</span><span class="sxs-lookup"><span data-stu-id="c2717-156">36 character guid</span></span> | <span data-ttu-id="c2717-157">ID ออปเจ็กต์ของไทล์ (หากการดำเนินการคือ OpenTile)</span><span class="sxs-lookup"><span data-stu-id="c2717-157">Tile object ID (if action is OpenTile)</span></span><br><span data-ttu-id="c2717-158">ตัวอย่าง: **tileObjectId=a845dcb8-a289-43a8-94ea-67a8c0a068f9**</span><span class="sxs-lookup"><span data-stu-id="c2717-158">Example: **tileObjectId=a845dcb8-a289-43a8-94ea-67a8c0a068f9**</span></span> |
-| <span data-ttu-id="c2717-159">**reportPage**</span><span class="sxs-lookup"><span data-stu-id="c2717-159">**reportPage**</span></span> | <span data-ttu-id="c2717-160">ReportSection&lt;num&gt;</span><span class="sxs-lookup"><span data-stu-id="c2717-160">ReportSection&lt;num&gt;</span></span> | <span data-ttu-id="c2717-161">ชื่อหน้าถ้าคุณต้องการเปิดหน้ารายงานที่เจาะจง</span><span class="sxs-lookup"><span data-stu-id="c2717-161">Page name if you want to open a specific report page.</span></span> <span data-ttu-id="c2717-162">(ถ้าการดำเนินการคือ OpenReport)</span><span class="sxs-lookup"><span data-stu-id="c2717-162">(if action is OpenReport)</span></span><br><span data-ttu-id="c2717-163">ตัวอย่าง: **reportPage=ReportSection6**</span><span class="sxs-lookup"><span data-stu-id="c2717-163">Example: **reportPage=ReportSection6**</span></span>  |
-| <span data-ttu-id="c2717-164">**bookmarkGuid**</span><span class="sxs-lookup"><span data-stu-id="c2717-164">**bookmarkGuid**</span></span> | <span data-ttu-id="c2717-165">GUID อักขระ 36</span><span class="sxs-lookup"><span data-stu-id="c2717-165">36 character guid</span></span> | <span data-ttu-id="c2717-166">ID บุ๊กมาร์กหากคุณต้องการเปิดมุมมองที่คั่นหน้าเฉพาะ</span><span class="sxs-lookup"><span data-stu-id="c2717-166">Bookmark ID, if you want to open a specific bookmarked view.</span></span> <span data-ttu-id="c2717-167">(ถ้าการดำเนินการคือ OpenReport)</span><span class="sxs-lookup"><span data-stu-id="c2717-167">(if action is OpenReport)</span></span><br><span data-ttu-id="c2717-168">ตัวอย่าง: **bookmarkGuid=18e8872f-6db8-4cf8-8298-3b2ab254cc7f**</span><span class="sxs-lookup"><span data-stu-id="c2717-168">Example: **bookmarkGuid=18e8872f-6db8-4cf8-8298-3b2ab254cc7f**</span></span> |
-| <span data-ttu-id="c2717-169">**ctid**</span><span class="sxs-lookup"><span data-stu-id="c2717-169">**ctid**</span></span> | <span data-ttu-id="c2717-170">GUID อักขระ 36</span><span class="sxs-lookup"><span data-stu-id="c2717-170">36 character guid</span></span> | <span data-ttu-id="c2717-171">ID หน่วยข้อมูลองค์กร (ที่เหมาะสมกับสถานการณ์ B2B</span><span class="sxs-lookup"><span data-stu-id="c2717-171">Item organization ID (relevant for B2B scenarios.</span></span> <span data-ttu-id="c2717-172">ซึ่งสามารถเว้นไว้ได้หากหน่วยข้อมูลเป็นขององค์กรของผู้ใช้)</span><span class="sxs-lookup"><span data-stu-id="c2717-172">This can be omitted if the item belongs to the user's organization)</span></span><br><span data-ttu-id="c2717-173">ตัวอย่าง: **ctid=5367c770-09d0-4110-bf6a-d760cb5ef681**</span><span class="sxs-lookup"><span data-stu-id="c2717-173">Example: **ctid=5367c770-09d0-4110-bf6a-d760cb5ef681** .</span></span> |
+|**การดำเนินการ** (บังคับ)    | OpenApp<br>OpenReport<br>OpenDashboard<br>OpenTile | |
+|**appId**| GUID อักขระ 36 | ต้องระบุหากคุณต้องการเปิดรายงานหรือแดชบอร์ดที่เป็นส่วนหนึ่งของแอป<br>ตัวอย่าง: **appId=baf4b16d-b5bd-4360-8a3a-51d11242c09b** |
+|**groupObjectId**| GUID อักขระ 36 | ระบุพื้นที่ทำงานเมื่อคุณต้องการเปิดรายงานหรือแดชบอร์ดที่ไม่ได้เป็นส่วนหนึ่งของพื้นที่ทำงานของฉัน<br>ตัวอย่าง: **groupObjectId=9a3841c6-74b3-46f1-85fd-bdd78f27b30e** |
+| **dashboardObjectId** | GUID อักขระ 36 | ID ออปเจ็กต์ของแดชบอร์ด (หากการดำเนินการคือ OpenDashboard หรือ OpenTile)<br>ตัวอย่าง: **dashboardObjectId=033bb049-5b68-4392-b3ef-ae9a43738a4a** |
+| **reportObjectId** | GUID อักขระ 36 | ID ออปเจ็กต์ของรายงาน (หากการดำเนินการคือ OpenReport)<br>ตัวอย่าง: **reportObjectId=6114cec7-78e1-4926-88ff-0bc5338452cf** |
+| **tileObjectId** | GUID อักขระ 36 | ID ออปเจ็กต์ของไทล์ (หากการดำเนินการคือ OpenTile)<br>ตัวอย่าง: **tileObjectId=a845dcb8-a289-43a8-94ea-67a8c0a068f9** |
+| **reportPage** | ReportSection&lt;num&gt; | ชื่อหน้าถ้าคุณต้องการเปิดหน้ารายงานที่เจาะจง (ถ้าการดำเนินการคือ OpenReport)<br>ตัวอย่าง: **reportPage=ReportSection6**  |
+| **bookmarkGuid** | GUID อักขระ 36 | ID บุ๊กมาร์กหากคุณต้องการเปิดมุมมองที่คั่นหน้าเฉพาะ (ถ้าการดำเนินการคือ OpenReport)<br>ตัวอย่าง: **bookmarkGuid=18e8872f-6db8-4cf8-8298-3b2ab254cc7f** |
+| **ctid** | GUID อักขระ 36 | ID หน่วยข้อมูลองค์กร (ที่เหมาะสมกับสถานการณ์ B2B ซึ่งสามารถเว้นไว้ได้หากหน่วยข้อมูลเป็นขององค์กรของผู้ใช้)<br>ตัวอย่าง: **ctid=5367c770-09d0-4110-bf6a-d760cb5ef681** |
 ||||
 
-<span data-ttu-id="c2717-174">**ตัวอย่าง:**</span><span class="sxs-lookup"><span data-stu-id="c2717-174">**Examples:**</span></span>
+**ตัวอย่าง:**
 
-<span data-ttu-id="c2717-175">ในตัวอย่างต่อไปนี้ ตัวแทนสำหรับค่าพารามิเตอร์จะถูกเน้นด้วยตัวหนา</span><span class="sxs-lookup"><span data-stu-id="c2717-175">In the following examples, placeholders for the parameter values are highlighted in bold.</span></span> <span data-ttu-id="c2717-176">หากต้องการรับค่าจริงให้ไปที่บริการ Power BI เปิดรายการที่คุณต้องการลิงก์ไปและแยกค่าที่คุณต้องการจาก URL ของรายการ</span><span class="sxs-lookup"><span data-stu-id="c2717-176">To get the actual values, go to the Power BI service, open the item you want to link to, and extract the values you need from the item's URL.</span></span>
+ในตัวอย่างต่อไปนี้ ตัวแทนสำหรับค่าพารามิเตอร์จะถูกเน้นด้วยตัวหนา หากต้องการรับค่าจริงให้ไปที่บริการ Power BI เปิดรายการที่คุณต้องการลิงก์ไปและแยกค่าที่คุณต้องการจาก URL ของรายการ
 
-* <span data-ttu-id="c2717-177">**เปิดแอป**</span><span class="sxs-lookup"><span data-stu-id="c2717-177">**Open an app**</span></span>
+* **เปิดแอป**
 
-    <span data-ttu-id="c2717-178">https<nolink>://app.powerbi.com/Redirect?action=OpenApp&appId= **&lt;appid-guid&gt;** &ctid= **&lt;ctid-guid&gt;**</span><span class="sxs-lookup"><span data-stu-id="c2717-178">https<nolink>://app.powerbi.com/Redirect?action=OpenApp&appId=**&lt;appid-guid&gt;**&ctid=**&lt;ctid-guid&gt;**</span></span>
+    https<nolink>://app.powerbi.com/Redirect?action=OpenApp&appId= **&lt;appid-guid&gt;** &ctid= **&lt;ctid-guid&gt;**
    
-* <span data-ttu-id="c2717-179">**เปิดแดชบอร์ดที่เป็นส่วนหนึ่งของแอป**</span><span class="sxs-lookup"><span data-stu-id="c2717-179">**Open a dashboard that is part of an app**</span></span>
+* **เปิดแดชบอร์ดที่เป็นส่วนหนึ่งของแอป**
 
-    <span data-ttu-id="c2717-180">https<nolink>://app.powerbi.com/Redirect?action=OpenDashboard&appId= **&lt;appid-guid&gt;** &dashboardObjectId= **&lt;dashboardid-guid&gt;** &ctid= **&lt;ctid-guid&gt;**</span><span class="sxs-lookup"><span data-stu-id="c2717-180">https<nolink>://app.powerbi.com/Redirect?action=OpenDashboard&appId=**&lt;appid-guid&gt;**&dashboardObjectId=**&lt;dashboardid-guid&gt;**&ctid=**&lt;ctid-guid&gt;**</span></span>
+    https<nolink>://app.powerbi.com/Redirect?action=OpenDashboard&appId= **&lt;appid-guid&gt;** &dashboardObjectId= **&lt;dashboardid-guid&gt;** &ctid= **&lt;ctid-guid&gt;**
 
-* <span data-ttu-id="c2717-181">**เปิดรายงานที่เป็นส่วนหนึ่งของพื้นที่ทำงานอื่นที่ไม่ใช่พื้นที่ทำงานของฉัน**</span><span class="sxs-lookup"><span data-stu-id="c2717-181">**Open a report that is part of a workspace other than My Workspace**</span></span>
+* **เปิดรายงานที่เป็นส่วนหนึ่งของพื้นที่ทำงานอื่นที่ไม่ใช่พื้นที่ทำงานของฉัน**
 
-    <span data-ttu-id="c2717-182">https<nolink>://app.powerbi.com/Redirect?Action=OpenReport&reportObjectId= **&lt;reportid-guid&gt;** &groupObjectId= **&lt;groupobjectid-guid&gt;** &reportPage=**ReportSection&lt;num&gt;**</span><span class="sxs-lookup"><span data-stu-id="c2717-182">https<nolink>://app.powerbi.com/Redirect?Action=OpenReport&reportObjectId=**&lt;reportid-guid&gt;**&groupObjectId=**&lt;groupobjectid-guid&gt;**&reportPage=**ReportSection&lt;num&gt;**</span></span>
+    https<nolink>://app.powerbi.com/Redirect?Action=OpenReport&reportObjectId= **&lt;reportid-guid&gt;** &groupObjectId= **&lt;groupobjectid-guid&gt;** &reportPage=**ReportSection&lt;num&gt;**
 
-### <a name="how-to-get-the-correct-link-format"></a><span data-ttu-id="c2717-183">วิธีการขอรูปแบบลิงก์ที่ถูกต้อง</span><span class="sxs-lookup"><span data-stu-id="c2717-183">How to get the correct link format</span></span>
+### <a name="how-to-get-the-correct-link-format"></a>วิธีการขอรูปแบบลิงก์ที่ถูกต้อง
 
-#### <a name="links-to-apps-and-items-in-apps"></a><span data-ttu-id="c2717-184">ลิงก์ไปยังแอปและหน่วยข้อมูลในแอป</span><span class="sxs-lookup"><span data-stu-id="c2717-184">Links to apps and items in apps</span></span>
+#### <a name="links-to-apps-and-items-in-apps"></a>ลิงก์ไปยังแอปและหน่วยข้อมูลในแอป
 
-<span data-ttu-id="c2717-185">สำหรับ **แอปและสำหรับรายงานและแดชบอร์ดที่เป็นส่วนหนึ่งของแอป** วิธีที่ง่ายที่สุดในการขอลิงก์คือไปยังพื้นที่ทำงานของแอปแล้วเลือก **อัปเดตแอป**</span><span class="sxs-lookup"><span data-stu-id="c2717-185">For **apps, and for reports and dashboards that are part of an app**, the easiest way to get the link is to go to the app workspace and choose **Update app**.</span></span> <span data-ttu-id="c2717-186">การดำเนินการนี้จะเป็นการเปิดประสบการณ์การใช้งาน "เผยแพร่แอป"</span><span class="sxs-lookup"><span data-stu-id="c2717-186">This opens the "publish app" experience.</span></span> <span data-ttu-id="c2717-187">เปิดแท็บสิทธิ์และขยายส่วนลิงก์เพื่อดูลิงก์ไปยังแอปและเนื้อหาทั้งหมด</span><span class="sxs-lookup"><span data-stu-id="c2717-187">Open the permissions tab and expand the links section to see the links to the app and all its contents.</span></span> <span data-ttu-id="c2717-188">คุณสามารถใช้ลิงก์เหล่านี้จากภายนอก Power BI เพื่อเข้าถึงแอปและเนื้อหาได้โดยตรง</span><span class="sxs-lookup"><span data-stu-id="c2717-188">You can use these links from outside Power BI to access the app and its contents directly.</span></span>
+สำหรับ **แอปและสำหรับรายงานและแดชบอร์ดที่เป็นส่วนหนึ่งของแอป** วิธีที่ง่ายที่สุดในการขอลิงก์คือไปยังพื้นที่ทำงานของแอปแล้วเลือก **อัปเดตแอป** การดำเนินการนี้จะเป็นการเปิดประสบการณ์การใช้งาน "เผยแพร่แอป" เปิดแท็บสิทธิ์และขยายส่วนลิงก์เพื่อดูลิงก์ไปยังแอปและเนื้อหาทั้งหมด คุณสามารถใช้ลิงก์เหล่านี้จากภายนอก Power BI เพื่อเข้าถึงแอปและเนื้อหาได้โดยตรง
 
-![<span data-ttu-id="c2717-189">ลิงก์เผยแพร่แอป Power BI</span><span class="sxs-lookup"><span data-stu-id="c2717-189">Power BI publish app links</span></span> ](./media/mobile-apps-links/mobile-link-copy-app-links.png)
+![ลิงก์เผยแพร่แอป Power BI ](./media/mobile-apps-links/mobile-link-copy-app-links.png)
 
-#### <a name="links-to-items-that-are-not-in-an-app"></a><span data-ttu-id="c2717-190">ลิงก์ไปยังรายการที่ไม่ได้อยู่ในแอป</span><span class="sxs-lookup"><span data-stu-id="c2717-190">Links to items that are not in an app</span></span> 
+#### <a name="links-to-items-that-are-not-in-an-app"></a>ลิงก์ไปยังรายการที่ไม่ได้อยู่ในแอป 
 
-<span data-ttu-id="c2717-191">สำหรับรายงานและแดชบอร์ดที่ไม่ได้เป็นส่วนหนึ่งของแอป คุณต้องแยก ID ออบเจ็กต์ที่คุณต้องการออกจาก URL ของหน่วยข้อมูล</span><span class="sxs-lookup"><span data-stu-id="c2717-191">For reports and dashboards that are not part of an app, you need to extract the object IDs you need from the item's URL.</span></span> <span data-ttu-id="c2717-192">เมื่อต้องการทำเช่นนี้ ให้ไปที่บริการ Power BI นำทางไปยังรายการที่คุณต้องการลิงก์ไป และค้นหาค่าที่คุณต้องการใน URL ที่คุณเห็นในแถบที่อยู่ของเบราว์เซอร์</span><span class="sxs-lookup"><span data-stu-id="c2717-192">To do this, go to the Power BI service, navigate to the item you want to link to, and look for the values you need in the URL you see in the browser's address bar.</span></span>
+สำหรับรายงานและแดชบอร์ดที่ไม่ได้เป็นส่วนหนึ่งของแอป คุณต้องแยก ID ออบเจ็กต์ที่คุณต้องการออกจาก URL ของหน่วยข้อมูล เมื่อต้องการทำเช่นนี้ ให้ไปที่บริการ Power BI นำทางไปยังรายการที่คุณต้องการลิงก์ไป และค้นหาค่าที่คุณต้องการใน URL ที่คุณเห็นในแถบที่อยู่ของเบราว์เซอร์
 
-<span data-ttu-id="c2717-193">ตัวอย่างด้านล่างแสดงตำแหน่งที่คุณสามารถค้นหา ID ที่คุณต้องการได้ใน URL ของรายการที่คุณต้องการลิงก์ไป</span><span class="sxs-lookup"><span data-stu-id="c2717-193">The examples below show where you can find the IDs you need in the URLs of the items you want to link to.</span></span>
+ตัวอย่างด้านล่างแสดงตำแหน่งที่คุณสามารถค้นหา ID ที่คุณต้องการได้ใน URL ของรายการที่คุณต้องการลิงก์ไป
 
-* <span data-ttu-id="c2717-194">เมื่อต้องการค้นหา ID ออบเจ็กต์ของแดชบอร์ด 36 อักขระ ให้ไปที่แดชบอร์ดเฉพาะที่คุณต้องการลิงก์ไปถึงในบริการ Power BI และค้นหา ID ออบเจ็กต์ของแดชบอร์ดและ ID ที่จำเป็นอื่น ๆ ในตำแหน่งที่ระบุไว้ด้านล่าง:</span><span class="sxs-lookup"><span data-stu-id="c2717-194">To find a 36-character dashboard object ID, navigate to the specific dashboard you want to link to in the Power BI service and find the dashboard object ID and any other required IDs in the places indicated below:</span></span>
+* เมื่อต้องการค้นหา ID ออบเจ็กต์ของแดชบอร์ด 36 อักขระ ให้ไปที่แดชบอร์ดเฉพาะที่คุณต้องการลิงก์ไปถึงในบริการ Power BI และค้นหา ID ออบเจ็กต์ของแดชบอร์ดและ ID ที่จำเป็นอื่น ๆ ในตำแหน่งที่ระบุไว้ด้านล่าง:
 
-    <span data-ttu-id="c2717-195">https<nolink>://app.powerbi.com/groups/me/dashboards/ **&lt;dashboard-object-id&gt;** ?ctid= **&lt;org-object-id&gt;**</span><span class="sxs-lookup"><span data-stu-id="c2717-195">https<nolink>://app.powerbi.com/groups/me/dashboards/**&lt;dashboard-object-id&gt;**?ctid=**&lt;org-object-id&gt;**</span></span>
+    https<nolink>://app.powerbi.com/groups/me/dashboards/ **&lt;dashboard-object-id&gt;** ?ctid= **&lt;org-object-id&gt;**
 
-* <span data-ttu-id="c2717-196">เมื่อต้องการค้นหา ID ออบเจ็กต์ของรายงาน 36 อักขระ ให้ไปที่รายงานที่เจาะจงที่คุณต้องการลิงก์ไปถึงในบริการ Power BI และค้นหา ID ที่จำเป็นดังภาพประกอบด้านล่าง</span><span class="sxs-lookup"><span data-stu-id="c2717-196">To find a 36-character report object ID, navigate to the specific report you want to link to in the Power BI service and find the necessary IDs as illustrated below.</span></span> <span data-ttu-id="c2717-197">โปรดทราบว่าตัวอย่างนี้มีการอ้างอิงไปยังหน้ารายงานที่เจาะจงและบุ๊กมาร์กเฉพาะ</span><span class="sxs-lookup"><span data-stu-id="c2717-197">Note that this example contains a reference to a specific report page and a specific bookmark.</span></span>
+* เมื่อต้องการค้นหา ID ออบเจ็กต์ของรายงาน 36 อักขระ ให้ไปที่รายงานที่เจาะจงที่คุณต้องการลิงก์ไปถึงในบริการ Power BI และค้นหา ID ที่จำเป็นดังภาพประกอบด้านล่าง โปรดทราบว่าตัวอย่างนี้มีการอ้างอิงไปยังหน้ารายงานที่เจาะจงและบุ๊กมาร์กเฉพาะ
 
-    <span data-ttu-id="c2717-198">https<nolink>://app.powerbi.com/groups/me/reports/ **&lt;report-object-id&gt;** /**ReportSection&lt;num&gt;** ?bookmarkGuid= **&lt;bookmark-id&gt;**</span><span class="sxs-lookup"><span data-stu-id="c2717-198">https<nolink>://app.powerbi.com/groups/me/reports/**&lt;report-object-id&gt;**/**ReportSection&lt;num&gt;**?bookmarkGuid=**&lt;bookmark-id&gt;**</span></span>
+    https<nolink>://app.powerbi.com/groups/me/reports/ **&lt;report-object-id&gt;** /**ReportSection&lt;num&gt;** ?bookmarkGuid= **&lt;bookmark-id&gt;**
 
-* <span data-ttu-id="c2717-199">หากต้องการลิงก์ไปยังรายการในพื้นที่ทำงานอื่นที่ไม่ใช่พื้นที่ทำงานของฉัน คุณต้องแยก ID อ็อบเจ็กต์ของกลุ่ม</span><span class="sxs-lookup"><span data-stu-id="c2717-199">To link to an item in a workspace other than My Workspace, you need to extract the group object ID.</span></span> <span data-ttu-id="c2717-200">ตัวอย่างนี้แสดงรายงานจากพื้นที่ทำงานอื่นที่ไม่ใช่พื้นที่ทำงานของฉัน</span><span class="sxs-lookup"><span data-stu-id="c2717-200">This example shows a report from a workspace other than My Workspace.</span></span>
+* หากต้องการลิงก์ไปยังรายการในพื้นที่ทำงานอื่นที่ไม่ใช่พื้นที่ทำงานของฉัน คุณต้องแยก ID อ็อบเจ็กต์ของกลุ่ม ตัวอย่างนี้แสดงรายงานจากพื้นที่ทำงานอื่นที่ไม่ใช่พื้นที่ทำงานของฉัน
 
-    <span data-ttu-id="c2717-201">https<nolink>://app.powerbi.com/groups/ **&lt;group-object-id&gt;** /reports/ **&lt;report-object-id&gt;** /**ReportSection&lt;report-section-num&gt;** ?ctid= **&lt;org-object-id&gt;**</span><span class="sxs-lookup"><span data-stu-id="c2717-201">https<nolink>://app.powerbi.com/groups/**&lt;group-object-id&gt;**/reports/**&lt;report-object-id&gt;**/**ReportSection&lt;report-section-num&gt;**?ctid=**&lt;org-object-id&gt;**</span></span>
+    https<nolink>://app.powerbi.com/groups/ **&lt;group-object-id&gt;** /reports/ **&lt;report-object-id&gt;** /**ReportSection&lt;report-section-num&gt;** ?ctid= **&lt;org-object-id&gt;**
 
-### <a name="create-a-link-that-opens-only-on-a-device-that-has-the-power-bi-mobile-app-installed"></a><span data-ttu-id="c2717-202">สร้างลิงก์ที่เปิดเฉพาะบนอุปกรณ์ที่ติดตั้งแอป Power BI สำหรับอุปกรณ์เคลื่อนที่เท่านั้น</span><span class="sxs-lookup"><span data-stu-id="c2717-202">Create a link that opens only on a device that has the Power BI mobile app installed</span></span>
+### <a name="create-a-link-that-opens-only-on-a-device-that-has-the-power-bi-mobile-app-installed"></a>สร้างลิงก์ที่เปิดเฉพาะบนอุปกรณ์ที่ติดตั้งแอป Power BI สำหรับอุปกรณ์เคลื่อนที่เท่านั้น
 
-<span data-ttu-id="c2717-203">รูปแบบลิงก์ที่อธิบายไว้ในส่วนนี้จะลิงก์ไปยังตำแหน่งเฉพาะภายในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่บนแพลตฟอร์มอุปกรณ์เคลื่อนที่ทั้งหมด: iOS, อุปกรณ์ Android และ Windows 10</span><span class="sxs-lookup"><span data-stu-id="c2717-203">The link format described in this section links to a specific location within the Power BI mobile apps on all the mobile platforms: iOS, Android devices, and Windows 10.</span></span> <span data-ttu-id="c2717-204">รูปแบบลิงก์นี้จะเปิดตำแหน่งโดยตรง โดยไม่มีการเปลี่ยนเส้นทางที่เกี่ยวข้องกับวิธีการที่อธิบายไว้ในส่วนก่อนหน้า</span><span class="sxs-lookup"><span data-stu-id="c2717-204">This link format opens the location directly, without any of the redirection involved in the method described in the previous section.</span></span> <span data-ttu-id="c2717-205">**คุณสามารถเปิดรูปแบบนี้ได้บนอุปกรณ์เคลื่อนที่ที่ติดตั้งแอป Power BI สำหรับอุปกรณ์เคลื่อนที่เท่านั้น**</span><span class="sxs-lookup"><span data-stu-id="c2717-205">**This format can only be opened on mobile devices that have the Power BI mobile app installed**.</span></span>
+รูปแบบลิงก์ที่อธิบายไว้ในส่วนนี้จะลิงก์ไปยังตำแหน่งเฉพาะภายในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่บนแพลตฟอร์มอุปกรณ์เคลื่อนที่ทั้งหมด: iOS, อุปกรณ์ Android และ Windows 10 รูปแบบลิงก์นี้จะเปิดตำแหน่งโดยตรง โดยไม่มีการเปลี่ยนเส้นทางที่เกี่ยวข้องกับวิธีการที่อธิบายไว้ในส่วนก่อนหน้า **คุณสามารถเปิดรูปแบบนี้ได้บนอุปกรณ์เคลื่อนที่ที่ติดตั้งแอป Power BI สำหรับอุปกรณ์เคลื่อนที่เท่านั้น**
 
-<span data-ttu-id="c2717-206">ลิงก์ของรูปแบบนี้สามารถชี้ตรงไปยังแดชบอร์ด ไทล์ รายงาน</span><span class="sxs-lookup"><span data-stu-id="c2717-206">Links of this format can point directly to dashboards, tiles, and reports.</span></span> <span data-ttu-id="c2717-207">ปลายทางของลิงก์ลึกจะกำหนดรูปแบบของลิงก์เอง</span><span class="sxs-lookup"><span data-stu-id="c2717-207">The destination of the deep link determines its format.</span></span> <span data-ttu-id="c2717-208">ทำตามขั้นตอนเหล่านี้เพื่อสร้างการเชื่อมโยงโดยตรงไปยังตำแหน่งที่ตั้งต่างๆ</span><span class="sxs-lookup"><span data-stu-id="c2717-208">Follow these steps to create deep links to different locations.</span></span> 
+ลิงก์ของรูปแบบนี้สามารถชี้ตรงไปยังแดชบอร์ด ไทล์ รายงาน ปลายทางของลิงก์ลึกจะกำหนดรูปแบบของลิงก์เอง ทำตามขั้นตอนเหล่านี้เพื่อสร้างการเชื่อมโยงโดยตรงไปยังตำแหน่งที่ตั้งต่างๆ 
 
-* <span data-ttu-id="c2717-209">**เปิดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่**</span><span class="sxs-lookup"><span data-stu-id="c2717-209">**Open the Power BI mobile app**</span></span>
+* **เปิดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่**
 
-    <span data-ttu-id="c2717-210">ใช้ลิงก์นี้เพื่อเปิดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่บนอุปกรณ์ใดก็ได้:</span><span class="sxs-lookup"><span data-stu-id="c2717-210">Use this link to open the Power BI mobile app on any device:</span></span>
+    ใช้ลิงก์นี้เพื่อเปิดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่บนอุปกรณ์ใดก็ได้:
 
-    <span data-ttu-id="c2717-211">mspbi://app/</span><span class="sxs-lookup"><span data-stu-id="c2717-211">mspbi://app/</span></span>
+    mspbi://app/
 
-* <span data-ttu-id="c2717-212">**เปิดไปยังแดชบอร์ดทีระบุ**</span><span class="sxs-lookup"><span data-stu-id="c2717-212">**Open to a specific dashboard**</span></span>
+* **เปิดไปยังแดชบอร์ดทีระบุ**
 
-    <span data-ttu-id="c2717-213">ลิงก์นี้จะเปิดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ไปยังแดชบอร์ดที่ระบุ:</span><span class="sxs-lookup"><span data-stu-id="c2717-213">This link opens the Power BI mobile app to a specific dashboard:</span></span>
+    ลิงก์นี้จะเปิดแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ไปยังแดชบอร์ดที่ระบุ:
 
-    <span data-ttu-id="c2717-214">mspbi://app/OpenDashboard?DashboardObjectId= **<36-character-dashboard-id>**</span><span class="sxs-lookup"><span data-stu-id="c2717-214">mspbi://app/OpenDashboard?DashboardObjectId=**<36-character-dashboard-id>**</span></span>
+    mspbi://app/OpenDashboard?DashboardObjectId= **<36-character-dashboard-id>**
 
-    <span data-ttu-id="c2717-215">เมื่อต้องการรับ ID ออปเจ็กต์ของแดชบอร์ด 36 อักขระ ให้นำทางไปยังแดชบอร์ดที่ระบุในบริการ Power BI และแยกออกจาก URL</span><span class="sxs-lookup"><span data-stu-id="c2717-215">To get the 36-character dashboard object id, navigate to the specific dashboard in the Power BI service and extract it from the URL.</span></span> <span data-ttu-id="c2717-216">ตัวอย่างเช่น id ออบเจ็กต์ของแดชบอร์ดจะถูกเน้นใน URL ต่อไปนี้จากบริการ Power BI:</span><span class="sxs-lookup"><span data-stu-id="c2717-216">For example, the dashboard object id is highlighted in the following URL from the Power BI service:</span></span>
+    เมื่อต้องการรับ ID ออปเจ็กต์ของแดชบอร์ด 36 อักขระ ให้นำทางไปยังแดชบอร์ดที่ระบุในบริการ Power BI และแยกออกจาก URL ตัวอย่างเช่น id ออบเจ็กต์ของแดชบอร์ดจะถูกเน้นใน URL ต่อไปนี้จากบริการ Power BI:
 
-    <span data-ttu-id="c2717-217">https<nolink>://app.powerbi.com/groups/me/dashboards/ **&lt;61b7e871-cb98-48ed-bddc-6572c921e270&gt;**</span><span class="sxs-lookup"><span data-stu-id="c2717-217">https<nolink>://app.powerbi.com/groups/me/dashboards/**&lt;61b7e871-cb98-48ed-bddc-6572c921e270&gt;**</span></span>
+    https<nolink>://app.powerbi.com/groups/me/dashboards/ **&lt;61b7e871-cb98-48ed-bddc-6572c921e270&gt;**
 
-    <span data-ttu-id="c2717-218">ถ้าแดชบอร์ดไม่ได้อยู่ในพื้นที่ทำงานของฉัน คุณต้องเพิ่ม ID อ็อบเจ็กต์ของกลุ่มด้วย ไม่ว่าจะก่อนหรือหลัง ID แดชบอร์ดก็ตาม</span><span class="sxs-lookup"><span data-stu-id="c2717-218">If the dashboard is not in My Workspace, you need to add the group object ID as well, either before or after the dashboard ID.</span></span> <span data-ttu-id="c2717-219">ลิงก์ลึกที่แสดงด้านล่างมีพารามิเตอร์ id อ็อบเจ็กต์ของกลุ่มที่เพิ่มหลังจาก id อ็อบเจ็กต์ของแดชบอร์ด:</span><span class="sxs-lookup"><span data-stu-id="c2717-219">The deep link shown below has the group object id parameter added after the dashboard object id:</span></span>
+    ถ้าแดชบอร์ดไม่ได้อยู่ในพื้นที่ทำงานของฉัน คุณต้องเพิ่ม ID อ็อบเจ็กต์ของกลุ่มด้วย ไม่ว่าจะก่อนหรือหลัง ID แดชบอร์ดก็ตาม ลิงก์ลึกที่แสดงด้านล่างมีพารามิเตอร์ id อ็อบเจ็กต์ของกลุ่มที่เพิ่มหลังจาก id อ็อบเจ็กต์ของแดชบอร์ด:
 
-    <span data-ttu-id="c2717-220">mspbi://app/OpenDashboard?DashboardObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**</code></span><span class="sxs-lookup"><span data-stu-id="c2717-220">mspbi://app/OpenDashboard?DashboardObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**</code></span></span>
+    mspbi://app/OpenDashboard?DashboardObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**</code>
 
-    <span data-ttu-id="c2717-221">โปรดสังเกตเครื่องหมายแอมเพอร์แซนด์ (&) ระหว่างพารามิเตอร์ทั้งสอง</span><span class="sxs-lookup"><span data-stu-id="c2717-221">Note the ampersand (&) between the two parameters.</span></span>
+    โปรดสังเกตเครื่องหมายแอมเพอร์แซนด์ (&) ระหว่างพารามิเตอร์ทั้งสอง
 
-* <span data-ttu-id="c2717-222">**เปิดไปยังไทล์ที่ระบุในโฟกัส**</span><span class="sxs-lookup"><span data-stu-id="c2717-222">**Open to a specific tile in focus**</span></span>
+* **เปิดไปยังไทล์ที่ระบุในโฟกัส**
 
-    <span data-ttu-id="c2717-223">ลิงก์นี้เปิดไทล์เฉพาะในโหมดโฟกัสในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่:</span><span class="sxs-lookup"><span data-stu-id="c2717-223">This link opens a specific tile in focus mode in the Power BI mobile app:</span></span>
+    ลิงก์นี้เปิดไทล์เฉพาะในโหมดโฟกัสในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่:
 
-    <span data-ttu-id="c2717-224">mspbi://app/OpenTile?DashboardObjectId= **<36-character-dashboard-id>** &TileObjectId= **<36-character-tile-id>**</span><span class="sxs-lookup"><span data-stu-id="c2717-224">mspbi://app/OpenTile?DashboardObjectId=**<36-character-dashboard-id>**&TileObjectId=**<36-character-tile-id>**</span></span>
+    mspbi://app/OpenTile?DashboardObjectId= **<36-character-dashboard-id>** &TileObjectId= **<36-character-tile-id>**
 
-    <span data-ttu-id="c2717-225">เพื่อค้นหา ID ออปเจ็กต์ของแดชบอร์ดและไทล์ 36 ตัวอักษร นำทางไปยังแดชบอร์ดนั้นในบริการ Power BI และเปิดไทล์ในโหมดโฟกัส</span><span class="sxs-lookup"><span data-stu-id="c2717-225">To find the 36-character dashboard and tile object IDs, navigate to the specific dashboard in the Power BI service and open the tile in focus mode.</span></span> <span data-ttu-id="c2717-226">ในตัวอย่างด้านล่างจะมีการเน้น ID แดชบอร์ดและไทล์</span><span class="sxs-lookup"><span data-stu-id="c2717-226">In the example below the dashboard and tile IDs are highlighted.</span></span>
+    เพื่อค้นหา ID ออปเจ็กต์ของแดชบอร์ดและไทล์ 36 ตัวอักษร นำทางไปยังแดชบอร์ดนั้นในบริการ Power BI และเปิดไทล์ในโหมดโฟกัส ในตัวอย่างด้านล่างจะมีการเน้น ID แดชบอร์ดและไทล์
 
-    <span data-ttu-id="c2717-227">https<nolink>://app.powerbi.com/groups/me/dashboards/**3784f99f-b460-4d5e-b86c-b6d8f7ec54b7**/tiles/**565f9740-5131-4648-87f2-f79c4cf9c5f5**/infocus</span><span class="sxs-lookup"><span data-stu-id="c2717-227">https<nolink>://app.powerbi.com/groups/me/dashboards/**3784f99f-b460-4d5e-b86c-b6d8f7ec54b7**/tiles/**565f9740-5131-4648-87f2-f79c4cf9c5f5**/infocus</span></span>
+    https<nolink>://app.powerbi.com/groups/me/dashboards/**3784f99f-b460-4d5e-b86c-b6d8f7ec54b7**/tiles/**565f9740-5131-4648-87f2-f79c4cf9c5f5**/infocus
 
-    <span data-ttu-id="c2717-228">หากต้องการเปิดไทล์นี้โดยตรง ลิงก์จะเป็น:</span><span class="sxs-lookup"><span data-stu-id="c2717-228">To open to this tile directly then, the link would be:</span></span>
+    หากต้องการเปิดไทล์นี้โดยตรง ลิงก์จะเป็น:
 
-    <span data-ttu-id="c2717-229">mspbi://app/OpenTile?DashboardObjectId=3784f99f-b460-4d5e-b86c-b6d8f7ec54b7&TileObjectId=565f9740-5131-4648-87f2-f79c4cf9c5f5</span><span class="sxs-lookup"><span data-stu-id="c2717-229">mspbi://app/OpenTile?DashboardObjectId=3784f99f-b460-4d5e-b86c-b6d8f7ec54b7&TileObjectId=565f9740-5131-4648-87f2-f79c4cf9c5f5</span></span>
+    mspbi://app/OpenTile?DashboardObjectId=3784f99f-b460-4d5e-b86c-b6d8f7ec54b7&TileObjectId=565f9740-5131-4648-87f2-f79c4cf9c5f5
 
-    <span data-ttu-id="c2717-230">โปรดสังเกตเครื่องหมายแอมเพอร์แซนด์ (&) ระหว่างพารามิเตอร์ทั้งสอง</span><span class="sxs-lookup"><span data-stu-id="c2717-230">Note the ampersand (&) between the two parameters.</span></span>
+    โปรดสังเกตเครื่องหมายแอมเพอร์แซนด์ (&) ระหว่างพารามิเตอร์ทั้งสอง
 
-    <span data-ttu-id="c2717-231">หากแดชบอร์ดไม่อยู่ในพื้นที่ทำงานของฉัน ให้เพิ่มพารามิเตอร์ GroupObjectId ตัวอย่างเช่น &GroupObjectId=<36-character-group-id></span><span class="sxs-lookup"><span data-stu-id="c2717-231">If the dashboard is not in My Workspace, add the GroupObjectId parameter, e.g. &GroupObjectId=<36-character-group-id></span></span>
+    หากแดชบอร์ดไม่อยู่ในพื้นที่ทำงานของฉัน ให้เพิ่มพารามิเตอร์ GroupObjectId ตัวอย่างเช่น &GroupObjectId=<36-character-group-id>
 
-* <span data-ttu-id="c2717-232">**เปิดไปยังรายงานที่ระบุ**</span><span class="sxs-lookup"><span data-stu-id="c2717-232">**Open to a specific report**</span></span>
+* **เปิดไปยังรายงานที่ระบุ**
 
-    <span data-ttu-id="c2717-233">ลิงก์นี้จะเปิดรายงานที่เจาะจงในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่:</span><span class="sxs-lookup"><span data-stu-id="c2717-233">This link opens a specific report in the Power BI mobile app:</span></span>
+    ลิงก์นี้จะเปิดรายงานที่เจาะจงในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่:
 
-    <span data-ttu-id="c2717-234">mspbi://app/OpenReport?ReportObjectId= **<36-character-report-id>**</span><span class="sxs-lookup"><span data-stu-id="c2717-234">mspbi://app/OpenReport?ReportObjectId=**<36-character-report-id>**</span></span>
+    mspbi://app/OpenReport?ReportObjectId= **<36-character-report-id>**
 
-    <span data-ttu-id="c2717-235">เมื่อต้องการค้นหา ID ออปเจ็กต์ของรายงาน 36 ตัวอักษร ให้ไปยังรายงานที่เจาะจงในบริการของ Power BI</span><span class="sxs-lookup"><span data-stu-id="c2717-235">To find the 36-character report object id, navigate to the specific report in the Power BI service.</span></span> <span data-ttu-id="c2717-236">URL ต่อไปนี้จากบริการ Power BI แสดง ID รายงานที่คุณต้องการแยก</span><span class="sxs-lookup"><span data-stu-id="c2717-236">The following URL from the Power BI service illustrates the report ID you would need to extract.</span></span>
+    เมื่อต้องการค้นหา ID ออปเจ็กต์ของรายงาน 36 ตัวอักษร ให้ไปยังรายงานที่เจาะจงในบริการของ Power BI URL ต่อไปนี้จากบริการ Power BI แสดง ID รายงานที่คุณต้องการแยก
 
-    <span data-ttu-id="c2717-237">https<nolink>://app.powerbi.com/groups/me/reports/**df9f0e94-31df-450b-b97f-4461a7e4d300**</span><span class="sxs-lookup"><span data-stu-id="c2717-237">https<nolink>://app.powerbi.com/groups/me/reports/**df9f0e94-31df-450b-b97f-4461a7e4d300**</span></span>
+    https<nolink>://app.powerbi.com/groups/me/reports/**df9f0e94-31df-450b-b97f-4461a7e4d300**
 
-    <span data-ttu-id="c2717-238">หากรายงานไม่ได้อยู่ในพื้นที่ทำงานของฉัน คุณต้องเพิ่ม **&GroupObjectId=<36-character-group-id>** ด้วยไม่ว่าจะก่อนหรือหลัง ID รายงานก็ตาม</span><span class="sxs-lookup"><span data-stu-id="c2717-238">If the report is not in My Workspace, you need to add **&GroupObjectId=<36-character-group-id>** as well, either before or after the report ID.</span></span> <span data-ttu-id="c2717-239">ตัวอย่างเช่น ในกรณีนี้ลิงก์ลึกจะเป็น:</span><span class="sxs-lookup"><span data-stu-id="c2717-239">For example, in this case the deep link would be:</span></span>
+    หากรายงานไม่ได้อยู่ในพื้นที่ทำงานของฉัน คุณต้องเพิ่ม **&GroupObjectId=<36-character-group-id>** ด้วยไม่ว่าจะก่อนหรือหลัง ID รายงานก็ตาม ตัวอย่างเช่น ในกรณีนี้ลิงก์ลึกจะเป็น:
 
-    <span data-ttu-id="c2717-240">mspbi://app/OpenReport?ReportObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**</span><span class="sxs-lookup"><span data-stu-id="c2717-240">mspbi://app/OpenReport?ReportObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**</span></span>
+    mspbi://app/OpenReport?ReportObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**
 
-    <span data-ttu-id="c2717-241">โปรดสังเกตเครื่องหมายแอมเพอร์แซนด์ (&) ระหว่างพารามิเตอร์ทั้งสอง</span><span class="sxs-lookup"><span data-stu-id="c2717-241">Note the ampersand (&) between the two parameters.</span></span>
+    โปรดสังเกตเครื่องหมายแอมเพอร์แซนด์ (&) ระหว่างพารามิเตอร์ทั้งสอง
 
-* <span data-ttu-id="c2717-242">**เปิดหน้ารายงานที่เจาะจง**</span><span class="sxs-lookup"><span data-stu-id="c2717-242">**Open a specific report page**</span></span>
+* **เปิดหน้ารายงานที่เจาะจง**
 
-    <span data-ttu-id="c2717-243">ลิงก์นี้จะเปิดหน้ารายงานที่เจาะจงในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่:</span><span class="sxs-lookup"><span data-stu-id="c2717-243">This link opens a specific report page in the Power BI mobile app:</span></span>
+    ลิงก์นี้จะเปิดหน้ารายงานที่เจาะจงในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่:
 
-    <span data-ttu-id="c2717-244">mspbi://app/OpenReport?ReportObjectId= **<36-character-report-id>** &reportPage=**ReportSection&lt;number&gt;**</span><span class="sxs-lookup"><span data-stu-id="c2717-244">mspbi://app/OpenReport?ReportObjectId=**<36-character-report-id>**&reportPage=**ReportSection&lt;number&gt;**</span></span>
+    mspbi://app/OpenReport?ReportObjectId= **<36-character-report-id>** &reportPage=**ReportSection&lt;number&gt;**
 
-    <span data-ttu-id="c2717-245">หน้ารายงานเรียกว่า **ReportSection** ตามด้วยตัวเลข</span><span class="sxs-lookup"><span data-stu-id="c2717-245">The report page is called **ReportSection**, followed by a number.</span></span> <span data-ttu-id="c2717-246">อีกครั้งเพื่อค้นหาค่าที่คุณต้องการ ให้เปิดรายงานในบริการ Power BI นำทางไปยังหน้ารายงานที่เจาะจง และแยกค่าที่คุณต้องการจาก URL</span><span class="sxs-lookup"><span data-stu-id="c2717-246">Again, to find the values you need, open the report in the Power BI service, navigate to the specific report page, and extract the values you need from the URL.</span></span> <span data-ttu-id="c2717-247">ตัวอย่างเช่น ส่วนที่ถูกเน้นของ URL นี้แสดงถึงค่าที่คุณจะต้องเปิดในหน้ารายงานที่เจาะจง:</span><span class="sxs-lookup"><span data-stu-id="c2717-247">For example, the highlighted sections of this URL represent the values you would need to open to a specific report page:</span></span>
+    หน้ารายงานเรียกว่า **ReportSection** ตามด้วยตัวเลข อีกครั้งเพื่อค้นหาค่าที่คุณต้องการ ให้เปิดรายงานในบริการ Power BI นำทางไปยังหน้ารายงานที่เจาะจง และแยกค่าที่คุณต้องการจาก URL ตัวอย่างเช่น ส่วนที่ถูกเน้นของ URL นี้แสดงถึงค่าที่คุณจะต้องเปิดในหน้ารายงานที่เจาะจง:
 
-    <span data-ttu-id="c2717-248">https<nolink>://app.powerbi.com/groups/me/reports/**df9f0e94-31df-450b-b97f-4461a7e4d300**/**ReportSection11**</code></span><span class="sxs-lookup"><span data-stu-id="c2717-248">https<nolink>://app.powerbi.com/groups/me/reports/**df9f0e94-31df-450b-b97f-4461a7e4d300**/**ReportSection11**</code></span></span>
+    https<nolink>://app.powerbi.com/groups/me/reports/**df9f0e94-31df-450b-b97f-4461a7e4d300**/**ReportSection11**</code>
 
-* <span data-ttu-id="c2717-249">**เปิดในโหมดเต็มหน้าจอ (สำหรับอุปกรณ์ Windows เท่านั้น)**</span><span class="sxs-lookup"><span data-stu-id="c2717-249">**Open in full-screen mode (for Windows devices only)**</span></span>
+* **เปิดในโหมดเต็มหน้าจอ (สำหรับอุปกรณ์ Windows เท่านั้น)**
 
-    <span data-ttu-id="c2717-250">สำหรับอุปกรณ์ Windows คุณสามารถเพิ่มพารามิเตอร์ **openFullScreen** เพื่อเปิดรายงานเที่เจาะจงในโหมดเต็มหน้าจอได้</span><span class="sxs-lookup"><span data-stu-id="c2717-250">For Windows devices, you can also add the **openFullScreen** parameter to open specific report in full-screen mode.</span></span> <span data-ttu-id="c2717-251">ตัวอย่างต่อไปนี้จะเปิดหน้ารายงานในโหมดเต็มหน้าจอ:</span><span class="sxs-lookup"><span data-stu-id="c2717-251">The following example opens a report page in full screen mode:</span></span>
+    สำหรับอุปกรณ์ Windows คุณสามารถเพิ่มพารามิเตอร์ **openFullScreen** เพื่อเปิดรายงานเที่เจาะจงในโหมดเต็มหน้าจอได้ ตัวอย่างต่อไปนี้จะเปิดหน้ารายงานในโหมดเต็มหน้าจอ:
 
-    <span data-ttu-id="c2717-252">mspbi://app/OpenReport?ReportObjectId=500217de-50f0-4af1-b345-b81027224033&**openFullScreen=true**</span><span class="sxs-lookup"><span data-stu-id="c2717-252">mspbi://app/OpenReport?ReportObjectId=500217de-50f0-4af1-b345-b81027224033&**openFullScreen=true**</span></span>
+    mspbi://app/OpenReport?ReportObjectId=500217de-50f0-4af1-b345-b81027224033&**openFullScreen=true**
 
-* <span data-ttu-id="c2717-253">**เพิ่มบริบท** (ไม่บังคับ)</span><span class="sxs-lookup"><span data-stu-id="c2717-253">**Add context** (optional)</span></span>
+* **เพิ่มบริบท** (ไม่บังคับ)
 
-    <span data-ttu-id="c2717-254">คุณยังสามารถเพิ่มบริบทไปยังสตริงได้อีกด้วย</span><span class="sxs-lookup"><span data-stu-id="c2717-254">You can also add context to the string.</span></span> <span data-ttu-id="c2717-255">จากนั้นถ้าคุณต้องการติดต่อเรา เราสามารถใช้บริบทนั้นเพื่อกรองข้อมูลของเราเพื่อค้นหาสิ่งที่เกี่ยวข้องกับแอปของคุณ</span><span class="sxs-lookup"><span data-stu-id="c2717-255">Then, if you need to contact us, we can use that context to filter our data to find what is relevant to your app.</span></span> <span data-ttu-id="c2717-256">เมื่อต้องการเพิ่มบริบท ให้เพิ่มพารามิเตอร์ **context=&lt;app-name&gt;** ไปยังลิงก์:</span><span class="sxs-lookup"><span data-stu-id="c2717-256">To add context, add the parameter **context=&lt;app-name&gt;** to the link:</span></span>
+    คุณยังสามารถเพิ่มบริบทไปยังสตริงได้อีกด้วย จากนั้นถ้าคุณต้องการติดต่อเรา เราสามารถใช้บริบทนั้นเพื่อกรองข้อมูลของเราเพื่อค้นหาสิ่งที่เกี่ยวข้องกับแอปของคุณ เมื่อต้องการเพิ่มบริบท ให้เพิ่มพารามิเตอร์ **context=&lt;app-name&gt;** ไปยังลิงก์:
 
-    <span data-ttu-id="c2717-257">ตัวอย่างเช่น ตัวอย่างต่อไปนี้แสดงลิงก์ที่มีพารามิเตอร์บริบท:</span><span class="sxs-lookup"><span data-stu-id="c2717-257">For example, the following example shows a link that includes a context parameter:</span></span> 
+    ตัวอย่างเช่น ตัวอย่างต่อไปนี้แสดงลิงก์ที่มีพารามิเตอร์บริบท: 
 
-    <span data-ttu-id="c2717-258">mspbi://app/OpenReport?ReportObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**&**context=SlackDeepLink**</span><span class="sxs-lookup"><span data-stu-id="c2717-258">mspbi://app/OpenReport?ReportObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**&**context=SlackDeepLink**</span></span>
+    mspbi://app/OpenReport?ReportObjectId=**e684af3a-9e7f-44ee-b679-b9a1c59b5d60**&GroupObjectId=**8cc900cc-7339-467f-8900-fec82d748248**&**context=SlackDeepLink**
 
-## <a name="use-links-inside-power-bi"></a><span data-ttu-id="c2717-259">ใช้ลิงก์ภายใน Power BI</span><span class="sxs-lookup"><span data-stu-id="c2717-259">Use links inside Power BI</span></span>
+## <a name="use-links-inside-power-bi"></a>ใช้ลิงก์ภายใน Power BI
 
-<span data-ttu-id="c2717-260">ในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ ลิงก์ภายใน Power BI จะทำงานเหมือนกับที่ทำงานในบริการ Power BI</span><span class="sxs-lookup"><span data-stu-id="c2717-260">In the Power BI mobile apps, links inside Power BI work just as they work in the Power BI service.</span></span>
+ในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ ลิงก์ภายใน Power BI จะทำงานเหมือนกับที่ทำงานในบริการ Power BI
 
-<span data-ttu-id="c2717-261">หากคุณต้องการเพิ่มลิงก์ไปยังรายงานของคุณที่ชี้ไปยังรายการ Power BI อื่น คุณสามารถคัดลอก URL ของหน่วยข้อมูลนั้นจากแถบที่อยู่ของเบราว์เซอร์ได้</span><span class="sxs-lookup"><span data-stu-id="c2717-261">If you want to add link to your report that points to another Power BI item, you can just copy that item's URL from the browser address bar.</span></span> <span data-ttu-id="c2717-262">ศึกษาเพิ่มเติมเรื่อง[วิธีการเพิ่มไฮเปอร์ลิงก์ไปยังกล่องข้อความในรายงาน](../../create-reports/service-add-hyperlink-to-text-box.md)</span><span class="sxs-lookup"><span data-stu-id="c2717-262">Read more about [how to add a hyperlink to a text box in a report](../../create-reports/service-add-hyperlink-to-text-box.md).</span></span>
+หากคุณต้องการเพิ่มลิงก์ไปยังรายงานของคุณที่ชี้ไปยังรายการ Power BI อื่น คุณสามารถคัดลอก URL ของหน่วยข้อมูลนั้นจากแถบที่อยู่ของเบราว์เซอร์ได้ ศึกษาเพิ่มเติมเรื่อง[วิธีการเพิ่มไฮเปอร์ลิงก์ไปยังกล่องข้อความในรายงาน](../../create-reports/service-add-hyperlink-to-text-box.md)
 
-## <a name="next-steps"></a><span data-ttu-id="c2717-263">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="c2717-263">Next steps</span></span>
-<span data-ttu-id="c2717-264">คำติชมของคุณจะช่วยให้เราตัดสินใจว่าสิ่งใดควรดำเนินการในอนาคต ดังนั้นอย่าลืมลงคะแนนให้กับคุณลักษณะอื่นๆ ที่คุณต้องการเห็นในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="c2717-264">Your feedback helps us decide what to implement in the future, so don’t forget to vote for other features you'd like to see in Power BI mobile apps.</span></span> 
+## <a name="next-steps"></a>ขั้นตอนถัดไป
+คำติชมของคุณจะช่วยให้เราตัดสินใจว่าสิ่งใดควรดำเนินการในอนาคต ดังนั้นอย่าลืมลงคะแนนให้กับคุณลักษณะอื่นๆ ที่คุณต้องการเห็นในแอป Power BI สำหรับอุปกรณ์เคลื่อนที่ 
 
-* [<span data-ttu-id="c2717-265">แอป Power BI สำหรับอุปกรณ์เคลื่อนที่</span><span class="sxs-lookup"><span data-stu-id="c2717-265">Power BI apps for mobile devices</span></span>](mobile-apps-for-mobile-devices.md)
-* <span data-ttu-id="c2717-266">ติดตาม@MSPowerBIบน Twitter</span><span class="sxs-lookup"><span data-stu-id="c2717-266">Follow @MSPowerBI on Twitter</span></span>
-* <span data-ttu-id="c2717-267">เข้าร่วมการสนทนาที่[ชุมชน Power BI](http://community.powerbi.com/)</span><span class="sxs-lookup"><span data-stu-id="c2717-267">Join the conversation at the [Power BI Community](http://community.powerbi.com/)</span></span>
-* [<span data-ttu-id="c2717-268">Power BI คืออะไร</span><span class="sxs-lookup"><span data-stu-id="c2717-268">What is Power BI?</span></span>](../../fundamentals/power-bi-overview.md)
+* [แอป Power BI สำหรับอุปกรณ์เคลื่อนที่](mobile-apps-for-mobile-devices.md)
+* ติดตาม@MSPowerBIบน Twitter
+* เข้าร่วมการสนทนาที่[ชุมชน Power BI](http://community.powerbi.com/)
+* [Power BI คืออะไร](../../fundamentals/power-bi-overview.md)

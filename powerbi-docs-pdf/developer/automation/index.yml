@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: เอกสารประกอบการใช้งาน Power BI automation ที่ใช้งานข้อมูลเชิงลึก BI แบบฝังที่ดีขึ้นในการวิเคราะห์แบบฝังของ Power BI
+title: เอกสารประกอบการใช้งาน Power BI automation
 summary: ด้วย Power BI automation คุณสามารถดำเนินการจัดการกับออบเจ็กต์ Power BI เช่น รายงาน ชุดข้อมูล และพื้นที่ทำงาน
 metadata:
   title: เอกสารประกอบการใช้งาน Power BI automation
@@ -12,12 +12,12 @@ metadata:
   author: KesemSharabi
   ms.author: kesharab
   ms.date: 31/03/2020
-  ms.openlocfilehash: def78e481474b7186457d019404f4604406ce967
-  ms.sourcegitcommit: eeaf607e7c1d89ef7312421731e1729ddce5a5cc
-  ms.translationtype: HT
+  ms.openlocfilehash: eb357c5a89afec8f42b86ec80bca688e37101322
+  ms.sourcegitcommit: 84f0e7f31e62cae3bea2dcf2d62c2f023cc2d404
+  ms.translationtype: MT
   ms.contentlocale: th-TH
-  ms.lasthandoff: 01/05/2021
-  ms.locfileid: "97887603"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98781544"
 landingContent:
 - title: เริ่มใช้งาน
   linkLists:
@@ -39,6 +39,12 @@ landingContent:
       url: walkthrough-push-data-add-rows.md
     - text: 'บทช่วยสอน: กำหนดค่าแอปเทมเพลตโดยอัตโนมัติ'
       url: ../template-apps/template-apps-auto-install-tutorial.md
+- title: ไคลเอ็นต์ Api
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Power BI แบบฝังตัววิเคราะห์ไคลเอ็นต์ Api
+      url: /javascript/api/overview/powerbi/
 - title: ทำงานกับข้อมูล
   linkLists:
   - linkListType: concept

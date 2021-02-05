@@ -8,22 +8,22 @@ ms.service: powerbi
 ms.subservice: powerbi-developer
 ms.topic: how-to
 ms.date: 02/05/2019
-ms.openlocfilehash: f6b6023ac77d007b07662e200d6f165d56d67628
-ms.sourcegitcommit: eeaf607e7c1d89ef7312421731e1729ddce5a5cc
-ms.translationtype: HT
+ms.openlocfilehash: cf6e20568d3fbec5d3e3db0bb4e7e2248c5f15da
+ms.sourcegitcommit: 2e81649476d5cb97701f779267be59e393460097
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97888730"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99422432"
 ---
-# <a name="code-snippets-for-migrating-content-from-power-bi-workspace-collection"></a><span data-ttu-id="8e018-104">โค้ดสำหรับการโยกย้ายเนื้อหาจากคอลเลกชันพื้นที่ทำงานของ Power BI</span><span class="sxs-lookup"><span data-stu-id="8e018-104">Code snippets for migrating content from Power BI Workspace Collection</span></span>
+# <a name="code-snippets-for-migrating-content-from-power-bi-workspace-collection"></a>โค้ดสำหรับการโยกย้ายเนื้อหาจากคอลเลกชันพื้นที่ทำงานของ Power BI
 
-<span data-ttu-id="8e018-105">ต่อไปนี้คือโค้ดบางอย่างของการดำเนินงานพื้นฐานที่จำเป็นสำหรับการโยกย้ายเนื้อหา</span><span class="sxs-lookup"><span data-stu-id="8e018-105">Here are some code snippets of basic operations needed for content migration.</span></span> <span data-ttu-id="8e018-106">สำหรับขั้นตอนที่เกี่ยวข้องกับรายงานบางชนิด ดู[วิธีการโยกย้ายเนื้อหาคอลเลกชันของพื้นที่ทำงาน Power BI ไปยัง Power BI Embedded](migrate-from-powerbi-embedded.md#content-migration)</span><span class="sxs-lookup"><span data-stu-id="8e018-106">For related flows for certain report types, see [How to migrate Power BI workspace collection content to Power BI Embedded](migrate-from-powerbi-embedded.md#content-migration).</span></span>
+ต่อไปนี้คือโค้ดบางอย่างของการดำเนินงานพื้นฐานที่จำเป็นสำหรับการโยกย้ายเนื้อหา สำหรับขั้นตอนที่เกี่ยวข้องกับรายงานบางชนิด ดู[วิธีการโยกย้ายเนื้อหาคอลเลกชันของพื้นที่ทำงาน Power BI ไปยัง Power BI Embedded](migrate-from-powerbi-embedded.md#content-migration)
 
-<span data-ttu-id="8e018-107">A **เครื่องมือการโยกย้าย** จะพร้อมใช้งานเพื่อให้คุณใช้เพื่อช่วยเหลือเกี่ยวกับการคัดลอกเนื้อหาจาก Power BI Embedded (PaaS) ไปยังบริการ Power BI (SaaS)</span><span class="sxs-lookup"><span data-stu-id="8e018-107">A **migration tool** is available for you to use in order to assist with copying content from Power BI Embedded (PaaS) to the Power BI service (SaaS).</span></span> <span data-ttu-id="8e018-108">โดยเฉพาะอย่างยิ่ง ถ้าคุณมีเนื้อหาจำนวนมาก</span><span class="sxs-lookup"><span data-stu-id="8e018-108">Especially if you have a lot of content.</span></span> <span data-ttu-id="8e018-109">สำหรับข้อมูลเพิ่มเติม ดู[เครื่องมือการโยกย้ายของ Power BI Embedded](migrate-tool.md)</span><span class="sxs-lookup"><span data-stu-id="8e018-109">For more information, see [Power BI Embedded migration tool](migrate-tool.md).</span></span>
+A **เครื่องมือการโยกย้าย** จะพร้อมใช้งานเพื่อให้คุณใช้เพื่อช่วยเหลือเกี่ยวกับการคัดลอกเนื้อหาจาก Power BI Embedded (PaaS) ไปยังบริการ Power BI (SaaS) โดยเฉพาะอย่างยิ่ง ถ้าคุณมีเนื้อหาจำนวนมาก สำหรับข้อมูลเพิ่มเติม ดู[เครื่องมือการโยกย้ายของ Power BI Embedded](migrate-tool.md)
 
-<span data-ttu-id="8e018-110">รหัสด้านล่างนี้คือ ตัวอย่างที่ใช้ C# และ[Power BI .NET SDK](https://www.nuget.org/profiles/powerbi)</span><span class="sxs-lookup"><span data-stu-id="8e018-110">The code below are examples using C# and the [Power BI .NET SDK](https://www.nuget.org/profiles/powerbi).</span></span>
+รหัสด้านล่างนี้คือ ตัวอย่างที่ใช้ C# และ[Power BI .NET SDK](https://www.nuget.org/profiles/powerbi)
 
-<span data-ttu-id="8e018-111">ตรวจสอบให้แน่ใจว่า คุณกำลังใช้ใน namespace ต่อไปนี้เพื่อดำเนินการโค้ดด้านล่าง</span><span class="sxs-lookup"><span data-stu-id="8e018-111">Make sure you are using the following namespaces to execute the code snippets below.</span></span>
+ตรวจสอบให้แน่ใจว่า คุณกำลังใช้ใน namespace ต่อไปนี้เพื่อดำเนินการโค้ดด้านล่าง
 
 ```csharp
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
@@ -46,7 +46,7 @@ using System.Text;
 using System.Threading.Tasks;
 ```
 
-## <a name="export-report-from-paas-workspace"></a><span data-ttu-id="8e018-112">ส่งออกรายงานจากพื้นที่ทำงาน PaaS</span><span class="sxs-lookup"><span data-stu-id="8e018-112">Export report from PaaS workspace</span></span>
+## <a name="export-report-from-paas-workspace"></a>ส่งออกรายงานจากพื้นที่ทำงาน PaaS
 
 ```csharp
     // Create a token credentials with "AppKey" type
@@ -71,10 +71,10 @@ using System.Threading.Tasks;
     }
 ```
 
-## <a name="import-report-to-saas-workspace"></a><span data-ttu-id="8e018-113">นำเข้ารายงานไปยังพื้นที่ทำงาน SaaS</span><span class="sxs-lookup"><span data-stu-id="8e018-113">Import report to SaaS workspace</span></span>
+## <a name="import-report-to-saas-workspace"></a>นำเข้ารายงานไปยังพื้นที่ทำงาน SaaS
 
 ```csharp
-    AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.net/common/");
+    AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/common/");
     var PBISaaSAuthResult = authContext.AcquireToken("https://analysis.windows.net/powerbi/api", <myClientId>, new Uri("urn:ietf:wg:oauth:2.0:oob"), PromptBehavior.Always);
     var credentials = new TokenCredentials(PBISaaSAuthResult.AccessToken);
     var client = new PowerBIClient(new Uri($"{"https://api.powerbi.com"}"), credentials);
@@ -85,9 +85,9 @@ using System.Threading.Tasks;
     }
 ```
 
-## <a name="extract-directquery-connection-string-from-paas-report"></a><span data-ttu-id="8e018-114">สำหรับตัวอย่าง ดูที่สตริงการเชื่อมต่อ “DirectQuery ที่แยกออก” จากรายงาน PaaS</span><span class="sxs-lookup"><span data-stu-id="8e018-114">Extract DirectQuery connection string from PaaS report</span></span>
+## <a name="extract-directquery-connection-string-from-paas-report"></a>สำหรับตัวอย่าง ดูที่สตริงการเชื่อมต่อ “DirectQuery ที่แยกออก” จากรายงาน PaaS
 
-<span data-ttu-id="8e018-115">นี่คือการปรับปรุง PBIX หลังจากการโยกย้ายไปยัง SaaS</span><span class="sxs-lookup"><span data-stu-id="8e018-115">This is for updating the PBIX after migrating to SaaS.</span></span>
+นี่คือการปรับปรุง PBIX หลังจากการโยกย้ายไปยัง SaaS
 
 ```csharp
     // Extract connection string from PaaS - DirectQuery report
@@ -106,7 +106,7 @@ using System.Threading.Tasks;
     var datasource = client.Datasets.GetDatasources(<myWorkspaceCollectionName>, <myWorkspaceId>, report.DatasetId);
 ```
 
-## <a name="update-directquery-connection-string-is-saas-workspace"></a><span data-ttu-id="8e018-116">การอัปเดตสตริงเชื่อมต่อ DirectQuery คือ พื้นที่ทำงาน SaaS</span><span class="sxs-lookup"><span data-stu-id="8e018-116">Update DirectQuery connection string is SaaS workspace</span></span>
+## <a name="update-directquery-connection-string-is-saas-workspace"></a>การอัปเดตสตริงเชื่อมต่อ DirectQuery คือ พื้นที่ทำงาน SaaS
 
 ```csharp
     public class ConnectionString
@@ -115,7 +115,7 @@ using System.Threading.Tasks;
         public string connection { get; set; }
     }
 
-    AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.net/common/");
+    AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/common/");
     var PBISaaSAuthResult = authContext.AcquireToken("https://analysis.windows.net/powerbi/api",<myclient_id>, new Uri("urn:ietf:wg:oauth:2.0:oob"), PromptBehavior.Always);
     var credentials = new TokenCredentials(PBISaaSAuthResult.AccessToken);
     var client = new PowerBIClient(new Uri($"{"https://api.powerbi.com"}"), credentials);
@@ -125,9 +125,9 @@ using System.Threading.Tasks;
     client.Datasets.SetAllConnectionsInGroup(<myWorkspaceId>, <dataset_id>, connection);
 ```
 
-## <a name="set-directquery-credentials-in-saas-workspace"></a><span data-ttu-id="8e018-117">ตั้งค่าข้อมูลประจำตัวของ DirectQuery ในพื้นที่ทำงาน SaaS</span><span class="sxs-lookup"><span data-stu-id="8e018-117">Set DirectQuery credentials in SaaS workspace</span></span>
+## <a name="set-directquery-credentials-in-saas-workspace"></a>ตั้งค่าข้อมูลประจำตัวของ DirectQuery ในพื้นที่ทำงาน SaaS
 
-<span data-ttu-id="8e018-118">ในส่วนย่อยนี้ เราจะใช้ข้อมูลประจำตัวการเข้ารหัสลับสำหรับความสะดวกสบาย ส่งข้อมูลประจำตัวเข้ารหัสลับได้รับการสนับสนุนเช่นกัน</span><span class="sxs-lookup"><span data-stu-id="8e018-118">In this snippet, we are using unencrypted credentials for simplicity, sending encrypted credentials is supported as well.</span></span>
+ในส่วนย่อยนี้ เราจะใช้ข้อมูลประจำตัวการเข้ารหัสลับสำหรับความสะดวกสบาย ส่งข้อมูลประจำตัวเข้ารหัสลับได้รับการสนับสนุนเช่นกัน
 
 ```csharp
     public class ConnectionString
@@ -151,7 +151,7 @@ using System.Threading.Tasks;
     var url = string.Format("https://api.powerbi.com/v1.0/myorg/gateways/{0}/datasources/{1}", <gateway_id>, <datasource_id>);
     var request = new HttpRequestMessage(new HttpMethod("PATCH"), url);
     // Set authorization header from you acquired Azure AD token
-    AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.net/common/");
+    AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/common/");
     var PBISaaSAuthResult = authContext.AcquireToken("https://analysis.windows.net/powerbi/api", <myclient_id>, new Uri("urn:ietf:wg:oauth:2.0:oob"), PromptBehavior.Always);
 
     request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", PBISaaSAuthResult.AccessToken);
@@ -162,11 +162,11 @@ using System.Threading.Tasks;
     var response = await simpleClient.SendAsync(request);
 ```
 
-## <a name="push-dataset-and-report"></a><span data-ttu-id="8e018-119">เผยแพร่ชุดข้อมูลและรายงาน</span><span class="sxs-lookup"><span data-stu-id="8e018-119">Push dataset and report</span></span>
+## <a name="push-dataset-and-report"></a>เผยแพร่ชุดข้อมูลและรายงาน
 
-<span data-ttu-id="8e018-120">คุณจะต้องสร้างรายงานสำหรับชุดข้อมูลสร้างขึ้น</span><span class="sxs-lookup"><span data-stu-id="8e018-120">You will need to rebuild the report for the created dataset.</span></span>
+คุณจะต้องสร้างรายงานสำหรับชุดข้อมูลสร้างขึ้น
 
-<span data-ttu-id="8e018-121">ในส่วนย่อยนี้ เราคาดว่าชุดข้อมูลที่สามารถผลักได้นั้นอยู่ในพื้นที่ทำงานภายในสภาพแวดล้อม SaaS อยู่แล้ว</span><span class="sxs-lookup"><span data-stu-id="8e018-121">In this snippet, we assume that the pushable dataset is already in a workspace within the SaaS environment.</span></span> <span data-ttu-id="8e018-122">สำหรับข้อมูลเกี่ยวกับ push API ดูที่[ผลักข้อมูลลงในชุดข้อมูล Power BI](../automation/walkthrough-push-data.md)</span><span class="sxs-lookup"><span data-stu-id="8e018-122">For information about the push API, see [Push data into a Power BI dataset](../automation/walkthrough-push-data.md).</span></span>
+ในส่วนย่อยนี้ เราคาดว่าชุดข้อมูลที่สามารถผลักได้นั้นอยู่ในพื้นที่ทำงานภายในสภาพแวดล้อม SaaS อยู่แล้ว สำหรับข้อมูลเกี่ยวกับ push API ดูที่[ผลักข้อมูลลงในชุดข้อมูล Power BI](../automation/walkthrough-push-data.md)
 
 ```csharp
     var credentials = new TokenCredentials(<Your WSC access key>, "AppKey");
@@ -204,7 +204,7 @@ using System.Threading.Tasks;
     }
 
     // step 4 -> Upload dummy PBIX to SaaS workspace
-    AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.net/common/");
+    AuthenticationContext authContext = new AuthenticationContext("https://login.microsoftonline.com/common/");
     var PBISaaSAuthResult = authContext.AcquireToken("https://analysis.windows.net/powerbi/api", <Your client ID>, new Uri("urn:ietf:wg:oauth:2.0:oob"), PromptBehavior.Always);
     var credentialsSaaS = new TokenCredentials(PBISaaSAuthResult.AccessToken);
     var clientSaaS = new Microsoft.PowerBI.Api.V2.PowerBIClient(new Uri($"{"https://api.powerbi.com"}"), credentialsSaaS);
@@ -227,16 +227,16 @@ using System.Threading.Tasks;
     }
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="8e018-123">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="8e018-123">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-[<span data-ttu-id="8e018-124">เครื่องมือการย้าย Power BI แบบฝัง</span><span class="sxs-lookup"><span data-stu-id="8e018-124">Power BI Embedded migration tool</span></span>](migrate-tool.md)  
-[<span data-ttu-id="8e018-125">การฝังด้วย Power BI</span><span class="sxs-lookup"><span data-stu-id="8e018-125">Embedding with Power BI</span></span>](embedding.md)  
-[<span data-ttu-id="8e018-126">วิธีการย้ายเนื้อหาคอลเลกชันพื้นที่ทำงานแบบฝัง Power BI ไปยัง Power BI</span><span class="sxs-lookup"><span data-stu-id="8e018-126">How to migrate Power BI Embedded workspace collection content to Power BI</span></span>](migrate-from-powerbi-embedded.md)  
-[<span data-ttu-id="8e018-127">วิธีฝัง แดชบอร์ด รายงาน และไทล์ Power BI ของคุณ</span><span class="sxs-lookup"><span data-stu-id="8e018-127">How to embed your Power BI dashboards, reports and tiles</span></span>](embed-sample-for-your-organization.md)  
-[<span data-ttu-id="8e018-128">Power BI Premium คืออะไร</span><span class="sxs-lookup"><span data-stu-id="8e018-128">Power BI Premium - what is it?</span></span>](../../admin/service-premium-what-is.md)  
-[<span data-ttu-id="8e018-129">JavaScript API Git repo</span><span class="sxs-lookup"><span data-stu-id="8e018-129">JavaScript API Git repo</span></span>](https://github.com/Microsoft/PowerBI-JavaScript)  
-[<span data-ttu-id="8e018-130">Power BI C# Git repo</span><span class="sxs-lookup"><span data-stu-id="8e018-130">Power BI C# Git repo</span></span>](https://github.com/Microsoft/PowerBI-CSharp)  
-[<span data-ttu-id="8e018-131">ตัวอย่างการฝัง JavaScript</span><span class="sxs-lookup"><span data-stu-id="8e018-131">JavaScript embed sample</span></span>](https://microsoft.github.io/PowerBI-JavaScript/demo/)  
-[<span data-ttu-id="8e018-132">เอกสารบรรยายแนวความคิดของ Power BI Premium</span><span class="sxs-lookup"><span data-stu-id="8e018-132">Power BI Premium whitepaper</span></span>](https://aka.ms/pbipremiumwhitepaper)  
+[เครื่องมือการย้าย Power BI แบบฝัง](migrate-tool.md)  
+[การฝังด้วย Power BI](embedding.md)  
+[วิธีการย้ายเนื้อหาคอลเลกชันพื้นที่ทำงานแบบฝัง Power BI ไปยัง Power BI](migrate-from-powerbi-embedded.md)  
+[วิธีฝัง แดชบอร์ด รายงาน และไทล์ Power BI ของคุณ](embed-sample-for-your-organization.md)  
+[Power BI Premium คืออะไร](../../admin/service-premium-what-is.md)  
+[JavaScript API Git repo](https://github.com/Microsoft/PowerBI-JavaScript)  
+[Power BI C# Git repo](https://github.com/Microsoft/PowerBI-CSharp)  
+[ตัวอย่างการฝัง JavaScript](https://microsoft.github.io/PowerBI-JavaScript/demo/)  
+[เอกสารบรรยายแนวความคิดของ Power BI Premium](https://aka.ms/pbipremiumwhitepaper)  
 
-<span data-ttu-id="8e018-133">มีคำถามเพิ่มเติมหรือไม่</span><span class="sxs-lookup"><span data-stu-id="8e018-133">More questions?</span></span> [<span data-ttu-id="8e018-134">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="8e018-134">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
+มีคำถามเพิ่มเติมหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)

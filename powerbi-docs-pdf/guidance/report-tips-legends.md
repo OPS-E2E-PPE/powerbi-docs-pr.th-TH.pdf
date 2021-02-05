@@ -2,45 +2,45 @@
 title: จัดรูปแบบและใช้คำอธิบายแผนภูมิในรายงาน Power BI
 description: หกเคล็ดลับในการจัดรูปแบบและใช้คำอธิบายแผนภูมิในวิชวลรายงาน Power BI ใน Power BI Desktop หรือบริการของ Power BI
 author: peter-myers
-ms.author: v-pemyer
+ms.author: kfollis
 ms.reviewer: asaxton
 featuredvideoid: r9XnHmuWkZQ
 ms.service: powerbi
 ms.subservice: powerbi
 ms.topic: conceptual
 ms.date: 02/15/2020
-ms.openlocfilehash: a63c85787f9304954fff76785796dd9cc3e7aa93
-ms.sourcegitcommit: 653e18d7041d3dd1cf7a38010372366975a98eae
-ms.translationtype: HT
+ms.openlocfilehash: d7c7242a96b805b351d78aa3e993b392a3c9fcb4
+ms.sourcegitcommit: fb529c4532fbbdfde7ce28e2b4b35f990e8f21d9
+ms.translationtype: MT
 ms.contentlocale: th-TH
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96386005"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99088844"
 ---
-# <a name="tips-to-format-and-implement-legends-in-power-bi-reports"></a><span data-ttu-id="7c45d-103">เคล็ดลับในการจัดรูปแบบและใช้คำอธิบายแผนภูมิในรายงาน Power BI</span><span class="sxs-lookup"><span data-stu-id="7c45d-103">Tips to format and implement legends in Power BI reports</span></span>
+# <a name="tips-to-format-and-implement-legends-in-power-bi-reports"></a>เคล็ดลับในการจัดรูปแบบและใช้คำอธิบายแผนภูมิในรายงาน Power BI
 
-<span data-ttu-id="7c45d-104">บทความนี้กำหนดเป้าหมายให้คุณในฐานะผู้เขียนรายงานที่ออกแบบรายงาน Power BI เมื่อจัดรูปแบบและใช้คำอธิบายแผนภูมิ</span><span class="sxs-lookup"><span data-stu-id="7c45d-104">This article targets you as a report author designing Power BI reports, when formatting and implementing legends.</span></span>
+บทความนี้กำหนดเป้าหมายให้คุณในฐานะผู้เขียนรายงานที่ออกแบบรายงาน Power BI เมื่อจัดรูปแบบและใช้คำอธิบายแผนภูมิ
 
-<span data-ttu-id="7c45d-105">ชมวิดีโอสาธิตเคล็ดลับหกอันดับแรกในการจัดรูปแบบและใช้คำอธิบายแผนภูมิในรายงาน Power BI ของคุณ</span><span class="sxs-lookup"><span data-stu-id="7c45d-105">Watch the video demonstrating the top six tips to format and implement legends in your Power BI reports.</span></span>
+ชมวิดีโอสาธิตเคล็ดลับหกอันดับแรกในการจัดรูปแบบและใช้คำอธิบายแผนภูมิในรายงาน Power BI ของคุณ
 
 > [!VIDEO https://www.youtube.com/embed/r9XnHmuWkZQ]
 
-## <a name="tips"></a><span data-ttu-id="7c45d-106">เคล็ดลับ</span><span class="sxs-lookup"><span data-stu-id="7c45d-106">Tips</span></span>
+## <a name="tips"></a>เคล็ดลับ
 
-<span data-ttu-id="7c45d-107">โดยสรุป เคล็ดลับหกอันดับแรกในการจัดรูปแบบและใช้คำอธิบายแผนภูมิในรายงาน Power BI ได้แก่:</span><span class="sxs-lookup"><span data-stu-id="7c45d-107">In summary, the top six tips to format and implement legends in Power BI reports include:</span></span>
+โดยสรุป เคล็ดลับหกอันดับแรกในการจัดรูปแบบและใช้คำอธิบายแผนภูมิในรายงาน Power BI ได้แก่:
 
-1. <span data-ttu-id="7c45d-108">เรียงลำดับตัวแปรคำอธิบายแผนภูมิ</span><span class="sxs-lookup"><span data-stu-id="7c45d-108">Sort legend variables</span></span>
-1. <span data-ttu-id="7c45d-109">ทำซ้ำคำอธิบายแผนภูมิ</span><span class="sxs-lookup"><span data-stu-id="7c45d-109">Emulate a legend</span></span>
-1. <span data-ttu-id="7c45d-110">ปรับขนาดและจัดตำแหน่งคำอธิบายแผนภูมิ</span><span class="sxs-lookup"><span data-stu-id="7c45d-110">Size and positioning legends</span></span>
-1. <span data-ttu-id="7c45d-111">แก้ไขคำอธิบายแผนภูมิที่ถูกตัดทอน</span><span class="sxs-lookup"><span data-stu-id="7c45d-111">Solve truncated legends</span></span>
-1. <span data-ttu-id="7c45d-112">จับคู่ตัวเลือกรูปแบบสไตล์</span><span class="sxs-lookup"><span data-stu-id="7c45d-112">Match style format options</span></span>
-1. <span data-ttu-id="7c45d-113">สร้างภาพที่ครอบคลุมที่มีบริบท</span><span class="sxs-lookup"><span data-stu-id="7c45d-113">Craft comprehensive visuals with context</span></span>
+1. เรียงลำดับตัวแปรคำอธิบายแผนภูมิ
+1. ทำซ้ำคำอธิบายแผนภูมิ
+1. ปรับขนาดและจัดตำแหน่งคำอธิบายแผนภูมิ
+1. แก้ไขคำอธิบายแผนภูมิที่ถูกตัดทอน
+1. จับคู่ตัวเลือกรูปแบบสไตล์
+1. สร้างภาพที่ครอบคลุมที่มีบริบท
 
-## <a name="next-steps"></a><span data-ttu-id="7c45d-114">ขั้นตอนถัดไป</span><span class="sxs-lookup"><span data-stu-id="7c45d-114">Next steps</span></span>
+## <a name="next-steps"></a>ขั้นตอนถัดไป
 
-<span data-ttu-id="7c45d-115">สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:</span><span class="sxs-lookup"><span data-stu-id="7c45d-115">For more information related to this article, check out the following resources:</span></span>
+สำหรับข้อมูลเพิ่มเติมที่เกี่ยวข้องกับบทความนี้ โปรดดูทรัพยากรต่อไปนี้:
 
-- [<span data-ttu-id="7c45d-116">เคล็ดลับในการสร้างรายงานที่น่าทึ่ง</span><span class="sxs-lookup"><span data-stu-id="7c45d-116">Tips for creating stunning reports</span></span>](../create-reports/desktop-tips-and-tricks-for-creating-reports.md)
-- <span data-ttu-id="7c45d-117">วิดีโอ biDezine: [เคล็ดลับ 6 อันดับยอดนิยมสำหรับการจัดรูปแบบคำอธิบายแผนภูมิและการดำเนินการใน Power BI](https://www.youtube.com/watch?v=r9XnHmuWkZQ)</span><span class="sxs-lookup"><span data-stu-id="7c45d-117">biDezine video: [Top 6 Tips for Legend Formatting & Implementation in Power BI](https://www.youtube.com/watch?v=r9XnHmuWkZQ)</span></span>
-- <span data-ttu-id="7c45d-118">มีคำถามหรือไม่</span><span class="sxs-lookup"><span data-stu-id="7c45d-118">Questions?</span></span> [<span data-ttu-id="7c45d-119">ลองถามชุมชน Power BI</span><span class="sxs-lookup"><span data-stu-id="7c45d-119">Try asking the Power BI Community</span></span>](https://community.powerbi.com/)
-- <span data-ttu-id="7c45d-120">มีข้อเสนอแนะไหม</span><span class="sxs-lookup"><span data-stu-id="7c45d-120">Suggestions?</span></span> [<span data-ttu-id="7c45d-121">สนับสนุนแนวคิดในการปรับปรุง Power BI</span><span class="sxs-lookup"><span data-stu-id="7c45d-121">Contribute ideas to improve Power BI</span></span>](https://ideas.powerbi.com)
+- [เคล็ดลับในการสร้างรายงานที่น่าทึ่ง](../create-reports/desktop-tips-and-tricks-for-creating-reports.md)
+- วิดีโอ biDezine: [เคล็ดลับ 6 อันดับยอดนิยมสำหรับการจัดรูปแบบคำอธิบายแผนภูมิและการดำเนินการใน Power BI](https://www.youtube.com/watch?v=r9XnHmuWkZQ)
+- มีคำถามหรือไม่ [ลองถามชุมชน Power BI](https://community.powerbi.com/)
+- มีข้อเสนอแนะไหม [สนับสนุนแนวคิดในการปรับปรุง Power BI](https://ideas.powerbi.com)
 

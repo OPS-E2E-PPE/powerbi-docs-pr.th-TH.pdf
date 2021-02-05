@@ -1,6 +1,6 @@
 ### YamlMime:Landing
-title: เอกสารประกอบการใช้งานวิชวล Power BI ในการวิเคราะห์แบบฝังของ Power BI สำหรับข้อมูลเชิงลึก BI แบบฝังที่ดีขึ้น
-summary: พัฒนาวิชวล Power BI ของคุณเองเพื่อใช้โดยคุณ องค์กรของคุณ หรือชุมชน Power BI ทั้งหมดได้ เอกสารประกอบของเราให้ข้อมูลที่คุณต้องการ เปิดใช้งานข้อมูลเชิงลึก BI แบบฝังที่ดีขึ้นโดยใช้การวิเคราะห์แบบฝังตัวของ Power BI
+title: เอกสารประกอบการใช้งานวิชวล Power BI
+summary: พัฒนาวิชวล Power BI ของคุณเองเพื่อใช้โดยคุณ องค์กรของคุณ หรือชุมชน Power BI ทั้งหมดได้ เอกสารประกอบของเราให้ข้อมูลที่คุณต้องการ
 metadata:
   title: เอกสารประกอบการใช้งานวิชวล Power BI
   description: พัฒนาวิชวล Power BI ของคุณเองเพื่อใช้โดยคุณ องค์กรของคุณ หรือชุมชน Power BI ทั้งหมดได้ เอกสารประกอบของเราให้ข้อมูลที่คุณต้องการ
@@ -12,12 +12,12 @@ metadata:
   author: KesemSharabi
   ms.author: kesharab
   ms.date: 31/03/2020
-  ms.openlocfilehash: 79d5b385bab83d07423184518a00106f660b8d68
-  ms.sourcegitcommit: a5e98bc86915f7bea6a0ab5df282683840e63d2c
+  ms.openlocfilehash: b2b7a23174b4790232139ae6137d518d8578d8d1
+  ms.sourcegitcommit: 77912d4f6ef2a2b1ef8ffccc50691fe5b38ee97a
   ms.translationtype: HT
   ms.contentlocale: th-TH
-  ms.lasthandoff: 01/07/2021
-  ms.locfileid: "97969408"
+  ms.lasthandoff: 01/22/2021
+  ms.locfileid: "98687453"
 landingContent:
 - title: เริ่มใช้งาน
   linkLists:

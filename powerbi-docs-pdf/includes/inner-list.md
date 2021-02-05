@@ -6,6 +6,6 @@ ms.contentlocale: th-TH
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "61386409"
 ---
-1. <span data-ttu-id="d60fa-101">รายการที่สอง</span><span class="sxs-lookup"><span data-stu-id="d60fa-101">Item TWO</span></span>
-2. <span data-ttu-id="d60fa-102">รายการที่สาม</span><span class="sxs-lookup"><span data-stu-id="d60fa-102">Item THREE</span></span>
+1. รายการที่สอง
+2. รายการที่สาม
 
